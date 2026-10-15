@@ -1,6 +1,7 @@
 import json, hashlib, re, os, datetime, urllib.parse
 from pathlib import Path
 import requests
+import time
 from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).parent
@@ -57,6 +58,45 @@ def main():
    db['status'][source]={'ok':True,'checked':utc(),'count':len(candidates)}
   except Exception as e:
    db['status'][source]={'ok':False,'checked':utc(),'error':str(e)[:180]}
+ # Check a limited rotating batch of already discovered documents for content changes.
+ # This is best-effort and deliberately rate-limited; it is not a full document archive.
+ checked_docs=0
+ failures=0
+ eligible=[(k,v) for k,v in db['items'].items() if v.get('url','').startswith((
+  'https://www.medemblik.nl/', 'https://medemblik.bestuurlijkeinformatie.nl/'))]
+ eligible.sort(key=lambda pair: pair[1].get('content_checked',''))
+ for key,item in eligible[:15]:
+  try:
+   response=requests.get(item['url'],headers=HEADERS,timeout=18)
+   response.raise_for_status()
+   if len(response.content)>8_000_000: raise ValueError('Document te groot')
+   content_type=response.headers.get('Content-Type','').lower()
+   if 'pdf' in content_type or response.content[:4]==b'%PDF':
+    normalized=response.content
+   elif 'html' in content_type or b'<html' in response.content[:500].lower():
+    page=BeautifulSoup(response.text,'html.parser')
+    for tag in page(['script','style','nav','footer','header','form']):tag.decompose()
+    area=page.select_one('main') or page.select_one('article') or page
+    normalized=clean(area.get_text(' ',strip=True)).encode('utf-8')
+   else:
+    normalized=response.content
+   digest=hashlib.sha256(normalized).hexdigest()
+   previous=item.get('content_hash')
+   if previous and previous!=digest:
+    item['updated']=utc()
+    item['revisions']=item.get('revisions',1)+1
+    item['change_type']='Inhoud gewijzigd'
+   item['content_hash']=digest
+   item['content_checked']=utc()
+   item.pop('content_error',None)
+   checked_docs+=1
+  except Exception as exc:
+   failures+=1
+   item['content_checked']=utc()
+   item['content_error']=str(exc)[:120]
+ db['status']['Documentcontrole']={'ok':failures==0,'checked':utc(),
+   'count':checked_docs,'errors':failures,
+   'note':'Maximaal 15 documenten per uitvoering; inhoudswijzigingen worden vanaf de tweede succesvolle controle herkend.'}
  # Cap dataset to avoid endless Git history growth.
  items=sorted(db['items'].items(),key=lambda kv:kv[1]['updated'],reverse=True)[:3000]
  db['items']=dict(items)
