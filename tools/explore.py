@@ -1,18 +1,21 @@
 import requests,re,json,html
-from bs4 import BeautifulSoup
 H={'User-Agent':'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
-def report(base,rid):
-    print('\n=====',base,rid)
-    s=requests.Session();s.headers.update(H)
-    p=s.get(f'{base}/Reports/Details/{rid}',timeout=40)
-    cols=json.loads(html.unescape(re.search(r"data-columns='([^']+)'",p.text).group(1)));print('cols',cols)
-    tok=re.search(r'name="__RequestVerificationToken"[^>]*value="([^"]+)"',p.text);print('token',bool(tok))
-    data={'draw':'1','start':'0','length':'5','order[0][column]':'0','order[0][dir]':'desc','search[value]':'','search[regex]':'false'}
-    for i,c in enumerate(cols):
-        data.update({f'columns[{i}][data]':c['data'],f'columns[{i}][name]':c.get('name',c['data']),f'columns[{i}][searchable]':'true',f'columns[{i}][orderable]':'true',f'columns[{i}][search][value]':'',f'columns[{i}][search][regex]':'false'})
-    if tok: data['__RequestVerificationToken']=tok.group(1)
-    r=s.post(f'{base}/Reports/GetReportData/{rid}',data=data,headers={'X-Requested-With':'XMLHttpRequest','Referer':f'{base}/Reports/Details/{rid}'},timeout=40)
-    print(r.status_code,r.headers.get('Content-Type'),r.text[:1500])
-report('https://opmeer.bestuurlijkeinformatie.nl','e90d2554-7a8b-4254-a9c1-fba22e8d67b3')
-report('https://medemblik.bestuurlijkeinformatie.nl','b6e30d37-cfd2-4064-a7fa-19453570dfb5')
-report('https://medemblik.bestuurlijkeinformatie.nl','55a67657-751b-488f-938d-31c4a7f557b4')
+def rows(base,rid,ordercol,n=3):
+    p=requests.get(f'{base}/Reports/Details/{rid}',headers=H,timeout=40)
+    cols=json.loads(html.unescape(re.search(r"data-columns='([^']+)'",p.text).group(1)))
+    data={'draw':'1','start':'0','length':str(n),'order[0][column]':str(ordercol),'order[0][dir]':'desc'}
+    for i,c in enumerate(cols): data.update({f'columns[{i}][data]':c['data'],f'columns[{i}][name]':c.get('name',c['data']),f'columns[{i}][orderable]':'true',f'columns[{i}][searchable]':'true'})
+    r=requests.post(f'{base}/Reports/GetReportData/{rid}',data=data,headers={**H,'X-Requested-With':'XMLHttpRequest'},timeout=40)
+    j=r.json();print('\n==',base[8:20],rid[:8],'order',ordercol,'total',j.get('recordsTotal'))
+    for row in j['data']: print('  ',{k:(str(v)[:40] if v else v) for k,v in row.items() if k in ('registrationdate','datum','datumingekomen','title','datumantwoord')})
+M='https://medemblik.bestuurlijkeinformatie.nl';O='https://opmeer.bestuurlijkeinformatie.nl'
+import sys
+for base in (M,O):
+    p=requests.get(base+'/Reports',headers=H,timeout=30).text
+    for rid in dict.fromkeys(re.findall(r'/Reports/Details/([0-9a-f-]{36})',p)):
+        d=requests.get(f'{base}/Reports/Details/{rid}',headers=H,timeout=30).text
+        cols=json.loads(html.unescape(re.search(r"data-columns='([^']+)'",d).group(1)))
+        names=[c['data'] for c in cols]
+        idx=next((i for i,c in enumerate(names) if c in ('datum','datumingekomen','registrationdate')),0)
+        print('\n##',re.search(r'<h1>([^<]+)',d).group(1) if re.search(r'<h1>([^<]+)',d) else rid,names,'-> sorteer op',names[idx],'| data-order',re.search(r"data-order='([^']+)'",d).group(1) if re.search(r"data-order='([^']+)'",d) else None)
+        rows(base,rid,idx,2)
