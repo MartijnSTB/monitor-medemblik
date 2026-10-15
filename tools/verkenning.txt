@@ -1,394 +1,43 @@
-
-==================== Reports RSS ====================
-200 application/rss+xml; charset=utf-8 333
-﻿<?xml version="1.0" encoding="utf-8"?><rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Gemeente Medemblik - Actielijsten</title><link>http://medemblik.bestuurlijkeinformatie.nl/Calendar?site=Medemblik</link><description>Actielijsten gemeente Medemblik</description><language>nl</language></channel></rss>
-
-==================== Reports Details raadsvragen ====================
-200 text/html; charset=utf-8 28694
-maincontent sidecontent-left flex-fill" id="overzichten-maincontent">
-    <aside class="col-12 col-md-4 col-lg-3" id="sidecontent-left">
-        <a href="/Reports" class="backButton margin-bottom btn btn-ris">Terug naar overzichten</a>
-        
-<div class="filterWidget widget" id="filters">
-    <div class="widgetLabel">
-        <h1>Filters</h1>
-    </div>
-    <div class="widgetContent">
-        <ul id="filterLists" class="list-group">
-                <li class="list-group-item">
-                    <div class="form-group">
-
-
-                            <fieldset>
-                                <legend class="dateFilter">Datum vraag</legend>
-                                
-<div class="input-daterange input-group" id="Filters_datum">
-    <label id="label_Filters_datum_from">vanaf</label>
-    <duet-date-picker class="input-sm datepicker from" language="nl" identifier="Filters_datum_from" name="Filters.datum_from" aria-labelledby="label_Filters_datum_from"
-                       data-filter-for="datum"  data-button-alt-text="Selecteer een datum vanaf"></duet-date-picker>
-    <label id="label_Filters_datum_to">Datum tot en met</label>
-    <duet-date-picker class="input-sm datepicker to" language="nl" identifier="Filters_datum_to" name="Filters.datum_to" aria-labelledby="label_Filters_datum_to"
-                       data-filter-for="datum"  data-button-alt-text="Selecteer een datum tot en met"></duet-date-picker>
-</div>
-<div class="hidden datefiltermessage" id="Filters_datum_message" aria-label="De ingevulde datums zijn niet correct">De ingevulde datums zijn niet correct</div>
-                            </fieldset>
-
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="form-group">
-<label for="Filters_FilterFields_1__Value">Onderwerp</label><input class="form-control textValue" data-filter-for="title" id="Filters_FilterFields_1__Value" name="Filters.FilterFields[1].Value" type="text" value="" />
-
-
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="form-group">
-
-
-                            <fieldset>
-                                <legend class="dateFilter">Datum antwoord</legend>
-                                
-<div class="input-daterange input-group" id="Filters_datumantwoord">
-    <label id="label_Filters_datumantwoord_from">vanaf</label>
-    <duet-date-picker class="input-sm datepicker from" language="nl" identifier="Filters_datumantwoord_from" name="Filters.datumantwoord_from" aria-labelledby="label_Filters_datumantwoord_from"
-                       data-filter-for="datumantwoord"  data-button-alt-text="Selecteer een datum vanaf"></duet-date-picker>
-    <label id="label_Filters_datumantwoord_to">Datum tot en met</label>
-    <duet-date-picker class="input-sm datepicker to" language="nl" identifier="Filters_datumantwoord_to" name="Filters.datumantwoord_to" aria-labelledby="label_Filters_datumantwoord_to"
-                       data-filter-for="datumantwoord"  data-button-alt-text="Selecteer een datum tot en met"></duet-date-picker>
-</div>
-<div class="hidden datefiltermessage" id="Filters_datumantwoord_message" aria-label="De ingevulde datums zijn niet correct">De ingevulde datums zijn niet correct</div>
-                            </fieldset>
-
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="form-group">
-<label for="Filters_FilterFields_3__Value">ID</label><input class="form-control textValue" data-filter-for="identity" id="Filters_FilterFields_3__Value" name="Filters.FilterFields[3].Value" type="text" value="" />
-
-
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="form-group">
-<label for="Filters_FilterFields_4__Value">DOC-nummer</label><input class="form-control textValue" data-filter-for="pinnummer" id="Filters_FilterFields_4__Value" name="Filters.FilterFields[4].Value" type="text" value="" />
-
-
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="form-group">
-<label for="Filters_Portefeuillehouder">Portefeuillehouder</label><select class="form-control column-search-field" data-filter-for="poho" id="Filters_Portefeuillehouder" name="Filters.Portefeuillehouder"><option value=""></option>
-<option value="22189625-905a-471c-9aaf-3e78a69bdd20">B. de Wit</option>
-<option value="9747ed41-1fba-4cbe-ae4e-1a94cbcce248">G. Gringhuis</option>
-<option value="f052ba01-fec8-48de-88c2-d8d89d2fafd9">I. Mantel</option>
-<option value="375a70ca-0bb2-453b-aac6-9bf1da0e975d">M. Hoogewerf</option>
-<option value="8644e923-9506-4df8-bd71-8301ff48a3f4">M. Pijl</option>
-</select>
-
-
-                    </div>
-                </li>
-        </ul>
-    </div>
-    <div class="widgetFooter">
-        <button class="btn btn-ris" id="clear-filters" aria-label="Wis filters">Wis</button>
-    </div>
-</div>
-    </aside>
-    <section class="col-12 col-md-8 col-lg-9" id="maincontent">
-        <div class="row">
-            <div class="box col">
-                <div class="box-inner">
-                    <div class="box-header">
-                        <h1>Raadsvragen</h1>
-                    </div>
-                    <div class="box-content">
-                        <div id="overzichten">
-                            <input id="trueValueString" name="trueValueString" type="hidden" value="Ja" />
-                                <table  id="overzichten-data"            class="table table-condensed table-striped table-hover responsive  table-datatable table-clickable"
-           data-auto-width="false"
-           data-info="true"
-           data-paging="true"
-           data-page-length="50"
-           data-length-change="false"
-           data-responsive="false"
-           data-state-save="true"  data-state-duration="-1"            data-server-side="true"
-      
-links Item: 0
-data-attrs: ['data-auto-width="false"', 'data-button-alt-text="Selecteer een datum tot en met"', 'data-button-alt-text="Selecteer een datum vanaf"', 'data-filter-for="datum"', 'data-filter-for="datumantwoord"', 'data-filter-for="identity"', 'data-filter-for="pinnummer"', 'data-filter-for="poho"', 'data-filter-for="title"', 'data-info="true"', 'data-item-modal="false"', 'data-item-url="/Reports/Item/_id_"', 'data-length-change="false"', 'data-page-length="50"', 'data-paging="true"', 'data-responsive="false"', 'data-server-side="true"', 'data-site-name="Medemblik"', 'data-size="1.0"', 'data-size="1.2"', 'data-size="1.4"', 'data-state-duration="-1"', 'data-state-save="true"', 'data-target="#navbar"', 'data-toggle="collapse"', 'data-toggle="dropdown"']
-
-==================== RetrieveAgendasForYear ====================
-200 text/html; charset=utf-8 3409
-
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/860d833d-742e-4b8d-b819-1b300455d480" >
-            <div class="agenda-link-title">donderdag 17 december <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/7a2ae701-743b-4c66-bc69-1ea646ee2483" >
-            <div class="agenda-link-title">donderdag 26 november <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d" >
-            <div class="agenda-link-title">donderdag 12 november <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/d4b32282-6d07-4f2e-9463-89fb9b55e9c3" >
-            <div class="agenda-link-title">donderdag 24 september <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/ef610785-ddbd-48be-a262-5a5ceda54946" >
-            <div class="agenda-link-title">donderdag 2 juli <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/61056100-e302-4e79-824d-3c59259063ab" >
-            <div class="agenda-link-title">maandag 15 juni <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/c3a0e3ea-6980-45c1-a665-7674e0820804" >
-            <div class="agenda-link-title">dinsdag 2 juni <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/ffcc02a8-e4c7-43b5-b476-436a33026aec" >
-            <div class="agenda-link-title">donderdag 21 mei <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/613be69c-adaa-462b-8673-b08194a41ae5" >
-            <div class="agenda-link-title">donderdag 23 april <span class="sr-only">2026</span></div>
-        </a>
-    </li>
-    <li class="agenda-link list-group-item "
-        >
-        <a href="/Agenda/Index/159e120c-040d-4035-8c65-e356b99e3aee" >
-            <div class="agenda-link-title">woensdag 1 april <span class="sr-only">2026</span></div>
-            
-
-==================== agendapunt structuur ====================
-200 text/html; charset=utf-8 113578
-ol-12 text">
-                            
-<ul class="list-group list-attachments">
-        <li class="list-group-item">
-            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=ba95a3fe-6550-4bfd-8895-7f74c962a748&amp;agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9" class="unread" data-document-id="ba95a3fe-6550-4bfd-8895-7f74c962a748" >
-                    <span class="icon pdf" aria-label="pdf" role="img"></span>
-                
-                Concept-besluitenlijst raad 2 juli 2026
-                <span class="badge badge-light badge-pill">48 KB</span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=6e3429dd-9e3f-449a-a01c-4d4db8cbe910&amp;agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9" class="unread" data-document-id="6e3429dd-9e3f-449a-a01c-4d4db8cbe910" >
-                    <span class="icon pdf" aria-label="pdf" role="img"></span>
-                
-                Moties en amendementen  2 juli 2026
-                <span class="badge badge-light badge-pill">291 KB</span>
-            </a>
-        </li>
-</ul>
+allow_redirects True 200 text/html; charset=utf-8 49438 Location None history [] final https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954
+allow_redirects False 200 text/html; charset=utf-8 49438 Location None history [] final https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954
+['/Document/LoadAgendaDocument/6af5d5a7-6ca1-41e0-86ab-e804687848a2?agendaId=d4b32282-6d07-4f2e-9463-89fb9b55e9c3', '/Document/LoadAgendaDocument/adbeca39-0de1-488f-a20f-2fdc2bb0e50f?agendaId=d4b32282-6d07-4f2e-9463-89fb9b55e9c3', '/Document/LoadAgendaDocument/afd6bdd3-6768-44b2-af39-1830ef0fd2f3?agendaId=d4b32282-6d07-4f2e-9463-89fb9b55e9c3', '/Document/LoadAgendaItemDocument/0754d99f-0b9d-4d87-9368-d87633e7c766?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/0d404209-8669-41e9-af01-748bdc84be76?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/12007eff-8490-499e-b8b1-95afcfce5bcb?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/1257dc55-679b-4b8f-a2b2-f89db2147cd9?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/1a913565-4e21-49bb-a86e-72ec2c4244d2?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/1b152ae4-8ee8-4c74-b0ca-eff9a22a0759?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/1ec8dbd2-e2ac-454e-bd3f-d81f045fc5d8?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/25ed2de5-38d9-42e6-978c-2247ab85b714?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/34c12135-1be6-4c86-b497-da9297329393?agendaItemId=52b27a5e-fd1d-40b5-be10-8f7387999259', '/Document/LoadAgendaItemDocument/397dee48-c2a6-4b25-81c8-b926fa7d795a?agendaItemId=e6e9d06c-29a0-4a72-9d29-b74888a582ec', '/Document/LoadAgendaItemDocument/3d447247-2bca-42d3-a668-6b0d113835af?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/46c0d486-8cfb-4085-9eba-372d9d6227fa?agendaItemId=52b27a5e-fd1d-40b5-be10-8f7387999259', '/Document/LoadAgendaItemDocument/4b358dd8-443c-418b-889d-0d43455a6bb7?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/4d968d55-096f-49fa-900a-fc32d4a9bc62?agendaItemId=9fce6edb-423a-4fac-a5c6-db36526d0ca6', '/Document/LoadAgendaItemDocument/5a5f2e0d-324b-4636-ba26-542c1a5c0c2d?agendaItemId=26758fd7-70c8-4c66-8b0c-086e83855b94', '/Document/LoadAgendaItemDocument/6e3429dd-9e3f-449a-a01c-4d4db8cbe910?agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9', '/Document/LoadAgendaItemDocument/70ce1b93-11cd-45cd-b792-7db63596700c?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/7f5184bd-4d62-4623-8cab-76947e587911?agendaItemId=391c040d-08c3-4b93-9bc6-f52ccbf4ab2a', '/Document/LoadAgendaItemDocument/7fdd27e1-db13-4b34-b5bf-0ead81b20301?agendaItemId=e6e9d06c-29a0-4a72-9d29-b74888a582ec', '/Document/LoadAgendaItemDocument/812951c6-3c1a-45cf-addb-82a9b02f5fb6?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/854d1d50-e97c-4c88-8f92-01783397418b?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/8551d6d2-ba38-4a85-9458-53b003b5dc79?agendaItemId=2d3513af-47a8-4316-8982-40d564791f10', '/Document/LoadAgendaItemDocument/93f5ba98-a027-47f3-88ae-04967ba62c76?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/ab75c219-cf51-4015-b9e3-d1a8a1a5b0f6?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/b4aafaca-4dd3-4341-93f4-30826fcc8fbc?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/b8681e1c-bf53-40a4-9679-2ad97d06064b?agendaItemId=26758fd7-70c8-4c66-8b0c-086e83855b94', '/Document/LoadAgendaItemDocument/ba95a3fe-6550-4bfd-8895-7f74c962a748?agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9', '/Document/LoadAgendaItemDocument/bbcf010b-92b7-4544-aab8-3cc3462408b0?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/bfc656b5-77da-4572-a53e-9c108b8f0ed1?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/c9c95a9d-ef2d-4c02-8c19-65773dc2d28d?agendaItemId=ffaccede-c29e-4089-b07d-c5e83bea9c55', '/Document/LoadAgendaItemDocument/cd0adbea-a4c5-482d-9d57-61aef4055b00?agendaItemId=e6e9d06c-29a0-4a72-9d29-b74888a582ec', '/Document/LoadAgendaItemDocument/d9438de4-d96b-4ed8-adef-1ec91ad34a73?agendaItemId=391c040d-08c3-4b93-9bc6-f52ccbf4ab2a', '/Document/LoadAgendaItemDocument/dbe70dd5-6eee-48d6-938d-67368eebbf0b?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/e5ec2757-ff00-4648-af80-58867ecb22fc?agendaItemId=ffaccede-c29e-4089-b07d-c5e83bea9c55', '/Document/LoadAgendaItemDocument/f486aff8-de2c-488d-a699-c58ea3c59632?agendaItemId=26758fd7-70c8-4c66-8b0c-086e83855b94', '/Document/LoadAgendaItemDocument/f736a426-83ae-40cc-9ad8-31003cc0b39c?agendaItemId=ffaccede-c29e-4089-b07d-c5e83bea9c55', '/Document/LoadAgendaItemDocument/f8f763d8-0c61-4d1e-9e97-7f12f8d732bb?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954']
+A 04 KRC2-Animatie -> /Document/View/1257dc55-679b-4b8f-a2b2-f89db2147cd9
+A 05 KCR2-Animatie 2 -> /Document/View/4b358dd8-443c-418b-889d-0d43455a6bb7
+c-4d4db8cbe910?agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9">
+                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
+                                        Moties en amendementen  2 juli 2026
+                                    </a>
+                            </div>
+                        </div>
+                    <div class="widgetLabel agenda-item" tabindex="0">
+                        <div class="heading1">
+                            B HAMERSTUKKEN
                         </div>
                     </div>
-
-
-            </div>
-        </div>
-</div>
-                            </li>
-                            <li>
-                                
-<div class="panel panel-default agenda-item" id="b65c578a-bfad-4cc1-9703-63e52e8b31f8" >
-    <div class="panel-heading large" id="heading-b65c578a-bfad-4cc1-9703-63e52e8b31f8">
-        <div class="d-flex">
-            <div class="panel-id">B</div>
-                <div class="panel-title">
-                    <span class="panel-title-label" >
-                        HAMERSTUKKEN - <span class='text-thin'>19:45</span>
-                    </span>
-                </div>
-        </div>
-    </div>
-</div>
-                            </li>
-                            <li>
-                                
-<div class="panel panel-default agenda-item" id="a6938304-28bf-4898-b572-5cbfdca6c954" >
-    <div class="panel-heading large" id="heading-a6938304-28bf-4898-b572-5cbfdca6c954">
-        <div class="d-flex">
-            <div class="panel-id">B.1</div>
-                <h3 class="panel-title">
-                    <button class="arrow-right" type="button" aria-expanded="true" aria-controls="collapse-a6938304-28bf-4898-b572-5cbfdca6c954">
-                        <span class="panel-title-label" >
-                            Deelname KCR2 (pfh. M. Pijl) - <span class='text-thin'>19:45</span>
-                        </span>
-                    </button>
-                </h3>
-        </div>
-    </div>
-        <div id="collapse-a6938304-28bf-4898-b572-5cbfdca6c954" class="panel-collapse collapse show" aria-labelledby="heading-a6938304-28bf-4898-b572-5cbfdca6c954">
-            <div class="panel-body">
-                    <div class="row odd">
-                        <div class="col-12 text" >
-                            <p>Het Veiligheidsberaad heeft besloten de Stichting Knooppunt Coördinatie Rijk-Regio’s (KCR2) op te richten. Deze stichting ondersteunt de samenwerking tussen veiligheidsregio’s en het Rijk bij bovenregionale crises door informatie-uitwisseling, operationele ondersteuning en crisisvoorbereiding te faciliteren. De gemeenteraad wordt voorgesteld geen wensen of bedenkingen kenbaar te maken tegen de oprichting van en deelname aan KCR2 door Veiligheidsregio Noord-Holland Noord.</p>
+                    <div class="widgetLabel agenda-item" tabindex="0">
+                        <div class="heading1">
+                            B.1 Deelname KCR2 (pfh. M. Pijl)
                         </div>
                     </div>
-                    <div class="row even">
-                        <div class="col-12 label">
-                            <h4>Bijlagen</h4>
-                        </div>
-                        <div class="col-12 text">
-                            
-<ul class="list-group list-attachments">
-        <li class="list-group-item">
-            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=f8f763d8-0c61-4d1e-9e97-7f12f8d732bb&amp;agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954" class="unread" data-document-id="f8f763d8-0c61-4d1e-9e97-7f12f8d732bb" >
-                    <span class="icon pdf" aria-label="pdf" role="img"></span>
-                
-                Vastgesteld raadsbesluit KCR2
-                <span class="badge badge-light badge-pill">2 MB</span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&amp;agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954" class="unread" data-document-id="0d404209-8669-41e9-af01-748bdc84be76" >
-                    <span class="icon pdf" aria-label="pdf" role="img"></span>
-                
-                00 DOC-26-1234143  - Raadsvoorstel Deelname KCR2
-                <span class="badge badge-light badge-pill">186 KB</span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=70ce1b93-11cd-45cd-b792-7db63596700c&amp;agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954" class="unread" data-document-id="70ce1b93-11cd-45cd-b792-7db63596700c" >
-                    <span class="icon pdf" aria-label="pdf" role="img"></span>
-                
-                01 260703 Brief aan gemeenteraden KCR2_VRNHN
-                <span class="badge badge-light badge-pill">947 KB</span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0754d99f-0b9d-4d87-9368-d87633e7c766&amp;agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954" class="unread" data-document-id="0754d99f-0b9d-4d87-9368-d87633e7c766" >
-                    <span class="icon pdf" aria-label="pdf" role="img"></span>
-                
-                02 Ontwerpbesluit oprichting stichting KCR2_VRNHN
-                <span class="badge badge-light badge-pill">313 KB</span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=3d447247-2bca-42d3-a668-6b0d113835af&amp;agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954" class="unread" data-document-id="3d447247-2bca-42d3-a668-6b0d113835af" >
-                    <span class="icon pdf" aria-label="pdf" role="img"></span>
-                
-                03 Begrippenlijst en QA KCR2
-                <span class="badge badge-light bad
-
-==================== nieuws rss ====================
-200 application/rss+xml; charset=utf-8 10059
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>
-            Gemeente Medemblik
-        </title>
-        <link>
-            https://www.medemblik.nl/nieuws
-        </link>
-        <description>
-            Regel zaken online en vind informatie van de gemeente Medemblik.
-        </description>
-        <language>
-            nl
-        </language>
-        
-            <image>
-                <title>
-                    Gemeente Medemblik
-                </title>
-                <url>
-                    https://www.medemblik.nl/fileadmin/user_upload/medemblik-logo.svg
-                </url>
-                <link>
-                    https://www.medemblik.nl/nieuws
-                </link>
-                <description>
-                    
-                </description>
-            </image>
-        
-        <generator>
-            OpenGemeenten TYPO3
-        </generator>
-        <ttl>
-            3600
-        </ttl>
-        <lastBuildDate>
-            Thu, 15 Oct 2026 11:01:36 +0200
-        </lastBuildDate>
-        
-            
-                <item>
-                    
-    <title>
-        Medemblik blijft lokale evenementen steunen met subsidie BRUIS
-    </title>
-    <guid>
-        https://www.medemblik.nl/nieuws/medemblik-blijft-lokale-evenementen-steunen-met-subsidie-bruis
-    </guid>
-    <link>
-        https://www.medemblik.nl/nieuws/medemblik-blijft-lokale-evenementen-steunen-met-subsidie-bruis
-    </link>
-    <pubDate>
-        Tue, 13 Oct 2026 09:30:00 +0200
-    </pubDate>
-    <description>
-            <![CDATA[]]>
-    </description>
-
-                </item>
-            
-                <item>
-                    
-    <title>
-        Herontwikkeling Oosterhaven Medemblik officieel van start
-    </title>
-    <guid>
-        https://www.medemblik.nl/nieuws/herontwikkeling-oosterhaven-medemblik-officieel-van-start
-    </guid>
-    <link>
-        https://www.medemblik.nl/nieuws/herontwikkeling-oosterhaven-medemblik-officieel-van-start
-    </link>
-    <pubDate>
-        Wed, 07 Oct 2026 09:26:00 +0200
-    </pubDate>
-    <description>
-            <![CDATA[]]>
-    </description>
-
-                </item>
-            
-                <item>
-                    
-    <title>
-        Eerste woningen Slotlaan opgeleverd
-    </title>
-    <guid>
-        https://www.medemblik.nl/nieuws/eerste-woningen-slotlaan-opgeleverd
-    </guid>
-  
-items: 15
-
-==================== nieuwspagina 5 ====================
-200 text/html; charset=utf-8 32846
-['Postadres', 'Bezoekadres', 'Neem contact op', 'Meer informatie', 'Volg ons op']
+                        <div class="widgetContent">
+                            <div class="attachments d-flex flex-column">
+                                    <a href="#" class="" data-document-id="f8f763d8-0c61-4d1e-9e97-7f12f8d732bb" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/f8f763d8-0c61-4d1e-9e97-7f12f8d732bb?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
+                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
+                                        Vastgesteld raadsbesluit KCR2
+                                    </a>
+                                    <a href="#" class="active" data-document-id="0d404209-8669-41e9-af01-748bdc84be76" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/0d404209-8669-41e9-af01-748bdc84be76?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
+                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
+                                        00 DOC-26-1234143  - Raadsvoorstel Deelname KCR2
+                                    </a>
+                                    <a href="#" class="" data-document-id="70ce1b93-11cd-45cd-b792-7db63596700c" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/70ce1b93-11cd-45cd-b792-7db63596700c?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
+                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
+                                        01 260703 Brief aan gemeenteraden KCR2_VRNHN
+                                    </a>
+                                    <a href="#" class="" data-document-id="0754d99f-0b9d-4d87-9368-d87633e7c766" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/0754d99f-0b9d-4d87-9368-d87633e7c766?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
+                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
+                                        02 Ontwerpbesluit oprichting stichting KCR2_VRNHN
+                                    </a>
+                                    <a href="#" class=
+CAND rmatie.nl/Document/View/0d404209-8669-41e9-af01-748bdc84be76 200 application/pdf 190167 b'%PDF-'
+CAND ndaItemId=a6938304-28bf-4898-b572-5cbfdca6c954&download=true 200 text/html; charset=utf-8 49438 b'\n<!DO'
+VIDEO 200 {'Date': 'Thu, 15 Oct 2026 10:48:49 GMT', 'Content-Type': 'video/mp4', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN', 'referrer-policy': 'same-origin', 'content-disposition': 'attachment; filename="KRC2-animatie kleiner.mp4"; filename*=UTF-8\'\'KRC2-animatie%20kleiner.mp4', 'x-azure-ref': '20261015T104848Z-15f786f7784kqx6qhC1CHIr13g0000000an00000000055g1', 'x-cache': 'CONFIG_NOCACHE', 'strict-transport-security': 'max-age=63072000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=e8xK3AF%2FXyWfjvX4XYkBxJi22lKa%2B7%2Bn9XOCAMB7ldD%2BJ6FldEjCpXCTadHPvZuhd4F1tmnLHKiQtH88vxsH%2FYNJE3jZqWM0ANlQ4enV%2B8DaZoXlOMy7QSQ5UllGgM4kSuN8Cb0ZKyN1wRG7r7PF9cdDTdQB"}]}', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': 'a4ae40e51f5b60e0-ORD'}
