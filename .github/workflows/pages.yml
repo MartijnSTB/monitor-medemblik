@@ -1,0 +1,50 @@
+
+name: Publiceer dashboard
+
+on:
+  workflow_run:
+    workflows: ["Monitor publicaties"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Haal nieuwste bestanden op
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Kopieer publicaties naar dashboard
+        run: |
+          mkdir -p docs/data
+          cp data/items.json docs/data/items.json
+
+      - name: Configureer GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Publiceer website
+        id: deployment
+        uses: actions/deploy-pages@v4
