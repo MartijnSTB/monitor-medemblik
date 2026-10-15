@@ -13,77 +13,125 @@ SOURCES={
  'Collegebesluiten':'https://www.medemblik.nl/raad-bestuur-en-organisatie/college-van-bw/collegebesluiten',
  'Openbare informatie':'https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie',
  'Raadsportaal':'https://medemblik.bestuurlijkeinformatie.nl/',
- 'Bekendmakingen':'https://www.medemblik.nl/raad-bestuur-en-organisatie/bekendmakingen/koop/pagina/2',
 }
+# Wat elke bron wel en niet dekt; staat bij de bronstatus op het dashboard.
+SOURCE_NOTES={
+ 'Nieuws':'Alleen de eerste nieuwspagina (de 12 nieuwste berichten).',
+ 'Collegebesluiten':'Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet.',
+ 'Openbare informatie':'Alleen de links op deze pagina.',
+ 'Raadsportaal':'Startpagina: de 10 nieuwste overzichtsitems (raadsvragen, informatienota\u2019s, moties e.d.) en de vergaderingen. Oudere overzichtsitems niet.',
+}
+# KOOP: vanaf deze datum halen we alle bekendmakingen op (maand voor maand, zie koop_backfill).
+KOOP_START='2026-01-01'
+# Elke run: alles wat in de laatste zoveel dagen is gepubliceerd opnieuw ophalen.
+KOOP_RECENT_DAYS=30
 HEADERS={'User-Agent':'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
 def utc(): return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
 # Alleen de dag: zo verandert 'last_seen' maar één keer per dag en blijft de Git-historie klein.
 def today(): return datetime.datetime.now(datetime.timezone.utc).date().isoformat()
 def clean(s): return re.sub(r'\s+',' ',s or '').strip()
-def collect_official(db):
- """Collect recent Medemblik publications through the KOOP SRU 2.0 endpoint.
 
- Fail visibly on unexpected XML or diagnostics. Only records with an exact
- Medemblik creator match are accepted. Results are a rolling window, not a
- complete historical archive.
- """
- source='Officiele bekendmakingen (KOOP)'
- now=utc()
- try:
-  params={
-   'operation':'searchRetrieve','version':'2.0',
-   'query':'c.product-area=="officielepublicaties" AND dt.creator=="Medemblik"',
-   'maximumRecords':'100','startRecord':'1',
-  }
-  response=requests.get('https://repository.overheid.nl/sru',params=params,headers=HEADERS,timeout=35)
-  response.raise_for_status()
-  root=ET.fromstring(response.content)
+KOOP_SOURCE='Officiele bekendmakingen (KOOP)'
+KOOP_BASE='c.product-area=="officielepublicaties" AND dt.creator=="Medemblik"'
+
+def koop_fetch(date_filter):
+ """Haal ALLE records op voor een datumfilter, met paginering (max 1000 per verzoek).
+
+ Geeft (records, totaal_volgens_koop). Gecontroleerd 15 okt 2026: het filter
+ dt.available>=JJJJ-MM-DD werkt; zonder filter levert KOOP de records in willekeurige
+ volgorde (de oude code kreeg daardoor 100 vooral oude stukken)."""
+ records=[]; start=1; total=None
+ while True:
+  params={'operation':'searchRetrieve','version':'2.0','query':KOOP_BASE+' AND '+date_filter,
+   'maximumRecords':'1000','startRecord':str(start)}
+  r=requests.get('https://repository.overheid.nl/sru',params=params,headers=HEADERS,timeout=90)
+  r.raise_for_status()
+  root=ET.fromstring(r.content)
   if root.findall('.//{*}diagnostic'):
    raise ValueError('SRU diagnostic: '+clean(' '.join(root.itertext()))[:250])
-  records=root.findall('.//{*}recordData')
-  if not records:
-   raise ValueError('Geen recordData gevonden; controleer SRU query en XML structuur')
-  added=0
-  for record in records:
-   def values(name):
-    return [clean(e.text) for e in record.iter() if e.tag.rsplit('}',1)[-1]==name and e.text and clean(e.text)]
-   creators=values('creator')
-   if not any(c.casefold()=='medemblik' for c in creators):
-    continue
-   title=(values('title') or ['Publicatie zonder titel'])[0]
-   ids=values('identifier')
-   urls=[x for x in ids if x.startswith('https://') or x.startswith('http://')]
-   ident=next((x for x in ids if re.search(r'(?:gmb|stcrt|bgr|prb|wsb)-\d{4}-\d+',x)),None)
-   if not urls and ident:
-    m=re.search(r'(?:gmb|stcrt|bgr|prb|wsb)-\d{4}-\d+',ident)
-    urls=['https://zoek.officielebekendmakingen.nl/'+m.group()+'.html'] if m else []
-   if not urls:
-    continue
-   url=urls[0]
-   key=hashlib.sha256((source+'|'+url).encode()).hexdigest()
-   # Volgens de KOOP SRU-handleiding: dcterms:available = publicatie, dcterms:issued =
-   # formele uitgifte, dcterms:date = aanmaak document. Versie 3 gebruikte ten onrechte 'date'.
-   first=lambda name:(values(name) or [None])[0]
-   koop={'available':first('available'),'issued':first('issued'),'date':first('date')}
-   koop={k:(v[:10] if v else None) for k,v in koop.items()}
-   if koop['available']: doc_date,label=koop['available'],'publicatiedatum (KOOP)'
-   elif koop['issued']: doc_date,label=koop['issued'],'uitgiftedatum (KOOP)'
-   elif koop['date']: doc_date,label=koop['date'],'documentdatum (KOOP)'
-   else: doc_date,label=None,None
-   item=db['items'].get(key)
-   if item is None:
-    item=db['items'][key]={'title':title,'url':url,'source':source,'first_seen':now,
-      'updated':now,'last_change':None,'hash':hashlib.sha256((title+'|'+str(koop)).encode()).hexdigest(),
-      'revisions':1}
-    added+=1
-   # Datums bijwerken is metadata-correctie, geen inhoudelijke revisie.
-   item.update(koop_dates=koop,doc_date=doc_date,doc_date_label=label,
-     publication_date=koop['available'] or koop['issued'],last_seen=today(),
-     excerpt='Officiele bekendmaking; '+(label+': '+doc_date if doc_date else 'datum onbekend'))
-  db['status'][source]={'ok':True,'checked':now,'count':len(records),'new':added,
-    'note':'Maximaal 100 recente resultaten; niet gegarandeerd volledig. Alleen exacte Medemblik creator.'}
+  if total is None:
+   n=root.find('.//{*}numberOfRecords')
+   total=int(n.text) if n is not None and n.text else 0
+  batch=root.findall('.//{*}recordData')
+  records+=batch
+  nxt=root.find('.//{*}nextRecordPosition')
+  if not batch or nxt is None or not (nxt.text or '').strip().isdigit(): break
+  start=int(nxt.text)
+  if start>20000: raise ValueError('Paginering loopt uit de hand; gestopt bij 20000')
+ return records,total
+
+def koop_store(db,records):
+ """Sla KOOP-records op. Geeft het aantal nieuwe items."""
+ now=utc(); added=0
+ for record in records:
+  def values(name):
+   return [clean(e.text) for e in record.iter() if e.tag.rsplit('}',1)[-1]==name and e.text and clean(e.text)]
+  first=lambda name:(values(name) or [None])[0]
+  if not any(c.casefold()=='medemblik' for c in values('creator')):
+   continue
+  title=first('title') or 'Publicatie zonder titel'
+  ids=values('identifier')
+  m=next((re.search(r'(?:gmb|stcrt|bgr|prb|wsb)-\d{4}-\d+',x) for x in ids if re.search(r'(?:gmb|stcrt|bgr|prb|wsb)-\d{4}-\d+',x)),None)
+  # Zelfde URL-opbouw als versie 3, zodat bestaande items dezelfde sleutel houden.
+  url=('https://zoek.officielebekendmakingen.nl/'+m.group()+'.html') if m else first('preferredUrl')
+  if not url: continue
+  key=hashlib.sha256((KOOP_SOURCE+'|'+url).encode()).hexdigest()
+  # Volgens de KOOP SRU-handleiding: dcterms:available = publicatie, dcterms:issued =
+  # formele uitgifte, dcterms:date = aanmaak document.
+  koop={'available':first('available'),'issued':first('issued'),'date':first('date')}
+  koop={k:(v[:10] if v else None) for k,v in koop.items()}
+  if koop['available']: doc_date,label=koop['available'],'publicatiedatum (KOOP)'
+  elif koop['issued']: doc_date,label=koop['issued'],'uitgiftedatum (KOOP)'
+  elif koop['date']: doc_date,label=koop['date'],'documentdatum (KOOP)'
+  else: doc_date,label=None,None
+  item=db['items'].get(key)
+  if item is None:
+   item=db['items'][key]={'title':title,'url':url,'source':KOOP_SOURCE,'first_seen':now,
+     'updated':now,'last_change':None,'hash':hashlib.sha256((title+'|'+str(koop)).encode()).hexdigest(),
+     'revisions':1}
+   added+=1
+  # Datums en kenmerken bijwerken is metadata, geen inhoudelijke revisie.
+  types=[t for t in values('type') if '|' not in t]
+  item.update(koop_dates=koop,doc_date=doc_date,doc_date_label=label,
+    publication_date=koop['available'] or koop['issued'],last_seen=today(),
+    koop_type=(types or values('type') or [None])[0],locatie=first('geometrielabel'),
+    publicatie=first('publicatienaam'),
+    excerpt=first('abstract') or ('Officiele bekendmaking; '+(label+': '+doc_date if doc_date else 'datum onbekend')))
+ return added
+
+def collect_official(db):
+ """KOOP in twee delen:
+ 1. recent: elke run alles van de laatste KOOP_RECENT_DAYS dagen (vangt nieuwe stukken);
+ 2. backfill: per run één kalendermaand vanaf KOOP_START, tot de huidige maand is bereikt.
+ Per deel wordt gecontroleerd of het aantal opgehaalde records gelijk is aan het
+ totaal dat KOOP opgeeft. KOOP noemt dat totaal zelf een schatting."""
+ now=utc(); state=db.setdefault('state',{})
+ try:
+  since=(datetime.date.today()-datetime.timedelta(days=KOOP_RECENT_DAYS)).isoformat()
+  records,total=koop_fetch('dt.available>='+since)
+  added=koop_store(db,records)
+  note=f'Laatste {KOOP_RECENT_DAYS} dagen: {len(records)} van {total} opgehaald.'
+  ok=len(records)>=total
+  # Backfill: één maand per run.
+  month=state.get('koop_backfill_month',KOOP_START[:7])
+  current=datetime.date.today().strftime('%Y-%m')
+  if month<current:
+   y,mo=map(int,month.split('-'))
+   nxt=f'{y+(mo==12)}-{(mo%12)+1:02d}'
+   recs,tot=koop_fetch(f'dt.available>={month}-01 AND dt.available<{nxt}-01')
+   added+=koop_store(db,recs)
+   if len(recs)>=tot:
+    state['koop_backfill_month']=nxt
+    note+=f' Archief {month}: {len(recs)} van {tot} opgehaald.'
+   else:
+    ok=False
+    note+=f' Archief {month}: slechts {len(recs)} van {tot}; volgende run opnieuw.'
+  state['koop_complete_since']=KOOP_START if state.get('koop_backfill_month',KOOP_START[:7])>=current else None
+  cover=('Volledig vanaf '+KOOP_START) if state['koop_complete_since'] else ('Archief bijgewerkt t/m '+state.get('koop_backfill_month',KOOP_START[:7])+' (nog bezig)')
+  db['status'][KOOP_SOURCE]={'ok':ok,'checked':now,'count':len(records),'new':added,
+    'note':note+' Dekking: '+cover+'. Ouder dan '+KOOP_START+' wordt niet opgehaald.'}
  except Exception as exc:
-  db['status'][source]={'ok':False,'checked':now,'error':str(exc)[:250]}
+  db['status'][KOOP_SOURCE]={'ok':False,'checked':now,'error':str(exc)[:250]}
 
 MAANDEN={'januari':1,'februari':2,'maart':3,'april':4,'mei':5,'juni':6,'juli':7,
  'augustus':8,'september':9,'oktober':10,'november':11,'december':12}
@@ -200,6 +248,7 @@ def migrate_dates(db):
   if is_navigation(item.get('title',''),item.get('url','')):
    item['archived']=utc(); item['archived_reason']='Menuknop, geen publicatie'
    archive[key]=db['items'].pop(key)
+ db['status'].pop('Bekendmakingen',None)  # bron verwijderd: leverde 0 resultaten, KOOP dekt dit
  for item in db['items'].values():
   news_title_date(item)
   if 'last_change' not in item:
@@ -216,12 +265,115 @@ def migrate_dates(db):
   elif '/Agenda/Index/' in item.get('url','') and parse_nl_date(item.get('title','')):
    item['doc_date'],item['doc_date_label']=parse_nl_date(item['title']),'vergaderdatum'
 
+IBABS='https://medemblik.bestuurlijkeinformatie.nl'
+# Vergadertypes in het raadsportaal (ids uit /Calendar, gecontroleerd 15 okt 2026).
+IBABS_TYPES={0:'Gemeenteraad',100063720:'Raadscommissie',1:'Presidium',11:'Auditcommissie',
+ 100099145:'Informatiebijeenkomst',100067792:'Themabijeenkomst'}
+MEETING_WINDOW_PAST=60    # dagen terug
+MEETING_WINDOW_AHEAD=45   # dagen vooruit
+MEETINGS_PER_RUN=10       # zoveel vergaderpagina's per run, om de site te ontzien
+DOCS_SOURCE='Raadsstukken'
+
+def ibabs_list_meetings(db):
+ """Eén keer per dag: de jaarlijst per vergadertype ophalen."""
+ state=db.setdefault('state',{}); meetings=state.setdefault('meetings',{})
+ if state.get('meetings_listed')==today(): return None
+ years={datetime.date.today().year}
+ if datetime.date.today().month<=2: years.add(datetime.date.today().year-1)
+ errors=[]
+ for type_id,type_name in IBABS_TYPES.items():
+  for year in sorted(years):
+   try:
+    r=requests.get(IBABS+'/Agenda/RetrieveAgendasForYear',params={'agendatypeId':type_id,'year':year},headers=HEADERS,timeout=30)
+    r.raise_for_status()
+    for a in BeautifulSoup(r.text,'html.parser').select('a[href*="/Agenda/Index/"]'):
+     mid=a['href'].rstrip('/').rsplit('/',1)[-1]
+     date=parse_nl_date(clean(a.get_text(' ',strip=True)))
+     if not date: continue
+     m=meetings.setdefault(mid,{'checked':''})
+     m.update(type=type_name,date=date,label=clean(a.get_text(' ',strip=True)))
+   except Exception as exc:
+    errors.append(f'{type_name} {year}: {str(exc)[:60]}')
+ state['meetings_listed']=today()
+ return errors
+
+def ibabs_parse_meeting(html):
+ """Geeft [(titel, url, agendapunt)] voor alle documenten op een vergaderpagina."""
+ page=BeautifulSoup(html,'html.parser')
+ docs=[]; seen=set()
+ for a in page.select('a[href*="/Agenda/Document/"], a[href*="/Document/View/"]'):
+  href=urllib.parse.urljoin(IBABS,a['href'])
+  if href in seen: continue
+  seen.add(href)
+  for badge in a.select('.badge'): badge.extract()
+  title=clean(a.get_text(' ',strip=True))
+  item=a.find_parent('div',class_='agenda-item')
+  punt=None
+  if item:
+   pid=item.select_one('.panel-id'); lab=item.select_one('.panel-title-label')
+   punt=clean(((pid.get_text(strip=True)+' ') if pid else '')+(lab.get_text(' ',strip=True) if lab else ''))
+   punt=re.sub(r'\s*-\s*\d{1,2}:\d{2}$','',punt) or None
+  if title: docs.append((title,href,punt))
+ return docs
+
+def collect_meetings(db):
+ now=utc(); state=db.setdefault('state',{}); meetings=state.setdefault('meetings',{})
+ try:
+  errors=ibabs_list_meetings(db) or []
+  lo=(datetime.date.today()-datetime.timedelta(days=MEETING_WINDOW_PAST)).isoformat()
+  hi=(datetime.date.today()+datetime.timedelta(days=MEETING_WINDOW_AHEAD)).isoformat()
+  window=[(mid,m) for mid,m in meetings.items() if lo<=m['date']<=hi]
+  window.sort(key=lambda p:p[1].get('checked',''))
+  added=0; fetched=0
+  for mid,m in window[:MEETINGS_PER_RUN]:
+   url=IBABS+'/Agenda/Index/'+mid
+   try:
+    r=requests.get(url,headers=HEADERS,timeout=30); r.raise_for_status()
+   except Exception as exc:
+    errors.append(f'{m["type"]} {m["date"]}: {str(exc)[:60]}'); m['checked']=now; continue
+   fetched+=1; m['checked']=now
+   meeting_title=f'{m["type"]} {m["label"]}'
+   # De vergadering zelf (zelfde sleutel als de links van de startpagina).
+   mkey=hashlib.sha256(('Raadsportaal|'+url).encode()).hexdigest()
+   mitem=db['items'].setdefault(mkey,{'title':meeting_title,'url':url,'source':'Raadsportaal',
+     'first_seen':now,'updated':now,'last_change':None,'hash':'','revisions':1,'excerpt':''})
+   mitem.update(kind='vergadering',doc_date=m['date'],doc_date_label='vergaderdatum',last_seen=today())
+   docs=ibabs_parse_meeting(r.text)
+   m['documents']=len(docs)
+   for title,href,punt in docs:
+    q=urllib.parse.parse_qs(urllib.parse.urlparse(href).query)
+    doc_id=(q.get('documentId') or [href.rstrip('/').rsplit('/',1)[-1]])[0]
+    key=hashlib.sha256((DOCS_SOURCE+'|'+doc_id).encode()).hexdigest()
+    item=db['items'].get(key)
+    if item is None:
+     item=db['items'][key]={'title':title,'url':href,'source':DOCS_SOURCE,'kind':'raadsdocument',
+       'first_seen':now,'updated':now,'last_change':None,'hash':'','revisions':1}
+     added+=1
+    # Eén document kan in meerdere vergaderingen staan (eerst commissie, dan raad).
+    # Bewaar ze allemaal; datum en hoofdvergadering = de vroegste.
+    seen_in=item.setdefault('meetings',[])
+    entry={'date':m['date'],'meeting':meeting_title,'agendapunt':punt}
+    if entry not in seen_in: seen_in.append(entry); seen_in.sort(key=lambda e:e['date'])
+    eerste=seen_in[0]
+    item.update(doc_date=eerste['date'],doc_date_label='vergaderdatum',meeting_title=eerste['meeting'],
+      agendapunt=eerste['agendapunt'],last_seen=today(),
+      excerpt=eerste['meeting']+(' · agendapunt '+eerste['agendapunt'] if eerste['agendapunt'] else ' · vergaderdocumenten')
+        +(f' · ook in {len(seen_in)-1} andere vergadering(en)' if len(seen_in)>1 else ''))
+  total_docs=sum(1 for v in db['items'].values() if v.get('kind')=='raadsdocument')
+  db['status'][DOCS_SOURCE]={'ok':not errors,'checked':now,'count':fetched,'new':added,
+    'error':'; '.join(errors)[:250] if errors else None,
+    'note':f'{fetched} van {len(window)} vergaderingen in venster bijgewerkt; {total_docs} documenten bekend. '
+           f'Dekking: vergaderingen van {lo} t/m {hi} ({", ".join(IBABS_TYPES.values())}). Oudere vergaderingen niet.'}
+ except Exception as exc:
+  db['status'][DOCS_SOURCE]={'ok':False,'checked':now,'error':str(exc)[:250]}
+
 def main():
  DB.parent.mkdir(exist_ok=True); OUT.parent.mkdir(exist_ok=True)
  db=json.loads(DB.read_text()) if DB.exists() else {'items':{},'status':{}}
  archive_legacy_college(db)
  migrate_dates(db)
  collect_official(db)
+ collect_meetings(db)
  for source,url in SOURCES.items():
   try:
    r=requests.get(url,headers=HEADERS,timeout=25);r.raise_for_status()
@@ -250,7 +402,7 @@ def main():
       db['items'][key].update(doc_date=parse_nl_date(title),doc_date_label='vergaderdatum')
     news_title_date(db['items'][key])
     db['items'][key]['last_seen']=today()
-   db['status'][source]={'ok':True,'checked':utc(),'count':len(candidates)}
+   db['status'][source]={'ok':True,'checked':utc(),'count':len(candidates),'note':SOURCE_NOTES.get(source)}
   except Exception as e:
    db['status'][source]={'ok':False,'checked':utc(),'error':str(e)[:180]}
  # Check a limited rotating batch of already discovered documents for content changes.
@@ -262,7 +414,10 @@ def main():
  overview=set(u.rstrip('/') for u in SOURCES.values())
  eligible=[(k,v) for k,v in db['items'].items() if v.get('url','').startswith((
   'https://www.medemblik.nl/', 'https://medemblik.bestuurlijkeinformatie.nl/'))
-  and v.get('url','').rstrip('/') not in overview and v.get('kind')!='collegebesluit']
+  and v.get('url','').rstrip('/') not in overview
+  # Besluiten, vergaderingen en raadsdocumenten (PDF) worden door hun eigen verzamelaar gevolgd;
+  # inhoudelijke PDF-controle komt in fase 4.
+  and v.get('kind') not in ('collegebesluit','raadsdocument','vergadering') and '/Agenda/Index/' not in v.get('url','')]
  eligible.sort(key=lambda pair: pair[1].get('content_checked',''))
  for key,item in eligible[:15]:
   try:
@@ -310,7 +465,7 @@ def main():
  db['items']=dict(items)
  DB.write_text(json.dumps(db,ensure_ascii=False,indent=2)+'\n')
  payload=json.dumps({'items':[v for _,v in items],'status':db['status']},ensure_ascii=False).replace('</','<\\/')
- html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}.tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}.t-nieuw{background:#d6f0df;color:#145c37}.t-gewijzigd{background:#fde8c8;color:#7a4a00}.t-historisch{background:#ececec;color:#555}.t-gepland{background:#e3e0f7;color:#3d3480}.t-onbekend{background:#f6e1e1;color:#8a2c2c}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Gesorteerd op de datum van het stuk zelf. Een oud stuk dat de monitor pas net vond, staat op zijn eigen datum met het label historisch.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="nieuw">Nieuw</option><option value="gewijzigd">Gewijzigd</option><option value="historisch">Historisch</option><option value="gepland">Gepland</option><option value="onbekend">Datum onbekend</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Komende vergaderingen</h2><div id="upcoming"></div></section><section class="panel"><h2>Publicaties</h2><p><small>Nieuwste bovenaan, op datum van het stuk. Stukken zonder datum staan onderaan.</small></p><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'FOUT'} · ${esc(v.checked)} ${v.error?esc(v.error):''}</div>`).join('');const TODAY=new Date().toISOString().slice(0,10);const day=s=>s?String(s).slice(0,10):'';const nl=s=>s?new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}):'onbekend';const diff=(a,b)=>(new Date(a)-new Date(b))/864e5;function kinds(x){let t=[],f=day(x.first_seen);if(!x.doc_date)t.push('onbekend');else if(x.doc_date>TODAY)t.push('gepland');else if(diff(f,x.doc_date)>30)t.push('historisch');else if(diff(TODAY,f)<=7)t.push('nieuw');if(x.last_change)t.push('gewijzigd');return t}const LABEL={onbekend:'datum onbekend'};DATA.items.sort((a,b)=>(!!b.doc_date-!!a.doc_date)||(b.doc_date||day(b.first_seen)).localeCompare(a.doc_date||day(a.first_seen))||a.title.localeCompare(b.title));function li(x){return `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${kinds(x).filter(t=>t!=='gepland').map(t=>`<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('')}<br><small>${esc(x.source)} · ${x.doc_date?esc(x.doc_date_label||'datum')+': '+nl(x.doc_date):'datum van het stuk onbekend'}${x.besluit_status?' ('+esc(x.besluit_status)+')':''} · ontdekt door monitor: ${nl(x.first_seen)}${x.last_change?' · inhoud gewijzigd: '+nl(x.last_change):''}${x.revisions>1?' · versies: '+x.revisions:''}</small></li>`}function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||kinds(x).includes(k))&&(x.title+' '+(x.excerpt||'')).toLowerCase().includes(q));let up=a.filter(x=>kinds(x).includes('gepland')).sort((x,y)=>x.doc_date.localeCompare(y.doc_date));let rest=a.filter(x=>!kinds(x).includes('gepland'));$('count').textContent=a.length+' resultaten';$('upcoming').innerHTML=up.length?'<ul>'+up.map(li).join('')+'</ul>':'<p><small>Geen komende vergaderingen in deze selectie.</small></p>';$('results').innerHTML='<ul>'+rest.slice(0,500).map(li).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
+ html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}.tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}.t-nieuw{background:#d6f0df;color:#145c37}.t-gewijzigd{background:#fde8c8;color:#7a4a00}.t-historisch{background:#ececec;color:#555}.t-gepland{background:#e3e0f7;color:#3d3480}.st{margin:8px 0}.t-onbekend{background:#f6e1e1;color:#8a2c2c}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Gesorteerd op de datum van het stuk zelf. Een oud stuk dat de monitor pas net vond, staat op zijn eigen datum met het label historisch.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="nieuw">Nieuw</option><option value="gewijzigd">Gewijzigd</option><option value="historisch">Historisch</option><option value="gepland">Gepland</option><option value="onbekend">Datum onbekend</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Komende vergaderingen</h2><div id="upcoming"></div></section><section class="panel"><h2>Publicaties</h2><p><small>Nieuwste bovenaan, op datum van het stuk. Stukken zonder datum staan onderaan.</small></p><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="st"><span class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'LET OP'}</span> <small>· ${v.checked?new Date(v.checked).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):''}${v.new?' · '+v.new+' nieuw':''}</small>${v.note?`<br><small>${esc(v.note)}</small>`:''}${v.error?`<br><small class="error">${esc(v.error)}</small>`:''}</div>`).join('');const TODAY=new Date().toISOString().slice(0,10);const day=s=>s?String(s).slice(0,10):'';const nl=s=>s?new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}):'onbekend';const diff=(a,b)=>(new Date(a)-new Date(b))/864e5;function kinds(x){let t=[],f=day(x.first_seen);if(!x.doc_date)t.push('onbekend');else if(x.doc_date>TODAY)t.push('gepland');else if(diff(f,x.doc_date)>30)t.push('historisch');else if(diff(TODAY,f)<=7)t.push('nieuw');if(x.last_change)t.push('gewijzigd');return t}const LABEL={onbekend:'datum onbekend'};DATA.items.sort((a,b)=>(!!b.doc_date-!!a.doc_date)||(b.doc_date||day(b.first_seen)).localeCompare(a.doc_date||day(a.first_seen))||a.title.localeCompare(b.title));function li(x){return `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${kinds(x).filter(t=>t!=='gepland').map(t=>`<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('')}<br><small>${esc(x.source)} · ${x.doc_date?esc(x.doc_date_label||'datum')+': '+nl(x.doc_date):'datum van het stuk onbekend'}${x.besluit_status?' ('+esc(x.besluit_status)+')':''}${x.koop_type?' · '+esc(x.koop_type):''}${x.locatie?' · '+esc(x.locatie):''}${x.meeting_title?' · '+esc(x.meeting_title):''}${x.agendapunt?' · agendapunt '+esc(x.agendapunt):''}${x.meetings&&x.meetings.length>1?' · ook in '+(x.meetings.length-1)+' andere vergadering(en)':''} · ontdekt door monitor: ${nl(x.first_seen)}${x.last_change?' · inhoud gewijzigd: '+nl(x.last_change):''}${x.revisions>1?' · versies: '+x.revisions:''}</small></li>`}function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||kinds(x).includes(k))&&(x.title+' '+(x.excerpt||'')).toLowerCase().includes(q));let up=a.filter(x=>kinds(x).includes('gepland')).sort((x,y)=>x.doc_date.localeCompare(y.doc_date));let rest=a.filter(x=>!kinds(x).includes('gepland'));$('count').textContent=a.length+' resultaten';$('upcoming').innerHTML=up.length?'<ul>'+up.map(li).join('')+'</ul>':'<p><small>Geen komende vergaderingen in deze selectie.</small></p>';$('results').innerHTML='<ul>'+rest.slice(0,500).map(li).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
  OUT.write_text(html.replace('__DATA__',payload))
  print('Items:',len(items),'Sources:',db['status'])
 if __name__=='__main__':main()
