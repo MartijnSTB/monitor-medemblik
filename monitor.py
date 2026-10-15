@@ -836,7 +836,9 @@ def check_documents(db):
                # Collegebesluiten (Medemblik) en vergaderingen hebben hun eigen vergelijking.
                and v.get('kind') not in ('collegebesluit', 'vergadering') and '/Agenda/Index/' not in v.get('url', '')]
     due = [(k, v) for k, v in tracked if is_due(v, now_dt)]
-    due.sort(key=lambda p: p[1].get('content_checked') or '')  # nooit gecontroleerd eerst
+    # Nooit gecontroleerd eerst, daarna wie het langst wacht; bij gelijke stand de nieuwste stukken eerst.
+    due.sort(key=lambda p: p[1].get('doc_date') or '', reverse=True)
+    due.sort(key=lambda p: p[1].get('content_checked') or '')
     checked = failures = pdf_count = noscan = 0
     for key, item in due[:DOCS_PER_RUN]:
         try:
