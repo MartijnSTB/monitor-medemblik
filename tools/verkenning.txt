@@ -1,15 +1,101 @@
 
-===== https://opmeer.bestuurlijkeinformatie.nl e90d2554-7a8b-4254-a9c1-fba22e8d67b3
-cols [{'data': 'registrationdate', 'name': 'registrationdate'}, {'data': 'title', 'name': 'title', 'searchable': False}]
-token False
-200 text/plain; charset=utf-8 {"draw":1,"data":[{"DT_RowId":"414c9420-40cd-44e3-988b-70fc66ad0477","registrationdate":"01-10-2026","title":"Besluitenlijst collegevergadering 15 september 2026"},{"DT_RowId":"bd9887fa-6e1b-4542-8a8a-288f543cc4af","registrationdate":"24-09-2026","title":"Besluitenlijst collegevergadering 8 september 2026"},{"DT_RowId":"d5984f76-f7a2-46d7-996d-9993f98b8064","registrationdate":"17-09-2026","title":"Besluitenlijst collegevergadering 1 september 2026"},{"DT_RowId":"8a61e58a-e48f-4628-a03b-5a79ec211505","registrationdate":"17-09-2026","title":"Besluitenlijst collegevergadering 6 augustus 2026"},{"DT_RowId":"3af3d09e-dcd8-4e53-9b4e-bee953fb58b9","registrationdate":"10-09-2026","title":"Besluitenlijst collegevergadering 25 augustus 2026"}],"recordsTotal":310,"recordsFiltered":310}
+## Filters ['registrationdate', 'title', 'bijlages'] -> sorteer op registrationdate | data-order [[0,"desc"]]
 
-===== https://medemblik.bestuurlijkeinformatie.nl b6e30d37-cfd2-4064-a7fa-19453570dfb5
-cols [{'data': 'datum', 'name': 'datum'}, {'data': 'title', 'name': 'title'}, {'data': 'datumantwoord', 'name': 'datumantwoord'}, {'data': 'bijlages', 'name': 'bijlages', 'searchable': False}, {'data': 'toelichting', 'name': 'toelichting', 'searchable': False}, {'data': 'identity', 'name': 'identity', 'visible': False}, {'data': 'pinnummer', 'name': 'pinnummer', 'visible': False}, {'data': 'poho', 'name': 'poho'}]
-token False
-200 text/plain; charset=utf-8 {"draw":1,"data":[{"DT_RowId":"78aba77b-4fb2-4210-b19b-f3034d2a5bc7","datum":"15-10-2026","title":"Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab in Lambertschaag","datumantwoord":null,"bijlages":"Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab in Lambertschaag","toelichting":"","poho":"M. Pijl"},{"DT_RowId":"0a949901-a2e1-4ae8-bbe7-944bab6a6938","datum":"14-10-2026","title":"Raadsvragen HvM Starters gelukkig bij hun ouders? Hart voor Medemblik wil weten hoe het zit in onze dorpen en stad?","datumantwoord":null,"bijlages":"Raadsvragen HvM Starters gelukkig bij hun ouders","toelichting":"","poho":"M. Hoogewerf"},{"DT_RowId":"a6e042fd-ad03-4226-a799-c398d7e78df8","datum":"14-10-2026","title":"Raadsvragen GemeenteBelangen storten vervuilde PFAZ grond","datumantwoord":null,"bijlages":"Raadsvragen GemeenteBelangen Zorgen over mogelijke stort van PFAS-houdend afval ","toelichting":"","poho":""},{"DT_RowId":"e4c8e7ea-2df2-47f7-92d9-64bb1fc440b6","datum":"12-10-2026","title":"Raadsvragen D66 Betaalbaarheid van een warmtenetaansluiting","datumantwoord":null,"bijlages":"Raadsvragen D66 Betaalbaarheid van een warmtenetaansluiting","toelichting":"","poho":"I. Mantel"},{"DT_RowId":"cf268c91-31a4-4dbf-b7a0-be6a46c158ad","datum":"12-10-2026","title":"Raadsvragen D66 en Morgen! Groenbeheer versus Meer Bomen Nu","datumantwoord":null,"bijlages":"Raadsvragen D66 en Morgen! Groenbeheer versus Meer Bomen Nu","toelichting":"","poho
+== medemblik.be 55a67657 order 0 total 2123
+   {'registrationdate': '13-10-2026', 'title': 'Regionale aanpak suïcidepreventie Westfr'}
+   {'registrationdate': '08-10-2026', 'title': 'Reactie op Amendement 39 Woningbouwproje'}
 
-===== https://medemblik.bestuurlijkeinformatie.nl 55a67657-751b-488f-938d-31c4a7f557b4
-cols [{'data': 'registrationdate', 'name': 'registrationdate'}, {'data': 'title', 'name': 'title'}, {'data': 'bijlages', 'name': 'bijlages', 'searchable': False}]
-token False
-200 text/plain; charset=utf-8 {"draw":1,"data":[{"DT_RowId":"ae33f7f6-b646-4794-8740-818baae9f147","registrationdate":"13-10-2026","title":"Regionale aanpak suïcidepreventie Westfriesland 2026 ","bijlages":"Aangepast infonota regionale aanpak suicidepreventie 2026"},{"DT_RowId":"a543e9b3-cb50-4e9c-be31-94f8fedebefe","registrationdate":"08-10-2026","title":"Reactie op Amendement 39 Woningbouwproject De Tegel ","bijlages":"260924InformatieNotaAlternatiefplan De Tegel DEF\nBijlage 1 Alternatief Plan\nBijlage 2 Plantoets beoordeling Stedenbouw\nBijlage 3 Raadsmemo alternatief plan De Tegel\nBijlage 4 Advies ARK\nBijlage 5 Doorrekening alternatief plan\nBijlage 6 Onderzoek Amendement"},{"DT_RowId":"f0b0e6cf-dfb0-49c9-ab87-d3349edd522f","registrationdate":"08-10-2026","title":"Evaluatie en aanpassing subsidieregeling BRUIS","bijlages":"202101169_1.DOC - Raadsinformatienota aanpassing subsidieregeling BRUIS\nup to date Evaluatie BRUIS 2025-2026 \n202081026_1.DOC - was-wordt lijst\naangepaste subsidieregeling BRUIS.docx - (aangepaste) Nadere regels subsidieregeling BRUIS Medemblik\nMotie 107 van 2025 HvM BRUIS een succes! (5).pdf - Motie 107 van 2025 HvM BRUIS een succes!"},{"DT_RowId":"749a0d67-029e-4535-b97b-3132fdf9f671","registrationdate":"08-10-2026","title":"Informatienota voortgang Renovatie gemeentehuis","bijlages":" Periodiek Informatienota raad varianten TH\nPPT Stand van Zaken programma Renovatie\n OTH_MED_informatieavond gemraad def\nPresentatie varianten en kosten Tijdelijke Huisvesting\nKostenopbouw
+## Filters ['identity', 'title', 'afzender', 'datumingekomen', 'registrationdate', 'datumraad', 'type', 'completed', 'datumafdoening', 'bijlages', 'relatiemet', 'pinummer', 'zaaknummer'] -> sorteer op datumingekomen | data-order [[3,"desc"]]
+
+== medemblik.be 55930379 order 3 total 3150
+   {'title': 'Klimaatbulletin met focus op overleven v', 'datumingekomen': '15-10-2026', 'registrationdate': 'Gemeenteraad 12-11-2026 A.4. Ingekomen s'}
+   {'title': 'De rol van kleine kerncentrales, de Smal', 'datumingekomen': '15-10-2026', 'registrationdate': 'Gemeenteraad 12-11-2026 A.4. Ingekomen s'}
+
+## Filters ['registrationdate', 'title', 'toelichting'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== medemblik.be b90bf229 order 0 total 1
+   {'registrationdate': '14-07-2026', 'title': 'Jaarstukken 2025'}
+
+## Filters ['identity', 'registrationdate', 'title', 'standvanzaken', 'portefeuillehouder', 'completed', 'datumafdoening', 'status', 'type', 'hoofdindiener', 'medeindiener'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== medemblik.be d78d4c5b order 1 total 402
+   {'registrationdate': 'Gemeenteraad 24-09-2026 B.4. Ruimtelijk ', 'title': 'AMENDEMENT 10 van 2026'}
+   {'registrationdate': 'Gemeenteraad 24-09-2026 B.4. Ruimtelijk ', 'title': 'AMENDEMENT 9 van 2026'}
+
+## Filters ['datum', 'title', 'datumantwoord', 'bijlages', 'toelichting', 'identity', 'pinnummer', 'poho'] -> sorteer op datum | data-order [[0,"desc"]]
+
+== medemblik.be b6e30d37 order 0 total 1406
+   {'datum': '15-10-2026', 'title': 'Raadsvragen Hart voor Medemblik over ver', 'datumantwoord': None}
+   {'datum': '14-10-2026', 'title': 'Raadsvragen HvM Starters gelukkig bij hu', 'datumantwoord': None}
+
+## Filters ['title', 'typedocument', 'gemeente', 'registrationdate'] -> sorteer op registrationdate | data-order [[3,"desc"]]
+
+== medemblik.be 3fbb1512 order 3 total 54
+   {'title': 'Doe Mee Onderzoek', 'registrationdate': '18-06-2026'}
+   {'title': 'Jaarverslag 2025 en jaarplan 2026', 'registrationdate': '13-04-2026'}
+
+## Filters ['identity', 'registrationdate', 'title', 'completed', 'omschrijving', 'portefeuillehouder', 'standvanzaken'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== medemblik.be 3e68aabb order 1 total 332
+   {'registrationdate': 'Gemeenteraad 02-07-2026 D.1. Moties Vree', 'title': 'Vuilstortplaats Westwoud'}
+   {'registrationdate': 'Raadscommissie 08-06-2026 4.1. Voorjaars', 'title': 'Inschatting over reserve 3 grote project'}
+
+## Filters ['registrationdate', 'title', 'status', 'portefeuillehouder', 'Fracties'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== opmeer.bestu fe1e75d9 order 0 total 74
+   {'registrationdate': 'Besluitvormende raadsvergadering 17-09-2', 'title': 'Wensen over Stichting KCR2'}
+   {'registrationdate': 'Besluitvormende raadsvergadering 17-09-2', 'title': 'Uitstel beschikbaar stellen structurele '}
+
+## Filters ['title', 'registrationdate'] -> sorteer op registrationdate | data-order [[1,"desc"]]
+
+== opmeer.bestu d529b02d order 1 total 13
+   {'title': 'Auditcommissieplan 2026-2030', 'registrationdate': '14-10-2026'}
+   {'title': 'College-uitvoeringsprogramma Opmeer 2026', 'registrationdate': '13-10-2026'}
+
+## Filters ['registrationdate', 'title'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== opmeer.bestu e90d2554 order 0 total 310
+   {'registrationdate': '01-10-2026', 'title': 'Besluitenlijst collegevergadering 15 sep'}
+   {'registrationdate': '24-09-2026', 'title': 'Besluitenlijst collegevergadering 8 sept'}
+
+## Filters ['identity', 'datum', 'title', 'afzender', 'afdoen'] -> sorteer op datum | data-order [[0,"desc"]]
+
+== opmeer.bestu 1889cc1d order 1 total 1142
+   {'datum': '14-10-2026', 'title': 'Klimaatbulletin van 1 oktober 2026 '}
+   {'datum': '13-10-2026', 'title': 'Gemeentereaad en college: Concrete noodz'}
+
+## Filters ['registrationdate', 'title', 'portefeuillehouder', 'status', 'raadsleden', 'afgedaan'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== opmeer.bestu 28e14d86 order 0 total 79
+   {'registrationdate': 'Besluitvormende raadsvergadering 17-09-2', 'title': 'Stikstofbrief kabinet'}
+   {'registrationdate': 'Besluitvormende raadsvergadering 17-09-2', 'title': 'Aanjagen woningbouw kleine kernen'}
+
+## Filters ['registrationdate', 'title', 'afgedaan', 'datumantwoord'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== opmeer.bestu 6d7d02ae order 0 total 73
+   {'registrationdate': '07-10-2026', 'title': 'Politieke vragen over verdwijnende parke', 'datumantwoord': None}
+   {'registrationdate': '07-10-2026', 'title': 'Politieke vragen KERN8 over ontwerp-wate', 'datumantwoord': None}
+
+## Filters ['identity', 'datum', 'title', 'portefeuillehouder'] -> sorteer op datum | data-order [[0,"desc"]]
+
+== opmeer.bestu a7c6ff3a order 1 total 587
+   {'datum': '13-10-2026', 'title': 'Raadsinformatiebrief over Conceptaanvraa'}
+   {'datum': '07-10-2026', 'title': 'Raadsinformatiebrief over Voortgang impl'}
+
+## Filters ['title', 'registrationdate'] -> sorteer op registrationdate | data-order [[1,"desc"]]
+
+== opmeer.bestu e076eacd order 1 total 25
+   {'title': 'Gemeenteraadsverkiezingen 2026'}
+   {'title': 'Duurzame energieopwek'}
+
+## Filters ['registrationdate', 'title', 'portefeuillehouder', 'fractie', 'afgedaan'] -> sorteer op registrationdate | data-order [[0,"desc"]]
+
+== opmeer.bestu c7782114 order 0 total 84
+   {'registrationdate': 'Besluitvormende raadsvergadering 02-07-2', 'title': 'Investeringen SSC De Som'}
+   {'registrationdate': 'Oordeelsvormende raadsvergadering 25-06-', 'title': 'Stand van zaken openstaande kredieten'}
+
+## Filters ['title', 'registrationdate'] -> sorteer op registrationdate | data-order [[1,"desc"]]
+
+== opmeer.bestu 33344eca order 1 total 11
+   {'title': 'Verslag auditcommissie van 7 oktober 202', 'registrationdate': '30-10-2025'}
+   {'title': 'Verslag auditcommissie van 24 juni 2025', 'registrationdate': '08-07-2025'}
