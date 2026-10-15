@@ -1,44 +1,82 @@
 
-==================== KOOP Koggenland ====================
-ct-area=="officielepublicaties" AND dt.creator=="Koggenland" 200 ['7722'] ['Koggenland', 'Koggenland', 'Koggenland']
-s" AND dt.creator=="Koggenland" AND dt.available>=2026-09-15 200 ['89'] ['Koggenland', 'Koggenland', 'Koggenland']
-
-==================== KOOP Opmeer ====================
-roduct-area=="officielepublicaties" AND dt.creator=="Opmeer" 200 ['4481'] ['Opmeer', 'Opmeer', 'Opmeer']
-aties" AND dt.creator=="Opmeer" AND dt.available>=2026-09-15 200 ['47'] ['Opmeer', 'Opmeer', 'Opmeer']
-
-==================== https://www.koggenland.nl/ ====================
-200 text/html; charset=utf-8 229190 final https://www.koggenland.nl/
-h1 | Home
-h2 | Laatste nieuws
-h3 | Gratis leefstijlprogramma ‘Voel je Goed’ start in Obdam
-h3 | Wijkleercentrum Avenhorn breidt uit met nieuwe lesruimtes
+==================== https://www.koggenland.nl/nieuwsberichten ====================
+200 text/html; charset=utf-8 244580 final https://www.koggenland.nl/nieuwsberichten
+h1 | Nieuwsberichten
+h2 | Gratis leefstijlprogramma ‘Voel je Goed’ start in Obdam
+h2 | Wijkleercentrum Avenhorn breidt uit met nieuwe lesruimtes
+h2 | Boeken komen tot leven tijdens Kinderboekenweek
+h2 | Ontbijten met de burgemeester
+h2 | Informatiemarkten over opvang asielzoekers op 7 en 8 oktober
+h2 | Leefstijlcoaches in gesprek over stoppen met roken
+h2 | Kinderboerderij bij de ‘geitenspeeltuin’ in De Goorn heet voortaan ’t Braashofje
+h2 | Staatssecretaris bezoekt Hensbroek opnieuw vanwege plannen voor 380 kV-hoogspanningsverbinding
+h2 | Paginering
 h2 | Gemeentehuis
 h2 | Volg ons op
 h2 | Blijf op de hoogte
 h2 | Meer informatie
 h2 | 
 h2 | Menu
-A Melding doen -> /melding-woon-en-leefomgeving-melding-openbare-ruimte
-A Meer nieuws -> /nieuwsberichten
+A Contact -> /openingstijden-en-contact
+A Afspraak maken -> /afspraak-maken
+A  -> /
+A Actueel -> /actueel
+A koggenland.archiefweb.eu -> https://koggenland.archiefweb.eu
+A RSS feed -> /rss/content-list?type%5B%5D=news&sort_by=published_at&sort_order=DESC
+A Koning Willem-Alexander brengt bezoek aan Ursem -> /koning-willem-alexander-brengt-bezoek-aan-ursem
+A Gratis leefstijlprogramma ‘Voel je Goed’ start in Obdam -> /gratis-leefstijlprogramma-voel-je-goed-start-in-obdam
+A Wijkleercentrum Avenhorn breidt uit met nieuwe lesruimtes -> /wijkleercentrum-avenhorn-breidt-uit-met-nieuwe-lesruimtes
+A Boeken komen tot leven tijdens Kinderboekenweek -> /boeken-komen-tot-leven-tijdens-kinderboekenweek
+A Ontbijten met de burgemeester -> /ontbijten-met-de-burgemeester
+A Informatiemarkten over opvang asielzoekers op 7 en 8 oktober -> /informatiemarkten-over-opvang-asielzoekers-op-7-en-8-oktober
+A Leefstijlcoaches in gesprek over stoppen met roken -> /leefstijlcoaches-in-gesprek-over-stoppen-met-roken
+A Kinderboerderij bij de ‘geitenspeeltuin’ in De Goorn heet voortaan ’t Braashofje -> /kinderboerderij-bij-de-geitenspeeltuin-in-de-goorn-heet-voortaan-t-braashofje
+A Staatssecretaris bezoekt Hensbroek opnieuw vanwege plannen voor 380 kV-hoogspanningsverbinding -> /staatssecretaris-bezoekt-hensbroek-opnieuw-vanwege-plannen-voor-380-kv-hoogspanningsverbinding
+A Huidige pagina 1 -> /nieuwsberichten/1
+A Pagina 2 -> /nieuwsberichten/2
+A Pagina 3 -> /nieuwsberichten/3
+A T: (0229) 54 84 00 -> /#
+A Bastion -> https://www.koggenland.nl/veilig-e-mailen
+A Facebook pagina van de gemeente Koggenland -> https://www.facebook.com/koggenland
+A Linkedin pagina van de gemeente Koggenland -> https://www.linkedin.com/company/gemeente-koggenland/
+A Instagrampagina van de gemeente Koggenland -> https://www.instagram.com/gemeente_koggenland/
 A Inschrijven voor de nieuwsbrief -> https://www.koggenland.nl/nieuwsbrief
-A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
-A Gemeenteraad -> /gemeenteraad
-A Kindergemeenteraad -> /kindergemeenteraad
-A Stichting Adviesraad Sociaal Domein -> /stichting-adviesraad-sociaal-domein-gemeente-koggenland
-A Koggennieuws -> /koggennieuws
-A Overzicht Woo-verzoeken -> /overzicht-woo-verzoeken
+A Over deze website -> /over-deze-website
+A Sitemap -> https://www.koggenland.nl/sitemap
+A Werken bij Koggenland -> https://www.werkenbijkoggenland.nl/vacatures/alle-vacatures
+A Voor Inwoners -> /voor-inwoners
+A Afval -> /afval
+A Belastingen -> /belastingen
+A Bouwen en verbouwen -> /bouwen-en-verbouwen
+A Meldingen en klachten -> /meldingen-en-klachten
+A Paspoort, ID-kaart en uittreksels -> /paspoort-id-kaart-en-uittreksels
+A Rijbewijs -> /rijbewijs
+A Geboorte, erkenning, adoptie -> /geboorte-erkenning-adoptie
+A Overlijden -> /overlijden
+A Trouwen, geregistreerd partnerschap, scheiding -> /trouwen-geregistreerd-partnerschap-scheiding
+A Zorg en ondersteuning -> /zorg-en-ondersteuning
+A Financiële ondersteuning -> /financiele-ondersteuning
+A Vergunningen -> /vergunningen
+A Wonen -> /wonen
+SNIP <!DOCTYPE html><html lang="nl"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width, initial-scale=1" data-next-head=""/><title data-next-head="">Nieuwsberichten | Koggenland</title><link rel="shortcut icon" href="https://cuatro.sim-cdn.nl/koggenland/uploads/2022-05/favicon.ico?cb=orbX6Doc" data-next-head=""/><link rel="canonical" href="https://www.koggenland.nl/nieuwsberichten" data-next-head=""/><meta name="title" content="Nieuwsberichten" data-next-head=""/><meta property="og:site_name" content="Koggenland" data-next-head=""/><meta property="og:type" content="article" data-next-head=""/><meta property="og:url" content="https://www.koggenland.nl/nieuwsberichten" data-next-head=""/><meta property="og:title" content="Nieuwsberichten" data-next-head=""/><meta property="og:updated_time" content="2025-04-07T06:21:14+02:00" data-next-head=""/><meta property="og:locale" content="nl" data-next-head=""/><meta name="article:publisher" content="Koggenland" data-next-head=""/><meta name="article:published_time" content="2022-05-10T15:18:00+02:00" data-next-head=""/><meta name="article:modified_time" content="2025-04-07T06:21:14+02:00" data-next-head=""/><meta name="dcterms.title" content="Nieuwsberichten" data-next-head=""/><meta name="dcterms.creator" content="Koggenland" data-next-head=""/><meta name="dcterms.publisher" content="Koggenland" data-next-head=""/><meta name="dcterms.date" content="2022-05-10T15:18:00+02:00" data-next-head=""/><meta name="dcterms.type" content="Overzichtspagina" data-next-head=""/><meta name="dcterms.language" content="nl" data-next-head=""/><meta name="twitter:card" content="summary_large_image" data-next-head=""/><meta name="twitter:title" content="Nieuwsberichten" data-next-head=""/><meta name="generator" content="SIMsite powered by Drupal" data-next-head=""/><meta name="robots" content="index, follow"/><meta 
 
-==================== https://www.opmeer.nl/ ====================
-200 text/html; charset=utf-8 207629 final https://www.opmeer.nl/
-h1 | Home
-h2 | Gemeente Opmeer
-h2 | Laatste nieuws
+==================== https://www.opmeer.nl/nieuws ====================
+200 text/html; charset=utf-8 218225 final https://www.opmeer.nl/nieuws
+h1 | Nieuws
+h2 | Het laatste nieuws van de gemeente Opmeer
 h3 | Dinsdag 13 oktober bezocht de ‘Denk vooruit bus’ een bezoek aan Opmeer
 h3 | Dag van de Ondernemer op 20 november!
 h3 | Wethouder Daniël Hagens hijst regenboogvlag bij het gemeentehuis
-h2 | Wonen in Opmeer
-h2 | Duurzaam Opmeer
+h3 | Besluit over route en locaties Netuitbreiding Noord-Holland Noord
+h3 | Burgemeestersontbijt met leerlingen van O.B.S. De Dubbele Punt
+h3 | Werken aan de weg
+h3 | Denk vooruit Bus komt op 13 oktober naar Opmeer
+h3 | Vraag en antwoord over de handhavingskwestie pioenrozen
+h3 | Regenboogbijeenkomst op zaterdag 10 oktober!
+h3 | Geslaagde meet & greet met de gemeenteraad
+h3 | Online bijeenkomst over hersenvliesontsteking op 2 november
+h3 | Updaten adressenlijst gemeentegids 2027
+h3 | Paginering
 h2 | Gemeentehuis Opmeer
 h2 | Product aanvragen?
 h2 | Maak een afspraak
@@ -47,86 +85,359 @@ h2 | Blijf op de hoogte
 h2 | Inschrijven voor de nieuwsbrief
 h2 | Over deze website
 h2 | Menu
-A Meer nieuwsitems -> /nieuws
+A  -> /
+A Alle onderwerpen -> /alle-onderwerpen
+A Actueel -> /actueel
+A RSS feed Het laatste nieuws van de gemeente Opmeer -> /rss/content-list?type%5B%5D=news&sort_by=published_at&sort_order=DESC
+A Dinsdag 13 oktober bezocht de ‘Denk vooruit bus’ een bezoek aan Opmeer -> /dinsdag-13-oktober-bezocht-de-denk-vooruit-bus-een-bezoek-aan-opmeer
+A Dag van de Ondernemer op 20 november! -> /dag-van-de-ondernemer-op-20-november
+A Wethouder Daniël Hagens hijst regenboogvlag bij het gemeentehuis -> /wethouder-daniel-hagens-hijst-regenboogvlag-bij-het-gemeentehuis
+A Besluit over route en locaties Netuitbreiding Noord-Holland Noord -> /besluit-over-route-en-locaties-netuitbreiding-noord-holland-noord
+A Burgemeestersontbijt met leerlingen van O.B.S. De Dubbele Punt -> /burgemeestersontbijt-met-leerlingen-van-obs-de-dubbele-punt
+A Werken aan de weg -> /werken-aan-de-weg
+A Denk vooruit Bus komt op 13 oktober naar Opmeer -> /denk_vooruit_bus
+A Vraag en antwoord over de handhavingskwestie pioenrozen -> /pioenrozen_vraag_en_antwoord
+A Regenboogbijeenkomst op zaterdag 10 oktober! -> /regenboogbijeenkomst-10oktober
+A Geslaagde meet & greet met de gemeenteraad -> /meet_en_greet_raad
+A Online bijeenkomst over hersenvliesontsteking op 2 november -> /online-bijeenkomst-2-nov-hersenvliesontsteking
+A Updaten adressenlijst gemeentegids 2027 -> /updaten-adressenlijst-gemeentegids-2027
+A Huidige pagina 1 -> /nieuws/1
+A Pagina 2 -> /nieuws/2
+A Pagina 3 -> /nieuws/3
+A Plan uw route -> https://www.google.nl/maps/dir//Gemeente%2BOpmeer,%2BKlaproos%2B1,%2B1716%2BVS%2BOpmeer/@52.707876,4.9383017,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47c8acb
+A 0226 - 363 333 -> /#
+A 06 1602 7196 -> https://www.opmeer.nl/whatsapp
+A ZIVVER -> https://www.opmeer.nl/veilig-mailen-met-de-gemeente-opmeer
+A Maak een afspraak -> https://opmeer.mijnafspraakmaken.nl
+A Spelregels social media -> https://www.opmeer.nl/spelregels-social-media
+A facebook van de gemeente Opmeer -> https://www.facebook.com/gemeenteopmeer
+A linkedin van de gemeente Opmeer -> https://www.linkedin.com/company/gemeente-opmeer/
+A Instagram van de gemeente Opmeer -> https://www.instagram.com/gemeenteopmeer
 A Inschrijven voor de nieuwsbrief -> https://www.opmeer.nl/nieuwsbrief
+A Vacatures -> https://www.opmeer.nl/werken-bij-de-gemeente-opmeer
+A Archief van de website -> https://opmeer.archiefweb.eu#archive
+A Privacyverklaring -> https://www.opmeer.nl/privacyverklaring/
+A Over deze website en toegankelijkheid -> /proclaimer
+A Translate in English -> https://translate.google.com/translate?hl=nl&sl=nl&tl=en&u=https%3A%2F%2Fwww.opmeer.nl%2F
+A Aanvragen en regelen -> /aanvragen-en-regelen
+A Verkiezingen -> /verkiezingen
 A Agenda: Opmeer leeft! -> https://www.opmeer.nl/agenda-en-meer-opmeer-leeft
-A Inschrijven nieuwsbrief -> /nieuwsbrief
-A Bezwaar maken besluit gemeente -> /bezwaar-maken
+A Belastingen -> /belastingen
+A Bestuur en Organisatie -> /bestuur-en-organisatie
+A Bouwen en verbouwen -> /bouwen-en-verbouwen
+A Duurzaam Opmeer -> /duurzaam
 
-==================== https://raad.koggenland.nl/ ====================
-200 text/html; charset=utf-8 6710 final https://raad.koggenland.nl/
-h2 | Beveiligingscontrole
-h3 | Voortgang
-A meer weten? -> https://www.gemeenteoplossingen.nl/security/
-A over ons -> https://www.gemeenteoplossingen.nl
+==================== https://www.koggenland.nl/gemeenteraad ====================
+200 text/html; charset=utf-8 218342 final https://www.koggenland.nl/gemeenteraad
+h1 | Gemeenteraad
+h2 | Gemeentehuis
+h2 | Volg ons op
+h2 | Blijf op de hoogte
+h2 | Meer informatie
+h2 | 
+h2 | Menu
+A Contact -> /openingstijden-en-contact
+A Afspraak maken -> /afspraak-maken
+A  -> /
+A Over Koggenland -> /over-koggenland
+A Contact met de gemeenteraad -> https://raad.koggenland.nl/Organisatie/Contact-met-de-raad
+A Samenstelling van de gemeenteraad -> https://raad.koggenland.nl/Organisatie?_ga=2.122297163.1773112490.1653895286-290464477.1648205326
+A Vergaderingen gemeenteraad -> https://raad.koggenland.nl/?_ga=2.24310906.1773112490.1653895286-290464477.1648205326
+A Griffie -> https://raad.koggenland.nl/Organisatie/Griffie
+A Rekenkamer -> /rekenkamer
+A Auditcommissie -> /auditcommissie
+A Stukken vóór 2013 -> https://depot03.archiefweb.eu/archives/archiefweb/20121128132949/http://www.koggenland.nl/internet/vergaderschema_3110/kalender/2012/12/
+A Zo kiest Koggenland een nieuwe burgemeester -> /zo-kiest-koggenland-een-nieuwe-burgemeester
+A T: (0229) 54 84 00 -> /#
+A Bastion -> https://www.koggenland.nl/veilig-e-mailen
+A Facebook pagina van de gemeente Koggenland -> https://www.facebook.com/koggenland
+A Linkedin pagina van de gemeente Koggenland -> https://www.linkedin.com/company/gemeente-koggenland/
+A Instagrampagina van de gemeente Koggenland -> https://www.instagram.com/gemeente_koggenland/
+A Inschrijven voor de nieuwsbrief -> https://www.koggenland.nl/nieuwsbrief
+A Over deze website -> /over-deze-website
+A Sitemap -> https://www.koggenland.nl/sitemap
+A Werken bij Koggenland -> https://www.werkenbijkoggenland.nl/vacatures/alle-vacatures
+A Voor Inwoners -> /voor-inwoners
+A Afval -> /afval
+A Belastingen -> /belastingen
+A Bouwen en verbouwen -> /bouwen-en-verbouwen
+A Meldingen en klachten -> /meldingen-en-klachten
+A Paspoort, ID-kaart en uittreksels -> /paspoort-id-kaart-en-uittreksels
+A Rijbewijs -> /rijbewijs
+A Geboorte, erkenning, adoptie -> /geboorte-erkenning-adoptie
+A Overlijden -> /overlijden
+A Trouwen, geregistreerd partnerschap, scheiding -> /trouwen-geregistreerd-partnerschap-scheiding
+A Zorg en ondersteuning -> /zorg-en-ondersteuning
+A Financiële ondersteuning -> /financiele-ondersteuning
+A Vergunningen -> /vergunningen
+A Wonen -> /wonen
+A Duurzaam leven in Koggenland -> /duurzaamheid
+A Openbaar groen -> /openbaar-groen
+A Subsidies -> /subsidies
+A Inburgeren -> /inburgeren
+A Omgevingswet -> /omgevingswet
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Voor Ondernemers -> /voor-ondernemers
+A Ondernemers: spreekuur en contactpersoon -> /ondernemers-spreekuur-en-contactpersoon
+A Vestigen en uitbreiden -> /vestigen-en-uitbreiden
+A Vergunningen ondernemers -> /vergunningen-ondernemers
+A Verduurzamen bedrijf -> /verduurzamen-bedrijf
+A Bedrijfsafval -> /bedrijfsafval
+A Zaken doen met de gemeente -> https://www.koggenland.nl/algemene-inkoop-en-verkoopvoorwaarden
+A Belastingen en heffingen ondernemer -> /belastingen-en-heffingen
+A Wet kwaliteitsborging voor het bouwen (Wkb) -> /wkb
+A Beleid en regelgeving -> /beleid-en-regelgeving
+A Burgemeester en wethouders -> /burgemeester-en-wethouders
+A Gemeenteraad -> /gemeenteraad
+A Doe-teams en gebiedsregisseurs -> /doe-teams-dorpsraden-en-gebiedsregisseurs
+A Kindergemeenteraad -> /kindergemeenteraad
+A Organisatie -> /organisatie
+A Regionale samenwerking -> https://regiowestfriesland.nl/
+A Ruimtelijke plannen -> /ruimtelijke-plannen
+A Veiligheid -> /veiligheid
+A Koggenland in kaart -> /koggenland-in-kaart
+A Sport, vrije tijd en recreatie -> /sport-vrije-tijd-en-recreatie
 
-==================== https://raad.koggenland.nl/Vergaderingen ====================
-200 text/html; charset=utf-8 6709 final https://raad.koggenland.nl/Vergaderingen
-h2 | Beveiligingscontrole
-h3 | Voortgang
-A meer weten? -> https://www.gemeenteoplossingen.nl/security/
-A over ons -> https://www.gemeenteoplossingen.nl
+==================== https://www.koggenland.nl/zoeken?q=collegebesluiten ====================
+200 text/html; charset=utf-8 228591 final https://www.koggenland.nl/zoeken?q=collegebesluiten
+h1 | Zoeken
+h2 | Resultaten:
+h3 | Over deze website
+h3 | Afspraak maken
+h3 | Paspoort, ID-kaart en uittreksels
+h3 | Afval
+h3 | Voor Ondernemers
+h3 | Veilig e-mailen
+h3 | Vergunningen
+h3 | Duurzaamheid
+h3 | Ruimtelijke plannen
+h3 | Actueel
+h3 | Geboorteaangifte
+h2 | Paginering
+h2 | Gemeentehuis
+h2 | Volg ons op
+h2 | Blijf op de hoogte
+h2 | Meer informatie
+h2 | 
+h2 | Menu
+A Huidige pagina 1 -> /zoeken/1?q=collegebesluiten
+A Pagina 2 -> /zoeken/2?q=collegebesluiten
+A Pagina 3 -> /zoeken/3?q=collegebesluiten
 
-==================== https://opmeer.bestuurlijkeinformatie.nl/ ====================
-200 text/html; charset=utf-8 47412 final https://opmeer.bestuurlijkeinformatie.nl/
-h2 | Overzichten
-h2 | Agenda
-h3 | Nuttige links
-A Dashboard -> /
-A Vergaderingen -> /Calendar
-A Overzichten -> /Reports
-A Amendementen -> /Reports/Details/fe1e75d9-c849-4568-8195-14f33d21a7d5
+==================== https://www.koggenland.nl/collegebesluiten ====================
+404 text/html; charset=utf-8 195846 final https://www.koggenland.nl/collegebesluiten
+h1 | 404
+h2 | Menu
+A Openbaar groen -> /openbaar-groen
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Nieuwsberichten -> /nieuwsberichten
+A Koggennieuws -> /koggennieuws
+A Overzicht Woo-verzoeken -> /overzicht-woo-verzoeken
+
+==================== https://www.koggenland.nl/besluitenlijsten-college ====================
+404 text/html; charset=utf-8 195854 final https://www.koggenland.nl/besluitenlijsten-college
+h1 | 404
+h2 | Menu
+A Openbaar groen -> /openbaar-groen
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Nieuwsberichten -> /nieuwsberichten
+A Koggennieuws -> /koggennieuws
+A Overzicht Woo-verzoeken -> /overzicht-woo-verzoeken
+
+==================== https://www.koggenland.nl/college-van-burgemeester-en-wethouders ====================
+404 text/html; charset=utf-8 195868 final https://www.koggenland.nl/college-van-burgemeester-en-wethouders
+h1 | 404
+h2 | Menu
+A Openbaar groen -> /openbaar-groen
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Nieuwsberichten -> /nieuwsberichten
+A Koggennieuws -> /koggennieuws
+A Overzicht Woo-verzoeken -> /overzicht-woo-verzoeken
+
+==================== https://www.koggenland.nl/bestuur ====================
+404 text/html; charset=utf-8 195837 final https://www.koggenland.nl/bestuur
+h1 | 404
+h2 | Menu
+A Openbaar groen -> /openbaar-groen
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Nieuwsberichten -> /nieuwsberichten
+A Koggennieuws -> /koggennieuws
+A Overzicht Woo-verzoeken -> /overzicht-woo-verzoeken
+
+==================== https://www.koggenland.nl/openbaar-gemaakte-informatie-koggenland ====================
+200 text/html; charset=utf-8 238086 final https://www.koggenland.nl/openbaar-gemaakte-informatie-koggenland
+h1 | Openbaar gemaakte informatie gemeente Koggenland (Woo)
+h2 | Zoeken
+h2 | Openbaarmaking naar aanleiding van een Woo-verzoek
+h2 | Actief openbaar gemaakte informatie
+h2 | Pro-actief openbaar gemaakte informatie
+h2 | Informatie opvragen
+h2 | Openbaarmaking Woo-verzoeken
+h2 | Actieve openbaarmaking Woo-categorieën
+h2 | Pro-actieve openbaarmaking Dosssiers
+h2 | Gemeentehuis
+h2 | Volg ons op
+h2 | Blijf op de hoogte
+h2 | Meer informatie
+h2 | 
+h2 | Menu
+A Lees meer over het indienen van een Woo-verzoek. -> /informatie-opvragen-bij-de-gemeente-woo
+A Woo-verzoek: Planologische ontwikkelingen gebied Leekerlanden -> /woo-verzoek-Leekerlanden
+A Woo-verzoek-toeslagenaffaire -> https://www.koggenland.nl/woo-verzoek-toeslagenaffaire
+A Woo-verzoek-afschrift lijst bouwwerken inspectieplicht -> https://www.koggenland.nl/woo-verzoek-afschrift%20lijst%20bouwwerken%20inspectieplicht
+A Woo-verzoek: concessie-overeenkomst reclamedisplays -> /woo-verzoek-inzake-concessie-overeenkomst-reclamedisplays
+A Woo-verzoek inzake Juridisch ontgassen -> /woo-verzoek-inzake-juridisch-ontgassen
+A Eerdere Woo-verzoeken... -> /overzicht-woo-verzoeken
+A Bestuursstukken -> /bestuursstukken-vergaderingen-college-bw
+A Adviezen (in voorbereiding) -> /openbaarmaking-adviezen-woo
+A Convenanten (in voorbereiding) -> /openbaarmaking-convenanten-woo
+A Onderzoek (in voorbereiding) -> /openbaarmaking-onderzoeken-woo
+A Beschikkingen (in voorbereiding) -> /openbaarmaking-beschikkingen-woo
+A Klachten (in voorbereiding) -> /openbaarmaking-klachten-woo
+A Inschrijven voor de nieuwsbrief -> https://www.koggenland.nl/nieuwsbrief
+A Openbaar groen -> /openbaar-groen
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Nieuwsberichten -> /nieuwsberichten
+A Koggennieuws -> /koggennieuws
+
+==================== https://www.koggenland.nl/sitemap ====================
+200 text/html; charset=utf-8 377427 final https://www.koggenland.nl/sitemap
+h1 | Sitemap
+h2 | Gemeentehuis
+h2 | Volg ons op
+h2 | Blijf op de hoogte
+h2 | Meer informatie
+h2 | 
+h2 | Menu
+A Melding woon- en leefomgeving -> /melding-woon-en-leefomgeving-melding-openbare-ruimte
+A Bezwaar maken tegen een gemeentelijk besluit -> /bezwaar-maken-tegen-een-gemeentelijk-besluit
+A Openbaar groen -> /openbaar-groen
+A Melding woon- en leefomgeving (FIXI) -> https://www.koggenland.nl/melding-woon-en-leefomgeving-melding-openbare-ruimte
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Maatschappelijk verantwoord ondernemen (MVO) -> /maatschappelijk-verantwoord-ondernemen-mvo
+A Leidraad Invordering -> /leidraad-invordering
+A Bekendmakingen -> /bekendmakingen
+A Informatie opvragen bij de gemeente (Woo) -> /informatie-opvragen-bij-de-gemeente-woo
+A Ontwerpbesluit voor het bouwen van 15 seniorenappartementen op het adres Dorpsstraat 162 te Obdam -> /ontwerpbesluit_seniorenappartementen_obdam
+A Bekendmaking van voornemen tot verkoop/ruiling van gemeentelijk onroerend goed nabij Taeke van der Meerstraat  -> /verkoop_nabijTaekevandermeerstraat57Scharwoude
+A Bekendmaking tot voornemen tot verkoop van gemeentelijk onroerend goed, een gedeelte van de Brede School -> /verkoop_onroerendgoed_nabijDorpsstraat43Obdam
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - Burgemeester Kooimanweg te Hensbroek -> /verkoop%20burgemeester%20kooimanweg%20hensbroek
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - Noorddijkerweg 4 Ursem -> /verkoop%20Noordddijkerweg%204%20Ursem
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Beatrixlaan 2 Avenhorn -> /verkoop_grond_Avenhorn_Beatrixlaan
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Bollenveld 2 te Avenhorn. -> /verkoopbollenveld
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Burgemeester De Voslaan 2 te Be -> /verkoopgemeentegrond%20devoslaanberkhout
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij De IJvelandssloot Obdam -> /verkoop%20De%20IJvelandssloot%20Obdam
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Dwingel 1 te De Goorn -> /verkoop%20dwingel%20de%20goorn
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Henneland te Ursem -> /verkoop%20HennelandUrsem
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Het Veer 133 te Avenhorn -> /verkoophetveer133
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Julianaweg 1 Hensbroek -> /verkoop%20julianaweg1%20hensbroek
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Laan van Meerweijde 1 te Obdam -> /verkoopgemeentegrond%20Laan%20van%20Meerweijde%20Obdamstandaard-pagina-didam-arrest-copied
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Ruijtersstraat 1/1a Ursem -> /verkoop%20ruijtersstraat%20ursem
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Ruijtersstraat 7 Ursem -> /verkoop%20Ruijtersstraat%207%20Ursem
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Tjalk 8 (1713 WX) Obdam -> /verkoop%20Tjalk%208%20Obdam
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Tjalk te Obdam -> /Tjalk8Obdam
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij Wezenweid 1 Spierdijk -> /Wezenweid1%20Spierdijk
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed - nabij leeuwenschelling Obdam -> /verkoop%20leeuwenschelling%20obdam
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed – nabij Anemonenstraat 1 te Obdam -> /voornemen_verkoop_gemeentegrond_anemonenstraat_obdam
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed – nabij Kerkpad 4 te Ursem -> /verkoop_nabijKerkpad4Ursem
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed – nabij Raapakker 1 (1645 RT) Ursem -> /verkoopgemeentegrond_Raapakker1Ursem
+A Bekendmaking van voornemen tot verkoop van gemeentelijk onroerend goed, nabij West 3 te Avenhorn -> /verkoop-van-gemeentelijk-onroerend-goed-nabij-west-3-te-avenhorn
+A Collegeprogramma en coalitieakkoord -> /collegeprogramma-en-coalitieakkoord
+A Samenstelling college van B&W -> /samenstelling-college-van-bw
+A Bestuursstukken vergaderingen college B&W -> /bestuursstukken-vergaderingen-college-bw
+A Gemeenteraad -> /gemeenteraad
+A Contact met de gemeenteraad -> https://raad.koggenland.nl/Organisatie/Contact-met-de-raad
+A Samenstelling van de gemeenteraad -> https://raad.koggenland.nl/Organisatie?_ga=2.122297163.1773112490.1653895286-290464477.1648205326
+A Vergaderingen gemeenteraad -> https://raad.koggenland.nl/?_ga=2.24310906.1773112490.1653895286-290464477.1648205326
+A Griffie -> https://raad.koggenland.nl/Organisatie/Griffie
+A Kindergemeenteraad -> /kindergemeenteraad
+A Sportraad Koggenland -> /sportraad-koggenland
+A Stichting Adviesraad Sociaal Domein -> /stichting-adviesraad-sociaal-domein-gemeente-koggenland
+A Openbaarmaking Adviezen (Woo) -> /openbaarmaking-adviezen-woo
+A Openbaarmaking Beschikkingen (Woo) -> /openbaarmaking-beschikkingen-woo
+A Openbaarmaking Convenanten (Woo) -> /openbaarmaking-convenanten-woo
+A Openbaarmaking Klachten (Woo) -> /openbaarmaking-klachten-woo
+A Openbaarmaking Onderzoeken (Woo) -> /openbaarmaking-onderzoeken-woo
+A Overzicht Woo-verzoeken -> /overzicht-woo-verzoeken
+A Woo-verzoek: Planologische ontwikkelingen gebied Leekerlanden -> /woo-verzoek-Leekerlanden
+A Woo-verzoek: Toeslagenaffaire -> /woo-verzoek-toeslagenaffaire
+A Woo-verzoek: afschrift lijst van bouwwerken inspectieplicht -> /woo-verzoek-afschrift%20lijst%20bouwwerken%20inspectieplicht
+A Woo-verzoek inzake consessie-overeenkomst reclamedisplays -> /woo-verzoek-inzake-concessie-overeenkomst-reclamedisplays
+A Woo-verzoek inzake Juridisch ontgassen -> /woo-verzoek-inzake-juridisch-ontgassen
+A Woo-verzoek inzake Exploitatie reclame -> /woo-verzoek-inzake-exploitatie-reclame
+A Woo-verzoek inzake fundering Bobeldijk -> /woo-verzoek-inzake-fundering-bobeldijk
+A Woo-verzoek Openbaarmaking rapport inzake bewoning op de Ursemmerhof -> /woo-verzoek-openbaarmaking-rapport-inzake-bewoning-op-de-ursemmerhof
+A Woo-verzoek Energiescans Klimaatroute/Licht Groen -> /woo-verzoek-energiescans-klimaatroutelicht-groen
+A Woo-verzoek: Onontplofte oorlogsresten -> /woo-verzoek-onontplofte-oorlogsresten
+A Woo-verzoek: Subsidie ‘Jeugd aan zet’ -> /woo-verzoek-subsidie-jeugd-aan-zet
+A Woo-verzoek: Vergunning in verband met de Kermis -> /woo-verzoek-vergunning-in-verband-met-de-kermis
+A Woo-verzoek: Perceel tussen Julianastraat 31 en terrein RKEDO -> /woo-verzoek-perceel-tussen-julianastraat-31-en-terrein-rkedo
+
+RSS https://www.koggenland.nl/rss 404 text/html; charset=utf-8 <!DOCTYPE html><html lang="nl"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width, initial-scale=1" data-next-head=""/><title data-next-head="">404-Pagina | Koggenland</title><link rel="shortcut icon" href="https://cuatro.sim-cdn.nl/koggenland/uploads/20
+
+RSS https://www.koggenland.nl/nieuwsberichten/rss 404 text/html; charset=utf-8 <!DOCTYPE html><html lang="nl"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width, initial-scale=1" data-next-head=""/><title data-next-head="">404-Pagina | Koggenland</title><link rel="shortcut icon" href="https://cuatro.sim-cdn.nl/koggenland/uploads/20
+
+RSS https://www.opmeer.nl/rss.xml 404 text/html; charset=utf-8 <!DOCTYPE html><html lang="nl"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width, initial-scale=1" data-next-head=""/><title data-next-head="">404-Pagina | Gemeente Opmeer</title><link rel="shortcut icon" href="https://cuatro.sim-cdn.nl/opmeer/uploads/s
+
+RSS https://www.opmeer.nl/nieuws/rss 404 text/html; charset=utf-8 <!DOCTYPE html><html lang="nl"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width, initial-scale=1" data-next-head=""/><title data-next-head="">404-Pagina | Gemeente Opmeer</title><link rel="shortcut icon" href="https://cuatro.sim-cdn.nl/opmeer/uploads/s
+
+==================== Opmeer agenda jaarlijst ====================
+100000025 200 11 ['donderdag 10 december ', 'donderdag 5 november ', 'donderdag 17 september ']
+100044942 200 6 ['donderdag 26 november ', 'donderdag 22 oktober ', 'donderdag 10 september ']
+100044935 200 7 ['donderdag 19 november ', 'donderdag 8 oktober ', 'donderdag 1 oktober ']
+100113337 200 2 ['dinsdag 6 oktober ', 'dinsdag 1 september ']
+
+==================== https://opmeer.bestuurlijkeinformatie.nl/Agenda/Index/4b7a5077-4b22-4a0c-8c4a-713900f40f21 ====================
+200 text/html; charset=utf-8 197443 final https://opmeer.bestuurlijkeinformatie.nl/Agenda/Index/4b7a5077-4b22-4a0c-8c4a-713900f40f21
+h2 | 2027
+h2 | 2026
+h2 | 2025
+h2 | 2024
+h2 | 2023
+h2 | 2022
+h2 | 2021
+h2 | 2020
+h2 | 2019
+h2 | 2018
+h2 | 2017
+h2 | 2016
+h2 | 2015
+h2 | 2014
+h2 | 2013
+h2 | 2012
+h1 | Besluitvormende raadsvergadering
+h2 | donderdag 17 september 2026
+h2 | Uitzending
+h2 | Agendapunten
+h3 | Opening en mededelingen
+h3 | Spreekrecht burgers: uiterlijk 24 uur voor aanvang vergadering melden bij de griffier
+h3 | Vragenkwartier
+h3 | Bepalen van de stemvolgorde bij hoofdelijke stemming
+h3 | Vaststelling van de agenda
 A Belangrijke documenten -> /Reports/Details/d529b02d-56a8-4c9e-80e0-99e29f355134
-A Besluitenlijsten college -> /Reports/Details/e90d2554-7a8b-4254-a9c1-fba22e8d67b3
-A Ingekomen stukken -> /Reports/Details/1889cc1d-b98c-4a83-be56-3a7d4d23059b
-A Moties -> /Reports/Details/28e14d86-7e0f-45a0-b1e7-50f9f83066c6
-A Politieke vragen -> /Reports/Details/6d7d02ae-90e7-42dc-b08c-4780a85e5519
-A Raadsinformatiebrieven -> /Reports/Details/a7c6ff3a-e494-4c9d-9511-4fb6d6d20438
-A Thema's -> /Reports/Details/e076eacd-3e48-406d-9fc0-1c36d8c35cd3
-A Toezeggingen -> /Reports/Details/c7782114-c8ac-42f5-8746-aa78ef1ebc66
-A Verslagen auditcommissie 2023-2025 -> /Reports/Details/33344eca-6b4c-4a1a-bd3e-4ce0ec1b8be4
-A Wie is wie -> /People
-A Gemeenteraad -> /People/Profiles/f5c576ce-c1e9-47eb-907d-b287f074b8be
-A Raadsgriffie -> /People/Profiles/2f617097-bc47-44c5-8342-d8e5bacb8afc
-A Vraagbaak -> /Help
-A Contact -> /Contact
-A Klimaatbulletin van 1 oktober 2026 -> /Reports/Item/2b61dfc3-99da-49f8-ab2b-8ef3fcd196a2
-A Maatwerkverzoek Woningbouw op hoofdveld AGSV, Aartswoud -> /Reports/Item/a527eeed-e90c-4469-99a3-064ce5ea6dbd
-A Agenda en stukken AB van 9 september 2026 online -> /Reports/Item/b9ec437c-dc88-44e5-9411-4f1850b86ee5
-A Kadernota 2027 WerkSaam Westfriesland -> /Reports/Item/d60f3b4c-b8fb-4caa-9b4d-cc8fccefd7d5
-A Uitnodiging Conferentie: Bedreigingen van onze democratie -> /Reports/Item/48a6d9bb-79f8-4a39-bd77-2b5af14f814f
-A Brief Stichting Ouderennetwerk West-Friesland over vuilstort Westwoud -> /Reports/Item/1ef047a0-579f-447a-a871-31db9e72beff
-A Gemeentereaad en college: Concrete noodzakelijke stappen voor de bevolking en voorbereidin -> /Reports/Item/5b9d3871-3d29-4e35-b9db-84a607c9c849
-A Save the date: VNG Bestuurdersdag en Najaars ALV: 11 december 2026 -> /Reports/Item/7b8a0d81-88b2-4a2e-ac69-de7a814948c3
-A Save the date - NLVOW conferentie -> /Reports/Item/4d2429ca-af65-4608-beeb-3ecb97db518a
-A Raadsinformatiebrief over College uitvoeringsprogramma Opmeer 2026-2030 -> /Reports/Item/69d484ea-32e9-4eaf-b020-c8e1004c402d
-A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) donderdag 8 oktober 2026 20:00  -> /Agenda/Index/3887b37a-acde-404f-978e-f2a085b2810b
-A Auditcommissie (1.6 Sporters ) dinsdag 6 oktober 2026 19:00 - 21:30 -> /Agenda/Index/c62483ed-4da6-4fee-846f-29b58d90cf6c
-A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) Informatieavond RES en opgaven  -> /Agenda/Index/353dd21a-4688-48f6-b6b3-8352dc985d9a
-A Besluitvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 17 september 2 -> /Agenda/Index/4b7a5077-4b22-4a0c-8c4a-713900f40f21
-A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 10 september  -> /Agenda/Index/7d82ecee-3b65-4d47-ae9b-904b5e4c1562
-A Auditcommissie (1.6 Sporters ) Training auditcommissie dinsdag 1 september 2026 19:30 - 22 -> /Agenda/Index/a542f283-1759-4a8d-a74a-9c1e23318e90
-A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) Video beschikbaar donde -> /Agenda/Index/c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7
-A Besluitvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 5 november 202 -> /Agenda/Index/9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2
-A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) donderdag 19 november 2026 20:0 -> /Agenda/Index/9efff6d9-1f0a-488c-a27c-b1f54410f4bd
-A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 26 november 2 -> /Agenda/Index/56ef18cd-49e9-4512-858b-8762d2fe88c5
-A Cookie verklaring Deze link wordt in een nieuw venster geopend -> https://www.ibabs.com/nl/cookies/
-A Toegankelijkheidsverklaring Deze link wordt in een nieuw venster geopend -> https://www.opmeer.nl/toegankelijkheidsverklaring
-A iBabs Vergadermanagement Deze link wordt in een nieuw venster geopend -> https://www.ibabs.com
-A Inloggen Deze link wordt in een nieuw venster geopend -> https://signon.ibabs.eu/Login?sitename=Opmeer
+A Agendabundel 29 MB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=0a7bbf1a-7ad8-437c-9735-2a053ebc10f8
+A Inspreektekst 106 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=6cc86e28-f123-4793-af6a-0e78f5de38b8&agendaItemId=582a66ef-edfb-4326-ac2b-01174d093ba
+A Inspreektekst afval 60 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=e4af3173-4021-41c7-9553-0d19f06aa73b&agendaItemId=582a66ef-edfb-4326-ac2b-01174d093ba
+A Agenda besluitvormende raadsvergadering 17 september 2026 - raad 62 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=83dad727-8e4d-4f26-8cc2-6609463c9b14&agendaItemId=be127eeb-5b21-459a-b73f-fee251e7f49
+A 08 Besluitvormende raadsvergadering 2 juli 2026 279 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=0613fa4d-2e78-4750-b247-d5bf066ee365&agendaItemId=18c1361a-f1ee-4cbb-a5ee-c2849f1d72d
+A 03 Besluitenlijst oordeelsvormende raadsvergadering 10 september 2026 240 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=384b9b8b-1a91-49ae-a7bf-fdfa4721f9bb&agendaItemId=18c1361a-f1ee-4cbb-a5ee-c2849f1d72d
+A 20270917 Motie vreemd CDA VVD PRO KERN8 LPO GB over onderzoek naar ruimte pioenrozenteelt 188 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=04b28d6e-5d40-42c7-8eec-fde35067e66b&agendaItemId=296de619-bbde-4861-b6de-c5e97b9e89c
+A Raadsvoorstel Vaststelling stedenbouwkundig kader Hoogwoud-Oost - geamendeerd 283 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=fa4a3ce7-f3a8-4a71-84dd-2e6ea3b2c744&agendaItemId=2d457e16-5f6e-4b7e-9570-37664e9f384
+A 6234 Stedenbouwkundig kader Hoogwoud-Oost (geamendeerd) 13 MB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=8722cdbb-f0fd-4615-abc9-d9a0fa2e0c58&agendaItemId=2d457e16-5f6e-4b7e-9570-37664e9f384
+A 5141 Bijlage 2 Beantwoording ingekomen reacties participatie stedenbouwkundig kader Hoogwoud-Oost 181 KB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=c32b8d33-bfa2-4bf7-893d-5527a5e28d86&agendaItemId=2d457e16-5f6e-4b7e-9570-37664e9f384
+A 6234 Bijlage 1 Stedenbouwkundig kader Hoogwoud-Oost (oud) 13 MB -> /Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=fea13cc1-b1a3-4579-ab9f-58327f9686d5&agendaItemId=2d457e16-5f6e-4b7e-9570-37664e9f384
+A [1] -> https://regiowf1.sharepoint.com/teams/OPM-Afd-Griffie/Gedeelde%20documenten/General/2026%20RAAD,%20PRESIDIUM,%20ENZ/Raad%20Besluitvormend/Vergaderinge
+A [2] -> https://regiowf1.sharepoint.com/teams/OPM-Afd-Griffie/Gedeelde%20documenten/General/2026%20RAAD,%20PRESIDIUM,%20ENZ/Raad%20Besluitvormend/Vergaderinge
+A [1] -> https://regiowf1.sharepoint.com/teams/OPM-Afd-Griffie/Gedeelde%20documenten/General/2026%20RAAD,%20PRESIDIUM,%20ENZ/Raad%20Besluitvormend/Vergaderinge
+A [2] -> https://regiowf1.sharepoint.com/teams/OPM-Afd-Griffie/Gedeelde%20documenten/General/2026%20RAAD,%20PRESIDIUM,%20ENZ/Raad%20Besluitvormend/Vergaderinge
 
-==================== https://opmeer.bestuurlijkeinformatie.nl/Calendar ====================
-200 text/html; charset=utf-8 43172 final https://opmeer.bestuurlijkeinformatie.nl/Calendar
-h1 | oktober 2026
-A Auditcommissie -> /Calendar/OpenCategory/100113337
-A Beeldvormende bijeenkomst -> /Calendar/OpenCategory/100044935
-A Besluitvormende raadsvergadering -> /Calendar/OpenCategory/100000025
-A Oordeelsvormende raadsvergadering -> /Calendar/OpenCategory/100044942
-A Commissie Bestuurlijke Zaken en Verantwoording -> /Calendar/OpenCategory/100000089
-A Commissie Ruimte -> /Calendar/OpenCategory/100000072
-A Commissie Samenlevingszaken -> /Calendar/OpenCategory/100000192
-A Gecombineerde commissievergadering -> /Calendar/OpenCategory/100000199
-A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) Informatieavond RES en opgaven  -> /Agenda/Index/353dd21a-4688-48f6-b6b3-8352dc985d9a
-A Auditcommissie (1.6 Sporters ) dinsdag 6 oktober 2026 19:00 - 21:30 -> /Agenda/Index/c62483ed-4da6-4fee-846f-29b58d90cf6c
-A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) donderdag 8 oktober 2026 20:00  -> /Agenda/Index/3887b37a-acde-404f-978e-f2a085b2810b
-A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 22 oktober 20 -> /Agenda/Index/c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7
+==================== ORI Koggenland ====================
+https://api.openraadsinformatie.nl/v1/elastic/_search?q=koggenland&size=2 200 {"took":3290,"timed_out":false,"_shards":{"total":331,"successful":331,"skipped":0,"failed":0},"hits":{"total":{"value":10000,"relation":"gte"},"max_score":16.491432,"hits":[{"_index":"ori_amsterdam_20250317151602","_type":"_doc","_id":"446895","_score":16.491432,"_source":{"name":"Bijlage 4. Regioplan asielopvang Noord-Holland Noord.pdf","url":"https://api.openraadsinformatie.nl/v1/resolve/api.notubiz.nl/document/14805756","size_in_bytes":401971,"content_type":"application/pdf","file_name":"09012f9781342e89.pdf","date_modified":"2024-11-14T08:12:32+01:00","original_url":"https://api.notubiz.nl/document/14805756/1","text":["Bijlage 4 bij Provinciaal verslag asielopvang Noord-Holland - spreid
+https://api.openraadsinformatie.nl/v1/elastic/ori_*/_search?q=Koggenland&size=1 200 {"took":351,"timed_out":false,"_shards":{"total":310,"successful":310,"skipped":0,"failed":0},"hits":{"total":{"value":10000,"relation":"gte"},"max_score":16.491432,"hits":[{"_index":"ori_amsterdam_20250317151602","_type":"_doc","_id":"446895","_score":16.491432,"_source":{"name":"Bijlage 4. Regioplan asielopvang Noord-Holland Noord.pdf","url":"https://api.openraadsinformatie.nl/v1/resolve/api.notubiz.nl/document/14805756","size_in_bytes":401971,"content_type":"application/pdf","file_name":"09012f9781342e89.pdf","date_modified":"2024-11-14T08:12:32+01:00","original_url":"https://api.notubiz.nl/document/14805756/1","text":["Bijlage 4 bij Provinciaal verslag asielopvang Noord-Holland - spreidi
+indices 200 ['ori_opmeer_20250610192905', 'ori_medemblik_20250524200505']
+
+==================== raad.koggenland.nl varianten ====================
+https://raad.koggenland.nl/rss 200 application/rdf+xml <?xml version="1.0"?>  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" >  <channel rdf:about="https://raad.koggenland.nl/nieuws/">  	<title> Nie
+https://raad.koggenland.nl/Vergaderingen/Gemeenteraad/2026 200 text/html; charset=utf-8 challenge
+https://raad.koggenland.nl/api/ 200 text/html; charset=utf-8 <!--   ~ Copyright (C) GemeenteOplossingen B.V. - All Rights Reserved   ~ Unauthorized copying of this file, via any medium is strictly prohibited   ~ Proprietary and confidential   -->  <!DOCTYPE htm
+https://raad.koggenland.nl/sitemap.xml 404 text/html; charset=iso-8859-1 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> <html><head> <title>404 Not Found</title> </head><body> <h1>Not Found</h1> <p>The requested URL was not found on this server.</p> </body></html> 
