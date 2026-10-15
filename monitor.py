@@ -253,7 +253,15 @@ def migrate_dates(db):
   if is_navigation(item.get('title',''),item.get('url','')):
    item['archived']=utc(); item['archived_reason']='Menuknop, geen publicatie'
    archive[key]=db['items'].pop(key)
- db['status'].pop('Bekendmakingen',None)  # bron verwijderd: leverde 0 resultaten, KOOP dekt dit
+ db['status'].pop('Bekendmakingen',None)
+ # Raadsdocumenten: echte bestandslink toevoegen en de foute nulmeting (viewerpagina) weggooien.
+ for key,item in db['items'].items():
+  if item.get('kind')=='raadsdocument' and 'file_url' not in item:
+   q=urllib.parse.parse_qs(urllib.parse.urlparse(item['url']).query)
+   doc_id=(q.get('documentId') or [item['url'].rstrip('/').rsplit('/',1)[-1]])[0]
+   for k in ('text_hash','file_hash','content_checked','content_error'): item.pop(k,None)
+   if text_path(key).exists(): text_path(key).unlink()
+   item['file_url']=IBABS+'/Document/View/'+doc_id  # bron verwijderd: leverde 0 resultaten, KOOP dekt dit
  for item in db['items'].values():
   news_title_date(item)
   if 'last_change' not in item:
@@ -360,6 +368,13 @@ def collect_meetings(db):
     entry={'date':m['date'],'meeting':meeting_title,'agendapunt':punt}
     if entry not in seen_in: seen_in.append(entry); seen_in.sort(key=lambda e:e['date'])
     eerste=seen_in[0]
+    # De link in de lijst opent een viewerpagina (HTML met de hele vergadering).
+    # Het bestand zelf staat op /Document/View/<documentId> (gecontroleerd 15 okt 2026).
+    if 'file_url' not in item:
+     # Eerdere controle vergeleek per ongeluk de viewerpagina: die nulmeting weggooien.
+     for k in ('text_hash','file_hash','content_checked','content_error'): item.pop(k,None)
+     if text_path(key).exists(): text_path(key).unlink()
+     item['file_url']=IBABS+'/Document/View/'+doc_id
     item.update(doc_date=eerste['date'],doc_date_label='vergaderdatum',meeting_title=eerste['meeting'],
       agendapunt=eerste['agendapunt'],last_seen=today(),
       excerpt=eerste['meeting']+(' · agendapunt '+eerste['agendapunt'] if eerste['agendapunt'] else ' · vergaderdocumenten')
@@ -464,7 +479,7 @@ def check_documents(db):
  checked=failures=pdf_count=noscan=0
  for key,item in due[:DOCS_PER_RUN]:
   try:
-   head=requests.get(item['url'],headers=HEADERS,timeout=30,stream=True)
+   head=requests.get(item.get('file_url') or item['url'],headers=HEADERS,timeout=30,stream=True)
    if head.status_code in (404,410):
     head.close()
     item['missing_count']=item.get('missing_count',0)+1
@@ -483,9 +498,15 @@ def check_documents(db):
     head.close()
     compare_file(item,f"{size}|{head.headers.get('Last-Modified','')}|{head.headers.get('ETag','')}",'groot bestand')
    else:
-    data=head.content
-    if len(data)>MAX_DOC_BYTES: raise ValueError('Document te groot')
-    if 'pdf' in content_type or data[:4]==b'%PDF':
+    # Inlezen tot het maximum; sommige bestanden (video) sturen geen grootte mee.
+    buf=bytearray()
+    for chunk in head.iter_content(256*1024):
+     buf+=chunk
+     if len(buf)>MAX_DOC_BYTES: break
+    head.close(); data=bytes(buf)
+    if len(data)>MAX_DOC_BYTES:
+     compare_file(item,f"groot|{head.headers.get('Content-Disposition','')}|{hashlib.sha256(data[:1_000_000]).hexdigest()}",'groot bestand')
+    elif 'pdf' in content_type or data[:4]==b'%PDF':
      pdf_count+=1
      text=pdf_text(data)
      if len(clean(text))>=80: compare_text(key,item,to_lines(text))
