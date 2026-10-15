@@ -1,43 +1,132 @@
-allow_redirects True 200 text/html; charset=utf-8 49438 Location None history [] final https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954
-allow_redirects False 200 text/html; charset=utf-8 49438 Location None history [] final https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954
-['/Document/LoadAgendaDocument/6af5d5a7-6ca1-41e0-86ab-e804687848a2?agendaId=d4b32282-6d07-4f2e-9463-89fb9b55e9c3', '/Document/LoadAgendaDocument/adbeca39-0de1-488f-a20f-2fdc2bb0e50f?agendaId=d4b32282-6d07-4f2e-9463-89fb9b55e9c3', '/Document/LoadAgendaDocument/afd6bdd3-6768-44b2-af39-1830ef0fd2f3?agendaId=d4b32282-6d07-4f2e-9463-89fb9b55e9c3', '/Document/LoadAgendaItemDocument/0754d99f-0b9d-4d87-9368-d87633e7c766?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/0d404209-8669-41e9-af01-748bdc84be76?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/12007eff-8490-499e-b8b1-95afcfce5bcb?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/1257dc55-679b-4b8f-a2b2-f89db2147cd9?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/1a913565-4e21-49bb-a86e-72ec2c4244d2?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/1b152ae4-8ee8-4c74-b0ca-eff9a22a0759?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/1ec8dbd2-e2ac-454e-bd3f-d81f045fc5d8?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/25ed2de5-38d9-42e6-978c-2247ab85b714?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/34c12135-1be6-4c86-b497-da9297329393?agendaItemId=52b27a5e-fd1d-40b5-be10-8f7387999259', '/Document/LoadAgendaItemDocument/397dee48-c2a6-4b25-81c8-b926fa7d795a?agendaItemId=e6e9d06c-29a0-4a72-9d29-b74888a582ec', '/Document/LoadAgendaItemDocument/3d447247-2bca-42d3-a668-6b0d113835af?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/46c0d486-8cfb-4085-9eba-372d9d6227fa?agendaItemId=52b27a5e-fd1d-40b5-be10-8f7387999259', '/Document/LoadAgendaItemDocument/4b358dd8-443c-418b-889d-0d43455a6bb7?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/4d968d55-096f-49fa-900a-fc32d4a9bc62?agendaItemId=9fce6edb-423a-4fac-a5c6-db36526d0ca6', '/Document/LoadAgendaItemDocument/5a5f2e0d-324b-4636-ba26-542c1a5c0c2d?agendaItemId=26758fd7-70c8-4c66-8b0c-086e83855b94', '/Document/LoadAgendaItemDocument/6e3429dd-9e3f-449a-a01c-4d4db8cbe910?agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9', '/Document/LoadAgendaItemDocument/70ce1b93-11cd-45cd-b792-7db63596700c?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954', '/Document/LoadAgendaItemDocument/7f5184bd-4d62-4623-8cab-76947e587911?agendaItemId=391c040d-08c3-4b93-9bc6-f52ccbf4ab2a', '/Document/LoadAgendaItemDocument/7fdd27e1-db13-4b34-b5bf-0ead81b20301?agendaItemId=e6e9d06c-29a0-4a72-9d29-b74888a582ec', '/Document/LoadAgendaItemDocument/812951c6-3c1a-45cf-addb-82a9b02f5fb6?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/854d1d50-e97c-4c88-8f92-01783397418b?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/8551d6d2-ba38-4a85-9458-53b003b5dc79?agendaItemId=2d3513af-47a8-4316-8982-40d564791f10', '/Document/LoadAgendaItemDocument/93f5ba98-a027-47f3-88ae-04967ba62c76?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/ab75c219-cf51-4015-b9e3-d1a8a1a5b0f6?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/b4aafaca-4dd3-4341-93f4-30826fcc8fbc?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/b8681e1c-bf53-40a4-9679-2ad97d06064b?agendaItemId=26758fd7-70c8-4c66-8b0c-086e83855b94', '/Document/LoadAgendaItemDocument/ba95a3fe-6550-4bfd-8895-7f74c962a748?agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9', '/Document/LoadAgendaItemDocument/bbcf010b-92b7-4544-aab8-3cc3462408b0?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/bfc656b5-77da-4572-a53e-9c108b8f0ed1?agendaItemId=885552f7-a586-467b-abb6-3c71a15d843a', '/Document/LoadAgendaItemDocument/c9c95a9d-ef2d-4c02-8c19-65773dc2d28d?agendaItemId=ffaccede-c29e-4089-b07d-c5e83bea9c55', '/Document/LoadAgendaItemDocument/cd0adbea-a4c5-482d-9d57-61aef4055b00?agendaItemId=e6e9d06c-29a0-4a72-9d29-b74888a582ec', '/Document/LoadAgendaItemDocument/d9438de4-d96b-4ed8-adef-1ec91ad34a73?agendaItemId=391c040d-08c3-4b93-9bc6-f52ccbf4ab2a', '/Document/LoadAgendaItemDocument/dbe70dd5-6eee-48d6-938d-67368eebbf0b?agendaItemId=39f0f7ed-1b8e-4d14-bb84-1d41ec0e7d00', '/Document/LoadAgendaItemDocument/e5ec2757-ff00-4648-af80-58867ecb22fc?agendaItemId=ffaccede-c29e-4089-b07d-c5e83bea9c55', '/Document/LoadAgendaItemDocument/f486aff8-de2c-488d-a699-c58ea3c59632?agendaItemId=26758fd7-70c8-4c66-8b0c-086e83855b94', '/Document/LoadAgendaItemDocument/f736a426-83ae-40cc-9ad8-31003cc0b39c?agendaItemId=ffaccede-c29e-4089-b07d-c5e83bea9c55', '/Document/LoadAgendaItemDocument/f8f763d8-0c61-4d1e-9e97-7f12f8d732bb?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954']
-A 04 KRC2-Animatie -> /Document/View/1257dc55-679b-4b8f-a2b2-f89db2147cd9
-A 05 KCR2-Animatie 2 -> /Document/View/4b358dd8-443c-418b-889d-0d43455a6bb7
-c-4d4db8cbe910?agendaItemId=495ed937-9804-4adb-a6ab-280e2d1de1c9">
-                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
-                                        Moties en amendementen  2 juli 2026
-                                    </a>
-                            </div>
-                        </div>
-                    <div class="widgetLabel agenda-item" tabindex="0">
-                        <div class="heading1">
-                            B HAMERSTUKKEN
-                        </div>
-                    </div>
-                    <div class="widgetLabel agenda-item" tabindex="0">
-                        <div class="heading1">
-                            B.1 Deelname KCR2 (pfh. M. Pijl)
-                        </div>
-                    </div>
-                        <div class="widgetContent">
-                            <div class="attachments d-flex flex-column">
-                                    <a href="#" class="" data-document-id="f8f763d8-0c61-4d1e-9e97-7f12f8d732bb" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/f8f763d8-0c61-4d1e-9e97-7f12f8d732bb?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
-                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
-                                        Vastgesteld raadsbesluit KCR2
-                                    </a>
-                                    <a href="#" class="active" data-document-id="0d404209-8669-41e9-af01-748bdc84be76" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/0d404209-8669-41e9-af01-748bdc84be76?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
-                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
-                                        00 DOC-26-1234143  - Raadsvoorstel Deelname KCR2
-                                    </a>
-                                    <a href="#" class="" data-document-id="70ce1b93-11cd-45cd-b792-7db63596700c" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/70ce1b93-11cd-45cd-b792-7db63596700c?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
-                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
-                                        01 260703 Brief aan gemeenteraden KCR2_VRNHN
-                                    </a>
-                                    <a href="#" class="" data-document-id="0754d99f-0b9d-4d87-9368-d87633e7c766" data-document-type="pdf" data-document-url="/Document/LoadAgendaItemDocument/0754d99f-0b9d-4d87-9368-d87633e7c766?agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954">
-                                        <span class="icon pdf" aria-label="pdf" role="img"></span>
-                                        02 Ontwerpbesluit oprichting stichting KCR2_VRNHN
-                                    </a>
-                                    <a href="#" class=
-CAND rmatie.nl/Document/View/0d404209-8669-41e9-af01-748bdc84be76 200 application/pdf 190167 b'%PDF-'
-CAND ndaItemId=a6938304-28bf-4898-b572-5cbfdca6c954&download=true 200 text/html; charset=utf-8 49438 b'\n<!DO'
-VIDEO 200 {'Date': 'Thu, 15 Oct 2026 10:48:49 GMT', 'Content-Type': 'video/mp4', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN', 'referrer-policy': 'same-origin', 'content-disposition': 'attachment; filename="KRC2-animatie kleiner.mp4"; filename*=UTF-8\'\'KRC2-animatie%20kleiner.mp4', 'x-azure-ref': '20261015T104848Z-15f786f7784kqx6qhC1CHIr13g0000000an00000000055g1', 'x-cache': 'CONFIG_NOCACHE', 'strict-transport-security': 'max-age=63072000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=e8xK3AF%2FXyWfjvX4XYkBxJi22lKa%2B7%2Bn9XOCAMB7ldD%2BJ6FldEjCpXCTadHPvZuhd4F1tmnLHKiQtH88vxsH%2FYNJE3jZqWM0ANlQ4enV%2B8DaZoXlOMy7QSQ5UllGgM4kSuN8Cb0ZKyN1wRG7r7PF9cdDTdQB"}]}', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': 'a4ae40e51f5b60e0-ORD'}
+
+==================== KOOP Koggenland ====================
+ct-area=="officielepublicaties" AND dt.creator=="Koggenland" 200 ['7722'] ['Koggenland', 'Koggenland', 'Koggenland']
+s" AND dt.creator=="Koggenland" AND dt.available>=2026-09-15 200 ['89'] ['Koggenland', 'Koggenland', 'Koggenland']
+
+==================== KOOP Opmeer ====================
+roduct-area=="officielepublicaties" AND dt.creator=="Opmeer" 200 ['4481'] ['Opmeer', 'Opmeer', 'Opmeer']
+aties" AND dt.creator=="Opmeer" AND dt.available>=2026-09-15 200 ['47'] ['Opmeer', 'Opmeer', 'Opmeer']
+
+==================== https://www.koggenland.nl/ ====================
+200 text/html; charset=utf-8 229190 final https://www.koggenland.nl/
+h1 | Home
+h2 | Laatste nieuws
+h3 | Gratis leefstijlprogramma ‘Voel je Goed’ start in Obdam
+h3 | Wijkleercentrum Avenhorn breidt uit met nieuwe lesruimtes
+h2 | Gemeentehuis
+h2 | Volg ons op
+h2 | Blijf op de hoogte
+h2 | Meer informatie
+h2 | 
+h2 | Menu
+A Melding doen -> /melding-woon-en-leefomgeving-melding-openbare-ruimte
+A Meer nieuws -> /nieuwsberichten
+A Inschrijven voor de nieuwsbrief -> https://www.koggenland.nl/nieuwsbrief
+A Openbaar gemaakte informatie gemeente Koggenland (Woo) -> /openbaar-gemaakte-informatie-koggenland
+A Gemeenteraad -> /gemeenteraad
+A Kindergemeenteraad -> /kindergemeenteraad
+A Stichting Adviesraad Sociaal Domein -> /stichting-adviesraad-sociaal-domein-gemeente-koggenland
+A Koggennieuws -> /koggennieuws
+A Overzicht Woo-verzoeken -> /overzicht-woo-verzoeken
+
+==================== https://www.opmeer.nl/ ====================
+200 text/html; charset=utf-8 207629 final https://www.opmeer.nl/
+h1 | Home
+h2 | Gemeente Opmeer
+h2 | Laatste nieuws
+h3 | Dinsdag 13 oktober bezocht de ‘Denk vooruit bus’ een bezoek aan Opmeer
+h3 | Dag van de Ondernemer op 20 november!
+h3 | Wethouder Daniël Hagens hijst regenboogvlag bij het gemeentehuis
+h2 | Wonen in Opmeer
+h2 | Duurzaam Opmeer
+h2 | Gemeentehuis Opmeer
+h2 | Product aanvragen?
+h2 | Maak een afspraak
+h2 | Praat met ons mee!
+h2 | Blijf op de hoogte
+h2 | Inschrijven voor de nieuwsbrief
+h2 | Over deze website
+h2 | Menu
+A Meer nieuwsitems -> /nieuws
+A Inschrijven voor de nieuwsbrief -> https://www.opmeer.nl/nieuwsbrief
+A Agenda: Opmeer leeft! -> https://www.opmeer.nl/agenda-en-meer-opmeer-leeft
+A Inschrijven nieuwsbrief -> /nieuwsbrief
+A Bezwaar maken besluit gemeente -> /bezwaar-maken
+
+==================== https://raad.koggenland.nl/ ====================
+200 text/html; charset=utf-8 6710 final https://raad.koggenland.nl/
+h2 | Beveiligingscontrole
+h3 | Voortgang
+A meer weten? -> https://www.gemeenteoplossingen.nl/security/
+A over ons -> https://www.gemeenteoplossingen.nl
+
+==================== https://raad.koggenland.nl/Vergaderingen ====================
+200 text/html; charset=utf-8 6709 final https://raad.koggenland.nl/Vergaderingen
+h2 | Beveiligingscontrole
+h3 | Voortgang
+A meer weten? -> https://www.gemeenteoplossingen.nl/security/
+A over ons -> https://www.gemeenteoplossingen.nl
+
+==================== https://opmeer.bestuurlijkeinformatie.nl/ ====================
+200 text/html; charset=utf-8 47412 final https://opmeer.bestuurlijkeinformatie.nl/
+h2 | Overzichten
+h2 | Agenda
+h3 | Nuttige links
+A Dashboard -> /
+A Vergaderingen -> /Calendar
+A Overzichten -> /Reports
+A Amendementen -> /Reports/Details/fe1e75d9-c849-4568-8195-14f33d21a7d5
+A Belangrijke documenten -> /Reports/Details/d529b02d-56a8-4c9e-80e0-99e29f355134
+A Besluitenlijsten college -> /Reports/Details/e90d2554-7a8b-4254-a9c1-fba22e8d67b3
+A Ingekomen stukken -> /Reports/Details/1889cc1d-b98c-4a83-be56-3a7d4d23059b
+A Moties -> /Reports/Details/28e14d86-7e0f-45a0-b1e7-50f9f83066c6
+A Politieke vragen -> /Reports/Details/6d7d02ae-90e7-42dc-b08c-4780a85e5519
+A Raadsinformatiebrieven -> /Reports/Details/a7c6ff3a-e494-4c9d-9511-4fb6d6d20438
+A Thema's -> /Reports/Details/e076eacd-3e48-406d-9fc0-1c36d8c35cd3
+A Toezeggingen -> /Reports/Details/c7782114-c8ac-42f5-8746-aa78ef1ebc66
+A Verslagen auditcommissie 2023-2025 -> /Reports/Details/33344eca-6b4c-4a1a-bd3e-4ce0ec1b8be4
+A Wie is wie -> /People
+A Gemeenteraad -> /People/Profiles/f5c576ce-c1e9-47eb-907d-b287f074b8be
+A Raadsgriffie -> /People/Profiles/2f617097-bc47-44c5-8342-d8e5bacb8afc
+A Vraagbaak -> /Help
+A Contact -> /Contact
+A Klimaatbulletin van 1 oktober 2026 -> /Reports/Item/2b61dfc3-99da-49f8-ab2b-8ef3fcd196a2
+A Maatwerkverzoek Woningbouw op hoofdveld AGSV, Aartswoud -> /Reports/Item/a527eeed-e90c-4469-99a3-064ce5ea6dbd
+A Agenda en stukken AB van 9 september 2026 online -> /Reports/Item/b9ec437c-dc88-44e5-9411-4f1850b86ee5
+A Kadernota 2027 WerkSaam Westfriesland -> /Reports/Item/d60f3b4c-b8fb-4caa-9b4d-cc8fccefd7d5
+A Uitnodiging Conferentie: Bedreigingen van onze democratie -> /Reports/Item/48a6d9bb-79f8-4a39-bd77-2b5af14f814f
+A Brief Stichting Ouderennetwerk West-Friesland over vuilstort Westwoud -> /Reports/Item/1ef047a0-579f-447a-a871-31db9e72beff
+A Gemeentereaad en college: Concrete noodzakelijke stappen voor de bevolking en voorbereidin -> /Reports/Item/5b9d3871-3d29-4e35-b9db-84a607c9c849
+A Save the date: VNG Bestuurdersdag en Najaars ALV: 11 december 2026 -> /Reports/Item/7b8a0d81-88b2-4a2e-ac69-de7a814948c3
+A Save the date - NLVOW conferentie -> /Reports/Item/4d2429ca-af65-4608-beeb-3ecb97db518a
+A Raadsinformatiebrief over College uitvoeringsprogramma Opmeer 2026-2030 -> /Reports/Item/69d484ea-32e9-4eaf-b020-c8e1004c402d
+A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) donderdag 8 oktober 2026 20:00  -> /Agenda/Index/3887b37a-acde-404f-978e-f2a085b2810b
+A Auditcommissie (1.6 Sporters ) dinsdag 6 oktober 2026 19:00 - 21:30 -> /Agenda/Index/c62483ed-4da6-4fee-846f-29b58d90cf6c
+A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) Informatieavond RES en opgaven  -> /Agenda/Index/353dd21a-4688-48f6-b6b3-8352dc985d9a
+A Besluitvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 17 september 2 -> /Agenda/Index/4b7a5077-4b22-4a0c-8c4a-713900f40f21
+A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 10 september  -> /Agenda/Index/7d82ecee-3b65-4d47-ae9b-904b5e4c1562
+A Auditcommissie (1.6 Sporters ) Training auditcommissie dinsdag 1 september 2026 19:30 - 22 -> /Agenda/Index/a542f283-1759-4a8d-a74a-9c1e23318e90
+A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) Video beschikbaar donde -> /Agenda/Index/c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7
+A Besluitvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 5 november 202 -> /Agenda/Index/9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2
+A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) donderdag 19 november 2026 20:0 -> /Agenda/Index/9efff6d9-1f0a-488c-a27c-b1f54410f4bd
+A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 26 november 2 -> /Agenda/Index/56ef18cd-49e9-4512-858b-8762d2fe88c5
+A Cookie verklaring Deze link wordt in een nieuw venster geopend -> https://www.ibabs.com/nl/cookies/
+A Toegankelijkheidsverklaring Deze link wordt in een nieuw venster geopend -> https://www.opmeer.nl/toegankelijkheidsverklaring
+A iBabs Vergadermanagement Deze link wordt in een nieuw venster geopend -> https://www.ibabs.com
+A Inloggen Deze link wordt in een nieuw venster geopend -> https://signon.ibabs.eu/Login?sitename=Opmeer
+
+==================== https://opmeer.bestuurlijkeinformatie.nl/Calendar ====================
+200 text/html; charset=utf-8 43172 final https://opmeer.bestuurlijkeinformatie.nl/Calendar
+h1 | oktober 2026
+A Auditcommissie -> /Calendar/OpenCategory/100113337
+A Beeldvormende bijeenkomst -> /Calendar/OpenCategory/100044935
+A Besluitvormende raadsvergadering -> /Calendar/OpenCategory/100000025
+A Oordeelsvormende raadsvergadering -> /Calendar/OpenCategory/100044942
+A Commissie Bestuurlijke Zaken en Verantwoording -> /Calendar/OpenCategory/100000089
+A Commissie Ruimte -> /Calendar/OpenCategory/100000072
+A Commissie Samenlevingszaken -> /Calendar/OpenCategory/100000192
+A Gecombineerde commissievergadering -> /Calendar/OpenCategory/100000199
+A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) Informatieavond RES en opgaven  -> /Agenda/Index/353dd21a-4688-48f6-b6b3-8352dc985d9a
+A Auditcommissie (1.6 Sporters ) dinsdag 6 oktober 2026 19:00 - 21:30 -> /Agenda/Index/c62483ed-4da6-4fee-846f-29b58d90cf6c
+A Beeldvormende bijeenkomst (Raadszaal, gemeentehuis Opmeer) donderdag 8 oktober 2026 20:00  -> /Agenda/Index/3887b37a-acde-404f-978e-f2a085b2810b
+A Oordeelsvormende raadsvergadering (Raadszaal, gemeentehuis Opmeer) donderdag 22 oktober 20 -> /Agenda/Index/c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7
