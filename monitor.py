@@ -1007,6 +1007,7 @@ def write_outputs(db):
     (DOCS / 'index.html').write_text((ROOT / 'dashboard.html').read_text(encoding='utf-8'), encoding='utf-8')
 
 def main():
+    run_start = datetime.datetime.now(datetime.timezone.utc)
     DB.parent.mkdir(exist_ok=True)
     db = json.loads(DB.read_text()) if DB.exists() else {}
     migrate(db)
@@ -1024,6 +1025,12 @@ def main():
     # Bovengrens: bewaar de meest recent actieve items.
     items = sorted(db['items'].items(), key=lambda kv: kv[1].get('last_change') or kv[1]['first_seen'], reverse=True)[:MAX_ITEMS]
     db['items'] = dict(items)
+    # Meldingen: push na elke run, e-mailsamenvatting één keer per dag (zie notify.py).
+    import notify
+    try:
+        notify.run(db, GEMEENTEN, run_start, set_status)
+    except Exception as exc:
+        set_status(db, 'algemeen', 'Meldingen', ok=False, error=str(exc)[:200])
     DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n')
     write_outputs(db)
     for gid in GEMEENTEN:

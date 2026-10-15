@@ -20,6 +20,12 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: python monitor.py
+        env:
+          # Meldingen (zie notify.py). Stel deze in onder Settings > Secrets and variables > Actions.
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_APP_PASSWORD: ${{ secrets.MAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
       - name: Bewaar resultaten
         run: |
           git config user.name "github-actions[bot]"
