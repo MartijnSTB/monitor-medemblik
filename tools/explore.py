@@ -2,25 +2,19 @@ import requests,re
 from bs4 import BeautifulSoup
 H={'User-Agent':'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
 IB='https://medemblik.bestuurlijkeinformatie.nl'
-def sec(t): print('\n'+'='*20,t,'='*20,flush=True)
-def get(u):
-    r=requests.get(u,headers=H,timeout=40);print(r.status_code,r.headers.get('Content-Type'),len(r.content));return r
-sec('Reports RSS')
-r=get(IB+'/Reports/RSS');print(r.text[:3500])
-sec('Reports Details raadsvragen')
-r=get(IB+'/Reports/Details/b6e30d37-cfd2-4064-a7fa-19453570dfb5')
-t=r.text;i=t.find('maincontent');print(t[i:i+6000])
-s=BeautifulSoup(t,'html.parser');print('links Item:',len([a for a in s.find_all('a',href=True) if '/Reports/Item/' in a['href']]))
+u=IB+'/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954'
+for allow in (True,False):
+    r=requests.get(u,headers=H,timeout=40,allow_redirects=allow)
+    print('allow_redirects',allow,r.status_code,r.headers.get('Content-Type'),len(r.content),'Location',r.headers.get('Location'),'history',[h.status_code for h in r.history],'final',r.url)
+r=requests.get(u,headers=H,timeout=40)
+t=r.text
+for pat in [r'[^"\' ]*(?:pdf|Load|Download|Document/View|viewer)[^"\' ]*']:
+    print(sorted(set(re.findall(pat,t,re.I)))[:40])
+s=BeautifulSoup(t,'html.parser')
+for tag in s.find_all(['iframe','embed','object']): print('EMBED',tag.name,tag.attrs)
 for a in s.find_all('a',href=True):
-    if 'page' in a['href'].lower() or 'Load' in a['href']:print('PAG',a.get_text(strip=True),a['href'])
-print('data-attrs:',sorted(set(re.findall(r'data-[a-z\-]+="[^"]{0,120}"',t)))[:40])
-sec('RetrieveAgendasForYear')
-r=get(IB+'/Agenda/RetrieveAgendasForYear?agendatypeId=0&year=2026');print(r.text[:2500])
-sec('agendapunt structuur')
-r=get(IB+'/Agenda/Index/d4b32282-6d07-4f2e-9463-89fb9b55e9c3');t=r.text
-i=t.find('Deelname KCR2');print(t[i-2500:i+4000])
-sec('nieuws rss')
-r=get('https://www.medemblik.nl/nieuws.rss');print(r.text[:2500]);print('items:',r.text.count('<item'))
-sec('nieuwspagina 5')
-r=get('https://www.medemblik.nl/nieuws/nieuwspagina/5')
-s=BeautifulSoup(r.text,'html.parser');print([h.get_text(strip=True)[:60] for h in s.find_all('h2')][:6])
+    if 'ocument' in a['href'] or 'ownload' in a['href']: print('A',a.get_text(' ',strip=True)[:60],'->',a['href'][:160])
+i=t.find('0d404209');print(t[max(0,i-1500):i+1500])
+for cand in [IB+'/Document/View/0d404209-8669-41e9-af01-748bdc84be76',IB+'/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&agendaItemId=a6938304-28bf-4898-b572-5cbfdca6c954&download=true']:
+    r=requests.get(cand,headers=H,timeout=40);print('CAND',cand[-60:],r.status_code,r.headers.get('Content-Type'),len(r.content),r.content[:5])
+r=requests.get(IB+'/Document/View/1257dc55-679b-4b8f-a2b2-f89db2147cd9',headers=H,timeout=40,stream=True);print('VIDEO',r.status_code,dict(r.headers));r.close()
