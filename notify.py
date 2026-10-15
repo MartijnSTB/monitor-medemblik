@@ -211,8 +211,19 @@ def run(db, gemeenten, run_start, set_status):
     now_local = now.astimezone(TZ)
     notes, errors = [], []
 
+    test = os.environ.get('TEST_MELDING', '').strip().lower() == 'true'
     # 1. Directe pushmelding over wat deze run vond.
     topic = os.environ.get('NTFY_TOPIC', '').strip()
+    if topic and test:
+        # Testknop: altijd één bericht, zodat je ziet dat de push aankomt.
+        try:
+            requests.post(f'https://ntfy.sh/{topic}', timeout=20,
+                          data='Testmelding: pushmeldingen van de Gemeentemonitor werken.'.encode('utf-8'),
+                          headers={'Title': 'Gemeentemonitor test', 'Tags': 'white_check_mark',
+                                   'Click': DASHBOARD_URL}).raise_for_status()
+            notes.append('Testpush verstuurd.')
+        except Exception as exc:
+            errors.append('Testpush: ' + str(exc)[:120])
     if topic:
         by_gid = {}
         for ev in events_since(db, run_start):
@@ -235,7 +246,20 @@ def run(db, gemeenten, run_start, set_status):
             # Eerste keer: begin te tellen vanaf nu, anders bevat de eerste mail alles wat de
             # monitor ooit heeft opgebouwd.
             state['digest_sent_at'] = run_start.isoformat(timespec='seconds')
-        if now_local.hour >= DIGEST_HOUR and state.get('digest_date') != today:
+        if test:
+            # Testknop: samenvatting van de afgelopen 24 uur, zonder de dagelijkse planning te verstoren.
+            since = now - datetime.timedelta(days=1)
+            by_gid = {}
+            for ev in events_since(db, since):
+                by_gid.setdefault(ev['item'].get('gemeente'), []).append(ev)
+            try:
+                n_new, n_chg = send_digest(gemeenten, by_gid, since, now_local, user, password, to,
+                                           os.environ.get('MAIL_SMTP_HOST', '').strip() or 'smtp.gmail.com',
+                                           int(os.environ.get('MAIL_SMTP_PORT', '').strip() or 587))
+                notes.append(f'Testmail verstuurd ({n_new} nieuw, {n_chg} gewijzigd in de afgelopen 24 uur).')
+            except Exception as exc:
+                errors.append('Testmail: ' + str(exc)[:120])
+        elif now_local.hour >= DIGEST_HOUR and state.get('digest_date') != today:
             last = state.get('digest_sent_at')
             since = datetime.datetime.fromisoformat(last) if last else now - datetime.timedelta(days=1)
             by_gid = {}

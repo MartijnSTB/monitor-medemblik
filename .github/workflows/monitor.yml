@@ -1,6 +1,11 @@
 name: Monitor publicaties
 on:
   workflow_dispatch:
+    inputs:
+      test:
+        description: 'Stuur een testpush en testmail'
+        type: boolean
+        default: false
   schedule:
     - cron: '7,37 * * * *'
 permissions:
@@ -28,6 +33,7 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
           MAIL_SMTP_HOST: ${{ secrets.MAIL_SMTP_HOST }}
           MAIL_SMTP_PORT: ${{ secrets.MAIL_SMTP_PORT }}
+          TEST_MELDING: ${{ inputs.test }}
       - name: Bewaar resultaten
         run: |
           git config user.name "github-actions[bot]"
