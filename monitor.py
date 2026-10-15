@@ -577,7 +577,7 @@ def collect_meetings(db, gid):
 # ---------------------------------------------------------------------------
 # Raadsportaal (iBabs): overzichten (raadsvragen, informatienota's, moties, besluitenlijsten ...)
 # ---------------------------------------------------------------------------
-REPORTS_VERSION = 2  # verhogen als de manier van ophalen verandert: dan opnieuw lijst + volledige ronde
+REPORTS_VERSION = 3  # verhogen als de manier van ophalen verandert: dan opnieuw lijst + volledige ronde
 
 def ibabs_report_list(db, gid):
     """Eén keer per dag: welke overzichten zijn er, welke kolommen en welke sortering.
@@ -650,8 +650,10 @@ def collect_ibabs_reports(db, gid):
             cols = rep.get('columns') or []
             if not cols:
                 continue
+            # Sorteren zoals de website (vaak op ID-nummer, nieuwste eerst); de datum staat in een eigen kolom.
             order_col = min(rep.get('order_col', 0), len(cols) - 1)
-            date_col = cols[order_col]['data']
+            names = [c['data'] for c in cols]
+            date_col = next((n for n in ('datum', 'datumingekomen', 'registrationdate') if n in names), names[order_col])
             is_besluitenlijst = 'besluitenlijst' in rep['name'].casefold()
             try:
                 start, total, in_range = 0, None, 0
