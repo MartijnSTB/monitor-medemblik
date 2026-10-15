@@ -2,7 +2,7 @@ name: Monitor publicaties
 on:
   workflow_dispatch:
   schedule:
-    - cron: '3/5 * * * *'
+    - cron: '7,37 * * * *'
 permissions:
   contents: write
 jobs:
