@@ -17,6 +17,8 @@ SOURCES={
 }
 HEADERS={'User-Agent':'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
 def utc(): return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
+# Alleen de dag: zo verandert 'last_seen' maar één keer per dag en blijft de Git-historie klein.
+def today(): return datetime.datetime.now(datetime.timezone.utc).date().isoformat()
 def clean(s): return re.sub(r'\s+',' ',s or '').strip()
 def collect_official(db):
  """Collect recent Medemblik publications through the KOOP SRU 2.0 endpoint.
@@ -59,13 +61,25 @@ def collect_official(db):
     continue
    url=urls[0]
    key=hashlib.sha256((source+'|'+url).encode()).hexdigest()
-   dates=values('date')
-   if key not in db['items']:
-    db['items'][key]={'title':title,'url':url,'source':source,'first_seen':now,
-      'updated':now,'hash':hashlib.sha256((title+'|'+str(dates)).encode()).hexdigest(),
-      'revisions':1,'publication_date':(dates[0] if dates else None),
-       'excerpt':'Officiele bekendmaking; publicatiedatum: '+(dates[0] if dates else 'onbekend')}
+   # Volgens de KOOP SRU-handleiding: dcterms:available = publicatie, dcterms:issued =
+   # formele uitgifte, dcterms:date = aanmaak document. Versie 3 gebruikte ten onrechte 'date'.
+   first=lambda name:(values(name) or [None])[0]
+   koop={'available':first('available'),'issued':first('issued'),'date':first('date')}
+   koop={k:(v[:10] if v else None) for k,v in koop.items()}
+   if koop['available']: doc_date,label=koop['available'],'publicatiedatum (KOOP)'
+   elif koop['issued']: doc_date,label=koop['issued'],'uitgiftedatum (KOOP)'
+   elif koop['date']: doc_date,label=koop['date'],'documentdatum (KOOP)'
+   else: doc_date,label=None,None
+   item=db['items'].get(key)
+   if item is None:
+    item=db['items'][key]={'title':title,'url':url,'source':source,'first_seen':now,
+      'updated':now,'last_change':None,'hash':hashlib.sha256((title+'|'+str(koop)).encode()).hexdigest(),
+      'revisions':1}
     added+=1
+   # Datums bijwerken is metadata-correctie, geen inhoudelijke revisie.
+   item.update(koop_dates=koop,doc_date=doc_date,doc_date_label=label,
+     publication_date=koop['available'] or koop['issued'],last_seen=today(),
+     excerpt='Officiele bekendmaking; '+(label+': '+doc_date if doc_date else 'datum onbekend'))
   db['status'][source]={'ok':True,'checked':now,'count':len(records),'new':added,
     'note':'Maximaal 100 recente resultaten; niet gegarandeerd volledig. Alleen exacte Medemblik creator.'}
  except Exception as exc:
@@ -73,7 +87,7 @@ def collect_official(db):
 
 MAANDEN={'januari':1,'februari':2,'maart':3,'april':4,'mei':5,'juni':6,'juli':7,
  'augustus':8,'september':9,'oktober':10,'november':11,'december':12}
-def meeting_date(text):
+def parse_nl_date(text):
  """'Collegebesluiten 29 september 2026' -> '2026-09-29', anders None."""
  m=re.search(r'(\d{1,2})\s+([a-z]+)\s+(\d{4})',text.casefold())
  if not m or m.group(2) not in MAANDEN: return None
@@ -90,7 +104,7 @@ def parse_college(main):
  for node in main.descendants:
   name=getattr(node,'name',None)
   if name=='h2':
-   date=meeting_date(clean(node.get_text(' ',strip=True)))
+   date=parse_nl_date(clean(node.get_text(' ',strip=True)))
    current=None  # h2 zonder datum (bijv. 'Oudere collegebesluiten') sluit het blok af
   elif name=='h3':
    current=None
@@ -118,15 +132,16 @@ def collect_college(db,main,url):
   old=db['items'].get(key)
   now=utc()
   if old is None:
-   db['items'][key]={'title':d['title'],'url':url,'source':source,'kind':'collegebesluit',
+   old=db['items'][key]={'title':d['title'],'url':url,'source':source,'kind':'collegebesluit',
      'meeting_date':d['date'],'publication_date':None,'first_seen':now,'updated':now,
-     'hash':fingerprint,'revisions':1,'besluit_status':status[-1] if status else None,
-     'excerpt':d['body'][:400]}
+     'last_change':None,'hash':fingerprint,'revisions':1,
+     'besluit_status':status[-1] if status else None,'excerpt':d['body'][:400]}
   elif old['hash']!=fingerprint:
    # Alleen een revisie bij een aantoonbaar andere tekst van precies dit besluit.
-   old.update(hash=fingerprint,updated=now,revisions=old['revisions']+1,
+   old.update(hash=fingerprint,updated=now,last_change=now,revisions=old['revisions']+1,
      change_type='Besluittekst gewijzigd',excerpt=d['body'][:400],
      besluit_status=status[-1] if status else old.get('besluit_status'))
+  old.update(doc_date=d['date'],doc_date_label='vergaderdatum college',last_seen=today())
 
 def archive_legacy_college(db):
  """Versie 3 sloeg kopjes als 'Samenvatting' en 'Besluit:' op als besluiten.
@@ -139,10 +154,50 @@ def archive_legacy_college(db):
    item['archived_reason']='Foutieve identificatie in versie 3 (kopje als besluit); revisietelling onbetrouwbaar'
    archive[key]=db['items'].pop(key)
 
+def page_date(text,url):
+ """Haal de datum uit de tekst van een opgehaalde pagina. Geeft (datum, label) of (None, None).
+
+ Gecontroleerd op de echte pagina's (15 okt 2026):
+ - nieuws op medemblik.nl:  'Publicatiedatum: Woensdag 7 oktober 2026'
+ - raadsvragen in iBabs:    'Datum vraag 15-10-2026'"""
+ m=re.search(r'publicatiedatum\s*:?\s*(?:[a-z]+dag\s+)?(\d{1,2}\s+[a-z]+\s+\d{4})',text.casefold())
+ if m and parse_nl_date(m.group(1)): return parse_nl_date(m.group(1)),'publicatiedatum'
+ if 'bestuurlijkeinformatie.nl/reports/item' in url.casefold():
+  for label in ('Datum vraag','Datum ontvangst','Datum brief','Datum publicatie','Datum'):
+   m=re.search(re.escape(label)+r'\s*:?\s*(\d{1,2})-(\d{1,2})-(\d{4})\b',text)
+   if m:
+    try: return datetime.date(int(m.group(3)),int(m.group(2)),int(m.group(1))).isoformat(),label.lower()
+    except ValueError: pass
+ return None,None
+
+def migrate_dates(db):
+ """Fase 2: vul de vaste datumvelden voor alle items, zonder bestaande gegevens te wissen.
+
+   doc_date + doc_date_label  de datum van het stuk zelf en wat die datum betekent
+   first_seen                 wanneer de monitor het item voor het eerst zag
+   last_change                alleen gevuld bij een echte inhoudswijziging
+   last_seen                  laatste dag dat het item nog in de bron stond
+   content_checked            laatste inhoudscontrole van het document"""
+ for item in db['items'].values():
+  if 'last_change' not in item:
+   item['last_change']=item.get('updated') if item.get('revisions',1)>1 else None
+  if item.get('doc_date'): continue
+  if item.get('meeting_date'):
+   item['doc_date'],item['doc_date_label']=item['meeting_date'],'vergaderdatum college'
+  elif item.get('source')=='Officiele bekendmakingen (KOOP)' and item.get('publication_date'):
+   # Opgeslagen door versie 3 uit dcterms:date (aanmaakdatum). Wordt bij de volgende
+   # KOOP-ophaalronde vervangen door de echte publicatiedatum als het record terugkomt.
+   item['doc_date'],item['doc_date_label']=item['publication_date'],'documentdatum (KOOP)'
+   item['publication_date']=None
+   item['excerpt']='Officiele bekendmaking; documentdatum (KOOP): '+item['doc_date']
+  elif '/Agenda/Index/' in item.get('url','') and parse_nl_date(item.get('title','')):
+   item['doc_date'],item['doc_date_label']=parse_nl_date(item['title']),'vergaderdatum'
+
 def main():
  DB.parent.mkdir(exist_ok=True); OUT.parent.mkdir(exist_ok=True)
  db=json.loads(DB.read_text()) if DB.exists() else {'items':{},'status':{}}
  archive_legacy_college(db)
+ migrate_dates(db)
  collect_official(db)
  for source,url in SOURCES.items():
   try:
@@ -165,7 +220,11 @@ def main():
    for title,href in candidates:
     key=hashlib.sha256((source+'|'+href).encode()).hexdigest()
     if key not in db['items']:
-     db['items'][key]={'title':title,'url':href,'source':source,'first_seen':utc(),'updated':utc(),'hash':hashlib.sha256(title.encode()).hexdigest(),'revisions':1,'excerpt':''}
+     db['items'][key]={'title':title,'url':href,'source':source,'first_seen':utc(),'updated':utc(),'last_change':None,'hash':hashlib.sha256(title.encode()).hexdigest(),'revisions':1,'excerpt':''}
+     # Vergaderingen in het raadsportaal hebben de datum in de titel.
+     if '/Agenda/Index/' in href and parse_nl_date(title):
+      db['items'][key].update(doc_date=parse_nl_date(title),doc_date_label='vergaderdatum')
+    db['items'][key]['last_seen']=today()
    db['status'][source]={'ok':True,'checked':utc(),'count':len(candidates)}
   except Exception as e:
    db['status'][source]={'ok':False,'checked':utc(),'error':str(e)[:180]}
@@ -192,13 +251,22 @@ def main():
     page=BeautifulSoup(response.text,'html.parser')
     for tag in page(['script','style','nav','footer','header','form']):tag.decompose()
     area=page.select_one('main') or page.select_one('article') or page
-    normalized=clean(area.get_text(' ',strip=True)).encode('utf-8')
+    area_text=clean(area.get_text(' ',strip=True))
+    normalized=area_text.encode('utf-8')
+    # Datum van het stuk zelf uitlezen (nieuws: publicatiedatum, raadsvragen: datum vraag).
+    # Een datum uit KOOP-metadata of de vergaderdatum gaat altijd voor.
+    if not item.get('doc_date') or item.get('doc_date_label') in ('publicatiedatum','datum vraag','datum ontvangst','datum brief','datum publicatie','datum'):
+     found,label=page_date(area_text,item['url'])
+     if not found: found,label=page_date(clean(page.get_text(' ',strip=True)),item['url'])
+     if found:
+      item['doc_date'],item['doc_date_label']=found,label
+      if label=='publicatiedatum': item['publication_date']=found
    else:
     normalized=response.content
    digest=hashlib.sha256(normalized).hexdigest()
    previous=item.get('content_hash')
    if previous and previous!=digest:
-    item['updated']=utc()
+    item['updated']=item['last_change']=utc()
     item['revisions']=item.get('revisions',1)+1
     item['change_type']='Inhoud gewijzigd'
    item['content_hash']=digest
@@ -212,18 +280,12 @@ def main():
  db['status']['Documentcontrole']={'ok':failures==0,'checked':utc(),
    'count':checked_docs,'errors':failures,
    'note':'Maximaal 15 documenten per uitvoering; inhoudswijzigingen worden vanaf de tweede succesvolle controle herkend.'}
-  # Recover original publication dates for KOOP items already stored by version 3.
- for item in db['items'].values():
-  if item.get('source')=='Officiele bekendmakingen (KOOP)' and not item.get('publication_date'):
-   match=re.search(r'publicatiedatum:\s*(\d{4}-\d{2}-\d{2})',item.get('excerpt',''))
-   if match:
-    item['publication_date']=match.group(1)
- # Cap dataset to avoid endless Git history growth.
- items=sorted(db['items'].items(),key=lambda kv:kv[1]['updated'],reverse=True)[:3000]
+ # Cap dataset to avoid endless Git history growth: keep the most recently active items.
+ items=sorted(db['items'].items(),key=lambda kv:kv[1].get('last_change') or kv[1]['first_seen'],reverse=True)[:3000]
  db['items']=dict(items)
  DB.write_text(json.dumps(db,ensure_ascii=False,indent=2)+'\n')
  payload=json.dumps({'items':[v for _,v in items],'status':db['status']},ensure_ascii=False).replace('</','<\\/')
- html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Eerste waarneming is niet de officiële publicatiedatum.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="changed">Gewijzigd</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Publicaties</h2><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'FOUT'} · ${esc(v.checked)} ${v.error?esc(v.error):''}</div>`).join('');function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||x.revisions>1)&&(x.title+' '+x.excerpt).toLowerCase().includes(q));$('count').textContent=a.length+' resultaten';$('results').innerHTML='<ul>'+a.slice(0,500).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a><br><small>${esc(x.source)} · ${x.meeting_date ? 'collegevergadering: '+esc(x.meeting_date)+(x.besluit_status ? ' ('+esc(x.besluit_status)+')' : '') : 'publicatiedatum: '+esc(x.publication_date || 'onbekend')} · ontdekt door monitor: ${esc(x.first_seen ? new Date(x.first_seen).toLocaleDateString('nl-NL') : 'onbekend')} · laatste geregistreerde wijziging: ${esc(x.updated ? new Date(x.updated).toLocaleDateString('nl-NL') : 'onbekend')} · versies: ${x.revisions}</small></li>`).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
+ html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}.tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}.t-nieuw{background:#d6f0df;color:#145c37}.t-gewijzigd{background:#fde8c8;color:#7a4a00}.t-historisch{background:#ececec;color:#555}.t-gepland{background:#e3e0f7;color:#3d3480}.t-onbekend{background:#f6e1e1;color:#8a2c2c}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Gesorteerd op de datum van het stuk zelf. Een oud stuk dat de monitor pas net vond, staat op zijn eigen datum met het label historisch.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="nieuw">Nieuw</option><option value="gewijzigd">Gewijzigd</option><option value="historisch">Historisch</option><option value="gepland">Gepland</option><option value="onbekend">Datum onbekend</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Publicaties</h2><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'FOUT'} · ${esc(v.checked)} ${v.error?esc(v.error):''}</div>`).join('');const TODAY=new Date().toISOString().slice(0,10);const day=s=>s?String(s).slice(0,10):'';const nl=s=>s?new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}):'onbekend';const diff=(a,b)=>(new Date(a)-new Date(b))/864e5;function kinds(x){let t=[],f=day(x.first_seen);if(!x.doc_date)t.push('onbekend');else if(x.doc_date>TODAY)t.push('gepland');else if(diff(f,x.doc_date)>30)t.push('historisch');else if(diff(TODAY,f)<=7)t.push('nieuw');if(x.last_change)t.push('gewijzigd');return t}const LABEL={onbekend:'datum onbekend'};function sortKey(x){return x.doc_date&&x.doc_date<=TODAY?x.doc_date:day(x.first_seen)}DATA.items.sort((a,b)=>sortKey(b).localeCompare(sortKey(a))||a.title.localeCompare(b.title));function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||kinds(x).includes(k))&&(x.title+' '+(x.excerpt||'')).toLowerCase().includes(q));$('count').textContent=a.length+' resultaten';$('results').innerHTML='<ul>'+a.slice(0,500).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${kinds(x).map(t=>`<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('')}<br><small>${esc(x.source)} · ${x.doc_date?esc(x.doc_date_label||'datum')+': '+nl(x.doc_date):'datum van het stuk onbekend'}${x.besluit_status?' ('+esc(x.besluit_status)+')':''} · ontdekt door monitor: ${nl(x.first_seen)}${x.last_change?' · inhoud gewijzigd: '+nl(x.last_change):''}${x.revisions>1?' · versies: '+x.revisions:''}</small></li>`).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
  OUT.write_text(html.replace('__DATA__',payload))
  print('Items:',len(items),'Sources:',db['status'])
 if __name__=='__main__':main()
