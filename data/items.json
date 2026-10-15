@@ -37292,7 +37292,10 @@
       "doc_date_label": "registratiedatum",
       "antwoord_datum": "2026-09-28",
       "report_pass": "2026-10-15T11:27:15+00:00",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "62da9bba88730b3a71949d146f634aee0aab50902aba79cef5c18717c1c6c1b6",
+      "content_checked": "2026-10-15T17:32:12+00:00"
     },
     "a5802c875b0a39e88bf44a43a4a93232c51f399f1180e68a5c80c79081a13482": {
       "title": "Aanvullende politieke vragen over beantwoording op vragen over (geen) reactie college op ingekomen stuk",
@@ -37572,7 +37575,10 @@
       "doc_date_label": "vergaderdatum",
       "meeting_title": "Besluitvormende raadsvergadering 02-07-2026 12. Motie vreemd aan de orde over het beweegpark Passantenhaven in Spanbroek",
       "portefeuillehouder": "Wethouder Buis",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "f94b3a978221b49550bddacb3b5e111243d3035c86426103684b949a636913ff",
+      "content_checked": "2026-10-15T17:32:35+00:00"
     },
     "cdaee1a6af53dece67713e381d0872df22c472590453cdd44da01ef6afeb65cd": {
       "title": "Motie VADOVDD over invoering recycletarief",
@@ -37593,7 +37599,10 @@
       "doc_date_label": "vergaderdatum",
       "meeting_title": "Besluitvormende raadsvergadering 02-07-2026 11. Motie vreemd aan de orde over het invoeren van het recycletarief",
       "portefeuillehouder": "Wethouder Ter Veen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "f5ccb8be92f8484c01d91c828bf0a6de5e313f717d86383b48944a546066797f",
+      "content_checked": "2026-10-15T17:32:37+00:00"
     },
     "e1483ad6c383d143e4541d9ec50a0fc4e9ddd6d45138ab4ec3ef2ca2a66212b0": {
       "title": "Motie VADOVDD over zienswijze provinciale omgevingsvisie NH2050",
@@ -37614,7 +37623,10 @@
       "doc_date_label": "vergaderdatum",
       "meeting_title": "Besluitvormende raadsvergadering 02-07-2026 10. Moties vreemd aan de orde over de omgevingsvisie van de provincie Noord-Holland",
       "portefeuillehouder": "Wethouder Ter Veen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "ee05e87e64fdb0a7fe0ae0e557a4b26f79f866bbb9525357b2b4cfb56b20c75e",
+      "content_checked": "2026-10-15T17:32:41+00:00"
     },
     "85e50fa87e858f4d77dd2c9532635065027c4d7cb0e9a96b89622694d8fc0edd": {
       "title": "Motie VADOVDD over zienswijze provinciale omgevingsvisie NH2050",
@@ -37635,7 +37647,10 @@
       "doc_date_label": "vergaderdatum",
       "meeting_title": "Besluitvormende raadsvergadering 02-07-2026 10. Moties vreemd aan de orde over de omgevingsvisie van de provincie Noord-Holland",
       "portefeuillehouder": "Wethouder Ter Veen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "b78cb9ea460c754b38b8ac6c317f2618ae07de6bac3161d10befb4e750df7291",
+      "content_checked": "2026-10-15T17:32:42+00:00"
     },
     "d14db4ccfced20f2dd03669e6d0f49d463bb4f182ef11492ed8468d512995ddf": {
       "title": "Motie over herijking lopende investeringskredieten",
@@ -42550,7 +42565,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-10",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "383f0d79ef525a11c2e0bcb77c1d3ac968b0f2cfabc579ae21fe7c85bc55b930",
+      "content_checked": "2026-10-15T17:32:03+00:00"
     },
     "248a56ef22c5eb00b192c37e874bf3b9a6a900a4822689b239f2f3058745fdcf": {
       "title": "Cao artikelen RVU en arbeidsduur",
@@ -42569,7 +42587,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-10",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "04a7c2315704ac6c795a1947491116bd3825dacaec633b3a7ab5726b96a0c8e4",
+      "content_checked": "2026-10-15T17:32:04+00:00"
     },
     "5c227cca2a82e0238eb2698ea2fee7b703efa9ee254aff20880656e88e5e827a": {
       "title": "Nieuwsbrief Regio Westfriesland",
@@ -42588,7 +42609,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-10",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "a6faa881b730ac62c542724266c2d357fa7a9d8ac125bf9c06e4817687257b7f",
+      "content_checked": "2026-10-15T17:32:05+00:00"
     },
     "6e0f0c08bd27a9bdd7164f0e55bf87873dacd4f8f8bab36978ef23a241b7bab2": {
       "title": "Nieuwsbrief 2602 RK Medemblik en Opmeer",
@@ -42607,7 +42631,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-10",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "ebc250c9bd63967112e547a46744b57e0c93afd9d1a64fda547689303eefe6bc",
+      "content_checked": "2026-10-15T17:32:06+00:00"
     },
     "baabaeb848405310016d74b3bfa662620aba754cf20cbab010ab1a7b2825e674": {
       "title": "Gemeentelijke handleiding regulering bestrijdingsmiddelen_tweede druk",
@@ -42626,7 +42653,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-10",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "0c0ac96470766cab24247dc2d833d72f9e5014b18358c63965f48ed9de54ec8b",
+      "content_checked": "2026-10-15T17:32:07+00:00"
     },
     "104ae52ed91b7160fa701704a1ceb18006ccb61c4b3bf8522b4d3803d4381a38": {
       "title": "Oprichting en deelname aan de stichting KCR2",
@@ -42645,7 +42675,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-07",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "3b8901e56818d4ef737db54ece7aaffdbb659b70951f0c2830009923c8b43db1",
+      "content_checked": "2026-10-15T17:32:16+00:00"
     },
     "757969f22c4420ca030cf37bcbce0a00cc1ea25be50c23d68dd7c18315955f0a": {
       "title": "Financiële positie 2026",
@@ -42664,7 +42697,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-07",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "4d11da576347a17ab69353c614b792dc3923480dee976d764bef2709745ecda2",
+      "content_checked": "2026-10-15T17:32:17+00:00"
     },
     "271246b1bd735a292751105ea54e5f4d3f57c4d63559d27028f0701599891b0c": {
       "title": "VNG-raadsledenbijeenkomsten Dienstverlening",
@@ -42683,7 +42719,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-07",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "88d72bd3db12daab7bfa4bc805b28eeb1516270cc7e88d718c72bd16a34256a8",
+      "content_checked": "2026-10-15T17:32:18+00:00"
     },
     "28492944b4465d8f4eb2ca06822aca370509f5004723aa21c0d1782ff6ad11f3": {
       "title": "Nieuwsbrief Een zomer vol mooie stappen",
@@ -42702,7 +42741,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-07",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "d9af8b47cfa2e5bfa65d28e956548e162f7b7e94f5c8ba9ec60664654f84d856",
+      "content_checked": "2026-10-15T17:32:19+00:00"
     },
     "14ee79d44bd8fc2de2ddfaadfb409260f4462d69fc9ed1f6421af547610da148": {
       "title": "Manifest - de verkiezingen beginnen nu",
@@ -42721,7 +42763,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-06",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "8bcdd220b396850e77c624a7585499e2473647c8b8435ab20a5119fdbda77134",
+      "content_checked": "2026-10-15T17:32:22+00:00"
     },
     "8e1c4fea7e6daf360115d6afcb00a474aced7e0931937f9b69e8fdb7ef7a57d3": {
       "title": "Vacatures voor bestuurs- en commissieposities VNG",
@@ -42740,7 +42785,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-06",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "69f0f1e6d432d0f6581dec42b4608a1169dbb94c7cae7a2e3ea7d557cb4078ae",
+      "content_checked": "2026-10-15T17:32:23+00:00"
     },
     "9cbfc19311ea7b6942d4558cf8685236b3c291b911906461643069b2e0d7644f": {
       "title": "Reactie DB Omgevingsdienst op zienswijzen",
@@ -42759,7 +42807,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-06",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "7d6c2ff37ea6079dcb822a1344acd9712d4a138d8b363db8cfcef5ac953eabfb",
+      "content_checked": "2026-10-15T17:32:25+00:00"
     },
     "54e9ae9dae64d95cd776a30959e59a463bf073af8efee93174be04926d9a0171": {
       "title": "Dringend: Volledig wegvallen Vodafone-bereik in Spanbroek en Hoogwoud door weigering noodmast",
@@ -42778,7 +42829,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-06",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "1c1236ed78b2d04ad3fb581ad0083995258b055ccfff484f3aa047c655ef7df5",
+      "content_checked": "2026-10-15T17:32:26+00:00"
     },
     "9ce5d7dbe7d060db7b0a2695b2b0980b924788d848b1cd722c51eb6c8d6852e8": {
       "title": "Brief vaststellen jaarstukken en begroting",
@@ -42797,7 +42851,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-06",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "31dde0b852b3ce3cbb3de8949c7d909d27166787cd6e6ff9350a7d89d21be065",
+      "content_checked": "2026-10-15T17:32:27+00:00"
     },
     "210e6e18afea07e6fcb28c298260fd9ad60ce8f65cd17880a9f6e8b017d1fbd5": {
       "title": "Uitnodiging Zomeratelier",
@@ -42816,7 +42873,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-06",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "7f49de4e2564a897d2ac657856d72b58666398b3613986f726e8b937fa50014c",
+      "content_checked": "2026-10-15T17:32:28+00:00"
     },
     "80df7afbefde22f204f757862daf13c2ee91695e8be0a055727cb60afcb17c46": {
       "title": "Beantwoording zienswijzen jaarstukken 2025 en begroting 2027",
@@ -42835,7 +42895,10 @@
       "report_pass": "2026-10-15T11:27:15+00:00",
       "report_seen": true,
       "doc_date": "2026-07-06",
-      "doc_date_label": "datum ingekomen"
+      "doc_date_label": "datum ingekomen",
+      "missing_count": 0,
+      "text_hash": "2136acd9f92eef79870cb31b302314cef21647026015d452c89e97344e5f6b65",
+      "content_checked": "2026-10-15T17:32:29+00:00"
     },
     "3a426a015056af91976953149ebbce5d530495e4c68783d7856f6173ef8142ef": {
       "title": "Ledenbrief VNG Aanjagen van de brede toepassing van gemeentelijke standaarden",
@@ -46785,7 +46848,10 @@
       "doc_date": "2026-07-07",
       "doc_date_label": "vergaderdatum college",
       "report_pass": "2026-10-15T11:27:15+00:00",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "1bc88bb650b97a743bd75c66d145ac59c34bd45c385934c6aba099e6056721eb",
+      "content_checked": "2026-10-15T17:32:20+00:00"
     },
     "872fc452d09ee1fdd74856fa390d3f9ef8097b07dd6523f56e4c8e3df093edb0": {
       "title": "Besluitenlijst collegevergadering 30 juni 2026",
@@ -65535,7 +65601,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-14",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "88aab846160ac73c90575f38c255c162424b7996f7d30cce6f2ea698737e7109",
+      "content_checked": "2026-10-15T17:31:59+00:00"
     },
     "1d56750d13df00e7b6470cf80ea70f1f92d81a5c6bced16382c7999121c7bc5e": {
       "title": "Beantwoording zienswijzen jaarstukken 2025 en begroting 2027 VR NHN",
@@ -65554,7 +65623,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-08",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "1dd373b35e86349a6f1070dec9355d6e9b34eb60fa5f8d63b14f37be9291a7f9",
+      "content_checked": "2026-10-15T17:32:12+00:00"
     },
     "ebabe834e8b8589b5e248814c8a05fdc8ca5bede6212949ca5d96e851b8fc366": {
       "title": "Verkeersbesluit Zeeweg - Dorpsstraat - Ontwikkeling De Zeehoek",
@@ -65573,7 +65645,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-09",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "390d79c41828f508fd72ad87ec7aa028b939b52f670a5bf111500351fe1be939",
+      "content_checked": "2026-10-15T17:32:08+00:00"
     },
     "3215c2877194a839928693cf264d8303aabddb2874b14b829d45ea3469c5b89c": {
       "title": "Beantwoording brief Dorpsraad Opperdoes: Bouwplan Soppediep Opperdoes",
@@ -65592,7 +65667,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-14",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "f0667a6dd81f502fbab988ef82966ee008f26999a33cf2b7cc6855ab69d8494c",
+      "content_checked": "2026-10-15T17:32:00+00:00"
     },
     "f7368fca9c3c0358f453f5ef9171d3a14691085618552a7d8852dc986cccd565": {
       "title": "Brief aan de eerste kamer Voorhang instructieregel permanente bewoning recreatiewoning",
@@ -65611,7 +65689,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-13",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "af09e72171dd74ecc0e1665bb1d613fa9db96a0f00b5cc980c827c2a2d193fcd",
+      "content_checked": "2026-10-15T17:32:02+00:00"
     },
     "59e7aa604452c14c2f63edce0ec1db5db79f4f279152dc2a79a35b3845f80630": {
       "title": "Informatiebrief gemeentelijke houtstook maatregelen",
@@ -65630,7 +65711,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-09",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "079c57446053a25c4497d92326b8741c40a2b27291776ccc991a5c1f82ee2606",
+      "content_checked": "2026-10-15T17:32:09+00:00"
     },
     "98ad1c4aa3f46d408765bf34ce33def1f6335450950604feb0add2dbee5a3ac0": {
       "title": "Bewonersbrief vertraging werkzaamheden duiker Vlietsingel",
@@ -65649,7 +65733,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-08",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "aec3b7715a7fea31091a39bb48a6d6119c362e5b0c3797dd6e328e41e6d6c308",
+      "content_checked": "2026-10-15T17:32:14+00:00"
     },
     "15ebc51d799fe3951955e370175737e777d4c59f3d2871ae312ee5a6a30d6b9b": {
       "title": "Aanbieding Gemeentelijke handleiding Regulering bestrijdingsmiddelen",
@@ -65668,7 +65755,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-08",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "a5cb99fc37f0431326c5e5edfc9a2dfef7df14b57d794a1aa204cda689c69542",
+      "content_checked": "2026-10-15T17:32:14+00:00"
     },
     "25f91522e730ea963c60256c746b7bce10a90b0e310e1953ed1275e940cbd81a": {
       "title": "Opstellen van een stedenbouwkundige/landschapsvisie voor Twisk",
@@ -65687,7 +65777,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-03",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "f55a2595f96dfe6bed99e7a9b286f1b647a420c49783daf868f2a9a9e1e3a3b0",
+      "content_checked": "2026-10-15T17:32:33+00:00"
     },
     "81aa0a3ac976bc944c9e570e8d3a56eda36d797fa31b9a4345a89d13bb1ad4c4": {
       "title": "Zienswijzeprocedure resultaatbestemming 2025 (met jaarstukken) en ontwerpbegroting 2027",
@@ -65706,7 +65799,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-06",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "e8e72317bf5a1abd0a91fa79658f265764115f29bacace1a11995305364a9aad",
+      "content_checked": "2026-10-15T17:32:30+00:00"
     },
     "112e11f28583288edfa9bc401f0aa71ecc4cdfc09a72a0a8f5838045ef31049b": {
       "title": "Jaarstukken 2025 en begroting 2027 Westfries Archief (WFA)",
@@ -65725,7 +65821,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-06",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "39a1b0cc36112307678933621f75dadc669773501b16dc20634281d8bbed543f",
+      "content_checked": "2026-10-15T17:32:31+00:00"
     },
     "e5d51b600202443a0d70eb1f2f0272223c736f1e5f5bbcf5e9aac75c9d36f7e3": {
       "title": "Brief aan de eerste kamer Voorhang instructieregel permanente bewoning recreatiewoning",
@@ -65744,7 +65843,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-04",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "6ce1bdfa9f90bd5490f1926551fcc837966e177478337ebcdc31f78606829474",
+      "content_checked": "2026-10-15T17:32:32+00:00"
     },
     "320e4d1419b9d28f003b0bc279946ea8eddf49440d7d1816b9b29fb2d73b3662": {
       "title": "Satelietdata voor gemeenten van de Netherlands Space Agency",
@@ -65763,7 +65865,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-06",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "575c30d718249e7cb896f5a8f90c9e29789d7639bacd45907d0e46fede96e807",
+      "content_checked": "2026-10-15T17:32:31+00:00"
     },
     "d18e8fc83c2ea3578cf02431bf70d4b6f93e9afedf1ed725c2282056248792c5": {
       "title": "Zienswijze op Ontwerp Omgevingsvisie Medemblik",
@@ -65801,7 +65906,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-14",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "03aea4b2efc6912c256926fc4943719722ae9844ad1cc6d8eee0996fa349a42a",
+      "content_checked": "2026-10-15T17:32:01+00:00"
     },
     "6c0b769e01ad6bcd2eb7457b570c2d4c213a00944766e3f410b0c81ba99f9940": {
       "title": "Zwembad Wervershoof",
@@ -65839,7 +65947,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-09",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "e4db3a69e21e88982492ee37d66fc32b389efc0d850bea5be6589ba463fe6e3a",
+      "content_checked": "2026-10-15T17:32:10+00:00"
     },
     "b934c0751fbb576e6d4af4c5ddcfcb627aca00597cdf48d0faeca018063bf692": {
       "title": "Woningbouwontwikkeling Twisk",
@@ -65858,7 +65969,10 @@
       "report_pass": "2026-10-15T11:26:04+00:00",
       "doc_date": "2026-07-03",
       "doc_date_label": "datum ingekomen",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "465728e972df0caaf894bf6c6baa342c22f4a4535dd9edd6dc4f0e6ce1a01e0f",
+      "content_checked": "2026-10-15T17:32:34+00:00"
     },
     "c1dfecf7bb1e0aa664f634ab8ca2025ba0b55a17a0119862b0d6c031997a5a1e": {
       "title": "Jaarverslag 2025 Westfriese Bibliotheken",
@@ -66937,7 +67051,10 @@
       "doc_date": "2026-07-09",
       "doc_date_label": "registratiedatum",
       "report_pass": "2026-10-15T11:26:04+00:00",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "7e76f1a28ec806f981314ec96739d292cdaa74ef3d45f43aa627b8fbecc81bbd",
+      "content_checked": "2026-10-15T17:32:11+00:00"
     },
     "735de466d99d7e044b3f9b465aa1d013e36ebe61e7c0b1b1372bf56592924ab0": {
       "title": "Themabijeenkomst Beleidsnota Economie",
@@ -66956,7 +67073,10 @@
       "doc_date": "2026-07-07",
       "doc_date_label": "registratiedatum",
       "report_pass": "2026-10-15T11:26:04+00:00",
-      "report_seen": true
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "25983016030c76666c3501885b52d20fdf113473730f71b08b4f1f3b7612a50d",
+      "content_checked": "2026-10-15T17:32:21+00:00"
     },
     "75c6498bbeb06dc5200d36c4e0f5052f549fd13352610da57c503fb32e152830": {
       "title": "Tussenrapportage (psychisch) kwetsbare inwoners",
@@ -96840,38 +96960,38 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-10-15T17:01:30+00:00",
+        "checked": "2026-10-15T17:31:18+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-15T17:01:31+00:00",
+        "checked": "2026-10-15T17:31:19+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-10-15T17:01:32+00:00",
+        "checked": "2026-10-15T17:31:19+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-10-15T17:01:32+00:00",
+        "checked": "2026-10-15T17:31:20+00:00",
         "ok": true,
         "count": 29,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-15T17:00:59+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "ok": true,
         "count": 174,
         "new": 0,
         "note": "Laatste 30 dagen: 174 van 174 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-15T17:01:17+00:00",
+        "checked": "2026-10-15T17:31:06+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -96879,7 +96999,7 @@
         "note": "10 van 19 vergaderingen in venster bijgewerkt; 172 documenten bekend. Dekking: vergaderingen van 2026-08-16 t/m 2026-11-29 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-15T17:01:29+00:00",
+        "checked": "2026-10-15T17:31:17+00:00",
         "ok": true,
         "count": 301,
         "new": 0,
@@ -96889,14 +97009,14 @@
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-10-15T17:03:17+00:00",
+        "checked": "2026-10-15T17:32:42+00:00",
         "ok": true,
         "count": 40,
         "errors": 0,
-        "note": "40 documenten gecontroleerd (2 pdf), 1584 gevolgd (alle gemeenten), 954 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. KOOP-bekendmakingen via hun versiegegevens."
+        "note": "40 documenten gecontroleerd (0 pdf), 1584 gevolgd (alle gemeenten), 980 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. KOOP-bekendmakingen via hun versiegegevens."
       },
       "Meldingen": {
-        "checked": "2026-10-15T17:03:17+00:00",
+        "checked": "2026-10-15T17:32:42+00:00",
         "ok": true,
         "note": "Pushmeldingen actief (ntfy); deze run 0 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-15).",
         "error": null
@@ -96904,21 +97024,21 @@
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-15T17:01:35+00:00",
+        "checked": "2026-10-15T17:31:21+00:00",
         "ok": true,
         "count": 89,
         "new": 0,
         "note": "Laatste 30 dagen: 89 van 89 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-10-15T17:01:35+00:00",
+        "checked": "2026-10-15T17:31:22+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-15T17:01:36+00:00",
+        "checked": "2026-10-15T17:31:22+00:00",
         "ok": true,
         "count": 166,
         "new": 0,
@@ -96926,7 +97046,7 @@
         "error": null
       },
       "Woo-verzoeken": {
-        "checked": "2026-10-15T17:01:37+00:00",
+        "checked": "2026-10-15T17:31:23+00:00",
         "ok": true,
         "count": 15,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
@@ -96934,14 +97054,14 @@
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "ok": true,
         "count": 47,
         "new": 0,
         "note": "Laatste 30 dagen: 47 van 47 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-15T17:02:03+00:00",
+        "checked": "2026-10-15T17:31:43+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -96949,7 +97069,7 @@
         "note": "10 van 11 vergaderingen in venster bijgewerkt; 75 documenten bekend. Dekking: vergaderingen van 2026-08-16 t/m 2026-11-29 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-15T17:02:17+00:00",
+        "checked": "2026-10-15T17:31:58+00:00",
         "ok": true,
         "count": 399,
         "new": 0,
@@ -96957,7 +97077,7 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 74, Belangrijke documenten 13, Besluitenlijsten college 310, Ingekomen stukken 1143, Moties 79, Politieke vragen 73, Raadsinformatiebrieven 587, Thema's 25, Toezeggingen 84, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-10-15T17:02:18+00:00",
+        "checked": "2026-10-15T17:31:58+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
@@ -173105,7 +173225,7 @@
         "gemeente": "medemblik"
       },
       "7a2ae701-743b-4c66-bc69-1ea646ee2483": {
-        "checked": "2026-10-15T17:00:59+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-26",
         "label": "donderdag 26 november 2026",
@@ -173381,7 +173501,7 @@
         "gemeente": "medemblik"
       },
       "3e6659e5-394d-4eb0-83d2-57091ce3e731": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Auditcommissie",
         "date": "2026-09-30",
         "label": "woensdag 30 september 2026",
@@ -173410,7 +173530,7 @@
         "gemeente": "medemblik"
       },
       "b2e8194e-6b1b-4240-a0e4-49ee3e2082af": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-11-19",
         "label": "donderdag 19 november 2026 Informatiebijeenkomst Omgevingsvisie",
@@ -173418,7 +173538,7 @@
         "gemeente": "medemblik"
       },
       "7146dc5f-5af1-4a60-8167-a7eb2021eac4": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-11-02",
         "label": "maandag 2 november 2026 Informatiebijeenkomst College uitvoeringsprogramma (CUP) 2026-2030",
@@ -173426,7 +173546,7 @@
         "gemeente": "medemblik"
       },
       "d9d72e72-eece-4b27-98bd-be12fc19985f": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-10-22",
         "label": "donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming",
@@ -173434,7 +173554,7 @@
         "gemeente": "medemblik"
       },
       "df4cd9b8-d584-460e-af53-cb8e05cea854": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-09-17",
         "label": "donderdag 17 september 2026",
@@ -173442,7 +173562,7 @@
         "gemeente": "medemblik"
       },
       "3173ad29-0405-448e-be38-402e5785380e": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-09-15",
         "label": "dinsdag 15 september 2026 Informatiebijeenkomst (training) Relevant gesprek methodiek",
@@ -173464,7 +173584,7 @@
         "gemeente": "medemblik"
       },
       "0ee03b28-01dc-436b-9b5a-a77f83d3d9d1": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-10-26",
         "label": "maandag 26 oktober 2026",
@@ -173472,7 +173592,7 @@
         "gemeente": "medemblik"
       },
       "1748f967-2b06-4aa4-9c8c-de75df138b17": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-10-08",
         "label": "donderdag 8 oktober 2026",
@@ -173480,7 +173600,7 @@
         "gemeente": "medemblik"
       },
       "afa94415-13a6-4772-82c4-d57bb33d1b7e": {
-        "checked": "2026-10-15T16:30:46+00:00",
+        "checked": "2026-10-15T17:30:49+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-09-14",
         "label": "maandag 14 september 2026",
@@ -173502,7 +173622,7 @@
         "label": "donderdag 10 december 2026"
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -173510,7 +173630,7 @@
         "documents": 0
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -173574,7 +173694,7 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
@@ -173582,7 +173702,7 @@
         "documents": 0
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -173590,7 +173710,7 @@
         "documents": 13
       },
       "7d82ecee-3b65-4d47-ae9b-904b5e4c1562": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-09-10",
@@ -173619,7 +173739,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -173627,7 +173747,7 @@
         "documents": 0
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -173635,7 +173755,7 @@
         "documents": 10
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -173643,7 +173763,7 @@
         "documents": 3
       },
       "eb2e5b85-1e4b-4de2-824f-c07024b8157b": {
-        "checked": "2026-10-15T17:01:38+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-08-27",
@@ -173680,7 +173800,7 @@
         "documents": 11
       },
       "a542f283-1759-4a8d-a74a-9c1e23318e90": {
-        "checked": "2026-10-15T16:31:20+00:00",
+        "checked": "2026-10-15T17:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-09-01",
