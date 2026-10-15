@@ -12,6 +12,8 @@ Instellingen komen uit GitHub-secrets (doorgegeven als omgevingsvariabelen):
   MAIL_USER           je Gmail-adres (afzender)
   MAIL_APP_PASSWORD   een Gmail-app-wachtwoord (niet je gewone wachtwoord)
   MAIL_TO             ontvanger(s), komma-gescheiden; leeg = MAIL_USER
+  MAIL_SMTP_HOST      optioneel, standaard smtp.gmail.com (bijv. smtp.office365.com)
+  MAIL_SMTP_PORT      optioneel, standaard 587
 Ontbreekt een instelling, dan wordt dat kanaal overgeslagen en staat dat op het dashboard.
 """
 import os, datetime, smtplib, html
@@ -184,7 +186,8 @@ def _mail_text(gemeenten, events_by_gid):
     out.append(f'\nDashboard: {DASHBOARD_URL}')
     return '\n'.join(out)
 
-def send_digest(gemeenten, events_by_gid, since, now_local, user, password, to):
+def send_digest(gemeenten, events_by_gid, since, now_local, user, password, to,
+                host='smtp.gmail.com', port=587):
     n_new = sum(1 for ev in events_by_gid.values() for x in ev if x['kind'] == 'nieuw')
     n_chg = sum(1 for ev in events_by_gid.values() for x in ev if x['kind'] != 'nieuw')
     msg = EmailMessage()
@@ -193,7 +196,7 @@ def send_digest(gemeenten, events_by_gid, since, now_local, user, password, to):
     msg['To'] = to
     msg.set_content(_mail_text(gemeenten, events_by_gid))
     msg.add_alternative(_mail_html(gemeenten, events_by_gid, since, now_local), subtype='html')
-    with smtplib.SMTP('smtp.gmail.com', 587, timeout=30) as smtp:
+    with smtplib.SMTP(host, port, timeout=30) as smtp:
         smtp.starttls()
         smtp.login(user, password)
         smtp.send_message(msg)
@@ -239,7 +242,9 @@ def run(db, gemeenten, run_start, set_status):
             for ev in events_since(db, since):
                 by_gid.setdefault(ev['item'].get('gemeente'), []).append(ev)
             try:
-                n_new, n_chg = send_digest(gemeenten, by_gid, since, now_local, user, password, to)
+                n_new, n_chg = send_digest(gemeenten, by_gid, since, now_local, user, password, to,
+                                           os.environ.get('MAIL_SMTP_HOST', '').strip() or 'smtp.gmail.com',
+                                           int(os.environ.get('MAIL_SMTP_PORT', '').strip() or 587))
                 state.update(digest_date=today, digest_sent_at=now.isoformat(timespec='seconds'))
                 notes.append(f'Dagelijkse samenvatting verstuurd om {now_local:%H:%M} ({n_new} nieuw, {n_chg} gewijzigd).')
             except Exception as exc:
