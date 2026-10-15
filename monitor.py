@@ -90,6 +90,11 @@ def koop_store(db,records):
      'updated':now,'last_change':None,'hash':hashlib.sha256((title+'|'+str(koop)).encode()).hexdigest(),
      'revisions':1}
    added+=1
+  # Nieuwe versie bij KOOP (bijv. een rectificatie): versienummer of wijzigingsdatum anders.
+  version=f"{first('hasVersion') or '1'}|{first('modified') or ''}"
+  if item.get('koop_version') and item['koop_version']!=version:
+   record_change(item,'Nieuwe versie bij KOOP',f"versiegegevens gewijzigd: {item['koop_version']} \u2192 {version}")
+  item['koop_version']=version
   # Datums en kenmerken bijwerken is metadata, geen inhoudelijke revisie.
   types=[t for t in values('type') if '|' not in t]
   item.update(koop_dates=koop,doc_date=doc_date,doc_date_label=label,
@@ -184,11 +189,11 @@ def collect_college(db,main,url):
      'meeting_date':d['date'],'publication_date':None,'first_seen':now,'updated':now,
      'last_change':None,'hash':fingerprint,'revisions':1,
      'besluit_status':status[-1] if status else None,'excerpt':d['body'][:400]}
-  elif old['hash']!=fingerprint:
-   # Alleen een revisie bij een aantoonbaar andere tekst van precies dit besluit.
-   old.update(hash=fingerprint,updated=now,last_change=now,revisions=old['revisions']+1,
-     change_type='Besluittekst gewijzigd',excerpt=d['body'][:400],
-     besluit_status=status[-1] if status else old.get('besluit_status'))
+  # Alleen een revisie bij een aantoonbaar andere tekst van precies dit besluit,
+  # met per zin wat er veranderde. De eerste keer is een nulmeting.
+  compare_text(key,old,to_lines(d['body']),'Besluittekst gewijzigd')
+  old.update(hash=fingerprint,excerpt=d['body'][:400],
+    besluit_status=status[-1] if status else old.get('besluit_status'))
   old.update(doc_date=d['date'],doc_date_label='vergaderdatum college',last_seen=today())
 
 def archive_legacy_college(db):
@@ -367,6 +372,152 @@ def collect_meetings(db):
  except Exception as exc:
   db['status'][DOCS_SOURCE]={'ok':False,'checked':now,'error':str(exc)[:250]}
 
+# ---------------------------------------------------------------------------
+# Fase 4: documentwijzigingen inhoudelijk volgen
+# ---------------------------------------------------------------------------
+TEXT_DIR=ROOT/'data'/'text'   # vorige tekstversie per document, nodig om te kunnen vergelijken
+DOCS_PER_RUN=25
+MAX_DOC_BYTES=15_000_000      # groter: alleen bestandskenmerken vergelijken, niet downloaden
+TEXT_CAP=300_000              # maximaal aantal tekens tekst dat we per document bewaren
+MAX_CHANGES=10                # zoveel wijzigingen per document bewaren
+
+def check_interval(item):
+ """Hoe vaak een document opnieuw wordt gecontroleerd, op basis van de leeftijd van het stuk.
+ Verse stukken worden vaker aangepast (bijlage vervangen, tekst gecorrigeerd)."""
+ ref=item.get('doc_date') or (item.get('first_seen') or '')[:10]
+ try: age=(datetime.date.today()-datetime.date.fromisoformat(ref)).days
+ except ValueError: age=0
+ if age<=14: return datetime.timedelta(hours=6)
+ if age<=60: return datetime.timedelta(days=1)
+ if age<=180: return datetime.timedelta(days=7)
+ return datetime.timedelta(days=30)
+
+def is_due(item,now_dt):
+ last=item.get('content_checked')
+ if not last: return True
+ try: return datetime.datetime.fromisoformat(last)+check_interval(item)<=now_dt
+ except ValueError: return True
+
+def to_lines(text):
+ """Tekst in zinnen/regels knippen, zodat een wijziging per zin te tonen is."""
+ text=(text or '')[:TEXT_CAP]
+ parts=re.split(r'\n+|(?<=[.!?;])\s+(?=[A-Z0-9“"(])',text)
+ return [clean(p) for p in parts if clean(p)]
+
+def pdf_text(data):
+ import io
+ from pypdf import PdfReader
+ reader=PdfReader(io.BytesIO(data))
+ out=[]
+ for page in reader.pages[:300]:
+  try: out.append(page.extract_text() or '')
+  except Exception: out.append('')
+ return '\n'.join(out)
+
+def text_path(key): return TEXT_DIR/(key[:24]+'.txt')
+
+def record_change(item,kind,summary,added=(),removed=()):
+ now=utc()
+ change={'at':now,'type':kind,'summary':summary,
+   'added':[a[:220] for a in added[:3]],'removed':[r[:220] for r in removed[:3]]}
+ item.setdefault('changes',[]).append(change)
+ item['changes']=item['changes'][-MAX_CHANGES:]
+ item.update(updated=now,last_change=now,revisions=item.get('revisions',1)+1,change_type=kind)
+
+def compare_text(key,item,lines,kind='Tekst gewijzigd'):
+ """Vergelijk met de vorige tekstversie. De eerste keer is alleen een nulmeting."""
+ import difflib
+ digest=hashlib.sha256('\n'.join(lines).encode()).hexdigest()
+ path=text_path(key)
+ previous=item.get('text_hash')
+ if previous and previous!=digest:
+  old=path.read_text(encoding='utf-8').split('\n') if path.exists() else []
+  sm=difflib.SequenceMatcher(None,old,lines,autojunk=False)
+  added=[l for tag,i1,i2,j1,j2 in sm.get_opcodes() if tag in('insert','replace') for l in lines[j1:j2]]
+  removed=[l for tag,i1,i2,j1,j2 in sm.get_opcodes() if tag in('delete','replace') for l in old[i1:i2]]
+  if not old: summary='tekst gewijzigd (vorige versie niet bewaard)'
+  else: summary=f'{len(added)} zin(nen) toegevoegd of aangepast, {len(removed)} verwijderd of vervangen'
+  record_change(item,kind,summary,added,removed)
+ if previous!=digest:
+  TEXT_DIR.mkdir(parents=True,exist_ok=True)
+  path.write_text('\n'.join(lines),encoding='utf-8')
+ item['text_hash']=digest
+
+def compare_file(item,fingerprint,why):
+ """Voor bestanden zonder leesbare tekst (scans, video): alleen zien dát het bestand veranderde."""
+ previous=item.get('file_hash')
+ if previous and previous!=fingerprint:
+  record_change(item,'Bestand gewijzigd','bestand vervangen ('+why+'); inhoud niet als tekst te vergelijken')
+ item['file_hash']=fingerprint
+
+def check_documents(db):
+ now_dt=datetime.datetime.now(datetime.timezone.utc)
+ overview=set(u.rstrip('/') for u in SOURCES.values())
+ tracked=[(k,v) for k,v in db['items'].items() if v.get('url','').startswith((
+   'https://www.medemblik.nl/','https://medemblik.bestuurlijkeinformatie.nl/'))
+   and v.get('url','').rstrip('/') not in overview
+   # Collegebesluiten en vergaderingen hebben hun eigen vergelijking.
+   and v.get('kind') not in ('collegebesluit','vergadering') and '/Agenda/Index/' not in v.get('url','')]
+ due=[(k,v) for k,v in tracked if is_due(v,now_dt)]
+ # Nooit gecontroleerd eerst, daarna wie het langst over tijd is.
+ due.sort(key=lambda p:p[1].get('content_checked') or '')
+ checked=failures=pdf_count=noscan=0
+ for key,item in due[:DOCS_PER_RUN]:
+  try:
+   head=requests.get(item['url'],headers=HEADERS,timeout=30,stream=True)
+   if head.status_code in (404,410):
+    head.close()
+    item['missing_count']=item.get('missing_count',0)+1
+    # Twee keer achter elkaar weg: dan pas melden (één keer kan een storing zijn).
+    if item['missing_count']>=2 and not item.get('removed'):
+     item['removed']=utc()
+     record_change(item,'Niet meer bereikbaar',f'document geeft HTTP {head.status_code}: verwijderd of verplaatst')
+    item['content_checked']=utc(); checked+=1; continue
+   head.raise_for_status()
+   if item.pop('removed',None):
+    record_change(item,'Weer bereikbaar','document is weer online')
+   item['missing_count']=0
+   size=int(head.headers.get('Content-Length') or 0)
+   content_type=head.headers.get('Content-Type','').lower()
+   if size>MAX_DOC_BYTES:
+    head.close()
+    compare_file(item,f"{size}|{head.headers.get('Last-Modified','')}|{head.headers.get('ETag','')}",'groot bestand')
+   else:
+    data=head.content
+    if len(data)>MAX_DOC_BYTES: raise ValueError('Document te groot')
+    if 'pdf' in content_type or data[:4]==b'%PDF':
+     pdf_count+=1
+     text=pdf_text(data)
+     if len(clean(text))>=80: compare_text(key,item,to_lines(text))
+     else:
+      noscan+=1; compare_file(item,hashlib.sha256(data).hexdigest(),'pdf zonder leesbare tekst')
+    elif 'html' in content_type or b'<html' in data[:500].lower():
+     page=BeautifulSoup(data.decode(head.encoding or 'utf-8',errors='replace'),'html.parser')
+     for tag in page(['script','style','nav','footer','header','form']):tag.decompose()
+     area=page.select_one('main') or page.select_one('article') or page
+     area_text=clean(area.get_text(' ',strip=True))
+     # Datum van het stuk zelf uitlezen (nieuws: publicatiedatum, raadsvragen: datum vraag).
+     if not item.get('doc_date') or item.get('doc_date_label') in ('publicatiedatum','datum vraag','datum ontvangst','datum brief','datum publicatie','datum'):
+      found,label=page_date(area_text,item['url'])
+      if not found: found,label=page_date(clean(page.get_text(' ',strip=True)),item['url'])
+      if found:
+       item['doc_date'],item['doc_date_label']=found,label
+       if label=='publicatiedatum': item['publication_date']=found
+     compare_text(key,item,to_lines(area.get_text('\n',strip=True)))
+    else:
+     compare_file(item,hashlib.sha256(data).hexdigest(),content_type or 'onbekend bestandstype')
+   item['content_checked']=utc(); item.pop('content_error',None); checked+=1
+  except Exception as exc:
+   failures+=1
+   item['content_checked']=utc(); item['content_error']=str(exc)[:120]
+ backlog=max(0,len(due)-DOCS_PER_RUN)
+ db['status']['Documentcontrole']={'ok':failures==0,'checked':utc(),'count':checked,'errors':failures,
+   'note':f'{checked} documenten gecontroleerd ({pdf_count} pdf), {len(tracked)} gevolgd, {backlog} wachten nog. '
+          'Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. '
+          'Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. '
+          'Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. '
+          'KOOP-bekendmakingen via hun versiegegevens.'+(f' {noscan} pdf zonder tekst deze run.' if noscan else '')}
+
 def main():
  DB.parent.mkdir(exist_ok=True); OUT.parent.mkdir(exist_ok=True)
  db=json.loads(DB.read_text()) if DB.exists() else {'items':{},'status':{}}
@@ -405,67 +556,13 @@ def main():
    db['status'][source]={'ok':True,'checked':utc(),'count':len(candidates),'note':SOURCE_NOTES.get(source)}
   except Exception as e:
    db['status'][source]={'ok':False,'checked':utc(),'error':str(e)[:180]}
- # Check a limited rotating batch of already discovered documents for content changes.
- # This is best-effort and deliberately rate-limited; it is not a full document archive.
- checked_docs=0
- failures=0
- # Overzichtspagina's (zoals de collegebesluitenpagina) niet als 'document' controleren:
- # die veranderen bij elk nieuw besluit, waardoor alle items op die URL onterecht een revisie kregen.
- overview=set(u.rstrip('/') for u in SOURCES.values())
- eligible=[(k,v) for k,v in db['items'].items() if v.get('url','').startswith((
-  'https://www.medemblik.nl/', 'https://medemblik.bestuurlijkeinformatie.nl/'))
-  and v.get('url','').rstrip('/') not in overview
-  # Besluiten, vergaderingen en raadsdocumenten (PDF) worden door hun eigen verzamelaar gevolgd;
-  # inhoudelijke PDF-controle komt in fase 4.
-  and v.get('kind') not in ('collegebesluit','raadsdocument','vergadering') and '/Agenda/Index/' not in v.get('url','')]
- eligible.sort(key=lambda pair: pair[1].get('content_checked',''))
- for key,item in eligible[:15]:
-  try:
-   response=requests.get(item['url'],headers=HEADERS,timeout=18)
-   response.raise_for_status()
-   if len(response.content)>8_000_000: raise ValueError('Document te groot')
-   content_type=response.headers.get('Content-Type','').lower()
-   if 'pdf' in content_type or response.content[:4]==b'%PDF':
-    normalized=response.content
-   elif 'html' in content_type or b'<html' in response.content[:500].lower():
-    page=BeautifulSoup(response.text,'html.parser')
-    for tag in page(['script','style','nav','footer','header','form']):tag.decompose()
-    area=page.select_one('main') or page.select_one('article') or page
-    area_text=clean(area.get_text(' ',strip=True))
-    normalized=area_text.encode('utf-8')
-    # Datum van het stuk zelf uitlezen (nieuws: publicatiedatum, raadsvragen: datum vraag).
-    # Een datum uit KOOP-metadata of de vergaderdatum gaat altijd voor.
-    if not item.get('doc_date') or item.get('doc_date_label') in ('publicatiedatum','datum vraag','datum ontvangst','datum brief','datum publicatie','datum'):
-     found,label=page_date(area_text,item['url'])
-     if not found: found,label=page_date(clean(page.get_text(' ',strip=True)),item['url'])
-     if found:
-      item['doc_date'],item['doc_date_label']=found,label
-      if label=='publicatiedatum': item['publication_date']=found
-   else:
-    normalized=response.content
-   digest=hashlib.sha256(normalized).hexdigest()
-   previous=item.get('content_hash')
-   if previous and previous!=digest:
-    item['updated']=item['last_change']=utc()
-    item['revisions']=item.get('revisions',1)+1
-    item['change_type']='Inhoud gewijzigd'
-   item['content_hash']=digest
-   item['content_checked']=utc()
-   item.pop('content_error',None)
-   checked_docs+=1
-  except Exception as exc:
-   failures+=1
-   item['content_checked']=utc()
-   item['content_error']=str(exc)[:120]
- db['status']['Documentcontrole']={'ok':failures==0,'checked':utc(),
-   'count':checked_docs,'errors':failures,
-   'note':'Maximaal 15 documenten per uitvoering; inhoudswijzigingen worden vanaf de tweede succesvolle controle herkend.'}
+ check_documents(db)
  # Cap dataset to avoid endless Git history growth: keep the most recently active items.
  items=sorted(db['items'].items(),key=lambda kv:kv[1].get('last_change') or kv[1]['first_seen'],reverse=True)[:3000]
  db['items']=dict(items)
  DB.write_text(json.dumps(db,ensure_ascii=False,indent=2)+'\n')
  payload=json.dumps({'items':[v for _,v in items],'status':db['status']},ensure_ascii=False).replace('</','<\\/')
- html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}.tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}.t-nieuw{background:#d6f0df;color:#145c37}.t-gewijzigd{background:#fde8c8;color:#7a4a00}.t-historisch{background:#ececec;color:#555}.t-gepland{background:#e3e0f7;color:#3d3480}.st{margin:8px 0}.t-onbekend{background:#f6e1e1;color:#8a2c2c}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Gesorteerd op de datum van het stuk zelf. Een oud stuk dat de monitor pas net vond, staat op zijn eigen datum met het label historisch.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="nieuw">Nieuw</option><option value="gewijzigd">Gewijzigd</option><option value="historisch">Historisch</option><option value="gepland">Gepland</option><option value="onbekend">Datum onbekend</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Komende vergaderingen</h2><div id="upcoming"></div></section><section class="panel"><h2>Publicaties</h2><p><small>Nieuwste bovenaan, op datum van het stuk. Stukken zonder datum staan onderaan.</small></p><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="st"><span class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'LET OP'}</span> <small>· ${v.checked?new Date(v.checked).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):''}${v.new?' · '+v.new+' nieuw':''}</small>${v.note?`<br><small>${esc(v.note)}</small>`:''}${v.error?`<br><small class="error">${esc(v.error)}</small>`:''}</div>`).join('');const TODAY=new Date().toISOString().slice(0,10);const day=s=>s?String(s).slice(0,10):'';const nl=s=>s?new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}):'onbekend';const diff=(a,b)=>(new Date(a)-new Date(b))/864e5;function kinds(x){let t=[],f=day(x.first_seen);if(!x.doc_date)t.push('onbekend');else if(x.doc_date>TODAY)t.push('gepland');else if(diff(f,x.doc_date)>30)t.push('historisch');else if(diff(TODAY,f)<=7)t.push('nieuw');if(x.last_change)t.push('gewijzigd');return t}const LABEL={onbekend:'datum onbekend'};DATA.items.sort((a,b)=>(!!b.doc_date-!!a.doc_date)||(b.doc_date||day(b.first_seen)).localeCompare(a.doc_date||day(a.first_seen))||a.title.localeCompare(b.title));function li(x){return `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${kinds(x).filter(t=>t!=='gepland').map(t=>`<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('')}<br><small>${esc(x.source)} · ${x.doc_date?esc(x.doc_date_label||'datum')+': '+nl(x.doc_date):'datum van het stuk onbekend'}${x.besluit_status?' ('+esc(x.besluit_status)+')':''}${x.koop_type?' · '+esc(x.koop_type):''}${x.locatie?' · '+esc(x.locatie):''}${x.meeting_title?' · '+esc(x.meeting_title):''}${x.agendapunt?' · agendapunt '+esc(x.agendapunt):''}${x.meetings&&x.meetings.length>1?' · ook in '+(x.meetings.length-1)+' andere vergadering(en)':''} · ontdekt door monitor: ${nl(x.first_seen)}${x.last_change?' · inhoud gewijzigd: '+nl(x.last_change):''}${x.revisions>1?' · versies: '+x.revisions:''}</small></li>`}function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||kinds(x).includes(k))&&(x.title+' '+(x.excerpt||'')).toLowerCase().includes(q));let up=a.filter(x=>kinds(x).includes('gepland')).sort((x,y)=>x.doc_date.localeCompare(y.doc_date));let rest=a.filter(x=>!kinds(x).includes('gepland'));$('count').textContent=a.length+' resultaten';$('upcoming').innerHTML=up.length?'<ul>'+up.map(li).join('')+'</ul>':'<p><small>Geen komende vergaderingen in deze selectie.</small></p>';$('results').innerHTML='<ul>'+rest.slice(0,500).map(li).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
+ html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}.tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}.t-nieuw{background:#d6f0df;color:#145c37}.t-gewijzigd{background:#fde8c8;color:#7a4a00}.t-historisch{background:#ececec;color:#555}.t-gepland{background:#e3e0f7;color:#3d3480}.st{margin:8px 0}.t-verwijderd{background:#f6e1e1;color:#8a2c2c}.chg{display:block;margin-top:4px;padding:6px 10px;border-left:3px solid #e0a040;background:#fff8ee;font-size:14px}.chg details{margin-top:4px}.chg .plus{color:#145c37}.chg .min{color:#8a2c2c;text-decoration:line-through}.t-onbekend{background:#f6e1e1;color:#8a2c2c}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Gesorteerd op de datum van het stuk zelf. Een oud stuk dat de monitor pas net vond, staat op zijn eigen datum met het label historisch.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="nieuw">Nieuw</option><option value="gewijzigd">Gewijzigd</option><option value="verwijderd">Niet meer bereikbaar</option><option value="historisch">Historisch</option><option value="gepland">Gepland</option><option value="onbekend">Datum onbekend</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Komende vergaderingen</h2><div id="upcoming"></div></section><section class="panel"><h2>Publicaties</h2><p><small>Nieuwste bovenaan, op datum van het stuk. Stukken zonder datum staan onderaan.</small></p><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="st"><span class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'LET OP'}</span> <small>· ${v.checked?new Date(v.checked).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):''}${v.new?' · '+v.new+' nieuw':''}</small>${v.note?`<br><small>${esc(v.note)}</small>`:''}${v.error?`<br><small class="error">${esc(v.error)}</small>`:''}</div>`).join('');const TODAY=new Date().toISOString().slice(0,10);const day=s=>s?String(s).slice(0,10):'';const nl=s=>s?new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}):'onbekend';const diff=(a,b)=>(new Date(a)-new Date(b))/864e5;function kinds(x){let t=[],f=day(x.first_seen);if(!x.doc_date)t.push('onbekend');else if(x.doc_date>TODAY)t.push('gepland');else if(diff(f,x.doc_date)>30)t.push('historisch');else if(diff(TODAY,f)<=7)t.push('nieuw');if(x.last_change)t.push('gewijzigd');if(x.removed)t.push('verwijderd');return t}const LABEL={onbekend:'datum onbekend'};DATA.items.sort((a,b)=>(!!b.doc_date-!!a.doc_date)||(b.doc_date||day(b.first_seen)).localeCompare(a.doc_date||day(a.first_seen))||a.title.localeCompare(b.title));function li(x){return `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${kinds(x).filter(t=>t!=='gepland').map(t=>`<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('')}<br><small>${esc(x.source)} · ${x.doc_date?esc(x.doc_date_label||'datum')+': '+nl(x.doc_date):'datum van het stuk onbekend'}${x.besluit_status?' ('+esc(x.besluit_status)+')':''}${x.koop_type?' · '+esc(x.koop_type):''}${x.locatie?' · '+esc(x.locatie):''}${x.meeting_title?' · '+esc(x.meeting_title):''}${x.agendapunt?' · agendapunt '+esc(x.agendapunt):''}${x.meetings&&x.meetings.length>1?' · ook in '+(x.meetings.length-1)+' andere vergadering(en)':''} · ontdekt door monitor: ${nl(x.first_seen)}${x.last_change?' · inhoud gewijzigd: '+nl(x.last_change):''}${x.revisions>1?' · versies: '+x.revisions:''}</small>${chg(x)}</li>`}function chg(x){const c=(x.changes||[]).slice(-1)[0];if(!c)return '';const more=(x.changes.length>1?` · ${x.changes.length} wijzigingen geregistreerd`:'');const lines=[...(c.added||[]).map(l=>`<div class="plus">+ ${esc(l)}</div>`),...(c.removed||[]).map(l=>`<div class="min">\u2212 ${esc(l)}</div>`)].join('');return `<span class="chg"><strong>${esc(c.type)}</strong> op ${nl(c.at)}: ${esc(c.summary)}${more}${lines?`<details><summary>Wat is er veranderd</summary>${lines}</details>`:''}</span>`}function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||kinds(x).includes(k))&&(x.title+' '+(x.excerpt||'')).toLowerCase().includes(q));let up=a.filter(x=>kinds(x).includes('gepland')).sort((x,y)=>x.doc_date.localeCompare(y.doc_date));let rest=a.filter(x=>!kinds(x).includes('gepland'));$('count').textContent=a.length+' resultaten';$('upcoming').innerHTML=up.length?'<ul>'+up.map(li).join('')+'</ul>':'<p><small>Geen komende vergaderingen in deze selectie.</small></p>';$('results').innerHTML='<ul>'+rest.slice(0,500).map(li).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
  OUT.write_text(html.replace('__DATA__',payload))
  print('Items:',len(items),'Sources:',db['status'])
 if __name__=='__main__':main()
