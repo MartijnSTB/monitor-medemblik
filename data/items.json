@@ -2352,9 +2352,11 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "dfadea61e947aeea0b13d8ac7511746c9d5570aec06377e95a22ee8f7c2a5660",
-      "content_checked": "2026-10-15T09:32:17+00:00",
+      "content_checked": "2026-10-15T09:46:02+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-10-15",
+      "doc_date_label": "datum vraag"
     },
     "4015731ee36712e46f2b48aa9f1596369ed961873e6725b7e02dcd5e0829393a": {
       "title": "Klimaatbulletin met focus op overleven van klimaatverandering",
@@ -2366,7 +2368,7 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "b66173c6cb7da99e28ec792a9f142bb74c1789d03e27b209c7725b107129dcad",
-      "content_checked": "2026-10-15T09:32:18+00:00",
+      "content_checked": "2026-10-15T09:46:03+00:00",
       "last_change": null,
       "last_seen": "2026-10-15"
     },
@@ -2380,7 +2382,7 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "92f69cabdfb6c97114aa5ddc88760b9ffa029f8b5c3c80a8a693dce549d98180",
-      "content_checked": "2026-10-15T09:32:19+00:00",
+      "content_checked": "2026-10-15T09:46:04+00:00",
       "last_change": null,
       "last_seen": "2026-10-15"
     },
@@ -2394,7 +2396,7 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "dca5f803ebba49bd2c546f94ab0fa352169ab192e01e7fd6d0574e20698a53b2",
-      "content_checked": "2026-10-15T09:32:20+00:00",
+      "content_checked": "2026-10-15T09:46:05+00:00",
       "last_change": null,
       "last_seen": "2026-10-15"
     },
@@ -2408,9 +2410,11 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "46638ceaa81271a22bc9f51acca72f4f7c02b460150705b546a641b76b4f40dc",
-      "content_checked": "2026-10-15T09:32:22+00:00",
+      "content_checked": "2026-10-15T09:46:05+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-10-14",
+      "doc_date_label": "datum vraag"
     },
     "56d63eb4f69f7c9f5beae4ffb16724b8445b58459e9cb8aff9963e7b1ad5864e": {
       "title": "Raadsvragen GemeenteBelangen storten vervuilde PFAZ grond",
@@ -2487,20 +2491,6 @@
       "last_seen": "2026-10-15",
       "doc_date": "2026-09-14",
       "doc_date_label": "datum vraag"
-    },
-    "bba69d22db4c3ed7581aa1c613898f3c1685f9ca7b95f0171cef31086bafa30c": {
-      "title": "Bekijk overzichten",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports",
-      "source": "Raadsportaal",
-      "first_seen": "2026-10-15T08:50:28+00:00",
-      "updated": "2026-10-15T08:50:28+00:00",
-      "hash": "72a3a7df5eff76423172e70bbf28dd9e722a40639c2c6eb5905bff922a33de6a",
-      "revisions": 1,
-      "excerpt": "",
-      "content_hash": "09ddca8f7154d0186c195b81c52491aa2de31e3437cb5042613262598ed56d93",
-      "content_checked": "2026-10-15T09:39:46+00:00",
-      "last_change": null,
-      "last_seen": "2026-10-15"
     },
     "b125af147a1480b6a4b5b6611b6845e118f53231f457192cc23bb7c96d56c6d5": {
       "title": "Themabijeenkomst (Raadzaal (MBG06)) donderdag 8 oktober 2026 19:30 - 21:00",
@@ -2806,20 +2796,6 @@
       "doc_date_label": "vergaderdatum",
       "last_seen": "2026-10-15"
     },
-    "18cf742958cb2e69f01b9710cf6896ae7c4eb2dfdd868c929b2765875c706620": {
-      "title": "Bekijk kalender",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Calendar",
-      "source": "Raadsportaal",
-      "first_seen": "2026-10-15T08:50:28+00:00",
-      "updated": "2026-10-15T08:50:28+00:00",
-      "hash": "ebcdc01ca02a94c668beea10bc2aaf27417e19638075e48ed72e974fd8ef11a2",
-      "revisions": 1,
-      "excerpt": "",
-      "content_hash": "26da9570ed2775974ea2be7d4cb7d33252340734f97fd2f7020cbdaf64db4787",
-      "content_checked": "2026-10-15T09:41:43+00:00",
-      "last_change": null,
-      "last_seen": "2026-10-15"
-    },
     "94eb68560e04997e2934633aa4ce080555e921f9ed7cf98526f4c52bbccaa682": {
       "title": "Openbaar gemaakte informatie",
       "url": "https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie/openbaar-gemaakte-informatie",
@@ -2863,7 +2839,7 @@
       "last_seen": "2026-10-15"
     },
     "9ddbae519f97c2d16b68b63897cf993b85aa62767d232e912328878174d12bc8": {
-      "title": "Medemblik blijft lokale evenementen steunen met subsidie BRUIS Datum dinsdag 13 oktober 2026",
+      "title": "Medemblik blijft lokale evenementen steunen met subsidie BRUIS",
       "url": "https://www.medemblik.nl/nieuws/medemblik-blijft-lokale-evenementen-steunen-met-subsidie-bruis",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2880,7 +2856,7 @@
       "publication_date": "2026-10-13"
     },
     "039836a7c1f4b6cfca3ad602f86e546b293732673b45d2cb667a518e5f7db6d3": {
-      "title": "Herontwikkeling Oosterhaven Medemblik officieel van start Datum woensdag 7 oktober 2026",
+      "title": "Herontwikkeling Oosterhaven Medemblik officieel van start",
       "url": "https://www.medemblik.nl/nieuws/herontwikkeling-oosterhaven-medemblik-officieel-van-start",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2897,7 +2873,7 @@
       "publication_date": "2026-10-07"
     },
     "fa91d2f1a18eca8a2baae4d74919fadd1490944fce7b5fd172b10777cb008a08": {
-      "title": "Eerste woningen Slotlaan opgeleverd Datum woensdag 7 oktober 2026",
+      "title": "Eerste woningen Slotlaan opgeleverd",
       "url": "https://www.medemblik.nl/nieuws/eerste-woningen-slotlaan-opgeleverd",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2906,12 +2882,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "8162f5702e9dee5aec0f6fbf7ea64d50c134e5e3bd657eb136561a86e038e492",
-      "content_checked": "2026-10-15T09:23:48+00:00",
+      "content_checked": "2026-10-15T09:45:54+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07"
     },
     "202e51e532d33ba507a20f4bd6474b07b9645b9a49dce4ed960d0364db0197a6": {
-      "title": "Gemeente Medemblik actualiseert handreiking voor spuitzonering Datum woensdag 7 oktober 2026",
+      "title": "Gemeente Medemblik actualiseert handreiking voor spuitzonering",
       "url": "https://www.medemblik.nl/nieuws/gemeente-medemblik-actualiseert-handreiking-voor-spuitzonering-1",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2920,12 +2899,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "20182b6fdd5995bcbb10c773725586cd45528903fcd5487ce847185bd441c6b1",
-      "content_checked": "2026-10-15T09:32:10+00:00",
+      "content_checked": "2026-10-15T09:45:55+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07"
     },
     "60b04a2f7286d8190cfcc20a281760289718306b057568aa07581ae542e67ab1": {
-      "title": "Proef: Wonen in bijgebouwen Datum woensdag 7 oktober 2026",
+      "title": "Proef: Wonen in bijgebouwen",
       "url": "https://www.medemblik.nl/nieuws/proef-wonen-in-bijgebouwen",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2934,12 +2916,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "a169a920561a267eb4aa50e5bf0b348328625ac2abf53c5f8016991f054cc211",
-      "content_checked": "2026-10-15T09:32:11+00:00",
+      "content_checked": "2026-10-15T09:45:55+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07"
     },
     "55d1ce01e4daa3baf5f17393c755249a52663b132cb19174626a673a42d584ef": {
-      "title": "Nieuwe participatiehandreiking voor ruimtelijke plannen Datum woensdag 7 oktober 2026",
+      "title": "Nieuwe participatiehandreiking voor ruimtelijke plannen",
       "url": "https://www.medemblik.nl/nieuws/nieuwe-participatiehandreiking-voor-ruimtelijke-plannen",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2948,12 +2933,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "6bf5f6bf3a19ff4c0614039cced09f8b5a5087f235c2e5ce87d69f21b0cc142e",
-      "content_checked": "2026-10-15T09:32:12+00:00",
+      "content_checked": "2026-10-15T09:45:56+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07"
     },
     "6282cdbfbdc3a95eb63b57e15f3f5fd21d084f961b0d694c3f8e1d04dd4c10bd": {
-      "title": "Waarderingsspeld voor Coby Schouten-Spaansen. Datum maandag 5 oktober 2026",
+      "title": "Waarderingsspeld voor Coby Schouten-Spaansen.",
       "url": "https://www.medemblik.nl/nieuws/waarderingsspeld-voor-coby-schouten-spaansen",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2962,12 +2950,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "a941871baea941d6ecbe499e03c11329a68cec8712a281fa410eddb92a685483",
-      "content_checked": "2026-10-15T09:32:12+00:00",
+      "content_checked": "2026-10-15T09:45:57+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-10-05",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-05"
     },
     "7f1622d3e6121714383bb206a305eebb7d08164197e5e71d1972746d286b1809": {
-      "title": "Definitieve volgordelijst projecten stroomnet vastgesteld Datum woensdag 30 september 2026",
+      "title": "Definitieve volgordelijst projecten stroomnet vastgesteld",
       "url": "https://www.medemblik.nl/nieuws/definitieve-volgordelijst-projecten-stroomnet-vastgesteld",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2976,12 +2967,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "1247d2a899a87d45426392d434cccdb78ecefe8665198f04afc443dddc09d4d6",
-      "content_checked": "2026-10-15T09:32:13+00:00",
+      "content_checked": "2026-10-15T09:45:58+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-09-30",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-09-30"
     },
     "3b55c0dd1a8d6859f0b45f20e8d63e2229cf01561540b6dafc6d1d33ca6c6f6b": {
-      "title": "Gemeente Medemblik nodigt inwoners uit mee te denken over evenementenbeleid Datum maandag 28 september 2026",
+      "title": "Gemeente Medemblik nodigt inwoners uit mee te denken over evenementenbeleid",
       "url": "https://www.medemblik.nl/nieuws/gemeente-medemblik-nodigt-inwoners-uit-mee-te-denken-over-evenementenbeleid",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -2990,12 +2984,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "82501ece9b547d91f68a6c66ef7ed84fc5e7926c7b092138b86f43d3ff709571",
-      "content_checked": "2026-10-15T09:32:14+00:00",
+      "content_checked": "2026-10-15T09:45:58+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-09-28",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-09-28"
     },
     "f7843a1ffdca556291aa0912a8855217b54bb10a5c86da200b4d6badd184cb5f": {
-      "title": "Eerste paal Bries Medemblik geslagen Datum vrijdag 25 september 2026",
+      "title": "Eerste paal Bries Medemblik geslagen",
       "url": "https://www.medemblik.nl/nieuws/eerste-paal-bries-medemblik-geslagen",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -3004,12 +3001,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "6385b01e003f29a60909db8ae0b04084dc807db4b6606f8489b0dc61b07461ad",
-      "content_checked": "2026-10-15T09:32:14+00:00",
+      "content_checked": "2026-10-15T09:45:59+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-09-25",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-09-25"
     },
     "832b32a0b3c4d8c46ff4b26e2527542b29936de8a89d5f477867614a17bf8ede": {
-      "title": "Liander kan nieuwbouwproject Bloesemgaerde-Noord in Wognum alsnog aansluiten op het stroomnet Datum donderdag 24 september 2026",
+      "title": "Liander kan nieuwbouwproject Bloesemgaerde-Noord in Wognum alsnog aansluiten op het stroomnet",
       "url": "https://www.medemblik.nl/nieuws/liander-kan-nieuwbouwproject-bloesemgaerde-noord-in-wognum-alsnog-aansluiten-op-het-stroomnet",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -3018,12 +3018,15 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "df108251ee7f1acdbbe4889d9036e8312b006ce8e1ba5c47219a8b3fd57aea9c",
-      "content_checked": "2026-10-15T09:32:15+00:00",
+      "content_checked": "2026-10-15T09:46:00+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-09-24",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-09-24"
     },
     "63e1d2c2f3cbe014cab3b370a34e5a3f031bec5607834a801492405f804c2f8a": {
-      "title": "Geen vuurwerkontheffingen in Westfriesland Datum woensdag 23 september 2026",
+      "title": "Geen vuurwerkontheffingen in Westfriesland",
       "url": "https://www.medemblik.nl/nieuws/geen-vuurwerkontheffingen-in-westfriesland",
       "source": "Nieuws",
       "first_seen": "2026-10-15T08:50:25+00:00",
@@ -3032,47 +3035,50 @@
       "revisions": 1,
       "excerpt": "",
       "content_hash": "ce0b5111d83b68ebb201abd9ad7aa360317e135ebd43b01d42e788a3f686ad02",
-      "content_checked": "2026-10-15T09:32:16+00:00",
+      "content_checked": "2026-10-15T09:46:00+00:00",
       "last_change": null,
-      "last_seen": "2026-10-15"
+      "last_seen": "2026-10-15",
+      "doc_date": "2026-09-23",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-09-23"
     }
   },
   "status": {
     "Nieuws": {
       "ok": true,
-      "checked": "2026-10-15T09:41:24+00:00",
+      "checked": "2026-10-15T09:45:50+00:00",
       "count": 12
     },
     "Collegebesluiten": {
       "ok": true,
-      "checked": "2026-10-15T09:41:25+00:00",
+      "checked": "2026-10-15T09:45:51+00:00",
       "count": 0
     },
     "Openbare informatie": {
       "ok": true,
-      "checked": "2026-10-15T09:41:25+00:00",
+      "checked": "2026-10-15T09:45:51+00:00",
       "count": 4
     },
     "Raadsportaal": {
       "ok": true,
-      "checked": "2026-10-15T09:41:27+00:00",
-      "count": 31
+      "checked": "2026-10-15T09:45:52+00:00",
+      "count": 29
     },
     "Bekendmakingen": {
       "ok": true,
-      "checked": "2026-10-15T09:41:28+00:00",
+      "checked": "2026-10-15T09:45:53+00:00",
       "count": 0
     },
     "Documentcontrole": {
       "ok": true,
-      "checked": "2026-10-15T09:41:47+00:00",
+      "checked": "2026-10-15T09:46:05+00:00",
       "count": 15,
       "errors": 0,
       "note": "Maximaal 15 documenten per uitvoering; inhoudswijzigingen worden vanaf de tweede succesvolle controle herkend."
     },
     "Officiele bekendmakingen (KOOP)": {
       "ok": true,
-      "checked": "2026-10-15T09:41:20+00:00",
+      "checked": "2026-10-15T09:45:47+00:00",
       "count": 100,
       "new": 0,
       "note": "Maximaal 100 recente resultaten; niet gegarandeerd volledig. Alleen exacte Medemblik creator."
@@ -3190,6 +3196,38 @@
       "content_checked": "2026-10-15T09:23:44+00:00",
       "archived": "2026-10-15T09:32:03+00:00",
       "archived_reason": "Foutieve identificatie in versie 3 (kopje als besluit); revisietelling onbetrouwbaar"
+    },
+    "bba69d22db4c3ed7581aa1c613898f3c1685f9ca7b95f0171cef31086bafa30c": {
+      "title": "Bekijk overzichten",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports",
+      "source": "Raadsportaal",
+      "first_seen": "2026-10-15T08:50:28+00:00",
+      "updated": "2026-10-15T08:50:28+00:00",
+      "hash": "72a3a7df5eff76423172e70bbf28dd9e722a40639c2c6eb5905bff922a33de6a",
+      "revisions": 1,
+      "excerpt": "",
+      "content_hash": "09ddca8f7154d0186c195b81c52491aa2de31e3437cb5042613262598ed56d93",
+      "content_checked": "2026-10-15T09:39:46+00:00",
+      "last_change": null,
+      "last_seen": "2026-10-15",
+      "archived": "2026-10-15T09:45:47+00:00",
+      "archived_reason": "Menuknop, geen publicatie"
+    },
+    "18cf742958cb2e69f01b9710cf6896ae7c4eb2dfdd868c929b2765875c706620": {
+      "title": "Bekijk kalender",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Calendar",
+      "source": "Raadsportaal",
+      "first_seen": "2026-10-15T08:50:28+00:00",
+      "updated": "2026-10-15T08:50:28+00:00",
+      "hash": "ebcdc01ca02a94c668beea10bc2aaf27417e19638075e48ed72e974fd8ef11a2",
+      "revisions": 1,
+      "excerpt": "",
+      "content_hash": "26da9570ed2775974ea2be7d4cb7d33252340734f97fd2f7020cbdaf64db4787",
+      "content_checked": "2026-10-15T09:41:43+00:00",
+      "last_change": null,
+      "last_seen": "2026-10-15",
+      "archived": "2026-10-15T09:45:47+00:00",
+      "archived_reason": "Menuknop, geen publicatie"
     }
   }
 }
