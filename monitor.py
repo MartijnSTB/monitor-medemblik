@@ -170,6 +170,23 @@ def page_date(text,url):
     except ValueError: pass
  return None,None
 
+def is_navigation(title,href):
+ """Menuknoppen van het raadsportaal ('Bekijk kalender', 'Bekijk overzichten') zijn geen publicaties."""
+ path=urllib.parse.urlparse(href).path.rstrip('/').casefold()
+ return title.casefold().startswith('bekijk ') or path in ('/calendar','/reports','/agenda')
+
+def news_title_date(item):
+ """Nieuwslinks heten bijv. 'Eerste paal Bries Medemblik geslagen Datum vrijdag 25 september 2026'.
+ Haal de datum uit de titel en maak de titel schoon. De publicatiedatum op de pagina zelf
+ (via de documentcontrole) is gelijk of nauwkeuriger en mag deze later overschrijven."""
+ if item.get('source')!='Nieuws': return
+ m=re.search(r'\s+Datum\s+(?:[A-Za-z]+dag\s+)?(\d{1,2}\s+[A-Za-z]+\s+\d{4})\s*$',item['title'])
+ if not m or not parse_nl_date(m.group(1)): return
+ item['title']=item['title'][:m.start()].strip()
+ if not item.get('doc_date'):
+  item['doc_date'],item['doc_date_label']=parse_nl_date(m.group(1)),'publicatiedatum'
+  item['publication_date']=item['doc_date']
+
 def migrate_dates(db):
  """Fase 2: vul de vaste datumvelden voor alle items, zonder bestaande gegevens te wissen.
 
@@ -178,7 +195,13 @@ def migrate_dates(db):
    last_change                alleen gevuld bij een echte inhoudswijziging
    last_seen                  laatste dag dat het item nog in de bron stond
    content_checked            laatste inhoudscontrole van het document"""
+ archive=db.setdefault('archief',{})
+ for key,item in list(db['items'].items()):
+  if is_navigation(item.get('title',''),item.get('url','')):
+   item['archived']=utc(); item['archived_reason']='Menuknop, geen publicatie'
+   archive[key]=db['items'].pop(key)
  for item in db['items'].values():
+  news_title_date(item)
   if 'last_change' not in item:
    item['last_change']=item.get('updated') if item.get('revisions',1)>1 else None
   if item.get('doc_date'): continue
@@ -212,6 +235,7 @@ def main():
     if len(title)<12 or len(title)>240 or not href.startswith('https://'):continue
     if not any(href.startswith(x) for x in ['https://www.medemblik.nl/','https://medemblik.bestuurlijkeinformatie.nl/']):continue
     if href.rstrip('/')==url.rstrip('/'):continue
+    if is_navigation(title,href):continue
     candidates.append((title,href))
    # College page: decisions have no own links. Structure: h2 = meeting date, h3 = decision,
    # h4 = 'Samenvatting'/'Besluit' (part of the decision text, never an item of its own).
@@ -224,6 +248,7 @@ def main():
      # Vergaderingen in het raadsportaal hebben de datum in de titel.
      if '/Agenda/Index/' in href and parse_nl_date(title):
       db['items'][key].update(doc_date=parse_nl_date(title),doc_date_label='vergaderdatum')
+    news_title_date(db['items'][key])
     db['items'][key]['last_seen']=today()
    db['status'][source]={'ok':True,'checked':utc(),'count':len(candidates)}
   except Exception as e:
@@ -285,7 +310,7 @@ def main():
  db['items']=dict(items)
  DB.write_text(json.dumps(db,ensure_ascii=False,indent=2)+'\n')
  payload=json.dumps({'items':[v for _,v in items],'status':db['status']},ensure_ascii=False).replace('</','<\\/')
- html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}.tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}.t-nieuw{background:#d6f0df;color:#145c37}.t-gewijzigd{background:#fde8c8;color:#7a4a00}.t-historisch{background:#ececec;color:#555}.t-gepland{background:#e3e0f7;color:#3d3480}.t-onbekend{background:#f6e1e1;color:#8a2c2c}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Gesorteerd op de datum van het stuk zelf. Een oud stuk dat de monitor pas net vond, staat op zijn eigen datum met het label historisch.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="nieuw">Nieuw</option><option value="gewijzigd">Gewijzigd</option><option value="historisch">Historisch</option><option value="gepland">Gepland</option><option value="onbekend">Datum onbekend</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Publicaties</h2><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'FOUT'} · ${esc(v.checked)} ${v.error?esc(v.error):''}</div>`).join('');const TODAY=new Date().toISOString().slice(0,10);const day=s=>s?String(s).slice(0,10):'';const nl=s=>s?new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}):'onbekend';const diff=(a,b)=>(new Date(a)-new Date(b))/864e5;function kinds(x){let t=[],f=day(x.first_seen);if(!x.doc_date)t.push('onbekend');else if(x.doc_date>TODAY)t.push('gepland');else if(diff(f,x.doc_date)>30)t.push('historisch');else if(diff(TODAY,f)<=7)t.push('nieuw');if(x.last_change)t.push('gewijzigd');return t}const LABEL={onbekend:'datum onbekend'};function sortKey(x){return x.doc_date&&x.doc_date<=TODAY?x.doc_date:day(x.first_seen)}DATA.items.sort((a,b)=>sortKey(b).localeCompare(sortKey(a))||a.title.localeCompare(b.title));function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||kinds(x).includes(k))&&(x.title+' '+(x.excerpt||'')).toLowerCase().includes(q));$('count').textContent=a.length+' resultaten';$('results').innerHTML='<ul>'+a.slice(0,500).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${kinds(x).map(t=>`<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('')}<br><small>${esc(x.source)} · ${x.doc_date?esc(x.doc_date_label||'datum')+': '+nl(x.doc_date):'datum van het stuk onbekend'}${x.besluit_status?' ('+esc(x.besluit_status)+')':''} · ontdekt door monitor: ${nl(x.first_seen)}${x.last_change?' · inhoud gewijzigd: '+nl(x.last_change):''}${x.revisions>1?' · versies: '+x.revisions:''}</small></li>`).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
+ html='''<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medemblik Monitor</title><style>body{font:16px system-ui;margin:0;background:#f4f7fb;color:#172437}header{background:#123657;color:white;padding:24px}main{max-width:1050px;margin:24px auto;padding:0 16px}.panel{background:white;border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}input,select{padding:12px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px}a{color:#075a9c}small{color:#536577}.error{color:#a52d2d}.ok{color:#177147}li{margin:14px 0}button{padding:10px;border-radius:8px;cursor:pointer}.tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}.t-nieuw{background:#d6f0df;color:#145c37}.t-gewijzigd{background:#fde8c8;color:#7a4a00}.t-historisch{background:#ececec;color:#555}.t-gepland{background:#e3e0f7;color:#3d3480}.t-onbekend{background:#f6e1e1;color:#8a2c2c}</style></head><body><header><h1>Medemblik Monitor</h1><p>Openbare publicaties en wijzigingen · experimentele monitor</p></header><main><section class="panel"><strong id="count"></strong><p>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen. Gesorteerd op de datum van het stuk zelf. Een oud stuk dat de monitor pas net vond, staat op zijn eigen datum met het label historisch.</p><input id="q" placeholder="Zoeken in titels"><select id="source"><option value="">Alle bronnen</option></select><select id="kind"><option value="">Alle</option><option value="nieuw">Nieuw</option><option value="gewijzigd">Gewijzigd</option><option value="historisch">Historisch</option><option value="gepland">Gepland</option><option value="onbekend">Datum onbekend</option></select></section><section class="panel"><h2>Bronstatus</h2><div id="status"></div></section><section class="panel"><h2>Komende vergaderingen</h2><div id="upcoming"></div></section><section class="panel"><h2>Publicaties</h2><p><small>Nieuwste bovenaan, op datum van het stuk. Stukken zonder datum staan onderaan.</small></p><div id="results"></div></section></main><script>const DATA=__DATA__;const $=x=>document.getElementById(x);const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const sources=[...new Set(DATA.items.map(x=>x.source))];sources.forEach(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;$('source').appendChild(o)});$('status').innerHTML=Object.entries(DATA.status).map(([s,v])=>`<div class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'FOUT'} · ${esc(v.checked)} ${v.error?esc(v.error):''}</div>`).join('');const TODAY=new Date().toISOString().slice(0,10);const day=s=>s?String(s).slice(0,10):'';const nl=s=>s?new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}):'onbekend';const diff=(a,b)=>(new Date(a)-new Date(b))/864e5;function kinds(x){let t=[],f=day(x.first_seen);if(!x.doc_date)t.push('onbekend');else if(x.doc_date>TODAY)t.push('gepland');else if(diff(f,x.doc_date)>30)t.push('historisch');else if(diff(TODAY,f)<=7)t.push('nieuw');if(x.last_change)t.push('gewijzigd');return t}const LABEL={onbekend:'datum onbekend'};DATA.items.sort((a,b)=>(!!b.doc_date-!!a.doc_date)||(b.doc_date||day(b.first_seen)).localeCompare(a.doc_date||day(a.first_seen))||a.title.localeCompare(b.title));function li(x){return `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${kinds(x).filter(t=>t!=='gepland').map(t=>`<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('')}<br><small>${esc(x.source)} · ${x.doc_date?esc(x.doc_date_label||'datum')+': '+nl(x.doc_date):'datum van het stuk onbekend'}${x.besluit_status?' ('+esc(x.besluit_status)+')':''} · ontdekt door monitor: ${nl(x.first_seen)}${x.last_change?' · inhoud gewijzigd: '+nl(x.last_change):''}${x.revisions>1?' · versies: '+x.revisions:''}</small></li>`}function render(){let q=$('q').value.toLowerCase(),src=$('source').value,k=$('kind').value;let a=DATA.items.filter(x=>(!src||x.source===src)&&(!k||kinds(x).includes(k))&&(x.title+' '+(x.excerpt||'')).toLowerCase().includes(q));let up=a.filter(x=>kinds(x).includes('gepland')).sort((x,y)=>x.doc_date.localeCompare(y.doc_date));let rest=a.filter(x=>!kinds(x).includes('gepland'));$('count').textContent=a.length+' resultaten';$('upcoming').innerHTML=up.length?'<ul>'+up.map(li).join('')+'</ul>':'<p><small>Geen komende vergaderingen in deze selectie.</small></p>';$('results').innerHTML='<ul>'+rest.slice(0,500).map(li).join('')+'</ul>'}['q','source','kind'].forEach(id=>$(id).addEventListener('input',render));render();</script></body></html>'''
  OUT.write_text(html.replace('__DATA__',payload))
  print('Items:',len(items),'Sources:',db['status'])
 if __name__=='__main__':main()
