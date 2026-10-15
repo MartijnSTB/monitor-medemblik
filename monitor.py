@@ -131,8 +131,8 @@ def parse_nl_date(text):
         return None
 
 def parse_dmy(text):
-    """'15-10-2026' -> '2026-10-15', anders None."""
-    m = re.match(r'\s*(\d{1,2})-(\d{1,2})-(\d{4})', text or '')
+    """'15-10-2026' of 'Gemeenteraad 24-09-2026 B.4' -> de datum als '2026-10-15', anders None."""
+    m = re.search(r'\b(\d{1,2})-(\d{1,2})-(\d{4})\b', text or '')
     if not m:
         return None
     try:
@@ -577,11 +577,15 @@ def collect_meetings(db, gid):
 # ---------------------------------------------------------------------------
 # Raadsportaal (iBabs): overzichten (raadsvragen, informatienota's, moties, besluitenlijsten ...)
 # ---------------------------------------------------------------------------
+REPORTS_VERSION = 2  # verhogen als de manier van ophalen verandert: dan opnieuw lijst + volledige ronde
+
 def ibabs_report_list(db, gid):
-    """Eén keer per dag: welke overzichten zijn er, en welke kolommen hebben ze."""
+    """Eén keer per dag: welke overzichten zijn er, welke kolommen en welke sortering.
+    De sortering (data-order) is dezelfde die de website zelf gebruikt; niet elk overzicht
+    sorteert op de eerste kolom (gecontroleerd 15 okt 2026)."""
     base = GEMEENTEN[gid]['ibabs']
     state = db.setdefault('state', {}).setdefault('reports', {}).setdefault(gid, {})
-    if state.get('listed') == today() and state.get('reports'):
+    if state.get('listed') == today() and state.get('reports') and state.get('v') == REPORTS_VERSION:
         return state['reports']
     r = requests.get(base + '/Reports', headers=HEADERS, timeout=30)
     r.raise_for_status()
@@ -595,13 +599,18 @@ def ibabs_report_list(db, gid):
         page = requests.get(f'{base}/Reports/Details/{rid}', headers=HEADERS, timeout=30)
         m = re.search(r"data-columns='([^']+)'", page.text)
         rep['columns'] = json.loads(htmllib.unescape(m.group(1))) if m else []
-    state.update(listed=today(), reports=reports)
+        o = re.search(r"data-order='([^']+)'", page.text)
+        order = json.loads(htmllib.unescape(o.group(1))) if o else [[0, 'desc']]
+        rep['order_col'] = int(order[0][0]) if order and order[0] else 0
+    if state.get('v') != REPORTS_VERSION:
+        state.pop('full_pass', None)  # nieuwe ophaalmethode: vandaag opnieuw een volledige ronde
+    state.update(listed=today(), reports=reports, v=REPORTS_VERSION)
     return reports
 
-def ibabs_report_rows(base, rid, columns, start, length):
-    """Vraagt een pagina regels op via dezelfde tabel-aanvraag die de website zelf doet
+def ibabs_report_rows(base, rid, columns, order_col, start, length):
+    """Vraagt een pagina regels op via dezelfde tabelaanvraag die de website zelf doet
     (POST /Reports/GetReportData/<id>, gecontroleerd 15 okt 2026). Nieuwste eerst."""
-    data = {'draw': '1', 'start': str(start), 'length': str(length), 'order[0][column]': '0',
+    data = {'draw': '1', 'start': str(start), 'length': str(length), 'order[0][column]': str(order_col),
             'order[0][dir]': 'desc', 'search[value]': '', 'search[regex]': 'false'}
     for i, c in enumerate(columns):
         data.update({f'columns[{i}][data]': c['data'], f'columns[{i}][name]': c.get('name', c['data']),
@@ -613,76 +622,107 @@ def ibabs_report_rows(base, rid, columns, start, length):
     body = r.json()
     return body.get('data', []), body.get('recordsTotal', 0)
 
+def report_date(row, date_col, report_name):
+    """Datum van een overzichtsregel + wat die datum betekent.
+    Soms is de 'datum' een vergaderverwijzing, bijv. 'Gemeenteraad 24-09-2026 B.4. Ruimtelijk voorstel'."""
+    raw = clean(row.get(date_col) or '')
+    date = parse_dmy(raw)
+    if not date:
+        return None, None, None
+    if re.match(r'\s*\d{1,2}-\d{1,2}-\d{4}\s*$', raw):
+        if date_col == 'datum' and 'vragen' in report_name.casefold():
+            return date, 'datum vraag', None
+        if date_col in ('datum', 'datumingekomen'):
+            return date, 'datum ingekomen' if 'ingekomen' in report_name.casefold() or date_col == 'datumingekomen' else 'datum', None
+        return date, 'registratiedatum', None
+    return date, 'vergaderdatum', raw  # tekst met vergadering en agendapunt
+
 def collect_ibabs_reports(db, gid):
     base = GEMEENTEN[gid]['ibabs']
     source_name = 'Raadsportaal-overzichten'
     try:
         reports = ibabs_report_list(db, gid)
-        full = db['state']['reports'][gid].get('full_pass') != today()  # één keer per dag dieper terug
+        rstate = db['state']['reports'][gid]
+        full = rstate.get('full_pass') != today()  # één keer per dag dieper terug, tot KOOP_START
         added = rows_seen = 0
         errors, summary = [], []
         for rid, rep in reports.items():
             cols = rep.get('columns') or []
             if not cols:
                 continue
-            date_col = cols[0]['data']
+            order_col = min(rep.get('order_col', 0), len(cols) - 1)
+            date_col = cols[order_col]['data']
             is_besluitenlijst = 'besluitenlijst' in rep['name'].casefold()
             try:
-                start, total, got = 0, None, 0
+                start, total, in_range = 0, None, 0
                 while True:
-                    length = 200 if full else REPORT_ROWS_PER_RUN
-                    rows, total = ibabs_report_rows(base, rid, cols, start, length)
-                    oldest = None
+                    rows, total = ibabs_report_rows(base, rid, cols, order_col, start,
+                                                    200 if full else REPORT_ROWS_PER_RUN)
+                    old_on_page = 0
                     for row in rows:
                         rows_seen += 1
-                        got += 1
-                        rowid = row.get('DT_RowId')
-                        title = clean(row.get('title'))
+                        rowid, title = row.get('DT_RowId'), clean(row.get('title'))
                         if not rowid or not title:
                             continue
+                        date, label, meeting = report_date(row, date_col, rep['name'])
+                        if date and date < KOOP_START:
+                            old_on_page += 1  # buiten bereik: niet bewaren
+                            continue
+                        in_range += 1
                         url = f'{base}/Reports/Item/{rowid}'
                         key = make_key('Raadsportaal|' + url)  # zelfde sleutel als links van de startpagina
-                        reg_date = parse_dmy(row.get(date_col) or '')
-                        oldest = reg_date or oldest
                         item = db['items'].get(key)
-                        is_new = item is None
-                        if is_new:
+                        if item is None:
                             item = db['items'][key] = new_item(gid, title, url, 'Raadsportaal', excerpt='')
                             added += 1
                         item.update(gemeente=gid, kind='overzichtsitem', rapport=rep['name'], last_seen=today())
+                        if full:
+                            item['report_pass'] = today()
                         if is_besluitenlijst:
                             # Besluitenlijsten van het college: datum van de collegevergadering uit de titel.
                             item['source'] = 'Collegebesluiten'
                             vergader = parse_nl_date(title)
-                            item.update(doc_date=vergader or reg_date,
-                                        doc_date_label='vergaderdatum college' if vergader else 'registratiedatum')
-                        elif reg_date and (not item.get('doc_date') or item.get('doc_date_label') in ('registratiedatum', 'datum')):
-                            label = 'datum vraag' if date_col == 'datum' and 'vraag' in rep['name'].casefold() \
-                                else ('registratiedatum' if date_col == 'registrationdate' else 'datum')
-                            item.update(doc_date=reg_date, doc_date_label=label)
-                        if row.get('poho'):
-                            item['portefeuillehouder'] = clean(row['poho'])
+                            item.update(doc_date=vergader or date,
+                                        doc_date_label='vergaderdatum college' if vergader else (label or 'datum'))
+                        elif date:
+                            item.update(doc_date=date, doc_date_label=label)
+                        if meeting:
+                            item['meeting_title'] = meeting
+                        for poho_field in ('poho', 'portefeuillehouder'):
+                            if row.get(poho_field):
+                                item['portefeuillehouder'] = clean(re.sub(r'<[^>]+>', ' ', str(row[poho_field])))
                         if 'datumantwoord' in row:
                             antwoord = parse_dmy(row.get('datumantwoord') or '')
-                            if antwoord and item.get('antwoord_datum') != antwoord:
-                                if not is_new:
-                                    record_change(item, 'Beantwoord', f'datum antwoord: {antwoord}')
+                            # Alleen melden als de monitor deze vraag eerder al zónder antwoord zag.
+                            if antwoord and item.get('antwoord_datum') != antwoord and item.get('report_seen') \
+                                    and not item.get('antwoord_datum'):
+                                record_change(item, 'Beantwoord', f'datum antwoord: {antwoord}')
+                            if antwoord:
                                 item['antwoord_datum'] = antwoord
+                        item['report_seen'] = True
                         item['excerpt'] = rep['name'] + (f' · antwoord {item["antwoord_datum"]}' if item.get('antwoord_datum')
                                                          else (' · nog niet beantwoord' if 'datumantwoord' in row else ''))
                     start += len(rows)
-                    # Normaal alleen de nieuwste regels; bij de dagelijkse ronde door tot KOOP_START.
-                    if not full or not rows or start >= (total or 0) or (oldest and oldest < KOOP_START) or start >= 2000:
+                    # Stoppen zodra een hele pagina buiten bereik valt (nieuwste staan bovenaan).
+                    reached_old = bool(rows) and old_on_page == len(rows)
+                    if not full or reached_old or not rows or start >= (total or 0) or start >= 3000:
                         break
-                summary.append(f'{rep["name"]} {total}')
+                summary.append(f'{rep["name"]} {in_range if full else total}')
             except Exception as exc:
                 errors.append(f'{rep["name"]}: {str(exc)[:60]}')
         if full and not errors:
-            db['state']['reports'][gid]['full_pass'] = today()
+            rstate['full_pass'] = today()
+            # Wat in een volledige ronde niet (meer) binnen het bereik viel, gaat naar het archief.
+            archive = db.setdefault('archief', {})
+            for key, item in list(db['items'].items()):
+                if item.get('gemeente') == gid and item.get('kind') == 'overzichtsitem' and item.get('report_pass') != today():
+                    item.update(archived=utc(), archived_reason=f'Overzichtsitem buiten bereik (ouder dan {KOOP_START})')
+                    archive[key] = db['items'].pop(key)
         set_status(db, gid, source_name, ok=not errors, count=rows_seen, new=added,
                    error='; '.join(errors)[:250] if errors else None,
-                   note='Alle overzichten van het raadsportaal (totaal per overzicht: ' + ', '.join(summary) + '). '
-                        f'Elke run de {REPORT_ROWS_PER_RUN} nieuwste per overzicht; één keer per dag alles vanaf {KOOP_START}. '
+                   note=('Alle overzichten van het raadsportaal vanaf ' + KOOP_START + ' (' + ', '.join(summary) + '). '
+                         if full else 'Overzichten van het raadsportaal (totaal in het portaal: ' + ', '.join(summary) + '). ')
+                        + f'Elke run de {REPORT_ROWS_PER_RUN} nieuwste per overzicht; één keer per dag alles vanaf {KOOP_START}. '
                         'Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd.')
     except Exception as exc:
         set_status(db, gid, source_name, ok=False, error=str(exc)[:250])
@@ -911,6 +951,15 @@ def migrate(db):
                 text_path(key).unlink()
             base = GEMEENTEN[item['gemeente']]['ibabs']
             item['file_url'] = base + '/Document/View/' + doc_id_from(item['url'])
+    # Correctie: 'Beantwoord' werd ook gemeld bij de eerste keer dat een vraag in het overzicht stond.
+    for item in db['items'].values():
+        if item.get('kind') == 'overzichtsitem' and not item.get('report_seen') and item.get('changes'):
+            kept = [c for c in item['changes'] if c['type'] != 'Beantwoord']
+            if len(kept) != len(item['changes']):
+                item['revisions'] = max(1, item.get('revisions', 1) - (len(item['changes']) - len(kept)))
+                item['changes'] = kept
+                item['last_change'] = kept[-1]['at'] if kept else None
+                item.pop('change_type', None)
     for item in db['items'].values():
         news_title_date(item)
         if 'last_change' not in item:
