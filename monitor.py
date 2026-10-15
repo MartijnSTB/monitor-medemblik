@@ -577,7 +577,7 @@ def collect_meetings(db, gid):
 # ---------------------------------------------------------------------------
 # Raadsportaal (iBabs): overzichten (raadsvragen, informatienota's, moties, besluitenlijsten ...)
 # ---------------------------------------------------------------------------
-REPORTS_VERSION = 3  # verhogen als de manier van ophalen verandert: dan opnieuw lijst + volledige ronde
+REPORTS_VERSION = 4  # verhogen als de manier van ophalen verandert: dan opnieuw lijst + volledige ronde
 
 def ibabs_report_list(db, gid):
     """Eén keer per dag: welke overzichten zijn er, welke kolommen en welke sortering.
@@ -644,6 +644,7 @@ def collect_ibabs_reports(db, gid):
         reports = ibabs_report_list(db, gid)
         rstate = db['state']['reports'][gid]
         full = rstate.get('full_pass') != today()  # één keer per dag dieper terug, tot KOOP_START
+        pass_id = utc()  # kenmerk van deze ronde: wat een volledige ronde niet meer ziet, gaat naar het archief
         added = rows_seen = 0
         errors, summary = [], []
         for rid, rep in reports.items():
@@ -679,7 +680,7 @@ def collect_ibabs_reports(db, gid):
                             added += 1
                         item.update(gemeente=gid, kind='overzichtsitem', rapport=rep['name'], last_seen=today())
                         if full:
-                            item['report_pass'] = today()
+                            item['report_pass'] = pass_id
                         if is_besluitenlijst:
                             # Besluitenlijsten van het college: datum van de collegevergadering uit de titel.
                             item['source'] = 'Collegebesluiten'
@@ -717,7 +718,7 @@ def collect_ibabs_reports(db, gid):
             # Wat in een volledige ronde niet (meer) binnen het bereik viel, gaat naar het archief.
             archive = db.setdefault('archief', {})
             for key, item in list(db['items'].items()):
-                if item.get('gemeente') == gid and item.get('kind') == 'overzichtsitem' and item.get('report_pass') != today():
+                if item.get('gemeente') == gid and item.get('kind') == 'overzichtsitem' and item.get('report_pass') != pass_id:
                     item.update(archived=utc(), archived_reason=f'Overzichtsitem buiten bereik (ouder dan {KOOP_START})')
                     archive[key] = db['items'].pop(key)
         set_status(db, gid, source_name, ok=not errors, count=rows_seen, new=added,
