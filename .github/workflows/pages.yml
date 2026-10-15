@@ -32,11 +32,6 @@ jobs:
         with:
           ref: main
 
-      - name: Kopieer publicaties naar dashboard
-        run: |
-          mkdir -p docs/data
-          cp data/items.json docs/data/items.json
-
       - name: Configureer GitHub Pages
         uses: actions/configure-pages@v5
 

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gemeentemonitor</title>
+<style>
+  :root{--bg:#f4f7fb;--panel:#fff;--ink:#172437;--muted:#536577;--brand:#123657;--link:#075a9c;--line:#d8e0e8}
+  *{box-sizing:border-box}
+  body{font:16px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+  header{background:var(--brand);color:#fff;padding:20px 16px 0}
+  header .wrap{max-width:1050px;margin:0 auto}
+  header h1{margin:0 0 4px;font-size:24px}
+  header p{margin:0 0 14px;opacity:.85}
+  nav.tabs{display:flex;gap:4px;flex-wrap:wrap}
+  nav.tabs a{color:#fff;text-decoration:none;padding:10px 16px;border-radius:10px 10px 0 0;background:#ffffff1f;font-weight:600}
+  nav.tabs a.active{background:var(--bg);color:var(--brand)}
+  main{max-width:1050px;margin:0 auto;padding:8px 16px 40px}
+  .panel{background:var(--panel);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 1px 6px #0001}
+  .panel h2{margin-top:0}
+  input,select{padding:11px;border:1px solid #aab8c6;border-radius:8px;max-width:100%;margin:5px 5px 5px 0;font:inherit}
+  a{color:var(--link)}
+  small{color:var(--muted)}
+  ul{padding-left:20px}
+  li{margin:14px 0}
+  .error{color:#a52d2d}.ok{color:#177147}.skip{color:#6b6b6b}
+  .st{margin:10px 0}
+  .tag{font-size:12px;padding:2px 8px;border-radius:9px;margin-left:6px;white-space:nowrap}
+  .t-nieuw{background:#d6f0df;color:#145c37}
+  .t-gewijzigd{background:#fde8c8;color:#7a4a00}
+  .t-historisch{background:#ececec;color:#555}
+  .t-verwijderd,.t-onbekend{background:#f6e1e1;color:#8a2c2c}
+  .t-beantwoord{background:#dfe9fb;color:#1d4689}
+  .chg{display:block;margin-top:4px;padding:6px 10px;border-left:3px solid #e0a040;background:#fff8ee;font-size:14px}
+  .chg details{margin-top:4px}
+  .chg .plus{color:#145c37}
+  .chg .min{color:#8a2c2c;text-decoration:line-through}
+  .warn{background:#a52d2d;color:#fff;padding:14px 18px;border-radius:12px;margin:14px 0}
+  details.statusbox summary{cursor:pointer;font-weight:600}
+  #loading{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Gemeentemonitor</h1>
+    <p>Openbare publicaties en wijzigingen van Medemblik, Koggenland en Opmeer · experimentele monitor</p>
+    <nav class="tabs" id="tabs">
+      <a href="#medemblik" data-g="medemblik">Medemblik</a>
+      <a href="#koggenland" data-g="koggenland">Koggenland</a>
+      <a href="#opmeer" data-g="opmeer">Opmeer</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div id="stale"></div>
+  <section class="panel">
+    <strong id="count"><span id="loading">Laden…</span></strong>
+    <p><small>Dit systeem detecteert wat het kan ophalen. Geen garantie op volledigheid of directe meldingen.
+      Gesorteerd op de datum van het stuk zelf; een oud stuk dat de monitor pas net vond, krijgt het label historisch.</small></p>
+    <input id="q" placeholder="Zoeken in titels">
+    <select id="source"><option value="">Alle bronnen</option></select>
+    <select id="kind">
+      <option value="">Alle</option>
+      <option value="nieuw">Nieuw</option>
+      <option value="gewijzigd">Gewijzigd</option>
+      <option value="beantwoord">Beantwoord</option>
+      <option value="verwijderd">Niet meer bereikbaar</option>
+      <option value="historisch">Historisch</option>
+      <option value="onbekend">Datum onbekend</option>
+    </select>
+  </section>
+  <section class="panel"><details class="statusbox"><summary>Bronstatus en dekking</summary><div id="status"></div></details></section>
+  <section class="panel"><h2>Komende vergaderingen</h2><div id="upcoming"></div></section>
+  <section class="panel"><h2>Publicaties</h2><p><small>Nieuwste bovenaan, op datum van het stuk. Stukken zonder datum staan onderaan.</small></p><div id="results"></div></section>
+</main>
+<script>
+const $ = x => document.getElementById(x);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const TODAY = new Date().toISOString().slice(0,10);
+const day = s => s ? String(s).slice(0,10) : '';
+const nl = s => s ? new Date(day(s)+'T12:00:00').toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}) : 'onbekend';
+const diff = (a,b) => (new Date(a)-new Date(b))/864e5;
+const LABEL = {onbekend:'datum onbekend', verwijderd:'niet meer bereikbaar'};
+let DATA = null;
+const cache = {};
+
+function kinds(x){
+  const t = [], f = day(x.first_seen);
+  if (!x.doc_date) t.push('onbekend');
+  else if (x.doc_date > TODAY) t.push('gepland');
+  else if (diff(f, x.doc_date) > 30) t.push('historisch');
+  else if (diff(TODAY, f) <= 7) t.push('nieuw');
+  if (x.last_change) t.push('gewijzigd');
+  if (x.antwoord_datum) t.push('beantwoord');
+  if (x.removed) t.push('verwijderd');
+  return t;
+}
+
+function chg(x){
+  const c = (x.changes || []).slice(-1)[0];
+  if (!c) return '';
+  const more = x.changes.length > 1 ? ` · ${x.changes.length} wijzigingen geregistreerd` : '';
+  const lines = [...(c.added||[]).map(l => `<div class="plus">+ ${esc(l)}</div>`),
+                 ...(c.removed||[]).map(l => `<div class="min">− ${esc(l)}</div>`)].join('');
+  return `<span class="chg"><strong>${esc(c.type)}</strong> op ${nl(c.at)}: ${esc(c.summary)}${more}${lines ? `<details><summary>Wat is er veranderd</summary>${lines}</details>` : ''}</span>`;
+}
+
+function li(x){
+  const tags = kinds(x).filter(t => t !== 'gepland').map(t => `<span class="tag t-${t}">${LABEL[t]||t}</span>`).join('');
+  const meta = [
+    esc(x.source) + (x.rapport && x.rapport !== x.source ? ' · ' + esc(x.rapport) : ''),
+    x.doc_date ? esc(x.doc_date_label || 'datum') + ': ' + nl(x.doc_date) : 'datum van het stuk onbekend',
+    x.besluit_status && esc(x.besluit_status),
+    x.koop_type && esc(x.koop_type),
+    x.locatie && esc(x.locatie),
+    x.meeting_title && esc(x.meeting_title),
+    x.agendapunt && 'agendapunt ' + esc(x.agendapunt),
+    x.n_meetings && 'ook in ' + (x.n_meetings-1) + ' andere vergadering(en)',
+    x.portefeuillehouder && 'portefeuillehouder ' + esc(x.portefeuillehouder),
+    x.antwoord_datum && 'beantwoord ' + nl(x.antwoord_datum),
+    'ontdekt door monitor: ' + nl(x.first_seen),
+  ].filter(Boolean).join(' · ');
+  return `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${tags}<br><small>${meta}</small>${chg(x)}</li>`;
+}
+
+function renderStatus(){
+  const rows = Object.entries({...DATA.status, ...DATA.algemeen}).map(([s,v]) => {
+    if (v.skip) return `<div class="st"><span class="skip">${esc(s)}: niet gevolgd</span><br><small>${esc(v.note)}</small></div>`;
+    const when = v.checked ? new Date(v.checked).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '';
+    return `<div class="st"><span class="${v.ok?'ok':'error'}">${esc(s)}: ${v.ok?'OK':'LET OP'}</span> <small>· ${when}${v.new?' · '+v.new+' nieuw':''}</small>`
+      + (v.note ? `<br><small>${esc(v.note)}</small>` : '') + (v.error ? `<br><small class="error">${esc(v.error)}</small>` : '') + '</div>';
+  });
+  $('status').innerHTML = rows.join('');
+  // Waarschuwing als de monitor al lang niet heeft gedraaid.
+  const t = Object.values({...DATA.status, ...DATA.algemeen}).map(v => v.checked).filter(Boolean).sort().pop();
+  const min = t ? (Date.now() - new Date(t)) / 6e4 : 0;
+  $('stale').innerHTML = min > 90
+    ? `<div class="warn"><strong>Let op: de monitor heeft al ${min >= 120 ? Math.round(min/60)+' uur' : Math.round(min)+' minuten'} niet gedraaid.</strong> Laatste run: ${new Date(t).toLocaleString('nl-NL')}. Nieuwe publicaties van daarna ontbreken hier.</div>`
+    : '';
+}
+
+function render(){
+  if (!DATA) return;
+  const q = $('q').value.toLowerCase(), src = $('source').value, k = $('kind').value;
+  const a = DATA.items.filter(x => (!src || x.source === src) && (!k || kinds(x).includes(k))
+    && (x.title + ' ' + (x.excerpt||'')).toLowerCase().includes(q));
+  const up = a.filter(x => kinds(x).includes('gepland') && x.kind === 'vergadering').sort((x,y) => x.doc_date.localeCompare(y.doc_date));
+  const rest = a.filter(x => !(kinds(x).includes('gepland') && x.kind === 'vergadering'));
+  $('count').textContent = `${DATA.naam}: ${a.length} resultaten`;
+  $('upcoming').innerHTML = up.length ? '<ul>'+up.map(li).join('')+'</ul>' : '<p><small>Geen komende vergaderingen in deze selectie (of niet gevolgd voor deze gemeente).</small></p>';
+  $('results').innerHTML = '<ul>'+rest.slice(0,500).map(li).join('')+'</ul>'
+    + (rest.length > 500 ? `<p><small>${rest.length-500} oudere resultaten niet getoond; gebruik zoeken of filters.</small></p>` : '');
+}
+
+async function load(g){
+  document.querySelectorAll('#tabs a').forEach(a => a.classList.toggle('active', a.dataset.g === g));
+  $('count').innerHTML = '<span id="loading">Laden…</span>';
+  try {
+    if (!cache[g]) {
+      const r = await fetch(`data/${g}.json?t=${Date.now()}`);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      cache[g] = await r.json();
+      cache[g].items.sort((a,b) => (!!b.doc_date - !!a.doc_date)
+        || (b.doc_date||day(b.first_seen)).localeCompare(a.doc_date||day(a.first_seen)) || a.title.localeCompare(b.title));
+    }
+    DATA = cache[g];
+  } catch (e) {
+    $('count').textContent = 'Gegevens konden niet worden geladen (' + e.message + ').';
+    return;
+  }
+  const sel = $('source');
+  sel.innerHTML = '<option value="">Alle bronnen</option>' + [...new Set(DATA.items.map(x => x.source))].sort()
+    .map(s => `<option>${esc(s)}</option>`).join('');
+  renderStatus();
+  render();
+}
+
+const current = () => (location.hash.slice(1) || 'medemblik');
+window.addEventListener('hashchange', () => load(current()));
+['q','source','kind'].forEach(id => $(id).addEventListener('input', render));
+load(current());
+</script>
+</body>
+</html>
