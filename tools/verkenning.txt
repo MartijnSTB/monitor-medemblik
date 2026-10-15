@@ -1,0 +1,597 @@
+
+==================== SRU c.product-area=="officielepublicaties" AND dt.creator=="Medemblik" ====================
+200 numberOfRecords ['15269'] next ['2']
+diag []
+
+==================== SRU c.product-area=="officielepublicaties" AND dt.creator=="Medemblik" AND dt.available>=2026-01-01 ====================
+200 numberOfRecords ['1297'] next ['2']
+diag []
+
+==================== SRU c.product-area=="officielepublicaties" AND dt.creator=="Medemblik" AND dt.available>=2026-10-01 ====================
+200 numberOfRecords ['86'] next ['2']
+diag []
+
+==================== SRU c.product-area=="officielepublicaties" AND dt.creator=="Medemblik" AND dt.modified>=2026-10-01 ====================
+200 numberOfRecords ['86'] next ['2']
+diag []
+
+==================== SRU eerste record volledig ====================
+<?xml version="1.0" encoding="UTF-8"?><sru:searchRetrieveResponse xmlns:overheidwetgeving="http://standaarden.overheid.nl/wetgeving/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:cd="http://standaarden.overheid.nl/cup/data" xmlns:sru="http://docs.oasis-open.org/ns/search-ws/sruResponse" xmlns:gzd="http://standaarden.overheid.nl/sru" xmlns:diag="http://docs.oasis-open.org/ns/search-ws/diagnostic" xmlns:facet="http://docs.oasis-open.org/ns/search-ws/facetedResults" xmlns:c="http://standaarden.overheid.nl/collectie/"><sru:version>2.0</sru:version><sru:numberOfRecords>15269</sru:numberOfRecords><sru:records><sru:record><sru:recordSchema>http://standaarden.overheid.nl/sru/</sru:recordSchema><sru:recordPacking>xml</sru:recordPacking><sru:recordData><gzd:gzd><gzd:originalData><overheidwetgeving:meta xmlns:search="http://marklogic.com/appservices/search"><overheidwetgeving:owmskern><dcterms:identifier>gmb-2021-312721</dcterms:identifier><dcterms:title>Kennisgeving ontvangst aanvraag omgevingsvergunning, Aambeeld 19, 1671NT Medemblik</dcterms:title><dcterms:language>nl</dcterms:language><dcterms:type scheme="OVERHEIDop.Rubriek">omgevingsvergunning</dcterms:type><dcterms:creator scheme="OVERHEID.Gemeente">Medemblik</dcterms:creator><dcterms:modified>2021-09-13</dcterms:modified><overheid:authority scheme="OVERHEID.Gemeente" xmlns:overheid="http://standaarden.overheid.nl/owms/terms/">Medemblik</overheid:authority></overheidwetgeving:owmskern><overheidwetgeving:owmsmantel><dcterms:available>2021-09-13</dcterms:available><dcterms:date>2021-09-13</dcterms:date><dcterms:hasVersion resourceIdentifier="https://zoek.officielebekendmakingen.nl/gmb-2021-312721.html">1</dcterms:hasVersion><dcterms:subject scheme="OVERHEID.TaxonomieBeleidsagendaDecentraal">Ruimte en infrastructuur | Organisatie en beleid</dcterms:subject><dcterms:abstract>Betreft: aanvraag op locatie Aambeeld 19, 1671NT Medemblik</dcterms:abstract><dcterms:publisher scheme="OVERHEID.Gemeente">Medemblik</dcterms:publisher></overheidwetgeving:owmsmantel><overheidwetgeving:tpmeta><c:product-area>officielepublicaties</c:product-area><c:content-area>officielepublicaties/gmb/2021</c:content-area><overheidwetgeving:activiteit scheme="OVERHEIDop.ActiviteitOmgevingsvergunning">bouwen</overheidwetgeving:activiteit><overheidwetgeving:jaargang>2021</overheidwetgeving:jaargang><overheidwetgeving:organisatietype scheme="OVERHEID.Organisatietype">gemeente</overheidwetgeving:organisatietype><overheidwetgeving:publicatienummer>312721</overheidwetgeving:publicatienummer><overheidwetgeving:publicatienaam>Gemeenteblad</overheidwetgeving:publicatienaam><overheidwetgeving:gebiedsmarkering scheme="OVERHEIDop.locatietype"><overheidwetgeving:Punt><overheidwetgeving:geometrie>POINT (134896.532 530780.1)</overheidwetgeving:geometrie><overheidwetgeving:locatiepunt>52.7639678474455 5.08937273173485</overheidwetgeving:locatiepunt><overheidwetgeving:locatiegebied>52.763968,5.0893727</overheidwetgeving:locatiegebied><overheidwetgeving:geometrielabel>Aambeeld 19, 1671NT Medemblik</overheidwetgeving:geometrielabel></overheidwetgeving:Punt></overheidwetgeving:gebiedsmarkering><cd:datumTijdstipWijzigingWork>2021-09-13T09:13:34.6845097+02:00</cd:datumTijdstipWijzigingWork><cd:datumTijdstipWijzigingExpression>2021-09-13T09:13:34.6845097+02:00</cd:datumTijdstipWijzigingExpression></overheidwetgeving:tpmeta></overheidwetgeving:meta></gzd:originalData><gzd:enrichedData><gzd:url>https://repository.overheid.nl/frbr/officielepublicaties/gmb/2021/gmb-2021-312721/1/xml/gmb-2021-312721.xml</gzd:url><gzd:preferredUrl>https://zoek.officielebekendmakingen.nl/gmb-2021-312721.html</gzd:preferredUrl><gzd:itemUrl manifestation="html">https://repository.overheid.nl/frbr/officielepublicaties/gmb/2021/gmb-2021-312721/1/html/gmb-2021-312721.html</gzd:itemUrl><gzd:itemUrl manifestation="metadata">https://repository.overheid.nl/frbr/officielepublicaties/gmb/2021/gmb-2021-312721/1/metadata/metadata.xml</gzd:itemUrl><gzd:itemUrl manifestation="metadataowms">https://repository.overheid.nl/frbr/officielepublicaties/gmb/2021/gmb-2021-312721/1/metadataowms/metadata_owms.xml</gzd:itemUrl><gzd:itemUrl manifestation="odt">https://repository.overheid.nl/frbr/officielepublicaties/gmb/2021/gmb-2021-312721/1/odt/gmb-2021-312721.odt</gzd:itemUrl><gzd:itemUrl manifestation="pdf">https://repository.overheid.nl/frbr/officielepublicaties/gmb/2021/gmb-2021-312721/1/pdf/gmb-2021-312721.pdf</gzd:itemUrl><gzd:itemUrl manifestation="xml">https://repository.overheid.nl/frbr/officielepublicaties/gmb/2021/gmb-2021-312721/1/xml/gmb-2021-312721.xml</gzd:itemUrl><gzd:timestamp>2021-09-13T10:01:55.116607+02:00</gzd:timestamp></gzd:enrichedData></gzd:gzd></sru:recordData><sru:recordPosition>1</sru:recordPosition></sru:record></sru:records><sru:nextRecordPosition>2</sru:nextRecordPosition><sru:echoedSearchRetrieveRequest><sru:query>c.product-area=="officielepublicaties" AND dt.creator=="Medemblik"</sru:query><sru:startRecord>1</sru:startRecord><sru:maximumRecords>1</sru:maximumRecords><sru:recordXMLEscaping>xml</sru:recordXMLEscaping><sru:recordSchema>http://standaarden.overheid.nl/sru/</sru:recordSchema></sru:echoedSearchRetrieveRequest><sru:resultCountPrecision>info:srw/vocabulary/resultCountPrecision/1/estimate</sru:resultCountPrecision></sru:searchRetrieveResponse>
+
+
+==================== SRU sortKeys test ====================
+dt.available,,0 200 ['2021-09-13', '2020-02-27', '2021-12-02'] ['diagnostic" xmlns:facet="http://docs.oasis-open.org/ns/search-ws/facetedResults" xmlns:c="http://standaarden.overheid.nl/collectie/"><sru:version>2.0</sru:version><sru:numberOfRecords>15269</sru:numberOfRecords><sru:records><sru:record><sru:recordSchema>http://standaarden.overheid.nl/sru/</sru:recordSchema><s']
+dt.available 200 ['2021-09-13', '2020-02-27', '2021-12-02'] ['diagnostic" xmlns:facet="http://docs.oasis-open.org/ns/search-ws/facetedResults" xmlns:c="http://standaarden.overheid.nl/collectie/"><sru:version>2.0</sru:version><sru:numberOfRecords>15269</sru:numberOfRecords><sru:records><sru:record><sru:recordSchema>http://standaarden.overheid.nl/sru/</sru:recordSchema><s']
+
+==================== SRU 1000 test ====================
+200 4567809 records 1000
+oudste ['2009-04-16', '2009-12-23'] nieuwste ['2026-10-13', '2026-10-14']
+types ['Beschikkingen | aanvraag', 'Beschikkingen | afhandeling', 'Overig', 'Overige besluiten van algemene strekking', 'Overige overheidsinformatie', 'Plannen | ruimtelijk', 'Ruimtelijke plannen', 'Vergunningen', 'Verkeersbesluiten', 'Verordeningen', 'algemeen verbindend voorschrift (verordening)', 'ander besluit van algemene strekking', 'andere beschikking', 'andere melding', 'andere vergunning', 'andere voorlichtingsinformatie', 'beleidsregel', 'delegatie- of mandaatbesluit', 'evenementenvergunning', 'evenementmelding']
+
+==================== https://medemblik.bestuurlijkeinformatie.nl/ ====================
+200 text/html; charset=utf-8 47870
+h2 | Overzichten
+h2 | Agenda
+h3 | Nuttige links
+A  -> https://www.medemblik.nl/
+A Dashboard -> /
+A Vergaderingen -> /Calendar
+A Overzichten -> /Reports
+A Informatienota's -> /Reports/Details/55a67657-751b-488f-938d-31c4a7f557b4
+A Ingekomen stukken -> /Reports/Details/55930379-b454-4196-8da1-1bb8f00c7ab8
+A Jaarplannen en jaarverslagen -> /Reports/Details/b90bf229-96f1-45f2-a77b-29dc82cf8f7d
+A Moties en amendementen -> /Reports/Details/d78d4c5b-fa21-407c-82d7-4d8e82ea7a6c
+A Raadsvragen -> /Reports/Details/b6e30d37-cfd2-4064-a7fa-19453570dfb5
+A Rekenkamer -> /Reports/Details/3fbb1512-3886-4b19-8c61-b43910a3bd52
+A Toezeggingen -> /Reports/Details/3e68aabb-a3f3-403a-b088-5d336fed3822
+A Wie is wie -> /People
+A Commissieleden -> /People/Profiles/64e32518-63a8-44d2-8d57-f9690c5e87cb
+A Gemeenteraad -> /People/Profiles/5320a26c-ce32-405d-be1c-85f32e811e19
+A Griffie -> /People/Profiles/3d90b799-c438-4865-9892-41071ea6b81f
+A Vraagbaak -> /Help
+A Contact -> /Contact
+A  -> /Reports/RSS
+A Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab -> /Reports/Item/78aba77b-4fb2-4210-b19b-f3034d2a5bc7
+A Klimaatbulletin met focus op overleven van klimaatverandering -> /Reports/Item/2a04d185-62f7-45ef-b300-389762bb43da
+A De rol van kleine kerncentrales, de Small Modular Reactors en kernafval in de ge -> /Reports/Item/cc809d14-de7e-4400-9f38-66231aa33f24
+A Voorbeeldmotie Structurele borging van informele steun voor jeugd en gezin -> /Reports/Item/8f3017a6-664a-4501-9e93-f06fc331c91c
+A Raadsvragen HvM Starters gelukkig bij hun ouders? Hart voor Medemblik wil weten  -> /Reports/Item/0a949901-a2e1-4ae8-bbe7-944bab6a6938
+A Raadsvragen GemeenteBelangen storten vervuilde PFAZ grond -> /Reports/Item/a6e042fd-ad03-4226-a799-c398d7e78df8
+A Reactie op verkeersadvies kruispunt Zeedijk - Kagerdijk -> /Reports/Item/ef9b83e8-9205-4883-98d9-22759697ee84
+A Raadsvragen GB evenementenvergunningen en toiletten -> /Reports/Item/86f6c6f9-f9e5-4d5e-bd3f-44207ef9625b
+A Raadsvragen HvM Ondersteuning en nazorg van slachtoffers van online criminalitei -> /Reports/Item/8e2a38a3-a9f3-4e0d-a433-71dfc64eaf23
+A Raadsvragen Morgen! over verkeersveiligheid en leefbaarheid Overtoom -> /Reports/Item/40b4e1da-0b06-4f4e-8904-4c5e33609ddd
+A Themabijeenkomst (Raadzaal (MBG06)) donderdag 8 oktober 2026 19:30 - 21:00 -> /Agenda/Index/1748f967-2b06-4aa4-9c8c-de75df138b17
+A Presidium (MBG01 (achter kantine)) maandag 5 oktober 2026 19:00 - 20:30 -> /Agenda/Index/a5344260-dca4-4884-8b61-4c52d5a7b54f
+A Raadscommissie (Raadzaal (MBG06)) donderdag 1 oktober 2026 19:00 - 20:35 -> /Agenda/Index/a66cbb1d-4930-42a1-9e01-300240cb0a8e
+A Auditcommissie (MBG024) woensdag 30 september 2026 19:30 - 22:00 -> /Agenda/Index/3e6659e5-394d-4eb0-83d2-57091ce3e731
+A Gemeenteraad (Raadzaal (MBG06)) donderdag 24 september 2026 19:30 - 21:10 -> /Agenda/Index/d4b32282-6d07-4f2e-9463-89fb9b55e9c3
+A Informatiebijeenkomst (Raadzaal (MBG06)) donderdag 17 september 2026 19:30 - 22: -> /Agenda/Index/df4cd9b8-d584-460e-af53-cb8e05cea854
+A Informatiebijeenkomst (Raadzaal (MBG06)) Informatiebijeenkomst (training) Releva -> /Agenda/Index/3173ad29-0405-448e-be38-402e5785380e
+A Presidium (MBG01 (achter kantine)) maandag 14 september 2026 19:00 - 20:30 -> /Agenda/Index/2435dfa3-24f4-4274-aea4-0f940dcc3cd3
+A Themabijeenkomst (Raadzaal (MBG06)) maandag 14 september 2026 20:30 - 22:00 -> /Agenda/Index/afa94415-13a6-4772-82c4-d57bb33d1b7e
+A Raadscommissie (Raadzaal (MBG06)) donderdag 10 september 2026 19:00 - 21:20 -> /Agenda/Index/f4180896-f72d-4718-a1e3-0789d2667761
+A Informatiebijeenkomst (Raadzaal (MBG06)) Informatiebijeenkomst Programmabegrotin -> /Agenda/Index/d9d72e72-eece-4b27-98bd-be12fc19985f
+A Themabijeenkomst (Raadzaal (MBG06)) maandag 26 oktober 2026 19:30 - 00:00 -> /Agenda/Index/0ee03b28-01dc-436b-9b5a-a77f83d3d9d1
+A Raadscommissie (Raadzaal (MBG06)) donderdag 29 oktober 2026 19:30 - 21:30 -> /Agenda/Index/dc765e1a-20fd-4c7a-97bb-0645c9bbf6f3
+A Informatiebijeenkomst (Raadzaal (MBG06)) Informatiebijeenkomst College uitvoerin -> /Agenda/Index/7146dc5f-5af1-4a60-8167-a7eb2021eac4
+A Raadscommissie (Raadzaal (MBG06)) maandag 9 november 2026 19:30 - 22:30 -> /Agenda/Index/52fc513f-8776-427e-b9d9-426652329851
+A Gemeenteraad (Raadzaal (MBG06)) donderdag 12 november 2026 19:30 - 22:00 -> /Agenda/Index/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d
+A Presidium (MBG01 (achter kantine)) maandag 16 november 2026 19:00 - 20:30 -> /Agenda/Index/48e926c5-1642-494c-b07f-28b1148fd5db
+A Informatiebijeenkomst (Raadzaal (MBG06)) Informatiebijeenkomst Omgevingsvisie do -> /Agenda/Index/b2e8194e-6b1b-4240-a0e4-49ee3e2082af
+A Gemeenteraad (Raadzaal (MBG06)) donderdag 26 november 2026 19:30 - 22:00 -> /Agenda/Index/7a2ae701-743b-4c66-bc69-1ea646ee2483
+A Cookie verklaring Deze link wordt in een nieuw venster geopend -> https://www.ibabs.com/nl/cookies/
+A iBabs Vergadermanagement Deze link wordt in een nieuw venster geopend -> https://www.ibabs.com
+A Inloggen Deze link wordt in een nieuw venster geopend -> https://signon.ibabs.eu/Login?sitename=Medemblik
+
+==================== https://medemblik.bestuurlijkeinformatie.nl/Calendar ====================
+200 text/html; charset=utf-8 36587
+h1 | oktober 2026
+A  -> https://www.medemblik.nl/
+A Dashboard -> /
+A Vergaderingen -> /Calendar
+A Overzichten -> /Reports
+A Informatienota's -> /Reports/Details/55a67657-751b-488f-938d-31c4a7f557b4
+A Ingekomen stukken -> /Reports/Details/55930379-b454-4196-8da1-1bb8f00c7ab8
+A Jaarplannen en jaarverslagen -> /Reports/Details/b90bf229-96f1-45f2-a77b-29dc82cf8f7d
+A Moties en amendementen -> /Reports/Details/d78d4c5b-fa21-407c-82d7-4d8e82ea7a6c
+A Raadsvragen -> /Reports/Details/b6e30d37-cfd2-4064-a7fa-19453570dfb5
+A Rekenkamer -> /Reports/Details/3fbb1512-3886-4b19-8c61-b43910a3bd52
+A Toezeggingen -> /Reports/Details/3e68aabb-a3f3-403a-b088-5d336fed3822
+A Wie is wie -> /People
+A Commissieleden -> /People/Profiles/64e32518-63a8-44d2-8d57-f9690c5e87cb
+A Gemeenteraad -> /People/Profiles/5320a26c-ce32-405d-be1c-85f32e811e19
+A Griffie -> /People/Profiles/3d90b799-c438-4865-9892-41071ea6b81f
+A Vraagbaak -> /Help
+A Contact -> /Contact
+A Auditcommissie -> /Calendar/OpenCategory/11
+A Gemeenteraad -> /Calendar/OpenCategory/0
+A Informatiebijeenkomst -> /Calendar/OpenCategory/100099145
+A Presidium -> /Calendar/OpenCategory/1
+A Raadscommissie -> /Calendar/OpenCategory/100063720
+A Themabijeenkomst -> /Calendar/OpenCategory/100067792
+A Agendacommissie (2013-2019) -> /Calendar/OpenCategory/12
+A Commissie Bestuur en Middelen (2011-2019) -> /Calendar/OpenCategory/8
+A Commissie Ruimte (2011-2019) -> /Calendar/OpenCategory/9
+A Commissie Samenleving (2011-2019) -> /Calendar/OpenCategory/10
+A Meningvormende commissie (2012-2019) -> /Calendar/OpenCategory/13
+A Themabijeenkomst (t/m sep 2019) -> /Calendar/OpenCategory/16
+A Raadscommissie (Raadzaal (MBG06)) donderdag 1 oktober 2026 19:00 - 20:35 -> /Agenda/Index/a66cbb1d-4930-42a1-9e01-300240cb0a8e
+A Presidium (MBG01 (achter kantine)) maandag 5 oktober 2026 19:00 - 20:30 -> /Agenda/Index/a5344260-dca4-4884-8b61-4c52d5a7b54f
+A Themabijeenkomst (Raadzaal (MBG06)) donderdag 8 oktober 2026 19:30 - 21:00 -> /Agenda/Index/1748f967-2b06-4aa4-9c8c-de75df138b17
+A Informatiebijeenkomst (Raadzaal (MBG06)) Informatiebijeenkomst Programmabegrotin -> /Agenda/Index/d9d72e72-eece-4b27-98bd-be12fc19985f
+A Themabijeenkomst (Raadzaal (MBG06)) maandag 26 oktober 2026 19:30 - 00:00 -> /Agenda/Index/0ee03b28-01dc-436b-9b5a-a77f83d3d9d1
+A Raadscommissie (Raadzaal (MBG06)) donderdag 29 oktober 2026 19:30 - 21:30 -> /Agenda/Index/dc765e1a-20fd-4c7a-97bb-0645c9bbf6f3
+A iBabs Vergadermanagement -> https://www.ibabs.com
+A Inloggen -> https://portal0600.ibabs.eu
+
+==================== https://medemblik.bestuurlijkeinformatie.nl/Reports ====================
+200 text/html; charset=utf-8 27386
+h2 | Informatienota's
+h2 | Ingekomen stukken
+h2 | Jaarplannen en jaarverslagen
+h2 | Moties en amendementen
+h2 | Raadsvragen
+h2 | Rekenkamer
+h2 | Toezeggingen
+A  -> https://www.medemblik.nl/
+A Dashboard -> /
+A Vergaderingen -> /Calendar
+A Overzichten -> /Reports
+A Informatienota's -> /Reports/Details/55a67657-751b-488f-938d-31c4a7f557b4
+A Ingekomen stukken -> /Reports/Details/55930379-b454-4196-8da1-1bb8f00c7ab8
+A Jaarplannen en jaarverslagen -> /Reports/Details/b90bf229-96f1-45f2-a77b-29dc82cf8f7d
+A Moties en amendementen -> /Reports/Details/d78d4c5b-fa21-407c-82d7-4d8e82ea7a6c
+A Raadsvragen -> /Reports/Details/b6e30d37-cfd2-4064-a7fa-19453570dfb5
+A Rekenkamer -> /Reports/Details/3fbb1512-3886-4b19-8c61-b43910a3bd52
+A Toezeggingen -> /Reports/Details/3e68aabb-a3f3-403a-b088-5d336fed3822
+A Wie is wie -> /People
+A Commissieleden -> /People/Profiles/64e32518-63a8-44d2-8d57-f9690c5e87cb
+A Gemeenteraad -> /People/Profiles/5320a26c-ce32-405d-be1c-85f32e811e19
+A Griffie -> /People/Profiles/3d90b799-c438-4865-9892-41071ea6b81f
+A Vraagbaak -> /Help
+A Contact -> /Contact
+A iBabs Vergadermanagement -> https://www.ibabs.com
+A Inloggen -> https://portal0600.ibabs.eu
+
+==================== https://medemblik.bestuurlijkeinformatie.nl/Agenda/Index/d4b32282-6d07-4f2e-9463-89fb9b55e9c3 ====================
+200 text/html; charset=utf-8 113578
+h2 | 2026
+h2 | 2025
+h2 | 2024
+h2 | 2023
+h2 | 2022
+h2 | 2021
+h2 | 2020
+h2 | 2019
+h2 | 2018
+h2 | 2017
+h2 | 2016
+h2 | 2015
+h2 | 2014
+h2 | 2013
+h2 | 2012
+h2 | 2011
+h1 | Gemeenteraad
+h2 | donderdag 24 september 2026
+h2 | Agendapunten
+h3 | Vaststelling agenda - 19:32
+h3 | Aanwijzing 3e plaatsvervangend griffier - 19:33
+h3 | Ingekomen stukken en mededelingen - 19:38
+h3 | Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 2 juli 2026 - 19:43
+h3 | Deelname KCR2 (pfh. M. Pijl) - 19:45
+h3 | Aanwijzen AB-leden gemeenschappelijke regelingen (pfh. M. Pijl) - 19:50
+h3 | Benoeming lid raad van toezicht stichting Allure (pfh. G. Gringhuis) - 19:55
+h3 | Ruimtelijk voorstel (GEHEIM) - 20:00
+h3 | Intrekken voorkeursrecht op percelen nabij Tuinstraat in Hauwert (pfh. M. Hoogewerf) - 20:05
+h3 | Voorbereidingsbesluit logiesverbod Stationsbuurt/Broerdijk
+h3 | Moties Vreemd aan de orde van de dag - 20:25
+A  -> https://www.medemblik.nl/
+A Dashboard -> /
+A Vergaderingen -> /Calendar
+A Overzichten -> /Reports
+A Informatienota's -> /Reports/Details/55a67657-751b-488f-938d-31c4a7f557b4
+A Ingekomen stukken -> /Reports/Details/55930379-b454-4196-8da1-1bb8f00c7ab8
+A Jaarplannen en jaarverslagen -> /Reports/Details/b90bf229-96f1-45f2-a77b-29dc82cf8f7d
+A Moties en amendementen -> /Reports/Details/d78d4c5b-fa21-407c-82d7-4d8e82ea7a6c
+A Raadsvragen -> /Reports/Details/b6e30d37-cfd2-4064-a7fa-19453570dfb5
+A Rekenkamer -> /Reports/Details/3fbb1512-3886-4b19-8c61-b43910a3bd52
+A Toezeggingen -> /Reports/Details/3e68aabb-a3f3-403a-b088-5d336fed3822
+A Wie is wie -> /People
+A Commissieleden -> /People/Profiles/64e32518-63a8-44d2-8d57-f9690c5e87cb
+A Gemeenteraad -> /People/Profiles/5320a26c-ce32-405d-be1c-85f32e811e19
+A Griffie -> /People/Profiles/3d90b799-c438-4865-9892-41071ea6b81f
+A Vraagbaak -> /Help
+A Contact -> /Contact
+A donderdag 17 december 2026 -> /Agenda/Index/860d833d-742e-4b8d-b819-1b300455d480
+A donderdag 26 november 2026 -> /Agenda/Index/7a2ae701-743b-4c66-bc69-1ea646ee2483
+A donderdag 12 november 2026 -> /Agenda/Index/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d
+A donderdag 24 september 2026 -> /Agenda/Index/d4b32282-6d07-4f2e-9463-89fb9b55e9c3
+A donderdag 2 juli 2026 -> /Agenda/Index/ef610785-ddbd-48be-a262-5a5ceda54946
+A maandag 15 juni 2026 -> /Agenda/Index/61056100-e302-4e79-824d-3c59259063ab
+A dinsdag 2 juni 2026 -> /Agenda/Index/c3a0e3ea-6980-45c1-a665-7674e0820804
+A donderdag 21 mei 2026 -> /Agenda/Index/ffcc02a8-e4c7-43b5-b476-436a33026aec
+A donderdag 23 april 2026 -> /Agenda/Index/613be69c-adaa-462b-8673-b08194a41ae5
+A woensdag 1 april 2026 Installatieraad -> /Agenda/Index/159e120c-040d-4035-8c65-e356b99e3aee
+A dinsdag 31 maart 2026 Afscheidsraad -> /Agenda/Index/6dbdbc84-2283-4dc2-b85c-ad0e22464717
+A donderdag 19 februari 2026 -> /Agenda/Index/f0a4bf9d-b0e8-47ee-9b7f-4bd9ccbecfb9
+A donderdag 22 januari 2026 -> /Agenda/Index/c90c611a-8bbb-492b-b438-da20b27ffc78
+A 01 Concept-besluitenlijst Gemeenteraad 24 september 2026 165 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=afd6bdd3-6768-44b2-af39-1830ef0fd2f3
+A 01a Bijlage moties en amendementen raad 24 september 2026 (002) 382 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=adbeca39-0de1-488f-a20f-2fdc2bb0e50f
+A Oproeping raadsvergadering 24 september 2026 37 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=6af5d5a7-6ca1-41e0-86ab-e804687848a2
+A Agenda raad 24 september 2026 28 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=8551d6d2-ba38-4a85-9458-53b003b5dc79&agendaItemId=2d3513af-47a8-4316-8982-4
+A Vastgesteld raadsbesluit Aanwijzing 3e plaatsvervangend griffier 1 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=34c12135-1be6-4c86-b497-da9297329393&agendaItemId=52b27a5e-fd1d-40b5-be10-8
+A DOC-26-1243962 - Raadsvoorstel aanwijzing 3e plaatsvervangend griffier 165 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=46c0d486-8cfb-4085-9eba-372d9d6227fa&agendaItemId=52b27a5e-fd1d-40b5-be10-8
+A Vastgestelde lijst Ingekomen stukken raad 24 september 2026 4 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=b8681e1c-bf53-40a4-9679-2ad97d06064b&agendaItemId=26758fd7-70c8-4c66-8b0c-0
+A Ingekomen stukken raad 24 september 2026 52 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=f486aff8-de2c-488d-a699-c58ea3c59632&agendaItemId=26758fd7-70c8-4c66-8b0c-0
+A Mutatievoorstellen Lijst ingekomen stukken raad 24 september 2026 11 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=5a5f2e0d-324b-4636-ba26-542c1a5c0c2d&agendaItemId=26758fd7-70c8-4c66-8b0c-0
+A Concept-besluitenlijst raad 2 juli 2026 48 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=ba95a3fe-6550-4bfd-8895-7f74c962a748&agendaItemId=495ed937-9804-4adb-a6ab-2
+A Moties en amendementen 2 juli 2026 291 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=6e3429dd-9e3f-449a-a01c-4d4db8cbe910&agendaItemId=495ed937-9804-4adb-a6ab-2
+A Vastgesteld raadsbesluit KCR2 2 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=f8f763d8-0c61-4d1e-9e97-7f12f8d732bb&agendaItemId=a6938304-28bf-4898-b572-5
+A 00 DOC-26-1234143 - Raadsvoorstel Deelname KCR2 186 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0d404209-8669-41e9-af01-748bdc84be76&agendaItemId=a6938304-28bf-4898-b572-5
+A 01 260703 Brief aan gemeenteraden KCR2_VRNHN 947 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=70ce1b93-11cd-45cd-b792-7db63596700c&agendaItemId=a6938304-28bf-4898-b572-5
+A 02 Ontwerpbesluit oprichting stichting KCR2_VRNHN 313 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=0754d99f-0b9d-4d87-9368-d87633e7c766&agendaItemId=a6938304-28bf-4898-b572-5
+A 03 Begrippenlijst en QA KCR2 73 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=3d447247-2bca-42d3-a668-6b0d113835af&agendaItemId=a6938304-28bf-4898-b572-5
+A 04 KRC2-Animatie 43 MB -> /Document/View/1257dc55-679b-4b8f-a2b2-f89db2147cd9
+A 05 KCR2-Animatie 2 30 MB -> /Document/View/4b358dd8-443c-418b-889d-0d43455a6bb7
+A Vastgesteld raadsbesluit Aanwijzen AB-leden gemeenschappelijke regelingen 2 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=7f5184bd-4d62-4623-8cab-76947e587911&agendaItemId=391c040d-08c3-4b93-9bc6-f
+A DOC-26-1175855 - Raadsvoorstel Aanwijzen AB-leden gemeenschappelijke regelingen  -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=d9438de4-d96b-4ed8-adef-1ec91ad34a73&agendaItemId=391c040d-08c3-4b93-9bc6-f
+A Vastgesteld raadsbesluit benoeming lid Raad van Toezicht Stichting Allure 2 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=cd0adbea-a4c5-482d-9d57-61aef4055b00&agendaItemId=e6e9d06c-29a0-4a72-9d29-b
+A 00 DOC-26-1213795 - Raadsvoorstel benoeming lid Raad van Toezicht Stichting Allu -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=397dee48-c2a6-4b25-81c8-b926fa7d795a&agendaItemId=e6e9d06c-29a0-4a72-9d29-b
+A 01 Brief benoeming lid Raad van Toezicht Stichting Allure 85 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=7fdd27e1-db13-4b34-b5bf-0ead81b20301&agendaItemId=e6e9d06c-29a0-4a72-9d29-b
+A Getekend raadsbesluit Ruimtelijk voorstel (geheim) 6 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=f736a426-83ae-40cc-9ad8-31003cc0b39c&agendaItemId=ffaccede-c29e-4089-b07d-c
+A Amendement 9 van 2026 GB Openbaar maken 133 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=e5ec2757-ff00-4648-af80-58867ecb22fc&agendaItemId=ffaccede-c29e-4089-b07d-c
+A Amendement 10 van 2026 Voorbereidingsbesluit niet vaststellen 134 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=c9c95a9d-ef2d-4c02-8c19-65773dc2d28d&agendaItemId=ffaccede-c29e-4089-b07d-c
+A Vastgesteld raadsbesluit intrekken voorkeursrecht op percelen nabij de Tuinstraa -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=25ed2de5-38d9-42e6-978c-2247ab85b714&agendaItemId=885552f7-a586-467b-abb6-3
+A 00 DOC-26-1209671 - Raadsvoorstel intrekken voorkeursrecht op percelen nabij Tui -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=1ec8dbd2-e2ac-454e-bd3f-d81f045fc5d8&agendaItemId=885552f7-a586-467b-abb6-3
+A 01 Bijlage 1 - Kadastrale tekening 3 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=b4aafaca-4dd3-4341-93f4-30826fcc8fbc&agendaItemId=885552f7-a586-467b-abb6-3
+A 02 Bijlage 2 - Perceelslijst intrekkingsvoorstel 49 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=bfc656b5-77da-4572-a53e-9c108b8f0ed1&agendaItemId=885552f7-a586-467b-abb6-3
+A 03 Beantwoording Commissievragen Morgen! raadscie. 10-9 agendapunt 11.1 Intrekke -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=1a913565-4e21-49bb-a86e-72ec2c4244d2&agendaItemId=885552f7-a586-467b-abb6-3
+A 04 Beantwoording Commissievragen D66 raadscie. 10-9 agendapunt 11.1 Intrekken vo -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=ab75c219-cf51-4015-b9e3-d1a8a1a5b0f6&agendaItemId=885552f7-a586-467b-abb6-3
+A 05 EXTERN Presentatie inspreker Van Til 24 MB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=12007eff-8490-499e-b8b1-95afcfce5bcb&agendaItemId=885552f7-a586-467b-abb6-3
+A Amendement 8 van 2026 MORGEN! Geen voorkeursrecht voor Tiny Houses 193 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=854d1d50-e97c-4c88-8f92-01783397418b&agendaItemId=885552f7-a586-467b-abb6-3
+A Motie 37 van 2026 GB Geen vergunningverlening zolang het parkeerprobleem niet is -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=4d968d55-096f-49fa-900a-fc32d4a9bc62&agendaItemId=9fce6edb-423a-4fac-a5c6-d
+A Technische toets motie 34 van 2026 CDA Indienen zienswijze HHNK toekomstvisie 20 -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=93f5ba98-a027-47f3-88ae-04967ba62c76&agendaItemId=39f0f7ed-1b8e-4d14-bb84-1
+A Technische toets motie 35 van 2026 HvM Houtribdijk (N307) veilig én bereikbaar 2 -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=bbcf010b-92b7-4544-aab8-3cc3462408b0&agendaItemId=39f0f7ed-1b8e-4d14-bb84-1
+A Motie 34 van 2026 CDA Indienen zienswijze HHNK Toekomstvisie 2050+ 199 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=1b152ae4-8ee8-4c74-b0ca-eff9a22a0759&agendaItemId=39f0f7ed-1b8e-4d14-bb84-1
+A Motie 35 van 2026 HvM Houtribdijk (N307) veilig én bereikbaar 196 KB -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=812951c6-3c1a-45cf-addb-82a9b02f5fb6&agendaItemId=39f0f7ed-1b8e-4d14-bb84-1
+A Motie 36 van 2026 CDA Indienen zienswijze ontwerp-Waterschapsverordening HHNK in -> /Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=dbe70dd5-6eee-48d6-938d-67368eebbf0b&agendaItemId=39f0f7ed-1b8e-4d14-bb84-1
+A iBabs Vergadermanagement -> https://www.ibabs.com
+A Inloggen -> https://portal0600.ibabs.eu
+
+==================== agenda html snippet ====================
+         <ul class="list-group" data-agenda-url="/Agenda/RetrieveAgendasForYear?agendatypeId=0&amp;year=2013">
+                        
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="widget">
+    <div class="widgetLabel">
+        <h2>
+            <a role="button" 
+               data-toggle="collapse" 
+               href="#year2012" 
+               aria-expanded="false" 
+               aria-controls="year2012" 
+               >
+                2012
+                <span class="collapse-icon float-right">
+                    <i class="fa fa-angle-down"></i>
+                </span>
+            </a>
+        </h2>
+    </div>
+    <div class="widgetContent">
+        <ul class="list-group">
+            <li class="clearfix agenda-year list-group-item">
+                <div class="details collapse " id="year2012">
+                    <ul class="list-group" data-agenda-url="/Agenda/RetrieveAgendasForYear?agendatypeId=0&amp;year=2012">
+                        
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="widget">
+    <div class="widgetLabel">
+        <h2>
+            <a role="button" 
+               data-toggle="collapse" 
+               href="#year2011" 
+               aria-expanded="false" 
+               aria-controls="year2011" 
+               >
+                2011
+                <span class="collapse-icon float-right">
+                    <i class="fa fa-angle-down"></i>
+                </span>
+            </a>
+        </h2>
+    </div>
+    <div class="widgetContent">
+        <ul class="list-group">
+            <li class="clearfix agenda-year list-group-item">
+                <div class="details collapse " id="year2011">
+                    <ul class="list-group" data-agenda-url="/Agenda/RetrieveAgendasForYear?agendatypeId=0&amp;year=2011">
+                        
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>    </aside>
+    <section class="col-md-9 maincontent" id="maincontent" >
+        
+    <div class="row">
+        <div class="box col">
+            <div class="box-inner">
+                <div class="box-header">
+                    <a id="backButton" href="#" class="d-none d-md-block btn-sm btn-ris float-md-right"><i class="fas fa-arrow-left"></i> Vorige pagina</a>
+                    <h1 >Gemeenteraad</h1>
+                    <h2 >donderdag 24 september 2026</h2>
+                        <div class="heading3">19:30 - 21:10</div>
+                </div>
+                <div class="box-content box-padding">
+                    <dl class="row">
+                            <dt class="col-sm-3">Locatie</dt>
+                            <dd class="col-sm-9" ><p>Raadzaal (MBG06)</p></dd>
+                            <dt class="col-sm-3">Voorzitter</dt>
+                            <dd class="col-sm-9" >M. Pijl</dd>
+
+
+                            <dt class="col-sm-3">Agenda documenten</dt>
+                            <dd class="col-sm-9">
+                                
+<ul class="list-group list-attachments">
+        <li class="list-group-item">
+            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=afd6bdd3-6768-44b2-af39-1830ef0fd2f3" class="unread" data-document-id="afd6bdd3-6768-44b2-af39-1830ef0fd2f3" >
+                    <span class="icon pdf" aria-label="pdf" role="img"></span>
+                
+                01 Concept-besluitenlijst Gemeenteraad 24 september 2026
+                <span class="badge badge-light badge-pill">165 KB</span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=adbeca39-0de1-488f-a20f-2fdc2bb0e50f" class="unread" data-document-id="adbeca39-0de1-488f-a20f-2fdc2bb0e50f" >
+                    <span class="icon pdf" aria-label="pdf" role="img"></span>
+                
+                01a Bijlage moties en amendementen raad 24 september 2026 (002)
+                <span class="badge badge-light badge-pill">382 KB</span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="/Agenda/Document/d4b32282-6d07-4f2e-9463-89fb9b55e9c3?documentId=6af5d5a7-6ca1-41e0-86ab-e804687848a2" class="unread" data-document-id="6af5d5a7-6ca1-41e0-86ab-e804687848a2" >
+                    <span class="icon pdf" aria-label="pdf" role="img"></span>
+                
+                Oproeping raadsvergadering 24 september 2026
+                <span class="badge badge-light badge-pill">37 KB</span>
+            </a>
+        </li>
+</ul>
+                            </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="box col">
+        <div class="box-inner">
+            <div class="box-header">
+                <h2>Agendapunten</h2>
+                <button class="btn btn-ibo float-right" style="display: none;">
+                    <i class="fa fa-download"></i>
+                </button>
+            </div>
+            <div class="box-content">
+                <div class="box-content-collapse panel-group" id="agendaitems">
+                    <ol>
+                            <li>
+                                
+<div class="panel panel-default agenda-item" id="8b89683f-5e70-4dbc-b537-9e1f4f4cea32" >
+    <div class="panel-heading large" id="heading-8b89683f-5e70-4dbc-b537-9e1f4f4cea32">
+        <div class="d-flex">
+            <div class="panel-id">A</div>
+                <div class="panel-title">
+                    <span class="panel-title-label" >
+                        ALGEMEEN1 - <span class='text-thin'>19:30</span>
+                    </span>
+                </div>
+        </div>
+    </div>
+</div>
+                            </li>
+                            <li>
+                                
+<div class="panel panel-default agenda-item" id="42523bd0-4491-456e-b18d-7
+
+==================== https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/78aba77b-4fb2-4210-b19b-f3034d2a5bc7 ====================
+200 text/html; charset=utf-8 23516
+h1 | Raadsvragen
+h2 | Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab in Lambertschaag
+A  -> https://www.medemblik.nl/
+A Dashboard -> /
+A Vergaderingen -> /Calendar
+A Overzichten -> /Reports
+A Informatienota's -> /Reports/Details/55a67657-751b-488f-938d-31c4a7f557b4
+A Ingekomen stukken -> /Reports/Details/55930379-b454-4196-8da1-1bb8f00c7ab8
+A Jaarplannen en jaarverslagen -> /Reports/Details/b90bf229-96f1-45f2-a77b-29dc82cf8f7d
+A Moties en amendementen -> /Reports/Details/d78d4c5b-fa21-407c-82d7-4d8e82ea7a6c
+A Raadsvragen -> /Reports/Details/b6e30d37-cfd2-4064-a7fa-19453570dfb5
+A Rekenkamer -> /Reports/Details/3fbb1512-3886-4b19-8c61-b43910a3bd52
+A Toezeggingen -> /Reports/Details/3e68aabb-a3f3-403a-b088-5d336fed3822
+A Wie is wie -> /People
+A Commissieleden -> /People/Profiles/64e32518-63a8-44d2-8d57-f9690c5e87cb
+A Gemeenteraad -> /People/Profiles/5320a26c-ce32-405d-be1c-85f32e811e19
+A Griffie -> /People/Profiles/3d90b799-c438-4865-9892-41071ea6b81f
+A Vraagbaak -> /Help
+A Contact -> /Contact
+A Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab -> /Reports/Document/78aba77b-4fb2-4210-b19b-f3034d2a5bc7?documentId=c06d6bcc-830f-446e-b070-48a67bfc4232
+A iBabs Vergadermanagement -> https://www.ibabs.com
+A Inloggen -> https://portal0600.ibabs.eu
+
+==================== report item html ====================
+button>
+                            </li>
+                            <li class="align-middle">
+                                <button type="button" data-size="1.4" aria-label="Vergroot de tekst met 40% ten opzichte van de originele tekst grootte." aria-pressed="false">A</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <main id="content" class="d-flex">
+            <div class="container d-flex align-items-stretch flex-fill">
+                
+
+<div class="row maincontent flex-fill">
+    <section class="col" id="maincontent">
+        <div id="overzicht" class="row" data-id="78aba77b-4fb2-4210-b19b-f3034d2a5bc7">
+            <div class="box col" id="box-overzicht">
+                <div class="box-inner">
+                    <div class="box-header">
+                        <a id="backButton" href="#" class="d-none d-md-block btn-sm btn-ris float-md-right"><i class="fas fa-arrow-left"></i> Vorige pagina</a>
+                        <h1>Raadsvragen</h1>
+                        <h2>Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab in Lambertschaag</h2>
+                    </div>
+                    <div class="box-content">
+                        <dl class="row">
+                                <dt class="col-sm-3">ID</dt>
+                                <dd class="col-sm-9">
+960</dd>
+                                <dt class="col-sm-3">Datum vraag</dt>
+                                <dd class="col-sm-9">15-10-2026
+</dd>
+                                <dt class="col-sm-3">Onderwerp</dt>
+                                <dd class="col-sm-9">
+Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab in Lambertschaag</dd>
+                                <dt class="col-sm-3">Toelichting</dt>
+                                <dd class="col-sm-9">
+    <span class="pre-line"></span>
+</dd>
+                                <dt class="col-sm-3">Datum antwoord</dt>
+                                <dd class="col-sm-9">
+</dd>
+                                <dt class="col-sm-3">DOC-nummer</dt>
+                                <dd class="col-sm-9">
+DOC-26-1255358</dd>
+                                <dt class="col-sm-3">Bijlage(s)</dt>
+                                <dd class="col-sm-9"><ul class="list-group list-attachments">
+        <li class="list-group-item">
+            <a href="/Reports/Document/78aba77b-4fb2-4210-b19b-f3034d2a5bc7?documentId=c06d6bcc-830f-446e-b070-48a67bfc4232" class="unread" data-document-id="c06d6bcc-830f-446e-b070-48a67bfc4232" >
+                <span class="icon pdf" aria-label="pdf" role="img"></span>
+                Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab in Lambertschaag
+                <span class="badge badge-light badge-pill">92 KB</span>
+            </a>
+        </li>
+</ul></dd>
+                                <dt class="col-sm-3">Portefeuillehouder</dt>
+                                <dd class="col-sm-9">    <ul class="mb-0 pl-3">
+            <li>M. Pijl</li>
+    </ul>
+</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+            </div>
+        </main>
+                <footer id="footer-new">
+                    <div class="container">
+                        <div class="row justify-content-end align-items-start">
+                            <div class="box mb-0 col-md-auto">
+                                <div class="box-inner">
+                                    <div class="box-content p-0 py-1">
+                                        <ul class="list-group list-group-horizontal">
+                                            <li class="list-group-item">
+                                                <span>
+                                                    <a href="https://www.ibabs.com">
+                
+
+==================== https://medemblik.bestuurlijkeinformatie.nl/Reports/Details/raadsvragen ====================
+404 text/html; charset=utf-8 21105
+h3 | Niet gevonden
+A  -> https://www.medemblik.nl/
+A Dashboard -> /
+A Vergaderingen -> /Calendar
+A Overzichten -> /Reports
+A Informatienota's -> /Reports/Details/55a67657-751b-488f-938d-31c4a7f557b4
+A Ingekomen stukken -> /Reports/Details/55930379-b454-4196-8da1-1bb8f00c7ab8
+A Jaarplannen en jaarverslagen -> /Reports/Details/b90bf229-96f1-45f2-a77b-29dc82cf8f7d
+A Moties en amendementen -> /Reports/Details/d78d4c5b-fa21-407c-82d7-4d8e82ea7a6c
+A Raadsvragen -> /Reports/Details/b6e30d37-cfd2-4064-a7fa-19453570dfb5
+A Rekenkamer -> /Reports/Details/3fbb1512-3886-4b19-8c61-b43910a3bd52
+A Toezeggingen -> /Reports/Details/3e68aabb-a3f3-403a-b088-5d336fed3822
+A Wie is wie -> /People
+A Commissieleden -> /People/Profiles/64e32518-63a8-44d2-8d57-f9690c5e87cb
+A Gemeenteraad -> /People/Profiles/5320a26c-ce32-405d-be1c-85f32e811e19
+A Griffie -> /People/Profiles/3d90b799-c438-4865-9892-41071ea6b81f
+A Vraagbaak -> /Help
+A Contact -> /Contact
+A iBabs Vergadermanagement -> https://www.ibabs.com
+A Inloggen -> https://portal0600.ibabs.eu
+
+==================== https://www.medemblik.nl/nieuws ====================
+200 text/html; charset=utf-8 67135
+h1 | Nieuws
+h2 | Medemblik blijft lokale evenementen steunen met subsidie BRUIS
+h2 | Herontwikkeling Oosterhaven Medemblik officieel van start
+h2 | Eerste woningen Slotlaan opgeleverd
+h2 | Gemeente Medemblik actualiseert handreiking voor spuitzonering
+h2 | Proef: Wonen in bijgebouwen
+h2 | Nieuwe participatiehandreiking voor ruimtelijke plannen
+h2 | Waarderingsspeld voor Coby Schouten-Spaansen.
+h2 | Definitieve volgordelijst projecten stroomnet vastgesteld
+h2 | Gemeente Medemblik nodigt inwoners uit mee te denken over evenementenbeleid
+h2 | Eerste paal Bries Medemblik geslagen
+h2 | Liander kan nieuwbouwproject Bloesemgaerde-Noord in Wognum alsnog aansluiten op het stroomnet
+h2 | Geen vuurwerkontheffingen in Westfriesland
+h2 | Postadres
+h2 | Bezoekadres
+h2 | Neem contact op
+h2 | Meer informatie
+h2 | Volg ons op
+A  -> /
+A Nieuws -> /nieuws
+A Lees voor -> https://app-eu.readspeaker.com/cgi-bin/rsent?customerid=5570&amp;lang=nl_nl&amp;readid=content&amp;url=https://www.medemblik.nl/nieuws
+A Medemblik blijft lokale evenementen steunen met subsidie BRUIS Datum dinsdag 13  -> /nieuws/medemblik-blijft-lokale-evenementen-steunen-met-subsidie-bruis
+A Herontwikkeling Oosterhaven Medemblik officieel van start Datum woensdag 7 oktob -> /nieuws/herontwikkeling-oosterhaven-medemblik-officieel-van-start
+A Eerste woningen Slotlaan opgeleverd Datum woensdag 7 oktober 2026 -> /nieuws/eerste-woningen-slotlaan-opgeleverd
+A Gemeente Medemblik actualiseert handreiking voor spuitzonering Datum woensdag 7  -> /nieuws/gemeente-medemblik-actualiseert-handreiking-voor-spuitzonering-1
+A Proef: Wonen in bijgebouwen Datum woensdag 7 oktober 2026 -> /nieuws/proef-wonen-in-bijgebouwen
+A Nieuwe participatiehandreiking voor ruimtelijke plannen Datum woensdag 7 oktober -> /nieuws/nieuwe-participatiehandreiking-voor-ruimtelijke-plannen
+A Waarderingsspeld voor Coby Schouten-Spaansen. Datum maandag 5 oktober 2026 -> /nieuws/waarderingsspeld-voor-coby-schouten-spaansen
+A Definitieve volgordelijst projecten stroomnet vastgesteld Datum woensdag 30 sept -> /nieuws/definitieve-volgordelijst-projecten-stroomnet-vastgesteld
+A Gemeente Medemblik nodigt inwoners uit mee te denken over evenementenbeleid Datu -> /nieuws/gemeente-medemblik-nodigt-inwoners-uit-mee-te-denken-over-evenementenbeleid
+A Eerste paal Bries Medemblik geslagen Datum vrijdag 25 september 2026 -> /nieuws/eerste-paal-bries-medemblik-geslagen
+A Liander kan nieuwbouwproject Bloesemgaerde-Noord in Wognum alsnog aansluiten op  -> /nieuws/liander-kan-nieuwbouwproject-bloesemgaerde-noord-in-wognum-alsnog-aansluiten-op-het-stroomnet
+A Geen vuurwerkontheffingen in Westfriesland Datum woensdag 23 september 2026 -> /nieuws/geen-vuurwerkontheffingen-in-westfriesland
+A Vorige pagina -> /nieuws/nieuwspagina/1
+A Volgende pagina -> /nieuws/nieuwspagina/2
+A info@medemblik.nl (Verwijst naar een e-mailadres) -> mailto:info@medemblik.nl
+A 0229 85 60 00 (Verwijst naar een telefoonnummer) -> tel:0229856000
+A 06 82 07 66 83 (Verwijst naar een Whatsapp telefoonnummer) -> https://wa.me/31682076683
+A Contact en openingstijden -> /contact-en-openingstijden
+A Over deze site -> /over-deze-site
+A Sitemap -> /sitemap
+A Inschrijven voor nieuwsbrief -> /raad-bestuur-en-organisatie/organisatie/nieuwsbrief
+A Vacatures (Verwijst naar een externe website) -> https://werkenbij.medemblik.nl/
+A RSS feed -> https://www.medemblik.nl/nieuws.rss
+A /GemeenteMedemblik (Verwijst naar een externe website) -> https://www.facebook.com/GemeenteMedemblik
+A gemeente_medemblik (Verwijst naar een externe website) -> https://www.instagram.com/gemeente_medemblik
+A gemeente-medemblik (Verwijst naar een externe website) -> https://www.linkedin.com/company/gemeente-medemblik
