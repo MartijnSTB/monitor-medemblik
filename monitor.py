@@ -14,6 +14,9 @@ from pathlib import Path
 import requests
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
+from zoneinfo import ZoneInfo
+
+NL = ZoneInfo('Europe/Amsterdam')
 
 ROOT = Path(__file__).parent
 DB = ROOT / 'data' / 'items.json'
@@ -39,7 +42,7 @@ GEMEENTEN = {
             'Raadsportaal': 'https://medemblik.bestuurlijkeinformatie.nl/',
         },
         'domains': ('https://www.medemblik.nl/', 'https://medemblik.bestuurlijkeinformatie.nl/'),
-        'news_rss': None,
+        'news_rss': 'https://www.medemblik.nl/nieuws.rss',  # geeft ook de publicatietijd
         'college_pdf_page': None,
         'notes': {
             'Nieuws': 'Alleen de eerste nieuwspagina (de 12 nieuwste berichten).',
@@ -229,6 +232,34 @@ def koop_store(db, records, gid, creator):
                     excerpt=first('abstract') or ('Officiele bekendmaking; ' + (label + ': ' + doc_date if doc_date else 'datum onbekend')))
     return added
 
+KOOP_TIMES_PER_RUN = 60
+
+def koop_publication_times(db):
+    """De officiële publicatietijd staat niet in de KOOP-gegevens, wel op de pagina zelf:
+    'Datum publicatie ... 14-10-2026 09:00' (gecontroleerd 15 okt 2026). De tijden in de
+    KOOP-gegevens (bijv. 09:17) zijn verwerkingstijden en worden daarom niet gebruikt.
+    Alleen voor recente stukken (laatste 7 dagen), om de site te ontzien."""
+    lo = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    todo = [v for v in db['items'].values() if v.get('source') == KOOP_SOURCE and not v.get('published_at')
+            and not v.get('published_at_tried') and (v.get('doc_date') or '') >= lo]
+    todo.sort(key=lambda v: v.get('doc_date') or '', reverse=True)
+    found = 0
+    for item in todo[:KOOP_TIMES_PER_RUN]:
+        item['published_at_tried'] = True
+        try:
+            r = requests.get(item['url'], headers=HEADERS, timeout=20)
+            r.raise_for_status()
+            text = clean(BeautifulSoup(r.text, 'html.parser').get_text(' '))
+            m = re.search(r'Datum publicatie.{0,200}?\b(\d{2})-(\d{2})-(\d{4})\s+(\d{2}):(\d{2})\b', text)
+            if m:
+                d, mo, y, h, mi = map(int, m.groups())
+                item.update(published_at=datetime.datetime(y, mo, d, h, mi, tzinfo=NL).isoformat(timespec='minutes'),
+                            published_at_source='officielebekendmakingen.nl')
+                found += 1
+        except Exception:
+            pass
+    return found
+
 def collect_official(db, gid):
     """KOOP in twee delen:
     1. recent: elke run alles van de laatste KOOP_RECENT_DAYS dagen (vangt nieuwe stukken);
@@ -377,11 +408,11 @@ def collect_news_rss(db, gid, feed_url):
             link = clean(it.findtext('link'))
             if not title or not link:
                 continue
-            date = None
+            date = published = None
             if it.findtext('pubDate'):
                 try:
-                    dt = email.utils.parsedate_to_datetime(clean(it.findtext('pubDate')))
-                    date = dt.date().isoformat()
+                    dt = email.utils.parsedate_to_datetime(clean(it.findtext('pubDate'))).astimezone(NL)
+                    date, published = dt.date().isoformat(), dt.isoformat(timespec='minutes')
                 except (TypeError, ValueError):
                     pass
             key = make_key(source + '|' + link)
@@ -389,8 +420,11 @@ def collect_news_rss(db, gid, feed_url):
             if item is None:
                 item = db['items'][key] = new_item(gid, title, link, source)
                 added += 1
-            item.update(doc_date=date, doc_date_label='publicatiedatum', publication_date=date,
-                        excerpt=clean(it.findtext('description'))[:400], last_seen=today())
+            item.update(doc_date=date, doc_date_label='publicatiedatum', publication_date=date, last_seen=today())
+            if published:
+                item.update(published_at=published, published_at_source='RSS-feed')
+            if clean(it.findtext('description')):
+                item['excerpt'] = clean(it.findtext('description'))[:400]
         set_status(db, gid, source, ok=bool(items), count=len(items), new=added,
                    note=f'RSS-feed van de gemeentesite: de {len(items)} nieuwste berichten. Oudere berichten niet.')
     except Exception as exc:
@@ -984,7 +1018,7 @@ def migrate(db):
 # ---------------------------------------------------------------------------
 PUBLIC_FIELDS = ('title', 'url', 'source', 'kind', 'doc_date', 'doc_date_label', 'first_seen', 'last_change',
                  'revisions', 'changes', 'removed', 'besluit_status', 'koop_type', 'locatie', 'meeting_title',
-                 'agendapunt', 'rapport', 'antwoord_datum', 'portefeuillehouder')
+                 'agendapunt', 'rapport', 'antwoord_datum', 'portefeuillehouder', 'published_at')
 
 def public_item(item):
     out = {k: item[k] for k in PUBLIC_FIELDS if item.get(k) not in (None, '', [])}
@@ -1021,6 +1055,7 @@ def main():
         if cfg['college_pdf_page']:
             collect_college_pdfs(db, gid, cfg['college_pdf_page'])
         collect_pages(db, gid)
+    koop_publication_times(db)
     check_documents(db)
     # Bovengrens: bewaar de meest recent actieve items.
     items = sorted(db['items'].items(), key=lambda kv: kv[1].get('last_change') or kv[1]['first_seen'], reverse=True)[:MAX_ITEMS]

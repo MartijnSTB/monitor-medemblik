@@ -97,6 +97,22 @@ def is_important(ev):
         return True
     return False
 
+def time_label(item, at=None):
+    """'gepubliceerd 09:00' als de bron een tijd geeft, anders 'gevonden 16:30' (door de monitor).
+    Voor een wijziging: het moment waarop de monitor de wijziging zag."""
+    def hm(s):
+        return datetime.datetime.fromisoformat(s).astimezone(TZ).strftime('%H:%M')
+    try:
+        if at:
+            return 'gezien ' + hm(at)
+        if item.get('published_at'):
+            return 'gepubliceerd ' + hm(item['published_at'])
+        if item.get('first_seen'):
+            return 'gevonden ' + hm(item['first_seen'])
+    except ValueError:
+        pass
+    return ''
+
 LABEL = {'nieuw': 'Nieuw', 'gewijzigd': 'Gewijzigd', 'beantwoord': 'Beantwoord', 'verdwenen': 'Verdwenen'}
 
 # ---------------------------------------------------------------------------
@@ -112,7 +128,8 @@ def send_push(gemeenten, events_by_gid, topic):
         lines = []
         for e in important[:MAX_PUSH_LINES]:
             extra = f" ({e['text']})" if e['kind'] in ('beantwoord', 'gewijzigd') and e['text'] else ''
-            lines.append(f"- **{LABEL[e['kind']]}** · {column_of(e['item'])}: {e['item']['title'][:120]}{extra}")
+            tijd = time_label(e['item'], e['at'] if e['kind'] != 'nieuw' else None)
+            lines.append(f"- **{LABEL[e['kind']]}** · {column_of(e['item'])}: {e['item']['title'][:120]}{extra} ({tijd})")
         if len(important) > MAX_PUSH_LINES:
             lines.append(f'- en nog {len(important) - MAX_PUSH_LINES} op het dashboard')
         urgent = any(e['kind'] in ('gewijzigd', 'beantwoord', 'verdwenen') for e in important)
@@ -154,7 +171,7 @@ def _mail_html(gemeenten, events_by_gid, since, now_local):
                        ''.join(f'<div style="color:#8a2c2c;text-decoration:line-through">− {e(r)}</div>' for r in x.get('removed', [])[:2])
                 parts.append(f'<li style="margin:6px 0"><b>{LABEL[x["kind"]]}</b> · {column_of(it)}: '
                              f'<a href="{e(it["url"])}" style="color:#006dac">{e(it["title"])}</a>'
-                             f'<div style="color:#5b6672;font-size:13px">{e(x["text"])}</div>'
+                             f'<div style="color:#5b6672;font-size:13px">{e(x["text"])} · {time_label(it, x["at"])}</div>'
                              f'<div style="font-size:13px">{diff}</div></li>')
             parts.append('</ul>')
         for col, color in COLUMNS:
@@ -164,7 +181,7 @@ def _mail_html(gemeenten, events_by_gid, since, now_local):
             parts.append(f'<h3 style="color:{color};margin:14px 0 4px">{col} <span style="color:#5b6672;font-weight:normal">({len(rows)})</span></h3><ul style="padding-left:18px">')
             for x in rows[:MAX_MAIL_PER_COLUMN]:
                 it = x['item']
-                sub = ', '.join(v for v in (it.get('koop_type'), it.get('locatie'), it.get('rapport'), it.get('meeting_title')) if v)
+                sub = ', '.join(v for v in (time_label(it), it.get('koop_type'), it.get('locatie'), it.get('rapport'), it.get('meeting_title')) if v)
                 parts.append(f'<li style="margin:5px 0"><a href="{e(it["url"])}" style="color:#1d1d1b">{e(it["title"])}</a>'
                              + (f'<div style="color:#5b6672;font-size:13px">{e(sub)}</div>' if sub else '') + '</li>')
             if len(rows) > MAX_MAIL_PER_COLUMN:
@@ -182,7 +199,8 @@ def _mail_text(gemeenten, events_by_gid):
         if not events:
             out.append('Niets nieuw of gewijzigd.')
         for x in events[:150]:
-            out.append(f'- {LABEL[x["kind"]]} · {column_of(x["item"])}: {x["item"]["title"]}\n  {x["item"]["url"]}')
+            tijd = time_label(x['item'], x['at'] if x['kind'] != 'nieuw' else None)
+            out.append(f'- {LABEL[x["kind"]]} · {column_of(x["item"])}: {x["item"]["title"]} ({tijd})\n  {x["item"]["url"]}')
     out.append(f'\nDashboard: {DASHBOARD_URL}')
     return '\n'.join(out)
 
