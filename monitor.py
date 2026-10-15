@@ -2,6 +2,7 @@ import json, hashlib, re, os, datetime, urllib.parse
 from pathlib import Path
 import requests
 import time
+import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).parent
@@ -17,9 +18,62 @@ SOURCES={
 HEADERS={'User-Agent':'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
 def utc(): return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
 def clean(s): return re.sub(r'\s+',' ',s or '').strip()
+def collect_official(db):
+ """Collect recent Medemblik publications through the KOOP SRU 2.0 endpoint.
+
+ Fail visibly on unexpected XML or diagnostics. Only records with an exact
+ Medemblik creator match are accepted. Results are a rolling window, not a
+ complete historical archive.
+ """
+ source='Officiele bekendmakingen (KOOP)'
+ now=utc()
+ try:
+  params={
+   'operation':'searchRetrieve','version':'2.0',
+   'query':'c.product-area=="officielepublicaties" AND dt.creator=="Medemblik"',
+   'maximumRecords':'100','startRecord':'1',
+  }
+  response=requests.get('https://repository.overheid.nl/sru',params=params,headers=HEADERS,timeout=35)
+  response.raise_for_status()
+  root=ET.fromstring(response.content)
+  if root.findall('.//{*}diagnostic'):
+   raise ValueError('SRU diagnostic: '+clean(' '.join(root.itertext()))[:250])
+  records=root.findall('.//{*}recordData')
+  if not records:
+   raise ValueError('Geen recordData gevonden; controleer SRU query en XML structuur')
+  added=0
+  for record in records:
+   def values(name):
+    return [clean(e.text) for e in record.iter() if e.tag.rsplit('}',1)[-1]==name and e.text and clean(e.text)]
+   creators=values('creator')
+   if not any(c.casefold()=='medemblik' for c in creators):
+    continue
+   title=(values('title') or ['Publicatie zonder titel'])[0]
+   ids=values('identifier')
+   urls=[x for x in ids if x.startswith('https://') or x.startswith('http://')]
+   ident=next((x for x in ids if re.search(r'(?:gmb|stcrt|bgr|prb|wsb)-\d{4}-\d+',x)),None)
+   if not urls and ident:
+    m=re.search(r'(?:gmb|stcrt|bgr|prb|wsb)-\d{4}-\d+',ident)
+    urls=['https://zoek.officielebekendmakingen.nl/'+m.group()+'.html'] if m else []
+   if not urls:
+    continue
+   url=urls[0]
+   key=hashlib.sha256((source+'|'+url).encode()).hexdigest()
+   dates=values('date')
+   if key not in db['items']:
+    db['items'][key]={'title':title,'url':url,'source':source,'first_seen':now,
+      'updated':now,'hash':hashlib.sha256((title+'|'+str(dates)).encode()).hexdigest(),
+      'revisions':1,'excerpt':'Officiele bekendmaking; publicatiedatum: '+(dates[0] if dates else 'onbekend')}
+    added+=1
+  db['status'][source]={'ok':True,'checked':now,'count':len(records),'new':added,
+    'note':'Maximaal 100 recente resultaten; niet gegarandeerd volledig. Alleen exacte Medemblik creator.'}
+ except Exception as exc:
+  db['status'][source]={'ok':False,'checked':now,'error':str(exc)[:250]}
+
 def main():
  DB.parent.mkdir(exist_ok=True); OUT.parent.mkdir(exist_ok=True)
  db=json.loads(DB.read_text()) if DB.exists() else {'items':{},'status':{}}
+ collect_official(db)
  for source,url in SOURCES.items():
   try:
    r=requests.get(url,headers=HEADERS,timeout=25);r.raise_for_status()
