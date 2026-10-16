@@ -98,7 +98,14 @@ MEETING_WINDOW_AHEAD = 45      # vergaderingen: dagen vooruit
 MEETINGS_PER_RUN = 10          # vergaderpagina's per gemeente per run, om de site te ontzien
 DOCS_SOURCE = 'Raadsstukken'
 REPORT_ROWS_PER_RUN = 50       # raadsportaal-overzichten: nieuwste regels per run
-DOCS_PER_RUN = 40              # documentcontrole: documenten per run (alle gemeenten samen)
+DOCS_PER_RUN = 50              # documentcontrole: documenten per run (alle gemeenten samen)
+DOC_TIME_BUDGET = 240          # documentcontrole stopt na zoveel seconden (workflow mag 8 minuten)
+ATT_V = 2                      # versie van de vergelijking incl. bijlagen; ophogen = nieuwe nulmeting
+MAX_ATTACHMENTS = 8            # bijlagen per raadsportaal-item
+KEYWORDS_FILE = ROOT / 'trefwoorden.txt'
+KEYWORD_FRESH_DAYS = 3         # trefwoordmelding alleen voor stukken die zo recent zijn gevonden of gewijzigd
+GEOCODE_PER_RUN = 150          # adressen per run opzoeken bij PDOK
+GEO_V = 1                      # ophogen = KOOP-archief opnieuw ophalen om coördinaten aan te vullen
 MAX_DOC_BYTES = 15_000_000     # groter: alleen bestandskenmerken vergelijken
 TEXT_CAP = 300_000             # maximaal aantal tekens tekst per document
 MAX_CHANGES = 10               # zoveel wijzigingen per document bewaren
@@ -218,12 +225,22 @@ def koop_store(db, records, gid, creator):
         if item is None:
             item = db['items'][key] = new_item(gid, title, url, KOOP_SOURCE)
             added += 1
-        # Nieuwe versie bij KOOP (bijv. een rectificatie): versienummer of wijzigingsdatum anders.
+        # Alleen een hoger versienummer telt als nieuwe versie (bijv. een rectificatie). Een nieuwe
+        # wijzigingsdatum bij hetzelfde versienummer is beheer bij KOOP, zoals het na een tijd
+        # weghalen van persoonsgegevens; dat is geen nieuws.
         version = f"{first('hasVersion') or '1'}|{first('modified') or ''}"
-        if item.get('koop_version') and item['koop_version'] != version:
-            record_change(item, 'Nieuwe versie bij KOOP',
-                          f"versiegegevens gewijzigd: {item['koop_version']} → {version}")
+        old_nr = (item.get('koop_version') or '').split('|')[0]
+        if old_nr and old_nr != version.split('|')[0]:
+            record_change(item, 'Nieuwe versie bij KOOP', f"versie {old_nr} → {version.split('|')[0]} (bijv. een rectificatie)")
         item['koop_version'] = version
+        # Kaartpunt dat KOOP zelf meelevert ('52.72 5.17' = breedte lengte).
+        punt = first('locatiepunt')
+        if punt and not item.get('geo'):
+            try:
+                lat, lon = (float(x) for x in punt.split()[:2])
+                item.update(geo=[round(lat, 6), round(lon, 6)], geo_src='KOOP')
+            except ValueError:
+                pass
         types = [t for t in values('type') if '|' not in t]
         item.update(gemeente=gid, koop_dates=koop, doc_date=doc_date, doc_date_label=label,
                     publication_date=koop['available'] or koop['issued'], last_seen=today(),
@@ -276,6 +293,10 @@ def collect_official(db, gid):
         ok = len(records) >= total
         month = st.get('backfill_month', KOOP_START[:7])
         current = datetime.date.today().strftime('%Y-%m')
+        if st.get('geo_v') != GEO_V:
+            # Eenmalig het archief opnieuw doorlopen om de kaartpunten aan te vullen.
+            st.update(geo_v=GEO_V, backfill_month=KOOP_START[:7])
+            month = KOOP_START[:7]
         if month < current:
             y, mo = map(int, month.split('-'))
             nxt = f'{y + (mo == 12)}-{(mo % 12) + 1:02d}'
@@ -784,6 +805,8 @@ def check_interval(item):
     return datetime.timedelta(days=30)
 
 def is_due(item, now_dt):
+    if '/Reports/Item/' in item.get('url', '') and item.get('text_v') != ATT_V:
+        return True  # nog geen nulmeting inclusief bijlagen
     last = item.get('content_checked')
     if not last:
         return True
@@ -821,20 +844,20 @@ def record_change(item, kind, summary, added=(), removed=()):
     item['changes'] = item['changes'][-MAX_CHANGES:]
     item.update(updated=now, last_change=now, revisions=item.get('revisions', 1) + 1, change_type=kind)
 
-def compare_text(key, item, lines, kind='Tekst gewijzigd'):
-    """Vergelijk met de vorige tekstversie. De eerste keer is alleen een nulmeting."""
+def compare_text(key, item, lines, kind='Tekst gewijzigd', baseline=False, summary=None):
+    """Vergelijk met de vorige tekstversie. De eerste keer (of met baseline=True) is alleen een nulmeting."""
     import difflib
     digest = hashlib.sha256('\n'.join(lines).encode()).hexdigest()
     path = text_path(key)
     previous = item.get('text_hash')
-    if previous and previous != digest:
+    if previous and previous != digest and not baseline:
         old = path.read_text(encoding='utf-8').split('\n') if path.exists() else []
         sm = difflib.SequenceMatcher(None, old, lines, autojunk=False)
         added = [l for tag, i1, i2, j1, j2 in sm.get_opcodes() if tag in ('insert', 'replace') for l in lines[j1:j2]]
         removed = [l for tag, i1, i2, j1, j2 in sm.get_opcodes() if tag in ('delete', 'replace') for l in old[i1:i2]]
-        summary = 'tekst gewijzigd (vorige versie niet bewaard)' if not old else \
+        counts = 'tekst gewijzigd (vorige versie niet bewaard)' if not old else \
             f'{len(added)} zin(nen) toegevoegd of aangepast, {len(removed)} verwijderd of vervangen'
-        record_change(item, kind, summary, added, removed)
+        record_change(item, kind, (summary + '; ' + counts) if summary else counts, added, removed)
     if previous != digest:
         TEXT_DIR.mkdir(parents=True, exist_ok=True)
         path.write_text('\n'.join(lines), encoding='utf-8')
@@ -860,6 +883,40 @@ def page_date(text, url):
                 return parse_dmy(m.group(1)), label.lower()
     return None, None
 
+def report_attachments(page, page_url):
+    """Bijlagen op een raadsportaal-item (raadsvraag, informatienota ...): [(titel, bestandslink)].
+    De link in de pagina opent een viewer; het bestand zelf staat op /Document/View/<documentId>
+    (gecontroleerd 16 okt 2026)."""
+    base = re.match(r'https://[^/]+', page_url).group(0)
+    out, seen = [], set()
+    for a in page.select('a[href*="/Reports/Document/"]'):
+        m = re.search(r'documentId=([0-9a-f-]{36})', a.get('href', ''))
+        if not m or m.group(1) in seen:
+            continue
+        seen.add(m.group(1))
+        for badge in a.select('.badge'):
+            badge.extract()
+        out.append((clean(a.get_text(' ', strip=True)) or 'Bijlage', base + '/Document/View/' + m.group(1)))
+    return out
+
+def attachment_lines(attachments):
+    """Tekst van de bijlagen, elk met een kopregel. Scans en te grote bestanden: alleen de kopregel.
+    Geeft (alle regels, {titel: regels van die bijlage})."""
+    lines, per_title = [], {}
+    for title, url in attachments[:MAX_ATTACHMENTS]:
+        lines.append(f'[Bijlage: {title}]')
+        body = []
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=40)
+            r.raise_for_status()
+            if len(r.content) <= MAX_DOC_BYTES and r.content[:4] == b'%PDF':
+                body = to_lines(pdf_text(r.content))
+        except Exception as exc:
+            body = [f'[Bijlage niet te lezen: {str(exc)[:60]}]']
+        lines += body
+        per_title[title] = body
+    return lines, per_title
+
 def check_documents(db):
     now_dt = datetime.datetime.now(datetime.timezone.utc)
     domains = tuple(d for cfg in GEMEENTEN.values() for d in cfg['domains'])
@@ -874,7 +931,10 @@ def check_documents(db):
     due.sort(key=lambda p: p[1].get('doc_date') or '', reverse=True)
     due.sort(key=lambda p: p[1].get('content_checked') or '')
     checked = failures = pdf_count = noscan = 0
+    started = datetime.datetime.now(datetime.timezone.utc)
     for key, item in due[:DOCS_PER_RUN]:
+        if (datetime.datetime.now(datetime.timezone.utc) - started).total_seconds() > DOC_TIME_BUDGET:
+            break  # tijd op; de rest komt de volgende run
         try:
             head = requests.get(item.get('file_url') or item['url'], headers=HEADERS, timeout=30, stream=True)
             if head.status_code in (404, 410):
@@ -929,7 +989,30 @@ def check_documents(db):
                             item['doc_date'], item['doc_date_label'] = found, label
                             if label == 'publicatiedatum':
                                 item['publication_date'] = found
-                    compare_text(key, item, to_lines(area.get_text('\n', strip=True)))
+                    # Bijlagen eerst ophalen: dat haalt ook de grootte-labels ('90 KB') uit de pagina.
+                    atts = report_attachments(page, item['url']) if '/Reports/Item/' in item['url'] else []
+                    lines = to_lines(area.get_text('\n', strip=True))
+                    if '/Reports/Item/' in item['url']:
+                        # Raadsvragen, informatienota's e.d.: de bijlagen (vraag, antwoordbrief, nota) meenemen.
+                        att_lines, per_title = attachment_lines(atts)
+                        lines += att_lines
+                        titles = [t for t, _ in atts]
+                        first_time = item.get('text_v') != ATT_V
+                        new_titles = [t for t in titles if t not in (item.get('bijlagen_titels') or [])]
+                        compare_text(key, item, lines,
+                                     kind='Bijlage toegevoegd' if new_titles and not first_time else 'Tekst gewijzigd',
+                                     baseline=first_time,
+                                     summary=('nieuwe bijlage: ' + ', '.join(new_titles)) if new_titles and not first_time else None)
+                        if new_titles and not first_time and item.get('changes') \
+                                and item['changes'][-1]['type'] == 'Bijlage toegevoegd':
+                            # Laat in de melding de eerste zinnen van de nieuwe bijlage zien (bijv. het antwoord).
+                            body = [l for t in new_titles for l in per_title.get(t, []) if len(l) > 25]
+                            item['changes'][-1]['added'] = [l[:220] for l in body[:3]]
+                            item['changes'][-1]['removed'] = []
+                        item.update(text_v=ATT_V, bijlagen_titels=titles,
+                                    bijlagen=[{'t': t, 'u': u} for t, u in atts[:MAX_ATTACHMENTS]])
+                    else:
+                        compare_text(key, item, lines)
                 else:
                     compare_file(item, hashlib.sha256(data).hexdigest(), content_type or 'onbekend bestandstype')
             item['content_checked'] = utc()
@@ -939,13 +1022,150 @@ def check_documents(db):
             failures += 1
             item['content_checked'] = utc()
             item['content_error'] = str(exc)[:120]
-    backlog = max(0, len(due) - DOCS_PER_RUN)
+    backlog = max(0, len(due) - checked - failures)
     set_status(db, 'algemeen', 'Documentcontrole', ok=failures == 0, count=checked, errors=failures,
                note=f'{checked} documenten gecontroleerd ({pdf_count} pdf), {len(tracked)} gevolgd (alle gemeenten), {backlog} wachten nog. '
                     'Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. '
                     'Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. '
                     'Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. '
-                    'KOOP-bekendmakingen via hun versiegegevens.' + (f' {noscan} pdf zonder tekst deze run.' if noscan else ''))
+                    'Bij raadsvragen en informatienota\u2019s worden ook de bijlagen gelezen (bijv. de antwoordbrief). '
+                    'KOOP-bekendmakingen via hun versienummer.' + (f' {noscan} pdf zonder tekst deze run.' if noscan else ''))
+
+# ---------------------------------------------------------------------------
+# Trefwoorden (trefwoorden.txt): directe melding als een trefwoord in een stuk opduikt
+# ---------------------------------------------------------------------------
+def norm(text):
+    """Kleine letters, zonder accenten en met enkele spaties: 'Financiële  Zaken' -> 'financiele zaken'."""
+    import unicodedata
+    text = unicodedata.normalize('NFKD', text or '')
+    text = ''.join(c for c in text if not unicodedata.combining(c)).lower()
+    return re.sub(r'\s+', ' ', text)
+
+def load_keywords():
+    """Regels uit trefwoorden.txt. 'medemblik: Wognum' geldt alleen voor die gemeente.
+    Geeft [(gemeente of None, trefwoord, regex)]."""
+    if not KEYWORDS_FILE.exists():
+        return []
+    out = []
+    for line in KEYWORDS_FILE.read_text(encoding='utf-8').splitlines():
+        line = line.split('#', 1)[0].strip()
+        if not line:
+            continue
+        gid = None
+        m = re.match(r'^(medemblik|koggenland|opmeer)\s*:\s*(.+)$', line, re.I)
+        if m:
+            gid, line = m.group(1).lower(), m.group(2).strip()
+        words = norm(line).split()
+        if not words:
+            continue
+        # Heel woord of hele woordgroep, zodat 'Opmeer' niet in 'Opmeerder' en 'kV' niet in 'kVA' matcht.
+        # Tussen de woorden mag spatie, streepje of niets staan: '380 kV' vindt ook '380kV' en '380-kV'.
+        pattern = re.compile(r'(?<![a-z0-9])' + r'[\s\-]*'.join(re.escape(w) for w in words) + r'(?![a-z0-9])')
+        out.append((gid, line, pattern))
+    return out
+
+def scan_keywords(db):
+    """Zoekt de trefwoorden in titel, omschrijving, locatie en de opgeslagen tekst (pdf/pagina/bijlagen).
+    Een nieuwe treffer wordt alleen gemeld bij een recent gevonden of recent gewijzigd stuk, zodat het
+    toevoegen van een trefwoord geen stortvloed aan meldingen over oude stukken geeft."""
+    keywords = load_keywords()
+    kw_sig = hashlib.sha256(repr([(g, k) for g, k, _ in keywords]).encode()).hexdigest()[:12]
+    now = datetime.datetime.now(datetime.timezone.utc)
+    recent = (now - datetime.timedelta(days=KEYWORD_FRESH_DAYS)).isoformat(timespec='seconds')
+    fresh_date = (now.date() - datetime.timedelta(days=KEYWORD_FRESH_DAYS)).isoformat()
+    # Een trefwoord dat er net bij is gekomen doet eerst een stille nulmeting: dan meldt hij alleen
+    # stukken die daarna binnenkomen of wijzigen, en niet alles wat er de afgelopen dagen al stond.
+    state = db.setdefault('state', {}).setdefault('keywords', {})
+    known = set(state.get('known') or [])
+    scanned = events = 0
+    for key, item in db['items'].items():
+        sig = f"{kw_sig}|{item.get('text_hash', '')}|{item.get('title', '')}|{item.get('excerpt', '')}"
+        if item.get('kw_sig') == sig:
+            continue
+        item['kw_sig'] = sig
+        relevant = [(g, k, p) for g, k, p in keywords if g in (None, item.get('gemeente'))]
+        if not relevant:
+            item.pop('kw_hits', None)
+            continue
+        scanned += 1
+        text = norm(' '.join(str(item.get(f) or '') for f in ('title', 'excerpt', 'locatie', 'rapport', 'meeting_title')))
+        path = text_path(key)
+        if item.get('text_hash') and path.exists():
+            text += ' ' + norm(path.read_text(encoding='utf-8'))
+        hits = sorted({k for g, k, p in relevant if p.search(text)})
+        if hits:
+            item['kw_hits'] = hits
+        else:
+            item.pop('kw_hits', None)
+        new = [h for h in hits if h not in (item.get('kw_notified') or [])]
+        quiet = [h for h in new if h not in known]  # nieuw trefwoord: nulmeting, geen melding
+        if quiet:
+            item['kw_notified'] = sorted(set(item.get('kw_notified') or []) | set(quiet))
+            new = [h for h in new if h in known]
+        if new:
+            is_recent = (item.get('first_seen', '') >= recent and (item.get('doc_date') or '9999') >= fresh_date) \
+                or (item.get('last_change') or '') >= recent
+            if is_recent:
+                # Stukje tekst rond de eerste treffer, voor de melding (zonder accenten-omzetting, dus leesbaar).
+                raw = clean(' '.join(str(item.get(f) or '') for f in ('title', 'excerpt', 'locatie')) + ' ' +
+                            (path.read_text(encoding='utf-8') if item.get('text_hash') and path.exists() else ''))
+                snippets = {}
+                for w in new:
+                    m = re.search(r'[\s\-]*'.join(re.escape(x) for x in w.split()), raw, re.I)
+                    if m:
+                        a, b = max(0, m.start() - 80), m.end() + 80
+                        frag = raw[a:b]
+                        if a > 0 and ' ' in frag[:20]:
+                            frag = frag[frag.index(' ') + 1:]  # niet midden in een woord beginnen
+                        if b < len(raw) and ' ' in frag[-20:]:
+                            frag = frag[:frag.rindex(' ')]
+                        snippets[w] = clean(frag)
+                item.setdefault('kw_events', []).append({'at': utc(), 'words': new, 'snippets': snippets})
+                item['kw_events'] = item['kw_events'][-5:]
+                events += 1
+            item['kw_notified'] = sorted(set(item.get('kw_notified') or []) | set(new))
+    state['known'] = sorted(k for _, k, _ in keywords)
+    set_status(db, 'algemeen', 'Trefwoorden', ok=True,
+               note=(f'{len(keywords)} trefwoord(en) in trefwoorden.txt: ' + ', '.join(k for _, k, _ in keywords) + '. '
+                     if keywords else 'Nog geen trefwoorden ingesteld (trefwoorden.txt). ')
+                    + f'Deze run {scanned} stukken doorzocht, {events} nieuwe treffer(s). '
+                      'Gezocht wordt in titel, omschrijving en de volledige tekst van pdf\u2019s, pagina\u2019s en bijlagen.')
+
+# ---------------------------------------------------------------------------
+# Kaart: adressen uit bekendmakingen omzetten naar coördinaten (PDOK Locatieserver)
+# ---------------------------------------------------------------------------
+ADRES = re.compile(r"([A-Z][A-Za-zÀ-ÿ'\.\- ]{2,40}?\s\d+\s?[A-Za-z]?(?:\s?[-/]\s?\d+[A-Za-z]?)?)\s*,?\s*(\d{4})\s?([A-Z]{2})\b")
+
+def geocode(db):
+    """Bekendmakingen zonder kaartpunt maar met een adres + postcode ('Kerkebuurt 149, 1647MD Berkhout')
+    opzoeken bij de gratis adreszoeker van de overheid (PDOK). Alleen als het gevonden adres in de
+    eigen gemeente ligt."""
+    todo = [v for v in db['items'].values() if v.get('source') == KOOP_SOURCE and not v.get('geo') and not v.get('geo_tried')]
+    todo.sort(key=lambda v: v.get('doc_date') or '', reverse=True)
+    found = 0
+    for item in todo[:GEOCODE_PER_RUN]:
+        item['geo_tried'] = True
+        m = ADRES.search(f"{item.get('locatie') or ''} | {item.get('title') or ''}")
+        if not m:
+            continue
+        street = re.split(r'[,:;]', m.group(1))[-1].strip()
+        try:
+            r = requests.get('https://api.pdok.nl/bzk/locatieserver/search/v3_1/free', headers=HEADERS, timeout=20,
+                             params={'q': f'{street} {m.group(2)}{m.group(3)}', 'fq': 'type:adres', 'rows': 1,
+                                     'fl': 'weergavenaam,centroide_ll,woonplaatsnaam,gemeentenaam'})
+            r.raise_for_status()
+            docs = r.json().get('response', {}).get('docs') or []
+        except Exception:
+            item['geo_tried'] = False  # netwerkfout: volgende run opnieuw
+            continue
+        if not docs or docs[0].get('gemeentenaam') != GEMEENTEN[item['gemeente']]['naam']:
+            continue
+        pm = re.match(r'POINT\(([\d.]+) ([\d.]+)\)', docs[0].get('centroide_ll', ''))
+        if pm:
+            item.update(geo=[round(float(pm.group(2)), 6), round(float(pm.group(1)), 6)], geo_src='PDOK',
+                        plaats=docs[0].get('woonplaatsnaam'))
+            found += 1
+    return found
 
 # ---------------------------------------------------------------------------
 # Migraties: oudere gegevens bijwerken zonder iets te wissen
@@ -990,6 +1210,18 @@ def migrate(db):
                 text_path(key).unlink()
             base = GEMEENTEN[item['gemeente']]['ibabs']
             item['file_url'] = base + '/Document/View/' + doc_id_from(item['url'])
+    # Correctie: 'Nieuwe versie bij KOOP' bij alleen een nieuwe wijzigingsdatum (zelfde versienummer) was ruis.
+    for item in db['items'].values():
+        if item.get('source') == KOOP_SOURCE and item.get('changes'):
+            def ruis(c):
+                m = re.match(r'versiegegevens gewijzigd: (\d+)\|.*?\u2192 (\d+)\|', c.get('summary', ''))
+                return c.get('type') == 'Nieuwe versie bij KOOP' and m and m.group(1) == m.group(2)
+            kept = [c for c in item['changes'] if not ruis(c)]
+            if len(kept) != len(item['changes']):
+                item['revisions'] = max(1, item.get('revisions', 1) - (len(item['changes']) - len(kept)))
+                item['changes'] = kept
+                item['last_change'] = kept[-1]['at'] if kept else None
+                item.pop('change_type', None)
     # Correctie: 'Beantwoord' werd ook gemeld bij de eerste keer dat een vraag in het overzicht stond.
     for item in db['items'].values():
         if item.get('kind') == 'overzichtsitem' and not item.get('report_seen') and item.get('changes'):
@@ -1013,32 +1245,7 @@ def migrate(db):
         elif '/Agenda/Index/' in item.get('url', '') and parse_nl_date(item.get('title', '')):
             item['doc_date'], item['doc_date_label'] = parse_nl_date(item['title']), 'vergaderdatum'
 
-# ---------------------------------------------------------------------------
-# Uitvoer voor het dashboard
-# ---------------------------------------------------------------------------
-PUBLIC_FIELDS = ('title', 'url', 'source', 'kind', 'doc_date', 'doc_date_label', 'first_seen', 'last_change',
-                 'revisions', 'changes', 'removed', 'besluit_status', 'koop_type', 'locatie', 'meeting_title',
-                 'agendapunt', 'rapport', 'antwoord_datum', 'portefeuillehouder', 'published_at')
-
-def public_item(item):
-    out = {k: item[k] for k in PUBLIC_FIELDS if item.get(k) not in (None, '', [])}
-    out['excerpt'] = (item.get('excerpt') or '')[:300]
-    if len(item.get('meetings') or []) > 1:
-        out['n_meetings'] = len(item['meetings'])
-    return out
-
-def write_outputs(db):
-    data_dir = DOCS / 'data'
-    data_dir.mkdir(parents=True, exist_ok=True)
-    for gid, cfg in GEMEENTEN.items():
-        status = dict(db['status'].get(gid, {}))
-        for name, reason in cfg['not_followed'].items():
-            status[name] = {'skip': True, 'note': reason}
-        payload = {'gemeente': gid, 'naam': cfg['naam'], 'generated': utc(), 'status': status,
-                   'algemeen': db['status'].get('algemeen', {}),
-                   'items': [public_item(v) for v in db['items'].values() if v.get('gemeente') == gid]}
-        (data_dir / f'{gid}.json').write_text(json.dumps(payload, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    (DOCS / 'index.html').write_text((ROOT / 'dashboard.html').read_text(encoding='utf-8'), encoding='utf-8')
+# De website (dashboard, zoekindex, kaart) wordt bij het publiceren gebouwd door build_site.py.
 
 def main():
     run_start = datetime.datetime.now(datetime.timezone.utc)
@@ -1056,7 +1263,9 @@ def main():
             collect_college_pdfs(db, gid, cfg['college_pdf_page'])
         collect_pages(db, gid)
     koop_publication_times(db)
+    geocode(db)
     check_documents(db)
+    scan_keywords(db)
     # Bovengrens: bewaar de meest recent actieve items.
     items = sorted(db['items'].items(), key=lambda kv: kv[1].get('last_change') or kv[1]['first_seen'], reverse=True)[:MAX_ITEMS]
     db['items'] = dict(items)
@@ -1067,7 +1276,6 @@ def main():
     except Exception as exc:
         set_status(db, 'algemeen', 'Meldingen', ok=False, error=str(exc)[:200])
     DB.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n')
-    write_outputs(db)
     for gid in GEMEENTEN:
         n = sum(1 for v in db['items'].values() if v.get('gemeente') == gid)
         print(f'{gid}: {n} items')

@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ docs/
+          git add data/
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Monitor update"
           # Heeft een andere run intussen iets opgeslagen? Dan eerst bijwerken en opnieuw proberen.

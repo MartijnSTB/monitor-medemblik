@@ -1,0 +1,18 @@
+# Trefwoorden voor de Gemeentemonitor
+#
+# Komt een trefwoord voor in een stuk (titel, omschrijving of de volledige tekst van een pdf,
+# pagina of bijlage), dan krijg je meteen een pushmelding met een stukje tekst eromheen,
+# en het staat bovenaan in de ochtendmail. Ook bij gewone vergunningen.
+#
+# - Eén trefwoord of woordgroep per regel. Hoofdletters en accenten maken niet uit.
+# - Hele woorden: 'Opmeer' vindt niet 'Opmeerder'. '380 kV' vindt ook '380kV'.
+# - Alleen voor één gemeente? Zet de gemeente ervoor: 'koggenland: Hensbroek'
+# - Regels met een # ervoor worden overgeslagen.
+#
+# Pas dit bestand aan op GitHub (potloodje rechtsboven); de volgende run gebruikt het meteen.
+# Een nieuw trefwoord meldt alleen stukken die daarna binnenkomen of wijzigen, niet alles wat
+# er al stond. Op het dashboard (filter 'Trefwoorden') zie je wel meteen alle treffers.
+
+380 kV
+asielopvang
+Bloesemgaerde

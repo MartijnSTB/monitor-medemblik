@@ -97,6 +97,32 @@
   .src .err{color:#a52d2d}
   footer{color:var(--muted);font-size:13px;padding:0 0 30px}
 
+  /* Trefwoorden, tekstzoeken, bijlagen */
+  .b.kw{background:#fff;color:#8a4c00;border:1.5px solid var(--orange)}
+  .snip{display:block;margin-top:5px;font-size:13px;color:var(--ink);background:#f3f7fb;border-left:3px solid var(--sky);padding:4px 8px;border-radius:0 6px 6px 0}
+  .snip mark{background:#ffe1b3;color:inherit;padding:0 1px;border-radius:2px}
+  .snip .via{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:1px}
+  .att{margin-top:6px;font-size:13px}
+  .att summary{cursor:pointer;color:var(--deep);font-weight:600}
+  .att a{display:block;color:var(--rodi);margin:2px 0 0 12px}
+
+  /* Weergave: lijst of kaart */
+  .view{display:flex;background:var(--ice);border-radius:10px;padding:3px}
+  .view button{font:600 14px var(--sans);border:0;background:transparent;color:var(--deep);padding:7px 12px;border-radius:8px;cursor:pointer}
+  .view button[aria-pressed=true]{background:#fff;box-shadow:0 1px 3px #0002}
+  .mapwrap{margin:20px 0 30px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .maptools{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--line);font-size:14px}
+  .maptools select{font:inherit;padding:6px 8px;border:1px solid #c9d6e2;border-radius:8px}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted)}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px;border:2px solid #fff;box-shadow:0 0 0 1px #0003}
+  #map{height:72vh;min-height:420px}
+  .mapnote{padding:8px 16px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+  .marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:rgba(0,109,172,.22)!important}
+  .marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div{background:#1b4e8e!important;color:#fff;font:700 12px var(--sans)}
+  .leaflet-popup-content{font:14px/1.4 var(--sans)}
+  .leaflet-popup-content a{color:var(--rodi);font-weight:600}
+  [hidden]{display:none!important}
+
   @media (max-width:1100px){.board{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media (max-width:700px){
     .wrap{padding:0 14px}
@@ -130,13 +156,18 @@
       </nav>
     </div>
     <div class="tools">
-      <input id="q" type="search" placeholder="Zoek in titels, bijvoorbeeld een straat of dorp" aria-label="Zoeken">
+      <input id="q" type="search" placeholder="Zoek in titels én in de tekst van stukken, bijv. een straat, dorp of naam" aria-label="Zoeken">
       <div class="chips" id="chips" role="group" aria-label="Filter">
         <button data-k="" aria-pressed="true">Alles</button>
         <button data-k="nieuw" aria-pressed="false">Nieuw</button>
         <button data-k="gewijzigd" aria-pressed="false">Gewijzigd</button>
         <button data-k="beantwoord" aria-pressed="false">Beantwoord</button>
         <button data-k="verwijderd" aria-pressed="false">Verdwenen</button>
+        <button data-k="trefwoord" aria-pressed="false" id="kwchip">Trefwoorden</button>
+      </div>
+      <div class="view" role="group" aria-label="Weergave">
+        <button data-v="lijst" aria-pressed="true">Lijst</button>
+        <button data-v="kaart" aria-pressed="false">Kaart</button>
       </div>
       <span class="summary" id="summary">Laden…</span>
     </div>
@@ -150,6 +181,25 @@
     <div class="strip" id="upcoming"></div>
   </section>
   <div class="board" id="board"></div>
+  <section class="mapwrap" id="mapwrap" hidden aria-label="Kaart van bekendmakingen">
+    <div class="maptools">
+      <label>Periode <select id="period">
+        <option value="7">afgelopen week</option>
+        <option value="30" selected>afgelopen 30 dagen</option>
+        <option value="90">afgelopen 3 maanden</option>
+        <option value="9999">alles vanaf 2026</option>
+      </select></label>
+      <span class="legend">
+        <span><i style="background:#006dac"></i>vergunning</span>
+        <span><i style="background:#5498cf"></i>melding</span>
+        <span><i style="background:#f18700"></i>verkeersbesluit</span>
+        <span><i style="background:#1b4e8e"></i>overig</span>
+      </span>
+      <span id="mapcount" style="margin-left:auto"></span>
+    </div>
+    <div id="map"></div>
+    <p class="mapnote">Bekendmakingen met een plek: het kaartpunt van KOOP zelf, of het adres uit de titel opgezocht via PDOK. Stukken zonder adres (bijv. verordeningen) staan niet op de kaart. Zoeken en filters werken ook hier.</p>
+  </section>
   <details class="status">
     <summary>Bronnen: wat wordt wel en niet gevolgd</summary>
     <div class="srcs" id="status"></div>
@@ -190,6 +240,7 @@ function kinds(x){
   if (x.last_change) t.push('gewijzigd');
   if (x.antwoord_datum) t.push('beantwoord');
   if (x.removed) t.push('verwijderd');
+  if (x.kw_hits) t.push('trefwoord');
   return t;
 }
 
@@ -200,6 +251,7 @@ function badges(x){
   if (k.includes('beantwoord')) out.push(`<span class="b ans">Beantwoord ${nl(x.antwoord_datum,{day:'numeric',month:'short'})}</span>`);
   if (k.includes('verwijderd')) out.push('<span class="b gone">Niet meer online</span>');
   if (k.includes('historisch')) out.push('<span class="b old">Historisch</span>');
+  (x.kw_hits || []).forEach(w => out.push(`<span class="b kw" title="Trefwoord uit trefwoorden.txt">${esc(w)}</span>`));
   if (x.besluit_status) out.push(`<span class="b">${esc(x.besluit_status)}</span>`);
   if (x.koop_type) out.push(`<span class="b">${esc(x.koop_type)}</span>`);
   return out.length ? `<span class="badges">${out.join('')}</span>` : '';
@@ -248,9 +300,78 @@ function meetLabel(x){
   return `<strong>${esc(soort)}</strong>${rest ? `<span class="sub">${esc(rest)}</span>` : ''}<small>${wanneer}</small>`;
 }
 
+function attachments(x){
+  if (!x.bijlagen || !x.bijlagen.length) return '';
+  return `<details class="att"><summary>Bijlagen (${x.bijlagen.length})</summary>${x.bijlagen.map(b =>
+    `<a href="${esc(b.u)}" target="_blank" rel="noopener">${esc(b.t)}</a>`).join('')}</details>`;
+}
+
 function item(x){
+  const viaText = SEARCH.hits && SEARCH.hits.has(x._i) && !titleMatch(x, SEARCH.q);
   return `<div class="it${x.last_change ? ' changed' : ''}">
-    <a class="t" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${timeLabel(x)}${meta(x)}${badges(x)}${changeBlock(x)}</div>`;
+    <a class="t" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${timeLabel(x)}${meta(x)}${badges(x)}`
+    + (viaText && x.tx ? `<span class="snip" data-id="${x.id}"><span class="via">Gevonden in de tekst</span>…</span>` : '')
+    + `${attachments(x)}${changeBlock(x)}</div>`;
+}
+
+// ---------------------------------------------------------------------------
+// Zoeken in de tekst van stukken. De zoekindex is per gemeente verdeeld op de eerste twee letters
+// (search/<gemeente>/<xx>.json: woord -> volgnummers). Alleen de benodigde stukjes worden geladen.
+// ---------------------------------------------------------------------------
+const SEARCH = {q: '', hits: null};
+const shardCache = {}, textCache = {};
+const norm = s => String(s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const qTokens = q => norm(q).match(/[a-z0-9]+/g)?.filter(t => t.length >= 3 || (/^\d+$/.test(t) && t.length >= 2)) || [];
+const titleMatch = (x, q) => !q || norm(x.title + ' ' + (x.excerpt || '') + ' ' + (x.locatie || '') + ' ' + (x.plaats || '')).includes(norm(q));
+
+async function shard(g, key){
+  const id = g + '/' + key;
+  if (!(id in shardCache)) {
+    shardCache[id] = fetch(`search/${g}/${key}.json?v=${encodeURIComponent(DATA.generated)}`)
+      .then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  }
+  return shardCache[id];
+}
+
+async function textSearch(q){
+  const toks = qTokens(q);
+  if (!toks.length) return null;
+  let result = null;
+  for (const t of toks) {
+    const words = await shard(DATA.gemeente, t.slice(0, 2));
+    const ids = new Set();
+    // Vanaf 4 tekens ook woorden die ermee beginnen: 'bloesem' vindt 'bloesemgaerde'.
+    for (const [w, list] of Object.entries(words)) {
+      if (w === t || (t.length >= 4 && w.startsWith(t))) list.forEach(i => ids.add(i));
+    }
+    result = result ? new Set([...result].filter(i => ids.has(i))) : ids;
+    if (!result.size) break;
+  }
+  return result;
+}
+
+// Tekstfragment rond de eerste treffer, met de zoekwoorden gemarkeerd.
+async function fillSnippets(){
+  const toks = qTokens(SEARCH.q);
+  for (const el of document.querySelectorAll('.snip[data-id]:not([data-done])')) {
+    el.dataset.done = 1;
+    const id = el.dataset.id;
+    if (!(id in textCache)) textCache[id] = fetch(`text/${id}.txt`).then(r => r.ok ? r.text() : '').catch(() => '');
+    const text = (await textCache[id]).replace(/\s+/g, ' ');
+    // Genormaliseerde tekst met verwijzing terug naar de oorspronkelijke posities.
+    let flat = '', map = [];
+    for (let i = 0; i < text.length; i++) { const n = norm(text[i]); for (let j = 0; j < n.length; j++) { flat += n[j]; map.push(i); } }
+    let pos = -1, len = 0;
+    for (const t of toks) { const re = new RegExp('(?<![a-z0-9])' + t); const m = re.exec(flat); if (m) { pos = m.index; len = t.length; break; } }
+    if (pos < 0) { el.remove(); continue; }
+    const a = map[pos], b = map[Math.min(pos + len, map.length) - 1] + 1;
+    const from = Math.max(0, a - 90), to = Math.min(text.length, b + 110);
+    let frag = esc(text.slice(from, to));
+    for (const t of toks) {
+      frag = frag.replace(new RegExp('(?<![\\p{L}\\p{N}])(' + t.split('').map(c => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\p{M}*').join('') + '[\\p{L}\\p{N}]*)', 'giu'), '<mark>$1</mark>');
+    }
+    el.innerHTML = `<span class="via">Gevonden in de tekst</span>${from > 0 ? '…' : ''}${frag}${to < text.length ? '…' : ''}`;
+  }
 }
 
 function columnHTML(col, rows){
@@ -270,9 +391,11 @@ function columnHTML(col, rows){
 
 function render(){
   if (!DATA) return;
-  const q = $('q').value.trim().toLowerCase();
-  const match = x => (!filter || kinds(x).includes(filter)) && (!q || (x.title+' '+(x.excerpt||'')+' '+(x.locatie||'')).toLowerCase().includes(q));
+  const q = $('q').value.trim();
+  const match = x => (!filter || kinds(x).includes(filter))
+    && (!q || titleMatch(x, q) || (SEARCH.q === q && SEARCH.hits && SEARCH.hits.has(x._i)));
   const items = DATA.items.filter(match);
+  CURRENT = items;
 
   const up = DATA.items.filter(x => x.kind === 'vergadering' && x.doc_date >= TODAY).sort((a,b) => a.doc_date.localeCompare(b.doc_date));
   $('upcoming').innerHTML = up.length ? up.slice(0,12).map(x => `<a class="meet" href="${esc(x.url)}" target="_blank" rel="noopener">
@@ -280,9 +403,66 @@ function render(){
       <span>${meetLabel(x)}</span></a>`).join('')
     : `<p class="empty">${DATA.gemeente === 'koggenland' ? 'De vergaderingen van de Koggenlandse raad worden niet gevolgd (zie Bronnen).' : 'Geen vergaderingen gepland in de komende weken.'}</p>`;
 
-  $('board').innerHTML = COLS.map(c => columnHTML(c, items.filter(c.test))).join('');
   const changed = items.filter(x => x.last_change).length;
-  $('summary').textContent = `${items.length} stukken${changed ? `, waarvan ${changed} gewijzigd` : ''}`;
+  const viaText = q && SEARCH.hits ? items.filter(x => !titleMatch(x, q)).length : 0;
+  $('summary').textContent = `${items.length} stukken` + (viaText ? `, waarvan ${viaText} via de tekst` : '')
+    + (changed ? `, ${changed} gewijzigd` : '') + (q && SEARCH.q !== q && qTokens(q).length ? ' (tekst wordt doorzocht…)' : '');
+  const kwN = DATA.items.filter(x => x.kw_hits).length;
+  $('kwchip').textContent = 'Trefwoorden' + (kwN ? ` (${kwN})` : '');
+  if (VIEW === 'kaart') { renderMap(); return; }
+  $('board').innerHTML = COLS.map(c => columnHTML(c, items.filter(c.test))).join('');
+  fillSnippets();
+}
+
+// ---------------------------------------------------------------------------
+// Kaart (Leaflet + OpenStreetMap), pas geladen als je de kaart opent.
+// ---------------------------------------------------------------------------
+let VIEW = 'lijst', CURRENT = [], MAP = null, CLUSTER = null;
+const MAPCOLOR = t => /verkeer/i.test(t || '') ? '#f18700' : /melding/i.test(t || '') ? '#5498cf' : /vergunning/i.test(t || '') ? '#006dac' : '#1b4e8e';
+function loadAsset(tag, attrs){
+  return new Promise((ok, fail) => { const el = document.createElement(tag); Object.assign(el, attrs); el.onload = ok; el.onerror = fail; document.head.appendChild(el); });
+}
+async function ensureLeaflet(){
+  if (window.L && L.markerClusterGroup) return;
+  const cdn = 'https://cdnjs.cloudflare.com/ajax/libs/';
+  await Promise.all([
+    loadAsset('link', {rel: 'stylesheet', href: cdn + 'leaflet/1.9.4/leaflet.min.css'}),
+    loadAsset('link', {rel: 'stylesheet', href: cdn + 'leaflet.markercluster/1.5.3/MarkerCluster.min.css'}),
+    loadAsset('link', {rel: 'stylesheet', href: cdn + 'leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css'}),
+  ]);
+  await loadAsset('script', {src: cdn + 'leaflet/1.9.4/leaflet.min.js'});
+  await loadAsset('script', {src: cdn + 'leaflet.markercluster/1.5.3/leaflet.markercluster.min.js'});
+}
+async function renderMap(){
+  try { await ensureLeaflet(); } catch (e) { $('mapcount').textContent = 'De kaart kon niet worden geladen. Controleer je internetverbinding en probeer opnieuw.'; return; }
+  if (!MAP) {
+    MAP = L.map('map', {scrollWheelZoom: true}).setView([52.7, 5.0], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(MAP);
+  }
+  setTimeout(() => MAP.invalidateSize(), 50);
+  if (CLUSTER) MAP.removeLayer(CLUSTER);
+  CLUSTER = L.markerClusterGroup({maxClusterRadius: 40, showCoverageOnHover: false});
+  const days = +$('period').value;
+  const since = new Date(Date.now() - days * 864e5).toISOString().slice(0, 10);
+  const pts = CURRENT.filter(x => x.geo && (!x.doc_date || x.doc_date >= since));
+  pts.forEach(x => {
+    const m = L.circleMarker(x.geo, {radius: 7, weight: 2, color: '#fff', fillColor: MAPCOLOR(x.koop_type), fillOpacity: .95});
+    m.bindPopup(`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a><br>`
+      + `<small>${x.doc_date ? nl(x.doc_date) : ''}${x.koop_type ? ' · ' + esc(x.koop_type) : ''}${x.plaats ? ' · ' + esc(x.plaats) : ''}</small>`);
+    CLUSTER.addLayer(m);
+  });
+  MAP.addLayer(CLUSTER);
+  $('mapcount').textContent = `${pts.length} op de kaart`;
+  if (pts.length) MAP.fitBounds(L.latLngBounds(pts.map(x => x.geo)).pad(0.15), {maxZoom: 15});
+}
+function setView(v){
+  VIEW = v;
+  try { localStorage.setItem('gm-view', v); } catch (e) {}
+  document.querySelectorAll('.view button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v ? 'true' : 'false'));
+  $('board').hidden = v === 'kaart';
+  $('mapwrap').hidden = v !== 'kaart';
+  render();
 }
 
 function renderStatus(){
@@ -307,6 +487,7 @@ async function load(g){
       const r = await fetch(`data/${g}.json?t=${Date.now()}`);
       if (!r.ok) throw new Error('HTTP ' + r.status);
       const d = await r.json();
+      d.items.forEach((x, i) => x._i = i);  // volgnummer zoals in de zoekindex
       d.items.sort((a,b) => (!!b.doc_date - !!a.doc_date) || (b.doc_date||'').localeCompare(a.doc_date||'') || (b.published_at||b.first_seen||'').localeCompare(a.published_at||a.first_seen||''));
       cache[g] = d;
     }
@@ -318,7 +499,9 @@ async function load(g){
   $('title').textContent = 'Gemeentemonitor ' + DATA.naam;
   document.title = 'Gemeentemonitor ' + DATA.naam;
   renderStatus();
-  render();
+  SEARCH.q = ''; SEARCH.hits = null;
+  if ($('q').value.trim()) $('q').dispatchEvent(new Event('input'));
+  setView(VIEW);
 }
 
 $('chips').addEventListener('click', e => {
@@ -331,7 +514,21 @@ $('board').addEventListener('click', e => {
   const b = e.target.closest('.more'); if (!b) return;
   shown[b.dataset.col] = (shown[b.dataset.col] || PAGE) + PAGE; render();
 });
-let timer; $('q').addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => { shown = {}; render(); }, 150); });
+let timer; $('q').addEventListener('input', () => {
+  clearTimeout(timer);
+  timer = setTimeout(async () => {
+    shown = {};
+    const q = $('q').value.trim();
+    render();  // titels meteen
+    if (!qTokens(q).length) { SEARCH.q = q; SEARCH.hits = null; render(); return; }
+    const hits = await textSearch(q);
+    if ($('q').value.trim() !== q) return;  // intussen verder getypt
+    SEARCH.q = q; SEARCH.hits = hits; render();
+  }, 250);
+});
+document.querySelector('.view').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setView(b.dataset.v); });
+$('period').addEventListener('change', () => renderMap());
+try { if (localStorage.getItem('gm-view') === 'kaart') VIEW = 'kaart'; } catch (e) {}
 const current = () => (['medemblik','koggenland','opmeer'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'medemblik');
 window.addEventListener('hashchange', () => load(current()));
 load(current());
