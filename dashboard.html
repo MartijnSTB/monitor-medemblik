@@ -304,6 +304,7 @@ function badges(x){
   if (k.includes('verwijderd')) out.push('<span class="b gone">Niet meer online</span>');
   if (k.includes('historisch')) out.push('<span class="b old">Historisch</span>');
   (x.kw_hits || []).forEach(w => out.push(`<span class="b kw" title="Trefwoord uit trefwoorden.txt">${esc(w)}</span>`));
+  if (x.media_match === 'tekst') out.push(`<span class="b old" title="De plaatsnaam staat niet in de kop, maar wel in het artikel. Kan ook een bijzin of kader zijn.">plaats alleen in de tekst</span>`);
   if (x.besluit_status) out.push(`<span class="b">${esc(x.besluit_status)}</span>`);
   if (x.koop_type) out.push(`<span class="b">${esc(x.koop_type)}</span>`);
   return out.length ? `<span class="badges">${out.join('')}</span>` : '';

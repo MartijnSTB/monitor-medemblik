@@ -18,7 +18,7 @@ DOCS = ROOT / 'docs'
 PUBLIC_FIELDS = ('title', 'url', 'source', 'kind', 'doc_date', 'doc_date_label', 'first_seen', 'last_change',
                  'revisions', 'changes', 'removed', 'besluit_status', 'koop_type', 'locatie', 'meeting_title',
                  'agendapunt', 'rapport', 'antwoord_datum', 'portefeuillehouder', 'published_at', 'geo', 'plaats',
-                 'kw_hits', 'bijlagen', 'media_bron')
+                 'kw_hits', 'bijlagen', 'media_bron', 'media_match')
 
 def public_item(key, item):
     out = {k: item[k] for k in PUBLIC_FIELDS if item.get(k) not in (None, '', [])}

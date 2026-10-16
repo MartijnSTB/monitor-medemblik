@@ -484,7 +484,8 @@ def media_plaats(title, places):
     'Noord-Scharwoude' telt niet (koppelteken ervoor)."""
     surname = False
     for place in places:
-        for m in re.finditer(r'(?<![\w-])' + re.escape(place) + r'(?![\w-])', title, re.I):
+        # Geen koppelteken ervóór (Noord-Scharwoude), wel erna (Hoogwoud-Oost).
+        for m in re.finditer(r'(?<![\w-])' + re.escape(place) + r'(?!\w)', title, re.I):
             if place.casefold() not in MEDIA_DUBBELZINNIG:
                 return 'ja'
             prev = re.search(r'(\S+)\s+$', title[:m.start()])
@@ -537,7 +538,8 @@ def collect_media(db, gid, places):
                     item = db['items'][key] = new_item(gid, title, link, MEDIA_SOURCE, kind='media')
                     added += 1
                 kept += 1
-                item.update(title=title, media_bron=bron, last_seen=today())
+                # 'tekst': de plaats staat niet in de kop maar wel in het artikel (regionaal medium).
+                item.update(title=title, media_bron=bron, media_match='kop' if hit == 'ja' else 'tekst', last_seen=today())
                 try:
                     dt = email.utils.parsedate_to_datetime(clean(it.findtext('pubDate'))).astimezone(NL)
                     item.update(doc_date=dt.date().isoformat(), doc_date_label='publicatiedatum',
