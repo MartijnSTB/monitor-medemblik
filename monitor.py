@@ -427,6 +427,10 @@ def collect_college_pdfs(db, gid, page_url):
             if item is None:
                 item = db['items'][key] = new_item(gid, title, href, source, kind=kind)
                 added += 1
+            # Geen datum in de linktekst? Dan uit de opgeslagen titel of de bestandsnaam
+            # ('agenda_collegevergadering_16_december_2025.pdf').
+            date = date or parse_nl_date(item['title']) or parse_nl_date(
+                urllib.parse.unquote(href.split('?')[0].rsplit('/', 1)[-1]).replace('_', ' ').replace('-', ' '))
             item.update(url=href, file_url=href, doc_date=date, doc_date_label='vergaderdatum college',
                         last_seen=today(),
                         excerpt=('Besluitenlijst' if kind == 'besluitenlijst' else 'Agenda') + ' van het college van B&W (pdf)')

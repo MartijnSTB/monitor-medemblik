@@ -445,7 +445,7 @@ function columnHTML(col, rows){
   const n = shown[col.id] || PAGE;
   let html = '', last = null;
   rows.slice(0, n).forEach(x => {
-    const d = x._d === TODAY ? 'Vandaag' : x._d === YESTERDAY ? 'Gisteren' : nl(x._d,{weekday:'short',day:'numeric',month:'long'});
+    const d = !x._d ? 'Zonder datum' : x._d === TODAY ? 'Vandaag' : x._d === YESTERDAY ? 'Gisteren' : nl(x._d,{weekday:'short',day:'numeric',month:'long'});
     if (d !== last) { html += `<div class="day">${d}</div>`; last = d; }
     html += item(x);
   });
@@ -586,7 +586,8 @@ async function load(g){
         // Wanneer verscheen het stuk? De publicatiedatum; of de dag dat de monitor het vond als de bron
         // een latere datum geeft (stukken voor een vergadering van volgende maand staan dan niet bovenaan).
         const f = x.first_seen ? dayNL(x.first_seen) : '';
-        x._d = x.published_at ? dayNL(x.published_at) : (!x.doc_date ? f : (!f || x.doc_date <= f ? x.doc_date : f));
+        // Zonder enige datum (sommige Woo-pagina's): onderaan, onder 'Zonder datum'.
+        x._d = x.published_at ? dayNL(x.published_at) : (!x.doc_date ? '' : (!f || x.doc_date <= f ? x.doc_date : f));
         x._t = new Date(x.published_at || x.first_seen || 0).getTime();
       });
       d.items.sort((a,b) => (b._d||'').localeCompare(a._d||'') || b._t - a._t);
