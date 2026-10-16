@@ -1,11 +1,18 @@
 import requests,re
+from bs4 import BeautifulSoup
 H={'User-Agent':'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
-q='c.product-area=="officielepublicaties" AND dt.creator=="Medemblik" AND dt.available>=2026-10-14'
-r=requests.get('https://repository.overheid.nl/sru',params={'operation':'searchRetrieve','version':'2.0','query':q,'maximumRecords':'6'},headers=H,timeout=60)
-for rec in re.findall(r'<sru:recordData>(.*?)</sru:recordData>',r.text,re.S):
-    f=lambda t:(re.search(r'<[^>]*:'+t+r'[^>]*>([^<]+)<',rec) or [None,None])[1]
-    print(f('identifier'),'| available',f('available'),'| issued',f('issued'),'| modified',f('modified'),'| wijzigingWork',f('datumTijdstipWijzigingWork'),'| timestamp',f('timestamp'))
-r=requests.get('https://zoek.officielebekendmakingen.nl/'+re.search(r'(gmb-\d{4}-\d+)',r.text).group(1)+'.html',headers=H,timeout=40)
-t=re.sub(r'<[^>]+>',' ',r.text);i=t.find('Datum publicatie');print('SITE:',re.sub(r'\s+',' ',t[i:i+200]))
-x=requests.get('https://www.medemblik.nl/nieuws.rss',headers=H,timeout=30).text
-print('MED RSS pubDates:',re.findall(r'<pubDate>\s*([^<]+?)\s*</pubDate>',x)[:3])
+for base,item in [('https://medemblik.bestuurlijkeinformatie.nl','/Reports/Item/86f6c6f9-f9e5-4d5e-bd3f-44207ef9625b'),('https://medemblik.bestuurlijkeinformatie.nl','/Reports/Item/a543e9b3-cb50-4e9c-be31-94f8fedebefe'),('https://opmeer.bestuurlijkeinformatie.nl','/Reports/Item/69d484ea-32e9-4eaf-b020-c8e1004c402d')]:
+    r=requests.get(base+item,headers=H,timeout=40);s=BeautifulSoup(r.text,'html.parser')
+    links=[(a.get_text(' ',strip=True)[:60],a['href']) for a in s.select('a[href*="/Reports/Document/"]')]
+    print('\n##',item,r.status_code,'bijlagen:',len(links))
+    for t,h in links[:4]:
+        did=re.search(r'documentId=([0-9a-f-]+)',h).group(1)
+        for cand in (base+'/Document/View/'+did, base+h):
+            x=requests.get(cand,headers=H,timeout=40,stream=True);head=x.raw.read(5);x.close()
+            print('  ',t,'|',cand[-70:],x.status_code,x.headers.get('Content-Type'),head)
+q='c.product-area=="officielepublicaties" AND dt.creator=="Medemblik" AND dt.available>=2026-10-01'
+r=requests.get('https://repository.overheid.nl/sru',params={'operation':'searchRetrieve','version':'2.0','query':q,'maximumRecords':'200'},headers=H,timeout=60)
+recs=re.findall(r'<sru:recordData>(.*?)</sru:recordData>',r.text,re.S)
+pts=[re.findall(r'locatiepunt>([^<]+)<',x) for x in recs]
+print('\nKOOP records',len(recs),'met locatiepunt',sum(1 for p in pts if p),'meerdere',sum(1 for p in pts if len(p)>1),'voorbeeld',[p for p in pts if p][:3])
+print('zonder punt types:',[re.findall(r'type[^>]*>([^<]+)<',x)[:1] for x,p in zip(recs,pts) if not p][:8])
