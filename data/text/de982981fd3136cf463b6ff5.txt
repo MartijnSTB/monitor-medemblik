@@ -20,8 +20,2118 @@ Portefeuillehouder
 Wethouder Tesselaar
 Bijlage(s)
 Raadsinformatiebrief Huisvesting De Wereldweide
-895 KB
 Bijlage 1 - Rapport LP BO 2025 def
-461 KB
 Bijlage 2 - Kavelkaart plangrens
-389 KB
+[Bijlage: Raadsinformatiebrief Huisvesting De Wereldweide]
+[Bijlage niet te lezen: cryptography>=3.1 is required for AES algorithm]
+[Bijlage: Bijlage 1 - Rapport LP BO 2025 def]
+Leerlingenprognose en
+ruimtebehoefte
+basisonderwijs 2025
+Gemeente Opmeer
+In opdracht van de gemeente Opmeer, september 2025
+© 2025 xxllnc Sociaal - Alle rechten voorbehouden.
+Niets uit deze uitgave mag worden overgenomen, verveel -
+voudigd, opgeslagen in een geautomatiseerd gegevensbestand,
+of openbaar worden gemaakt in enige vorm of op enige wijze,
+hetzij elektronisch, mechanisch, door fotokopieën, opnamen of
+enige andere manier, zonder voorafgaande toestemming van de
+uitgever en bronvermelding.
+Aan deze uitgave is uiterste zorg besteed, desondanks kan niet
+worden ingestaan voor de feitelijke juistheid of volledigheid van
+de opgenomen gegevens.
+In geen geval kan er een juridische
+basis aan worden ontleend.
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+Inhoudsopgave
+1.
+Samenvatting ................................ ................................ ................................ ........
+1
+2.
+Inleiding ................................ ................................ ................................ ................
+2
+2.1 Doelstelling en werkwijze ................................ ................................ .........................
+2
+2.2 Totstandkoming en opzet rapportage ................................ ................................ .........
+2
+3.
+Beschrijving van de gevolgde werkwijze ................................ ................................ .....
+3
+3.1 Werkwijze binnen G4PRO ................................ ................................ .........................
+3
+3.2 GBPRO: prognosemethodiek ................................ ................................ .....................
+3
+3.3 G4PRO : de uitsplitsing naar herkomstgebieden ................................ ..........................
+4
+3.4 Uitgangspunten voor de gemeente Opmeer ................................ ................................
+4
+4.
+De prognose van de basisgeneratie ................................ ................................ ...........
+5
+4.1 Grafische weergave van de basisgeneratieprognose ................................ .....................
+5
+5.
+De leerlingenprognoses ................................ ................................ ...........................
+6
+5.1 Gehanteerde methodieken ................................ ................................ .......................
+6
+5.2 Prognoseresultaten in tabelvorm ................................ ................................ ...............
+6
+Bijlagen
+Bijlage 1 Begrippen en afkortingen
+Bijlage 2 Tabellen bevolkingsprognose woningvoorraad
+Bijlage 3 Tabellen leerlingenprognose
+Bijlage 4 Tabellen ruimtebehoefte (les en gym)
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025 1
+1.
+Samenvatting
+Ten behoeve van het onderwijsbeleid op gemeentelijk niveau is voor de gemeente Opmeer een
+prognose opgesteld van leerlingenaantallen voor de periode 2025 tot en met 2045.
+In de ramingen
+van leerlingenaantallen zijn twee ontwikkelingen verwerkt.
+Dit zijn de trends in de omvang van de
+basisgeneratie in de afzonderlijke gebieden van de gemeente Opmeer en de schoolkeuze.
+Bij de
+opzet van de prognoses zijn cijfers verwerkt met een uitsplitsing van leerlingen naar
+herkomstgebied.
+Bij de berekeningen voor de periode 2025-2045 is gebruik gemaakt van het softwarepakket G4PRO.
+Dit programma voldoet aan het “Programma voor het opstellen van leerlingenprognoses” van de
+VNG.
+De onderstaande tabel geeft een samenvatting van de belangrijkste resultaten.
+In de overzichten
+zijn de leerlingenaantallen van peildatum 1 oktober 2024 weergegeven onder 2025.
+Instnr Naam 2024 2025 2026 2027 2028 2029 2030 2035 2040 2045
+07AO00 Petrus Canisiusschool 65 64 66 69 70 71 72 75 70 70
+07VI00 De Stek 461 469 491 508 516 510 512 521 493 475
+09AK00 Basisschool St Wulfram 179 177 188 195 199 203 213 245 263 267
+11HN00 De Adelaar 109 118 119 123 126 129 136 157 169 172
+11TI00 De Akker 61 67 74 75 76 76 76 80 76 74
+12DL00 Obs de Dubbele Punt 31 27 28 25 27 30 30 35 34 31
+Totaal 978 993 966 995 1014 1019 1039 1113 1105 1089
+Het aantal leerlingen in de gemeente Opmeer was op de telling van 1 -10-2024 993, dat is meer dan
+de telling van 1 -10-2023.
+De verwachting is dat het aantal leerlingen op de korte termijn gaat
+stijgen als gevolg van de ontwikkelingen in voornamelijk Hoogwoud.
+Op het einde van de periode
+zijn er rond de 1 00 leerlingen meer dan op de telling van 1 -10-2024.
+De ontwikkeling van de ruimtebehoefte en de ontwikkeling uren gym per school zijn weergegeven in
+bijlage 4.
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025 2
+2.
+Inleiding
+2.1 Doelstelling en werkwijze
+Ten behoeve van het onderwijsbeleid op gemeentelijk niveau is voor de gemeente Opmeer een
+prognose opgesteld van leerlingenaantallen.
+Deze langetermijnprognose beslaat de periode 2025 tot
+en met 2045 en heeft betrekking op 6 basisscholen.
+Deze scholen betrekken leerli ngen uit
+5 gebieden.
+In de resultaten van de langetermijnprognose zijn ongewogen leerlingaantallen verwerkt.
+Het doel
+van de prognoses is het verkrijgen van inzicht in het toekomstig verloop van het aantal leerlingen.
+Dit dient onder andere ter onderbouwing van beslissingen ten aanzien van de toekomstige
+onderwijshuisvesting.
+2.2 Totstandkoming en opzet rapportage
+De prognose is totstandgekomen in samenwerking met de opdrachtgever.
+De gemeente Opmeer
+leverde de gegevens van bevolking en leerlingenaantallen in de voorafgaande periode, de
+woningvoorraad en de eventuele wijzigingen hierin.
+De cijfers van de leerlingen zijn uitgesplitst naar
+herkomstgebied.
+De opbouw van het rapport is als volgt.
+Hoofdstuk 3 beschrijft in het kort de gehanteerde
+methodiek.
+De resultaten van de prognose van de basisgeneraties zijn weergegeven in hoofdstuk 4
+en de uitkomsten van de leerlingenprognose in hoofdstuk 5.
+Bijlage 1 bevat een overzicht van begrippen en afkortingen die in dit rapport voorkomen.
+Bijlage 2 bevat de tabel van de prognose van de basisgeneraties per gebiedsdeel
+Bijlage 3 toont per school de ontwikkeling van de leerlingenaantallen gedurende de prognoseperiode
+Bijlage 4 geeft per school de ontwikkeling van de ruimtebehoefte les en gym weer t/m 2045
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025 3
+3.
+Beschrijving van de gevolgde werkwijze
+3.1 Werkwijze binnen G4PRO
+Bij de berekeningen is gebruik gemaakt van het softwarepakket G4PRO.
+Dit programma voldoet aan
+het “Programma voor het opstellen van leerlingenprognoses” van de VNG.
+Het berekenen van
+toekomstige aantallen leerlingen gebeurt binnen G4PRO in de drie hieronder beschreven stappen.
+3.1.1 Herkomstgebieden
+De eerste stap is het definiëren van de herkomstgebieden waaruit een school leerlingen betrekt.
+In
+de praktijk wordt voor afbakening van herkomstgebieden veelal de CBS wijk - en buurtindeling
+gevolgd.
+Per school wordt het voedingsgebied berekend.
+Het voedingsgebied is “die verzameling herkomstgebieden (wijken) van waaruit minimaal 70% van
+de leerlingen afkomstig is”.
+Elke school heeft dus een eigen berekend voedingsgebied op basis van
+de waargenomen herkomst van de leerlingen.
+3.1.2 Basisgeneratie
+De omvang van de basisgeneratie is vastgesteld op de 4 tot en met 11 -jarigen plus 30 procent van
+de 12-jarigen.
+Het overige deel van de 12 -jarigen stroomt door naar een school voor voortgezet
+onderwijs.
+De prognose van de basisgeneratie vloeit voort uit de demografische ontwikkelingen die
+zich in het verleden voordeden en de aannames over de trends hierin.
+Meer hierover leest u
+hieronder in paragraaf 3.2 GBPRO: prognosemethodiek.
+3.1.3 Deelname en belangstelling
+Vervolgens wordt het aantal leerlingen per school geprognosticeerd.
+De leerlingenprognose is
+gebaseerd op de herkomst van leerlingen.
+Voor elk herkomstgebied wordt de belangstelling voor de
+school berekend.
+Op deze wijze ontstaat in de prognose inzicht in de toestroom van leerlingen per
+herkomstgebied.
+Tenslotte wordt gecontroleerd op de deelname aan het basisonderwijs vanuit elk
+gebiedsdeel; deze zal in de praktijk rond de 95% liggen (5% naar het speciaal onderwijs).
+3.2 GBPRO: prognosemethodiek
+Het GBPRO model is een cohort -componentenmodel en een cohort -survivalmodel 0-99 jarigen.
+Voor de gemeente als geheel wordt volgens de cohort -componenten methode gerekend.
+Hierbij
+worden de aantallen vestigers en vertrekkers, het aantal overledenen en het aantal geboorten
+berekend.
+Dit gebeurt door middel van de aangenomen kansen naar leeftijd en geslacht voor de hele
+gemeente.
+Deze berekende aantallen worden van de beginbevolking afgetrokken of erbij opgeteld.
+De vestigers worden toebedeeld op basis van de aanwezige ruimte op de woningmarkt.
+Na de prognose voor de gemeente als geheel wordt de prognose per gebiedsdeel opgesteld.
+Deze
+prognose wordt gemaakt met de cohort -survival methode.
+Er wordt per leeftijd geanalyseerd wat het
+aantal inwoners is op 1 -1 van een bepaald jaar.
+Deze worden vergeleken met de aantallen van de
+leeftijd plus 1 van het jaar daarop.
+De verkregen factor is de mutatiefactor.
+Op basis van de
+mutatiefactoren wordt vervolgens een aanname voor de toekomst gemaakt.
+De verdeling over de
+verschillende gebiedsdelen is afhankelijk van het aantal geboorten per gebiedsdeel en de
+woningvoorraad per gebiedsdeel.
+Na afronding van de prognose per gebiedsdeel worden beide
+prognoses naast elkaar gelegd en worden de prognoses van de gebiedsdelen gecorrigeerd naar de
+aantallen van de prognose voor de gemeente als geheel.
+Vervolgens wordt per gebiedsdeel de prognose van de kinderen van 0 t/m 19 jaar ingevoerd in het
+G4pro leerlingenprognosemodel waar de 0 t/m 19 jarigen worden omgezet in basisgeneraties zijnde
+doelgroepen voor het basisonderwijs en het voortgezet onderwijs.
+In hoofdstuk 4 is de prognose van
+de basisgeneratie 4 -12 jarigen grafisch in beeld gebracht.
+In bijlage 2 is per gebiedsdeel de
+prognose van de basisgeneratie in een tabel weergegeven.
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025 4
+3.3 G4PRO : de uitsplitsing naar herkomstgebieden
+3.3.1 Inzicht in de specifieke situatie
+Wanneer prognoses voor meerdere scholen gewenst zijn ontstaat er behoefte aan een overzicht van
+de ontwikkelingen per deelgebied.
+Dit overzicht kan worden verstoord doordat voedingsgebieden
+elkaar deels overlappen.
+Dit probleem wordt ondervangen door prognoses van de basisgeneratie te
+maken voor afzonderlijke wijken of herkomstgebieden.
+Zo is een totaaloverzicht mogelijk waarin de
+uitkomsten per deelgebied optelbaar zijn, zonder dat er dubbeltellingen optreden.
+Een ander
+voordeel is dat de opslagfactor voor leerlingen die niet uit de gemeente zelf komen overbodig, of
+hooguit gering zal zijn.
+Als voorwaarde om wijken of gebieden (herkomstgebieden) binnen het voedingsgebied van een
+school te laten vallen, geldt dat minimaal 70 procent van de leerlingen van een school hieruit
+afkomstig is.
+Bijvoorbeeld: als van een school 25 procent van de leerlingen afkomstig is uit buurt A,
+30 procent uit buurt B, en 20 procent uit buurt C, vormen de drie gebieden gezamenlijk het
+voedingsgebied van deze school.
+3.3.2 Leerlingenprognoses en gebiedgerelateerde belangstelling
+De volgende stap is het prognosticeren van afzonderlijke leerlingenaantallen.
+De prognose van de
+basisgeneratie van de relevante herkomstgebieden van een school worden hierbij gekoppeld aan de
+waargenomen belangstelling voor de school vanuit de herkomstgebieden.
+Cijfers uit het recente
+verleden dienen hierbij als referentiemateriaal.
+In de analyse van de belangstelling voor een school van de 4 tot en met 12 -jarigen kan ook de
+belangstelling van de 4 - en 5-jarigen meegenomen worden indien deze gegevens aanwezig zijn.
+Zo
+kan een nauwkeurigere onderbouwing worden gegeven van de belangstelling voor de toekomst.
+3.4 Uitgangspunten voor de gemeente Opmeer
+De gemeente Opmeer is ten behoeve van de leerlingenprognoses verdeeld in onderstaande
+gebieden:
+01 Aartswoud
+02 De Weere
+03 Hoogwoud
+04 Opmeer
+05 Spanbroek
+Gebiedsindeling: Opmeer
+Voor alle basisscholen in de gemeente Opmeer is de belangstelling en deelname berekend en
+geanalyseerd.
+De teldatumgegevens van 1 oktober 2024 vormen de basis voor de uiteindelijke
+leerlingenprognose.
+In de volgende twee hoofdstukken worden de prognoses toegelicht.
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025 5
+4.
+De prognose van de basisgeneratie
+In dit hoofdstuk worden de prognoses van de basisgeneratie van de gebieden gepresenteerd.
+Een
+tabel met de prognose van de basisgeneratie 4 -12 jarigen per gebiedsdeel is te vinden in bijlage 2.
+De prognose van de basisgener atie is het uitgangspunt voor de in hoofdstuk 5 beschreven
+leerlingenprognoses.
+4.1 Grafische weergave van de basisgeneratieprognose
+In de onderstaande figuur zijn de resultaten te zien van de prognose van de basisgeneratie (aantal
+4- 12 jarigen) voor de verschillende gebieden.
+De doelgroep voor basisonderwijs in de gemeente Opmeer gaat de komende jaren toenemen.
+In de
+afgelopen jaren zijn al behoorlijk wat woningen gerealiseerd.
+Gemeente breed komen er ruim 800
+woningen bij tot aan 2040.
+De doelgroep stijg richting de 1160 kinderen op termijn.
+De groei wordt
+voornamelijk gerealiseerd in Hoogwoud.
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025 6
+5.
+De leerlingenprognoses
+In dit hoofdstuk worden de leerlingenprognoses van de verschillende scholen gepresenteerd en
+besproken.
+Een uitdraai van de tabellen behorende bij de leerlingenprognoses is te vinden in bijlage
+3.
+5.1 Gehanteerde methodieken
+Bij het opstellen van de leerlingenprognose is gebruik gemaakt van he rkomstgegevens naar
+voedingsgebied.
+Het belangstellingspercentage wordt gedefinieerd als “het percentage van de basisgen eratie uit een
+herkomstgebied dat naar een bepaalde school gaat”.
+De belangstellingspe rcentages zijn gebaseerd
+op de leerlingentelli ngen van 1-10-2024.
+Naast de leerlingenprognose lange termijn is er ook rekening gehouden met de resultaten uit de
+korte termijnprognose.
+De korte termijnprognose kijkt naar de interne ontwikkeling binnen een
+school; de bevolkingsontwikkeling speelt een minder grote rol.
+5.2 Prognoseresultaten in tabelvorm
+Een totaaloverzicht van de waargenomen en het berekende aantal leerlingen per school is te vinden
+in tabel op de volgende pagina.
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025 7
+Waargenomen en geschatte aantallen leerlingen per school
+De tellingen van 1 oktober 2024 zijn weergegeven onder 2025
+Instnr Naam 2024 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040 2041 2042 2043 2044 2045
+07AO00 Petrus Canisiusschool 65 64 66 69 70 71 72 75 74 76 74 75 74 73 73 72 70 70 70 68 68 70
+07VI00 De Stek 461 469 491 508 516 510 512 514 520 525 532 521 517 517 508 498 493 485 483 481 479 475
+09AK00 Basisschool St Wulfram 179 177 188 195 199 203 213 221 228 238 241 245 248 252 258 260 263 266 267 268 268 267
+11HN00 De Adelaar 109 118 119 123 126 129 136 141 146 152 154 157 159 162 165 168 169 171 172 173 173 172
+11TI00 De Akker 61 67 74 75 76 76 76 77 78 79 81 80 80 79 79 77 76 75 75 74 74 74
+12DL00 Obs de Dubbele Punt 31 27 28 25 27 30 30 33 36 36 36 35 35 36 35 35 34 35 33 33 32 31
+Totaal 978 993 966 995 1014 1019 1039 1061 1082 1106 1118 1113 1113 1119 1118 1110 1105 1102 1100 1097 1094 1089
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025
+Bijlage 1 Begrippen en afkortingen
+Begrippen- en afkortingenlijst voor de leerlingenoverzichten
+Afkorting Toelichting
+bl% Belangstellingspercentage per wijk
+#bg Aantal kinderen in de betreffende basisgeneratie in die wijk, of het aantal 4 en
+5 jarigen, BG_0405, of het aantal 4 tot en met 11 jarigen plus 30% van de 12
+jarigen
+#ll Het aantal leerlingen uit de wijk
+ZZ-BRT Optelling van de buurten die niet tot het directe voedingsgebied van de school
+behoren.
+Opslag Opslagpercentage voor leerlingen waarvan geen herkomstgegevens
+beschikbaar waren en/of afkomstig uit gemeenten die niet in de prognose van
+de basisgeneraties zijn meegenomen
+Totaal BG_0405 Aantal 4 en 5 jarigen op de instelling
+Totaal BG_0412 Totaal aantal kinderen op de instelling
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025
+Bijlage 2 Tabel bevolkingsprognose en woningvoorraad
+Doelgroep per wijk
+Wijknr Wijknaam 2024 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040 2041 2042 2043 2044 2045
+01 Aartswoud 39 40 43 38 41 46 46 50 55 54 54 53 53 54 52 52 51 52 49 49 48 46
+02 De Weere 53 47 49 53 55 56 57 61 59 61 59 60 59 57 57 56 53 53 53 51 51 53
+03 Hoogwoud 280 306 310 322 330 337 356 371 383 400 405 413 419 427 437 443 448 454 456 458 459 457
+04 Opmeer 167 192 188 186 190 188 187 191 196 197 203 203 202 201 200 196 192 189 189 187 186 187
+05 Spanbroek 408 420 434 455 462 457 459 459 462 468 471 459 455 455 446 437 433 426 424 423 421 416
+Totaal 947 1005 1024 1054 1078 1084 1105 1132 1155 1180 1192 1188 1188 1194 1192 1184 1177 1174 1171 1168 1165 1159
+Totale bevolking per wijk
+Wijknr Wijknaam 2024 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040 2041 2042 2043 2044 2045
+01 Aartswoud 464 463 497 471 500 528 564 591 621 610 606 591 592 589 587 588 582 594 580 582 572 566
+02 De Weere 843 833 846 853 835 840 848 840 839 840 835 827 819 812 806 812 804 797 807 798 800 796
+03 Hoogwoud 3940 3943 3952 3969 4063 4221 4382 4544 4663 4778 4750 4833 4917 5020 5109 5198 5281 5364 5359 5342 5317 5291
+04 Opmeer 2140 2319 2312 2309 2288 2267 2245 2230 2223 2222 2228 2194 2189 2182 2174 2167 2170 2155 2160 2166 2164 2153
+05 Spanbroek 4823 4938 4974 4947 4907 4852 4829 4804 4780 4770 4780 4727 4717 4691 4673 4641 4629 4604 4612 4596 4573 4554
+Totaal 12210 12496 12581 12549 12593 12708 12868 13009 13126 13220 13199 13172 13234 13294 13349 13406 13466 13514 13518 13484 13426 13360
+Woningvoorraad per wijk
+Wijknr Wijknaam 2024 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040 2041 2042 2043 2044 2045
+01 Aartswoud 178 177 181 181 193 205 217 228 237 237 237 237 237 237 237 237 237 237 237 237 237 237
+02 De Weere 345 357 359 364 367 370 373 375 375 375 375 375 375 375 375 375 375 375 375 375 375 375
+03 Hoogwoud 1697 1696 1699 1703 1756 1829 1902 1974 2032 2082 2082 2132 2182 2232 2282 2332 2382 2432 2432 2432 2432 2432
+04 Opmeer 924 1048 1048 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051 1051
+05 Spanbroek 1995 2072 2072 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073 2073
+Totaal 5139 5350 5359 5372 5440 5528 5616 5701 5768 5818 5818 5868 5918 5968 6018 6068 6118 6168 6168 6168 6168 6168
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025
+Bijlage 3 Tabellen leerlingenprognose
+De prognosetabellen staan op volgorde van brinnummer van de schoo l
+17.12.2025 1Pagina:20:44:35
+Prognose - Lange Termijn - BO
+BO2025 Laatst waargenomen cijferAannamecode:
+Generatiecode
+Petrus Canisiusschool07AO00
+1663 BA
+Vekenweg, 4
+DE WEERE
+Buurt 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040
+02 BG_0405 71,4
+10,0
+14
+De Weere 71,4
+10,7
+15
+71,4
+12,1
+17
+71,4
+10,7
+15
+71,4
+10,7
+15
+71,4
+11,4
+16
+71,4
+12,1
+17
+71,4
+12,1
+17
+71,4
+11,4
+16
+71,4
+11,4
+16
+71,4
+11,4
+16
+71,4
+10,7
+15
+71,4
+10,0
+14
+71,4
+10,0
+14
+71,4
+9,3
+13
+71,4
+10,0
+14
+bl%
+#bg
+#ll
+BG_0412 78,7
+37,0
+47
+78,7
+38,6
+49
+78,7
+41,7
+53
+78,7
+43,3
+55
+78,7
+44,1
+56
+78,7
+44,9
+57
+78,7
+48,0
+61
+78,7
+46,4
+59
+78,7
+48,0
+61
+78,7
+46,4
+59
+78,7
+47,2
+60
+78,7
+46,4
+59
+78,7
+44,9
+57
+78,7
+44,9
+57
+78,7
+44,1
+56
+78,7
+41,7
+53
+bl%
+#bg
+#ll
+09AL BG_0405 11,1
+4,0
+36
+Abbekerk\Lambertschaag 11,1
+4,4
+40
+11,1
+4,6
+41
+11,1
+4,3
+39
+11,1
+4,6
+41
+11,1
+4,6
+41
+11,1
+4,7
+42
+11,1
+4,7
+42
+11,1
+4,7
+42
+11,1
+4,7
+42
+11,1
+4,8
+43
+11,1
+4,8
+43
+11,1
+4,8
+43
+11,1
+4,9
+44
+11,1
+4,9
+44
+11,1
+5,0
+45
+bl%
+#bg
+#ll
+BG_0412 11,9
+20,0
+168
+11,9
+20,5
+172
+11,9
+19,8
+166
+11,9
+19,4
+163
+11,9
+19,5
+164
+11,9
+19,5
+164
+11,9
+19,4
+163
+11,9
+19,9
+167
+11,9
+20,2
+170
+11,9
+20,1
+169
+11,9
+20,5
+172
+11,9
+20,4
+171
+11,9
+20,6
+173
+11,9
+20,8
+175
+11,9
+21,0
+176
+11,9
+21,0
+176
+bl%
+#bg
+#ll
+ZZ-BRT BG_0405 2,2
+1,0
+45
+Dynamische Buurten 2,2
+0,9
+41
+2,2
+0,9
+40
+2,2
+1,0
+47
+2,2
+1,0
+44
+2,2
+1,0
+47
+2,2
+1,2
+53
+2,2
+1,2
+52
+2,2
+1,1
+51
+2,2
+1,1
+50
+2,2
+1,0
+47
+2,2
+1,0
+46
+2,2
+1,0
+46
+2,2
+1,0
+45
+2,2
+1,0
+45
+2,2
+1,0
+44
+bl%
+#bg
+#ll
+BG_0412 0,5
+1,0
+192
+0,5
+1,0
+188
+0,5
+1,0
+186
+0,5
+1,0
+190
+0,5
+1,0
+188
+0,5
+1,0
+187
+0,5
+1,0
+191
+0,5
+1,0
+196
+0,5
+1,0
+197
+0,5
+1,1
+203
+0,5
+1,1
+203
+0,5
+1,1
+202
+0,5
+1,0
+201
+0,5
+1,0
+200
+0,5
+1,0
+196
+0,5
+1,0
+192
+bl%
+#bg
+#ll
+Totaal
+0(+opslag %)
+Opslag 2,0
+Subtotaal BG_0405
+BG_0412
+2,1 2,3 2,1 2,1 2,2 2,4 2,4 2,2 2,2 2,2 2,2 2,1 2,1 2,0 2,1
+18,1 19,9 18,1 18,4 19,2 20,4 20,4 19,4 19,4 19,4 18,7 17,9 18,0 17,2 18,1
+BG_0405
+BG_0412
+BG_0405
+BG_0412
+13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00
+#ll
+17,0
+%
+%
+66,3 68,9 70,2 71,2 72,1 75,4 74,2 76,3 74,5 75,9 74,9 73,3 73,6 72,9 70,2 64,0
+16,0 17,6 16,0 16,3 17,0 18,0 18,0 17,2 17,2 17,2 16,5 15,8 15,9 15,2 16,0 15,0
+60,1 62,5 63,7 64,6 65,4 68,4 67,3 69,2 67,6 68,8 67,9 66,5 66,7 66,1 63,7 58,0
+6,0 6,2 6,4 6,5 6,6 6,7 7,0 6,9 7,1 6,9 7,1 7,0 6,8 6,9 6,8 6,5
+10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00
+66,0 68,0 70,0 71,0 72,0 75,0 74,0 76,0 74,0 75,0 74,0 73,0 73,0 72,0 70,0 64,0
+#ll
+17.12.2025 2Pagina:20:44:35
+Prognose - Lange Termijn - BO
+BO2025 Laatst waargenomen cijferAannamecode:
+Generatiecode
+De Stek07VI00
+1715 EP
+Veldstralaan, 4
+SPANBROEK
+Buurt 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040
+04 BG_0405 68,8
+31,0
+45
+Opmeer 68,8
+28,2
+41
+68,8
+27,6
+40
+68,8
+32,4
+47
+68,8
+30,3
+44
+68,8
+32,4
+47
+68,8
+36,5
+53
+68,8
+35,8
+52
+68,8
+35,1
+51
+68,8
+34,4
+50
+68,8
+32,4
+47
+68,8
+31,7
+46
+68,8
+31,7
+46
+68,8
+31,0
+45
+68,8
+31,0
+45
+68,8
+30,3
+44
+bl%
+#bg
+#ll
+BG_0412 55,7
+107,0
+192
+55,4
+104,3
+188
+55,2
+102,8
+186
+55,0
+104,6
+190
+54,8
+103,1
+188
+54,8
+102,6
+187
+54,8
+104,8
+191
+54,8
+107,5
+196
+54,8
+108,0
+197
+54,8
+111,3
+203
+54,8
+111,3
+203
+54,8
+110,8
+202
+54,8
+110,2
+201
+54,8
+109,7
+200
+54,8
+107,5
+196
+54,8
+105,3
+192
+bl%
+#bg
+#ll
+05 BG_0405 85,1
+86,0
+101
+Spanbroek 85,1
+93,7
+110
+85,1
+109,0
+128
+85,1
+104,7
+123
+85,1
+95,4
+112
+85,1
+99,6
+117
+85,1
+103,9
+122
+85,1
+100,5
+118
+85,1
+97,9
+115
+85,1
+96,2
+113
+85,1
+93,7
+110
+85,1
+91,1
+107
+85,1
+92,0
+108
+85,1
+90,3
+106
+85,1
+88,6
+104
+85,1
+86,9
+102
+bl%
+#bg
+#ll
+BG_0412 82,6
+347,0
+420
+85,6
+371,6
+434
+85,6
+389,6
+455
+85,6
+395,6
+462
+85,6
+391,3
+457
+85,6
+393,0
+459
+85,6
+393,0
+459
+85,6
+395,6
+462
+85,6
+400,7
+468
+85,6
+403,3
+471
+85,6
+393,0
+459
+85,6
+389,6
+455
+85,6
+389,6
+455
+85,6
+381,9
+446
+85,6
+374,2
+437
+85,6
+370,7
+433
+bl%
+#bg
+#ll
+ZZ-BRT BG_0405 1,5
+1,0
+66
+Dynamische Buurten 1,5
+1,1
+71
+1,5
+1,2
+79
+1,5
+1,3
+85
+1,5
+1,3
+85
+1,5
+1,4
+91
+1,5
+1,5
+96
+1,5
+1,5
+97
+1,5
+1,5
+100
+1,5
+1,5
+97
+1,5
+1,5
+98
+1,5
+1,5
+100
+1,5
+1,5
+102
+1,5
+1,6
+106
+1,5
+1,6
+108
+1,5
+1,7
+110
+bl%
+#bg
+#ll
+BG_0412 1,0
+5,0
+474
+1,0
+5,1
+482
+1,0
+5,1
+488
+1,0
+5,2
+493
+1,0
+5,3
+501
+1,0
+5,5
+520
+1,0
+5,6
+534
+1,0
+5,8
+550
+1,0
+6,0
+570
+1,0
+6,1
+574
+1,0
+6,2
+585
+1,0
+6,2
+590
+1,0
+6,3
+600
+1,0
+6,5
+612
+1,0
+6,5
+619
+1,0
+6,6
+624
+bl%
+#bg
+#ll
+Totaal
+0(+opslag %)
+Opslag 4,0
+Subtotaal BG_0405
+BG_0412
+4,1 4,6 4,6 4,3 4,5 4,8 4,6 4,5 4,4 4,3 4,2 4,2 4,1 4,1 4,0
+127,1 142,4 143,0 131,3 137,9 146,7 142,4 139,0 136,5 131,9 128,5 129,4 127,0 125,3 122,9
+BG_0405
+BG_0412
+BG_0405
+BG_0412
+3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00
+#ll
+122,0
+%
+%
+491,4 508,3 516,4 510,5 512,0 514,3 519,9 525,9 532,0 521,6 517,6 517,1 508,9 498,8 493,1 468,9
+123,0 137,8 138,4 127,0 133,4 141,9 137,8 134,5 132,1 127,6 124,3 125,2 122,9 121,2 118,9 118,0
+481,0 497,5 505,4 499,7 501,1 503,4 508,9 514,7 520,7 510,5 506,6 506,1 498,1 488,2 482,6 459,0
+9,9 10,4 10,8 11,0 10,8 10,9 10,9 11,0 11,2 11,3 11,1 11,0 11,0 10,8 10,6 10,5
+2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00 2,00
+491,0 508,0 516,0 510,0 512,0 514,0 519,0 525,0 532,0 521,0 517,0 517,0 508,0 498,0 493,0 468,0
+#ll
+17.12.2025 3Pagina:20:44:35
+Prognose - Lange Termijn - BO
+BO2025 Laatst waargenomen cijferAannamecode:
+Generatiecode
+Basisschool St Wulfram09AK00
+1718 AN
+Burg Heymansstraat, 8
+HOOGWOUD
+Buurt 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040
+03 BG_0405 51,5
+34,0
+66
+Hoogwoud 51,5
+36,6
+71
+51,5
+40,7
+79
+51,5
+43,8
+85
+51,5
+43,8
+85
+51,5
+46,9
+91
+51,5
+49,5
+96
+51,5
+50,0
+97
+51,5
+51,5
+100
+51,5
+50,0
+97
+51,5
+50,5
+98
+51,5
+51,5
+100
+51,5
+52,5
+102
+51,5
+54,6
+106
+51,5
+55,6
+108
+51,5
+56,7
+110
+bl%
+#bg
+#ll
+BG_0412 50,9
+156,0
+306
+53,9
+167,3
+310
+53,9
+173,8
+322
+53,9
+178,1
+330
+53,9
+181,9
+337
+53,9
+192,2
+356
+53,9
+200,3
+371
+53,9
+206,7
+383
+53,9
+215,9
+400
+53,9
+218,6
+405
+53,9
+222,9
+413
+53,9
+226,2
+419
+53,9
+230,5
+427
+53,9
+235,9
+437
+53,9
+239,1
+443
+53,9
+241,8
+448
+bl%
+#bg
+#ll
+04 BG_0405 6,6
+3,0
+45
+Opmeer 6,6
+2,7
+41
+6,6
+2,7
+40
+6,6
+3,1
+47
+6,6
+2,9
+44
+6,6
+3,1
+47
+6,6
+3,5
+53
+6,6
+3,5
+52
+6,6
+3,4
+51
+6,6
+3,3
+50
+6,6
+3,1
+47
+6,6
+3,1
+46
+6,6
+3,1
+46
+6,6
+3,0
+45
+6,6
+3,0
+45
+6,6
+2,9
+44
+bl%
+#bg
+#ll
+BG_0412 4,6
+9,0
+192
+4,5
+8,5
+188
+4,3
+8,2
+186
+4,2
+8,1
+190
+4,1
+7,8
+188
+4,1
+7,7
+187
+4,1
+7,9
+191
+4,1
+8,1
+196
+4,1
+8,1
+197
+4,1
+8,4
+203
+4,1
+8,4
+203
+4,1
+8,3
+202
+4,1
+8,3
+201
+4,1
+8,3
+200
+4,1
+8,1
+196
+4,1
+7,9
+192
+bl%
+#bg
+#ll
+ZZ-BRT BG_0405 1,8
+2,0
+109
+Dynamische Buurten 1,8
+2,2
+118
+1,8
+2,5
+136
+1,8
+2,4
+133
+1,8
+2,2
+122
+1,8
+2,3
+126
+1,8
+2,4
+133
+1,8
+2,4
+131
+1,8
+2,3
+127
+1,8
+2,3
+125
+1,8
+2,2
+121
+1,8
+2,2
+119
+1,8
+2,2
+119
+1,8
+2,1
+117
+1,8
+2,1
+115
+1,8
+2,1
+113
+bl%
+#bg
+#ll
+BG_0412 1,9
+10,0
+507
+1,9
+10,4
+526
+1,9
+10,8
+546
+1,9
+11,0
+558
+1,9
+11,0
+559
+1,9
+11,1
+562
+1,9
+11,2
+570
+1,9
+11,4
+576
+1,9
+11,5
+583
+1,9
+11,5
+584
+1,9
+11,3
+572
+1,9
+11,2
+567
+1,9
+11,2
+566
+1,9
+10,9
+555
+1,9
+10,7
+545
+1,9
+10,6
+537
+bl%
+#bg
+#ll
+Totaal
+0(+opslag %)
+Opslag 1,0
+Subtotaal BG_0405
+BG_0412
+1,0 1,1 1,2 1,2 1,3 1,4 1,4 1,4 1,4 1,4 1,4 1,4 1,5 1,5 1,5
+42,5 47,0 50,5 50,1 53,6 56,8 57,3 58,6 57,0 57,2 58,2 59,2 61,2 62,2 63,2
+BG_0405
+BG_0412
+BG_0405
+BG_0412
+3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00 3,00
+#ll
+40,0
+%
+%
+188,3 195,0 199,4 202,9 213,4 221,9 228,7 238,1 241,2 245,3 248,5 252,8 258,0 260,8 263,2 177,0
+41,5 45,9 49,3 48,9 52,3 55,4 55,9 57,2 55,6 55,8 56,8 57,8 59,7 60,7 61,7 39,0
+186,2 192,8 197,2 200,7 211,0 219,4 226,2 235,5 238,5 242,6 245,7 250,0 255,1 257,9 260,3 175,0
+2,0 2,1 2,2 2,2 2,2 2,4 2,5 2,5 2,6 2,7 2,7 2,8 2,8 2,9 2,9 2,9
+1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00 1,00
+188,0 195,0 199,0 202,0 213,0 221,0 228,0 238,0 241,0 245,0 248,0 252,0 258,0 260,0 263,0 177,0
+#ll
+17.12.2025 4Pagina:20:44:35
+Prognose - Lange Termijn - BO
+BO2025 Laatst waargenomen cijferAannamecode:
+Generatiecode
+De Adelaar11HN00
+1718 AN
+Burg Heymansstraat, 8
+HOOGWOUD
+Buurt 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040
+03 BG_0405 34,8
+23,0
+66
+Hoogwoud 34,8
+24,7
+71
+34,8
+27,5
+79
+34,8
+29,6
+85
+34,8
+29,6
+85
+34,8
+31,7
+91
+34,8
+33,5
+96
+34,8
+33,8
+97
+34,8
+34,8
+100
+34,8
+33,8
+97
+34,8
+34,2
+98
+34,8
+34,8
+100
+34,8
+35,5
+102
+34,8
+36,9
+106
+34,8
+37,6
+108
+34,8
+38,3
+110
+bl%
+#bg
+#ll
+BG_0412 34,9
+107,0
+306
+34,9
+108,4
+310
+34,9
+112,6
+322
+34,9
+115,4
+330
+34,9
+117,8
+337
+34,9
+124,5
+356
+34,9
+129,7
+371
+34,9
+133,9
+383
+34,9
+139,9
+400
+34,9
+141,6
+405
+34,9
+144,4
+413
+34,9
+146,5
+419
+34,9
+149,3
+427
+34,9
+152,8
+437
+34,9
+154,9
+443
+34,9
+156,7
+448
+bl%
+#bg
+#ll
+ZZ-BRT BG_0405 6,7
+4,0
+59
+Dynamische Buurten 6,7
+3,8
+56
+6,7
+3,9
+57
+6,7
+4,2
+62
+6,7
+4,0
+59
+6,7
+4,3
+63
+6,7
+4,7
+70
+6,7
+4,7
+69
+6,7
+4,5
+67
+6,7
+4,5
+66
+6,7
+4,3
+63
+6,7
+4,1
+61
+6,7
+4,1
+60
+6,7
+4,0
+59
+6,7
+3,9
+58
+6,7
+3,9
+58
+bl%
+#bg
+#ll
+BG_0412 2,9
+7,0
+239
+2,9
+6,9
+237
+2,9
+7,0
+239
+2,9
+7,2
+245
+2,9
+7,1
+244
+2,9
+7,1
+244
+2,9
+7,4
+252
+2,9
+7,5
+255
+2,9
+7,6
+258
+2,9
+7,7
+262
+2,9
+7,7
+263
+2,9
+7,6
+261
+2,9
+7,6
+258
+2,9
+7,5
+257
+2,9
+7,4
+252
+2,9
+7,2
+245
+bl%
+#bg
+#ll
+Totaal
+0(+opslag %)
+Opslag 0,0
+Subtotaal BG_0405
+BG_0412
+0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0
+28,5 31,4 33,8 33,6 36,0 38,2 38,5 39,3 38,3 38,5 38,9 39,6 40,9 41,5 42,2
+BG_0405
+BG_0412
+BG_0405
+BG_0412
+0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00
+#ll
+27,0
+%
+%
+119,3 123,7 126,9 129,2 136,2 141,9 146,3 152,6 154,5 157,4 159,5 162,4 165,9 167,9 169,6 118,0
+28,5 31,4 33,8 33,6 36,0 38,2 38,5 39,3 38,3 38,5 38,9 39,6 40,9 41,5 42,2 27,0
+115,3 119,6 122,6 124,9 131,6 137,1 141,4 147,5 149,3 152,1 154,1 156,9 160,3 162,3 163,9 114,0
+4,0 4,0 4,1 4,3 4,3 4,6 4,8 4,9 5,1 5,2 5,3 5,4 5,5 5,6 5,6 5,7
+4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00 4,00
+119,0 123,0 126,0 129,0 136,0 141,0 146,0 152,0 154,0 157,0 159,0 162,0 165,0 167,0 169,0 118,0
+#ll
+17.12.2025 5Pagina:20:44:35
+Prognose - Lange Termijn - BO
+BO2025 Laatst waargenomen cijferAannamecode:
+Generatiecode
+De Akker11TI00
+1716 VA
+Meibloem, 46
+OPMEER
+Buurt 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040
+04 BG_0405 31,1
+14,0
+45
+Opmeer 31,1
+12,8
+41
+31,1
+12,4
+40
+31,1
+14,6
+47
+31,1
+13,7
+44
+31,1
+14,6
+47
+31,1
+16,5
+53
+31,1
+16,2
+52
+31,1
+15,9
+51
+31,1
+15,6
+50
+31,1
+14,6
+47
+31,1
+14,3
+46
+31,1
+14,3
+46
+31,1
+14,0
+45
+31,1
+14,0
+45
+31,1
+13,7
+44
+bl%
+#bg
+#ll
+BG_0412 21,8
+42,0
+192
+25,8
+48,6
+188
+25,8
+48,1
+186
+25,8
+49,2
+190
+25,8
+48,6
+188
+25,8
+48,4
+187
+25,8
+49,4
+191
+25,8
+50,7
+196
+25,8
+51,0
+197
+25,8
+52,5
+203
+25,8
+52,5
+203
+25,8
+52,3
+202
+25,8
+52,0
+201
+25,8
+51,8
+200
+25,8
+50,7
+196
+25,8
+49,7
+192
+bl%
+#bg
+#ll
+05 BG_0405 6,9
+7,0
+101
+Spanbroek 6,9
+7,6
+110
+6,9
+8,9
+128
+6,9
+8,5
+123
+6,9
+7,8
+112
+6,9
+8,1
+117
+6,9
+8,5
+122
+6,9
+8,2
+118
+6,9
+8,0
+115
+6,9
+7,8
+113
+6,9
+7,6
+110
+6,9
+7,4
+107
+6,9
+7,5
+108
+6,9
+7,3
+106
+6,9
+7,2
+104
+6,9
+7,1
+102
+bl%
+#bg
+#ll
+BG_0412 5,0
+21,0
+420
+5,0
+21,7
+434
+5,0
+22,8
+455
+5,0
+23,1
+462
+5,0
+22,9
+457
+5,0
+23,0
+459
+5,0
+23,0
+459
+5,0
+23,1
+462
+5,0
+23,4
+468
+5,0
+23,6
+471
+5,0
+23,0
+459
+5,0
+22,8
+455
+5,0
+22,8
+455
+5,0
+22,3
+446
+5,0
+21,9
+437
+5,0
+21,7
+433
+bl%
+#bg
+#ll
+ZZ-BRT BG_0412 0,3
+1,0
+306
+Dynamische Buurten 0,3
+1,0
+310
+0,3
+1,1
+322
+0,3
+1,1
+330
+0,3
+1,1
+337
+0,3
+1,2
+356
+0,3
+1,2
+371
+0,3
+1,3
+383
+0,3
+1,3
+400
+0,3
+1,3
+405
+0,3
+1,4
+413
+0,3
+1,4
+419
+0,3
+1,4
+427
+0,3
+1,4
+437
+0,3
+1,4
+443
+0,3
+1,5
+448
+bl%
+#bg
+#ll
+Totaal
+0(+opslag %)
+Opslag 2,0
+Subtotaal BG_0405
+BG_0412
+1,9 2,0 2,2 2,0 2,1 2,3 2,3 2,2 2,2 2,1 2,0 2,0 2,0 2,0 1,9
+22,3 23,3 25,3 23,5 24,8 27,3 26,7 26,1 25,6 24,3 23,7 23,8 23,3 23,2 22,7
+BG_0405
+BG_0412
+BG_0405
+BG_0412
+10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00 10,00
+#ll
+23,0
+%
+%
+74,6 75,3 76,8 76,0 76,0 77,0 78,6 79,2 81,0 80,5 80,0 79,7 79,0 77,4 76,3 67,0
+20,4 21,3 23,1 21,5 22,7 25,0 24,4 23,9 23,4 22,2 21,7 21,8 21,3 21,2 20,8 21,0
+71,3 72,0 73,4 72,6 72,6 73,6 75,1 75,7 77,4 76,9 76,5 76,2 75,5 74,0 72,9 64,0
+3,0 3,3 3,3 3,4 3,4 3,4 3,4 3,5 3,5 3,6 3,6 3,5 3,5 3,5 3,4 3,4
+5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00 5,00
+74,0 75,0 76,0 76,0 76,0 77,0 78,0 79,0 81,0 80,0 80,0 79,0 79,0 77,0 76,0 67,0
+#ll
+17.12.2025 6Pagina:20:44:36
+Prognose - Lange Termijn - BO
+BO2025 Laatst waargenomen cijferAannamecode:
+Generatiecode
+Obs de Dubbele Punt12DL00
+1719 AR
+Koetenburg, 14
+AARTSWOUD
+Buurt 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040
+01 BG_0405 50,0
+4,0
+8
+Aartswoud 50,0
+4,0
+8
+50,0
+4,0
+8
+50,0
+5,0
+10
+50,0
+5,0
+10
+50,0
+4,5
+9
+50,0
+5,5
+11
+50,0
+6,5
+13
+50,0
+6,0
+12
+50,0
+6,0
+12
+50,0
+5,5
+11
+50,0
+6,0
+12
+50,0
+5,5
+11
+50,0
+5,5
+11
+50,0
+5,5
+11
+50,0
+5,5
+11
+bl%
+#bg
+#ll
+BG_0412 55,0
+22,0
+40
+55,0
+23,7
+43
+55,0
+20,9
+38
+55,0
+22,6
+41
+55,0
+25,3
+46
+55,0
+25,3
+46
+55,0
+27,5
+50
+55,0
+30,3
+55
+55,0
+29,7
+54
+55,0
+29,7
+54
+55,0
+29,2
+53
+55,0
+29,2
+53
+55,0
+29,7
+54
+55,0
+28,6
+52
+55,0
+28,6
+52
+55,0
+28,1
+51
+bl%
+#bg
+#ll
+ZZ-BRT BG_0412 0,4
+2,0
+498
+Dynamische Buurten 0,4
+2,0
+498
+0,4
+2,0
+508
+0,4
+2,1
+520
+0,4
+2,1
+525
+0,4
+2,2
+543
+0,4
+2,3
+562
+0,4
+2,3
+579
+0,4
+2,4
+597
+0,4
+2,4
+608
+0,4
+2,5
+616
+0,4
+2,5
+621
+0,4
+2,5
+628
+0,4
+2,6
+637
+0,4
+2,6
+639
+0,4
+2,6
+640
+bl%
+#bg
+#ll
+Totaal
+0(+opslag %)
+Opslag 1,0
+Subtotaal BG_0405
+BG_0412
+1,0 1,0 1,2 1,2 1,1 1,3 1,6 1,5 1,5 1,3 1,5 1,3 1,3 1,3 1,3
+5,0 5,0 6,2 6,2 5,6 6,8 8,1 7,5 7,5 6,8 7,5 6,8 6,8 6,8 6,8
+BG_0405
+BG_0412
+BG_0405
+BG_0412
+25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00 25,00
+#ll
+5,0
+%
+%
+28,9 25,7 27,7 30,8 30,9 33,5 36,6 36,1 36,1 35,6 35,6 36,2 35,1 35,1 34,5 27,0
+4,0 4,0 5,0 5,0 4,5 5,5 6,5 6,0 6,0 5,5 6,0 5,5 5,5 5,5 5,5 4,0
+25,7 22,9 24,7 27,4 27,5 29,8 32,6 32,1 32,1 31,7 31,7 32,2 31,2 31,2 30,7 24,0
+3,0 3,2 2,8 3,0 3,4 3,4 3,7 4,0 4,0 4,0 3,9 3,9 4,0 3,9 3,9 3,8
+13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00 13,00
+28,0 25,0 27,0 30,0 30,0 33,0 36,0 36,0 36,0 35,0 35,0 36,0 35,0 35,0 34,0 27,0
+#ll
+Leerlingenprognose en ruimtebehoefte basisonderwijs 2025 | Gemeente Opmeer
+xxllnc Sociaal | september 2025
+Bijlage 4 Tabellen ruimtebehoefte (les en gym)
+Ruimtebehoefte vierkante meters
+Instnr Naam 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040 2041 2042 2043 2044 2045
+07AO00 Petrus Canisiusschool 522 532 547 552 557 562 577 572 582 572 577 572 567 567 562 552 552 552 542 542 552
+07VI00 De Stek 2559 2670 2755 2795 2765 2775 2785 2816 2841 2876 2821 2801 2801 2755 2705 2680 2640 2629 2619 2609 2589
+09AK00 Basisschool St Wulfram 1090 1146 1181 1201 1221 1271 1312 1347 1397 1412 1432 1447 1468 1498 1508 1523 1538 1543 1548 1548 1543
+11HN00 De Adelaar 799 804 824 839 854 889 914 939 970 980 995 1005 1020 1035 1050 1055 1065 1070 1075 1075 1070
+11TI00 De Akker 539 574 579 584 584 584 589 594 599 609 604 604 599 599 589 584 579 579 574 574 574
+12DL00 Obs de Dubbele Punt 336 341 326 336 351 351 366 381 381 381 376 376 381 376 376 371 376 366 366 361 356
+Totaal 5845 6067 6212 6307 6332 6432 6543 6649 6770 6830 6805 6805 6836 6830 6790 6765 6750 6739 6724 6709 6684
+Ruimtebehoefte groepen permanent
+Instnr Naam 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040 2041 2042 2043 2044 2045
+07AO00 Petrus Canisiusschool 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+07VI00 De Stek 20 21 22 22 22 22 22 22 22 23 22 22 22 21 21 21 20 20 20 20 20
+09AK00 Basisschool St Wulfram 8 8 8 8 9 9 9 10 10 10 10 11 11 11 11 11 11 11 11 11 11
+11HN00 De Adelaar 5 5 5 5 5 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7
+11TI00 De Akker 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+12DL00 Obs de Dubbele Punt 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+Totaal 43 44 45 45 47 48 48 49 49 50 49 50 50 50 50 50 49 49 49 49 49
+Ruimtebehoefte gym
+Instnr Naam 2025 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035 2036 2037 2038 2039 2040 2041 2042 2043 2044 2045
+07AO00 Petrus Canisiusschool 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0
+07VI00 De Stek 21,0 21,0 22,5 22,5 22,5 22,5 22,5 22,5 22,5 24,0 22,5 22,5 22,5 21,0 21,0 21,0 21,0 21,0 21,0 21,0 21,0
+09AK00 Basisschool St Wulfram 7,5 7,5 7,5 7,5 9,0 9,0 9,0 10,5 10,5 10,5 10,5 10,5 10,5 10,5 10,5 10,5 10,5 10,5 10,5 10,5 10,5
+11HN00 De Adelaar 4,5 4,5 4,5 4,5 4,5 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0 6,0
+11TI00 De Akker 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0
+12DL00 Obs de Dubbele Punt 1,5 1,5 1,5 1,5 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0 3,0
+Totaal 40,5 40,5 42,0 42,0 45,0 46,5 46,5 48,0 48,0 49,5 48,0 48,0 48,0 46,5 46,5 46,5 46,5 46,5 46,5 46,5 46,5
+[Bijlage: Bijlage 2 - Kavelkaart plangrens]
+Kavelkaart
+Ruimtelijke ontwikkelkader
+3
+H
+3
+Loufse
+Hedwa
+vn
+Cetzstres
+mpnieer
+Pieter Bossenstraat
+MAXIMALE BOUWHOOGTE, IN METERS
+T AFSTAND TUSSEN BEBOUWING EN KAVELGRENS, IN METERS
