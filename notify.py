@@ -40,6 +40,7 @@ COLUMNS = [
     ('Raad', '#1b4e8e'),
     ('College', '#f18700'),
     ('Nieuws en Woo', '#5498cf'),
+    ('In de media', '#1d1d1b'),
 ]
 
 def column_of(item):
@@ -50,6 +51,8 @@ def column_of(item):
         return 'Raad'
     if s == 'Collegebesluiten':
         return 'College'
+    if s == 'In de media':
+        return 'In de media'
     return 'Nieuws en Woo'
 
 def _date(s):
@@ -230,7 +233,7 @@ def _mail_html(gemeenten, events_by_gid, since, now_local):
             parts.append(f'<h3 style="color:{color};margin:14px 0 4px">{col} <span style="color:#5b6672;font-weight:normal">({len(rows)})</span></h3><ul style="padding-left:18px">')
             for x in rows[:MAX_MAIL_PER_COLUMN]:
                 it = x['item']
-                sub = ', '.join(v for v in (time_label(it), it.get('koop_type'), it.get('locatie'), it.get('rapport'), it.get('meeting_title')) if v)
+                sub = ', '.join(v for v in (time_label(it), it.get('media_bron'), it.get('koop_type'), it.get('locatie'), it.get('rapport'), it.get('meeting_title')) if v)
                 parts.append(f'<li style="margin:5px 0"><a href="{e(it["url"])}" style="color:#1d1d1b">{e(it["title"])}</a>'
                              + (f'<div style="color:#5b6672;font-size:13px">{e(sub)}</div>' if sub else '') + '</li>')
             if len(rows) > MAX_MAIL_PER_COLUMN:
