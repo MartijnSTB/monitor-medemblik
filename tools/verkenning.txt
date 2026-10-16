@@ -1,6 +1,6 @@
-bijlagen: [{'t': 'Raadsvragen GB evenementenvergunningen en toiletten', 'u': 'https://medemblik.bestuurlijkeinformatie.nl/Document/View/b2f21040-c2b7-4843-aa76-f0271e6aaad5'}, {'t': 'Beatwoording -Raadsvragen GB evenementenvergunningen en toiletten', 'u': 'https://medemblik.bestuurlijkeinformatie.nl/Document/View/3fbe4ece-ce0a-4615-9d30-3d0643a033c7'}]
-text_v 2 fout None
-regels 193
-   [Bijlage: Raadsvragen GB evenementenvergunningen en toiletten]
-   [Bijlage: Beatwoording -Raadsvragen GB evenementenvergunningen en toiletten]
-antwoord begint: ['Beantwoording vragen raadsleden', 'Nummer DOC-26-1245267', 'Zaaknummer Z-25-594823']
+ORI indices totaal 331
+['ori_drechterland_20250412095403', 'ori_enkhuizen_20250330225903', 'ori_heemstede_20250330083704', 'ori_hoorn_20250510153305', 'ori_medemblik_20250524200505', 'ori_opmeer_20250610192905', 'ori_stede_broec_20250510124602', 'ori_wijk_bij_duurstede_20250523064603']
+koggenland 200 {"took":45,"timed_out":false,"_shards":{"total":331,"successful":331,"skipped":0,"failed":0},"hits":{"total":{"value":0,"relation":"eq"},"max_score":null,"hits":[]}}
+Koggenland 200 {"took":49,"timed_out":false,"_shards":{"total":331,"successful":331,"skipped":0,"failed":0},"hits":{"total":{"value":0,"relation":"eq"},"max_score":null,"hits":[]}}
+https://raad.koggenland.nl/Documenten/Besluitenlijst-vergadering-26-november.pdf 200 text/html; charset=utf-8 challenge
+https://raad.koggenland.nl/robots.txt 200 text/plain; charset=utf-8 b'User-agent: *\r\nDisallow: /app-bestuur\r\nDisallow: /inloggen\r\n'
