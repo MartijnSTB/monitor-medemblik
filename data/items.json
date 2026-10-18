@@ -1,5 +1,234 @@
 {
   "items": {
+    "7a0b8d16f969489636f8573376f8747938c139cb995a57eec7fa6266349f3caa": {
+      "title": "Industrieterrein De Veken",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/22f77b0c-987d-4f32-aa1b-4a4fec00de53",
+      "source": "Raadsportaal",
+      "gemeente": "opmeer",
+      "first_seen": "2026-10-15T11:13:11+00:00",
+      "updated": "2026-10-18T08:31:58+00:00",
+      "last_change": "2026-10-18T08:31:58+00:00",
+      "hash": "",
+      "revisions": 3,
+      "excerpt": "Thema's",
+      "kind": "overzichtsitem",
+      "rapport": "Thema's",
+      "last_seen": "2026-10-18",
+      "report_pass": "2026-10-18T00:02:20+00:00",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "012e237dfc98a29b0ff160c1ff776a8303468a4d4820dfd3eb1727a2c286978d",
+      "content_checked": "2026-10-18T08:31:58+00:00",
+      "kw_sig": "5ae1c58d6943|012e237dfc98a29b0ff160c1ff776a8303468a4d4820dfd3eb1727a2c286978d|Industrieterrein De Veken|Thema's",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "26 januari 2024 presentatie beeldvormende bijeenkomst Uitspraak De Veken",
+        "24 januari 2024 Uitspraak De Veken IV",
+        "30 maart 2023 Raadsvoorstel herstelbesluit bestemmingsplan De Veken 4",
+        "23 februari 2023 Overzicht wijzigingen herstelbesluit De Veken 4",
+        "20 maart 2023 Memo beantwoording vragen nav oordeelsvorming 16 maart",
+        "7 februari 2023 MEMO herstel versie",
+        "6 februari 2023 Advies De Veken 4",
+        "28 december 2022 Uitspraak",
+        "10 november 2022 Raadvoorstel grondverwerving",
+        "10 november 2022 Motie 10.1 DSV GB LPO over beschikbaar stellen krediet AANGEHOUDEN",
+        "17 februari 2022 Raadsvoorstel De Veken 4 MV",
+        "Bijlage 1 Reactienota en zienswijzen De Veken 4",
+        "Bijlage 2 Toelichting en regels Bestemmingsplan Bedrijventerrein De Veken 4",
+        "Bijlage 3 Verbeelding bestemmingsplan De Veken 4",
+        "1 dec. 2020 Raadsnotitie Raadscommissie Ruimte voor ontwerpbestemmingsplan Veken 4",
+        "Bijlage 1 Verbeelding voorontwerp Veken 4",
+        "Bijlage 2 Voorontwerp BP Bedrijventerrein De Veken 4"
+      ],
+      "bijlagen": [
+        {
+          "t": "26 januari 2024 presentatie beeldvormende bijeenkomst Uitspraak De Veken",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/76aeb0e7-6ca8-4be9-b671-b7b4d07d2d70"
+        },
+        {
+          "t": "24 januari 2024 Uitspraak De Veken IV",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/a96679d4-8da2-4583-8e81-a968d5155225"
+        },
+        {
+          "t": "30 maart 2023 Raadsvoorstel herstelbesluit bestemmingsplan De Veken 4",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/e97262d7-1a83-4485-aa93-62519a2211ce"
+        },
+        {
+          "t": "23 februari 2023 Overzicht wijzigingen herstelbesluit De Veken 4",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/9782c2bc-54ad-4266-9312-8bb23d136f17"
+        },
+        {
+          "t": "20 maart 2023 Memo beantwoording vragen nav oordeelsvorming 16 maart",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/c7ed76d6-35e4-4928-bb93-e7b05f177efb"
+        },
+        {
+          "t": "7 februari 2023 MEMO herstel versie",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/a2eaa92a-a6a1-45e5-9aec-bc95de5138a0"
+        },
+        {
+          "t": "6 februari 2023 Advies De Veken 4",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/eb62a85e-e96f-49fe-bb17-07823168735c"
+        },
+        {
+          "t": "28 december 2022 Uitspraak",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/bd50ecfe-6dd8-4114-9f63-bff5b0fccff0"
+        }
+      ],
+      "changes": [
+        {
+          "at": "2026-10-18T02:06:29+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "3 zin(nen) toegevoegd of aangepast, 833 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: 500 Server Error: Internal Server Error for url: https://opm]",
+            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
+            "[Bijlage niet te lezen: HTTPSConnectionPool(host='opmeer.bestuurlijkeinformatie.nl',]"
+          ],
+          "removed": [
+            "[Bijlage niet te lezen: cryptography>=3.1 is required for AES algorithm]",
+            "1 / 1 0",
+            "Inleiding"
+          ]
+        },
+        {
+          "at": "2026-10-18T08:31:58+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "833 zin(nen) toegevoegd of aangepast, 3 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: cryptography>=3.1 is required for AES algorithm]",
+            "1 / 1 0",
+            "Inleiding"
+          ],
+          "removed": [
+            "[Bijlage niet te lezen: 500 Server Error: Internal Server Error for url: https://opm]",
+            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
+            "[Bijlage niet te lezen: HTTPSConnectionPool(host='opmeer.bestuurlijkeinformatie.nl',]"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "7de285f39573e468181f0c579f914ec227f6bd3b5303a5cdb5ac8ebb3ecd52a5": {
+      "title": "Kindcentrum De Wereldweide Hoogwoud",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/a429d7c1-4629-4dc8-9c12-9dc9444dd8e2",
+      "source": "Raadsportaal",
+      "gemeente": "opmeer",
+      "first_seen": "2026-10-15T11:13:11+00:00",
+      "updated": "2026-10-18T08:31:53+00:00",
+      "last_change": "2026-10-18T08:31:53+00:00",
+      "hash": "",
+      "revisions": 3,
+      "excerpt": "Thema's",
+      "kind": "overzichtsitem",
+      "rapport": "Thema's",
+      "last_seen": "2026-10-18",
+      "report_pass": "2026-10-18T00:02:20+00:00",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "cbf6a3b4bf49911c9b6799debd1db198afe59ff59764eaa3a28bd1868a76ebf8",
+      "content_checked": "2026-10-18T08:31:53+00:00",
+      "kw_sig": "5ae1c58d6943|cbf6a3b4bf49911c9b6799debd1db198afe59ff59764eaa3a28bd1868a76ebf8|Kindcentrum De Wereldweide Hoogwoud|Thema's",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "11-07-2024 Raadsvoorstel Locatiegebonden kosten Kindcentrum De Wereldweide",
+        "Bestektekening WRM KC Hoogwoud - Fase 1",
+        "Bestektekening WRM KC Hoogwoud - Fase 2",
+        "Bericht 2023 KC De Wereldweide 20 december 2023",
+        "03-04-2023 Kindcentrum Hoogwoud - Informatiebrief Buurtbewoners 27-03-2023",
+        "Raadsvoorstel extra krediet IKC Hoogwoud 26 september 2022",
+        "18-02-2022 Raadsinformatiebrief over voorlopig ontwerp van het IKCHoogwoud",
+        "Bijlage 1: Notitie over voorlopig ontwerp van het IKC Hoogwoud",
+        "17-02-2022 Raadsinformatiebrief over de beantwoording schriftelijke vragen over IKC Hoogwoud",
+        "IKC Hoogwoud-A1 V4 schoolplein"
+      ],
+      "bijlagen": [
+        {
+          "t": "11-07-2024 Raadsvoorstel Locatiegebonden kosten Kindcentrum De Wereldweide",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/87437ba4-91fe-48fb-9e6f-57c8c7c7c315"
+        },
+        {
+          "t": "Bestektekening WRM KC Hoogwoud - Fase 1",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/324a6911-f655-4269-bff9-70f7606cf76d"
+        },
+        {
+          "t": "Bestektekening WRM KC Hoogwoud - Fase 2",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/bd222f6f-1838-48c8-90fd-6424c266b8d6"
+        },
+        {
+          "t": "Bericht 2023 KC De Wereldweide 20 december 2023",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/945f94cd-4354-4a90-a6da-8cb154de6644"
+        },
+        {
+          "t": "03-04-2023 Kindcentrum Hoogwoud - Informatiebrief Buurtbewoners 27-03-2023",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/da97cfea-2955-432c-a081-05d887acb248"
+        },
+        {
+          "t": "Raadsvoorstel extra krediet IKC Hoogwoud 26 september 2022",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/0d7969ff-0cc2-4897-ad93-488a343f5863"
+        },
+        {
+          "t": "18-02-2022 Raadsinformatiebrief over voorlopig ontwerp van het IKCHoogwoud",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/533674e5-a6cd-4d29-b791-76430f7f7329"
+        },
+        {
+          "t": "Bijlage 1: Notitie over voorlopig ontwerp van het IKC Hoogwoud",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/cb43ab7e-4fa5-4a60-995c-f65d409929fa"
+        }
+      ],
+      "changes": [
+        {
+          "at": "2026-10-18T02:04:56+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "5 zin(nen) toegevoegd of aangepast, 598 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
+            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
+            "[Bijlage niet te lezen: HTTPSConnectionPool(host='opmeer.bestuurlijkeinformatie.nl',]"
+          ],
+          "removed": [
+            "[Bijlage niet te lezen: cryptography>=3.1 is required for AES algorithm]",
+            "5.002.605.002.606.00",
+            "Grondwerk tbv kabelbaan"
+          ]
+        },
+        {
+          "at": "2026-10-18T08:31:53+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "598 zin(nen) toegevoegd of aangepast, 5 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: cryptography>=3.1 is required for AES algorithm]",
+            "5.002.605.002.606.00",
+            "Grondwerk tbv kabelbaan"
+          ],
+          "removed": [
+            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
+            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
+            "[Bijlage niet te lezen: HTTPSConnectionPool(host='opmeer.bestuurlijkeinformatie.nl',]"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "849a886453c2e827af24f1d7b8d162be3c89cade6da62ac47fe8dcf2b69cfb6d": {
+      "title": "Vekenweg De Weere: 30 kilometer per uur en drempels bij school",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRmYtTzJGeTlDV3JSQ3J3TnBWYW95c3M5VGhtaURJZmFQS1c1N0NJR284UTQ2Ny1OaHRsel9mOU13SUg1dDlKdW5kdF9Xd1Q0eWhsbFMtalpwR3lfN25uQ2JnZnh0cHZMcDNCdkFMbHpSU0lObnRhenhZc3BoMTY5dHZfQlNjSGRPNjc1M0dKbGtlbGpzVW04NnNqQW9EX3pkMDVXMA?oc=5",
+      "source": "In de media",
+      "gemeente": "opmeer",
+      "first_seen": "2026-10-18T08:31:41+00:00",
+      "updated": "2026-10-18T08:31:41+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "media",
+      "media_bron": "Rodi.nl",
+      "media_match": "kop",
+      "last_seen": "2026-10-18",
+      "doc_date": "2026-10-18",
+      "doc_date_label": "publicatiedatum",
+      "published_at": "2026-10-18T10:00+02:00",
+      "published_at_source": "Google Nieuws",
+      "kw_sig": "5ae1c58d6943||Vekenweg De Weere: 30 kilometer per uur en drempels bij school|"
+    },
     "5d2e88c8c0f525e807c27f5120082cd9dd4060f58572ec66d31992a8c732e7ec": {
       "title": "Wil je beter leren omgaan met computer of telefoon? Volg gratis de cursus Klik en Tik in Wognum, Medemblik of Wervershoof",
       "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNMDJ0RzNRSmx0QjdqNmxjMjdIX2tZYWtSbGZ4QjdYWl8wRUsxQmN5NDBqYUR2RXVjQVc5czRFSl9CUVVzUmdLSnVyTU9tR0lPd0xIdWtPM1FwclAxRU45c1dXUUlaSVJfNzA2Yml2cnJGSjJjS19MWVl0bWt0WXh1azljd3g4ZVlfeEp0TDdYRW9MWjRCTWdzRDRtV1EyYi1PSnhHUkJKYXZORktmczBCMjhjOTMxV2RaVDVnLXV0dzhRUkhlT2JZQkVHYjZnV3dGQ2tGQWt1VnBiVXdVSWdQU2IxUm95cFhNc1hUQ3dJZ0JKdjhoYVE?oc=5",
@@ -208,185 +437,6 @@
       "published_at": "2026-10-18T09:11+02:00",
       "published_at_source": "Google Nieuws",
       "kw_sig": "5ae1c58d6943||Een schot in de roos: koning Willem-Alexander laat zijn oog vallen op Ursem|"
-    },
-    "7a0b8d16f969489636f8573376f8747938c139cb995a57eec7fa6266349f3caa": {
-      "title": "Industrieterrein De Veken",
-      "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/22f77b0c-987d-4f32-aa1b-4a4fec00de53",
-      "source": "Raadsportaal",
-      "gemeente": "opmeer",
-      "first_seen": "2026-10-15T11:13:11+00:00",
-      "updated": "2026-10-18T02:06:29+00:00",
-      "last_change": "2026-10-18T02:06:29+00:00",
-      "hash": "",
-      "revisions": 2,
-      "excerpt": "Thema's",
-      "kind": "overzichtsitem",
-      "rapport": "Thema's",
-      "last_seen": "2026-10-18",
-      "report_pass": "2026-10-18T00:02:20+00:00",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "81c4a3305be266b5c069085f82f1a47d8e12b244cc78fdc66390b3d825cdb72c",
-      "content_checked": "2026-10-18T02:06:29+00:00",
-      "kw_sig": "5ae1c58d6943|81c4a3305be266b5c069085f82f1a47d8e12b244cc78fdc66390b3d825cdb72c|Industrieterrein De Veken|Thema's",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "26 januari 2024 presentatie beeldvormende bijeenkomst Uitspraak De Veken",
-        "24 januari 2024 Uitspraak De Veken IV",
-        "30 maart 2023 Raadsvoorstel herstelbesluit bestemmingsplan De Veken 4",
-        "23 februari 2023 Overzicht wijzigingen herstelbesluit De Veken 4",
-        "20 maart 2023 Memo beantwoording vragen nav oordeelsvorming 16 maart",
-        "7 februari 2023 MEMO herstel versie",
-        "6 februari 2023 Advies De Veken 4",
-        "28 december 2022 Uitspraak",
-        "10 november 2022 Raadvoorstel grondverwerving",
-        "10 november 2022 Motie 10.1 DSV GB LPO over beschikbaar stellen krediet AANGEHOUDEN",
-        "17 februari 2022 Raadsvoorstel De Veken 4 MV",
-        "Bijlage 1 Reactienota en zienswijzen De Veken 4",
-        "Bijlage 2 Toelichting en regels Bestemmingsplan Bedrijventerrein De Veken 4",
-        "Bijlage 3 Verbeelding bestemmingsplan De Veken 4",
-        "1 dec. 2020 Raadsnotitie Raadscommissie Ruimte voor ontwerpbestemmingsplan Veken 4",
-        "Bijlage 1 Verbeelding voorontwerp Veken 4",
-        "Bijlage 2 Voorontwerp BP Bedrijventerrein De Veken 4"
-      ],
-      "bijlagen": [
-        {
-          "t": "26 januari 2024 presentatie beeldvormende bijeenkomst Uitspraak De Veken",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/76aeb0e7-6ca8-4be9-b671-b7b4d07d2d70"
-        },
-        {
-          "t": "24 januari 2024 Uitspraak De Veken IV",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/a96679d4-8da2-4583-8e81-a968d5155225"
-        },
-        {
-          "t": "30 maart 2023 Raadsvoorstel herstelbesluit bestemmingsplan De Veken 4",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/e97262d7-1a83-4485-aa93-62519a2211ce"
-        },
-        {
-          "t": "23 februari 2023 Overzicht wijzigingen herstelbesluit De Veken 4",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/9782c2bc-54ad-4266-9312-8bb23d136f17"
-        },
-        {
-          "t": "20 maart 2023 Memo beantwoording vragen nav oordeelsvorming 16 maart",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/c7ed76d6-35e4-4928-bb93-e7b05f177efb"
-        },
-        {
-          "t": "7 februari 2023 MEMO herstel versie",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/a2eaa92a-a6a1-45e5-9aec-bc95de5138a0"
-        },
-        {
-          "t": "6 februari 2023 Advies De Veken 4",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/eb62a85e-e96f-49fe-bb17-07823168735c"
-        },
-        {
-          "t": "28 december 2022 Uitspraak",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/bd50ecfe-6dd8-4114-9f63-bff5b0fccff0"
-        }
-      ],
-      "changes": [
-        {
-          "at": "2026-10-18T02:06:29+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "3 zin(nen) toegevoegd of aangepast, 833 verwijderd of vervangen",
-          "added": [
-            "[Bijlage niet te lezen: 500 Server Error: Internal Server Error for url: https://opm]",
-            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
-            "[Bijlage niet te lezen: HTTPSConnectionPool(host='opmeer.bestuurlijkeinformatie.nl',]"
-          ],
-          "removed": [
-            "[Bijlage niet te lezen: cryptography>=3.1 is required for AES algorithm]",
-            "1 / 1 0",
-            "Inleiding"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "7de285f39573e468181f0c579f914ec227f6bd3b5303a5cdb5ac8ebb3ecd52a5": {
-      "title": "Kindcentrum De Wereldweide Hoogwoud",
-      "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/a429d7c1-4629-4dc8-9c12-9dc9444dd8e2",
-      "source": "Raadsportaal",
-      "gemeente": "opmeer",
-      "first_seen": "2026-10-15T11:13:11+00:00",
-      "updated": "2026-10-18T02:04:56+00:00",
-      "last_change": "2026-10-18T02:04:56+00:00",
-      "hash": "",
-      "revisions": 2,
-      "excerpt": "Thema's",
-      "kind": "overzichtsitem",
-      "rapport": "Thema's",
-      "last_seen": "2026-10-18",
-      "report_pass": "2026-10-18T00:02:20+00:00",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "9650d9a50584f7f4a6ad47941d3115b209637a7919c091ed98613da9e28e1fc6",
-      "content_checked": "2026-10-18T02:04:56+00:00",
-      "kw_sig": "5ae1c58d6943|9650d9a50584f7f4a6ad47941d3115b209637a7919c091ed98613da9e28e1fc6|Kindcentrum De Wereldweide Hoogwoud|Thema's",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "11-07-2024 Raadsvoorstel Locatiegebonden kosten Kindcentrum De Wereldweide",
-        "Bestektekening WRM KC Hoogwoud - Fase 1",
-        "Bestektekening WRM KC Hoogwoud - Fase 2",
-        "Bericht 2023 KC De Wereldweide 20 december 2023",
-        "03-04-2023 Kindcentrum Hoogwoud - Informatiebrief Buurtbewoners 27-03-2023",
-        "Raadsvoorstel extra krediet IKC Hoogwoud 26 september 2022",
-        "18-02-2022 Raadsinformatiebrief over voorlopig ontwerp van het IKCHoogwoud",
-        "Bijlage 1: Notitie over voorlopig ontwerp van het IKC Hoogwoud",
-        "17-02-2022 Raadsinformatiebrief over de beantwoording schriftelijke vragen over IKC Hoogwoud",
-        "IKC Hoogwoud-A1 V4 schoolplein"
-      ],
-      "bijlagen": [
-        {
-          "t": "11-07-2024 Raadsvoorstel Locatiegebonden kosten Kindcentrum De Wereldweide",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/87437ba4-91fe-48fb-9e6f-57c8c7c7c315"
-        },
-        {
-          "t": "Bestektekening WRM KC Hoogwoud - Fase 1",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/324a6911-f655-4269-bff9-70f7606cf76d"
-        },
-        {
-          "t": "Bestektekening WRM KC Hoogwoud - Fase 2",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/bd222f6f-1838-48c8-90fd-6424c266b8d6"
-        },
-        {
-          "t": "Bericht 2023 KC De Wereldweide 20 december 2023",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/945f94cd-4354-4a90-a6da-8cb154de6644"
-        },
-        {
-          "t": "03-04-2023 Kindcentrum Hoogwoud - Informatiebrief Buurtbewoners 27-03-2023",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/da97cfea-2955-432c-a081-05d887acb248"
-        },
-        {
-          "t": "Raadsvoorstel extra krediet IKC Hoogwoud 26 september 2022",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/0d7969ff-0cc2-4897-ad93-488a343f5863"
-        },
-        {
-          "t": "18-02-2022 Raadsinformatiebrief over voorlopig ontwerp van het IKCHoogwoud",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/533674e5-a6cd-4d29-b791-76430f7f7329"
-        },
-        {
-          "t": "Bijlage 1: Notitie over voorlopig ontwerp van het IKC Hoogwoud",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/cb43ab7e-4fa5-4a60-995c-f65d409929fa"
-        }
-      ],
-      "changes": [
-        {
-          "at": "2026-10-18T02:04:56+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "5 zin(nen) toegevoegd of aangepast, 598 verwijderd of vervangen",
-          "added": [
-            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
-            "[Bijlage niet te lezen: 503 Server Error: Service Unavailable for url: https://opmee]",
-            "[Bijlage niet te lezen: HTTPSConnectionPool(host='opmeer.bestuurlijkeinformatie.nl',]"
-          ],
-          "removed": [
-            "[Bijlage niet te lezen: cryptography>=3.1 is required for AES algorithm]",
-            "5.002.605.002.606.00",
-            "Grondwerk tbv kabelbaan"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
     },
     "605901e03e1b63250d3041d61ff1c63c842f2cb1e721d75e939cf7a41d7cc663": {
       "title": "Dorpsraad mist goede onderbouwing voor nieuwe voorrangssituatie Zeedijk-Kagerdijk: ’Verkeersveiligheid moet ook gelden voor Onderdijk’",
@@ -812,7 +862,7 @@
       "kind": "media",
       "media_bron": "Rodi.nl",
       "media_match": "tekst",
-      "last_seen": "2026-10-17",
+      "last_seen": "2026-10-18",
       "doc_date": "2026-10-17",
       "doc_date_label": "publicatiedatum",
       "published_at": "2026-10-17T12:11+02:00",
@@ -48306,7 +48356,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "0650859be6fb5c48f0d0deb3cf00020641d31ed1911bc97f7d76431c7257bf4e",
-      "content_checked": "2026-10-18T02:06:41+00:00",
+      "content_checked": "2026-10-18T08:32:04+00:00",
       "kw_sig": "5ae1c58d6943|0650859be6fb5c48f0d0deb3cf00020641d31ed1911bc97f7d76431c7257bf4e|Grondstoffenplan|Thema's",
       "text_v": 2,
       "bijlagen_titels": [
@@ -133048,38 +133098,38 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-10-18T08:01:13+00:00",
+        "checked": "2026-10-18T08:31:04+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-18T08:01:14+00:00",
+        "checked": "2026-10-18T08:31:04+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-10-18T08:01:15+00:00",
+        "checked": "2026-10-18T08:31:05+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-10-18T08:01:15+00:00",
+        "checked": "2026-10-18T08:31:05+00:00",
         "ok": true,
         "count": 29,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-18T08:00:51+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "ok": true,
         "count": 168,
         "new": 0,
         "note": "Laatste 30 dagen: 168 van 168 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-18T08:01:01+00:00",
+        "checked": "2026-10-18T08:30:53+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -133087,7 +133137,7 @@
         "note": "10 van 19 vergaderingen in venster bijgewerkt; 173 documenten bekend. Dekking: vergaderingen van 2026-08-19 t/m 2026-12-02 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-18T08:01:12+00:00",
+        "checked": "2026-10-18T08:31:02+00:00",
         "ok": true,
         "count": 301,
         "new": 0,
@@ -133095,50 +133145,50 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2123, Ingekomen stukken 3151, Jaarplannen en jaarverslagen 1, Moties en amendementen 402, Raadsvragen 1407, Rekenkamer 54, Toezeggingen 332). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "In de media": {
-        "checked": "2026-10-18T08:01:19+00:00",
+        "checked": "2026-10-18T08:31:09+00:00",
         "ok": true,
         "count": 25,
-        "new": 1,
+        "new": 0,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Medemblik, Abbekerk, Andijk, Benningbroek, Hauwert, Lambertschaag, Midwoud, Nibbixwoud, Oostwoud, Opperdoes, Sijbekarspel, Twisk, Wervershoof, Wognum, Zwaagdijk-Oost, Zwaagdijk-West. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-10-18T08:01:52+00:00",
+        "checked": "2026-10-18T08:32:04+00:00",
         "ok": true,
-        "count": 0,
+        "count": 3,
         "errors": 0,
-        "note": "0 documenten gecontroleerd (0 pdf), 1589 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
+        "note": "3 documenten gecontroleerd (0 pdf), 1589 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
       },
       "Meldingen": {
-        "checked": "2026-10-18T08:01:52+00:00",
+        "checked": "2026-10-18T08:32:04+00:00",
         "ok": true,
-        "note": "Pushmeldingen actief (ntfy); deze run 0 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-18).",
+        "note": "Pushmeldingen actief (ntfy); deze run 1 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-18).",
         "error": null
       },
       "Trefwoorden": {
-        "checked": "2026-10-18T08:01:52+00:00",
+        "checked": "2026-10-18T08:32:04+00:00",
         "ok": true,
-        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 1 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
+        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 3 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
       }
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-18T08:01:20+00:00",
+        "checked": "2026-10-18T08:31:11+00:00",
         "ok": true,
         "count": 75,
         "new": 0,
         "note": "Laatste 30 dagen: 75 van 75 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-10-18T08:01:21+00:00",
+        "checked": "2026-10-18T08:31:12+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-18T08:01:22+00:00",
+        "checked": "2026-10-18T08:31:12+00:00",
         "ok": true,
         "count": 166,
         "new": 0,
@@ -133146,13 +133196,13 @@
         "error": null
       },
       "Woo-verzoeken": {
-        "checked": "2026-10-18T08:01:22+00:00",
+        "checked": "2026-10-18T08:31:13+00:00",
         "ok": true,
         "count": 15,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
       },
       "In de media": {
-        "checked": "2026-10-18T08:01:25+00:00",
+        "checked": "2026-10-18T08:31:15+00:00",
         "ok": true,
         "count": 12,
         "new": 0,
@@ -133161,14 +133211,14 @@
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "ok": true,
         "count": 36,
         "new": 0,
         "note": "Laatste 30 dagen: 36 van 36 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-18T08:01:38+00:00",
+        "checked": "2026-10-18T08:31:28+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -133176,7 +133226,7 @@
         "note": "10 van 11 vergaderingen in venster bijgewerkt; 75 documenten bekend. Dekking: vergaderingen van 2026-08-19 t/m 2026-12-02 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-18T08:01:49+00:00",
+        "checked": "2026-10-18T08:31:38+00:00",
         "ok": true,
         "count": 399,
         "new": 0,
@@ -133184,17 +133234,17 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 74, Belangrijke documenten 13, Besluitenlijsten college 310, Ingekomen stukken 1143, Moties 79, Politieke vragen 73, Raadsinformatiebrieven 587, Thema's 25, Toezeggingen 84, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-10-18T08:01:50+00:00",
+        "checked": "2026-10-18T08:31:41+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "In de media": {
-        "checked": "2026-10-18T08:01:52+00:00",
+        "checked": "2026-10-18T08:31:42+00:00",
         "ok": true,
-        "count": 8,
-        "new": 0,
+        "count": 9,
+        "new": 1,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Opmeer, Aartswoud, De Weere, Hoogwoud, Spanbroek. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     }
@@ -209457,7 +209507,7 @@
         "gemeente": "medemblik"
       },
       "7a2ae701-743b-4c66-bc69-1ea646ee2483": {
-        "checked": "2026-10-18T08:00:51+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-26",
         "label": "donderdag 26 november 2026",
@@ -209465,7 +209515,7 @@
         "gemeente": "medemblik"
       },
       "8eadc9f7-a7ae-44ad-a78e-3596c9796e5d": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-12",
         "label": "donderdag 12 november 2026",
@@ -209473,7 +209523,7 @@
         "gemeente": "medemblik"
       },
       "d4b32282-6d07-4f2e-9463-89fb9b55e9c3": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Gemeenteraad",
         "date": "2026-09-24",
         "label": "donderdag 24 september 2026",
@@ -209551,7 +209601,7 @@
         "gemeente": "medemblik"
       },
       "52fc513f-8776-427e-b9d9-426652329851": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Raadscommissie",
         "date": "2026-11-09",
         "label": "maandag 9 november 2026",
@@ -209559,7 +209609,7 @@
         "gemeente": "medemblik"
       },
       "dc765e1a-20fd-4c7a-97bb-0645c9bbf6f3": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-29",
         "label": "donderdag 29 oktober 2026",
@@ -209567,7 +209617,7 @@
         "gemeente": "medemblik"
       },
       "a66cbb1d-4930-42a1-9e01-300240cb0a8e": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-01",
         "label": "donderdag 1 oktober 2026",
@@ -209575,7 +209625,7 @@
         "gemeente": "medemblik"
       },
       "f4180896-f72d-4718-a1e3-0789d2667761": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Raadscommissie",
         "date": "2026-09-10",
         "label": "donderdag 10 september 2026",
@@ -209653,7 +209703,7 @@
         "gemeente": "medemblik"
       },
       "48e926c5-1642-494c-b07f-28b1148fd5db": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Presidium",
         "date": "2026-11-16",
         "label": "maandag 16 november 2026",
@@ -209661,7 +209711,7 @@
         "gemeente": "medemblik"
       },
       "a5344260-dca4-4884-8b61-4c52d5a7b54f": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Presidium",
         "date": "2026-10-05",
         "label": "maandag 5 oktober 2026",
@@ -209669,7 +209719,7 @@
         "gemeente": "medemblik"
       },
       "2435dfa3-24f4-4274-aea4-0f940dcc3cd3": {
-        "checked": "2026-10-18T07:30:45+00:00",
+        "checked": "2026-10-18T08:30:44+00:00",
         "type": "Presidium",
         "date": "2026-09-14",
         "label": "maandag 14 september 2026",
@@ -209854,7 +209904,7 @@
         "label": "donderdag 10 december 2026"
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -209862,7 +209912,7 @@
         "documents": 0
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -209926,7 +209976,7 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
@@ -209934,7 +209984,7 @@
         "documents": 0
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -209942,7 +209992,7 @@
         "documents": 13
       },
       "7d82ecee-3b65-4d47-ae9b-904b5e4c1562": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-09-10",
@@ -209971,7 +210021,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -209979,7 +210029,7 @@
         "documents": 0
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -209987,7 +210037,7 @@
         "documents": 10
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -209995,7 +210045,7 @@
         "documents": 3
       },
       "eb2e5b85-1e4b-4de2-824f-c07024b8157b": {
-        "checked": "2026-10-18T08:01:26+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-08-27",
@@ -210024,7 +210074,7 @@
         "label": "donderdag 22 januari 2026"
       },
       "c62483ed-4da6-4fee-846f-29b58d90cf6c": {
-        "checked": "2026-10-18T07:31:18+00:00",
+        "checked": "2026-10-18T08:31:17+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-10-06",
