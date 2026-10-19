@@ -1,53 +1,12 @@
-== Calendar / agendatypes
-/Calendar 200 21800
-  option 0 januari
-  option 1 februari
-  option 2 maart
-  option 3 april
-  option 4 mei
-  option 5 juni
-  option 6 juli
-  option 7 augustus
-  option 8 september
-  option 9 oktober
-  option 10 november
-  option 11 december
-  option 2026 2026
-  option 2025 2025
-  option 2024 2024
-  option 2023 2023
-  option 2022 2022
-  option 2021 2021
-  option 2020 2020
-  agendatypeId links []
-  ids in tekst []
-/ 200 26430
-  agendatypeId links []
-  ids in tekst []
-/Agenda 403 14618
-  agendatypeId links []
-  ids in tekst []
-== Reports
-[('Openbare besluitenlijsten B&W', 'ils/a1132f05-4b54-4451-920d-195043a20824'), ('Openbare besluitenlijsten B&W', 'ils/a1132f05-4b54-4451-920d-195043a20824')]
-== People
-200
-== alkmaar.nl
-https://www.alkmaar.nl/ 200 text/html; charset=utf-8 138818
-   rss: []
-   links: ['https://www.alkmaar.nl/bestuur-organisatie/bekendmakingen-en-regelgeving/', 'https://www.alkmaar.nl/nieuws/', 'https://www.alkmaar.nl/nieuws/hoe-veilig-en-prettig-vindt-u-uw-buurt/', 'https://www.alkmaar.nl/nieuws/open-dag-gemeentelijke-begraafplaats-westerweg/', 'https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/', 'https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/']
-https://www.alkmaar.nl/nieuws 200 text/html; charset=utf-8 156895
-   rss: []
-   links: ['https://www.alkmaar.nl/bestuur-organisatie/bekendmakingen-en-regelgeving/', 'https://www.alkmaar.nl/nieuws/', 'https://www.alkmaar.nl/nieuws/bergerhoutro/', 'https://www.alkmaar.nl/nieuws/gratis-informatieavonden-webinars-en-inloopspreekuren-over-energie-besparen/', 'https://www.alkmaar.nl/nieuws/hoe-veilig-en-prettig-vindt-u-uw-buurt/', 'https://www.alkmaar.nl/nieuws/inwoners-gebied-graft-de-rijp-vul-de-buurtwarmtewijzer-in/', 'https://www.alkmaar.nl/nieuws/open-dag-gemeentelijke-begraafplaats-westerweg/', 'https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/', 'https://www.alkmaar.nl/nieuws/samen-op-zoek-naar-plekken-voor-asielopvang-jongeren-en-spoedzoekers/', 'https://www.alkmaar.nl/nieuws/vier-alkmaar-ontzet-alkmaarse-glorie-staat-centraal/', 'https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/', 'https://www.alkmaar.nl/nieuws/wijkcontactpunten-open-in-de-rijp-en-stompetoren/']
-https://www.alkmaar.nl/nieuws.rss 404 text/html 146
-    <html> <head><title>404 Not Found</title></head> <body> <center><h1>404 Not Found</h1></center> <hr><center>nginx</center> </body> </html> 
-https://www.alkmaar.nl/rss/content-list?type%5B%5D=news&sort_by=published_at&sort_order=DESC 404 text/html; charset=UTF-8 102487
-   rss: []
-   links: ['https://www.alkmaar.nl/bestuur-organisatie/bekendmakingen-en-regelgeving/', 'https://www.alkmaar.nl/nieuws/']
-== KOOP
-KOOP sinds 1 sep: 2
-== PDOK woonplaatsen
-['Alkmaar', 'De Rijp', 'Driehuizen', 'Graft', 'Grootschermer', 'Koedijk', 'Markenbinnen', 'Noordeinde', 'Oost-Graftdijk', 'Oterleek', 'Oudorp', 'Schermerhorn', 'Starnmeer', 'Stompetoren', 'Ursem', 'West-Graftdijk', 'Zuidschermer']
-== CBS wijken Alkmaar
-[('WK036101', 'Zuid'), ('WK036102', 'Oudorp'), ('WK036103', 'Overdie'), ('WK036104', 'West'), ('WK036105', 'Huiswaard'), ('WK036106', 'De Mare'), ('WK036107', 'Daalmeer/Koedijk'), ('WK036108', 'Centrum'), ('WK036109', 'Schermer'), ('WK036110', 'Graft-De Rijp'), ('WK036111', 'Vroonermeer')]
-== Google Nieuws test
-200 100
+hrefs: ['#', '#content', '#navigation', '#search-input', '/', '/Agenda/Index/66f82c03-7aee-49c8-9507-5db1639e8cea', '/Agenda/Index/68637b20-8a26-4252-9b11-458e7128428e', '/Agenda/Index/dcc6411b-600b-4103-9480-0c96305035a4', '/Calendar', '/Calendar/OpenCategory/100050619', '/Calendar/OpenCategory/100148034', '/Reports', '/Reports/Details/a1132f05-4b54-4451-920d-195043a20824', 'https://portal0600.ibabs.eu/', 'https://www.ibabs.com']
+scripts: ['/assets/main.min.js', '/lib/moment/locale/nl.js', '/Scripts/datatables/i18n/datatables.i18n.nl.js', '/Scripts/datepicker/locales/datepicker.nl.js', '/assets/layout.min.js', '/lib/duetds-datepicker/duet.esm.js', '/lib/duetds-datepicker/duet.js', '/lib/react/main.bundle.js', '/lib/fullcalendar/locales/nl.js', '/lib/fullcalendar/main.js', '/assets/calendar.min.js']
+inline urls: []
+data-attrs: ['data-agendatype-id', 'data-include-ie-parse', 'data-site-name', 'data-size', 'data-target', 'data-toggle', 'data-url', 'data-val', 'data-val-required']
+/Calendar/GetAgendasForMonth?year=2026&month=10 404 14593  <!DOCTYPE html> <html lang="nl"> <head>     <meta charset="utf-8" />     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <title>Foutpagina - iBabs Publieksportaal</title>     <link rel="SHORTCUT ICON" href="/favicon.svg?v=20210707" /> <link rel="icon" type="image/png" siz
+/Agenda/RetrieveAgendasForYear?year=2026 200 1  
+/Calendar/Index?year=2026&month=9 200 21800  <!DOCTYPE html> <html lang="nl"> <head>     <meta charset="utf-8" />     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <title>Vergaderingen Alkmaar - iBabs Publieksportaal</title>     <link rel="SHORTCUT ICON" href="/favicon.svg?v=20210707" /> <link rel="icon" type="ima
+== KOOP varianten
+dt.creator=="Alkmaar" 200 755 ['Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar']
+dt.creator any "Alkmaar" 200 755 ['Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar']
+dt.creator=="Gemeente Alkmaar" 200 0 []
+cql.textAndIndexes="Alkmaar" and c.product-area=="officielepublicaties" and dt.type=="gemeenteblad" 200 0 []
