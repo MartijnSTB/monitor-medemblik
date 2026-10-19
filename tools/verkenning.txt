@@ -1,21 +1,43 @@
-== last_discussed_at 200
-   {"@type": "Meeting", "name": "Gemeenteraad - behandeling jaarrekening, 1e bestuursrapportage en kaderbrief", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "BESLUITENLIJST / VERSLAG / PRESENTIELIJST", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "Agenda", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "Opening en mededelingen", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "Vaststelling agenda", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-== start_date 200
-   {"@type": "Meeting", "name": "Gemeenteraad - behandeling jaarrekening, 1e bestuursrapportage en kaderbrief", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "BESLUITENLIJST / VERSLAG / PRESENTIELIJST", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "Agenda", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "Opening en mededelingen", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-   {"@type": "AgendaItem", "name": "Vaststelling agenda", "last_discussed_at": "2026-06-29T16:00:00+02:00", "start_date": "2026-06-29T16:00:00+02:00"}
-== date_modified 200
-   {"date_modified": "2026-06-29T19:28:37+02:00", "original_url": "https://api.notubiz.nl/document/17135571/2", "@type": "MediaObject", "name": "8-M-1 Motie - BAS FVD - Kunstwerk Bello op rotonde N9", "last_discussed_at": "2026-06-29T16:00:00+02:00", "url": "https://api.openraadsinformatie.nl/v1/resolv
-   {"date_modified": "2026-06-29T16:49:17+02:00", "original_url": "https://api.notubiz.nl/document/17157010/1", "@type": "MediaObject", "name": "8-A-1 Amendement - SP - Perspectief door preventie en bestaanszekerheid", "last_discussed_at": "2026-06-29T16:00:00+02:00", "url": "https://api.openraadsinfor
-   {"date_modified": "2026-06-29T14:37:49+02:00", "original_url": "https://api.notubiz.nl/document/17151917/2", "@type": "MediaObject", "name": "8-M-6 Motie - D66 GL-PvdA SP - Strategisch hoofdstuk in Kadernota", "last_discussed_at": "2026-06-29T16:00:00+02:00", "url": "https://api.openraadsinformatie.
-   {"date_modified": "2026-06-29T09:55:23+02:00", "original_url": "https://api.notubiz.nl/document/17146347/2", "@type": "MediaObject", "name": "8-M-3 Motie - VVD CDA Status Quo D66 SP - Beleid zoveel mogelijk met eigen mensen", "last_discussed_at": "2026-06-29T16:00:00+02:00", "url": "https://api.open
-   {"date_modified": "2026-06-29T09:54:57+02:00", "original_url": "https://api.notubiz.nl/document/17146345/2", "@type": "MediaObject", "name": "8-M-2 Motie - VVD CDA Status Quo D66 SP - Terugbrengen externe inhuur", "last_discussed_at": "2026-06-29T16:00:00+02:00", "url": "https://api.openraadsinforma
-types 200 {"took":3,"timed_out":false,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0},"hits":{"total":{"value":10000,"relation":"gte"},"max_score":null,"hits":[]},"aggregations":{"t":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[]}}}
-https://api.notubiz.nl/organisations?format=json HTTPSConnectionPool(host='api.notubiz.nl', port=443): Max retries exceeded with url: /organisations?format=json (Caused by NewConnectionError("HTTPSConnection(host='api.notubiz.nl', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable"))
-https://api.notubiz.nl/events?organisation_id=0&format=json HTTPSConnectionPool(host='api.notubiz.nl', port=443): Max retries exceeded with url: /events?organisation_id=0&format=json (Caused by NewConnectionError("HTTPSConnection(host='api.notubiz.nl', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+200 application/rss+xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	 xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	 xmlns:slash="http://purl.org/rss/1.0/modules/slash/" >
+	<channel>
+		<title>Gemeente Alkmaar</title>
+		<link>https://www.alkmaar.nl</link>
+		<description></description>
+		<lastBuildDate>			Mon, 19 Oct 2026 12:53:20 +0200</lastBuildDate>
+		<language>nl</language>
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<atom:link href="https://www.alkmaar.nl/nieuws/feed" rel="self" type="application/rss+xml"/>
+		
+
+<image>
+	<url>https://www.alkmaar.nl/app/uploads/2026/05/cropped-favicon-32x32.png</url>
+	<title>Gemeente Alkmaar</title>
+	<link>https://www.alkmaar.nl</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+
+					<item>
+				<title>Wat vindt u van evenementen in Alkmaar?</title>
+				<link>https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/</link>
+				<pubDate>Mon, 19 Oct 2026 14:30:09 +0000</pubDate>
+				<dc:creator></dc:creator>
+				<guid isPermaLink="true">https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/</guid>
+				<description>Van grote festivals tot kleine evenementen in de wijk of het dorp. In Alkmaar is van alles te beleven! Maar...</description>
+				<content:encoded>Van grote festivals tot kleine evenementen in de wijk of het dorp. In Alkmaar is van alles te beleven! Maar wat vindt u van de evenementen? En wat kan er beter? We horen graag uw mening. Daarom doen we onderzoek naar evenementen in onze gemeente.De City Run is een van de vele evenementen in Alkmaar.We willen weten welke evenementen inwoners bezoeken, wat ze ervan vinden en wat ze belangrijk vinden. De resultaten helpen ons om een goede balans te vinden tussen evenementen en een prettige leefomgeving.Doe mee aan het onderzoekHet invullen van de vragenlijst duurt minder dan 10 minuten. U kunt meedoen tot en met 11 november 2026. Voor jongeren is er een aparte vragenlijst.Lees meer over het onderzoek en vul de vragenlijst in.Onderzoeksbureau Respons voert het onderzoek uit in opdracht van de gemeente Alkmaar.</content:encoded>
+				
+			</item>
+					<item>
+				<title>Rijk investeert 100 miljoen in woningen en bereikbaarheid Alkmaar</title>
+				<link>https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/</link>
+				<pubDate>Fri, 16 Oct 2026 17:47:51 +0000</pubDate>
+				<dc:creator></dc:creator>
+				<guid isPermaLink="true">https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/</guid>
+				<description>Goed nieuws voor Alkmaar: subsidie van het Rijk brengt ruim 10.000 nieuwe woningen en bereikbaarheid voor projecten Alkmaars Kanaal dichterbij.</description>
+				<content:encoded>Goed nieuws voor Alkmaar: subsidie van h
