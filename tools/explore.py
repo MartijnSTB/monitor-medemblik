@@ -6,19 +6,20 @@ H = m.HEADERS
 B = 'https://alkmaar.bestuurlijkeinformatie.nl'
 r = requests.get(B + '/Calendar', headers=H, timeout=30)
 soup = BeautifulSoup(r.text, 'html.parser')
-print('hrefs:', sorted({a['href'] for a in soup.select('a[href]')})[:80])
-print('scripts:', [s.get('src') for s in soup.select('script[src]')])
-inline = ' '.join(s.get_text() for s in soup.select('script:not([src])'))
-print('inline urls:', sorted(set(re.findall(r"['\"](/[A-Za-z]+/[A-Za-z]+[^'\"]{0,80})['\"]", inline)))[:40])
-print('data-attrs:', sorted({k for t in soup.find_all(True) for k in t.attrs if k.startswith('data-')})[:40])
-for path in ['/Calendar/GetAgendasForMonth?year=2026&month=10', '/Agenda/RetrieveAgendasForYear?year=2026', '/Calendar/Index?year=2026&month=9']:
-    rr = requests.get(B + path, headers=H, timeout=30); print(path, rr.status_code, len(rr.text), rr.text[:300].replace('\n',' '))
-print('== KOOP varianten')
-import xml.etree.ElementTree as ET
-for q in ['dt.creator=="Alkmaar"', 'dt.creator any "Alkmaar"', 'dt.creator=="Gemeente Alkmaar"', 'cql.textAndIndexes="Alkmaar" and c.product-area=="officielepublicaties" and dt.type=="gemeenteblad"']:
-    try:
-        rr = requests.get('https://repository.overheid.nl/sru', params={'query': q + ' and dt.available>=2026-09-01', 'maximumRecords': 5, 'httpAccept': 'application/xml'}, headers=H, timeout=60)
-        n = re.search(r'numberOfRecords>(\d+)<', rr.text)
-        creators = re.findall(r'creator[^>]*>([^<]+)<', rr.text)[:8]
-        print(q, rr.status_code, n.group(1) if n else '?', creators)
-    except Exception as e: print(q, e)
+ids = {}
+for t in soup.select('[data-agendatype-id]'):
+    ids[t['data-agendatype-id']] = re.sub(r'\s+', ' ', t.get_text(' ', strip=True))[:60]
+for a in soup.select('a[href*="/Calendar/OpenCategory/"]'):
+    ids.setdefault(a['href'].rsplit('/', 1)[-1], re.sub(r'\s+', ' ', a.get_text(' ', strip=True))[:60])
+print(ids)
+for i in ids:
+    rr = requests.get(B + '/Calendar/OpenCategory/' + i, headers=H, timeout=30)
+    s2 = BeautifulSoup(rr.text, 'html.parser')
+    sub = {t['data-agendatype-id']: re.sub(r'\s+', ' ', t.get_text(' ', strip=True))[:60] for t in s2.select('[data-agendatype-id]')}
+    print('cat', i, rr.status_code, (s2.title.get_text(strip=True) if s2.title else ''), sub)
+    for j in list(sub) + [i]:
+        y = requests.get(B + '/Agenda/RetrieveAgendasForYear', params={'agendatypeId': j, 'year': 2026}, headers=H, timeout=30)
+        links = BeautifulSoup(y.text, 'html.parser').select('a[href*="/Agenda/Index/"]')
+        print('   type', j, y.status_code, len(links), [l.get_text(' ', strip=True)[:50] for l in links[:3]])
+for a in soup.select('a[href*="/Agenda/Index/"]'):
+    print('agenda', a['href'], re.sub(r'\s+', ' ', a.get_text(' ', strip=True))[:80])
