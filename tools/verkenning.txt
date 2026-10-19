@@ -1,8 +1,9 @@
-{'100148034': 'B&W Agenda (Stadhuis) dinsdag 6 oktober 2026 10:00 - 14:00', '100050619': 'B&W Openbare besluiten college (iBabs) woensdag 7 oktober 20'}
-cat 100148034 200 Agenda Alkmaar - B&W Agenda dinsdag 6 oktober 2026 10:00 - 14:00 - iBabs Publieksportaal {}
-   type 100148034 200 36 ['dinsdag 6 oktober 2026', 'maandag 28 september 2026', 'dinsdag 22 september 2026']
-cat 100050619 200 Agenda Alkmaar - B&W Openbare besluiten college woensdag 7 oktober 2026 10:00 - 11:00 - iBabs Publieksportaal {}
-   type 100050619 200 41 ['woensdag 7 oktober 2026', 'dinsdag 6 oktober 2026', 'maandag 28 september 2026']
-agenda /Agenda/Index/68637b20-8a26-4252-9b11-458e7128428e B&W Agenda (Stadhuis) dinsdag 6 oktober 2026 10:00 - 14:00
-agenda /Agenda/Index/dcc6411b-600b-4103-9480-0c96305035a4 B&W Openbare besluiten college (Stadhuis) dinsdag 6 oktober 2026 10:00 - 14:00
-agenda /Agenda/Index/66f82c03-7aee-49c8-9507-5db1639e8cea B&W Openbare besluiten college (iBabs) woensdag 7 oktober 2026 10:00 - 11:00
+https://raad.alkmaar.nl/ FOUT HTTPSConnectionPool(host='raad.alkmaar.nl', port=443): Max retries exceeded with url: / (Caused by N
+https://alkmaar.raadsinformatie.nl/ 403 https://alkmaar.raadsinformatie.nl/ Just a moment... 
+https://gemeenteraad.alkmaar.nl/ FOUT HTTPSConnectionPool(host='gemeenteraad.alkmaar.nl', port=443): Max retries exceeded with url: / (Cau
+https://alkmaar.notubiz.nl/ 403 https://alkmaar.notubiz.nl/ Attention Required! | Cloudflare 
+https://www.alkmaar.nl/bestuur-organisatie/ 200 https://www.alkmaar.nl/bestuur-organisatie/ Bestuur en organisatie | Gemeente Alkmaar 
+    ['https://alkmaar.raadsinformatie.nl/', 'https://alkmaar.raadsinformatie.nl/live', 'https://www.alkmaar.nl/bestuur-en-organisatie/gemeenteraad-commissies-en-griffie/', 'https://www.alkmaar.nl/bestuur-en-organisatie/meld-u-aan-als-gast-van-de-raad/']
+https://www.alkmaar.nl/bestuur-organisatie/gemeenteraad/ 200 https://www.alkmaar.nl Home | Gemeente Alkmaar 
+    []
+ORI: ['ori_alkmaar_20250312095402']
