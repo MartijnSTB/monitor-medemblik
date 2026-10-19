@@ -9,7 +9,7 @@ Per gemeente staat in GEMEENTEN welke bronnen er zijn. Elke run:
 
 Uitgangspunt: de monitor zegt eerlijk wat hij wel en niet volgt (zie 'note' per bron).
 """
-import json, hashlib, re, datetime, urllib.parse, html as htmllib, email.utils
+import json, hashlib, re, datetime, urllib.parse, html as htmllib, email.utils, time
 from pathlib import Path
 import requests
 import xml.etree.ElementTree as ET
@@ -44,6 +44,10 @@ GEMEENTEN = {
         'domains': ('https://www.medemblik.nl/', 'https://medemblik.bestuurlijkeinformatie.nl/'),
         'news_rss': 'https://www.medemblik.nl/nieuws.rss',  # geeft ook de publicatietijd
         'college_pdf_page': None,
+        # Woonplaatsen volgens de BAG (PDOK), voor Google Nieuws.
+        'plaatsen': ['Medemblik', 'Abbekerk', 'Andijk', 'Benningbroek', 'Hauwert', 'Lambertschaag', 'Midwoud',
+                     'Nibbixwoud', 'Oostwoud', 'Opperdoes', 'Sijbekarspel', 'Twisk', 'Wervershoof', 'Wognum',
+                     'Zwaagdijk-Oost', 'Zwaagdijk-West'],
         'notes': {
             'Nieuws': 'Alleen de eerste nieuwspagina (de 12 nieuwste berichten).',
             'Collegebesluiten': 'Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet.',
@@ -63,6 +67,8 @@ GEMEENTEN = {
         'domains': ('https://www.koggenland.nl/', 'https://cuatro.sim-cdn.nl/koggenland/'),
         'news_rss': 'https://www.koggenland.nl/rss/content-list?type%5B%5D=news&sort_by=published_at&sort_order=DESC',
         'college_pdf_page': 'https://www.koggenland.nl/bestuursstukken-vergaderingen-college-bw',
+        'plaatsen': ['Koggenland', 'Avenhorn', 'Berkhout', 'De Goorn', 'Hensbroek', 'Obdam', 'Oudendijk',
+                     'Scharwoude', 'Spierdijk', 'Ursem', 'Zuidermeer'],
         'notes': {
             'Woo-verzoeken': 'Alleen de links op de overzichtspagina Woo-verzoeken.',
         },
@@ -84,6 +90,7 @@ GEMEENTEN = {
         'domains': ('https://www.opmeer.nl/', 'https://opmeer.bestuurlijkeinformatie.nl/'),
         'news_rss': 'https://www.opmeer.nl/rss/content-list?type%5B%5D=news&sort_by=published_at&sort_order=DESC',
         'college_pdf_page': None,
+        'plaatsen': ['Opmeer', 'Aartswoud', 'De Weere', 'Hoogwoud', 'Spanbroek'],
         'notes': {},
         'not_followed': {},
     },
@@ -110,6 +117,23 @@ MAX_DOC_BYTES = 15_000_000     # groter: alleen bestandskenmerken vergelijken
 TEXT_CAP = 300_000             # maximaal aantal tekens tekst per document
 MAX_CHANGES = 10               # zoveel wijzigingen per document bewaren
 MAX_ITEMS = 10_000             # bovengrens voor items.json
+# Google Nieuws ('In de media'): artikelen over de gemeente en haar kernen.
+MEDIA_SOURCE = 'In de media'
+MEDIA_WINDOW = 'when:3d'       # elke run de artikelen van de laatste 3 dagen
+MEDIA_KEEP_DAYS = 60           # oudere media-items worden opgeruimd
+MEDIA_CHUNK = 8                # plaatsnamen per zoekvraag (Google geeft max. 100 resultaten per vraag)
+# Regionale media: daar telt ook een artikel waarin de plaats alleen in de tekst staat.
+MEDIA_REGIONAAL = ('rodi', 'noordhollands dagblad', 'onswestfriesland', 'streekomroep', 'nh nieuws',
+                   'nieuwsuitwestfriesland', '112westfriesland', 'westfriesland', 'west-friesland')
+# Verzamelsites (dubbel) en de gemeente zelf (staat al in de kolom Nieuws).
+MEDIA_OVERSLAAN = ('drimble', 'stadindex', 'gemeente medemblik', 'gemeente koggenland', 'gemeente opmeer')
+# Plaatsnamen die ook een achternaam zijn of elders voorkomen. 'Masha Berkhout' telt niet, 'in Berkhout' wel.
+MEDIA_DUBBELZINNIG = {'berkhout', 'twisk', 'opmeer', 'oudendijk', 'hauwert', 'ursem', 'scharwoude'}
+# Deze namen komen ook elders veel voor (Noord-Scharwoude, Oudendijk bij Strijen, de achternaam Berkhout):
+# ze worden apart gezocht en tellen alleen als ze in de kop staan.
+MEDIA_ALLEEN_KOP = {'berkhout', 'twisk', 'oudendijk', 'hauwert', 'ursem', 'scharwoude'}
+MEDIA_VOORZETSELS = {'in', 'uit', 'bij', 'te', 'naar', 'van', 'rond', 'om', 'op', 'door', 'voor', 'nabij', 'en',
+                     'gemeente', 'dorp', 'kern', 'centrum', 'buiten', 'tussen', 'richting', 'over'}
 
 # ---------------------------------------------------------------------------
 # Hulpfuncties
@@ -403,6 +427,10 @@ def collect_college_pdfs(db, gid, page_url):
             if item is None:
                 item = db['items'][key] = new_item(gid, title, href, source, kind=kind)
                 added += 1
+            # Geen datum in de linktekst? Dan uit de opgeslagen titel of de bestandsnaam
+            # ('agenda_collegevergadering_16_december_2025.pdf').
+            date = date or parse_nl_date(item['title']) or parse_nl_date(
+                urllib.parse.unquote(href.split('?')[0].rsplit('/', 1)[-1]).replace('_', ' ').replace('-', ' '))
             item.update(url=href, file_url=href, doc_date=date, doc_date_label='vergaderdatum college',
                         last_seen=today(),
                         excerpt=('Besluitenlijst' if kind == 'besluitenlijst' else 'Agenda') + ' van het college van B&W (pdf)')
@@ -450,6 +478,89 @@ def collect_news_rss(db, gid, feed_url):
                    note=f'RSS-feed van de gemeentesite: de {len(items)} nieuwste berichten. Oudere berichten niet.')
     except Exception as exc:
         set_status(db, gid, source, ok=False, error=str(exc)[:250])
+
+# ---------------------------------------------------------------------------
+# In de media (Google Nieuws)
+# ---------------------------------------------------------------------------
+def media_plaats(title, places):
+    """Staat een plaats van de gemeente in de titel? Geeft 'ja', 'achternaam' of None.
+    Een dubbelzinnige naam direct na een woord met hoofdletter ('Masha Berkhout') is een achternaam;
+    'Noord-Scharwoude' telt niet (koppelteken ervoor)."""
+    surname = False
+    for place in places:
+        # Geen koppelteken ervóór (Noord-Scharwoude), wel erna (Hoogwoud-Oost).
+        for m in re.finditer(r'(?<![\w-])' + re.escape(place) + r'(?!\w)', title, re.I):
+            if place.casefold() not in MEDIA_DUBBELZINNIG:
+                return 'ja'
+            prev = re.search(r'(\S+)\s+$', title[:m.start()])
+            word = prev.group(1).strip('‘’\'"(:,') if prev else ''
+            if word and word[0].isupper() and word.casefold() not in MEDIA_VOORZETSELS:
+                surname = True
+                continue
+            return 'ja'
+    return 'achternaam' if surname else None
+
+def collect_media(db, gid, places):
+    """Google Nieuws-zoekfeed met alle kernen van de gemeente. Een artikel komt erin als een kern in de
+    titel staat, of als een regionaal medium de kern in de tekst noemt."""
+    state = db.setdefault('state', {}).setdefault('media', {})
+    now = datetime.datetime.now(datetime.timezone.utc)
+    if state.get('pause_until', '') > now.isoformat():
+        set_status(db, gid, MEDIA_SOURCE, ok=True, note='Google Nieuws even overgeslagen (te veel verzoeken); straks weer.')
+        return
+    seen = kept = added = 0
+    gewoon = [p for p in places if p.casefold() not in MEDIA_ALLEEN_KOP]
+    streng = [p for p in places if p.casefold() in MEDIA_ALLEEN_KOP]
+    groepen = [(gewoon[i:i + MEDIA_CHUNK], False) for i in range(0, len(gewoon), MEDIA_CHUNK)]
+    groepen += [(streng[i:i + MEDIA_CHUNK], True) for i in range(0, len(streng), MEDIA_CHUNK)]
+    try:
+        for groep, alleen_kop in groepen:
+            terms = ' OR '.join(f'"{p}"' if re.search(r'[\s-]', p) else p for p in groep)
+            url = 'https://news.google.com/rss/search?' + urllib.parse.urlencode(
+                {'q': f'{terms} {MEDIA_WINDOW}', 'hl': 'nl', 'gl': 'NL', 'ceid': 'NL:nl'})
+            r = requests.get(url, headers=HEADERS, timeout=30)
+            if r.status_code in (429, 503):
+                state['pause_until'] = (now + datetime.timedelta(hours=2)).isoformat(timespec='seconds')
+                raise RuntimeError(f'Google Nieuws gaf HTTP {r.status_code}; 2 uur pauze')
+            r.raise_for_status()
+            for it in ET.fromstring(r.content).findall('./channel/item'):
+                seen += 1
+                bron = clean(it.findtext('source'))
+                title = clean(it.findtext('title'))
+                link = clean(it.findtext('link'))
+                if not title or not link or any(w in bron.casefold() for w in MEDIA_OVERSLAAN):
+                    continue
+                if bron and title.endswith(' - ' + bron):
+                    title = title[:-len(bron) - 3].strip()
+                hit = media_plaats(title, places)
+                regionaal = any(w in bron.casefold() for w in MEDIA_REGIONAAL)
+                if hit != 'ja' and not (hit is None and regionaal and not alleen_kop):
+                    continue
+                key = make_key(f"{MEDIA_SOURCE}|{gid}|{clean(it.findtext('guid')) or link}")
+                item = db['items'].get(key)
+                if item is None:
+                    item = db['items'][key] = new_item(gid, title, link, MEDIA_SOURCE, kind='media')
+                    added += 1
+                kept += 1
+                # 'tekst': de plaats staat niet in de kop maar wel in het artikel (regionaal medium).
+                item.update(title=title, media_bron=bron, media_match='kop' if hit == 'ja' else 'tekst', last_seen=today())
+                try:
+                    dt = email.utils.parsedate_to_datetime(clean(it.findtext('pubDate'))).astimezone(NL)
+                    item.update(doc_date=dt.date().isoformat(), doc_date_label='publicatiedatum',
+                                published_at=dt.isoformat(timespec='minutes'), published_at_source='Google Nieuws')
+                except (TypeError, ValueError):
+                    pass
+            time.sleep(1)
+        set_status(db, gid, MEDIA_SOURCE, ok=True, count=kept, new=added,
+                   note=f'Google Nieuws, artikelen van de laatste 3 dagen over {", ".join(places)}. '
+                        'Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt.')
+    except Exception as exc:
+        set_status(db, gid, MEDIA_SOURCE, ok=False, error=str(exc)[:250])
+    # Opruimen: media-items ouder dan MEDIA_KEEP_DAYS.
+    grens = (datetime.date.today() - datetime.timedelta(days=MEDIA_KEEP_DAYS)).isoformat()
+    for k in [k for k, v in db['items'].items() if v.get('gemeente') == gid and v.get('source') == MEDIA_SOURCE
+              and (v.get('doc_date') or v['first_seen'][:10]) < grens]:
+        del db['items'][k]
 
 # ---------------------------------------------------------------------------
 # Losse webpagina's: links verzamelen
@@ -1245,6 +1356,31 @@ def migrate(db):
         elif '/Agenda/Index/' in item.get('url', '') and parse_nl_date(item.get('title', '')):
             item['doc_date'], item['doc_date_label'] = parse_nl_date(item['title']), 'vergaderdatum'
 
+def fetch_grenzen():
+    """Gemeentegrens per gemeente voor de kaart (Kadaster, via PDOK). Eén keer ophalen; grenzen
+    veranderen zelden. Verwijder data/grenzen/<gemeente>.json om opnieuw op te halen."""
+    folder = DB.parent / 'grenzen'
+    folder.mkdir(exist_ok=True)
+    for gid, cfg in GEMEENTEN.items():
+        path = folder / f'{gid}.json'
+        if path.exists():
+            continue
+        try:
+            r = requests.get('https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/collections/gemeentegebied/items',
+                             params={'f': 'json', 'naam': cfg['naam'], 'limit': 1}, headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            feats = r.json().get('features') or []
+            if not feats:
+                continue
+            geom = feats[0]['geometry']
+            def rnd(c):
+                return [rnd(v) for v in c] if isinstance(c[0], list) else [round(c[0], 5), round(c[1], 5)]
+            geom['coordinates'] = rnd(geom['coordinates'])
+            path.write_text(json.dumps({'type': 'Feature', 'properties': {'naam': cfg['naam']}, 'geometry': geom},
+                                       separators=(',', ':')))
+        except Exception as exc:
+            print('Gemeentegrens', gid, 'niet opgehaald:', exc)
+
 # De website (dashboard, zoekindex, kaart) wordt bij het publiceren gebouwd door build_site.py.
 
 def main():
@@ -1262,7 +1398,10 @@ def main():
         if cfg['college_pdf_page']:
             collect_college_pdfs(db, gid, cfg['college_pdf_page'])
         collect_pages(db, gid)
+        if cfg.get('plaatsen'):
+            collect_media(db, gid, cfg['plaatsen'])
     koop_publication_times(db)
+    fetch_grenzen()
     geocode(db)
     check_documents(db)
     scan_keywords(db)
