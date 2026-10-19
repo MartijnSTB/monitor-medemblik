@@ -32,7 +32,7 @@ PARTIJEN = {
         'PvdA': ['PvdA'], 'GroenLinks': ['GroenLinks'],
     },
     'opmeer': {
-        'KERN8': ['KERN8', 'Kern8'], 'CDA': ['CDA'], 'VVD': ['VVD'],
+        'KERN8': ['KERN8', 'KERN 8', 'Kern8'], 'CDA': ['CDA'], 'VVD': ['VVD'],
         'GB': ['Gemeentebelangen Opmeer', 'Gemeentebelangen', 'GemeenteBelangen', 'GB'],
         'LPO': ['Lokale Partij Opmeer(LPO)', 'Lokale Partij Opmeer', 'LPO'], 'PRO': ['PRO Opmeer', 'PRO'],
         'PvdA/GL': ['GROENLINKS/Partij van de Arbeid (PvdA)', 'PvdA / GroenLinks', 'PvdA/GroenLinks', 'GroenLinks/PvdA'],
@@ -161,14 +161,17 @@ def raadsleden(gid):
     for el in main.find_all(['h1', 'h2', 'h3', 'h4', 'a']):
         t = re.sub(r'\s+', ' ', el.get_text(' ', strip=True))
         if el.name != 'a':
-            if t and len(t) < 60 and not t.lower().startswith(('categorie', 'fractie', 'functie', 'gemeenteraad')):
-                fractie = re.sub(r'\s*\(\d+ zetels?\)$', '', t)
+            # Alleen kopjes die een bekende partij zijn (een naam in een kopje binnen een link telt niet).
+            kop = re.sub(r'\s*\(\d+ zetels?\)$', '', t)
+            if kop and partijen_in(gid, kop) and not el.find_parent('a'):
+                fractie = partij(gid, kop)
             continue
         if '/People/Details/' not in el.get('href', ''):
             continue
         mm = re.match(r'(.+?)\s+(Fractievoorzitter|Raadslid|Voorzitter|Plaatsvervangend voorzitter|Burgerraadslid|Commissielid)\b', t)
         if mm:
-            leden.append({'naam': mm.group(1), 'functie': mm.group(2), 'fractie': partij(gid, fractie) or fractie})
+            vacature = mm.group(1).lower().startswith(('opvolger', 'vacature'))
+            leden.append({'naam': mm.group(1), 'functie': mm.group(2), 'fractie': fractie, 'vacature': vacature})
     return leden
 
 # ---------------------------------------------------------------------------
@@ -203,7 +206,8 @@ def verkiezingen():
 def cbs():
     codes = [f'WK{c}' for c, _ in GEM.values()]
     gm = [f'GM{c}' for c, _ in GEM.values()]
-    flt = ' or '.join([f"startswith(WijkenEnBuurten,'{c}')" for c in codes] + [f"WijkenEnBuurten eq '{g}'" for g in gm] + ["WijkenEnBuurten eq 'NL00'"])
+    # CBS-codes zijn met spaties aangevuld ('GM0420    '), dus 'startswith' in plaats van 'eq'.
+    flt = ' or '.join(f"startswith(WijkenEnBuurten,'{c}')" for c in codes + gm + ['NL00'])
     regios, velden = {}, {}
     for jaar, tid in CBS_TABELLEN:
         props = requests.get(f'https://opendata.cbs.nl/ODataApi/odata/{tid}/DataProperties', params={'$format': 'json'}, headers=HEADERS, timeout=60).json()['value']
@@ -211,7 +215,7 @@ def cbs():
         units = {p['Key']: (p.get('Unit') or '').strip() for p in props if p.get('Key')}
         rows = requests.get(f'https://opendata.cbs.nl/ODataApi/odata/{tid}/TypedDataSet', params={'$format': 'json', '$filter': flt}, headers=HEADERS, timeout=90).json()['value']
         namen = {w['Key'].strip(): w['Title'].strip() for w in requests.get(
-            f'https://opendata.cbs.nl/ODataApi/odata/{tid}/WijkenEnBuurten', params={'$format': 'json', '$filter': ' or '.join([f"startswith(Key,'{c}')" for c in codes] + [f"Key eq '{g}'" for g in gm] + ["Key eq 'NL00'"])}, headers=HEADERS, timeout=60).json()['value']}
+            f'https://opendata.cbs.nl/ODataApi/odata/{tid}/WijkenEnBuurten', params={'$format': 'json', '$filter': ' or '.join(f"startswith(Key,'{c}')" for c in codes + gm + ['NL00'])}, headers=HEADERS, timeout=60).json()['value']}
         for row in rows:
             code = row['WijkenEnBuurten'].strip()
             if code.startswith('BU'):

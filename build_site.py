@@ -78,6 +78,10 @@ def build():
     # App-icoon en manifest (zet het dashboard als app op je beginscherm).
     for f in (ROOT / 'site').iterdir():
         shutil.copy(f, DOCS / f.name)
+    # Werkplek (aparte pagina op /werk/): raad, dorpen en verkiezingen, data uit werk.py.
+    shutil.copytree(ROOT / 'werk', DOCS / 'werk')
+    if (ROOT / 'data' / 'werk.json').exists():
+        shutil.copy(ROOT / 'data' / 'werk.json', DOCS / 'werk' / 'data.json')
     # Gemeentegrenzen voor de kaart (opgehaald door monitor.py, bron: Kadaster/PDOK).
     (DOCS / 'grens').mkdir()
     for f in (ROOT / 'data' / 'grenzen').glob('*.json'):

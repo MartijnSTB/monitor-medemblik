@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Werkplek West-Friesland</title>
+<meta name="description" content="Raad, dorpen en verkiezingen in Medemblik, Koggenland en Opmeer">
+<meta name="theme-color" content="#ffffff">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="../icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Werkplek">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try { const t = localStorage.getItem('gm-theme'); if (t === 'licht' || t === 'donker') document.documentElement.dataset.theme = t === 'donker' ? 'dark' : 'light'; } catch (e) {}</script>
+<style>
+  /* Zelfde huisstijl als de Gemeentemonitor: Rodi-kleuren, logo, klassieke kapitaal voor de naam. */
+  :root{
+    --rodi:#006dac; --deep:#1b4e8e; --orange:#f18700; --sky:#5498cf; --ice:#daeaf3;
+    --bg:#edf2f7; --card:#fff; --ink:#1d1d1b; --muted:#5b6672; --faint:#8b97a3; --line:#e2e8ef; --line2:#eef2f6;
+    --chip:#fff; --chipline:#cfd9e3; --link:#006dac; --hi:#f6f9fc; --green:#2e9a5a; --greenbg:#e2f2e7; --greenink:#165c35; --red:#a52d2d; --redbg:#f8e0e0;
+    --brand:'Cinzel',Georgia,serif; --serif:'Bricolage Grotesque','Figtree',system-ui,sans-serif; --sans:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e151c;--card:#151f29;--ink:#e6ecf2;--muted:#9aa8b6;--faint:#6f7e8c;--line:#24323f;--line2:#1c2834;--chip:#182430;--chipline:#2b3b4a;--link:#7fbbe6;--hi:#18242f;--ice:#1d3346;--greenbg:#173426;--greenink:#8fd6a8;--redbg:#3a1e1e;color-scheme:dark}}
+  :root[data-theme="dark"]{--bg:#0e151c;--card:#151f29;--ink:#e6ecf2;--muted:#9aa8b6;--faint:#6f7e8c;--line:#24323f;--line2:#1c2834;--chip:#182430;--chipline:#2b3b4a;--link:#7fbbe6;--hi:#18242f;--ice:#1d3346;--greenbg:#173426;--greenink:#8fd6a8;--redbg:#3a1e1e;color-scheme:dark}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 var(--sans)}
+  a{color:var(--link)}
+  button,select,input{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+  [hidden]{display:none!important}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+
+  /* Kop */
+  .band{position:relative;background:var(--card);padding-top:env(safe-area-inset-top)}
+  .band::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#f18700,#f18700 30%,#5498cf 62%,#006dac)}
+  .top{display:flex;align-items:center;gap:18px;padding-top:14px;padding-bottom:14px}
+  .brand{display:flex;align-items:center;gap:14px;min-width:0}
+  .logo{height:54px;width:auto;display:block}
+  .logo.dark{display:none}
+  :root[data-theme="dark"] .logo.light{display:none} :root[data-theme="dark"] .logo.dark{display:block}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo.light{display:none} :root:not([data-theme="light"]) .logo.dark{display:block}}
+  .sep{width:1px;align-self:stretch;margin:4px;background:var(--line)}
+  .brand h1{font:700 27px/1 var(--brand);margin:0;letter-spacing:.02em;white-space:nowrap}
+  .eyebrow{font:600 12px/1 var(--sans);color:#f18700;letter-spacing:.42em;text-transform:uppercase;margin-top:6px}
+  nav.tabs{display:flex;gap:4px;margin-left:auto;background:var(--ice);border-radius:999px;padding:4px}
+  nav.tabs a{text-decoration:none;padding:7px 15px;border-radius:999px;font-weight:600;color:var(--link);white-space:nowrap}
+  nav.tabs a.active{background:#006dac;color:#fff}
+  .iconbtn{border:1px solid var(--line);background:var(--card);color:var(--muted);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;cursor:pointer;flex:0 0 auto;text-decoration:none}
+  .iconbtn:hover{color:var(--link);border-color:var(--sky)}
+  svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+
+  /* Gemeentekeuze */
+  .bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:22px 0 0}
+  .seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:3px;gap:2px}
+  .seg button{border:0;background:transparent;font-weight:600;font-size:14px;padding:7px 13px;border-radius:9px;cursor:pointer;color:var(--muted)}
+  .seg button[aria-pressed=true]{background:var(--ink);color:var(--card)}
+  select.sel{font-weight:600;font-size:14px;padding:8px 10px;border:1px solid var(--chipline);border-radius:10px;background:var(--chip)}
+  .note{color:var(--muted);font-size:13.5px}
+
+  /* Kop van een pagina: blauw met de stippenboog uit het logo */
+  .hero{position:relative;overflow:hidden;border-radius:24px;background:#1b4e8e;color:#fff;padding:30px 36px 28px;margin:22px 0 0;isolation:isolate}
+  .hero::after{content:'';position:absolute;right:-70px;top:50%;width:420px;height:420px;transform:translateY(-50%);z-index:-1;opacity:.95;background:url(../spiraal.svg) center/contain no-repeat}
+  .hero p{margin:0;color:#cfe2f4;font-weight:600}
+  .hero h2{font:700 clamp(26px,3.4vw,44px)/1.08 var(--brand);margin:8px 0 0;max-width:20ch}
+  .hero .sub{margin-top:12px;font-weight:500;max-width:60ch}
+  .hstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .hstat{display:flex;align-items:baseline;gap:7px;background:rgba(255,255,255,.12);border:0;color:#fff;border-radius:12px;padding:8px 13px;font-size:14px;font-weight:600;cursor:pointer}
+  .hstat b{font:800 20px var(--serif)}
+  .hstat:hover{background:rgba(255,255,255,.2)}
+
+  /* Raster van kaarten */
+  .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;margin:20px 0 40px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;min-width:0}
+  .card h3{font:700 20px/1.2 var(--serif);letter-spacing:-.01em;margin:0}
+  .card .lead{color:var(--muted);font-size:14px;margin:4px 0 12px}
+  .c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}
+  @media (max-width:1000px){.c4,.c5,.c6,.c7,.c8{grid-column:span 12}}
+
+  /* Lijsten */
+  .rows{display:flex;flex-direction:column}
+  .row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;text-decoration:none;color:inherit}
+  .row + .row{border-top:1px solid var(--line2)}
+  .row:hover .rt{color:var(--link)}
+  .row .rt{font-weight:600;line-height:1.3}
+  .row .rs{font-size:13px;color:var(--muted);margin-top:2px;display:flex;flex-wrap:wrap;gap:2px 12px}
+  .days{flex:0 0 auto;min-width:54px;text-align:center;border-radius:10px;padding:5px 6px;background:var(--hi);line-height:1.05}
+  .days b{display:block;font:800 19px var(--serif)}
+  .days small{font-size:11px;color:var(--muted);font-weight:600}
+  .days.warm{background:#fff1de;color:#8a4c00} .days.hot{background:var(--redbg);color:var(--red)}
+  :root[data-theme="dark"] .days.warm{background:#2e2414;color:#f3b968}
+  .tag{display:inline-block;font-size:12px;font-weight:700;padding:0 8px;border-radius:999px;line-height:1.7;background:var(--ice);color:var(--link)}
+  .tag.ok{background:var(--greenbg);color:var(--greenink)} .tag.no{background:var(--redbg);color:var(--red)} .tag.off{background:var(--line2);color:var(--muted)}
+  .more{margin-top:8px;border:0;background:none;color:var(--link);font-weight:700;cursor:pointer;padding:4px 0}
+
+  /* Balkjes */
+  .bars{display:flex;flex-direction:column;gap:8px}
+  .barrow{display:grid;grid-template-columns:minmax(90px,150px) 1fr auto;gap:10px;align-items:center;font-size:14px}
+  .barrow .lab{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .track{height:12px;border-radius:6px;background:var(--line2);overflow:hidden;display:flex}
+  .track i{display:block;height:100%}
+  .barrow .v{font-weight:700;font-variant-numeric:tabular-nums;min-width:2.5em;text-align:right}
+  .seats{display:flex;height:34px;border-radius:10px;overflow:hidden;margin:6px 0 10px}
+  .seats i{display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;min-width:0}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+  /* Tabellen */
+  .tbl{width:100%;border-collapse:collapse;font-size:14px}
+  .tbl th{font-weight:700;text-align:right;color:var(--muted);font-size:12.5px;padding:8px 8px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+  .tbl th:first-child,.tbl td:first-child{text-align:left}
+  .tbl td{padding:8px 8px;text-align:right;border-bottom:1px solid var(--line2);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .tbl tr:hover td{background:var(--hi)}
+  .tbl th[aria-sort]{color:var(--ink)}
+  .tbl th[aria-sort=descending]::after{content:' ↓'} .tbl th[aria-sort=ascending]::after{content:' ↑'}
+  .scroll{overflow-x:auto}
+  .party{display:inline-flex;align-items:center;gap:7px;font-weight:700}
+  .party i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+  /* Dorpsprofiel */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:6px}
+  .kpi{background:var(--hi);border-radius:14px;padding:12px 14px}
+  .kpi .l{font-size:13px;color:var(--muted);font-weight:600}
+  .kpi .n{font:800 24px/1.15 var(--serif);margin-top:2px}
+  .kpi .c{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .kpi .c b{color:var(--ink)}
+  .age{display:flex;flex-direction:column;gap:6px}
+  .age .barrow{grid-template-columns:90px 1fr 3.4em}
+  .facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+  .fact{border:1px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;background:var(--card);text-align:left}
+  .fact:hover{border-color:var(--sky)}
+  .fact .l{font-size:13px;color:var(--muted);font-weight:600}
+  .fact .n{font:700 18px/1.2 var(--serif);margin-top:2px}
+  .fact .c{font-size:13px;color:var(--muted)}
+  .src{font-size:12.5px;color:var(--muted);margin-top:12px}
+  .links{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+  .links a{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-decoration:none;color:var(--ink)}
+  .links a:hover{border-color:var(--sky)}
+  .links a b{font-size:14.5px}
+  .links a span{font-size:12.5px;color:var(--muted)}
+  footer{color:var(--muted);font-size:13px;padding:0 0 30px}
+
+  @media (max-width:900px){
+    .top{flex-wrap:wrap}.brand{flex:1}nav.tabs{order:3;width:100%;margin-left:0;overflow-x:auto}nav.tabs a{flex:1;text-align:center}
+  }
+  @media (max-width:700px){
+    .wrap{padding:0 14px}.logo{height:34px}.brand h1{font-size:21px}.eyebrow{letter-spacing:.3em;font-size:11px}
+    .hero{padding:22px 20px;border-radius:20px}.hero::after{width:280px;height:280px;right:-120px;opacity:.45}
+    .card{padding:16px}
+    .barrow{grid-template-columns:minmax(80px,110px) 1fr auto}
+  }
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap top">
+    <div class="brand">
+      <img class="logo light" src="../rodi-logo.png" alt="Rodi Media" width="150" height="51">
+      <img class="logo dark" src="../rodi-logo-dark.png" alt="Rodi Media" width="150" height="51">
+      <span class="sep" aria-hidden="true"></span>
+      <div><h1>Werkplek</h1><div class="eyebrow">West-Friesland</div></div>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Onderdeel">
+      <a href="#overzicht" data-t="overzicht">Overzicht</a>
+      <a href="#raad" data-t="raad">Raad</a>
+      <a href="#dorpen" data-t="dorpen">Dorpen</a>
+      <a href="#verkiezingen" data-t="verkiezingen">Verkiezingen</a>
+    </nav>
+    <a class="iconbtn" href="../" title="Naar de Gemeentemonitor" aria-label="Naar de Gemeentemonitor"><svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></a>
+  </div>
+</header>
+<main class="wrap" id="main"><p class="note" style="padding:30px 0">Laden…</p></main>
+<div class="wrap"><footer id="foot"></footer></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const dayNL = s => new Date(s).toLocaleDateString('sv-SE', {timeZone: 'Europe/Amsterdam'});
+const TODAY = dayNL(Date.now());
+const daysAgo = n => dayNL(Date.now() - n * 864e5);
+const dt = s => new Date(s + 'T12:00:00');
+const nl = (s, o = {day: 'numeric', month: 'long', year: 'numeric'}) => s ? dt(s).toLocaleDateString('nl-NL', o) : '';
+const between = (a, b) => Math.round((dt(b) - dt(a)) / 864e5);
+const fmt = (n, d = 0) => n == null || isNaN(n) ? '–' : Number(n).toLocaleString('nl-NL', {minimumFractionDigits: d, maximumFractionDigits: d});
+const pct = (a, b, d = 0) => b ? fmt(100 * a / b, d) + '%' : '–';
+const median = xs => { if (!xs.length) return null; const s = [...xs].sort((a, b) => a - b), h = s.length >> 1; return s.length % 2 ? s[h] : (s[h - 1] + s[h]) / 2; };
+const store = { get(k, d = null){ try { const v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } }, set(k, v){ try { localStorage.setItem(k, v); } catch (e) {} } };
+
+const GEM = {medemblik: 'Medemblik', koggenland: 'Koggenland', opmeer: 'Opmeer'};
+const VERKIEZING = '2026-03-18', VORIGE = '2022-03-16';
+// Vaste kleur per partij (neutraal palet, geen partijhuisstijlen).
+const PAL = ['#006dac','#f18700','#2e9a5a','#8e44ad','#c0392b','#16a085','#d4a017','#5d6d7e','#e67e22','#2c3e50','#7f8c8d'];
+const ORDER = {medemblik: ['HvM','VVD','CDA','GB','Morgen!','FvD','D66','CU','PvdA','GroenLinks'], opmeer: ['KERN8','CDA','VVD','GB','LPO','PRO','PvdA/GL','DSV'], koggenland: ['VVD','GBK','CDA','FvD','GL/PvdA','D66']};
+const pcolor = (g, p) => { const i = (ORDER[g] || []).indexOf(p); return PAL[i >= 0 ? i : (p.length * 7) % PAL.length]; };
+const PNAAM = {HvM: 'Hart voor Medemblik', GB: 'GemeenteBelangen', 'Morgen!': 'Morgen!', FvD: 'Forum voor Democratie', CU: 'ChristenUnie', LPO: 'Lokale Partij Opmeer', PRO: 'PRO Opmeer', GBK: 'Gemeente Belangen Koggenland', 'PvdA/GL': 'PvdA / GroenLinks', 'GL/PvdA': 'GroenLinks / PvdA'};
+const partyTag = (g, p) => `<span class="party"><i style="background:${pcolor(g, p)}"></i>${esc(p)}</span>`;
+
+let W = null, MON = {}, TAB = 'overzicht';
+let G = store.get('wp-gem', 'medemblik'), PER = store.get('wp-per', 'periode');
+const PERIODES = {periode: ['Sinds de verkiezingen (18 mrt 2026)', VERKIEZING, '9999'], jaar: ['Afgelopen 12 maanden', daysAgo(365), '9999'], vorige: ['Vorige raadsperiode (2022–2026)', VORIGE, VERKIEZING], alles: ['Alles in het raadsportaal', '0000', '9999']};
+const inPer = d => d && d >= PERIODES[PER][1] && d < PERIODES[PER][2];
+
+// ---------------------------------------------------------------------------
+// Overzicht
+// ---------------------------------------------------------------------------
+function openVragen(gids = ['medemblik', 'opmeer']){
+  return gids.flatMap(g => (W.gemeenten[g].vragen || []).filter(v => !v.antwoord && !v.afgedaan && v.datum && v.datum >= daysAgo(365)).map(v => ({...v, g})))
+    .sort((a, b) => a.datum.localeCompare(b.datum));
+}
+const daysBadge = d => { const n = between(d, TODAY); return `<span class="days ${n > 42 ? 'hot' : n > 28 ? 'warm' : ''}"><b>${n}</b><small>dagen</small></span>`; };
+function vraagRow(v){
+  return `<a class="row" href="${esc(v.url)}" target="_blank" rel="noopener">${daysBadge(v.datum)}
+    <span><span class="rt">${esc(v.titel)}</span><span class="rs"><span>${GEM[v.g]}</span><span>gesteld ${nl(v.datum, {day: 'numeric', month: 'short'})}</span>${v.poho ? `<span>${esc(v.poho)}</span>` : ''}</span></span></a>`;
+}
+function agenda(){
+  const out = [];
+  for (const g of Object.keys(GEM)) (MON[g]?.items || []).filter(x => x.kind === 'vergadering' && x.doc_date >= TODAY && x.doc_date <= daysAgo(-21)).forEach(x => out.push({...x, g}));
+  return out.sort((a, b) => a.doc_date.localeCompare(b.doc_date));
+}
+function renderOverzicht(){
+  const ov = openVragen(), lang = ov.filter(v => between(v.datum, TODAY) > 28);
+  const tz = ['medemblik', 'opmeer'].flatMap(g => (W.gemeenten[g].toezeggingen || []).filter(t => t.open).map(t => ({...t, g})));
+  const ag = agenda();
+  const volgende = ag[0];
+  const perPoho = {};
+  tz.forEach(t => { const k = `${t.poho || 'onbekend'}|${t.g}`; perPoho[k] = (perPoho[k] || 0) + 1; });
+  const maxP = Math.max(1, ...Object.values(perPoho));
+  const dorpen = Object.values(W.cbs?.regios || {}).filter(r => r.code.startsWith('WK')).sort((a, b) => a.naam.localeCompare(b.naam));
+  $('main').innerHTML = `
+  <section class="hero">
+    <p>${new Date().toLocaleDateString('nl-NL', {weekday: 'long', day: 'numeric', month: 'long'})}</p>
+    <h2>${ov.length} raadsvragen wachten op antwoord</h2>
+    <p class="sub">${lang.length ? `${lang.length} daarvan staan er al langer dan vier weken. ` : ''}Er staan ${tz.length} toezeggingen van het college open${volgende ? `, en de eerstvolgende vergadering is ${nl(volgende.doc_date, {weekday: 'long', day: 'numeric', month: 'long'})} in ${GEM[volgende.g]}` : ''}.</p>
+    <div class="hstats"><button class="hstat" data-go="raad"><b>${W.gemeenten.medemblik.moties?.filter(x => x.datum >= VERKIEZING).length || 0}</b>moties in Medemblik sinds de verkiezingen</button>
+      <button class="hstat" data-go="raad" data-gem="opmeer"><b>${W.gemeenten.opmeer.moties?.filter(x => x.datum >= VERKIEZING).length || 0}</b>in Opmeer</button>
+      <button class="hstat" data-go="dorpen"><b>${dorpen.length}</b>dorpen in cijfers</button></div>
+  </section>
+  <div class="grid">
+    <section class="card c7"><h3>Wachten op antwoord</h3><p class="lead">Raadsvragen zonder antwoorddatum in het raadsportaal, langst wachtend eerst. Rood is langer dan zes weken.</p>
+      <div class="rows" id="ovr">${ov.slice(0, 8).map(vraagRow).join('') || '<p class="note">Geen openstaande vragen.</p>'}</div>
+      ${ov.length > 8 ? `<button class="more" data-more="ovr">Alle ${ov.length} tonen</button>` : ''}</section>
+    <section class="card c5"><h3>Agenda, komende drie weken</h3><p class="lead">Medemblik en Opmeer. De Koggenlandse raad wordt niet gevolgd.</p>
+      <div class="rows">${ag.slice(0, 9).map(x => `<a class="row" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="days"><b>${dt(x.doc_date).getDate()}</b><small>${dt(x.doc_date).toLocaleDateString('nl-NL', {month: 'short'})}</small></span>
+        <span><span class="rt">${esc(x.title.split(' (')[0].replace(/\s*(maandag|dinsdag|woensdag|donderdag|vrijdag)?\s*\d{1,2}\s+\w+\s+\d{4}.*$/i, ''))}</span><span class="rs"><span>${GEM[x.g]}</span><span>${dt(x.doc_date).toLocaleDateString('nl-NL', {weekday: 'long'})}${(x.title.match(/\d{1,2}:\d{2}/) || [''])[0] ? ', ' + x.title.match(/\d{1,2}:\d{2}/)[0] : ''}</span></span></span></a>`).join('') || '<p class="note">Geen vergaderingen gevonden.</p>'}</div></section>
+    <section class="card c6"><h3>Open toezeggingen</h3><p class="lead">Beloftes van het college aan de raad die nog niet zijn afgedaan, per portefeuillehouder.</p>
+      <div class="bars">${Object.entries(perPoho).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([k, n]) => { const [p, g] = k.split('|'); return `<div class="barrow"><span class="lab" title="${esc(p)}">${esc(p)}</span><span class="track"><i style="width:${100 * n / maxP}%;background:${g === 'opmeer' ? '#f18700' : '#006dac'}"></i></span><span class="v">${n}</span></div>`; }).join('')}</div>
+      <div class="legend" style="margin-top:10px"><span><i style="background:#006dac"></i>Medemblik</span><span><i style="background:#f18700"></i>Opmeer</span></div></section>
+    <section class="card c6"><h3>Dorp opzoeken</h3><p class="lead">Snel de kerncijfers van een dorp bij de hand.</p>
+      <select class="sel" id="qdorp"><option value="">Kies een dorp…</option>${Object.keys(GEM).map(g => `<optgroup label="${GEM[g]}">${dorpen.filter(d => d.gemeente === GEM[g]).map(d => `<option value="${d.code}">${esc(d.naam)}</option>`).join('')}</optgroup>`).join('')}</select>
+      <div id="qdorpout" style="margin-top:12px"></div></section>
+    <section class="card c12"><h3>Snel naar</h3><p class="lead">De bronnen die je het vaakst nodig hebt.</p>
+      <div class="links">
+        <a href="../"><b>Gemeentemonitor</b><span>Alles wat de drie gemeenten publiceren</span></a>
+        <a href="https://medemblik.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener"><b>Raadsinformatie Medemblik</b><span>medemblik.bestuurlijkeinformatie.nl</span></a>
+        <a href="https://opmeer.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener"><b>Raadsinformatie Opmeer</b><span>opmeer.bestuurlijkeinformatie.nl</span></a>
+        <a href="https://raad.koggenland.nl/" target="_blank" rel="noopener"><b>Raadsinformatie Koggenland</b><span>raad.koggenland.nl</span></a>
+        <a href="https://www.medemblik.nl/" target="_blank" rel="noopener"><b>Gemeente Medemblik</b><span>medemblik.nl</span></a>
+        <a href="https://www.koggenland.nl/" target="_blank" rel="noopener"><b>Gemeente Koggenland</b><span>koggenland.nl</span></a>
+        <a href="https://www.opmeer.nl/" target="_blank" rel="noopener"><b>Gemeente Opmeer</b><span>opmeer.nl</span></a>
+        <a href="https://zoek.officielebekendmakingen.nl/" target="_blank" rel="noopener"><b>Officiële bekendmakingen</b><span>zoeken in het Gemeenteblad</span></a>
+      </div></section>
+  </div>`;
+  $('qdorp').addEventListener('change', e => { $('qdorpout').innerHTML = e.target.value ? dorpMini(e.target.value) : ''; });
+}
+
+// ---------------------------------------------------------------------------
+// Raad
+// ---------------------------------------------------------------------------
+function zetels(g){
+  // Huidige zetels: tel de raadsleden per fractie (het raadsportaal); Koggenland: verkiezingsuitslag.
+  const leden = W.gemeenten[g].raadsleden || [];
+  if (leden.length) { const z = {}; leden.forEach(l => { z[l.fractie] = (z[l.fractie] || 0) + 1; }); return z; }
+  const z = {}; Object.entries(W.verkiezingen?.[g]?.lijsten || {}).forEach(([p, l]) => { if (l.zetels) z[p] = l.zetels; }); return z;
+}
+function seatsBar(g, z){
+  const tot = Object.values(z).reduce((a, b) => a + b, 0);
+  const ps = Object.entries(z).sort((a, b) => b[1] - a[1]);
+  return `<div class="seats" role="img" aria-label="Zetelverdeling">${ps.map(([p, n]) => `<i style="width:${100 * n / tot}%;background:${pcolor(g, p)}" title="${esc(p)}: ${n}">${n}</i>`).join('')}</div>
+    <div class="legend">${ps.map(([p, n]) => `<span><i style="background:${pcolor(g, p)}"></i>${esc(PNAAM[p] || p)} ${n}</span>`).join('')}</div>`;
+}
+function renderRaad(){
+  const g = G === 'koggenland' || W.gemeenten[G].moties ? G : 'medemblik';
+  const D = W.gemeenten[g], z = zetels(g);
+  const bar = `<div class="bar"><div class="seg" id="gemseg">${Object.keys(GEM).map(k => `<button data-gem="${k}" aria-pressed="${k === g}">${GEM[k]}</button>`).join('')}</div>
+    ${g !== 'koggenland' ? `<select class="sel" id="per">${Object.entries(PERIODES).map(([k, [l]]) => `<option value="${k}"${k === PER ? ' selected' : ''}>${l}</option>`).join('')}</select>` : ''}</div>`;
+  if (g === 'koggenland') {
+    const v = W.verkiezingen?.koggenland;
+    $('main').innerHTML = bar + `<div class="grid"><section class="card c12"><h3>Gemeenteraad Koggenland</h3>
+      <p class="lead">De raadsinformatie van Koggenland (moties, vragen, toezeggingen) zit achter een beveiligingscontrole en wordt niet gevolgd. Hieronder de zetels en gekozen raadsleden volgens de Kiesraad (verkiezingen 18 maart 2026).</p>
+      ${seatsBar('koggenland', z)}</section>
+      <section class="card c12"><h3>Gekozen raadsleden</h3><p class="lead">Gekozen op 18 maart 2026. Wie daarna wethouder werd of opstapte, staat hier nog bij.</p>${gekozenTabel('koggenland')}</section></div>`;
+    bindBar(); return;
+  }
+  const moties = (D.moties || []).filter(x => inPer(x.datum));
+  const vragen = (D.vragen || []).filter(x => inPer(x.datum));
+  const fr = {};
+  const F = p => fr[p] || (fr[p] = {ingediend: 0, eerste: 0, aangenomen: 0, verworpen: 0, ingetrokken: 0, vragen: 0});
+  Object.keys(z).forEach(F);
+  moties.forEach(x => x.partijen.forEach(p => { const f = F(p); f.ingediend++; if (x.hoofdpartij === p) f.eerste++; const s = x.status.toLowerCase(); if (s.startsWith('aangenomen')) f.aangenomen++; else if (s.startsWith('verworpen')) f.verworpen++; else if (s.startsWith('ingetrokken')) f.ingetrokken++; }));
+  vragen.forEach(x => x.partijen.forEach(p => F(p).vragen++));
+  const rows = Object.entries(fr).filter(([p, f]) => z[p] || f.ingediend || f.vragen).sort((a, b) => (z[b[0]] || 0) - (z[a[0]] || 0) || b[1].ingediend - a[1].ingediend);
+  const status = {}; moties.forEach(x => { status[x.status || 'onbekend'] = (status[x.status || 'onbekend'] || 0) + 1; });
+  // Indieners (alleen Medemblik geeft de naam van de indiener)
+  const ind = {}; moties.forEach(x => { if (x.indiener) { const k = x.indiener + '|' + x.hoofdpartij; ind[k] = (ind[k] || 0) + 1; } });
+  const indTop = Object.entries(ind).sort((a, b) => b[1] - a[1]).slice(0, 10), indMax = Math.max(1, ...indTop.map(x => x[1]));
+  // Antwoordtijd per portefeuillehouder
+  const at = {}; vragen.filter(v => v.antwoord && v.poho && v.antwoord >= v.datum).forEach(v => (at[v.poho] = at[v.poho] || []).push(between(v.datum, v.antwoord)));
+  const atRows = Object.entries(at).filter(([, xs]) => xs.length >= 2).map(([p, xs]) => [p, median(xs), xs.length]).sort((a, b) => b[1] - a[1]);
+  const atMax = Math.max(1, ...atRows.map(r => r[1]));
+  const allAns = vragen.filter(v => v.antwoord && v.antwoord >= v.datum).map(v => between(v.datum, v.antwoord));
+  const ov = openVragen([g]);
+  const tz = (D.toezeggingen || []).filter(t => t.open);
+  const geen = rows.filter(([p, f]) => z[p] && !f.vragen).map(([p]) => p);
+  const top = rows.slice().sort((a, b) => b[1].vragen - a[1].vragen)[0];
+  $('main').innerHTML = bar + `
+  <section class="hero"><p>${GEM[g]}, ${PERIODES[PER][0].toLowerCase()}</p>
+    <h2>${moties.length} moties en amendementen, ${vragen.length} ${g === 'opmeer' ? 'politieke vragen' : 'raadsvragen'}</h2>
+    <p class="sub">${pct(status['Aangenomen'] || 0, moties.length)} van de moties en amendementen is aangenomen.${top && top[1].vragen ? ` ${esc(PNAAM[top[0]] || top[0])} stelde de meeste vragen (${top[1].vragen}).` : ''}${allAns.length ? ` Het college deed er gemiddeld (mediaan) ${median(allAns)} dagen over om te antwoorden.` : ''}</p></section>
+  <div class="grid">
+    <section class="card c12"><h3>Fracties</h3><p class="lead">Zetels volgens het raadsportaal. Een motie telt mee voor elke fractie die hem (mede) indiende.${g === 'opmeer' ? ' Bij Opmeer staat de partij niet altijd in de titel van politieke vragen; die tellen dan niet mee.' : ''}</p>
+      ${seatsBar(g, z)}
+      <div class="scroll"><table class="tbl" id="frtbl"><thead><tr><th>Fractie</th><th>Zetels</th><th>Moties en amendementen</th>${g === 'medemblik' ? '<th>Als eerste indiener</th>' : ''}<th>Aangenomen</th><th>Verworpen</th><th>Ingetrokken</th><th>${g === 'opmeer' ? 'Politieke vragen' : 'Raadsvragen'}</th><th>Vragen per zetel</th></tr></thead>
+      <tbody>${rows.map(([p, f]) => `<tr><td>${partyTag(g, p)}</td><td>${z[p] || '–'}</td><td>${f.ingediend}</td>${g === 'medemblik' ? `<td>${f.eerste}</td>` : ''}<td>${f.aangenomen}</td><td>${f.verworpen}</td><td>${f.ingetrokken}</td><td>${f.vragen}</td><td>${z[p] ? fmt(f.vragen / z[p], 1) : '–'}</td></tr>`).join('')}</tbody></table></div>
+      ${geen.length ? `<p class="src">Geen ${g === 'opmeer' ? 'politieke vragen' : 'raadsvragen'} gevonden van: ${geen.map(p => esc(PNAAM[p] || p)).join(', ')}.</p>` : ''}</section>
+    ${g === 'medemblik' ? `<section class="card c6"><h3>Meeste moties ingediend</h3><p class="lead">Als eerste indiener, per raadslid.</p>
+      <div class="bars">${indTop.map(([k, n]) => { const [naam, p] = k.split('|'); return `<div class="barrow"><span class="lab" title="${esc(naam)}">${esc(naam)}</span><span class="track"><i style="width:${100 * n / indMax}%;background:${pcolor(g, p)}"></i></span><span class="v">${n}</span></div>`; }).join('') || '<p class="note">Geen moties in deze periode.</p>'}</div></section>` : ''}
+    ${atRows.length ? `<section class="card c6"><h3>Antwoordtijd per wethouder</h3><p class="lead">Mediaan aantal dagen tussen vraag en antwoord (minstens twee beantwoorde vragen).</p>
+      <div class="bars">${atRows.map(([p, d, n]) => `<div class="barrow"><span class="lab">${esc(p)}</span><span class="track"><i style="width:${100 * d / atMax}%;background:${d > 30 ? '#c0392b' : '#006dac'}"></i></span><span class="v" title="${n} vragen">${fmt(d)} d</span></div>`).join('')}</div></section>` : ''}
+    <section class="card c6"><h3>Wachten op antwoord</h3><p class="lead">${ov.length} vragen zonder antwoorddatum.</p><div class="rows">${ov.slice(0, 10).map(vraagRow).join('') || '<p class="note">Geen.</p>'}</div></section>
+    <section class="card c6"><h3>Open toezeggingen</h3><p class="lead">${tz.length} toezeggingen nog niet afgedaan.</p><div class="rows">${tz.sort((a, b) => (a.datum || '').localeCompare(b.datum || '')).slice(0, 10).map(t => `<a class="row" href="${esc(t.url)}" target="_blank" rel="noopener">${t.datum ? daysBadge(t.datum) : ''}<span><span class="rt">${esc(t.titel)}</span><span class="rs">${t.poho ? `<span>${esc(t.poho)}</span>` : ''}${t.datum ? `<span>${nl(t.datum, {day: 'numeric', month: 'short', year: 'numeric'})}</span>` : ''}${(t.partijen || []).length ? `<span>gevraagd door ${t.partijen.map(esc).join(', ')}</span>` : ''}</span></span></a>`).join('') || '<p class="note">Geen.</p>'}</div></section>
+    <section class="card c12"><h3>Moties en amendementen</h3><p class="lead">Nieuwste eerst.</p><div class="rows" id="motrows">${moties.slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || '')).slice(0, 12).map(motieRow).join('') || '<p class="note">Geen in deze periode.</p>'}</div>
+      ${moties.length > 12 ? `<button class="more" data-allmot="1">Alle ${moties.length} tonen</button>` : ''}</section>
+  </div>`;
+  bindBar();
+  $('per')?.addEventListener('change', e => { PER = e.target.value; store.set('wp-per', PER); renderRaad(); });
+  sortable($('frtbl'));
+  document.querySelector('[data-allmot]')?.addEventListener('click', e => { $('motrows').innerHTML = moties.slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || '')).map(motieRow).join(''); e.target.remove(); });
+}
+function motieRow(x){
+  const s = (x.status || '').toLowerCase();
+  const cls = s.startsWith('aangenomen') ? 'ok' : s.startsWith('verworpen') ? 'no' : 'off';
+  return `<a class="row" href="${esc(x.url)}" target="_blank" rel="noopener"><span style="flex:0 0 92px"><span class="tag ${cls}">${esc(x.status || 'onbekend')}</span></span>
+    <span><span class="rt">${esc(x.titel)}</span><span class="rs"><span>${esc(x.soort)}</span><span>${nl(x.datum, {day: 'numeric', month: 'short', year: 'numeric'})}</span>${x.partijen.length ? `<span>${x.partijen.map(esc).join(', ')}</span>` : ''}${x.indiener ? `<span>${esc(x.indiener)}</span>` : ''}</span></span></a>`;
+}
+function bindBar(){
+  $('gemseg')?.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; G = b.dataset.gem; store.set('wp-gem', G); render(); });
+}
+function sortable(t){
+  if (!t) return;
+  t.querySelectorAll('th').forEach((th, i) => th.addEventListener('click', () => {
+    const dir = th.getAttribute('aria-sort') === 'descending' ? 'ascending' : 'descending';
+    t.querySelectorAll('th').forEach(x => x.removeAttribute('aria-sort')); th.setAttribute('aria-sort', dir);
+    const rows = [...t.tBodies[0].rows];
+    const v = r => { const s = r.cells[i].textContent.replace(/\./g, '').replace(',', '.').replace(/[^\d.\-]/g, ''); return s === '' || isNaN(+s) ? r.cells[i].textContent : +s; };
+    rows.sort((a, b) => { const x = v(a), y = v(b); const c = typeof x === 'number' && typeof y === 'number' ? x - y : String(x).localeCompare(String(y), 'nl'); return dir === 'ascending' ? c : -c; });
+    rows.forEach(r => t.tBodies[0].appendChild(r));
+  }));
+}
+
+// ---------------------------------------------------------------------------
+// Dorpen (CBS-wijken = dorpen)
+// ---------------------------------------------------------------------------
+const C = (r, k) => r?.cijfers?.[k];
+const cv = (r, k) => C(r, k)?.w;
+// Aandeel van de inwoners, altijd met het inwonertal van hetzelfde jaar als het cijfer.
+function share(r, keys){
+  const parts = keys.map(k => C(r, k)).filter(Boolean);
+  if (parts.length !== keys.length) return null;
+  const j = parts[0].j; if (parts.some(p => p.j !== j)) return null;
+  const inw = r.inwoners_per_jaar?.[j]; if (!inw) return null;
+  return {p: 100 * parts.reduce((a, p) => a + p.w, 0) / inw, j};
+}
+const aandeel65 = r => share(r, ['k_65JaarTot80Jaar', 'k_80JaarOfOuder']) || share(r, ['k_65JaarOfOuder']);
+const aandeel015 = r => share(r, ['k_0Tot15Jaar']);
+const regio = code => W.cbs.regios[code];
+const gemRegio = r => Object.values(W.cbs.regios).find(x => x.code.startsWith('GM') && x.naam === r.gemeente);
+const NLR = () => W.cbs.regios['NL00'] || Object.values(W.cbs.regios).find(x => x.code.startsWith('NL'));
+function dorpMini(code){
+  const r = regio(code); if (!r) return '';
+  const a = aandeel65(r);
+  return `<div class="kpis"><div class="kpi"><div class="l">Inwoners</div><div class="n">${fmt(cv(r, 'AantalInwoners'))}</div><div class="c">${C(r, 'AantalInwoners')?.j}</div></div>
+    <div class="kpi"><div class="l">65 jaar of ouder</div><div class="n">${a ? fmt(a.p) + '%' : '–'}</div></div>
+    <div class="kpi"><div class="l">Gem. WOZ-waarde</div><div class="n">${cv(r, 'GemiddeldeWOZWaardeVanWoningen') ? '€ ' + fmt(cv(r, 'GemiddeldeWOZWaardeVanWoningen')) + 'k' : '–'}</div></div></div>
+    <button class="more" data-dorp="${code}">Volledig profiel bekijken</button>`;
+}
+let DORP = store.get('wp-dorp', 'WK042016');
+function kpi(label, r, key, opts = {}){
+  const c = C(r, key); if (!c) return '';
+  const g = gemRegio(r), n = NLR();
+  const f = v => v == null ? '–' : (opts.pre || '') + fmt(v, opts.d || 0) + (opts.suf || '');
+  return `<div class="kpi"><div class="l">${label}</div><div class="n">${f(c.w)}</div><div class="c">${g ? `${esc(r.gemeente)} <b>${f(cv(g, key))}</b>` : ''}${n && cv(n, key) != null ? ` · NL <b>${f(cv(n, key))}</b>` : ''} · ${c.j}</div></div>`;
+}
+function renderDorpen(){
+  const all = Object.values(W.cbs.regios).filter(r => r.code.startsWith('WK'));
+  if (!regio(DORP)) DORP = all[0].code;
+  const r = regio(DORP), gm = gemRegio(r), nlr = NLR();
+  const inw = r.inwoners_per_jaar || {}, jaren = Object.keys(inw).sort();
+  const groei = jaren.length > 1 ? inw[jaren.at(-1)] - inw[jaren[0]] : null;
+  // Leeftijdsopbouw (zelfde jaar als het inwonertal)
+  const ageKeys = [['0–15', ['k_0Tot15Jaar']], ['15–25', ['k_15Tot25Jaar']], ['25–45', ['k_25Tot45Jaar']], ['45–65', ['k_45Tot65Jaar']], ['65+', null]];
+  const ages = x => ageKeys.map(([l, ks]) => [l, ks ? share(x, ks) : aandeel65(x)]);
+  const ar = ages(r), ag = gm ? ages(gm) : [];
+  const maxA = Math.max(...ar.map(a => a[1]?.p || 0), ...ag.map(a => a[1]?.p || 0), 1);
+  // Opvallend: rangorde over alle 31 dorpen
+  const rank = (label, f, unit, hoog = true, d = 0) => {
+    const xs = all.map(x => [x, f(x)]).filter(([, v]) => v != null).sort((a, b) => hoog ? b[1] - a[1] : a[1] - b[1]);
+    if (!xs.length) return '';
+    const [x, v] = xs[0];
+    return `<button class="fact" data-dorp="${x.code}"><div class="l">${label}</div><div class="n">${esc(x.naam)}</div><div class="c">${unit(v)} (${esc(x.gemeente)})</div></button>`;
+  };
+  const tableRows = all.map(x => ({x, inw: cv(x, 'AantalInwoners'), o: aandeel65(x)?.p, j: aandeel015(x)?.p, woz: cv(x, 'GemiddeldeWOZWaardeVanWoningen'), koop: cv(x, 'Koopwoningen'), ink: cv(x, 'GemiddeldInkomenPerInwoner'), arts: cv(x, 'AfstandTotHuisartsenpraktijk'), super: cv(x, 'AfstandTotGroteSupermarkt'), nieuw: cv(x, 'NieuwbouwWoningen')}))
+    .sort((a, b) => (b.inw || 0) - (a.inw || 0));
+  $('main').innerHTML = `
+  <div class="bar"><select class="sel" id="dorpsel">${Object.keys(GEM).map(g => `<optgroup label="${GEM[g]}">${all.filter(d => d.gemeente === GEM[g]).sort((a, b) => a.naam.localeCompare(b.naam)).map(d => `<option value="${d.code}"${d.code === DORP ? ' selected' : ''}>${esc(d.naam)}</option>`).join('')}</optgroup>`).join('')}</select>
+    <span class="note">Kerncijfers van het CBS. Per cijfer het nieuwste jaar dat beschikbaar is; dat jaar staat erbij.</span></div>
+  <section class="hero"><p>${esc(r.gemeente)}</p><h2>${esc(r.naam)}</h2>
+    <p class="sub">${fmt(cv(r, 'AantalInwoners'))} inwoners (${C(r, 'AantalInwoners')?.j})${groei != null ? `, ${groei >= 0 ? '+' : ''}${fmt(groei)} sinds ${jaren[0]}` : ''}. ${gm ? `Dat is ${pct(cv(r, 'AantalInwoners'), cv(gm, 'AantalInwoners'))} van de gemeente ${esc(r.gemeente)}.` : ''}</p></section>
+  <div class="grid">
+    <section class="card c12"><h3>Kerncijfers</h3><p class="lead">Ter vergelijking de hele gemeente en Nederland.</p><div class="kpis">
+      ${kpi('Huishoudens', r, 'HuishoudensTotaal')}
+      ${kpi('Gem. huishoudensgrootte', r, 'GemiddeldeHuishoudensgrootte', {d: 1})}
+      ${kpi('Woningen', r, 'Woningvoorraad')}
+      ${kpi('Nieuwbouwwoningen', r, 'NieuwbouwWoningen')}
+      ${kpi('Gem. WOZ-waarde', r, 'GemiddeldeWOZWaardeVanWoningen', {pre: '€ ', suf: 'k'})}
+      ${kpi('Koopwoningen', r, 'Koopwoningen', {suf: '%'})}
+      ${kpi('Corporatiewoningen', r, 'InBezitWoningcorporatie', {suf: '%'})}
+      ${kpi('Woningen met zonnepanelen', r, 'WoningenMetZonnestroom', {suf: '%'})}
+      ${kpi('Inkomen per inwoner', r, 'GemiddeldInkomenPerInwoner', {pre: '€ ', suf: 'k', d: 1})}
+      ${kpi('Personen in armoede', r, 'PersonenInArmoede', {suf: '%', d: 1})}
+      ${kpi('Bedrijfsvestigingen', r, 'BedrijfsvestigingenTotaal')}
+      ${kpi("Auto's per huishouden", r, 'PersonenautoSParticulierenPerHh', {d: 1})}
+      ${kpi('Afstand huisarts', r, 'AfstandTotHuisartsenpraktijk', {suf: ' km', d: 1})}
+      ${kpi('Afstand grote supermarkt', r, 'AfstandTotGroteSupermarkt', {suf: ' km', d: 1})}
+      ${kpi('Afstand basisschool', r, 'AfstandTotSchool', {suf: ' km', d: 1})}
+      ${kpi('Wmo-cliënten per 1.000', r, 'WmoClientenRelatief')}
+    </div></section>
+    <section class="card c6"><h3>Leeftijdsopbouw</h3><p class="lead">Aandeel van de inwoners, ${esc(r.naam)} tegenover ${esc(r.gemeente)}.</p>
+      <div class="age">${ar.map(([l, a], i) => `<div class="barrow"><span class="lab">${l}</span><span class="track" style="flex-direction:column;height:16px;gap:2px;background:none"><i style="width:${100 * (a?.p || 0) / maxA}%;height:9px;border-radius:4px;background:#006dac"></i><i style="width:${100 * (ag[i]?.[1]?.p || 0) / maxA}%;height:5px;border-radius:3px;background:#f18700;opacity:.8"></i></span><span class="v">${a ? fmt(a.p) + '%' : '–'}</span></div>`).join('')}</div>
+      <div class="legend" style="margin-top:10px"><span><i style="background:#006dac"></i>${esc(r.naam)}</span><span><i style="background:#f18700"></i>${esc(r.gemeente)}</span></div></section>
+    <section class="card c6"><h3>Opvallend in de regio</h3><p class="lead">Van alle ${all.length} dorpen in Medemblik, Koggenland en Opmeer. Klik om dat dorp te bekijken.</p>
+      <div class="facts">
+        ${rank('Meeste 65-plussers', x => aandeel65(x)?.p, v => fmt(v) + '% is 65+')}
+        ${rank('Meeste kinderen', x => aandeel015(x)?.p, v => fmt(v) + '% is jonger dan 15')}
+        ${rank('Hoogste WOZ-waarde', x => cv(x, 'GemiddeldeWOZWaardeVanWoningen'), v => '€ ' + fmt(v) + '.000 gemiddeld')}
+        ${rank('Laagste WOZ-waarde', x => cv(x, 'GemiddeldeWOZWaardeVanWoningen'), v => '€ ' + fmt(v) + '.000 gemiddeld', false)}
+        ${rank('Meeste nieuwbouw', x => cv(x, 'NieuwbouwWoningen'), v => fmt(v) + ' nieuwe woningen')}
+        ${rank('Verst van een huisarts', x => cv(x, 'AfstandTotHuisartsenpraktijk'), v => fmt(v, 1) + ' km gemiddeld')}
+        ${rank('Verst van een grote supermarkt', x => cv(x, 'AfstandTotGroteSupermarkt'), v => fmt(v, 1) + ' km gemiddeld')}
+        ${rank('Snelst gegroeid', x => { const i = x.inwoners_per_jaar || {}, ks = Object.keys(i).sort(); return ks.length > 1 ? 100 * (i[ks.at(-1)] - i[ks[0]]) / i[ks[0]] : null; }, v => (v >= 0 ? '+' : '') + fmt(v, 1) + '% inwoners')}
+      </div></section>
+    <section class="card c12"><h3>Alle dorpen naast elkaar</h3><p class="lead">Klik op een kolomkop om te sorteren.</p>
+      <div class="scroll"><table class="tbl" id="dtbl"><thead><tr><th>Dorp</th><th>Gemeente</th><th>Inwoners</th><th>% 0–15</th><th>% 65+</th><th>WOZ (×1.000)</th><th>% koop</th><th>Inkomen p.p. (×1.000)</th><th>Huisarts km</th><th>Supermarkt km</th><th>Nieuwbouw</th></tr></thead>
+      <tbody>${tableRows.map(t => `<tr data-dorp="${t.x.code}" style="cursor:pointer"><td><b>${esc(t.x.naam)}</b></td><td>${esc(t.x.gemeente)}</td><td>${fmt(t.inw)}</td><td>${fmt(t.j)}</td><td>${fmt(t.o)}</td><td>${fmt(t.woz)}</td><td>${fmt(t.koop)}</td><td>${fmt(t.ink, 1)}</td><td>${fmt(t.arts, 1)}</td><td>${fmt(t.super, 1)}</td><td>${fmt(t.nieuw)}</td></tr>`).join('')}</tbody></table></div>
+      <p class="src">Bron: CBS, Kerncijfers wijken en buurten 2024, 2025 en 2026. De CBS-wijken in deze gemeenten zijn de dorpen. Een streepje betekent dat het CBS het cijfer niet publiceert (vaak bij kleine dorpen, vanwege privacy).</p></section>
+  </div>`;
+  $('dorpsel').addEventListener('change', e => { DORP = e.target.value; store.set('wp-dorp', DORP); renderDorpen(); scrollTo({top: 0}); });
+  sortable($('dtbl'));
+}
+
+// ---------------------------------------------------------------------------
+// Verkiezingen 18 maart 2026 (Kiesraad)
+// ---------------------------------------------------------------------------
+function gekozenTabel(g){
+  const v = W.verkiezingen?.[g]; if (!v) return '';
+  return `<div class="scroll"><table class="tbl"><thead><tr><th>Naam</th><th>Partij</th><th>Plek op de lijst</th><th>Woonplaats</th></tr></thead><tbody>
+    ${v.gekozen.slice().sort((a, b) => a.lijst.localeCompare(b.lijst) || a.nummer - b.nummer).map(k => `<tr><td><b>${esc(k.naam)}</b></td><td>${partyTag(g, k.lijst)}</td><td>${k.nummer}</td><td>${esc(k.woonplaats)}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function renderVerkiezingen(){
+  const g = G;
+  const v = W.verkiezingen?.[g];
+  const bar = `<div class="bar"><div class="seg" id="gemseg">${Object.keys(GEM).map(k => `<button data-gem="${k}" aria-pressed="${k === g}">${GEM[k]}</button>`).join('')}</div></div>`;
+  if (!v) { $('main').innerHTML = bar + '<p class="note">Geen verkiezingsuitslag gevonden.</p>'; bindBar(); return; }
+  const t = v.totaal, op = t.Opkomst / t.Kiesgerechtigden * 100;
+  const L = Object.entries(v.lijsten).filter(([, l]) => l.stemmen).sort((a, b) => b[1].stemmen - a[1].stemmen);
+  const maxS = Math.max(...L.map(([, l]) => l.stemmen));
+  // Raadsleden per dorp: woonplaats van de gekozen kandidaten tegenover het aantal inwoners.
+  const dorpen = Object.values(W.cbs?.regios || {}).filter(r => r.code.startsWith('WK') && r.gemeente === GEM[g]);
+  const perDorp = {}; v.gekozen.forEach(k => { perDorp[k.woonplaats] = (perDorp[k.woonplaats] || 0) + 1; });
+  const totInw = dorpen.reduce((a, d) => a + (cv(d, 'AantalInwoners') || 0), 0), zetels = v.gekozen.length;
+  const dRows = dorpen.map(d => { const inw = cv(d, 'AantalInwoners') || 0, n = perDorp[d.naam] || 0; return {d, inw, n, verwacht: zetels * inw / totInw}; }).sort((a, b) => b.inw - a.inw);
+  const zonder = dRows.filter(x => !x.n && x.verwacht >= 0.8);
+  $('main').innerHTML = bar + `
+  <section class="hero"><p>Gemeenteraadsverkiezingen 18 maart 2026</p><h2>${GEM[g]}: ${fmt(op, 1)}% opkomst</h2>
+    <p class="sub">${fmt(t.Opkomst)} van de ${fmt(t.Kiesgerechtigden)} kiesgerechtigden stemden. ${L[0] ? `${esc(PNAAM[L[0][0]] || L[0][0])} werd de grootste met ${fmt(L[0][1].stemmen)} stemmen en ${L[0][1].zetels} zetels.` : ''}</p></section>
+  <div class="grid">
+    <section class="card c7"><h3>Stemmen en zetels</h3><p class="lead">${zetels} zetels.</p>
+      ${seatsBar(g, Object.fromEntries(L.map(([p, l]) => [p, l.zetels || 0]).filter(([, z]) => z)))}
+      <div class="bars" style="margin-top:14px">${L.map(([p, l]) => `<div class="barrow"><span class="lab" title="${esc(l.naam)}">${esc(PNAAM[p] || p)}</span><span class="track"><i style="width:${100 * l.stemmen / maxS}%;background:${pcolor(g, p)}"></i></span><span class="v">${fmt(l.stemmen)}</span></div>`).join('')}</div>
+      <p class="src">${fmt(t.AantalGeldigeStemmen)} geldige stemmen, ${fmt(t.AantalBlancoStemmen)} blanco, ${fmt(t.AantalOngeldigeStemmen)} ongeldig.</p></section>
+    <section class="card c5"><h3>Raadsleden per dorp</h3><p class="lead">Waar de gekozen raadsleden wonen, tegenover wat je op basis van het aantal inwoners zou verwachten.</p>
+      <div class="scroll"><table class="tbl"><thead><tr><th>Dorp</th><th>Gekozen</th><th>Naar inwoners</th></tr></thead><tbody>
+      ${dRows.map(x => `<tr><td><b>${esc(x.d.naam)}</b></td><td>${x.n}</td><td>${fmt(x.verwacht, 1)}</td></tr>`).join('')}</tbody></table></div>
+      ${zonder.length ? `<p class="src">Geen gekozen raadslid uit: ${zonder.map(x => esc(x.d.naam)).join(', ')}.</p>` : ''}
+      <p class="src">Let op: woonplaats volgens de kandidatenlijst. Wie daarna wethouder werd, is hier nog meegeteld.</p></section>
+    <section class="card c12"><h3>Gekozen kandidaten</h3><p class="lead">Volgens de Kiesraad.</p>${gekozenTabel(g)}</section>
+  </div>`;
+  bindBar();
+}
+
+// ---------------------------------------------------------------------------
+function render(){
+  document.querySelectorAll('#tabs a').forEach(a => a.classList.toggle('active', a.dataset.t === TAB));
+  ({overzicht: renderOverzicht, raad: renderRaad, dorpen: renderDorpen, verkiezingen: renderVerkiezingen})[TAB]();
+  $('foot').innerHTML = `Bijgewerkt ${new Date(W.gegenereerd).toLocaleString('nl-NL', {day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit'})}. Bronnen: raadsportalen Medemblik en Opmeer, Kiesraad (verkiezingen 2026), CBS (kerncijfers wijken en buurten).${W.fouten?.length ? ' Problemen bij ophalen: ' + esc(W.fouten.join('; ')) : ''}`;
+}
+document.addEventListener('click', e => {
+  const d = e.target.closest('[data-dorp]');
+  if (d && !e.target.closest('select')) { DORP = d.dataset.dorp; store.set('wp-dorp', DORP); location.hash = 'dorpen'; if (TAB === 'dorpen') { renderDorpen(); scrollTo({top: 0}); } return; }
+  const go = e.target.closest('[data-go]');
+  if (go) { if (go.dataset.gem) { G = go.dataset.gem; store.set('wp-gem', G); } location.hash = go.dataset.go; return; }
+  const m = e.target.closest('[data-more="ovr"]');
+  if (m) { $('ovr').innerHTML = openVragen().map(vraagRow).join(''); m.remove(); }
+});
+addEventListener('hashchange', () => { TAB = ['overzicht', 'raad', 'dorpen', 'verkiezingen'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'overzicht'; render(); scrollTo({top: 0}); });
+(async () => {
+  try {
+    W = await fetch('data.json?t=' + Date.now()).then(r => r.json());
+    await Promise.all(Object.keys(GEM).map(g => fetch(`../data/${g}.json`).then(r => r.ok ? r.json() : null).then(d => { MON[g] = d; }).catch(() => {})));
+  } catch (e) { $('main').innerHTML = '<p class="note" style="padding:30px 0">De gegevens konden niet worden geladen. Probeer de pagina opnieuw te laden.</p>'; return; }
+  TAB = ['overzicht', 'raad', 'dorpen', 'verkiezingen'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'overzicht';
+  render();
+})();
+</script>
+</body>
+</html>
