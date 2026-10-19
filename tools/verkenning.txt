@@ -1,12 +1,8 @@
-hrefs: ['#', '#content', '#navigation', '#search-input', '/', '/Agenda/Index/66f82c03-7aee-49c8-9507-5db1639e8cea', '/Agenda/Index/68637b20-8a26-4252-9b11-458e7128428e', '/Agenda/Index/dcc6411b-600b-4103-9480-0c96305035a4', '/Calendar', '/Calendar/OpenCategory/100050619', '/Calendar/OpenCategory/100148034', '/Reports', '/Reports/Details/a1132f05-4b54-4451-920d-195043a20824', 'https://portal0600.ibabs.eu/', 'https://www.ibabs.com']
-scripts: ['/assets/main.min.js', '/lib/moment/locale/nl.js', '/Scripts/datatables/i18n/datatables.i18n.nl.js', '/Scripts/datepicker/locales/datepicker.nl.js', '/assets/layout.min.js', '/lib/duetds-datepicker/duet.esm.js', '/lib/duetds-datepicker/duet.js', '/lib/react/main.bundle.js', '/lib/fullcalendar/locales/nl.js', '/lib/fullcalendar/main.js', '/assets/calendar.min.js']
-inline urls: []
-data-attrs: ['data-agendatype-id', 'data-include-ie-parse', 'data-site-name', 'data-size', 'data-target', 'data-toggle', 'data-url', 'data-val', 'data-val-required']
-/Calendar/GetAgendasForMonth?year=2026&month=10 404 14593  <!DOCTYPE html> <html lang="nl"> <head>     <meta charset="utf-8" />     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <title>Foutpagina - iBabs Publieksportaal</title>     <link rel="SHORTCUT ICON" href="/favicon.svg?v=20210707" /> <link rel="icon" type="image/png" siz
-/Agenda/RetrieveAgendasForYear?year=2026 200 1  
-/Calendar/Index?year=2026&month=9 200 21800  <!DOCTYPE html> <html lang="nl"> <head>     <meta charset="utf-8" />     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <title>Vergaderingen Alkmaar - iBabs Publieksportaal</title>     <link rel="SHORTCUT ICON" href="/favicon.svg?v=20210707" /> <link rel="icon" type="ima
-== KOOP varianten
-dt.creator=="Alkmaar" 200 755 ['Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar']
-dt.creator any "Alkmaar" 200 755 ['Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar', 'Alkmaar']
-dt.creator=="Gemeente Alkmaar" 200 0 []
-cql.textAndIndexes="Alkmaar" and c.product-area=="officielepublicaties" and dt.type=="gemeenteblad" 200 0 []
+{'100148034': 'B&W Agenda (Stadhuis) dinsdag 6 oktober 2026 10:00 - 14:00', '100050619': 'B&W Openbare besluiten college (iBabs) woensdag 7 oktober 20'}
+cat 100148034 200 Agenda Alkmaar - B&W Agenda dinsdag 6 oktober 2026 10:00 - 14:00 - iBabs Publieksportaal {}
+   type 100148034 200 36 ['dinsdag 6 oktober 2026', 'maandag 28 september 2026', 'dinsdag 22 september 2026']
+cat 100050619 200 Agenda Alkmaar - B&W Openbare besluiten college woensdag 7 oktober 2026 10:00 - 11:00 - iBabs Publieksportaal {}
+   type 100050619 200 41 ['woensdag 7 oktober 2026', 'dinsdag 6 oktober 2026', 'maandag 28 september 2026']
+agenda /Agenda/Index/68637b20-8a26-4252-9b11-458e7128428e B&W Agenda (Stadhuis) dinsdag 6 oktober 2026 10:00 - 14:00
+agenda /Agenda/Index/dcc6411b-600b-4103-9480-0c96305035a4 B&W Openbare besluiten college (Stadhuis) dinsdag 6 oktober 2026 10:00 - 14:00
+agenda /Agenda/Index/66f82c03-7aee-49c8-9507-5db1639e8cea B&W Openbare besluiten college (iBabs) woensdag 7 oktober 2026 10:00 - 11:00
