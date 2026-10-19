@@ -1,37 +1,34 @@
 import requests, re, json
 H = {'User-Agent': 'AlkmaarPublicatieMonitor/0.1 (public information monitoring)'}
-def get(u, n=600, **kw):
+B = 'https://dijkenwaard.bestuurlijkeinformatie.nl'
+r = requests.get(B + '/Calendar', headers=H, timeout=30)
+print('calendar', r.status_code)
+print('types:', sorted(set(re.findall(r'(?:agendatypeId|data-agendatypeid|value)="?(\d{6,})"?[^>]*>\s*([^<]{2,80})', r.text)))[:40])
+r = requests.get(B + '/', headers=H, timeout=30)
+print('home links:', sorted(set(re.findall(r'href="(/[A-Za-z]+(?:/[A-Za-z]+)?)[/"?]', r.text)))[:40])
+print('home agendatypes:', sorted(set(re.findall(r'/Agenda/Index/[^"]*"[^>]*>([^<]{0,80})', r.text)))[:10])
+r = requests.get(B + '/Reports', headers=H, timeout=30)
+print('reports', r.status_code, sorted(set(re.findall(r'/Reports/Details/([0-9a-f-]{36})[^>]*>\s*([^<]{2,80})', r.text)))[:40])
+for y in [2026]:
+    for tid in sorted(set(re.findall(r'agendatypeId=(\d+)', requests.get(B + '/Calendar', headers=H, timeout=30).text))) or []:
+        pass
+# Try agenda listing for found types
+cal = requests.get(B + '/Calendar', headers=H, timeout=30).text
+ids = sorted(set(re.findall(r'\b(1000\d{5})\b', cal)))
+print('ids in calendar:', ids[:30])
+for tid in ids[:15]:
     try:
-        r = requests.get(u, headers=H, timeout=30, **kw)
-        print('==', u, r.status_code, r.headers.get('content-type'), len(r.text), r.url if r.url != u else '')
-        return r
-    except Exception as e: print('==', u, 'ERR', e)
-# KOOP
-r = get('https://repository.overheid.nl/sru', params={'query': 'c.product-area==officielepublicaties AND dt.creator=="Dijk en Waard" AND dt.modified>=2026-09-01', 'maximumRecords': 1})
-if r is not None: print(re.findall(r'numberOfRecords>(\d+)', r.text))
-# iBabs / notubiz / raadsinformatie
-for u in ['https://dijkenwaard.bestuurlijkeinformatie.nl/', 'https://dijkenwaard.raadsinformatie.nl/', 'https://dijkenwaard.notubiz.nl/', 'https://raad.dijkenwaard.nl/', 'https://gemeenteraad.dijkenwaard.nl/',
-          'https://www.dijkenwaard.nl/', 'https://www.dijkenwaard.nl/nieuws', 'https://www.dijkenwaard.nl/nieuws/feed', 'https://www.dijkenwaard.nl/rss', 'https://www.dijkenwaard.nl/actueel']:
-    r = get(u)
-    if r is not None and r.ok:
-        t = r.text
-        print('  anubis' if 'anubis' in t else '', '  cloudflare' if 'cf-chl' in t or 'Just a moment' in t else '')
-        print('  title:', (re.findall(r'<title>(.*?)</title>', t, re.S) or [''])[0].strip()[:100])
-        print('  rss links:', re.findall(r'<link[^>]+(?:rss|atom)[^>]*>', t)[:5])
-        print('  agendatypes:', re.findall(r'agendatypeId=(\d+)[^>]*>([^<]{0,60})', t)[:20])
-        if 'xml' in (r.headers.get('content-type') or ''): print(t[:800])
-        hrefs = sorted(set(re.findall(r'href="([^"]*(?:nieuws|raad|bestuur|vergader|bekendmak|woo)[^"]*)"', t, re.I)))[:30]
-        print('  hrefs:', hrefs)
-# ORI
-r = get('https://api.openraadsinformatie.nl/v1/elastic/_cat/indices?format=json')
-if r is not None and r.ok:
-    try: print([i['index'] for i in r.json() if 'dijk' in i['index'] or 'waard' in i['index'] or 'heerhugo' in i['index'] or 'langedijk' in i['index']])
-    except Exception as e: print(e, r.text[:300])
-for idx in ['ori_dijk_en_waard_*', 'ori_dijkenwaard_*', 'ori_heerhugowaard_*', 'osi_dijk_en_waard_*']:
-    try:
-        r = requests.post(f'https://api.openraadsinformatie.nl/v1/elastic/{idx}/_search', json={'size': 3, 'sort': [{'date_modified': {'order': 'desc', 'unmapped_type': 'date'}}], '_source': ['name', '@type', 'date_modified']}, headers=H, timeout=30)
-        print('ORI', idx, r.status_code, json.dumps([h['_source'] for h in r.json().get('hits', {}).get('hits', [])], ensure_ascii=False)[:500])
-    except Exception as e: print('ORI', idx, e)
-# Woonplaatsen
-r = get('https://api.pdok.nl/bzk/locatieserver/search/v3_1/free', params={'q': 'gemeentenaam:"Dijk en Waard"', 'fq': 'type:woonplaats', 'rows': 50, 'fl': 'woonplaatsnaam'})
-if r is not None and r.ok: print(sorted(d['woonplaatsnaam'] for d in r.json()['response']['docs']))
+        x = requests.get(B + '/Agenda/RetrieveAgendasForYear', params={'agendatypeId': tid, 'year': 2026}, headers=H, timeout=30)
+        j = x.json() if x.ok else None
+        print('type', tid, x.status_code, (json.dumps(j, ensure_ascii=False)[:300] if j else x.text[:100]))
+    except Exception as e: print(tid, e)
+# ORI newest
+for sort in ['date_modified', 'last_discussed_at', 'start_date']:
+    q = {'size': 3, 'sort': [{sort: {'order': 'desc', 'unmapped_type': 'date'}}], '_source': ['name', '@type', sort]}
+    x = requests.post('https://api.openraadsinformatie.nl/v1/elastic/ori_dijk_en_waard_*/_search', json=q, headers=H, timeout=30)
+    print('ORI', sort, json.dumps([h['_source'] for h in x.json()['hits']['hits']], ensure_ascii=False)[:400])
+# News page
+n = requests.get('https://www.dijkenwaard.nl/actueel/nieuws', headers=H, timeout=30).text
+i = n.find('/actueel/nieuws/')
+print('news snippet:', re.sub(r'\s+', ' ', n[i-600:i+1400]))
+print('feeds:', re.findall(r'[^"\s]*(?:rss|feed|atom)[^"\s]*', n, re.I)[:10])
