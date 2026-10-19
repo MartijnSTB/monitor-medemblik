@@ -116,6 +116,7 @@
   .hstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .hstat{display:flex;align-items:baseline;gap:7px;border:0;background:rgba(255,255,255,.12);color:#fff;border-radius:12px;padding:8px 13px;cursor:pointer;font-size:14px;font-weight:600}
   .hstat:hover{background:rgba(255,255,255,.2)}
+  .hstat.seen{background:transparent;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
   .hstat b{font:800 20px var(--serif);letter-spacing:-.02em}
   .live{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4cc47f;margin-right:8px;vertical-align:1px;box-shadow:0 0 0 0 rgba(76,196,127,.6);animation:pulse 2.4s ease-out infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(76,196,127,.55)}70%{box-shadow:0 0 0 10px rgba(76,196,127,0)}100%{box-shadow:0 0 0 0 rgba(76,196,127,0)}}
@@ -577,16 +578,46 @@ const cache = {};
 // Vorig bezoek. 'Nieuw' = binnengekomen sinds je vorige bezoek (onthouden in deze browser).
 // Binnen één sessie blijft het ijkpunt gelijk, zodat herladen de labels niet wist.
 // ---------------------------------------------------------------------------
-const VISIT = (() => {
-  const fallback = new Date(Date.now() - 864e5).toISOString();
+// Een 'bezoek' eindigt als je het dashboard 30 minuten niet hebt bekeken (tabblad weg of op de
+// achtergrond). Zolang je erop zit, telt 'nieuw' vanaf het begin van dit bezoek. Kom je na een
+// pauze terug, ook in een tabblad dat open bleef, dan begint er een nieuw bezoek.
+const PAUSE = 30 * 6e4;
+let FIRST_VISIT = false;
+function visitBase(){
+  const now = Date.now();
   try {
-    let prev = sessionStorage.getItem('gm-prev');
-    if (!prev) { prev = localStorage.getItem('gm-last') || fallback; sessionStorage.setItem('gm-prev', prev); }
-    localStorage.setItem('gm-last', new Date().toISOString());
-    return prev;
-  } catch (e) { return fallback; }
-})();
-const VISIT_MS = new Date(VISIT).getTime();
+    const last = Date.parse(localStorage.getItem('gm-last') || '');
+    let base = Date.parse(localStorage.getItem('gm-base') || '');
+    if (!last) { base = now - 864e5; FIRST_VISIT = true; }
+    else if (now - last > PAUSE || !base) base = last;
+    localStorage.setItem('gm-base', new Date(base).toISOString());
+    localStorage.setItem('gm-last', new Date(now).toISOString());
+    return new Date(base).toISOString();
+  } catch (e) { FIRST_VISIT = true; return new Date(now - 864e5).toISOString(); }
+}
+let VISIT = visitBase();
+let VISIT_MS = new Date(VISIT).getTime();
+// Bijhouden dat je kijkt: elke minuut zolang het dashboard zichtbaar is, en bij weggaan.
+const seen = () => { try { localStorage.setItem('gm-last', new Date().toISOString()); } catch (e) {} };
+setInterval(() => { if (document.visibilityState === 'visible') seen(); }, 6e4);
+addEventListener('pagehide', seen);
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') { seen(); return; }
+  // Terug na een pauze? Dan een nieuw bezoek: 'nieuw' telt vanaf je vorige keer kijken.
+  const before = VISIT;
+  VISIT = visitBase(); VISIT_MS = new Date(VISIT).getTime();
+  if (VISIT !== before) resetVisit();
+});
+function resetVisit(){
+  Object.values(cache).forEach(d => d.items.forEach(x => { x._k = null; }));
+  if (DATA) render();
+}
+// 'Alles gezien': vanaf nu telt alleen wat er hierna binnenkomt als nieuw.
+function markAllSeen(){
+  const now = new Date().toISOString();
+  try { localStorage.setItem('gm-base', now); localStorage.setItem('gm-last', now); } catch (e) {}
+  VISIT = now; VISIT_MS = Date.parse(now); FIRST_VISIT = false; resetVisit();
+}
 const after = s => !!s && new Date(s).getTime() > VISIT_MS;
 const chgSince = x => (x.changes || []).some(c => after(c.at));
 
@@ -1099,8 +1130,8 @@ function renderToday(){
   const sindsWanneer = visitDay === TODAY ? (hm(VISIT) < '12:00' ? 'vanochtend' : 'vanmiddag')
     : visitDay === YESTERDAY ? 'gisteren' : diff(TODAY, visitDay) < 7 ? vd.toLocaleDateString('nl-NL', {weekday: 'long', timeZone: 'Europe/Amsterdam'}) : vd.toLocaleDateString('nl-NL', {day: 'numeric', month: 'long', timeZone: 'Europe/Amsterdam'});
   const headline = newN ? `${plural(newN, 'nieuw stuk', 'nieuwe stukken')} sinds ${sindsWanneer}` : `Rustig sinds ${sindsWanneer}`;
-  const sinceTxt = `Je vorige bezoek was ${new Date(VISIT).toLocaleString('nl-NL',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})}.`
-    + (chgN ? ` Daarna ${chgN === 1 ? 'is 1 stuk' : `zijn ${chgN} stukken`} gewijzigd of beantwoord.` : '')
+  const sinceTxt = (FIRST_VISIT ? 'Dit is je eerste bezoek in deze browser, dus je ziet de afgelopen 24 uur.' : `Je vorige bezoek was ${new Date(VISIT).toLocaleString('nl-NL',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})}.`)
+    + (chgN ? ` Ook ${chgN === 1 ? 'is 1 stuk' : `zijn ${chgN} stukken`} gewijzigd of beantwoord.` : '')
     + (DORP.name ? ` Je kijkt alleen naar ${esc(DORP.name)}.` : '');
   const cnt = f => since.filter(f).length;
   const stats = [
@@ -1114,7 +1145,7 @@ function renderToday(){
     <p class="hi1"><span class="live" aria-hidden="true"></span>${groet}. Dit gebeurde er in ${esc(DATA.naam)}.</p>
     <h2>${headline}</h2>
     <p class="since">${sinceTxt}</p>
-    ${stats.length ? `<div class="hstats">${stats.map(([go, l, n]) => `<button class="hstat" data-go="${go}"><b>${n}</b>${l}</button>`).join('')}</div>` : ''}
+    <div class="hstats">${stats.map(([go, l, n]) => `<button class="hstat" data-go="${go}"><b>${n}</b>${l}</button>`).join('')}${newN || chgN ? '<button class="hstat seen" data-seen="1">Alles gezien</button>' : ''}</div>
   </section>`;
 
   // Hoofdverhaal + raster met de rest van 'Dit moet je zien'.
@@ -1490,6 +1521,7 @@ $('panel').addEventListener('click', async e => {
 });
 $('scrim').addEventListener('click', closePanel);
 $('today').addEventListener('click', e => {
+  if (e.target.closest('[data-seen]')) { markAllSeen(); toast('Alles gemarkeerd als gezien'); return; }
   const d = e.target.closest('[data-dorp]');
   if (d) { setDorp(d.dataset.dorp); return; }
   const go = e.target.closest('[data-go]');
