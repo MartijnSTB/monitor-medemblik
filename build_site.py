@@ -9,7 +9,7 @@ Uitvoer in docs/ (niet in Git; wordt alleen naar GitHub Pages gestuurd):
 
 Zo groeit de repository niet bij elke run met megabytes aan zoekindex.
 """
-import json, re, shutil, datetime
+import json, re, shutil, datetime, html
 from collections import defaultdict
 from monitor import GEMEENTEN, DB, ROOT, TEXT_DIR, KOOP_SOURCE, norm, text_path
 
@@ -22,7 +22,9 @@ PUBLIC_FIELDS = ('title', 'url', 'source', 'kind', 'doc_date', 'doc_date_label',
 
 def public_item(key, item):
     out = {k: item[k] for k in PUBLIC_FIELDS if item.get(k) not in (None, '', [])}
-    out['excerpt'] = (item.get('excerpt') or '')[:300]
+    out['excerpt'] = html.unescape(item.get('excerpt') or '')[:300]
+    # Sommige bronnen leveren al geëscapete tekst ('R&amp;D'); het dashboard escapet zelf.
+    out['title'] = html.unescape(out.get('title') or '')
     out['id'] = key[:24]
     if item.get('text_hash') and text_path(key).exists():
         out['tx'] = 1  # er is opgeslagen tekst (voor tekstfragmenten)
@@ -48,7 +50,9 @@ def build():
         status = dict(db['status'].get(gid, {}))
         for name, reason in cfg['not_followed'].items():
             status[name] = {'skip': True, 'note': reason}
-        payload = {'gemeente': gid, 'naam': cfg['naam'], 'generated': stamp, 'status': status,
+        # Dorpen voor het dorpfilter: de BAG-woonplaatsen (Koggenland zelf is geen woonplaats).
+        dorpen = sorted(p for p in cfg.get('plaatsen', []) if p != 'Koggenland')
+        payload = {'gemeente': gid, 'naam': cfg['naam'], 'generated': stamp, 'status': status, 'dorpen': dorpen,
                    'algemeen': db['status'].get('algemeen', {}), 'items': items}
         (DOCS / 'data' / f'{gid}.json').write_text(json.dumps(payload, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 

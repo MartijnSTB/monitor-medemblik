@@ -140,6 +140,29 @@
   .since button{margin-left:auto;font:600 13.5px var(--sans);border:1px solid var(--deep);background:#fff;color:var(--deep);padding:6px 12px;border-radius:999px;cursor:pointer}
   .since button[aria-pressed=true]{background:var(--deep);color:#fff}
 
+  /* Dorpfilter, markeren, bron kopiëren, dubbele mediaberichten */
+  #dorp{font:600 14px var(--sans);padding:8px 10px;border:1px solid #c9d6e2;border-radius:999px;background:#fff;color:var(--ink);cursor:pointer}
+  #dorp.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+  .foot{display:flex;align-items:flex-start;gap:6px}
+  .foot .badges{flex:1;min-width:0}
+  .acts{margin-left:auto;display:flex;flex:0 0 auto;margin-top:2px;opacity:.6}
+  .it:hover .acts,.acts:focus-within{opacity:1}
+  .acts button{border:0;background:none;cursor:pointer;color:#8b97a3;padding:3px 4px;border-radius:6px;display:flex}
+  .acts button:hover{background:var(--ice);color:var(--deep)}
+  .acts svg{width:16px;height:16px}
+  .acts button.s[aria-pressed=true]{color:var(--orange)}
+  .acts button.s[aria-pressed=true] svg{fill:currentColor}
+  .acts button.k[aria-pressed=true]{color:#2e9a5a}
+  .it.done{opacity:.5}
+  .it.done:hover{opacity:1}
+  .b.done{background:#e2f2e7;color:#165c35}
+  .also{display:block;margin-top:3px;font-size:12px;color:var(--muted);line-height:1.35}
+  .also a{color:var(--rodi);font-weight:600;text-decoration:none}
+  .also a:hover{text-decoration:underline}
+  .tgl{display:flex;gap:6px;align-items:center;margin-top:6px;font-size:12.5px;color:var(--muted);cursor:pointer}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;z-index:9999;opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.show{opacity:1}
+
   /* Kolomkeuze op de telefoon */
   .coltabs{display:none}
 
@@ -157,6 +180,8 @@
     .colhead p{white-space:normal}
     .list{max-height:none}
     .since button{margin-left:0}
+    .acts{opacity:1}
+    .acts button{padding:5px 6px}
     .summary{margin-left:0;width:100%}
     .brand h1{font-size:25px}
   }
@@ -192,7 +217,9 @@
         <button data-k="beantwoord" aria-pressed="false">Beantwoord</button>
         <button data-k="verwijderd" aria-pressed="false">Verdwenen</button>
         <button data-k="trefwoord" aria-pressed="false" id="kwchip">Trefwoorden</button>
+        <button data-k="mijn" aria-pressed="false" id="mijnchip" title="Stukken die je met een ster hebt bewaard (in deze browser)">★ Mijn lijst</button>
       </div>
+      <select id="dorp" aria-label="Dorp"><option value="">Alle dorpen</option></select>
       <div class="view" role="group" aria-label="Weergave">
         <button data-v="lijst" aria-pressed="true">Lijst</button>
         <button data-v="kaart" aria-pressed="false">Kaart</button>
@@ -236,6 +263,7 @@
   </details>
   <footer>Experimentele monitor. Detecteert wat hij kan ophalen; geen garantie op volledigheid. Een oud stuk dat pas nu gevonden is, krijgt het label ‘historisch’.</footer>
 </main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 const $ = id => document.getElementById(id);
@@ -372,11 +400,81 @@ function attachments(x){
     `<a href="${esc(b.u)}" target="_blank" rel="noopener">${esc(b.t)}</a>`).join('')}</details>`;
 }
 
+// ---------------------------------------------------------------------------
+// Markeren (ster = Mijn lijst, vinkje = opgepakt). Bewaard in deze browser.
+// ---------------------------------------------------------------------------
+let MARKS = {};
+try { MARKS = JSON.parse(localStorage.getItem('gm-marks') || '{}') || {}; } catch (e) {}
+const mark = (id, k) => !!(MARKS[id] && MARKS[id][k]);
+function toggleMark(id, k){
+  const m = MARKS[id] || (MARKS[id] = {});
+  if (m[k]) delete m[k]; else m[k] = new Date().toISOString().slice(0, 10);
+  if (!Object.keys(m).length) delete MARKS[id];
+  try { localStorage.setItem('gm-marks', JSON.stringify(MARKS)); } catch (e) {}
+}
+const ICON = {
+  s: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>',
+  k: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>',
+  c: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h2"/></svg>',
+};
+function acts(x){
+  return `<span class="acts">`
+    + `<button class="s" data-a="s" data-id="${x.id}" aria-pressed="${mark(x.id,'s')}" title="${mark(x.id,'s') ? 'Uit Mijn lijst halen' : 'Bewaren in Mijn lijst'}" aria-label="Bewaren">${ICON.s}</button>`
+    + `<button class="k" data-a="k" data-id="${x.id}" aria-pressed="${mark(x.id,'k')}" title="${mark(x.id,'k') ? 'Niet meer als opgepakt markeren' : 'Markeren als opgepakt'}" aria-label="Opgepakt">${ICON.k}</button>`
+    + `<button data-a="c" data-id="${x.id}" title="Bronvermelding kopiëren" aria-label="Bron kopiëren">${ICON.c}</button></span>`;
+}
+
+// ---------------------------------------------------------------------------
+// Bronvermelding kopiëren: ‘titel’ – bron, datum. link
+// ---------------------------------------------------------------------------
+function bronNaam(x){
+  const g = 'gemeente ' + DATA.naam;
+  const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
+  if (x.source === 'In de media') return x.media_bron || 'Google Nieuws';
+  if (x.source === 'Officiele bekendmakingen (KOOP)') return (x.koop_type ? cap(x.koop_type) + ', ' : '') + 'officiële bekendmaking ' + g;
+  if (x.source === 'Collegebesluiten') return 'College van B&W, ' + g;
+  if (x.source === 'Raadsstukken' || x.source === 'Raadsportaal')
+    return (x.rapport && !/raadsportaal/i.test(x.rapport) ? x.rapport : 'Raadsinformatie') + ', ' + g;
+  if (x.source === 'Nieuws') return 'Nieuwsbericht ' + g;
+  return x.source + ', ' + g;
+}
+function citation(x){
+  const lang = {day:'numeric', month:'long', year:'numeric', timeZone:'Europe/Amsterdam'};
+  let datum = '';
+  if (x.published_at) datum = new Date(x.published_at).toLocaleDateString('nl-NL', lang);
+  else if (x.doc_date) {
+    const label = (x.doc_date_label || '').replace(/\s*\(KOOP\)/, '');
+    datum = (label && !/publicatie/.test(label) ? label + ' ' : '') + dt(x.doc_date).toLocaleDateString('nl-NL', lang);
+  }
+  return `‘${x.title}’ – ${bronNaam(x)}${datum ? ', ' + datum : ''}. ${x.url}`;
+}
+let toastTimer;
+function toast(msg){
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+async function copyText(text){
+  try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
+  const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  let ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+  ta.remove(); return ok;
+}
+
+// 'Ook bij': hetzelfde nieuws bij andere media (zie clusterMedia).
+function also(x){
+  if (!x._also || !x._also.length) return '';
+  const when = y => y._d === x._d ? hm(y.published_at || y.first_seen) : nl(y._d,{weekday:'short'}) + ' ' + hm(y.published_at || y.first_seen);
+  return `<span class="also">Ook bij: ${x._also.map(y => `<a href="${esc(y.url)}" target="_blank" rel="noopener" title="${esc(y.title)}">${esc(y.media_bron || 'onbekend')}</a> (${when(y)})`).join(', ')}</span>`;
+}
+
 function item(x){
   const viaText = SEARCH.hits && SEARCH.hits.has(x._i) && !titleMatch(x, SEARCH.q);
   const k = kinds(x);
-  return `<div class="it${chgSince(x) ? ' changed' : k.includes('nieuw') ? ' fresh-it' : ''}">
-    <a class="t" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${line(x)}${meta(x)}${badges(x)}`
+  const done = mark(x.id, 'k');
+  return `<div class="it${done ? ' done' : chgSince(x) ? ' changed' : k.includes('nieuw') ? ' fresh-it' : ''}">
+    <a class="t" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${line(x)}${meta(x)}${also(x)}`
+    + `<div class="foot">${badges(x).replace('<span class="badges">', `<span class="badges">${done ? '<span class="b done">Opgepakt</span>' : ''}`) || (done ? '<span class="badges"><span class="b done">Opgepakt</span></span>' : '<span class="badges"></span>')}${acts(x)}</div>`
     + (viaText && x.tx ? `<span class="snip" data-id="${x.id}"><span class="via">Gevonden in de tekst</span>…</span>` : '')
     + `${attachments(x)}${changeBlock(x)}</div>`;
 }
@@ -441,7 +539,47 @@ async function fillSnippets(){
   }
 }
 
-function columnHTML(col, rows){
+// ---------------------------------------------------------------------------
+// In de media: hetzelfde verhaal bij meerdere media samenvoegen. Twee koppen horen bij elkaar
+// als ze binnen 2 dagen verschenen en minstens 2 bijzondere woorden delen, of 1 bijzonder woord
+// plus dezelfde plaats ('Kleingouw' + 'Andijk'). Bovenaan staat wie het eerst had.
+// ---------------------------------------------------------------------------
+const STOP = new Set(('gemeente gemeenten inwoners nieuwe eerste tweede derde extra grote kleine alles waarom wordt worden kunnen '
+  + 'moeten blijft blijven krijgt krijgen tijdens tussen vanaf onder dorpen jaren weken dagen maanden hebben heeft zijn deze '
+  + 'bijna steeds wanneer hoeveel komen komt gaat gaan staat staan maken maakt nemen neemt willen zegt zeggen terug verder '
+  + 'ondanks alleen echt helemaal nooit weer jouw onze jullie zich iedereen mensen waarin welke omdat waardoor later vandaag '
+  + 'gisteren morgen avond ochtend middag zaterdag zondag maandag dinsdag woensdag donderdag vrijdag oktober november december').split(' '));
+const sigWords = t => new Set((norm(t).match(/[a-z0-9]+/g) || []).filter(w => (w.length >= 5 || /^\d{3,}$/.test(w)) && !STOP.has(w)));
+function clusterMedia(rows){
+  const places = new Set((DATA.dorpen || []).concat(DATA.naam).flatMap(p => norm(p).split(/[\s-]+/)));
+  const sw = rows.map(x => sigWords(x.title));
+  const parent = rows.map((_, i) => i);
+  const find = i => parent[i] === i ? i : (parent[i] = find(parent[i]));
+  for (let i = 0; i < rows.length; i++) for (let j = i + 1; j < rows.length; j++) {
+    if (Math.abs(rows[i]._t - rows[j]._t) > 2 * 864e5) continue;
+    let gewoon = 0, plaats = 0;
+    for (const w of sw[i]) if (sw[j].has(w)) places.has(w) ? plaats++ : gewoon++;
+    if (gewoon >= 2 || (gewoon >= 1 && plaats >= 1)) parent[find(j)] = find(i);
+  }
+  const groups = new Map();
+  rows.forEach((x, i) => { const r = find(i); if (!groups.has(r)) groups.set(r, []); groups.get(r).push(x); });
+  // Volgorde: waar het nieuwste artikel van het verhaal staat. Hoofdregel: de eerste publicatie.
+  const out = [];
+  for (const g of groups.values()) {
+    const first = g.reduce((a, b) => (a._t <= b._t ? a : b));
+    // Per medium maar één keer (Google noemt hetzelfde artikel soms twee keer).
+    const bronnen = new Set([first.media_bron]);
+    first._also = g.filter(y => y !== first).sort((a, b) => a._t - b._t)
+      .filter(y => !bronnen.has(y.media_bron) && bronnen.add(y.media_bron));
+    first._pos = Math.min(...g.map(y => rows.indexOf(y)));
+    out.push(first);
+  }
+  return out.sort((a, b) => a._pos - b._pos);
+}
+let MEDTEKST = false;
+try { MEDTEKST = localStorage.getItem('gm-medtekst') === '1'; } catch (e) {}
+
+function columnHTML(col, rows, extra = ''){
   const n = shown[col.id] || PAGE;
   let html = '', last = null;
   rows.slice(0, n).forEach(x => {
@@ -451,17 +589,62 @@ function columnHTML(col, rows){
   });
   if (!rows.length) html = `<p class="empty" style="padding:14px 16px">${col.id === 'raad' && DATA.gemeente === 'koggenland' ? 'De raadsinformatie van Koggenland is beveiligd en wordt niet gevolgd (zie Bronnen).' : 'Niets gevonden met deze filters.'}</p>`;
   const more = rows.length > n ? `<button class="more" data-col="${col.id}">Toon ${Math.min(PAGE, rows.length-n)} oudere</button>` : '';
-  const fresh = rows.filter(x => kinds(x).includes('nieuw')).length;
+  const fresh = rows.filter(x => kinds(x).includes('nieuw') || (x._also || []).some(y => kinds(y).includes('nieuw'))).length;
   return `<section class="col${col.id === MOBCOL ? ' on' : ''}" style="--c:${col.color}" aria-labelledby="h-${col.id}">
-    <div class="colhead"><div class="row"><span class="dot"></span><h2 id="h-${col.id}">${col.title}</h2><span class="n" title="${fresh ? fresh + ' nieuw sinds je vorige bezoek' : ''}">${fresh ? `<span style="color:var(--deep)">+${fresh}</span> · ` : ''}${rows.length}</span></div><p title="${esc(col.note)}">${col.note}</p></div>
+    <div class="colhead"><div class="row"><span class="dot"></span><h2 id="h-${col.id}">${col.title}</h2><span class="n" title="${fresh ? fresh + ' nieuw sinds je vorige bezoek' : ''}">${fresh ? `<span style="color:var(--deep)">+${fresh}</span> · ` : ''}${rows.length}</span></div><p title="${esc(col.note)}">${col.note}</p>${extra}</div>
     <div class="list">${html}${more}</div></section>`;
+}
+
+// ---------------------------------------------------------------------------
+// Dorpfilter: alles over één dorp, in titel, adres, omschrijving én (behalve voor de hoofdplaats,
+// die in elk briefhoofd staat) in de tekst van de stukken.
+// ---------------------------------------------------------------------------
+const DORP = {name: '', re: null, hits: null};
+function dorpMatch(x){
+  if (!DORP.name) return true;
+  if (x.plaats && norm(x.plaats) === norm(DORP.name)) return true;
+  if (DORP.re.test(norm([x.title, x.excerpt, x.locatie, x.meeting_title, x.agendapunt].join(' ')))) return true;
+  return !!(DORP.hits && DORP.hits.has(x._i));
+}
+async function setDorp(name){
+  DORP.name = name; DORP.hits = null;
+  DORP.re = name ? new RegExp('(?<![a-z0-9-])' + norm(name).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![a-z0-9])') : null;
+  $('dorp').value = name; $('dorp').classList.toggle('on', !!name);
+  shown = {}; render();
+  if (name && norm(name) !== norm(DATA.naam)) {
+    const hits = await textSearch(name);
+    if (DORP.name === name) { DORP.hits = hits; render(); }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Het adres onthoudt gemeente, zoekterm, filter, dorp en weergave,
+// bijv. #opmeer?q=pioen&f=nieuw&dorp=Hoogwoud. Te bewaren als bladwijzer of door te sturen.
+// ---------------------------------------------------------------------------
+const GEMS = ['medemblik', 'koggenland', 'opmeer'];
+function parseHash(){
+  const [g, qs] = location.hash.slice(1).split('?');
+  const p = new URLSearchParams(qs || '');
+  return {g: GEMS.includes(g) ? g : 'medemblik', q: p.get('q') || '', f: p.get('f') || '', dorp: p.get('dorp') || '', v: p.get('v') || ''};
+}
+function syncHash(){
+  if (!DATA) return;
+  const p = new URLSearchParams();
+  const q = $('q').value.trim();
+  if (q) p.set('q', q);
+  if (filter) p.set('f', filter);
+  if (DORP.name) p.set('dorp', DORP.name);
+  if (VIEW === 'kaart') p.set('v', 'kaart');
+  const h = '#' + DATA.gemeente + (p.toString() ? '?' + p : '');
+  if (location.hash !== h) history.replaceState(null, '', h);
 }
 
 function render(){
   if (!DATA) return;
   const q = $('q').value.trim();
-  const match = x => (!filter || kinds(x).includes(filter))
-    && (!q || titleMatch(x, q) || (SEARCH.q === q && SEARCH.hits && SEARCH.hits.has(x._i)));
+  const match = x => (!filter || (filter === 'mijn' ? mark(x.id, 's') : kinds(x).includes(filter)))
+    && (!q || titleMatch(x, q) || (SEARCH.q === q && SEARCH.hits && SEARCH.hits.has(x._i)))
+    && dorpMatch(x);
   const items = DATA.items.filter(match);
   CURRENT = items;
 
@@ -477,11 +660,24 @@ function render(){
     + (changed ? `, ${changed} gewijzigd` : '') + (q && SEARCH.q !== q && qTokens(q).length ? ' (tekst wordt doorzocht…)' : '');
   const kwN = DATA.items.filter(x => x.kw_hits).length;
   $('kwchip').textContent = 'Trefwoorden' + (kwN ? ` (${kwN})` : '');
+  const mijnN = DATA.items.filter(x => mark(x.id, 's')).length;
+  $('mijnchip').textContent = '★ Mijn lijst' + (mijnN ? ` (${mijnN})` : '');
+  syncHash();
   renderSince();
   if (VIEW === 'kaart') { renderMap(); return; }
-  const perCol = COLS.map(c => [c, items.filter(c.test)]);
+  const perCol = COLS.map(c => {
+    let rows = items.filter(c.test), extra = '';
+    if (c.id === 'med') {
+      const tekst = rows.filter(x => x.media_match === 'tekst').length;
+      if (!MEDTEKST) rows = rows.filter(x => x.media_match !== 'tekst');
+      rows.forEach(x => { x._also = null; });
+      rows = clusterMedia(rows);
+      if (tekst) extra = `<label class="tgl"><input type="checkbox" id="medtekst"${MEDTEKST ? ' checked' : ''}> Ook artikelen met de plaats alleen in de tekst (${tekst})</label>`;
+    }
+    return [c, rows, extra];
+  });
   $('coltabs').innerHTML = perCol.map(([c, rows]) => `<button style="--c:${c.color}" data-c="${c.id}" aria-pressed="${c.id === MOBCOL}">${c.title}<small>${rows.length}</small></button>`).join('');
-  $('board').innerHTML = perCol.map(([c, rows]) => columnHTML(c, rows)).join('');
+  $('board').innerHTML = perCol.map(([c, rows, extra]) => columnHTML(c, rows, extra)).join('');
   fillSnippets();
 }
 
@@ -602,8 +798,14 @@ async function load(g){
   document.title = 'Gemeentemonitor ' + DATA.naam;
   renderStatus();
   SEARCH.q = ''; SEARCH.hits = null;
+  $('dorp').innerHTML = '<option value="">Alle dorpen</option>' + (DATA.dorpen || []).map(d => `<option>${esc(d)}</option>`).join('');
+  $('dorp').hidden = !(DATA.dorpen || []).length;
+  const d0 = (DATA.dorpen || []).includes(PENDING_DORP) ? PENDING_DORP : '';
+  PENDING_DORP = '';
+  DORP.name = ''; DORP.re = null; DORP.hits = null; $('dorp').classList.remove('on');
   if ($('q').value.trim()) $('q').dispatchEvent(new Event('input'));
   setView(VIEW);
+  if (d0) setDorp(d0);
 }
 
 function setFilter(k){
@@ -621,9 +823,32 @@ $('coltabs').addEventListener('click', e => {
   try { localStorage.setItem('gm-col', MOBCOL); } catch (e) {}
   render();
 });
-$('board').addEventListener('click', e => {
+$('board').addEventListener('click', async e => {
+  const a = e.target.closest('.acts button');
+  if (a) {
+    const x = DATA.items.find(y => y.id === a.dataset.id); if (!x) return;
+    if (a.dataset.a === 'c') { toast(await copyText(citation(x)) ? 'Bronvermelding gekopieerd' : 'Kopiëren lukte niet'); return; }
+    toggleMark(x.id, a.dataset.a);
+    if (a.dataset.a === 's') toast(mark(x.id, 's') ? 'Bewaard in Mijn lijst' : 'Uit Mijn lijst gehaald');
+    render(); return;
+  }
   const b = e.target.closest('.more'); if (!b) return;
   shown[b.dataset.col] = (shown[b.dataset.col] || PAGE) + PAGE; render();
+});
+$('board').addEventListener('change', e => {
+  if (e.target.id !== 'medtekst') return;
+  MEDTEKST = e.target.checked;
+  try { localStorage.setItem('gm-medtekst', MEDTEKST ? '1' : '0'); } catch (err) {}
+  render();
+});
+$('dorp').addEventListener('change', e => setDorp(e.target.value));
+// Wisselen van gemeente: zoekterm, filter en weergave blijven staan; het dorp niet (dat hoort bij de gemeente).
+$('tabs').addEventListener('click', e => {
+  const a = e.target.closest('a'); if (!a) return;
+  e.preventDefault();
+  const p = new URLSearchParams(location.hash.split('?')[1] || '');
+  p.delete('dorp');
+  location.hash = a.dataset.g + (p.toString() ? '?' + p : '');
 });
 let timer; $('q').addEventListener('input', () => {
   clearTimeout(timer);
@@ -640,9 +865,18 @@ let timer; $('q').addEventListener('input', () => {
 document.querySelector('.view').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setView(b.dataset.v); });
 $('period').addEventListener('change', () => renderMap());
 try { if (localStorage.getItem('gm-view') === 'kaart') VIEW = 'kaart'; } catch (e) {}
-const current = () => (['medemblik','koggenland','opmeer'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'medemblik');
-window.addEventListener('hashchange', () => load(current()));
-load(current());
+let PENDING_DORP = '';
+function applyHash(){
+  const h = parseHash();
+  $('q').value = h.q;
+  filter = h.f;
+  $('chips').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x.dataset.k === filter ? 'true' : 'false'));
+  PENDING_DORP = h.dorp;
+  if (h.v) VIEW = h.v === 'kaart' ? 'kaart' : 'lijst';
+  load(h.g);
+}
+window.addEventListener('hashchange', applyHash);
+applyHash();
 </script>
 </body>
 </html>
