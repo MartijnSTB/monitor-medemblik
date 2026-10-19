@@ -3,7 +3,7 @@ name: Publiceer dashboard
 
 on:
   workflow_run:
-    workflows: ["Monitor publicaties", "Werkplek verzamelen"]
+    workflows: ["Monitor publicaties"]
     types:
       - completed
   workflow_dispatch:
