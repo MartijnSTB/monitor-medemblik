@@ -1,43 +1,87 @@
-200 application/rss+xml
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	 xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/"
-	 xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	 xmlns:slash="http://purl.org/rss/1.0/modules/slash/" >
-	<channel>
-		<title>Gemeente Alkmaar</title>
-		<link>https://www.alkmaar.nl</link>
-		<description></description>
-		<lastBuildDate>			Mon, 19 Oct 2026 12:53:20 +0200</lastBuildDate>
-		<language>nl</language>
-		<sy:updatePeriod>daily</sy:updatePeriod>
-		<sy:updateFrequency>1</sy:updateFrequency>
-		<atom:link href="https://www.alkmaar.nl/nieuws/feed" rel="self" type="application/rss+xml"/>
-		
+== https://raad.koggenland.nl/nieuws/rss 200 text/html; charset=utf-8 6709
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <script id="anubis_version" type="application/json">"1.25.0"
+</script><script id="anubis_challenge" type="application/json">{"rules":{"algorithm":"fast","difficulty":4},"challenge":{"issuedAt":"2026-10-19T15:35:17.599370226+02:00","metadata":{"User-Agent":"MedemblikPublicatieMonitor/0.1 (public information monitoring)","X-Real-Ip":"52.161.51.51"},"id":"01a1545f-a85f-7586-a917-34a58ce2c4ef","method":"fast","randomData":"fdc11fb82c39d3ab8f1c74ae36dd0d00bc296f10df0197b983de2e395f3d5e5d92b65d405d138b9e0bcb8ad9c0cb801b6e62c276ae3bc378827884a1a8cbb9ef","policyRuleHash":"30638f4bcccce8ea","difficulty":4,"spent":false}}
+</script><script id="anubis_base_prefix" type="application/json">""
+</script><script id="anubis_public_url" type="application/json">""
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="/.within.website/x/cmd/anubis/static/css/custom.css">
+    <style>
+      html, body { height: 100%; }
+      html {
+        font-family: "Open Sans", system-ui, -apple-system, sans-serif;
+        color: var(--text);
+        background: var(--background);
+        line-height: 1.4;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+      .centered-div {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 
+== https://raad.koggenland.nl/nieuws/ 200 text/html; charset=utf-8 6709
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <script id="anubis_version" type="application/json">"1.25.0"
+</script><script id="anubis_challenge" type="application/json">{"rules":{"algorithm":"fast","difficulty":4},"challenge":{"issuedAt":"2026-10-19T15:35:18.011995722+02:00","metadata":{"User-Agent":"MedemblikPublicatieMonitor/0.1 (public information monitoring)","X-Real-Ip":"52.161.51.51"},"id":"01a1545f-a9fb-7ef6-b114-b1ede473fa4d","method":"fast","randomData":"5ee2d7efb912285661fa8d06d863612f1d732c2d524400c51b4c7f18fda8ff01d53ff8d28d04e0ea0a6589eddc8611885b3638e27bb735f759c8aa16d9a6c6a2","policyRuleHash":"30638f4bcccce8ea","difficulty":4,"spent":false}}
+</script><script id="anubis_base_prefix" type="application/json">""
+</script><script id="anubis_public_url" type="application/json">""
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="/.within.website/x/cmd/anubis/static/css/custom.css">
+    <style>
+      html, body { height: 100%; }
+      html {
+        font-family: "Open Sans", system-ui, -apple-system, sans-serif;
+        color: var(--text);
+        background: var(--background);
+        line-height: 1.4;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+      .centered-div {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 
+== https://raad.koggenland.nl/rss 200 application/rdf+xml 604
+<?xml version="1.0"?>
 
-<image>
-	<url>https://www.alkmaar.nl/app/uploads/2026/05/cropped-favicon-32x32.png</url>
-	<title>Gemeente Alkmaar</title>
-	<link>https://www.alkmaar.nl</link>
-	<width>32</width>
-	<height>32</height>
-</image> 
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" >
 
-					<item>
-				<title>Wat vindt u van evenementen in Alkmaar?</title>
-				<link>https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/</link>
-				<pubDate>Mon, 19 Oct 2026 14:30:09 +0000</pubDate>
-				<dc:creator></dc:creator>
-				<guid isPermaLink="true">https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/</guid>
-				<description>Van grote festivals tot kleine evenementen in de wijk of het dorp. In Alkmaar is van alles te beleven! Maar...</description>
-				<content:encoded>Van grote festivals tot kleine evenementen in de wijk of het dorp. In Alkmaar is van alles te beleven! Maar wat vindt u van de evenementen? En wat kan er beter? We horen graag uw mening. Daarom doen we onderzoek naar evenementen in onze gemeente.De City Run is een van de vele evenementen in Alkmaar.We willen weten welke evenementen inwoners bezoeken, wat ze ervan vinden en wat ze belangrijk vinden. De resultaten helpen ons om een goede balans te vinden tussen evenementen en een prettige leefomgeving.Doe mee aan het onderzoekHet invullen van de vragenlijst duurt minder dan 10 minuten. U kunt meedoen tot en met 11 november 2026. Voor jongeren is er een aparte vragenlijst.Lees meer over het onderzoek en vul de vragenlijst in.Onderzoeksbureau Respons voert het onderzoek uit in opdracht van de gemeente Alkmaar.</content:encoded>
-				
-			</item>
-					<item>
-				<title>Rijk investeert 100 miljoen in woningen en bereikbaarheid Alkmaar</title>
-				<link>https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/</link>
-				<pubDate>Fri, 16 Oct 2026 17:47:51 +0000</pubDate>
-				<dc:creator></dc:creator>
-				<guid isPermaLink="true">https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/</guid>
-				<description>Goed nieuws voor Alkmaar: subsidie van het Rijk brengt ruim 10.000 nieuwe woningen en bereikbaarheid voor projecten Alkmaars Kanaal dichterbij.</description>
-				<content:encoded>Goed nieuws voor Alkmaar: subsidie van h
+<channel rdf:about="https://raad.koggenland.nl/nieuws/">
+
+	<title> Nieuws</title>
+	<link>https://raad.koggenland.nl/nieuws</link>
+	<description>
+		Met webtechnologie maken wij informatie voor u zelf en uw
+		burgers op begrijpelijke wijze toegankelijk. Via onze
+		nieuws pagina houden wij u op de hoogte van ontwikkelingen in
+		gemeenteland en onze producten.
+	</description>
+
+
+   <items>
+      <rdf:Seq>
+
+
+
+      </rdf:Seq>
+    </items>
+</channel></rdf:RDF>
