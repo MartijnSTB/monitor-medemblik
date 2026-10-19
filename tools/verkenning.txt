@@ -1,75 +1,53 @@
-== Raadzetels_GR2026.csv 200 8452
-kop: ['"GemeenteCode";"GemeenteNaam";"AantalZetels"', '"0014";"Groningen";"45"']
-3
-   "0420";"Medemblik";"29"
-   "0432";"Opmeer";"15"
-   "1598";"Koggenland";"19"
-== GR2026.csv 200 8084004
-kop: ['Regio;RegioCode;OuderRegioCode;GrootOuderRegioCode;Partij;LijstNummer;LijstNaam;KandidaatNummer;KandidaatInitialen;KandidaatVoornaam;KandidaatTussenvoegsel;KandidaatAchternaam;KandidaatWoonplaats;KandidaatGeslacht;VeldType;Waarde', 'Nederland;L528;;;;;;;;;;;;;AantalBlancoStemmen;23918']
-538
-   Koggenland;G1598;P27;L528;;;;;;;;;;;Kiesgerechtigden;19185
-   Koggenland;G1598;P27;L528;;;;;;;;;;;AantalGeldigeStemmen;11466
-   Koggenland;G1598;P27;L528;;;;;;;;;;;AantalOngeldigeStemmen;30
-   Koggenland;G1598;P27;L528;;;;;;;;;;;AantalBlancoStemmen;28
-   Medemblik;G0420;P27;L528;;;;;;;;;;;Kiesgerechtigden;37096
-   Medemblik;G0420;P27;L528;;;;;;;;;;;AantalGeldigeStemmen;20418
-   Medemblik;G0420;P27;L528;;;;;;;;;;;AantalOngeldigeStemmen;44
-   Medemblik;G0420;P27;L528;;;;;;;;;;;AantalBlancoStemmen;47
-   Opmeer;G0432;P27;L528;;;;;;;;;;;Kiesgerechtigden;10230
-   Opmeer;G0432;P27;L528;;;;;;;;;;;AantalGeldigeStemmen;5853
-   Opmeer;G0432;P27;L528;;;;;;;;;;;AantalOngeldigeStemmen;6
-   Opmeer;G0432;P27;L528;;;;;;;;;;;AantalBlancoStemmen;29
-   Medemblik;G0420;P27;L528;;;;;;;;;;;Opkomst;20509
-   Opmeer;G0432;P27;L528;;;;;;;;;;;Opkomst;5888
-   Koggenland;G1598;P27;L528;;;;;;;;;;;Opkomst;11524
-   Medemblik;G0420;P27;L528;;;CDA;;;;;;;;LijstAantalZetels;4
-   Medemblik;G0420;P27;L528;;;D66;;;;;;;;LijstAantalZetels;2
-   Medemblik;G0420;P27;L528;;;Forum voor Democratie;;;;;;;;LijstAantalZetels;3
-   Medemblik;G0420;P27;L528;;;GemeenteBelangen;;;;;;;;LijstAantalZetels;4
-   Medemblik;G0420;P27;L528;;;Hart voor Medemblik;;;;;;;;LijstAantalZetels;8
-   Medemblik;G0420;P27;L528;;;MORGEN!/Sociaal&Progressief;;;;;;;;LijstAantalZetels;3
-   Medemblik;G0420;P27;L528;;;VVD;;;;;;;;LijstAantalZetels;5
-   Opmeer;G0432;P27;L528;;;CDA;;;;;;;;LijstAantalZetels;3
-   Opmeer;G0432;P27;L528;;;GROENLINKS/Partij van de Arbeid (PvdA);;;;;;;;LijstAantalZetels;2
-   Opmeer;G0432;P27;L528;;;Gemeentebelangen Opmeer;;;;;;;;LijstAantalZetels;2
-   Opmeer;G0432;P27;L528;;;KERN8;;;;;;;;LijstAantalZetels;3
-   Opmeer;G0432;P27;L528;;;Lokale Partij Opmeer(LPO);;;;;;;;LijstAantalZetels;2
-   Opmeer;G0432;P27;L528;;;VVD;;;;;;;;LijstAantalZetels;3
-   Koggenland;G1598;P27;L528;;;CDA;;;;;;;;LijstAantalZetels;3
-   Koggenland;G1598;P27;L528;;;D66;;;;;;;;LijstAantalZetels;1
-   Koggenland;G1598;P27;L528;;;Forum voor Democratie;;;;;;;;LijstAantalZetels;3
-   Koggenland;G1598;P27;L528;;;GROENLINKS / Partij van de Arbeid (PvdA);;;;;;;;LijstAantalZetels;2
-   Koggenland;G1598;P27;L528;;;Gemeente Belangen Koggenland;;;;;;;;LijstAantalZetels;4
-   Koggenland;G1598;P27;L528;;;VVD;;;;;;;;LijstAantalZetels;6
-   Koggenland;G1598;P27;L528;;1;VVD;1;J.W.;Jeroen;;Schilder;Avenhorn;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;1;VVD;2;B.H.;Bart;;Krijnen;Spierdijk;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;1;VVD;3;T.E.;Tinda;;Kuijper van der Roest;Ursem;v;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;1;VVD;4;B.T.S.;Bo;;Weijers;Berkhout;v;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;1;VVD;5;R.M.;Remco;;Linnekamp;Berkhout;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;1;VVD;6;M.N.;Michiel;;Stam;Obdam;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;2;Gemeente Belangen Koggenland;1;A.M.C.;Marian;van;Kampen;Hensbroek;v;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;2;Gemeente Belangen Koggenland;2;R.;René;;Klok;Obdam;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;2;Gemeente Belangen Koggenland;3;R.H.J.;Rens;;Kramer;Obdam;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;2;Gemeente Belangen Koggenland;4;A.;Arti;;Schipper;Avenhorn;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;3;CDA;1;M.A.C.;Rianka;te;Winkel-Pancras;Obdam;v;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;3;CDA;2;R.;Rick;;Nooij;Ursem;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;3;CDA;3;E.F.;Ed;;Dekker;Avenhorn;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;4;GROENLINKS / Partij van de Arbeid (PvdA);1;K.J.A.M.;Karin;;Rietveld;Avenhorn;;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;4;GROENLINKS / Partij van de Arbeid (PvdA);2;A.H.G.;Dolf;;Rientjes;De Goorn;;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;5;D66;1;J.P.B.;Jurre;;Terhorst;De Goorn;;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;6;Forum voor Democratie;1;P.;Pelle;;Koopman;Obdam;m;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;6;Forum voor Democratie;2;T.J.M.;Tamara;;Kok;Ursem;v;KandidaatGekozen;1
-   Koggenland;G1598;P27;L528;;6;Forum voor Democratie;3;J.C.A.;Jhon;;Koopman;Obdam;m;KandidaatGekozen;1
-   Medemblik;G0420;P27;L528;;1;Hart voor Medemblik;1;T.F.G.;Tjeu;;Berlijn;Medemblik;m;KandidaatGekozen;1
-   Medemblik;G0420;P27;L528;;1;Hart voor Medemblik;2;E.;Evelyn;;Mulder;Midwoud;v;KandidaatGekozen;1
-   Medemblik;G0420;P27;L528;;1;Hart voor Medemblik;3;M.;Mark;;Hoogewerf;Andijk;m;KandidaatGekozen;1
-   Medemblik;G0420;P27;L528;;1;Hart voor Medemblik;4;D.;Dieter;;Venema;Andijk;m;KandidaatGekozen;1
-   Medemblik;G0420;P27;L528;;1;Hart voor Medemblik;5;T.H.J.;Thom;;Meendering;Wervershoof;m;KandidaatGekozen;1
-   Medemblik;G0420;P27;L528;;1;Hart voor Medemblik;6;R.H.W.;Rick;;Mensink;Opperdoes;m;KandidaatGekozen;1
-   Medemblik;G0420;P27;L528;;1;Hart voor Medemblik;7;H.N.;Harry;;Bakker;Wognum;m;KandidaatGekozen;1
-
-== raadsleden
-medemblik 200 Categorieën Commissieleden Gemeenteraad Griffie Fractie Alles weergeven Hart voor Medemblik VVD CDA GemeenteBelangen Morgen! Forum voor Democratie D66 Functie Alles weergeven Fractievoorzitter Raadslid Gemeenteraad Hart voor Medemblik 8 zetels (27,6%) VVD 5 zetels (17,2%) CDA 4 zetels (13,8%) GemeenteBelangen 4 zetels (13,8%) Morgen! 3 zetels (10,3%) Forum voor Democratie 3 zetels (10,3%) D66 2 zetels (6,9%) Hart voor Medemblik (8 zetels) Fractieoverleggen: elke woensdagavond MBG022 Berlijn, T.F.G. Fractievoorzitter 085 06 070 48 [email protected] Meer informatie Mulder, E. Raadslid 085 0607048 [email protected] Meer informatie Venema, D. Raadslid 06-23991347 [email protected] Meer informatie Meendering, T.H.J Raadslid 085 0607048 [email protected] Meer informatie Mensink, R.H.W. Raadslid 06-25167822 [email protected] Meer informatie Bakker, H.N. Raadslid 06-12108127 [email protected] Meer informatie Eekelen, L.A. van Raadslid 06-40457152 [email protected] Meer informatie Pordon, F. Raadslid [email protected] Meer informatie VVD (5 zetels) Fractieoverleggen, 19.30 uur, MBG024 3 november 24 november Heestermans, S.P.J. Fractievoorzitter 06 82974492 [email protected] Meer informatie Beerepoot, T.M.M. Raadslid 06-53657947 [email protected] Meer informatie Meester, A.A.M. Raadslid 06-12408463 [email protected] Meer informatie Visser-van Eijk, S.H. Raadslid 06 2506 6429 [email protected] Meer informatie Stam, J.N. Raadslid 06 2492 1677 [email protected] Meer informatie CDA (4 zetels) Fractieoverleggen (MBG023): Fractievergadering op de dinsdagavonden aanvang 20.00 uur 20 oktober 3 november 1 december Salman, E.A.W. Fractievoorzitter [email protected] Meer informatie Koning, M.G. Raadslid [email protected] Meer informatie Droog, M.G.A. Raadslid 06 53 11 90 74 [email protected] Meer informatie Bosch, E. van den Raadslid 06 5716 7925 [email protected] Meer informatie GemeenteBelangen (4 zetels) Fractieoverleggen: MBG027 (of anders vermeld) van 19.00 – 21.00 uur Paarlberg, R.A. Fractievoorzitter 06 34016447 [email protected] Meer informatie Mosch, P.W. Raadslid 06 1367 5027 [email protected] Meer informatie Buwalda, Y.E. Raadslid 06-53421623 [email protected] Meer informatie Braaksma, R. Raadslid 06 2224 7862 [email protected] Meer informatie Morgen! (3 zetels) Fractieoverleggen: kamer griffie (MBG021) 27 oktober 5 november (donderdag) 24 november 1 december 15 december Kuipers, T.G.M. Fractievoorzitter 06-10261777 [email protected] Meer informatie Haakman-Dekker, 
-[('Commissieleden', '/People/Profiles/64e32518-63a8-44d2-8d57-f9690c5e87cb'), ('Gemeenteraad', '/People/Profiles/5320a26c-ce32-405d-be1c-85f32e811e19'), ('Griffie', '/People/Profiles/3d90b799-c438-4865-9892-41071ea6b81f'), ('Berlijn, T.F.G. Fractievoorzitter 085 06', '/People/Details/3490c2e3-ed23-4a9d-aefc-74c2b7f4fac5?categoryId=5320a26c-ce32-405d-be1c-85f32e811e19'), ('Mulder, E. Raadslid 085 0607048 [email\xa0p', '/People/Details/bbc7e607-4cde-4b96-8faf-9d0e38fc1d95?categoryId=5320a26c-ce32-405d-be1c-85f32e811e19'), ('Venema, D. Raadslid 06-23991347 [email\xa0p', '/People/Details/ce2bf8e3-4ccd-4e05-aafe-992beed525c6?categoryId=5320a26c-ce32-405d-be1c-85f32e811e19'), ('Meendering, T.H.J Raadslid 085 0607048 [', '/People/Details/b24d71b9-0d1b-48c3-86c2-c752bbaca68e?categoryId=5320a26c-ce32-405d-be1c-85f32e811e19'), ('Mensink, R.H.W. Raadslid 06-25167822 [em', '/People/Details/40e2fdf2-619c-4d1c-9fcb-f83d769a1906?categoryId=5320a26c-ce32-405d-be1c-85f32e811e19')]
-opmeer 200 Categorieën Gemeenteraad Raadsgriffie Gemeenteraad KERN8 Appelman, Mario Fractievoorzitter [email protected] Meer informatie Mooij, Erik Raadslid [email protected] Meer informatie Waal, Rolf de Raadslid [email protected] Meer informatie CDA Beemster, Bram Fractievoorzitter [email protected] Meer informatie Leek, Eline Raadslid [email protected] Meer informatie Tesselaar, Robert Raadslid [email protected] Meer informatie VVD Hoek, Jacko Fractievoorzitter [email protected] Meer informatie Appelman, Jolanda Raadslid [email protected] Meer informatie Gracht, Jeffrey van der Raadslid [email protected] Meer informatie Gemeentebelangen Pelt, René Fractievoorzitter [email protected] Meer informatie Stam, Jos Raadslid [email protected] Meer informatie Lokale Partij Opmeer Bosch, Nico Fractievoorzitter [email protected] Meer informatie Schilder, Lou Raadslid [email protected] Meer informatie PRO Opmeer Martherus, André Fractievoorzitter [email protected] Meer informatie Klein Entink, Marije Raadslid [email protected] Meer informatie
-[('Gemeenteraad', '/People/Profiles/f5c576ce-c1e9-47eb-907d-b287f074b8be'), ('Raadsgriffie', '/People/Profiles/2f617097-bc47-44c5-8342-d8e5bacb8afc'), ('Appelman, Mario Fractievoorzitter [email', '/People/Details/c12ca84a-aadc-4f14-a658-6e9419e9849f?categoryId=f5c576ce-c1e9-47eb-907d-b287f074b8be'), ('Mooij, Erik Raadslid [email\xa0protected] M', '/People/Details/a6bec876-7210-46a8-b516-91a37ea2c380?categoryId=f5c576ce-c1e9-47eb-907d-b287f074b8be'), ('Waal, Rolf de Raadslid [email\xa0protected]', '/People/Details/312ddd95-6c2e-4327-954b-1d2cbaa48dc7?categoryId=f5c576ce-c1e9-47eb-907d-b287f074b8be'), ('Beemster, Bram Fractievoorzitter [email\xa0', '/People/Details/da8bc543-10be-4f8c-8cc4-621fd6d5e18d?categoryId=f5c576ce-c1e9-47eb-907d-b287f074b8be'), ('Leek, Eline Raadslid [email\xa0protected] M', '/People/Details/afb3bce5-f484-4b65-aedc-1333bc23d57f?categoryId=f5c576ce-c1e9-47eb-907d-b287f074b8be'), ('Tesselaar, Robert Raadslid [email\xa0protec', '/People/Details/08300ee5-6332-4ab6-9179-fcd6b8290a60?categoryId=f5c576ce-c1e9-47eb-907d-b287f074b8be')]
+== Calendar / agendatypes
+/Calendar 200 21800
+  option 0 januari
+  option 1 februari
+  option 2 maart
+  option 3 april
+  option 4 mei
+  option 5 juni
+  option 6 juli
+  option 7 augustus
+  option 8 september
+  option 9 oktober
+  option 10 november
+  option 11 december
+  option 2026 2026
+  option 2025 2025
+  option 2024 2024
+  option 2023 2023
+  option 2022 2022
+  option 2021 2021
+  option 2020 2020
+  agendatypeId links []
+  ids in tekst []
+/ 200 26430
+  agendatypeId links []
+  ids in tekst []
+/Agenda 403 14618
+  agendatypeId links []
+  ids in tekst []
+== Reports
+[('Openbare besluitenlijsten B&W', 'ils/a1132f05-4b54-4451-920d-195043a20824'), ('Openbare besluitenlijsten B&W', 'ils/a1132f05-4b54-4451-920d-195043a20824')]
+== People
+200
+== alkmaar.nl
+https://www.alkmaar.nl/ 200 text/html; charset=utf-8 138818
+   rss: []
+   links: ['https://www.alkmaar.nl/bestuur-organisatie/bekendmakingen-en-regelgeving/', 'https://www.alkmaar.nl/nieuws/', 'https://www.alkmaar.nl/nieuws/hoe-veilig-en-prettig-vindt-u-uw-buurt/', 'https://www.alkmaar.nl/nieuws/open-dag-gemeentelijke-begraafplaats-westerweg/', 'https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/', 'https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/']
+https://www.alkmaar.nl/nieuws 200 text/html; charset=utf-8 156895
+   rss: []
+   links: ['https://www.alkmaar.nl/bestuur-organisatie/bekendmakingen-en-regelgeving/', 'https://www.alkmaar.nl/nieuws/', 'https://www.alkmaar.nl/nieuws/bergerhoutro/', 'https://www.alkmaar.nl/nieuws/gratis-informatieavonden-webinars-en-inloopspreekuren-over-energie-besparen/', 'https://www.alkmaar.nl/nieuws/hoe-veilig-en-prettig-vindt-u-uw-buurt/', 'https://www.alkmaar.nl/nieuws/inwoners-gebied-graft-de-rijp-vul-de-buurtwarmtewijzer-in/', 'https://www.alkmaar.nl/nieuws/open-dag-gemeentelijke-begraafplaats-westerweg/', 'https://www.alkmaar.nl/nieuws/rijk-investeert-100-miljoen-in-woningen-en-bereikbaarheid-alkmaar/', 'https://www.alkmaar.nl/nieuws/samen-op-zoek-naar-plekken-voor-asielopvang-jongeren-en-spoedzoekers/', 'https://www.alkmaar.nl/nieuws/vier-alkmaar-ontzet-alkmaarse-glorie-staat-centraal/', 'https://www.alkmaar.nl/nieuws/wat-vindt-u-van-evenementen-in-alkmaar/', 'https://www.alkmaar.nl/nieuws/wijkcontactpunten-open-in-de-rijp-en-stompetoren/']
+https://www.alkmaar.nl/nieuws.rss 404 text/html 146
+    <html> <head><title>404 Not Found</title></head> <body> <center><h1>404 Not Found</h1></center> <hr><center>nginx</center> </body> </html> 
+https://www.alkmaar.nl/rss/content-list?type%5B%5D=news&sort_by=published_at&sort_order=DESC 404 text/html; charset=UTF-8 102487
+   rss: []
+   links: ['https://www.alkmaar.nl/bestuur-organisatie/bekendmakingen-en-regelgeving/', 'https://www.alkmaar.nl/nieuws/']
+== KOOP
+KOOP sinds 1 sep: 2
+== PDOK woonplaatsen
+['Alkmaar', 'De Rijp', 'Driehuizen', 'Graft', 'Grootschermer', 'Koedijk', 'Markenbinnen', 'Noordeinde', 'Oost-Graftdijk', 'Oterleek', 'Oudorp', 'Schermerhorn', 'Starnmeer', 'Stompetoren', 'Ursem', 'West-Graftdijk', 'Zuidschermer']
+== CBS wijken Alkmaar
+[('WK036101', 'Zuid'), ('WK036102', 'Oudorp'), ('WK036103', 'Overdie'), ('WK036104', 'West'), ('WK036105', 'Huiswaard'), ('WK036106', 'De Mare'), ('WK036107', 'Daalmeer/Koedijk'), ('WK036108', 'Centrum'), ('WK036109', 'Schermer'), ('WK036110', 'Graft-De Rijp'), ('WK036111', 'Vroonermeer')]
+== Google Nieuws test
+200 100
