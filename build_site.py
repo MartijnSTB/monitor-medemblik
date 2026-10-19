@@ -75,6 +75,13 @@ def build():
         print(f'{gid}: {len(items)} stukken, {sum(len(w) for w in index.values())} woorden in de zoekindex, '
               f'{sum(1 for v in items if v.get("geo"))} op de kaart')
     shutil.copy(ROOT / 'dashboard.html', DOCS / 'index.html')
+    # App-icoon en manifest (zet het dashboard als app op je beginscherm).
+    for f in (ROOT / 'site').iterdir():
+        shutil.copy(f, DOCS / f.name)
+    # Gemeentegrenzen voor de kaart (opgehaald door monitor.py, bron: Kadaster/PDOK).
+    (DOCS / 'grens').mkdir()
+    for f in (ROOT / 'data' / 'grenzen').glob('*.json'):
+        shutil.copy(f, DOCS / 'grens' / f.name)
 
 if __name__ == '__main__':
     build()

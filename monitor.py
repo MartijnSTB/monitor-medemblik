@@ -1356,6 +1356,31 @@ def migrate(db):
         elif '/Agenda/Index/' in item.get('url', '') and parse_nl_date(item.get('title', '')):
             item['doc_date'], item['doc_date_label'] = parse_nl_date(item['title']), 'vergaderdatum'
 
+def fetch_grenzen():
+    """Gemeentegrens per gemeente voor de kaart (Kadaster, via PDOK). Eén keer ophalen; grenzen
+    veranderen zelden. Verwijder data/grenzen/<gemeente>.json om opnieuw op te halen."""
+    folder = DB.parent / 'grenzen'
+    folder.mkdir(exist_ok=True)
+    for gid, cfg in GEMEENTEN.items():
+        path = folder / f'{gid}.json'
+        if path.exists():
+            continue
+        try:
+            r = requests.get('https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/collections/gemeentegebied/items',
+                             params={'f': 'json', 'naam': cfg['naam'], 'limit': 1}, headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            feats = r.json().get('features') or []
+            if not feats:
+                continue
+            geom = feats[0]['geometry']
+            def rnd(c):
+                return [rnd(v) for v in c] if isinstance(c[0], list) else [round(c[0], 5), round(c[1], 5)]
+            geom['coordinates'] = rnd(geom['coordinates'])
+            path.write_text(json.dumps({'type': 'Feature', 'properties': {'naam': cfg['naam']}, 'geometry': geom},
+                                       separators=(',', ':')))
+        except Exception as exc:
+            print('Gemeentegrens', gid, 'niet opgehaald:', exc)
+
 # De website (dashboard, zoekindex, kaart) wordt bij het publiceren gebouwd door build_site.py.
 
 def main():
@@ -1376,6 +1401,7 @@ def main():
         if cfg.get('plaatsen'):
             collect_media(db, gid, cfg['plaatsen'])
     koop_publication_times(db)
+    fetch_grenzen()
     geocode(db)
     check_documents(db)
     scan_keywords(db)
