@@ -321,17 +321,17 @@ function renderRaad(){
     <h2>${moties.length} moties en amendementen, ${vragen.length} ${g === 'opmeer' ? 'politieke vragen' : 'raadsvragen'}</h2>
     <p class="sub">${pct(status['Aangenomen'] || 0, moties.length)} van de moties en amendementen is aangenomen.${top && top[1].vragen ? ` ${esc(PNAAM[top[0]] || top[0])} stelde de meeste vragen (${top[1].vragen}).` : ''}${allAns.length ? ` Het college deed er gemiddeld (mediaan) ${median(allAns)} dagen over om te antwoorden.` : ''}</p></section>
   <div class="grid">
-    <section class="card c12"><h3>Fracties</h3><p class="lead">Zetels volgens het raadsportaal. Een motie telt mee voor elke fractie die hem (mede) indiende.${g === 'opmeer' ? ' Bij Opmeer staat de partij niet altijd in de titel van politieke vragen; die tellen dan niet mee.' : ''}</p>
+    <section class="card c12"><h3>Fracties</h3><p class="lead">Zetels volgens het raadsportaal. Een motie telt mee voor elke fractie die hem (mede) indiende. Een vraag telt mee voor de partij die direct na ‘Raadsvragen’ in de titel staat.${g === 'opmeer' ? ' Bij Opmeer staat de partij niet altijd in de titel van politieke vragen; die tellen dan niet mee.' : ''}</p>
       ${seatsBar(g, z)}
       <div class="scroll"><table class="tbl" id="frtbl"><thead><tr><th>Fractie</th><th>Zetels</th><th>Moties en amendementen</th>${g === 'medemblik' ? '<th>Als eerste indiener</th>' : ''}<th>Aangenomen</th><th>Verworpen</th><th>Ingetrokken</th><th>${g === 'opmeer' ? 'Politieke vragen' : 'Raadsvragen'}</th><th>Vragen per zetel</th></tr></thead>
       <tbody>${rows.map(([p, f]) => `<tr><td>${partyTag(g, p)}</td><td>${z[p] || '–'}</td><td>${f.ingediend}</td>${g === 'medemblik' ? `<td>${f.eerste}</td>` : ''}<td>${f.aangenomen}</td><td>${f.verworpen}</td><td>${f.ingetrokken}</td><td>${f.vragen}</td><td>${z[p] ? fmt(f.vragen / z[p], 1) : '–'}</td></tr>`).join('')}</tbody></table></div>
-      ${geen.length ? `<p class="src">Geen ${g === 'opmeer' ? 'politieke vragen' : 'raadsvragen'} gevonden van: ${geen.map(p => esc(PNAAM[p] || p)).join(', ')}.</p>` : ''}</section>
+      ${geen.length ? `<p class="src">In deze periode geen ${g === 'opmeer' ? 'politieke vragen' : 'raadsvragen'} met de partijnaam in de titel van: ${geen.map(p => esc(PNAAM[p] || p)).join(', ')}.</p>` : ''}</section>
     ${g === 'medemblik' ? `<section class="card c6"><h3>Meeste moties ingediend</h3><p class="lead">Als eerste indiener, per raadslid.</p>
       <div class="bars">${indTop.map(([k, n]) => { const [naam, p] = k.split('|'); return `<div class="barrow"><span class="lab" title="${esc(naam)}">${esc(naam)}</span><span class="track"><i style="width:${100 * n / indMax}%;background:${pcolor(g, p)}"></i></span><span class="v">${n}</span></div>`; }).join('') || '<p class="note">Geen moties in deze periode.</p>'}</div></section>` : ''}
     ${atRows.length ? `<section class="card c6"><h3>Antwoordtijd per wethouder</h3><p class="lead">Mediaan aantal dagen tussen vraag en antwoord (minstens twee beantwoorde vragen).</p>
       <div class="bars">${atRows.map(([p, d, n]) => `<div class="barrow"><span class="lab">${esc(p)}</span><span class="track"><i style="width:${100 * d / atMax}%;background:${d > 30 ? '#c0392b' : '#006dac'}"></i></span><span class="v" title="${n} vragen">${fmt(d)} d</span></div>`).join('')}</div></section>` : ''}
     <section class="card c6"><h3>Wachten op antwoord</h3><p class="lead">${ov.length} vragen zonder antwoorddatum.</p><div class="rows">${ov.slice(0, 10).map(vraagRow).join('') || '<p class="note">Geen.</p>'}</div></section>
-    <section class="card c6"><h3>Open toezeggingen</h3><p class="lead">${tz.length} toezeggingen nog niet afgedaan.</p><div class="rows">${tz.sort((a, b) => (a.datum || '').localeCompare(b.datum || '')).slice(0, 10).map(t => `<a class="row" href="${esc(t.url)}" target="_blank" rel="noopener">${t.datum ? daysBadge(t.datum) : ''}<span><span class="rt">${esc(t.titel)}</span><span class="rs">${t.poho ? `<span>${esc(t.poho)}</span>` : ''}${t.datum ? `<span>${nl(t.datum, {day: 'numeric', month: 'short', year: 'numeric'})}</span>` : ''}${(t.partijen || []).length ? `<span>gevraagd door ${t.partijen.map(esc).join(', ')}</span>` : ''}</span></span></a>`).join('') || '<p class="note">Geen.</p>'}</div></section>
+    <section class="card c6"><h3>Open toezeggingen</h3><p class="lead">${tz.length} toezeggingen nog niet afgedaan.</p><div class="rows">${tz.sort((a, b) => (a.datum || '9').localeCompare(b.datum || '9')).slice(0, 10).map(t => `<a class="row" href="${esc(t.url)}" target="_blank" rel="noopener">${t.datum ? daysBadge(t.datum) : ''}<span><span class="rt">${esc(t.titel)}</span><span class="rs">${t.poho ? `<span>${esc(t.poho)}</span>` : ''}${t.datum ? `<span>${nl(t.datum, {day: 'numeric', month: 'short', year: 'numeric'})}</span>` : ''}${(t.partijen || []).length ? `<span>gevraagd door ${t.partijen.map(esc).join(', ')}</span>` : ''}</span></span></a>`).join('') || '<p class="note">Geen.</p>'}</div></section>
     <section class="card c12"><h3>Moties en amendementen</h3><p class="lead">Nieuwste eerst.</p><div class="rows" id="motrows">${moties.slice().sort((a, b) => (b.datum || '').localeCompare(a.datum || '')).slice(0, 12).map(motieRow).join('') || '<p class="note">Geen in deze periode.</p>'}</div>
       ${moties.length > 12 ? `<button class="more" data-allmot="1">Alle ${moties.length} tonen</button>` : ''}</section>
   </div>`;
@@ -392,14 +392,13 @@ function kpi(label, r, key, opts = {}){
   const c = C(r, key); if (!c) return '';
   const g = gemRegio(r), n = NLR();
   const f = v => v == null ? '–' : (opts.pre || '') + fmt(v, opts.d || 0) + (opts.suf || '');
-  return `<div class="kpi"><div class="l">${label}</div><div class="n">${f(c.w)}</div><div class="c">${g ? `${esc(r.gemeente)} <b>${f(cv(g, key))}</b>` : ''}${n && cv(n, key) != null ? ` · NL <b>${f(cv(n, key))}</b>` : ''} · ${c.j}</div></div>`;
+  const cmp = opts.aantal ? '' : `${g ? `${esc(r.gemeente)} <b>${f(cv(g, key))}</b>` : ''}${n && cv(n, key) != null ? ` · NL <b>${f(cv(n, key))}</b>` : ''} · `;
+  return `<div class="kpi"><div class="l">${label}</div><div class="n">${f(c.w)}</div><div class="c">${cmp}${c.j}</div></div>`;
 }
 function renderDorpen(){
   const all = Object.values(W.cbs.regios).filter(r => r.code.startsWith('WK'));
   if (!regio(DORP)) DORP = all[0].code;
   const r = regio(DORP), gm = gemRegio(r), nlr = NLR();
-  const inw = r.inwoners_per_jaar || {}, jaren = Object.keys(inw).sort();
-  const groei = jaren.length > 1 ? inw[jaren.at(-1)] - inw[jaren[0]] : null;
   // Leeftijdsopbouw (zelfde jaar als het inwonertal)
   const ageKeys = [['0–15', ['k_0Tot15Jaar']], ['15–25', ['k_15Tot25Jaar']], ['25–45', ['k_25Tot45Jaar']], ['45–65', ['k_45Tot65Jaar']], ['65+', null]];
   const ages = x => ageKeys.map(([l, ks]) => [l, ks ? share(x, ks) : aandeel65(x)]);
@@ -418,20 +417,20 @@ function renderDorpen(){
   <div class="bar"><select class="sel" id="dorpsel">${Object.keys(GEM).map(g => `<optgroup label="${GEM[g]}">${all.filter(d => d.gemeente === GEM[g]).sort((a, b) => a.naam.localeCompare(b.naam)).map(d => `<option value="${d.code}"${d.code === DORP ? ' selected' : ''}>${esc(d.naam)}</option>`).join('')}</optgroup>`).join('')}</select>
     <span class="note">Kerncijfers van het CBS. Per cijfer het nieuwste jaar dat beschikbaar is; dat jaar staat erbij.</span></div>
   <section class="hero"><p>${esc(r.gemeente)}</p><h2>${esc(r.naam)}</h2>
-    <p class="sub">${fmt(cv(r, 'AantalInwoners'))} inwoners (${C(r, 'AantalInwoners')?.j})${groei != null ? `, ${groei >= 0 ? '+' : ''}${fmt(groei)} sinds ${jaren[0]}` : ''}. ${gm ? `Dat is ${pct(cv(r, 'AantalInwoners'), cv(gm, 'AantalInwoners'))} van de gemeente ${esc(r.gemeente)}.` : ''}</p></section>
+    <p class="sub">${fmt(cv(r, 'AantalInwoners'))} inwoners (${C(r, 'AantalInwoners')?.j}). ${gm ? `Dat is ${pct(cv(r, 'AantalInwoners'), cv(gm, 'AantalInwoners'))} van de gemeente ${esc(r.gemeente)}.` : ''}</p></section>
   <div class="grid">
-    <section class="card c12"><h3>Kerncijfers</h3><p class="lead">Ter vergelijking de hele gemeente en Nederland.</p><div class="kpis">
-      ${kpi('Huishoudens', r, 'HuishoudensTotaal')}
+    <section class="card c12"><h3>Kerncijfers</h3><p class="lead">Bij gemiddelden en percentages ter vergelijking de hele gemeente en Nederland.</p><div class="kpis">
+      ${kpi('Huishoudens', r, 'HuishoudensTotaal', {aantal: true})}
       ${kpi('Gem. huishoudensgrootte', r, 'GemiddeldeHuishoudensgrootte', {d: 1})}
-      ${kpi('Woningen', r, 'Woningvoorraad')}
-      ${kpi('Nieuwbouwwoningen', r, 'NieuwbouwWoningen')}
+      ${kpi('Woningen', r, 'Woningvoorraad', {aantal: true})}
+      ${kpi('Nieuwbouwwoningen', r, 'NieuwbouwWoningen', {aantal: true})}
       ${kpi('Gem. WOZ-waarde', r, 'GemiddeldeWOZWaardeVanWoningen', {pre: '€ ', suf: 'k'})}
       ${kpi('Koopwoningen', r, 'Koopwoningen', {suf: '%'})}
       ${kpi('Corporatiewoningen', r, 'InBezitWoningcorporatie', {suf: '%'})}
       ${kpi('Woningen met zonnepanelen', r, 'WoningenMetZonnestroom', {suf: '%'})}
       ${kpi('Inkomen per inwoner', r, 'GemiddeldInkomenPerInwoner', {pre: '€ ', suf: 'k', d: 1})}
       ${kpi('Personen in armoede', r, 'PersonenInArmoede', {suf: '%', d: 1})}
-      ${kpi('Bedrijfsvestigingen', r, 'BedrijfsvestigingenTotaal')}
+      ${kpi('Bedrijfsvestigingen', r, 'BedrijfsvestigingenTotaal', {aantal: true})}
       ${kpi("Auto's per huishouden", r, 'PersonenautoSParticulierenPerHh', {d: 1})}
       ${kpi('Afstand huisarts', r, 'AfstandTotHuisartsenpraktijk', {suf: ' km', d: 1})}
       ${kpi('Afstand grote supermarkt', r, 'AfstandTotGroteSupermarkt', {suf: ' km', d: 1})}
@@ -450,7 +449,7 @@ function renderDorpen(){
         ${rank('Meeste nieuwbouw', x => cv(x, 'NieuwbouwWoningen'), v => fmt(v) + ' nieuwe woningen')}
         ${rank('Verst van een huisarts', x => cv(x, 'AfstandTotHuisartsenpraktijk'), v => fmt(v, 1) + ' km gemiddeld')}
         ${rank('Verst van een grote supermarkt', x => cv(x, 'AfstandTotGroteSupermarkt'), v => fmt(v, 1) + ' km gemiddeld')}
-        ${rank('Snelst gegroeid', x => { const i = x.inwoners_per_jaar || {}, ks = Object.keys(i).sort(); return ks.length > 1 ? 100 * (i[ks.at(-1)] - i[ks[0]]) / i[ks[0]] : null; }, v => (v >= 0 ? '+' : '') + fmt(v, 1) + '% inwoners')}
+        ${rank('Meeste zonnepanelen', x => cv(x, 'WoningenMetZonnestroom'), v => fmt(v) + '% van de woningen')}
       </div></section>
     <section class="card c12"><h3>Alle dorpen naast elkaar</h3><p class="lead">Klik op een kolomkop om te sorteren.</p>
       <div class="scroll"><table class="tbl" id="dtbl"><thead><tr><th>Dorp</th><th>Gemeente</th><th>Inwoners</th><th>% 0–15</th><th>% 65+</th><th>WOZ (×1.000)</th><th>% koop</th><th>Inkomen p.p. (×1.000)</th><th>Huisarts km</th><th>Supermarkt km</th><th>Nieuwbouw</th></tr></thead>

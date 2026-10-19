@@ -55,6 +55,24 @@ def partijen_in(gid, text):
                 break
     return found
 
+def vraag_partijen(gid, titel):
+    """Wie stelde de vraag? Alleen partijen direct na 'Raadsvragen' / 'Politieke vragen', zodat
+    'Raadsvragen Morgen! over sandwichborden van Forum voor Democratie' alleen Morgen! telt."""
+    t = re.sub(r'^\s*(aanvullende\s+)?(raadsvragen|politieke vragen|schriftelijke vragen|vragen)\s*(van\s+(de\s+)?(fractie\s+)?|fractie\s+)?', '', titel or '', flags=re.I)
+    alias = sorted(((n, k) for k, ns in PARTIJEN[gid].items() for n in ns), key=lambda x: -len(x[0]))
+    found = []
+    while True:
+        hit = next(((n, k) for n, k in alias if re.match(re.escape(n) + r'(?![\w])', t, re.I if n.isupper() is False and len(n) > 4 else 0)), None)
+        if not hit:
+            break
+        found.append(hit[1])
+        t = t[len(hit[0]):]
+        sep = re.match(r'\s*(,|&|/|\ben\b)\s*', t)
+        if not sep:
+            break
+        t = t[sep.end():]
+    return list(dict.fromkeys(found))
+
 def partij(gid, naam):
     p = partijen_in(gid, naam)
     return p[0] if p else (naam or '').strip()
@@ -119,7 +137,7 @@ def raad_medemblik():
             'hoofdpartij': partij(gid, hoofd[1]) if hoofd[1] else '', 'mede': [x[0] for x in mede], 'url': r['_url'],
         })
     vragen = [{'titel': val(r, 'title'), 'datum': dmy(val(r, 'datum')), 'antwoord': dmy(val(r, 'datumantwoord')),
-               'poho': val(r, 'poho'), 'partijen': partijen_in(gid, val(r, 'title')), 'url': r['_url']}
+               'poho': val(r, 'poho'), 'partijen': vraag_partijen(gid, val(r, 'title')), 'url': r['_url']}
               for r in report_rows(gid, 'Raadsvragen')]
     toezeggingen = [{'titel': val(r, 'title'), 'datum': dmy(val(r, 'registrationdate')), 'open': val(r, 'completed') == 'Nee',
                      'poho': val(r, 'portefeuillehouder'), 'omschrijving': val(r, 'omschrijving')[:400],
@@ -138,7 +156,7 @@ def raad_opmeer():
                            'poho': val(r, 'portefeuillehouder'), 'indiener': '', 'partijen': list(dict.fromkeys(fr)),
                            'hoofdpartij': fr[0] if len(fr) == 1 else '', 'mede': [], 'url': r['_url']})
     vragen = [{'titel': val(r, 'title'), 'datum': dmy(val(r, 'registrationdate')), 'antwoord': dmy(val(r, 'datumantwoord')),
-               'afgedaan': val(r, 'afgedaan') == 'Ja', 'poho': '', 'partijen': partijen_in(gid, val(r, 'title')), 'url': r['_url']}
+               'afgedaan': val(r, 'afgedaan') == 'Ja', 'poho': '', 'partijen': vraag_partijen(gid, val(r, 'title')), 'url': r['_url']}
               for r in report_rows(gid, 'Politieke vragen')]
     toezeggingen = [{'titel': val(r, 'title'), 'datum': dmy(val(r, 'registrationdate')), 'open': val(r, 'afgedaan') == 'Nee',
                      'poho': val(r, 'portefeuillehouder'), 'omschrijving': '', 'stand': '',
