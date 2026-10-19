@@ -102,6 +102,52 @@
 
   .warn{background:var(--red);color:#fff;padding:12px 16px;border-radius:12px;margin:16px 0 0}
 
+  /* ===== Vandaag: rustige briefing ===== */
+  .today{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;max-width:1120px;margin:26px auto 40px}
+  .today h2.hello{font:700 30px/1.15 var(--serif);margin:0}
+  .today .lead{font-size:17px;color:var(--muted);margin:6px 0 0}
+  .today .lead b{color:var(--ink)}
+  .tsec{margin-top:26px}
+  .tsec > h3{display:flex;align-items:center;gap:8px;font:700 13px var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
+  .tsec > h3 .cnt{font-weight:600;letter-spacing:0;text-transform:none;color:var(--faint)}
+  .tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+  .ti{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;cursor:pointer}
+  .ti + .ti{border-top:1px solid var(--line2)}
+  .ti:hover{background:var(--hi)}
+  .ti .tic{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;background:color-mix(in srgb,var(--c) 13%,transparent);color:var(--c)}
+  .ti .tb{min-width:0;flex:1}
+  .ti .tt{display:block;font-weight:600;font-size:15.5px;line-height:1.3;color:var(--ink);text-decoration:none}
+  .ti .ts{display:flex;flex-wrap:wrap;gap:2px 8px;font-size:13px;color:var(--muted);margin-top:2px}
+  .ti .ts .k{font-weight:700;color:var(--c)}
+  .ti.big .tt{font:700 18px/1.25 var(--serif)}
+  .ti .badges{margin-top:5px}
+  .ti .also{margin-top:2px}
+  .tline{padding:12px 16px;font-size:15px;line-height:1.5}
+  .tline + .tline{border-top:1px solid var(--line2)}
+  .tline .lab{font-weight:700}
+  .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .pill{border:1px solid var(--chipline);background:var(--chip);border-radius:999px;padding:4px 11px;font-size:13.5px;font-weight:600;cursor:pointer}
+  .pill:hover{border-color:var(--sky)}
+  .pill b{color:var(--link);margin-left:3px}
+  .calm{padding:16px;color:var(--muted);font-size:15px}
+  .more-link{display:block;width:100%;text-align:left;border:0;border-top:1px solid var(--line2);background:none;padding:10px 16px;font-weight:700;font-size:14px;color:var(--link);cursor:pointer}
+  .more-link:hover{background:var(--hi)}
+  .tev{display:flex;gap:12px;align-items:center;padding:10px 14px;text-decoration:none}
+  .tev + .tev{border-top:1px solid var(--line2)}
+  .tev:hover{background:var(--hi)}
+  .tev .d{flex:0 0 auto;width:44px;text-align:center;border-radius:9px;background:var(--ice);color:var(--deep);line-height:1.05;padding:5px 0}
+  :root[data-theme="dark"] .tev .d{color:#cfe2f4}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tev .d{color:#cfe2f4}}
+  .tev .d small{display:block;font-size:10.5px;font-weight:700;text-transform:uppercase}
+  .tev .d b{font:700 18px var(--serif)}
+  .tev strong{display:block;font-size:14.5px;line-height:1.25}
+  .tev span.s{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+  .gobig{display:inline-flex;align-items:center;gap:8px;margin-top:26px;border:0;background:var(--deep);color:#fff;font-weight:700;font-size:15px;padding:11px 18px;border-radius:12px;cursor:pointer}
+  .gobig:hover{background:#174580}
+  .colpick{display:flex;gap:9px;align-items:center;padding:7px 10px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer}
+  .colpick:hover{background:var(--hi)}
+  .colpick i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
   /* ===== Dagoverzicht: tegels ===== */
   .overview{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:18px 0 0}
   .tile{position:relative;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 14px 9px;box-shadow:var(--shadow);cursor:pointer;overflow:hidden;display:flex;flex-direction:column;min-height:104px}
@@ -136,7 +182,7 @@
   .empty{color:var(--muted);font-size:14px;padding:8px 0}
 
   /* ===== Kolommen ===== */
-  .board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:16px 0 28px;align-items:start}
+  .board{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin:18px 0 28px;align-items:start}
   .col{background:var(--card);border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;max-height:calc(100vh - 86px);position:sticky;top:72px;overflow:hidden}
   .colhead{padding:12px 14px 10px;border-bottom:1px solid var(--line);position:relative}
   .colhead::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--c)}
@@ -145,9 +191,12 @@
   .colhead h2{font:700 18px/1.2 var(--serif);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
   .colhead .n{margin-left:auto;flex:0 0 auto;white-space:nowrap;font-weight:700;font-size:12.5px;color:var(--muted)}
   .colhead .n b{color:var(--link)}
-  .colhead p{margin:5px 0 0;color:var(--muted);font-size:12.5px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .colhead p{display:none}
   .tgl{display:flex;gap:6px;align-items:center;margin-top:6px;font-size:12.5px;color:var(--muted);cursor:pointer}
-  .list{overflow-y:auto;padding:0 0 6px;overscroll-behavior:contain}
+  .list{overflow-y:auto;padding:0 0 6px;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+  .list::-webkit-scrollbar{width:6px}
+  .list::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+  .list:hover::-webkit-scrollbar-thumb{background:var(--chipline)}
   .day{position:sticky;top:0;z-index:2;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(4px);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 14px 4px}
 
   /* Stukken: drie soorten */
@@ -171,7 +220,8 @@
   .it.lo .ic svg{width:16px;height:16px}
   .it.lo .body{min-width:0;flex:1}
   .it.lo .t{font-weight:500;font-size:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .it.fresh-it{border-left-color:var(--deep)}
+  /* Nieuw sinds je bezoek: een stipje vóór de titel in plaats van een badge */
+  .it.fresh-it .t::before,.ti.isnew .tt::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--rodi);margin-right:7px;vertical-align:2px}
   .it.changed{border-left-color:var(--orange)}
   .it.done{opacity:.5}
   .it.done:hover{opacity:1}
@@ -289,9 +339,9 @@
 
   /* ===== Schermbreedtes ===== */
   @media (max-width:1180px){.overview{grid-template-columns:repeat(3,minmax(0,1fr))}}
-  @media (max-width:1380px){.board{grid-template-columns:repeat(3,minmax(0,1fr))}}
-  @media (max-width:1560px){.summary{display:none}}
-  @media (max-width:1000px){.board{grid-template-columns:repeat(2,minmax(0,1fr))}.top{flex-wrap:wrap}.gem{order:3;margin-left:0;width:100%}.gem a{flex:1;text-align:center}}
+  @media (max-width:1000px){.today{grid-template-columns:1fr;gap:6px}}
+  @media (max-width:1800px){.summary{display:none}}
+  @media (max-width:1000px){.top{flex-wrap:wrap}.gem{order:3;margin-left:0;width:100%}.gem a{flex:1;text-align:center}}
   @media (max-width:760px){
     .wrap{padding:0 14px}
     .top{gap:12px;padding-top:12px;padding-bottom:12px}
@@ -312,7 +362,9 @@
     .coltabs small{font-weight:700;opacity:.75;margin-left:4px}
     .col{position:static;max-height:none}
     .col:not(.on){display:none}
-    .colhead p{white-space:normal}
+    .today{margin-top:16px}
+    .today h2.hello{font-size:25px}
+    .ti{padding:11px 13px}
     .acts,.acts.keep,.it:hover .acts.keep{position:static;opacity:1;background:none;border:0;box-shadow:none;align-self:flex-start;margin-left:auto}
     .acts button:not(.s){display:none!important}
   }
@@ -363,8 +415,13 @@
         </div>
       </details>
       <select id="dorp" aria-label="Dorp"><option value="">Alle dorpen</option></select>
+      <details class="menu" id="colmenu">
+        <summary class="chip" title="Kies welke kolommen je ziet">Kolommen ▾</summary>
+        <div class="pop" id="colpop"></div>
+      </details>
       <div class="seg" role="group" aria-label="Weergave" id="viewseg">
-        <button data-v="lijst" aria-pressed="true"><svg class="i" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Lijst</button>
+        <button data-v="vandaag" aria-pressed="true"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>Vandaag</button>
+        <button data-v="lijst" aria-pressed="false"><svg class="i" viewBox="0 0 24 24"><path d="M4 5v14M10 5v14M16 5v14M21 5v14"/></svg>Kolommen</button>
         <button data-v="kaart" aria-pressed="false"><svg class="i" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>Kaart</button>
       </div>
     </div>
@@ -374,8 +431,7 @@
 
 <main class="wrap">
   <div id="stale"></div>
-  <section class="overview" id="overview" aria-label="Dagoverzicht"></section>
-  <section class="agenda" id="agenda" aria-label="Komende vergaderingen"></section>
+  <section class="today" id="today" hidden aria-label="Vandaag"></section>
   <div class="coltabs" id="coltabs" role="group" aria-label="Kolom"></div>
   <div class="board" id="board"></div>
   <section class="mapwrap" id="mapwrap" hidden aria-label="Kaart van bekendmakingen">
@@ -546,13 +602,15 @@ function typeInfo(x){
   return (x._type = {label, icon, tc, routine, important});
 }
 // Uitgelicht: belangrijke soort, of er is iets gebeurd (beantwoord, trefwoord, gewijzigd sinds je bezoek).
-const isHi = x => typeInfo(x).important || !!x.antwoord_datum || !!x.kw_hits || chgSince(x);
+// Gekleurde kaart alleen als er écht iets is: beantwoord, trefwoord of gewijzigd sinds je bezoek.
+const isHi = x => !!x.antwoord_datum || !!x.kw_hits || chgSince(x);
 const isLo = x => typeInfo(x).routine && !isHi(x);
+// Belangrijk voor 'Dit moet je zien': belangrijke soort óf er is iets gebeurd.
+const isKey = x => typeInfo(x).important || isHi(x);
 
 function badges(x){
   const k = kinds(x), out = [];
   if (mark(x.id, 'k')) out.push('<span class="b done">Opgepakt</span>');
-  if (k.includes('nieuw')) out.push('<span class="b new" title="Binnengekomen sinds je vorige bezoek">Nieuw</span>');
   if (k.includes('gewijzigd')) out.push('<span class="b chg">Gewijzigd</span>');
   if (k.includes('beantwoord')) out.push(`<span class="b ans">Beantwoord ${nl(x.antwoord_datum,{day:'numeric',month:'short'})}</span>`);
   if (k.includes('verwijderd')) out.push('<span class="b gone">Niet meer online</span>');
@@ -666,13 +724,14 @@ function item(x, col){
   const snip = viaText && x.tx ? `<span class="snip" data-id="${x.id}"><span class="via">Gevonden in de tekst</span>…</span>` : '';
   const title = `<a class="t" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`;
   if (isLo(x)) {
-    const showBadges = mark(x.id, 'k') || k.some(v => ['nieuw', 'gewijzigd', 'historisch', 'verwijderd'].includes(v));
+    const showBadges = mark(x.id, 'k') || k.some(v => ['gewijzigd', 'historisch', 'verwijderd'].includes(v));
     return `<article class="it lo${cls}" data-id="${x.id}" style="--tc:${ti.tc || col.color}">
       <span class="ic" title="${esc(ti.label)}">${ic(ti.icon)}</span>
       <div class="body">${title}${line(x)}${snip}${showBadges ? badges(x) : ''}</div>${acts(x)}</article>`;
   }
   const hi = isHi(x);
-  const kicker = ti.label ? `<span class="kicker">${ic(ti.icon)}${esc(ti.label)}</span>` : '';
+  // Label alleen als het iets vertelt (Motie, Raadsvragen, Verordening), niet 'Collegebesluit' in de kolom College.
+  const kicker = ti.label && ti.important ? `<span class="kicker">${ic(ti.icon)}${esc(ti.label)}</span>` : '';
   return `<article class="it${hi ? ' hi' : ''}${cls}" data-id="${x.id}">${kicker}${title}${line(x)}${meta(x)}${also(x)}${snip}
     <div class="foot">${badges(x)}${acts(x)}</div></article>`;
 }
@@ -858,7 +917,7 @@ function syncHash(){
   if (q) p.set('q', q);
   if (filter) p.set('f', filter);
   if (DORP.name) p.set('dorp', DORP.name);
-  if (VIEW === 'kaart') p.set('v', 'kaart');
+  if (VIEW !== 'vandaag') p.set('v', VIEW === 'kaart' ? 'kaart' : 'kolommen');
   if (PANEL_ID) p.set('stuk', PANEL_ID);
   const h = '#' + DATA.gemeente + (p.toString() ? '?' + p : '');
   if (location.hash !== h) history.replaceState(null, '', h);
@@ -927,6 +986,101 @@ function renderAgenda(){
 }
 
 // ---------------------------------------------------------------------------
+// Kolommen kiezen (onthouden in deze browser)
+// ---------------------------------------------------------------------------
+let HIDE = new Set((store.get('gm-hide', '') || '').split(',').filter(Boolean));
+function renderColMenu(){
+  $('colpop').innerHTML = COLS.map(c => `<label class="colpick"><input type="checkbox" data-hide="${c.id}"${HIDE.has(c.id) ? '' : ' checked'}><i style="background:${c.color}"></i>${c.title}</label>`).join('');
+}
+
+// ---------------------------------------------------------------------------
+// Vandaag: één rustige briefing. Wat is er sinds je vorige bezoek gebeurd, het belangrijkste eerst.
+// ---------------------------------------------------------------------------
+function todayItem(x, big = false){
+  const col = colOf(x), ti = typeInfo(x), k = kinds(x);
+  // Bij media is het medium het label ('AD.nl'), anders de soort of de kolom.
+  const sub = [`<span class="k">${esc(x.media_bron || (ti.label && ti.important ? ti.label : col.title))}</span>`];
+  if (x.published_at) sub.push(hm(x.published_at));
+  else if (x.first_seen && !k.includes('historisch')) sub.push((x._d === TODAY ? '' : nl(dayNL(x.first_seen), {weekday:'short', day:'numeric', month:'short'}) + ' ') + hm(x.first_seen));
+  if (x._plaats && !norm(x.title).includes(norm(x._plaats))) sub.push(esc(x._plaats));
+  if (x.doc_date && x._d && x.doc_date > x._d) sub.push(`<span class="when">${/vergader/.test(x.doc_date_label || '') || x.meeting_title ? 'vergadering' : esc(x.doc_date_label || 'datum')} ${nl(x.doc_date,{weekday:'short',day:'numeric',month:'short'})}</span>`);
+  const special = [];
+  if (chgSince(x)) special.push(`<span class="b chg">${esc(((x.changes || []).slice(-1)[0] || {}).type || 'Gewijzigd')}</span>`);
+  if (x.antwoord_datum) special.push(`<span class="b ans">Beantwoord ${nl(x.antwoord_datum,{day:'numeric',month:'short'})}</span>`);
+  (x.kw_hits || []).forEach(w => special.push(`<span class="b kw">${esc(w)}</span>`));
+  if (mark(x.id, 's')) special.push('<span class="b">★ bewaard</span>');
+  return `<article class="ti${big ? ' big' : ''}${k.includes('nieuw') ? ' isnew' : ''}" data-id="${x.id}" style="--c:${col.color}">
+    <span class="tic">${ic(ti.icon)}</span>
+    <span class="tb"><a class="tt" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>
+      <span class="ts">${sub.join('<span aria-hidden="true">·</span>')}</span>${also(x)}
+      ${special.length ? `<span class="badges">${special.join('')}</span>` : ''}</span></article>`;
+}
+const plural = (n, een, meer) => `${n} ${n === 1 ? een : meer}`;
+function renderToday(){
+  const base = DATA.items.filter(x => x.kind !== 'vergadering' && dorpMatch(x));
+  const since = base.filter(x => kinds(x).includes('sinds'));
+  const newN = since.filter(x => kinds(x).includes('nieuw')).length, chgN = since.filter(chgSince).length;
+  const media = COLS[4].test, isBek = COLS[0].test;
+  const hr = +new Date().toLocaleString('nl-NL', {hour: 'numeric', hour12: false, timeZone: 'Europe/Amsterdam'});
+  const groet = hr < 6 ? 'Goedenacht' : hr < 12 ? 'Goedemorgen' : hr < 18 ? 'Goedemiddag' : 'Goedenavond';
+  const when = new Date(VISIT).toLocaleString('nl-NL',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'});
+  const byTime = (a, b) => b._t - a._t;
+  const sec = (title, n, body) => `<section class="tsec"><h3>${title}${n !== '' ? ` <span class="cnt">${n}</span>` : ''}</h3>${body}</section>`;
+  const moreBtn = (label, act) => `<button class="more-link" data-go="${act}">${label} →</button>`;
+
+  // 1. Dit moet je zien
+  let key = since.filter(x => !media(x) && isKey(x)).sort(byTime);
+  let keyTitle = 'Dit moet je zien';
+  if (!key.length) {
+    key = base.filter(x => !media(x) && isKey(x) && x._d >= daysAgo(6) && x._d <= TODAY).sort(byTime);
+    keyTitle = 'Belangrijk van de afgelopen week';
+  }
+  const keyIds = new Set(key.map(x => x.id));
+  // 2. Raad, college en nieuws van de gemeente (wat niet al bovenaan staat)
+  const rcn = since.filter(x => !media(x) && !isBek(x) && !keyIds.has(x.id)).sort(byTime);
+  // 3. Vergunningen e.d.: één regel per dorp
+  const bek = since.filter(x => isBek(x) && !keyIds.has(x.id));
+  const perPlaats = {}, perSoort = {};
+  bek.forEach(x => {
+    perPlaats[x._plaats || 'Overig'] = (perPlaats[x._plaats || 'Overig'] || 0) + 1;
+    const s = typeInfo(x).icon === 'melding' ? 'melding' : typeInfo(x).icon === 'verkeer' ? 'verkeersbesluit' : typeInfo(x).icon === 'evenement' ? 'evenement' : typeInfo(x).icon === 'boom' ? 'kap' : 'vergunning';
+    perSoort[s] = (perSoort[s] || 0) + 1;
+  });
+  const soortTxt = Object.entries(perSoort).sort((a, b) => b[1] - a[1]).map(([s, n]) => plural(n, s, {vergunning:'vergunningen', melding:'meldingen', verkeersbesluit:'verkeersbesluiten', evenement:'evenementen', kap:'kapvergunningen'}[s])).join(', ');
+  // 4. Media: samengevoegd, nieuwste verhalen
+  let med = since.filter(x => media(x) && (MEDTEKST || x.media_match !== 'tekst'));
+  med.forEach(x => { x._also = null; });
+  med = clusterMedia(med.sort(byTime));
+  // 5. Agenda
+  const agenda = DATA.items.filter(x => x.kind === 'vergadering' && x.doc_date >= TODAY).sort((a,b) => a.doc_date.localeCompare(b.doc_date)).slice(0, 5);
+
+  const lead = (newN || chgN)
+    ? `Sinds je vorige bezoek (${when}): <b>${plural(newN, 'nieuw stuk', 'nieuwe stukken')}</b>${chgN ? `, <b>${chgN} gewijzigd</b>` : ''}${DORP.name ? ` over ${esc(DORP.name)}` : ''}.`
+    : `Niets nieuws sinds je vorige bezoek (${when})${DORP.name ? ` over ${esc(DORP.name)}` : ''}.`;
+  const main = `<div>
+    <h2 class="hello">${groet}${DATA.naam ? `, dit is ${esc(DATA.naam)}` : ''}</h2>
+    <p class="lead">${lead}</p>
+    ${sec(keyTitle, key.length || '', key.length
+        ? `<div class="tcard">${key.slice(0, 8).map(x => todayItem(x, true)).join('')}${key.length > 8 ? moreBtn(`Nog ${key.length - 8} belangrijke stukken`, 'f:sinds') : ''}</div>`
+        : `<div class="tcard"><p class="calm">Geen raadsvragen, moties, besluitenlijsten of trefwoorden deze week.</p></div>`)}
+    ${rcn.length ? sec('Raad, college en gemeente', rcn.length, `<div class="tcard">${rcn.slice(0, 6).map(x => todayItem(x)).join('')}${rcn.length > 6 ? moreBtn(`Nog ${rcn.length - 6}`, 'f:sinds') : ''}</div>`) : ''}
+    ${bek.length ? sec('Vergunningen en meldingen', bek.length, `<div class="tcard"><div class="tline">${esc(cap(soortTxt))}.
+        <div class="pills">${Object.entries(perPlaats).sort((a, b) => (a[0] === 'Overig') - (b[0] === 'Overig') || b[1] - a[1]).map(([p, n]) => p === 'Overig' ? `<span class="pill" data-go="col:bek">Overig<b>${n}</b></span>` : `<button class="pill" data-dorp="${esc(p)}">${esc(p)}<b>${n}</b></button>`).join('')}</div></div>
+        ${moreBtn('Bekijk de bekendmakingen', 'col:bek')}</div>`) : ''}
+    <button class="gobig" data-go="col:">${ic('chev')}Alles bekijken in kolommen</button>
+  </div>`;
+  const side = `<div>
+    ${sec('Agenda', '', agenda.length ? `<div class="tcard">${agenda.map(x => { const m = meetParts(x), d = dt(x.doc_date); return `<a class="tev" href="${esc(x.url)}" target="_blank" rel="noopener" title="${esc(x.title)}">
+        <span class="d"><small>${d.toLocaleDateString('nl-NL',{weekday:'short'})}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('nl-NL',{month:'short'})}</small></span>
+        <span><strong>${esc(m.soort)}</strong><span class="s">${m.tijd ? m.tijd + (m.rest ? ' · ' : '') : ''}${esc(m.rest)}</span></span></a>`; }).join('')}</div>`
+      : `<div class="tcard"><p class="calm">${DATA.gemeente === 'koggenland' ? 'De Koggenlandse raad wordt niet gevolgd.' : 'Geen vergaderingen gepland.'}</p></div>`)}
+    ${sec('In de media', med.length || '', med.length ? `<div class="tcard">${med.slice(0, 5).map(x => todayItem(x)).join('')}${med.length > 5 ? moreBtn(`Nog ${med.length - 5} verhalen`, 'col:med') : ''}</div>`
+      : `<div class="tcard"><p class="calm">Geen nieuwe artikelen sinds je vorige bezoek.</p></div>`)}
+  </div>`;
+  $('today').innerHTML = main + side;
+}
+
+// ---------------------------------------------------------------------------
 // Alles tekenen
 // ---------------------------------------------------------------------------
 function render(){
@@ -937,8 +1091,6 @@ function render(){
     && dorpMatch(x);
   const items = DATA.items.filter(match);
   CURRENT = items;
-  renderOverview();
-  renderAgenda();
 
   const changed = items.filter(x => x.last_change).length;
   const viaText = q && SEARCH.hits ? items.filter(x => !titleMatch(x, q)).length : 0;
@@ -952,8 +1104,10 @@ function render(){
   $('moresum').setAttribute('aria-pressed', inMenu);
   $('moresum').textContent = inMenu ? $('moremenu').querySelector(`[data-k="${filter}"]`).textContent + ' ▾' : 'Meer ▾';
   syncHash();
+  renderColMenu();
+  if (VIEW === 'vandaag') { renderToday(); return; }
   if (VIEW === 'kaart') { renderMap(); return; }
-  const perCol = COLS.map(c => {
+  const perCol = COLS.filter(c => !HIDE.has(c.id)).map(c => {
     let rows = items.filter(c.test), extra = '';
     if (c.id === 'med') {
       const tekst = rows.filter(x => x.media_match === 'tekst').length;
@@ -1042,7 +1196,7 @@ function closePanel(){
 // ---------------------------------------------------------------------------
 // Kaart (Leaflet + PDOK-achtergrondkaart + gemeentegrens), pas geladen als je de kaart opent.
 // ---------------------------------------------------------------------------
-let VIEW = 'lijst', CURRENT = [], MAP = null, CLUSTER = null, GRENS = null;
+let VIEW = 'vandaag', CURRENT = [], MAP = null, CLUSTER = null, GRENS = null;
 const MAPTYPES = [['bouw','#006dac','vergunning'],['melding','#5498cf','melding'],['verkeer','#f18700','verkeersbesluit'],['evenement','#c2410c','evenement'],['boom','#2e9a5a','kap / bomen'],['doc','#1b4e8e','overig']];
 const mapType = x => { const i = typeInfo(x).icon; return MAPTYPES.find(m => m[0] === i) || MAPTYPES[5]; };
 function loadAsset(tag, attrs){
@@ -1094,9 +1248,11 @@ function setView(v){
   VIEW = v;
   store.set('gm-view', v);
   document.querySelectorAll('#viewseg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v ? 'true' : 'false'));
-  $('board').hidden = v === 'kaart';
-  $('coltabs').hidden = v === 'kaart';
+  $('board').hidden = v !== 'lijst';
+  $('coltabs').hidden = v !== 'lijst';
   $('mapwrap').hidden = v !== 'kaart';
+  $('today').hidden = v !== 'vandaag';
+  $('colmenu').hidden = v !== 'lijst';
   render();
 }
 
@@ -1167,6 +1323,7 @@ async function load(g){
 
 function setFilter(k){
   filter = k;
+  if (VIEW === 'vandaag' && k) { VIEW = 'lijst'; setView('lijst'); }
   document.querySelectorAll('#chips [data-k]').forEach(x => x.setAttribute('aria-pressed', x.dataset.k === k ? 'true' : 'false'));
   $('moremenu').open = false;
   shown = {}; render();
@@ -1190,8 +1347,11 @@ function applyTheme(){
 // Gebeurtenissen
 // ---------------------------------------------------------------------------
 $('chips').addEventListener('click', e => { const b = e.target.closest('button[data-k]'); if (b) setFilter(filter === b.dataset.k && b.dataset.k ? '' : b.dataset.k); });
-document.addEventListener('click', e => { if (!e.target.closest('#moremenu')) $('moremenu').open = false; });
-$('overview').addEventListener('click', e => {
+document.addEventListener('click', e => {
+  if (!e.target.closest('#moremenu')) $('moremenu').open = false;
+  if (!e.target.closest('#colmenu')) $('colmenu').open = false;
+});
+false && document.body.addEventListener('click', e => {
   const t = e.target.closest('.tile'); if (!t) return;
   const [kind, val] = t.dataset.act.split(':');
   if (kind === 'f') { setFilter(filter === val ? '' : val); return; }
@@ -1240,6 +1400,27 @@ $('panel').addEventListener('click', async e => {
   toggleMark(x.id, b.dataset.pa); render(); openPanel(x.id);
 });
 $('scrim').addEventListener('click', closePanel);
+$('today').addEventListener('click', e => {
+  const d = e.target.closest('[data-dorp]');
+  if (d) { setDorp(d.dataset.dorp); return; }
+  const go = e.target.closest('[data-go]');
+  if (go) {
+    const [kind, val] = go.dataset.go.split(':');
+    if (kind === 'f') { setFilter(val); window.scrollTo({top: 0}); return; }
+    if (val) { MOBCOL = val; store.set('gm-col', val); HIDE.delete(val); }
+    setView('lijst'); window.scrollTo({top: 0});
+    return;
+  }
+  if (e.target.closest('.also a')) return;
+  const it = e.target.closest('.ti[data-id]');
+  if (it && !(e.metaKey || e.ctrlKey || e.shiftKey)) { e.preventDefault(); openPanel(it.dataset.id); }
+});
+$('colpop').addEventListener('change', e => {
+  const id = e.target.dataset.hide; if (!id) return;
+  if (e.target.checked) HIDE.delete(id); else HIDE.add(id);
+  if (HIDE.size >= COLS.length) { HIDE.delete(id); e.target.checked = true; }
+  store.set('gm-hide', [...HIDE].join(',')); render();
+});
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && PANEL_ID) closePanel(); });
 $('map').addEventListener('click', e => { const a = e.target.closest('[data-open]'); if (a) { e.preventDefault(); openPanel(a.dataset.open); } });
 $('dorp').addEventListener('change', e => setDorp(e.target.value));
@@ -1257,6 +1438,7 @@ let timer; $('q').addEventListener('input', () => {
   timer = setTimeout(async () => {
     shown = {};
     const q = $('q').value.trim();
+    if (q && VIEW === 'vandaag') setView('lijst');
     render();  // titels meteen
     if (!qTokens(q).length) { SEARCH.q = q; SEARCH.hits = null; render(); return; }
     const hits = await textSearch(q);
@@ -1270,7 +1452,7 @@ $('theme').addEventListener('click', () => { THEME = THEMES[(THEMES.indexOf(THEM
 try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme); } catch (e) {}
 applyTheme();
 
-if (store.get('gm-view') === 'kaart') VIEW = 'kaart';
+// Bij openen altijd 'Vandaag', tenzij de link iets anders vraagt.
 const PENDING = {dorp: '', stuk: ''};
 function applyHash(){
   const h = parseHash();
@@ -1278,7 +1460,7 @@ function applyHash(){
   filter = h.f;
   document.querySelectorAll('#chips [data-k]').forEach(x => x.setAttribute('aria-pressed', x.dataset.k === filter ? 'true' : 'false'));
   PENDING.dorp = h.dorp; PENDING.stuk = h.stuk;
-  if (h.v) VIEW = h.v === 'kaart' ? 'kaart' : 'lijst';
+  VIEW = h.v === 'kaart' ? 'kaart' : h.v === 'kolommen' || h.v === 'lijst' ? 'lijst' : (h.q || h.f) ? 'lijst' : 'vandaag';
   load(h.g);
 }
 window.addEventListener('hashchange', applyHash);
