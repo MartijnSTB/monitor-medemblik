@@ -1,87 +1,40 @@
-== https://raad.koggenland.nl/nieuws/rss 200 text/html; charset=utf-8 6709
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <script id="anubis_version" type="application/json">"1.25.0"
-</script><script id="anubis_challenge" type="application/json">{"rules":{"algorithm":"fast","difficulty":4},"challenge":{"issuedAt":"2026-10-19T15:35:17.599370226+02:00","metadata":{"User-Agent":"MedemblikPublicatieMonitor/0.1 (public information monitoring)","X-Real-Ip":"52.161.51.51"},"id":"01a1545f-a85f-7586-a917-34a58ce2c4ef","method":"fast","randomData":"fdc11fb82c39d3ab8f1c74ae36dd0d00bc296f10df0197b983de2e395f3d5e5d92b65d405d138b9e0bcb8ad9c0cb801b6e62c276ae3bc378827884a1a8cbb9ef","policyRuleHash":"30638f4bcccce8ea","difficulty":4,"spent":false}}
-</script><script id="anubis_base_prefix" type="application/json">""
-</script><script id="anubis_public_url" type="application/json">""
-</script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex,nofollow">
-    <link rel="stylesheet" href="/.within.website/x/cmd/anubis/static/css/custom.css">
-    <style>
-      html, body { height: 100%; }
-      html {
-        font-family: "Open Sans", system-ui, -apple-system, sans-serif;
-        color: var(--text);
-        background: var(--background);
-        line-height: 1.4;
-      }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-      }
-      .centered-div {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 
-== https://raad.koggenland.nl/nieuws/ 200 text/html; charset=utf-8 6709
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <script id="anubis_version" type="application/json">"1.25.0"
-</script><script id="anubis_challenge" type="application/json">{"rules":{"algorithm":"fast","difficulty":4},"challenge":{"issuedAt":"2026-10-19T15:35:18.011995722+02:00","metadata":{"User-Agent":"MedemblikPublicatieMonitor/0.1 (public information monitoring)","X-Real-Ip":"52.161.51.51"},"id":"01a1545f-a9fb-7ef6-b114-b1ede473fa4d","method":"fast","randomData":"5ee2d7efb912285661fa8d06d863612f1d732c2d524400c51b4c7f18fda8ff01d53ff8d28d04e0ea0a6589eddc8611885b3638e27bb735f759c8aa16d9a6c6a2","policyRuleHash":"30638f4bcccce8ea","difficulty":4,"spent":false}}
-</script><script id="anubis_base_prefix" type="application/json">""
-</script><script id="anubis_public_url" type="application/json">""
-</script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex,nofollow">
-    <link rel="stylesheet" href="/.within.website/x/cmd/anubis/static/css/custom.css">
-    <style>
-      html, body { height: 100%; }
-      html {
-        font-family: "Open Sans", system-ui, -apple-system, sans-serif;
-        color: var(--text);
-        background: var(--background);
-        line-height: 1.4;
-      }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-      }
-      .centered-div {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 
-== https://raad.koggenland.nl/rss 200 application/rdf+xml 604
-<?xml version="1.0"?>
-
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" >
-
-<channel rdf:about="https://raad.koggenland.nl/nieuws/">
-
-	<title> Nieuws</title>
-	<link>https://raad.koggenland.nl/nieuws</link>
-	<description>
-		Met webtechnologie maken wij informatie voor u zelf en uw
-		burgers op begrijpelijke wijze toegankelijk. Via onze
-		nieuws pagina houden wij u op de hoogte van ontwikkelingen in
-		gemeenteland en onze producten.
-	</description>
-
-
-   <items>
-      <rdf:Seq>
-
-
-
-      </rdf:Seq>
-    </items>
-</channel></rdf:RDF>
+== https://repository.overheid.nl/sru 200 application/xml 5387 https://repository.overheid.nl/sru?query=c.product-area%3D%3Dofficielepublicaties+AND+dt.creator%3D%3D%22Dijk+en+Waard%22+AND+dt.modified%3E%3D2026-09-01&maximumRecords=1
+['266']
+== https://dijkenwaard.bestuurlijkeinformatie.nl/ 200 text/html; charset=utf-8 55505 
+ 
+  title: Dashboard DijkenWaard - iBabs Publieksportaal
+  rss links: []
+  agendatypes: []
+  hrefs: []
+== https://dijkenwaard.raadsinformatie.nl/ 403 text/html; charset=UTF-8 5431 
+== https://dijkenwaard.notubiz.nl/ 403 text/html; charset=UTF-8 5482 
+== https://raad.dijkenwaard.nl/ ERR HTTPSConnectionPool(host='raad.dijkenwaard.nl', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='raad.dijkenwaard.nl', port=443): Failed to resolve 'raad.dijkenwaard.nl' ([Errno -2] Name or service not known)"))
+== https://gemeenteraad.dijkenwaard.nl/ ERR HTTPSConnectionPool(host='gemeenteraad.dijkenwaard.nl', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='gemeenteraad.dijkenwaard.nl', port=443): Failed to resolve 'gemeenteraad.dijkenwaard.nl' ([Errno -2] Name or service not known)"))
+== https://www.dijkenwaard.nl/ 200 text/html; charset=utf-8 134867 
+ 
+  title: Home | Gemeente Dijk en Waard
+  rss links: []
+  agendatypes: []
+  hrefs: ['/actueel/nieuws', '/actueel/nieuws/paarse-vrijdag-ontbijt-dijk-en-waard', '/actueel/nieuws/route-380-kv-hoogspanningsnet-bekendgemaakt', '/actueel/nieuws/van-gebiedsagenda-naar-actie-samen-werken-aan-de-wijk', '/actueel/nieuws/voorkom-een-explosie-in-jouw-wijk', '/bestuur-en-organisatie/algemene-plaatselijke-verordening', '/bestuur-en-organisatie/bekendmakingen', '/bestuur-en-organisatie/college-van-burgemeester-en-wethouders', '/bestuur-en-organisatie/gemeentelijke-organisatie', '/bestuur-en-organisatie/gemeenteraad', '/bestuur-en-organisatie/wet-en-regelgeving']
+== https://www.dijkenwaard.nl/nieuws 200 text/html; charset=utf-8 38541 https://www.dijkenwaard.nl/actueel
+ 
+  title: laatste nieuws en bekendmakingen | Gemeente Dijk en Waard
+  rss links: []
+  agendatypes: []
+  hrefs: ['/actueel/gemeentenieuws-dijk-en-waard', '/actueel/nieuws', '/bestuur-en-organisatie/bekendmakingen', '/bestuur-en-organisatie/ter-inzage-liggende-stukken']
+== https://www.dijkenwaard.nl/nieuws/feed 404 text/html; charset=utf-8 33790 
+== https://www.dijkenwaard.nl/rss 404 text/html; charset=utf-8 33770 
+== https://www.dijkenwaard.nl/actueel 200 text/html; charset=utf-8 38576 
+ 
+  title: laatste nieuws en bekendmakingen | Gemeente Dijk en Waard
+  rss links: []
+  agendatypes: []
+  hrefs: ['/actueel/gemeentenieuws-dijk-en-waard', '/actueel/nieuws', '/bestuur-en-organisatie/bekendmakingen', '/bestuur-en-organisatie/ter-inzage-liggende-stukken']
+== https://api.openraadsinformatie.nl/v1/elastic/_cat/indices?format=json 200 application/json; charset=UTF-8 71872 
+['ori_moerdijk_20250526025902', 'ori_hoeksche_waard_20250420212403', 'ori_dijk_en_waard_20250428194303', 'ori_krimpenerwaard_20250513064618', 'ori_lingewaard_20250523175906', 'ori_albrandswaard_20250316142303', 'ori_nissewaard_20250428014405']
+ORI ori_dijk_en_waard_* 200 [{"@type": "MediaObject", "name": "Bijlage ter informatie - Participatie buurt informatie en participatie nieuwbouw OSSA"}, {"@type": "MediaObject", "name": "Reactienota bestemmingsplan Westdijk 12 - 14 in Heerhugowaard"}, {"@type": "AgendaItem", "name": "Raadsvoorstel ontwerpverklaring geen bedenking omgevingsvergunning 34 app Rembrandt Erf"}]
+ORI ori_dijkenwaard_* 200 []
+ORI ori_heerhugowaard_* 200 []
+ORI osi_dijk_en_waard_* 200 []
+== https://api.pdok.nl/bzk/locatieserver/search/v3_1/free 200 application/json;charset=utf-8 448 https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=gemeentenaam%3A%22Dijk+en+Waard%22&fq=type%3Awoonplaats&rows=50&fl=woonplaatsnaam
+['Broek op Langedijk', 'Heerhugowaard', 'Koedijk', 'Noord-Scharwoude', 'Oudkarspel', 'Sint Pancras', 'Zuid-Scharwoude']
