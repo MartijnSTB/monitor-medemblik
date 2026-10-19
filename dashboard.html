@@ -15,7 +15,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
   // Thema vóór het tekenen zetten (geen witte flits in donkere modus).
   try { const t = localStorage.getItem('gm-theme'); if (t === 'licht' || t === 'donker') document.documentElement.dataset.theme = t === 'donker' ? 'dark' : 'light'; } catch (e) {}
@@ -26,11 +26,11 @@
      =================================================================== */
   :root{
     --rodi:#006dac; --deep:#1b4e8e; --orange:#f18700; --sky:#5498cf; --ice:#daeaf3;
-    --bg:#f3f6f9; --card:#fff; --card2:#f7f9fb; --ink:#1d1d1b; --muted:#5b6672; --faint:#8b97a3; --line:#e2e8ef; --line2:#eef2f6;
+    --bg:#edf2f7; --card:#fff; --card2:#f7f9fb; --ink:#1d1d1b; --muted:#5b6672; --faint:#8b97a3; --line:#e2e8ef; --line2:#eef2f6;
     --chip:#fff; --chipline:#cfd9e3; --link:#006dac; --hi:#f6f9fc; --media:#3b4650;
     --green:#2e9a5a; --greenbg:#e2f2e7; --greenink:#165c35; --red:#a52d2d; --redbg:#f8e0e0; --amberbg:#fff6ea; --amberink:#8a4c00;
     --shadow:0 1px 2px rgba(16,32,48,.06),0 2px 8px rgba(16,32,48,.04);
-    --serif:'Spectral',Georgia,serif; --sans:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --serif:'Bricolage Grotesque','Figtree',system-ui,sans-serif; --sans:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
     color-scheme:light;
   }
   @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
@@ -61,8 +61,8 @@
   .brand{display:flex;align-items:center;gap:14px;min-width:0}
   .dots{display:grid;grid-template-columns:repeat(4,8px);gap:4px;flex:0 0 auto}
   .dots i{width:8px;height:8px;border-radius:50%;display:block}
-  .brand .eyebrow{font:600 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#bcd6ef}
-  .brand h1{font:700 28px/1.05 var(--serif);margin:3px 0 0;letter-spacing:.005em;white-space:nowrap}
+  .brand .eyebrow{font:600 13px/1 var(--sans);color:#bcd6ef}
+  .brand h1{font:800 30px/1.05 var(--serif);margin:3px 0 0;letter-spacing:-.02em;white-space:nowrap}
   .fresh{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--sans);letter-spacing:0;text-transform:none;color:#d7e7f6;margin-left:8px;white-space:nowrap}
   .fresh::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--f,#4cc47f);box-shadow:0 0 0 3px color-mix(in srgb,var(--f,#4cc47f) 30%,transparent)}
   .gem{display:flex;gap:4px;margin-left:auto;background:rgba(255,255,255,.1);border-radius:999px;padding:4px}
@@ -103,23 +103,61 @@
   .warn{background:var(--red);color:#fff;padding:12px 16px;border-radius:12px;margin:16px 0 0}
 
   /* ===== Vandaag: rustige briefing ===== */
-  .today{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;max-width:1120px;margin:26px auto 40px}
-  .today h2.hello{font:700 30px/1.15 var(--serif);margin:0}
-  .today .lead{font-size:17px;color:var(--muted);margin:6px 0 0}
-  .today .lead b{color:var(--ink)}
-  .tsec{margin-top:26px}
-  .tsec > h3{display:flex;align-items:center;gap:8px;font:700 13px var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
-  .tsec > h3 .cnt{font-weight:600;letter-spacing:0;text-transform:none;color:var(--faint)}
-  .tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+  .today{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px 28px;max-width:1200px;margin:22px auto 40px}
+  /* De kop van Vandaag: Rodi-blauw met het stippenpatroon uit het logo */
+  .hero{grid-column:1 / -1;position:relative;overflow:hidden;border-radius:24px;background:#1b4e8e;color:#fff;padding:34px 38px 30px;isolation:isolate}
+  .hero::after{content:'';position:absolute;right:-20px;top:-20px;width:46%;height:140%;z-index:-1;opacity:.9;
+    background:radial-gradient(circle,#f18700 0 5px,transparent 6px) 0 0/34px 34px,radial-gradient(circle,#5498cf 0 5px,transparent 6px) 17px 17px/34px 34px;
+    -webkit-mask:linear-gradient(100deg,transparent 8%,#000 70%);mask:linear-gradient(100deg,transparent 8%,#000 70%)}
+  .hero .hi1{font:600 16px var(--sans);color:#cfe2f4;margin:0}
+  .hero h2{font:800 clamp(30px,4.2vw,52px)/1.02 var(--serif);letter-spacing:-.03em;margin:8px 0 0;max-width:16ch}
+  .hero h2 .num{color:#f9b25a}
+  .hero .since{font-size:15px;color:#cfe2f4;margin:12px 0 0}
+  .hstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .hstat{display:flex;align-items:baseline;gap:7px;border:0;background:rgba(255,255,255,.12);color:#fff;border-radius:12px;padding:8px 13px;cursor:pointer;font-size:14px;font-weight:600}
+  .hstat:hover{background:rgba(255,255,255,.2)}
+  .hstat b{font:800 20px var(--serif);letter-spacing:-.02em}
+  .live{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4cc47f;margin-right:8px;vertical-align:1px;box-shadow:0 0 0 0 rgba(76,196,127,.6);animation:pulse 2.4s ease-out infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(76,196,127,.55)}70%{box-shadow:0 0 0 10px rgba(76,196,127,0)}100%{box-shadow:0 0 0 0 rgba(76,196,127,0)}}
+  .tsec{margin-top:0}
+  .tsec + .tsec{margin-top:26px}
+  .tsec > h3{display:block;font:700 21px var(--serif);letter-spacing:-.015em;color:var(--ink);margin:0 0 10px}
+  .tsec > h3 .cnt{font:600 14px var(--sans);color:var(--faint);margin-left:6px}
+  /* Hoofdverhaal en de rest als raster */
+  .leadcard{position:relative;display:block;background:var(--card);border-radius:20px;padding:22px 24px;box-shadow:0 1px 2px rgba(16,32,48,.05),0 10px 30px rgba(16,32,48,.07);cursor:pointer;border-top:5px solid var(--c)}
+  .leadcard:hover{box-shadow:0 1px 2px rgba(16,32,48,.05),0 14px 36px rgba(16,32,48,.12)}
+  .leadcard .k{display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--c)}
+  .leadcard .tt{display:block;font:700 clamp(21px,2.2vw,27px)/1.15 var(--serif);letter-spacing:-.02em;margin:8px 0 0;color:var(--ink);text-decoration:none}
+  .leadcard .ex{color:var(--muted);font-size:15px;line-height:1.5;margin:10px 0 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;max-width:70ch}
+  .leadcard .ts{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13.5px;color:var(--muted);margin-top:12px}
+  .kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:12px}
+  .kcard{position:relative;background:var(--card);border-radius:16px;padding:14px 16px;cursor:pointer;border:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+  .kcard:hover{border-color:color-mix(in srgb,var(--c) 45%,var(--line))}
+  .kcard .k{display:flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:var(--c)}
+  .kcard .k svg{width:16px;height:16px}
+  .kcard .tt{font:700 16.5px/1.25 var(--serif);letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+  .kcard .ts{display:flex;flex-wrap:wrap;gap:2px 12px;font-size:13px;color:var(--muted);margin-top:auto}
+  .kcard .badges,.leadcard .badges{margin-top:4px;flex:none}
+  .kcard.isnew .k::after,.leadcard.isnew .k::after{content:'nieuw';margin-left:auto;font-size:11.5px;font-weight:700;color:#fff;background:var(--orange);border-radius:999px;padding:1px 8px}
+  /* Agenda als tijdlijn */
+  .tl{position:relative;background:var(--card);border-radius:18px;padding:8px 16px 8px 14px;border:1px solid var(--line)}
+  .tl a{position:relative;display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px;padding:10px 0;text-decoration:none}
+  .tl a + a{border-top:1px dashed var(--line)}
+  .tl .when2{font:800 15px/1.1 var(--serif);color:var(--link)}
+  .tl .when2 small{display:block;font:600 12px var(--sans);color:var(--muted);margin-top:2px}
+  .tl strong{display:block;font-size:14.5px;line-height:1.25}
+  .tl span.s{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tl a:hover strong{color:var(--link)}
+  .tcard{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
   .ti{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;cursor:pointer}
   .ti + .ti{border-top:1px solid var(--line2)}
   .ti:hover{background:var(--hi)}
   .ti .tic{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;background:color-mix(in srgb,var(--c) 13%,transparent);color:var(--c)}
   .ti .tb{min-width:0;flex:1}
   .ti .tt{display:block;font-weight:600;font-size:15.5px;line-height:1.3;color:var(--ink);text-decoration:none}
-  .ti .ts{display:flex;flex-wrap:wrap;gap:2px 8px;font-size:13px;color:var(--muted);margin-top:2px}
+  .ti .ts{display:flex;flex-wrap:wrap;gap:2px 12px;font-size:13px;color:var(--muted);margin-top:2px}
   .ti .ts .k{font-weight:700;color:var(--c)}
-  .ti.big .tt{font:700 18px/1.25 var(--serif)}
+  .ti .tt{font-family:var(--serif);font-weight:600;letter-spacing:-.01em}
   .ti .badges{margin-top:5px}
   .ti .also{margin-top:2px}
   .tline{padding:12px 16px;font-size:15px;line-height:1.5}
@@ -142,8 +180,8 @@
   .tev .d b{font:700 18px var(--serif)}
   .tev strong{display:block;font-size:14.5px;line-height:1.25}
   .tev span.s{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
-  .gobig{display:inline-flex;align-items:center;gap:8px;margin-top:26px;border:0;background:var(--deep);color:#fff;font-weight:700;font-size:15px;padding:11px 18px;border-radius:12px;cursor:pointer}
-  .gobig:hover{background:#174580}
+  .gobig{display:inline-flex;align-items:center;gap:8px;margin-top:26px;border:0;background:var(--ink);color:var(--card);font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;cursor:pointer}
+  .gobig:hover{background:var(--deep);color:#fff}
   .colpick{display:flex;gap:9px;align-items:center;padding:7px 10px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer}
   .colpick:hover{background:var(--hi)}
   .colpick i{width:10px;height:10px;border-radius:50%;display:inline-block}
@@ -188,7 +226,7 @@
   .colhead::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--c)}
   .colhead .row{display:flex;align-items:center;gap:9px;margin-top:2px}
   .colhead .ci{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c);flex:0 0 auto}
-  .colhead h2{font:700 18px/1.2 var(--serif);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .colhead h2{font:700 19px/1.2 var(--serif);letter-spacing:-.01em;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
   .colhead .n{margin-left:auto;flex:0 0 auto;white-space:nowrap;font-weight:700;font-size:12.5px;color:var(--muted)}
   .colhead .n b{color:var(--link)}
   .colhead p{display:none}
@@ -197,7 +235,7 @@
   .list::-webkit-scrollbar{width:6px}
   .list::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
   .list:hover::-webkit-scrollbar-thumb{background:var(--chipline)}
-  .day{position:sticky;top:0;z-index:2;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(4px);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 14px 4px}
+  .day{position:sticky;top:0;z-index:2;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(4px);font:700 13px var(--serif);color:var(--ink);padding:11px 14px 4px}
 
   /* Stukken: drie soorten */
   .it{position:relative;display:block;padding:8px 14px 8px 13px;border-left:3px solid transparent;cursor:pointer}
@@ -206,7 +244,7 @@
   .it.sel{background:var(--hi);border-left-color:var(--sky)}
   .it .t{display:block;font-weight:600;font-size:14.5px;line-height:1.28;text-decoration:none;color:var(--ink)}
   .it .t:hover{color:var(--link)}
-  .kicker{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--c);margin-bottom:2px}
+  .kicker{display:flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--c);margin-bottom:2px}
   .kicker svg{width:14px;height:14px}
   /* Uitgelicht: raadsvragen, moties, collegebesluiten, beantwoord, trefwoord, gewijzigd */
   .it.hi{margin:8px 10px;padding:10px 12px;border:1px solid color-mix(in srgb,var(--c) 30%,var(--line));border-left:4px solid var(--c);border-radius:10px;background:color-mix(in srgb,var(--c) 5%,var(--card))}
@@ -281,10 +319,10 @@
   .panel.on{transform:none;visibility:visible}
   .phead{display:flex;align-items:center;gap:10px;padding:14px 16px 12px;border-bottom:1px solid var(--line);position:relative}
   .phead::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--c)}
-  .phead .k{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--c);display:flex;gap:6px;align-items:center}
+  .phead .k{font-size:13.5px;font-weight:700;color:var(--c);display:flex;gap:6px;align-items:center}
   .phead button{margin-left:auto;border:0;background:var(--hi);width:34px;height:34px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
   .pbody{overflow-y:auto;padding:16px 20px calc(30px + env(safe-area-inset-bottom))}
-  .pbody h2{font:700 23px/1.22 var(--serif);margin:0 0 8px}
+  .pbody h2{font:700 25px/1.18 var(--serif);letter-spacing:-.015em;margin:0 0 8px}
   .facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px;margin:12px 0}
   .facts dt{color:var(--muted)}
   .facts dd{margin:0;font-weight:600}
@@ -339,7 +377,7 @@
 
   /* ===== Schermbreedtes ===== */
   @media (max-width:1180px){.overview{grid-template-columns:repeat(3,minmax(0,1fr))}}
-  @media (max-width:1000px){.today{grid-template-columns:1fr;gap:6px}}
+  @media (max-width:1000px){.today{grid-template-columns:1fr;gap:22px}}
   @media (max-width:1800px){.summary{display:none}}
   @media (max-width:1000px){.top{flex-wrap:wrap}.gem{order:3;margin-left:0;width:100%}.gem a{flex:1;text-align:center}}
   @media (max-width:760px){
@@ -362,8 +400,10 @@
     .coltabs small{font-weight:700;opacity:.75;margin-left:4px}
     .col{position:static;max-height:none}
     .col:not(.on){display:none}
-    .today{margin-top:16px}
-    .today h2.hello{font-size:25px}
+    .today{margin-top:14px}
+    .hero{padding:24px 20px 20px;border-radius:20px}
+    .hero::after{width:60%;opacity:.5}
+    .leadcard{padding:18px}
     .ti{padding:11px 13px}
     .acts,.acts.keep,.it:hover .acts.keep{position:static;opacity:1;background:none;border:0;box-shadow:none;align-self:flex-start;margin-left:auto}
     .acts button:not(.s){display:none!important}
@@ -1012,7 +1052,7 @@ function todayItem(x, big = false){
   return `<article class="ti${big ? ' big' : ''}${k.includes('nieuw') ? ' isnew' : ''}" data-id="${x.id}" style="--c:${col.color}">
     <span class="tic">${ic(ti.icon)}</span>
     <span class="tb"><a class="tt" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>
-      <span class="ts">${sub.join('<span aria-hidden="true">·</span>')}</span>${also(x)}
+      <span class="ts">${sub.join('')}</span>${also(x)}
       ${special.length ? `<span class="badges">${special.join('')}</span>` : ''}</span></article>`;
 }
 const plural = (n, een, meer) => `${n} ${n === 1 ? een : meer}`;
@@ -1026,7 +1066,7 @@ function renderToday(){
   const when = new Date(VISIT).toLocaleString('nl-NL',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'});
   const byTime = (a, b) => b._t - a._t;
   const sec = (title, n, body) => `<section class="tsec"><h3>${title}${n !== '' ? ` <span class="cnt">${n}</span>` : ''}</h3>${body}</section>`;
-  const moreBtn = (label, act) => `<button class="more-link" data-go="${act}">${label} →</button>`;
+  const moreBtn = (label, act) => `<button class="more-link" data-go="${act}">${label}</button>`;
 
   // 1. Dit moet je zien
   let key = since.filter(x => !media(x) && isKey(x)).sort(byTime);
@@ -1054,30 +1094,79 @@ function renderToday(){
   // 5. Agenda
   const agenda = DATA.items.filter(x => x.kind === 'vergadering' && x.doc_date >= TODAY).sort((a,b) => a.doc_date.localeCompare(b.doc_date)).slice(0, 5);
 
-  const lead = (newN || chgN)
-    ? `Sinds je vorige bezoek (${when}): <b>${plural(newN, 'nieuw stuk', 'nieuwe stukken')}</b>${chgN ? `, <b>${chgN} gewijzigd</b>` : ''}${DORP.name ? ` over ${esc(DORP.name)}` : ''}.`
-    : `Niets nieuws sinds je vorige bezoek (${when})${DORP.name ? ` over ${esc(DORP.name)}` : ''}.`;
+  // Kop: hoeveel er sinds je vorige bezoek is gebeurd.
+  const visitDay = dayNL(VISIT), vd = new Date(VISIT);
+  const sindsWanneer = visitDay === TODAY ? (hm(VISIT) < '12:00' ? 'vanochtend' : 'vanmiddag')
+    : visitDay === YESTERDAY ? 'gisteren' : diff(TODAY, visitDay) < 7 ? vd.toLocaleDateString('nl-NL', {weekday: 'long', timeZone: 'Europe/Amsterdam'}) : vd.toLocaleDateString('nl-NL', {day: 'numeric', month: 'long', timeZone: 'Europe/Amsterdam'});
+  const headline = newN ? `${plural(newN, 'nieuw stuk', 'nieuwe stukken')} sinds ${sindsWanneer}` : `Rustig sinds ${sindsWanneer}`;
+  const sinceTxt = `Je vorige bezoek was ${new Date(VISIT).toLocaleString('nl-NL',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})}.`
+    + (chgN ? ` Daarna ${chgN === 1 ? 'is 1 stuk' : `zijn ${chgN} stukken`} gewijzigd of beantwoord.` : '')
+    + (DORP.name ? ` Je kijkt alleen naar ${esc(DORP.name)}.` : '');
+  const cnt = f => since.filter(f).length;
+  const stats = [
+    ['col:raad', 'raad en college', cnt(x => COLS[1].test(x) || COLS[2].test(x))],
+    ['col:bek', 'bekendmakingen', cnt(isBek)],
+    ['col:nws', 'gemeentenieuws en Woo', cnt(COLS[3].test)],
+    ['col:med', 'in de media', cnt(media)],
+    ['f:trefwoord', 'met een trefwoord', cnt(x => x.kw_hits)],
+  ].filter(([, , n]) => n);
+  const hero = `<section class="hero" aria-label="Samenvatting">
+    <p class="hi1"><span class="live" aria-hidden="true"></span>${groet}. Dit gebeurde er in ${esc(DATA.naam)}.</p>
+    <h2>${headline}</h2>
+    <p class="since">${sinceTxt}</p>
+    ${stats.length ? `<div class="hstats">${stats.map(([go, l, n]) => `<button class="hstat" data-go="${go}"><b>${n}</b>${l}</button>`).join('')}</div>` : ''}
+  </section>`;
+
+  // Hoofdverhaal + raster met de rest van 'Dit moet je zien'.
+  const subOf = x => {
+    const parts = [];
+    if (x.published_at) parts.push((x._d === TODAY ? 'vandaag ' : nl(x._d, {weekday:'short', day:'numeric', month:'short'}) + ' ') + hm(x.published_at));
+    else if (x.first_seen) parts.push('gevonden ' + (dayNL(x.first_seen) === TODAY ? '' : nl(dayNL(x.first_seen), {weekday:'short', day:'numeric', month:'short'}) + ' ') + hm(x.first_seen));
+    if (x._plaats && !norm(x.title).includes(norm(x._plaats))) parts.push(esc(x._plaats));
+    if (x.doc_date && x._d && x.doc_date > x._d) parts.push(`<span class="when">${/vergader/.test(x.doc_date_label || '') || x.meeting_title ? 'vergadering' : esc(x.doc_date_label || 'datum')} ${nl(x.doc_date,{weekday:'short',day:'numeric',month:'short'})}</span>`);
+    return parts.map(p => `<span>${p}</span>`).join('');
+  };
+  const special = x => {
+    const out = [];
+    if (chgSince(x)) out.push(`<span class="b chg">${esc(((x.changes || []).slice(-1)[0] || {}).type || 'Gewijzigd')}</span>`);
+    if (x.antwoord_datum) out.push(`<span class="b ans">Beantwoord ${nl(x.antwoord_datum,{day:'numeric',month:'short'})}</span>`);
+    (x.kw_hits || []).forEach(w => out.push(`<span class="b kw">${esc(w)}</span>`));
+    return out.length ? `<span class="badges">${out.join('')}</span>` : '';
+  };
+  const kLabel = x => { const ti = typeInfo(x); return ti.label && ti.important ? ti.label : colOf(x).title; };
+  const leadCard = x => {
+    const ex = /^Officiele bekendmaking;/.test(x.excerpt || '') ? '' : (x.excerpt || '');
+    return `<article class="leadcard${kinds(x).includes('nieuw') ? ' isnew' : ''}" data-id="${x.id}" style="--c:${colOf(x).color}">
+      <span class="k">${ic(typeInfo(x).icon)}${esc(kLabel(x))}</span>
+      <a class="tt" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>
+      ${ex && norm(ex) !== norm(x.title) ? `<p class="ex">${esc(ex)}</p>` : ''}
+      ${special(x)}<span class="ts">${subOf(x)}</span></article>`;
+  };
+  const keyCard = x => `<article class="kcard${kinds(x).includes('nieuw') ? ' isnew' : ''}" data-id="${x.id}" style="--c:${colOf(x).color}">
+      <span class="k">${ic(typeInfo(x).icon)}${esc(kLabel(x))}</span>
+      <a class="tt" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>
+      ${special(x)}<span class="ts">${subOf(x)}</span></article>`;
+
   const main = `<div>
-    <h2 class="hello">${groet}${DATA.naam ? `, dit is ${esc(DATA.naam)}` : ''}</h2>
-    <p class="lead">${lead}</p>
     ${sec(keyTitle, key.length || '', key.length
-        ? `<div class="tcard">${key.slice(0, 8).map(x => todayItem(x, true)).join('')}${key.length > 8 ? moreBtn(`Nog ${key.length - 8} belangrijke stukken`, 'f:sinds') : ''}</div>`
+        ? leadCard(key[0]) + (key.length > 1 ? `<div class="kgrid">${key.slice(1, 7).map(keyCard).join('')}</div>` : '')
+          + (key.length > 7 ? `<button class="more-link" style="border:0;padding-left:2px" data-go="f:sinds">Nog ${key.length - 7} belangrijke stukken bekijken</button>` : '')
         : `<div class="tcard"><p class="calm">Geen raadsvragen, moties, besluitenlijsten of trefwoorden deze week.</p></div>`)}
-    ${rcn.length ? sec('Raad, college en gemeente', rcn.length, `<div class="tcard">${rcn.slice(0, 6).map(x => todayItem(x)).join('')}${rcn.length > 6 ? moreBtn(`Nog ${rcn.length - 6}`, 'f:sinds') : ''}</div>`) : ''}
-    ${bek.length ? sec('Vergunningen en meldingen', bek.length, `<div class="tcard"><div class="tline">${esc(cap(soortTxt))}.
-        <div class="pills">${Object.entries(perPlaats).sort((a, b) => (a[0] === 'Overig') - (b[0] === 'Overig') || b[1] - a[1]).map(([p, n]) => p === 'Overig' ? `<span class="pill" data-go="col:bek">Overig<b>${n}</b></span>` : `<button class="pill" data-dorp="${esc(p)}">${esc(p)}<b>${n}</b></button>`).join('')}</div></div>
-        ${moreBtn('Bekijk de bekendmakingen', 'col:bek')}</div>`) : ''}
-    <button class="gobig" data-go="col:">${ic('chev')}Alles bekijken in kolommen</button>
+    ${rcn.length ? sec('Verder bij raad, college en gemeente', rcn.length, `<div class="tcard">${rcn.slice(0, 6).map(x => todayItem(x)).join('')}${rcn.length > 6 ? moreBtn(`Nog ${rcn.length - 6} bekijken`, 'f:sinds') : ''}</div>`) : ''}
+    ${bek.length ? sec('Vergunningen en meldingen', bek.length, `<div class="tcard"><div class="tline">${esc(cap(soortTxt))}. Kies een dorp om alleen dat te zien.
+        <div class="pills">${Object.entries(perPlaats).sort((a, b) => (a[0] === 'Overig') - (b[0] === 'Overig') || b[1] - a[1]).map(([p, n]) => p === 'Overig' ? `<button class="pill" data-go="col:bek">Overig<b>${n}</b></button>` : `<button class="pill" data-dorp="${esc(p)}">${esc(p)}<b>${n}</b></button>`).join('')}</div></div>
+        ${moreBtn('Alle bekendmakingen bekijken', 'col:bek')}</div>`) : ''}
+    <button class="gobig" data-go="col:">Alles bekijken in kolommen</button>
   </div>`;
   const side = `<div>
-    ${sec('Agenda', '', agenda.length ? `<div class="tcard">${agenda.map(x => { const m = meetParts(x), d = dt(x.doc_date); return `<a class="tev" href="${esc(x.url)}" target="_blank" rel="noopener" title="${esc(x.title)}">
-        <span class="d"><small>${d.toLocaleDateString('nl-NL',{weekday:'short'})}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('nl-NL',{month:'short'})}</small></span>
-        <span><strong>${esc(m.soort)}</strong><span class="s">${m.tijd ? m.tijd + (m.rest ? ' · ' : '') : ''}${esc(m.rest)}</span></span></a>`; }).join('')}</div>`
+    ${sec('Agenda', '', agenda.length ? `<div class="tl">${agenda.map(x => { const m = meetParts(x), d = dt(x.doc_date); return `<a href="${esc(x.url)}" target="_blank" rel="noopener" title="${esc(x.title)}">
+        <span class="when2">${d.toLocaleDateString('nl-NL',{weekday:'short'})} ${d.getDate()}<small>${d.toLocaleDateString('nl-NL',{month:'short'})}${m.tijd ? ' ' + m.tijd : ''}</small></span>
+        <span><strong>${esc(m.soort)}</strong>${m.rest ? `<span class="s">${esc(m.rest)}</span>` : ''}</span></a>`; }).join('')}</div>`
       : `<div class="tcard"><p class="calm">${DATA.gemeente === 'koggenland' ? 'De Koggenlandse raad wordt niet gevolgd.' : 'Geen vergaderingen gepland.'}</p></div>`)}
-    ${sec('In de media', med.length || '', med.length ? `<div class="tcard">${med.slice(0, 5).map(x => todayItem(x)).join('')}${med.length > 5 ? moreBtn(`Nog ${med.length - 5} verhalen`, 'col:med') : ''}</div>`
+    ${sec('In de media', med.length || '', med.length ? `<div class="tcard">${med.slice(0, 5).map(x => todayItem(x)).join('')}${med.length > 5 ? moreBtn(`Nog ${med.length - 5} verhalen bekijken`, 'col:med') : ''}</div>`
       : `<div class="tcard"><p class="calm">Geen nieuwe artikelen sinds je vorige bezoek.</p></div>`)}
   </div>`;
-  $('today').innerHTML = main + side;
+  $('today').innerHTML = hero + main + side;
 }
 
 // ---------------------------------------------------------------------------
@@ -1412,7 +1501,7 @@ $('today').addEventListener('click', e => {
     return;
   }
   if (e.target.closest('.also a')) return;
-  const it = e.target.closest('.ti[data-id]');
+  const it = e.target.closest('.ti[data-id], .leadcard[data-id], .kcard[data-id]');
   if (it && !(e.metaKey || e.ctrlKey || e.shiftKey)) { e.preventDefault(); openPanel(it.dataset.id); }
 });
 $('colpop').addEventListener('change', e => {
