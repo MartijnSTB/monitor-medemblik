@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Gemeentemonitor</title>
 <meta name="description" content="Wat de gemeenten Medemblik, Koggenland en Opmeer publiceren, besluiten en wijzigen">
-<meta name="theme-color" content="#1b4e8e">
+<meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -15,7 +15,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
   // Thema vóór het tekenen zetten (geen witte flits in donkere modus).
   try { const t = localStorage.getItem('gm-theme'); if (t === 'licht' || t === 'donker') document.documentElement.dataset.theme = t === 'donker' ? 'dark' : 'light'; } catch (e) {}
@@ -31,6 +31,7 @@
     --green:#2e9a5a; --greenbg:#e2f2e7; --greenink:#165c35; --red:#a52d2d; --redbg:#f8e0e0; --amberbg:#fff6ea; --amberink:#8a4c00;
     --shadow:0 1px 2px rgba(16,32,48,.06),0 2px 8px rgba(16,32,48,.04);
     --serif:'Bricolage Grotesque','Figtree',system-ui,sans-serif; --sans:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --brand:'Cinzel',Georgia,serif;
     color-scheme:light;
   }
   @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
@@ -56,21 +57,27 @@
   svg.i{width:18px;height:18px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 
   /* ===== Kop: Rodi-blauwe band ===== */
-  .band{background:linear-gradient(180deg,#1b4e8e,#174580);color:#fff;padding-top:env(safe-area-inset-top)}
+  /* Kop in Rodi-stijl: wit, het logo, de naam in een klassieke kapitaal en 'MEDIA'-oranje */
+  .band{position:relative;background:var(--card);color:var(--ink);padding-top:env(safe-area-inset-top)}
+  .band::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#f18700,#f18700 30%,#5498cf 62%,#006dac)}
+  .logo{height:54px;width:auto;display:block}
+  .logo.dark{display:none}
+  :root[data-theme="dark"] .logo.light{display:none} :root[data-theme="dark"] .logo.dark{display:block}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo.light{display:none} :root:not([data-theme="light"]) .logo.dark{display:block}}
+  .sep{width:1px;align-self:stretch;margin:4px 4px;background:var(--line)}
   .top{display:flex;align-items:center;gap:18px;padding-top:14px;padding-bottom:14px}
   .brand{display:flex;align-items:center;gap:14px;min-width:0}
-  .dots{display:grid;grid-template-columns:repeat(4,8px);gap:4px;flex:0 0 auto}
-  .dots i{width:8px;height:8px;border-radius:50%;display:block}
-  .brand .eyebrow{font:600 13px/1 var(--sans);color:#bcd6ef}
-  .brand h1{font:800 30px/1.05 var(--serif);margin:3px 0 0;letter-spacing:-.02em;white-space:nowrap}
-  .fresh{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--sans);letter-spacing:0;text-transform:none;color:#d7e7f6;margin-left:8px;white-space:nowrap}
+  .brand h1{font:700 27px/1 var(--brand);margin:0;letter-spacing:.02em;white-space:nowrap;color:var(--ink)}
+  /* Zoals 'MEDIA' onder 'RODI' in het logo */
+  .brand .eyebrow{font:600 12px/1 var(--sans);color:#f18700;letter-spacing:.42em;text-transform:uppercase;margin-top:6px;display:flex;align-items:center}
+  .fresh{display:inline-flex;align-items:center;gap:6px;font:600 12.5px var(--sans);letter-spacing:0;text-transform:none;color:var(--muted);margin-left:6px;white-space:nowrap}
   .fresh::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--f,#4cc47f);box-shadow:0 0 0 3px color-mix(in srgb,var(--f,#4cc47f) 30%,transparent)}
-  .gem{display:flex;gap:4px;margin-left:auto;background:rgba(255,255,255,.1);border-radius:999px;padding:4px}
-  .gem a{text-decoration:none;padding:7px 16px;border-radius:999px;font-weight:600;color:#e3eef8;white-space:nowrap}
-  .gem a:hover{background:rgba(255,255,255,.12)}
-  .gem a.active{background:#fff;color:#1b4e8e}
-  .iconbtn{border:0;background:rgba(255,255,255,.1);color:#fff;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;cursor:pointer;flex:0 0 auto}
-  .iconbtn:hover{background:rgba(255,255,255,.2)}
+  .gem{display:flex;gap:4px;margin-left:auto;background:var(--ice);border-radius:999px;padding:4px}
+  .gem a{text-decoration:none;padding:7px 16px;border-radius:999px;font-weight:600;color:var(--link);white-space:nowrap}
+  .gem a:hover{background:color-mix(in srgb,var(--card) 60%,transparent)}
+  .gem a.active{background:#006dac;color:#fff}
+  .iconbtn{border:1px solid var(--line);background:var(--card);color:var(--muted);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;cursor:pointer;flex:0 0 auto}
+  .iconbtn:hover{color:var(--link);border-color:var(--sky)}
 
   /* ===== Werkbalk (blijft bovenaan staan) ===== */
   .toolbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -106,11 +113,9 @@
   .today{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px 28px;max-width:1200px;margin:22px auto 40px}
   /* De kop van Vandaag: Rodi-blauw met het stippenpatroon uit het logo */
   .hero{grid-column:1 / -1;position:relative;overflow:hidden;border-radius:24px;background:#1b4e8e;color:#fff;padding:34px 38px 30px;isolation:isolate}
-  .hero::after{content:'';position:absolute;right:-20px;top:-20px;width:46%;height:140%;z-index:-1;opacity:.9;
-    background:radial-gradient(circle,#f18700 0 5px,transparent 6px) 0 0/34px 34px,radial-gradient(circle,#5498cf 0 5px,transparent 6px) 17px 17px/34px 34px;
-    -webkit-mask:linear-gradient(100deg,transparent 8%,#000 70%);mask:linear-gradient(100deg,transparent 8%,#000 70%)}
+  .hero::after{content:'';position:absolute;right:-70px;top:50%;width:440px;height:440px;transform:translateY(-50%);z-index:-1;opacity:.95;background:url(spiraal.svg) center/contain no-repeat}
   .hero .hi1{font:600 16px var(--sans);color:#cfe2f4;margin:0}
-  .hero h2{font:800 clamp(30px,4.2vw,52px)/1.02 var(--serif);letter-spacing:-.03em;margin:8px 0 0;max-width:16ch}
+  .hero h2{font:700 clamp(28px,3.8vw,48px)/1.08 var(--brand);letter-spacing:.005em;margin:10px 0 0;max-width:18ch}
   .hero h2 .num{color:#f9b25a}
   .hero .since{font-size:15px;color:#cfe2f4;margin:12px 0 0}
   .hstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
@@ -385,7 +390,9 @@
     .wrap{padding:0 14px}
     .top{gap:12px;padding-top:12px;padding-bottom:12px}
     .brand{flex:1}
-    .brand h1{font-size:24px}
+    .brand h1{font-size:21px}
+    .logo{height:34px}
+    .brand .eyebrow{letter-spacing:.3em;font-size:11px}
     .tools{flex-wrap:wrap;gap:8px;padding-top:8px;padding-bottom:8px}
     .search{flex:1 1 100%;max-width:none}
     .chips{flex:1 1 100%}
@@ -403,7 +410,7 @@
     .col:not(.on){display:none}
     .today{margin-top:14px}
     .hero{padding:24px 20px 20px;border-radius:20px}
-    .hero::after{width:60%;opacity:.5}
+    .hero::after{width:300px;height:300px;right:-120px;opacity:.45}
     .leadcard{padding:18px}
     .ti{padding:11px 13px}
     .acts,.acts.keep,.it:hover .acts.keep{position:static;opacity:1;background:none;border:0;box-shadow:none;align-self:flex-start;margin-left:auto}
@@ -416,13 +423,12 @@
 <header class="band">
   <div class="wrap top">
     <div class="brand">
-      <div class="dots" aria-hidden="true">
-        <i style="background:#f18700"></i><i style="background:#f18700;opacity:.75"></i><i style="background:#5498cf"></i><i style="background:#8cc2ea"></i>
-        <i style="background:#f18700;opacity:.5"></i><i style="background:#5498cf"></i><i style="background:#8cc2ea"></i><i style="background:#fff"></i>
-      </div>
+      <img class="logo light" src="rodi-logo.png" alt="Rodi Media" width="150" height="51">
+      <img class="logo dark" src="rodi-logo-dark.png" alt="Rodi Media" width="150" height="51">
+      <span class="sep" aria-hidden="true"></span>
       <div>
-        <div class="eyebrow">Gemeentemonitor<span class="fresh" id="fresh" hidden></span></div>
         <h1 id="title">Laden…</h1>
+        <div class="eyebrow">Gemeentemonitor<span class="fresh" id="fresh" hidden></span></div>
       </div>
     </div>
     <nav class="gem" id="tabs" aria-label="Gemeente">
@@ -655,9 +661,10 @@ function typeInfo(x){
     else { icon = 'doc'; tc = '#1b4e8e'; }
     routine = !important;
   } else if (x.source === 'Raadsstukken' || x.source === 'Raadsportaal') {
-    if (/amendement/i.test(t) || /^amendementen$/i.test(r)) { label = 'Amendement'; icon = 'motie'; important = true; }
-    else if (/motie/i.test(t) || /motie/i.test(r)) { label = 'Motie'; icon = 'motie'; important = true; }
-    else if (/vragen/i.test(r)) { label = r; icon = 'vraag'; important = true; }
+    // Eerst het overzicht waar het in staat: 'Raadsvragen over amendement 39' is een raadsvraag.
+    if (/vragen/i.test(r)) { label = r; icon = 'vraag'; important = true; }
+    else if (/^amendement/i.test(t) || /^amendementen$/i.test(r)) { label = 'Amendement'; icon = 'motie'; important = true; }
+    else if (/motie/i.test(t) || /motie/i.test(r)) { label = /amendement/i.test(t) ? 'Amendement' : 'Motie'; icon = 'motie'; important = true; }
     else if (/raadsvoorstel/i.test(t)) { label = 'Raadsvoorstel'; icon = 'raad'; important = true; }
     else if (/informatienota/i.test(r)) { label = 'Informatienota'; icon = 'doc'; important = true; }
     else if (/raadsinformatiebrie/i.test(r)) { label = 'Raadsinformatiebrief'; icon = 'doc'; important = true; }
@@ -1458,7 +1465,7 @@ function applyTheme(){
   if (THEME === 'auto') delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = THEME === 'donker' ? 'dark' : 'light';
   const dark = THEME === 'donker' || (THEME === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
-  document.querySelector('meta[name=theme-color]').content = dark ? '#0e151c' : '#1b4e8e';
+  document.querySelector('meta[name=theme-color]').content = dark ? '#151f29' : '#ffffff';
   $('theme').innerHTML = ic(THEME === 'auto' ? 'auto' : THEME === 'donker' ? 'maan' : 'zon');
   $('theme').title = `Thema: ${THEME === 'auto' ? 'automatisch (volgt je apparaat)' : THEME}. Klik om te wisselen.`;
 }
