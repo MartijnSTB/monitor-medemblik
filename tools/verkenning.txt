@@ -1,40 +1,22 @@
-== https://repository.overheid.nl/sru 200 application/xml 5387 https://repository.overheid.nl/sru?query=c.product-area%3D%3Dofficielepublicaties+AND+dt.creator%3D%3D%22Dijk+en+Waard%22+AND+dt.modified%3E%3D2026-09-01&maximumRecords=1
-['266']
-== https://dijkenwaard.bestuurlijkeinformatie.nl/ 200 text/html; charset=utf-8 55505 
- 
-  title: Dashboard DijkenWaard - iBabs Publieksportaal
-  rss links: []
-  agendatypes: []
-  hrefs: []
-== https://dijkenwaard.raadsinformatie.nl/ 403 text/html; charset=UTF-8 5431 
-== https://dijkenwaard.notubiz.nl/ 403 text/html; charset=UTF-8 5482 
-== https://raad.dijkenwaard.nl/ ERR HTTPSConnectionPool(host='raad.dijkenwaard.nl', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='raad.dijkenwaard.nl', port=443): Failed to resolve 'raad.dijkenwaard.nl' ([Errno -2] Name or service not known)"))
-== https://gemeenteraad.dijkenwaard.nl/ ERR HTTPSConnectionPool(host='gemeenteraad.dijkenwaard.nl', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='gemeenteraad.dijkenwaard.nl', port=443): Failed to resolve 'gemeenteraad.dijkenwaard.nl' ([Errno -2] Name or service not known)"))
-== https://www.dijkenwaard.nl/ 200 text/html; charset=utf-8 134867 
- 
-  title: Home | Gemeente Dijk en Waard
-  rss links: []
-  agendatypes: []
-  hrefs: ['/actueel/nieuws', '/actueel/nieuws/paarse-vrijdag-ontbijt-dijk-en-waard', '/actueel/nieuws/route-380-kv-hoogspanningsnet-bekendgemaakt', '/actueel/nieuws/van-gebiedsagenda-naar-actie-samen-werken-aan-de-wijk', '/actueel/nieuws/voorkom-een-explosie-in-jouw-wijk', '/bestuur-en-organisatie/algemene-plaatselijke-verordening', '/bestuur-en-organisatie/bekendmakingen', '/bestuur-en-organisatie/college-van-burgemeester-en-wethouders', '/bestuur-en-organisatie/gemeentelijke-organisatie', '/bestuur-en-organisatie/gemeenteraad', '/bestuur-en-organisatie/wet-en-regelgeving']
-== https://www.dijkenwaard.nl/nieuws 200 text/html; charset=utf-8 38541 https://www.dijkenwaard.nl/actueel
- 
-  title: laatste nieuws en bekendmakingen | Gemeente Dijk en Waard
-  rss links: []
-  agendatypes: []
-  hrefs: ['/actueel/gemeentenieuws-dijk-en-waard', '/actueel/nieuws', '/bestuur-en-organisatie/bekendmakingen', '/bestuur-en-organisatie/ter-inzage-liggende-stukken']
-== https://www.dijkenwaard.nl/nieuws/feed 404 text/html; charset=utf-8 33790 
-== https://www.dijkenwaard.nl/rss 404 text/html; charset=utf-8 33770 
-== https://www.dijkenwaard.nl/actueel 200 text/html; charset=utf-8 38576 
- 
-  title: laatste nieuws en bekendmakingen | Gemeente Dijk en Waard
-  rss links: []
-  agendatypes: []
-  hrefs: ['/actueel/gemeentenieuws-dijk-en-waard', '/actueel/nieuws', '/bestuur-en-organisatie/bekendmakingen', '/bestuur-en-organisatie/ter-inzage-liggende-stukken']
-== https://api.openraadsinformatie.nl/v1/elastic/_cat/indices?format=json 200 application/json; charset=UTF-8 71872 
-['ori_moerdijk_20250526025902', 'ori_hoeksche_waard_20250420212403', 'ori_dijk_en_waard_20250428194303', 'ori_krimpenerwaard_20250513064618', 'ori_lingewaard_20250523175906', 'ori_albrandswaard_20250316142303', 'ori_nissewaard_20250428014405']
-ORI ori_dijk_en_waard_* 200 [{"@type": "MediaObject", "name": "Bijlage ter informatie - Participatie buurt informatie en participatie nieuwbouw OSSA"}, {"@type": "MediaObject", "name": "Reactienota bestemmingsplan Westdijk 12 - 14 in Heerhugowaard"}, {"@type": "AgendaItem", "name": "Raadsvoorstel ontwerpverklaring geen bedenking omgevingsvergunning 34 app Rembrandt Erf"}]
-ORI ori_dijkenwaard_* 200 []
-ORI ori_heerhugowaard_* 200 []
-ORI osi_dijk_en_waard_* 200 []
-== https://api.pdok.nl/bzk/locatieserver/search/v3_1/free 200 application/json;charset=utf-8 448 https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=gemeentenaam%3A%22Dijk+en+Waard%22&fq=type%3Awoonplaats&rows=50&fl=woonplaatsnaam
-['Broek op Langedijk', 'Heerhugowaard', 'Koedijk', 'Noord-Scharwoude', 'Oudkarspel', 'Sint Pancras', 'Zuid-Scharwoude']
+calendar 200
+types: []
+home links: ['/Agenda/Index', '/Base/SiteCss', '/Calendar', '/Contact', '/Content/Fonts', '/Help', '/Images/icons', '/People', '/People/Profiles', '/Reports', '/Reports/Details', '/Reports/Item', '/assets']
+home agendatypes: ['\n                        ']
+reports 200 [('0e5b57b3-625a-4283-ae06-c4b8ef53f19d', '  '), ('0e5b57b3-625a-4283-ae06-c4b8ef53f19d', 'Overige acties raad'), ('0e5b57b3-625a-4283-ae06-c4b8ef53f19d', 'Overige acties raad\n                                '), ('2b658460-f33f-4acf-9432-e180218d33bc', '  '), ('2b658460-f33f-4acf-9432-e180218d33bc', 'Informatie van de Rekenkamer'), ('2b658460-f33f-4acf-9432-e180218d33bc', 'Informatie van de Rekenkamer\n                                '), ('4dbef5e9-ba54-40b3-884b-cc35657b0c45', '  '), ('4dbef5e9-ba54-40b3-884b-cc35657b0c45', 'Amendementen'), ('4dbef5e9-ba54-40b3-884b-cc35657b0c45', 'Amendementen\n                                '), ('52ce7df5-4cce-44ff-a707-0f47ae263d90', '  '), ('52ce7df5-4cce-44ff-a707-0f47ae263d90', 'Moties'), ('52ce7df5-4cce-44ff-a707-0f47ae263d90', 'Moties\n                                '), ('5427dbc9-78b0-41ba-99e3-daa29534ae03', '  '), ('5427dbc9-78b0-41ba-99e3-daa29534ae03', 'Regels en afspraken'), ('5427dbc9-78b0-41ba-99e3-daa29534ae03', 'Regels en afspraken\n                                '), ('59c7bb5e-9e15-4cf8-84dc-e27647551fee', '  '), ('59c7bb5e-9e15-4cf8-84dc-e27647551fee', 'Besluitenlijsten B&amp;W'), ('59c7bb5e-9e15-4cf8-84dc-e27647551fee', 'Besluitenlijsten B&amp;W\n                                '), ('afaf2ef3-c05b-430a-841b-6ed459396ebd', '  '), ('afaf2ef3-c05b-430a-841b-6ed459396ebd', 'Gemeenschappelijke regelingen'), ('afaf2ef3-c05b-430a-841b-6ed459396ebd', 'Gemeenschappelijke regelingen\n                                '), ('bece2ec3-147e-483e-83c8-070a73bf599c', '  '), ('bece2ec3-147e-483e-83c8-070a73bf599c', 'Raadsvragen'), ('bece2ec3-147e-483e-83c8-070a73bf599c', 'Raadsvragen\n                                '), ('d5cda57c-9f77-4fec-9cc5-c6bef5bdf990', '  '), ('d5cda57c-9f77-4fec-9cc5-c6bef5bdf990', 'Collegeberichten'), ('d5cda57c-9f77-4fec-9cc5-c6bef5bdf990', 'Collegeberichten\n                                '), ('db367d27-806b-4b5e-9083-73cc4211e3c9', '  '), ('db367d27-806b-4b5e-9083-73cc4211e3c9', 'Toezeggingen'), ('db367d27-806b-4b5e-9083-73cc4211e3c9', 'Toezeggingen\n                                '), ('e617153d-96aa-4a27-963f-8f0e4b58dc8d', '  '), ('e617153d-96aa-4a27-963f-8f0e4b58dc8d', 'Informatie van derden'), ('e617153d-96aa-4a27-963f-8f0e4b58dc8d', 'Informatie van derden\n                                ')]
+ids in calendar: ['100000126', '100000127', '100000776', '100000777', '100000778', '100000785', '100001943', '100001952', '100004133', '100004169', '100004173']
+100000126 Expecting value: line 2 column 5 (char 5)
+100000127 Expecting value: line 2 column 5 (char 5)
+100000776 Expecting value: line 2 column 5 (char 5)
+100000777 Expecting value: line 2 column 5 (char 5)
+100000778 Expecting value: line 2 column 5 (char 5)
+100000785 Expecting value: line 2 column 1 (char 1)
+100001943 Expecting value: line 2 column 5 (char 5)
+100001952 Expecting value: line 2 column 1 (char 1)
+100004133 Expecting value: line 2 column 1 (char 1)
+100004169 Expecting value: line 2 column 1 (char 1)
+100004173 Expecting value: line 2 column 5 (char 5)
+ORI date_modified [{"@type": "MediaObject", "name": "Bijlage ter informatie - Participatie buurt informatie en participatie nieuwbouw OSSA"}, {"@type": "MediaObject", "name": "Reactienota bestemmingsplan Westdijk 12 - 14 in Heerhugowaard"}, {"@type": "AgendaItem", "name": "Raadsvoorstel ontwerpverklaring geen bedenking omgevingsvergunning 34 app Rembrandt Erf"}]
+ORI last_discussed_at [{"@type": "MediaObject", "name": "Motie Koeltekaart Dijk en Waard, Verkoeling dichtbij voor kwetsbare inwoners", "last_discussed_at": "2027-06-30T00:00:00+02:00"}, {"@type": "MediaObject", "name": "Motie Preventie van Jeugdgeweld en versterking van Ouderbetrokkenheid", "last_discussed_at": "2027-03-31T00:00:00+02:00"}, {"@type": "MediaObject", "name": "Motie Een goede studieplek voor iedereen", "
+ORI start_date [{"@type": "Report", "name": "Motie Koeltekaart Dijk en Waard, Verkoeling dichtbij voor kwetsbare inwoners", "start_date": "2027-06-30T00:00:00+02:00"}, {"@type": "Report", "name": "Motie Preventie van Jeugdgeweld en versterking van Ouderbetrokkenheid", "start_date": "2027-03-31T00:00:00+02:00"}, {"@type": "Report", "name": "Motie Een goede studieplek voor iedereen", "start_date": "2027-03-31T00:0
+news snippet:  <!--TYPO3SEARCH_end--> </div> </div> </div> <div class="list flow flow--outside section section--enclosed " data-maximum-columns="3"> <div class="list__container flow flow--frame"> <div class="list__column-1" id="list__result-2570"> <ul class="cards" data-maximum-columns="3" data-amount="12"> <li class="card "> <a href="/actueel/nieuws/paarse-vrijdag-ontbijt-dijk-en-waard" class="card__link" > <picture class="card__visual"> <source srcset="/fileadmin/_processed_/3/5/csm_Gemeente_Dijk_en_Waard_-_ontbijt_5-10-2026_-_Mite_Visuals-13_835f790a32.jpg" media="(min-width: 480px) and (max-width: 767px)"> <source srcset="/fileadmin/_processed_/3/5/csm_Gemeente_Dijk_en_Waard_-_ontbijt_5-10-2026_-_Mite_Visuals-13_c7e22a72ea.jpg" media="(min-width: 768px) and (max-width: 991px)"> <source srcset="/fileadmin/_processed_/3/5/csm_Gemeente_Dijk_en_Waard_-_ontbijt_5-10-2026_-_Mite_Visuals-13_9274a8a708.jpg" media="(min-width: 992px)"> <img src="/fileadmin/_processed_/3/5/csm_Gemeente_Dijk_en_Waard_-_ontbijt_5-10-2026_-_Mite_Visuals-13_66f98b13b7.jpg" class="card__image" alt="" > </picture> <div class="card__body"> <h2 class="card__title header" > Iedereen verdient een veilige plek in Dijk en Waard </h2> <div class="card__metadata"> <time class="card__date card__metadata__item" datetime="2026-10-17"> <span class="card__icon"> <svg viewBox="0 
+feeds: []
