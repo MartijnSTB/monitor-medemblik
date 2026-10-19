@@ -1,13 +1,100 @@
-== tegels ==
-200 image/png 18078 https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/grijs/EPSG:3857/12/2105/1335.png
-200 image/png 20921 https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/pastel/EPSG:3857/12/2105/1335.png
-200 image/png 23126 https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/12/2105/1335.png
-== grenzen ==
-200 application/json 11261 https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/collections?f=json
-['gemeentegebied', 'provinciegebied', 'landgebied']
-200 application/geo+json 83722 https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/collections/gemeentegebied/items
-Medemblik 1 [{'code': '0420', 'identificatie': 'GM0420', 'ligt_in_provincie_code': '27', 'ligt_in_provincie_naam': 'Noord-Holland', 'naam': 'Medemblik'}] MultiPolygon 87080
-200 application/geo+json 100855 https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/collections/gemeentegebied/items
-Koggenland 1 [{'code': '1598', 'identificatie': 'GM1598', 'ligt_in_provincie_code': '27', 'ligt_in_provincie_naam': 'Noord-Holland', 'naam': 'Koggenland'}] MultiPolygon 105107
-200 application/geo+json 76788 https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/collections/gemeentegebied/items
-Opmeer 1 [{'code': '0432', 'identificatie': 'GM0432', 'ligt_in_provincie_code': '27', 'ligt_in_provincie_naam': 'Noord-Holland', 'naam': 'Opmeer'}] MultiPolygon 79796
+
+=== medemblik Moties en amendementen: total 402, got 100
+{'DT_RowId': '3132871b-2a4c-43e6-ba31-c9e823bb251b', 'identity': '409', 'registrationdate': 'Gemeenteraad 24-09-2026 B.4. Ruimtelijk voorstel (GEHEIM)', 'title': 'AMENDEMENT 10 van 2026', 'standvanzaken': '', 'portefeuillehouder': '', 'completed': 'Ja', 'datumafdoening': 'None', 'status': 'Aangenomen', 'type': 'Amendement', 'hoofdindiener': 'Beerepoot, T. (Tom) (VVD)', 'medeindiener': ''}
+{'DT_RowId': '9fdf2b7e-6b74-4932-87f3-5ed1e9313172', 'identity': '408', 'registrationdate': 'Gemeenteraad 24-09-2026 B.4. Ruimtelijk voorstel (GEHEIM)', 'title': 'AMENDEMENT 9 van 2026', 'standvanzaken': '', 'portefeuillehouder': '', 'completed': 'Ja', 'datumafdoening': 'None', 'status': 'Aangenomen', 'type': 'Amendement', 'hoofdindiener': 'Paarlberg, R.A. (Roelandt) (GB)', 'medeindiener': ''}
+{'DT_RowId': '12c3f648-d625-449e-b829-cf8667f07e21', 'identity': '407', 'registrationdate': 'Gemeenteraad 24-09-2026 D.1. Moties Vreemd aan de orde van de dag', 'title': 'Motie 36 van 2026 CDA Indienen zienswijze ontwerp-Waterschapsverordening HHNK inzake het lozingsverbod', 'standvanzaken': '', 'portefeuillehouder': 'I. Mantel', 'completed': 'Ja', 'datumafdoening': 'None', 'status': 'Ingetrokken', 'type': 'Motie Vreemd aan de Orde ', 'hoofdindiener': 'Bosch, E. van den (Els) (CDA)', 'medeindiener': ''}
+{'DT_RowId': '469c9fcb-cf00-4338-93d8-9141997f2ffc', 'identity': '405', 'registrationdate': 'Gemeenteraad 24-09-2026 C.1. Intrekken voorkeursrecht op percelen nabij Tuinstraat in Hauwert (pfh. M. Hoogewerf)', 'title': 'Amendement 8 van 2026 MORGEN! Geen voorkeursrecht voor Tiny Houses', 'standvanzaken': '', 'portefeuillehouder': 'M. Hoogewerf', 'completed': 'Ja', 'datumafdoening': 'None', 'status': 'Aangenomen', 'type': 'Amendement', 'hoofdindiener': 'Kuipers, T.G.M. (Dirk) (Morgen!)', 'medeindiener': 'Venema, D. (Dieter) (HvM)\nBeerepoot, T. (Tom) (VVD)\nMosch, P.W. (Piet) (GB)\nBosch, E. van den (Els) (CDA)'}
+   completed [('Ja', 71), ('Nee', 29)]
+   status [('Aangenomen', 51), ('Ingetrokken', 28), ('Verworpen', 18), ('Niet-ingediend', 3)]
+   type [('Motie behorend bij agendapunt', 40), ('Motie Vreemd aan de Orde ', 33), ('Amendement', 25), ('', 1), ('Subamendement', 1)]
+   hoofdindiener [('Berlijn, T. (Tjeu) (HvM)', 15), ('Beerepoot, T. (Tom) (VVD)', 13), ('Venema, D. (Dieter) (HvM)', 9), ('Meester, A. (Andre) (VVD)', 8), ('Bosch, E. van den (Els) (CDA)', 6), ('Paarlberg, R.A. (Roelandt) (GB)', 5), ('Neefjes, C. (Cees) (Morgen!)', 5), ('Hoogewerf, M. (Mark) (HvM)', 4), ('Heestermans, S. (Sjors) (VVD)', 4), ('Zeilemaker, S. (Siem) (Morgen!)', 3), ('Dekker, D.P.J. (Desmin) (VVD)', 3), ('Kuipers, T.G.M. (Dirk) (Morgen!)', 2)]
+   medeindiener [('', 50), ('Hoogewerf, M. (Mark) (HvM)', 4), ('Paarlberg, R.A. (Roelandt) (GB)', 3), ('Visser-van Eijk, S. (Silva) (CU)', 3), ('van Eekelen, L.A. (Linda) (HvM)', 2), ('Molenaar, E. (Eva) (FVD)', 2), ('Visser, S. (Silva) (CU)', 2), ('Vlaar, C.J. (Co) (D66)', 2), ('Venema, D. (Dieter) (HvM)\nBeerepoot, T. (Tom) (VVD)\nMosch, P', 1), ('Kuipers, T.G.M. (Dirk) (Morgen!)\nBerlijn, T. (Tjeu) (HvM)\nPa', 1), ('Paarlberg, R.A. (Roelandt) (GB)\nMeendering, T. (Thom) (HvM)', 1), ('Mosch, P.W. (Piet) (GB)\nBeerepoot, T. (Tom) (VVD)', 1)]
+  oudste/nieuwste ['296'] ['409']
+
+=== medemblik Raadsvragen: total 1408, got 100
+{'DT_RowId': '07119512-315e-4bb3-b288-cc6e3face600', 'datum': '19-10-2026', 'title': 'Raadsvragen CDA en VVD over de uitvoering van amendement 39 inzake woningbouwplan De Tegel', 'datumantwoord': 'None', 'toelichting': '', 'poho': ''}
+{'DT_RowId': '9619d270-50d0-41d3-995e-f02ed335635e', 'datum': '16-10-2026', 'title': 'Raadsvragen GemeenteBelangen Arbeidsmigranten locatie Benningbroek', 'datumantwoord': 'None', 'toelichting': '', 'poho': ''}
+{'DT_RowId': '78aba77b-4fb2-4210-b19b-f3034d2a5bc7', 'datum': '15-10-2026', 'title': 'Raadsvragen Hart voor Medemblik over vervuilde sloot na de brand in het drugslab in Lambertschaag', 'datumantwoord': 'None', 'toelichting': '', 'poho': 'M. Pijl'}
+{'DT_RowId': 'd323c7d5-eb7d-4b4c-92c9-52adae0cf493', 'datum': '14-10-2026', 'title': 'Raadsvragen Hart voor Medemblik Starters gelukkig bij hun ouders? Hart voor Medemblik wil weten hoe het zit in onze dorpen en stad?', 'datumantwoord': 'None', 'toelichting': '', 'poho': 'M. Hoogewerf'}
+   poho [('None', 33), ('I. Mantel', 18), ('M. Pijl', 12), ('', 8), ('H. Nederpelt', 8), ('G. Gringhuis', 7), ('M. Hoogewerf', 5), ('J. Broeders', 5), ('B. de Wit', 2), ('Y. Nijsingh', 2)]
+  oudste/nieuwste ['01-06-2026'] ['31-08-2026']
+
+=== medemblik Toezeggingen: total 332, got 100
+{'DT_RowId': '07e315fb-983e-44c5-a7e0-09a099e5597c', 'identity': '363', 'registrationdate': 'Gemeenteraad 02-07-2026 D.1. Moties Vreemd aan de orde van de dag', 'title': 'Vuilstortplaats Westwoud', 'completed': 'Nee', 'omschrijving': 'I. Mantel zegt toe de zorgen zoals benoemd in motie 33 Risico’s omgeving oude vuilstortplaats Westwoud minimaliseren, mee te nemen naar de e', 'portefeuillehouder': 'I. Mantel', 'standvanzaken': '28-9-2026\nIn tegenstelling tot eerdere verwachtingen vind het eerstvolgende AB, met hierin de benoeming van het nieuwe DB, pas in november p'}
+{'DT_RowId': '8c69882b-0eb3-4ee3-b183-6f55d2f5bd2e', 'identity': '361', 'registrationdate': 'Raadscommissie 08-06-2026 4.1. Voorjaarsnota 2026', 'title': 'Inschatting over reserve 3 grote projecten ', 'completed': 'Ja', 'omschrijving': 'G. Gringhuis zegt toe dat vóór de raadsvergadering waarin de voorjaarsnota wordt behandeld een zo gedetailleerd mogelijke inschatting over d', 'portefeuillehouder': 'G. Gringhuis', 'standvanzaken': 'Afgedaan via commissievraag VVD\n\nBeantwoording:\nWat is er beschikbaar?\nDe stand van de reserve 3 grote projecten is momenteel  13.1 miljoen '}
+{'DT_RowId': '9159a231-4bf1-4efa-80f7-2137808180b7', 'identity': '360', 'registrationdate': 'Raadscommissie 01-06-2026 1. Opening', 'title': 'Zorgpunt actualisatie risico inventarisatie inbrengen bij AB OD NHN', 'completed': 'Nee', 'omschrijving': 'J. Broeders zegt toe dat het zorgpunt over de actualisatie van de risico inventarisatie zal worden ingebracht bij het volgende AB (GR OD NHN', 'portefeuillehouder': 'M. Hoogewerf', 'standvanzaken': ''}
+{'DT_RowId': '50686dbd-265e-4ea5-b926-bff3c99122a5', 'identity': '359', 'registrationdate': 'Raadscommissie 01-06-2026 5.1. Begrotingen 2027 en jaarrekeningen 2025 gemeenschappelijke regelingen en Voorjaarsnota 2026 DeSom', 'title': 'Terugkoppeling keuzes provinciale taakstelling 2027/2028 OD NHN', 'completed': 'Nee', 'omschrijving': 'J. Broeders zegt toe dat er een terugkoppeling zal worden gegeven zodra er meer bekend is over de keuzes die de gemeente overweegt om de pro', 'portefeuillehouder': 'M. Hoogewerf', 'standvanzaken': ''}
+   completed [('Ja', 80), ('Nee', 20)]
+  oudste/nieuwste ['248'] ['50']
+
+=== opmeer Moties: total 79, got 79
+{'DT_RowId': '43832666-b970-4217-8701-18cc435ed796', 'registrationdate': 'Besluitvormende raadsvergadering 17-09-2026 12. Motie vreemd VVD GB LPO KERN8 over stikstofbrief kabinet', 'title': 'Stikstofbrief kabinet', 'portefeuillehouder': 'Wethouder Buis', 'status': 'Aangenomen', 'raadsleden': 'VVD\nGemeentebelangen\nLokale Partij Opmeer\nKERN8', 'afgedaan': 'Nee'}
+{'DT_RowId': '79be55b4-1ca3-4fb3-bd38-89f84578a3cc', 'registrationdate': 'Besluitvormende raadsvergadering 17-09-2026 9. Stedenbouwkundig kader Hoogwoud-Oost', 'title': 'Aanjagen woningbouw kleine kernen', 'portefeuillehouder': '', 'status': 'Aangenomen', 'raadsleden': 'Gemeentebelangen', 'afgedaan': 'Nee'}
+{'DT_RowId': '2fd4ec0d-d981-46fb-916b-d5e5b10dc5be', 'registrationdate': 'Besluitvormende raadsvergadering 17-09-2026 9. Stedenbouwkundig kader Hoogwoud-Oost', 'title': 'Participatie verkeersonderzoek Hoogwoud-Oost', 'portefeuillehouder': 'Wethouder Ter Veen', 'status': 'Aangenomen', 'raadsleden': 'KERN8\nGemeentebelangen', 'afgedaan': 'Nee'}
+{'DT_RowId': '02b48841-bad0-4e33-aa50-fd85ca6692cd', 'registrationdate': 'Besluitvormende raadsvergadering 17-09-2026 9. Stedenbouwkundig kader Hoogwoud-Oost', 'title': 'Gefaseerde besluitvorming Wonen fase II ', 'portefeuillehouder': 'Wethouder Ter Veen', 'status': 'Ingetrokken', 'raadsleden': 'KERN8\nGemeentebelangen', 'afgedaan': 'Nee'}
+   status [('Aangenomen', 43), ('Ingetrokken', 19), ('Verworpen', 12), ('Aangehouden', 5)]
+   raadsleden [('Lokale Partij Opmeer', 6), ('Gemeentebelangen', 5), ('PvdA / GroenLinks', 5), ('KERN8', 4), ('CDA\nDSV\nGemeentebelangen\nLokale Partij Opmeer\nPvdA / GroenLi', 4), ('DSV\nGemeentebelangen\nLokale Partij Opmeer', 4), ('Gemeentebelangen\nLokale Partij Opmeer', 3), ('Lokale Partij Opmeer\nGemeentebelangen', 3), ('DSV', 3), ('KERN8\nGemeentebelangen', 2), ('VVD', 2), ('DSV\nLokale Partij Opmeer', 2)]
+   afgedaan [('Nee', 46), ('Ja', 33)]
+  oudste/nieuwste ['Besluitvormende raadsvergadering 01-04-2026 3. Beschouwingen van de fracties naar aanleiding van de verkiezingsuitslag'] ['Besluitvormende raadsvergadering 30-03-2023 10. Motie vreemd aan de orde']
+
+=== opmeer Amendementen: total 74, got 74
+{'DT_RowId': '405c69ff-391f-46cd-a69c-7dad4a6fd1f2', 'registrationdate': "Besluitvormende raadsvergadering 17-09-2026 11. Oprichting stichting Knooppunt Coördinatie Rijk-Regio's (KCR2)", 'title': 'Wensen over Stichting KCR2', 'status': 'Aangenomen', 'portefeuillehouder': 'Burgemeester Wiersema', 'Fracties': 'KERN8'}
+{'DT_RowId': '08b3802e-38c9-4688-916e-ca3b376f8e99', 'registrationdate': 'Besluitvormende raadsvergadering 17-09-2026 10. Integratie gemeentelijk woningbedrijf', 'title': 'Uitstel beschikbaar stellen structurele financiële middelen', 'status': 'Verworpen', 'portefeuillehouder': 'Wethouder Ter Veen', 'Fracties': 'KERN8'}
+{'DT_RowId': 'fed91ecf-336a-48bb-ae24-bfb70a7dd71a', 'registrationdate': 'Besluitvormende raadsvergadering 17-09-2026 9. Stedenbouwkundig kader Hoogwoud-Oost', 'title': 'Wijzigingen op Stedenbouwkundigkader Hoogwoud-Oost (bebouwing grens bestaande woonwijk Overwal)', 'status': 'Aangenomen', 'portefeuillehouder': 'Wethouder Ter Veen', 'Fracties': 'PRO\nGemeentebelangen'}
+{'DT_RowId': '6bfeaf81-6e0e-43f4-848f-ff67bae4fcba', 'registrationdate': 'Besluitvormende raadsvergadering 17-09-2026 9. Stedenbouwkundig kader Hoogwoud-Oost', 'title': 'Wijzigingen op Stedenbouwkundigkader Hoogwoud-Oost (ontsluitingsstructuren)', 'status': 'Aangenomen', 'portefeuillehouder': 'Wethouder Ter Veen', 'Fracties': 'VVD'}
+   status [('Aangenomen', 48), ('Verworpen', 13), ('Ingetrokken', 12), ('Aangehouden', 1)]
+   Fracties [('Gemeentebelangen', 6), ('KERN8', 4), ('PvdA / GroenLinks', 4), ('CDA', 4), ('Lokale Partij Opmeer', 3), ('Gemeentebelangen\nLokale Partij Opmeer', 3), ('CDA\nDSV\nGemeentebelangen\nLokale Partij Opmeer\nPvdA / GroenLi', 3), ('DSV\nGemeentebelangen\nLokale Partij Opmeer', 3), ('DSV', 3), ('VVD', 2), ('CDA\nVVD\nGemeentebelangen\nDSV\nPvdA / GroenLinks\nLokale Partij', 2), ('VVD\nLokale Partij Opmeer', 2)]
+  oudste/nieuwste ['Besluitvormende raadsvergadering 02-07-2026 8. Voorjaarsnota 2026'] ['Besluitvormende raadsvergadering 29-09-2022 15. Voorstel tot het vaststellen van de Verordening ambtelijke bijstand en fractieondersteuning 2022']
+
+=== opmeer Politieke vragen: total 73, got 73
+{'DT_RowId': '1004ea1e-54d2-48a8-be4c-470849e52a49', 'registrationdate': '07-10-2026', 'title': 'Politieke vragen over verdwijnende parkeerplaatsen Meibloem', 'afgedaan': 'Nee', 'datumantwoord': 'None'}
+{'DT_RowId': '5fadeba1-cb7b-440b-80b0-43f2c022d611', 'registrationdate': '07-10-2026', 'title': 'Politieke vragen KERN8 over ontwerp-waterschapsverordening 2027', 'afgedaan': 'Nee', 'datumantwoord': 'None'}
+{'DT_RowId': 'bce18de6-7dbb-4365-abc7-592329740638', 'registrationdate': '30-09-2026', 'title': 'Politieke vragen LPO over structuur en capaciteit van de ambtelijke organisatie', 'afgedaan': 'Nee', 'datumantwoord': 'None'}
+{'DT_RowId': 'bee62983-28e8-45f2-bb83-1ae3dab1fb46', 'registrationdate': '25-09-2026', 'title': 'Aanvullende politieke vragen over investeringskredieten Voorjaarsnota 2026', 'afgedaan': 'Nee', 'datumantwoord': 'None'}
+   afgedaan [('Ja', 69), ('Nee', 4)]
+  oudste/nieuwste ['01-02-2022'] ['30-09-2026']
+
+=== opmeer Toezeggingen: total 84, got 84
+{'DT_RowId': 'fc8f7090-4d02-4add-9c9d-f0a2f8b667de', 'registrationdate': 'Besluitvormende raadsvergadering 02-07-2026 8. Voorjaarsnota 2026', 'title': 'Investeringen SSC De Som', 'portefeuillehouder': 'Burgemeester Wiersema', 'fractie': 'VVD', 'afgedaan': 'Nee'}
+{'DT_RowId': '099a89e3-53a5-49f9-9513-5db1dd80a3e7', 'registrationdate': 'Oordeelsvormende raadsvergadering 25-06-2026 5. Jaarrekening 2025', 'title': 'Stand van zaken openstaande kredieten', 'portefeuillehouder': 'Wethouder Buis', 'fractie': 'Gemeentebelangen\nKERN8', 'afgedaan': 'Nee'}
+{'DT_RowId': 'a9919804-3815-46f8-89d1-8c89a7d46533', 'registrationdate': 'Oordeelsvormende raadsvergadering 25-06-2026 5. Jaarrekening 2025', 'title': 'Infographic jaarrekening', 'portefeuillehouder': 'Wethouder Buis', 'fractie': 'KERN8', 'afgedaan': 'Nee'}
+{'DT_RowId': '5dd4e3f8-e69d-4e34-b976-c5504516b557', 'registrationdate': 'Besluitvormende raadsvergadering 18-06-2026 13. Zienswijzen jaarstukken en begroting SSC DeSom', 'title': 'Kosten overzicht van SSC De Som', 'portefeuillehouder': 'Burgemeester Wiersema', 'fractie': 'KERN8', 'afgedaan': 'Nee'}
+   fractie [('Gemeentebelangen', 16), ('CDA', 13), ('', 12), ('PvdA/GroenLinks', 11), ('VVD', 10), ('LPO', 9), ('DSV', 5), ('KERN8', 3), ('None', 3), ('Gemeentebelangen\nKERN8', 1), ('VVD\nCDA', 1)]
+   afgedaan [('Ja', 73), ('Nee', 11)]
+  oudste/nieuwste ['Besluitvormende raadsvergadering 02-07-2026 8. Voorjaarsnota 2026'] ['Oordeelsvormende raadsvergadering 30-10-2025 11. Zienswijze wijziging gemeenschappelijke regeling GGD Hollands Noorden']
+
+=== iBabs mensen/fracties
+medemblik /People 200 24049 https://medemblik.bestuurlijkeinformatie.nl/People
+medemblik /People/Index 200 24049 https://medemblik.bestuurlijkeinformatie.nl/People/Index
+medemblik /Persons 404 21106 https://medemblik.bestuurlijkeinformatie.nl/Persons
+medemblik /Organisatie 404 21106 https://medemblik.bestuurlijkeinformatie.nl/Organisatie
+medemblik /People/Profiles 200 24049 https://medemblik.bestuurlijkeinformatie.nl/People
+opmeer /People 200 33016 https://opmeer.bestuurlijkeinformatie.nl/People
+opmeer /People/Index 200 33016 https://opmeer.bestuurlijkeinformatie.nl/People/Index
+opmeer /Persons 404 28736 https://opmeer.bestuurlijkeinformatie.nl/Persons
+opmeer /Organisatie 404 28736 https://opmeer.bestuurlijkeinformatie.nl/Organisatie
+opmeer /People/Profiles 200 33016 https://opmeer.bestuurlijkeinformatie.nl/People
+
+=== CBS catalogus
+200
+{'Identifier': '37108', 'Title': 'Kerncijfers wijken en buurten 1995', 'Modified': '2013-02-27T02:00:00'}
+{'Identifier': '37515', 'Title': 'Kerncijfers wijken en buurten 1997', 'Modified': '2012-12-14T02:00:00'}
+{'Identifier': '37681', 'Title': 'Kerncijfers wijken en buurten 1999', 'Modified': '2012-12-14T02:00:00'}
+{'Identifier': '70139NED', 'Title': 'Kerncijfers wijken en buurten 2001', 'Modified': '2012-12-14T02:00:00'}
+{'Identifier': '70904ned', 'Title': 'Kerncijfers wijken en buurten 2009-2012', 'Modified': '2014-12-10T02:00:00'}
+{'Identifier': '80868ned', 'Title': 'Kerncijfers wijken en buurten 2003', 'Modified': '2012-12-14T02:00:00'}
+{'Identifier': '81903NED', 'Title': 'Kerncijfers wijken en buurten 2004-2008', 'Modified': '2013-05-03T09:30:00'}
+{'Identifier': '82339NED', 'Title': 'Kerncijfers wijken en buurten 2013', 'Modified': '2018-07-27T02:00:00'}
+{'Identifier': '82931NED', 'Title': 'Kerncijfers wijken en buurten 2014', 'Modified': '2018-07-27T02:00:00'}
+{'Identifier': '83220NED', 'Title': 'Kerncijfers wijken en buurten 2015', 'Modified': '2018-07-27T02:00:00'}
+{'Identifier': '83487NED', 'Title': 'Kerncijfers wijken en buurten 2016', 'Modified': '2023-07-14T02:00:00'}
+{'Identifier': '83765NED', 'Title': 'Kerncijfers wijken en buurten 2017', 'Modified': '2023-07-14T02:00:00'}
+{'Identifier': '84286NED', 'Title': 'Kerncijfers wijken en buurten 2018', 'Modified': '2023-06-30T02:00:00'}
+{'Identifier': '84583NED', 'Title': 'Kerncijfers wijken en buurten 2019', 'Modified': '2024-05-02T02:00:00'}
+{'Identifier': '84799NED', 'Title': 'Kerncijfers wijken en buurten 2020', 'Modified': '2025-09-16T02:00:00'}
+{'Identifier': '85039NED', 'Title': 'Kerncijfers wijken en buurten 2021', 'Modified': '2024-12-20T02:00:00'}
+{'Identifier': '85318NED', 'Title': 'Kerncijfers wijken en buurten 2022', 'Modified': '2025-03-27T02:00:00'}
+{'Identifier': '85618NED', 'Title': 'Kerncijfers wijken en buurten 2023', 'Modified': '2026-03-31T02:00:00'}
+{'Identifier': '85984NED', 'Title': 'Kerncijfers wijken en buurten 2024', 'Modified': '2026-10-15T02:00:00'}
+{'Identifier': '86165NED', 'Title': 'Kerncijfers wijken en buurten 2025', 'Modified': '2026-10-15T02:00:00'}
+{'Identifier': '86358NED', 'Title': 'Kerncijfers wijken en buurten 2026', 'Modified': '2026-10-15T02:00:00'}
