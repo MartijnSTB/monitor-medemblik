@@ -11,3 +11,4 @@ for gid in ('medemblik', 'opmeer'):
             vals = collections.Counter(str(r.get(col))[:60] for r in rows)
             print('   ', col, vals.most_common(6))
         print('    sample', json.dumps(rows[0], ensure_ascii=False)[:700])
+# run
