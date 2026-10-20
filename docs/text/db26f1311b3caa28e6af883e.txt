@@ -1,0 +1,674 @@
+Vorige pagina
+Belangrijke documenten
+Richtlijn voor gebruik van AI
+ID
+15
+Datum
+02-07-2026
+Onderwerp
+Richtlijn voor gebruik van AI
+Toelichting
+Artificial Intelligence (AI) of kunstmatige intelligentie is een technologie die steeds vaker wordt ingezet om verschillende werkprocessen te automatiseren.
+Ook binnen het raadswerk kan AI ondersteuning bieden op verschillende vlakken, zoals het analyseren van stukken, het genereren van samenvattingen of het voorbereiden van debatten.
+Een richtlijn voor het gebruik van AI door raad en griffie maakt duidelijk hoe AI op een verantwoorde wijze kan worden gebruikt zonder dat dit ten koste gaat van het democratische proces.
+De gemeenteraad heeft op 18 juni deze richtlijn vastgesteld.
+Bijlage(n)
+Bijlage 1 Richtlijn voor gebruik van AI Gemeenteraad Opmeer 2026 - inclusief amendement
+[Bijlage: Bijlage 1 Richtlijn voor gebruik van AI Gemeenteraad Opmeer 2026 - inclusief amendement]
+1
+Richtlijn voor gebruik van AI
+Gemeenteraad Opmeer
+2026
+2
+Inhoudsopgave
+Richtlijn voor gebruik van AI ...........................................................................................1
+Gemeenteraad Opmeer .................................................................................................1
+2026 ..............................................................................................................................1
+1.
+Begrippen .......................................................................................................................3
+2.
+Inleiding ..........................................................................................................................5
+3.
+Juridisch kader en beleidstoepassingen ....................................................................6
+3.1 Europese AI-act .......................................................................................................6
+3.2 Algemene Verordening Gegevensbescherming ..................................................6
+3.3 Handreiking Verantwoorde inzet van generatieve AI ........................................8
+4.
+Kansen en risico’s van AI .............................................................................................9
+4.1 Kansen .......................................................................................................................9
+4.2 Risico’s .....................................................................................................................11
+5.
+Wat betekend AI voor de gemeenteraad en griffie? ..............................................13
+3
+1.
+Begrippen
+Afkorting Begrip Definitie
+Agent Een autonoom AI-systeem dat
+specifieke taken uitvoert of
+beslissingen neemt namens een
+gebruiker, vaak met enige
+mate van zelfstandigheid.
+AI Artificial Intelligence Technologieën die computers in
+staat stellen taken uit te voeren
+die menselijke intelligentie
+vereisen, zoals leren,
+redeneren of beslissen.
+AI-model Een getraind algoritme of
+systeem dat gegevens verwerkt
+om taken uit te voeren, zoals
+voorspellingen maken, tekst
+genereren of patronen
+herkennen.
+AVG Algemene Verordening
+Gegevensbescherming
+Europese wetgeving
+(Verordening (EU) 2016/679)
+die regels stelt voor de
+bescherming en verwerking van
+persoonsgegevens.
+DPIA Data Protection and Impact
+Assessment
+Een onderzoek op een
+werkproces om privacyrisico’s
+te identificeren en zo nodig en
+mogelijk te mitigeren.
+Verplichting vanuit de AVG voor
+hoog-risico verwerkingen.
+Gebruiker Een persoon, zoals een raadslid
+of griffiemedewerker, die een
+AI-systeem gebruikt om taken
+uit te voeren of informatie te
+verkrijgen.
+GenAI Generatieve Artificial
+Intelligence
+AI-systemen die nieuwe
+content creëren, zoals tekst,
+afbeeldingen of muziek, op
+basis van getrainde data.
+Hidden layers De interne lagen van een
+neuraal netwerk in een AI-
+model die input verwerken om
+tot een output te komen, vaak
+niet direct inzichtelijk.
+Input De gegevens of instructies
+(zoals prompts) die in een AI-
+systeem worden ingevoerd om
+een resultaat te produceren.
+LLM Large Language Models Computermodellen getraind op
+grote hoeveelheden tekst om
+menselijke taal te begrijpen en
+te genereren, zoals ChatGPT.
+M365 Copilot Een AI‑assistent van Microsoft,
+gebouwd op een moderne
+4
+versie van het GPT‑model
+(GPT‑5 chat model).
+Output Het resultaat of de reactie die
+een AI-systeem genereert op
+basis van de gegeven input.
+Prompts Instructies of vragen die een
+gebruiker invoert in een AI-
+systeem om een specifieke
+output te genereren.
+Training Een AI-modeltraining is het
+proces waarbij een algoritme
+leert patronen te herkennen
+door grote hoeveelheden data
+te analyseren.
+Het model past
+zichzelf aan om steeds betere
+voorspellingen of beslissingen
+te maken op basis van die data.
+UAVG Uitvoeringswet Algemene
+Verordening
+Gegevensbescherming
+De UAVG is een Nederlandse
+wet die de Europese AVG
+aanvult en uitvoert.
+Het
+belangrijkste is, dat deze
+specifieke nationale regels,
+uitzonderingen en de inrichting
+van de Autoriteit
+Persoonsgegevens (AP) als
+toezichthouder, regelt.
+WCAG Web Content Accessibility
+Guidelines
+De Web Content Accessibility
+Guidelines (WCAG) zijn
+internationale richtlijnen voor
+het toegankelijk maken van
+digitale inhoud, zoals websites
+en video’s, voor mensen met
+beperkingen.
+WCAG 2.1 niveau
+AA is verplicht voor
+Nederlandse
+overheidsinstanties.
+Webscraping Webscraping is het automatisch
+verzamelen en uitlezen van
+gegevens van websites met
+behulp van software of scripts.
+5
+2.
+Inleiding
+Artificial Intelligence (AI) of kunstmatige intelligentie is een technologie die steeds vaker
+wordt ingezet om verschillende werkprocessen te automatiseren.
+AI kent sinds een
+aantal jaar een opmars in de publieke sector.
+Ook binnen het raadswerk kan AI
+ondersteuning bieden op verschillende vlakken, zoals het analyseren van stukken, het
+genereren van samenvattingen of het voorbereiden van debatten.
+Een richtlijn voor het gebruik van AI door raad en griffie maakt duidelijk hoe AI op een
+verantwoorde wijze kan worden gebruikt zonder dat dit ten koste gaat van het
+democratische proces.
+Naarmate raad en griffie AI vaker gebruiken voor bijvoorbeeld
+onderzoek, het schrijven van moties of de voorbereiding van debatten, is het belangrijk
+dat er heldere afspraken zijn over wat is toegestaan.
+Met als doel de voordelen van AI te
+kunnen benutten.
+Deze richtlijn helpt voorkomen dat bijvoorbeeld geheime en vertrouwelijke informatie
+van de gemeente onbedoeld wordt gedeeld met AI-aanbieders.
+Daarnaast maakt een
+richtlijn duidelijk welke rol AI kan spelen binnen het raadswerk, en waar menselijke
+oordeelsvorming altijd voorop moet staan.
+Ook bevat de richtlijn aanwijzingen voor het omgaan met AI-modellen die mogelijk
+bevooroordeeld zijn.
+Deze modellen worden getraind op grote hoeveelheden data, waarin
+politieke of maatschappelijke neutraliteit niet gegarandeerd is.
+Daarnaast biedt de
+richtlijn praktische kaders voor vragen als: mogen raadsleden AI gebruiken voor het
+opstellen van technische vragen aan het college?
+Hoe waarborgen we dat AI-analyses
+van beleidsstukken objectief blijven?
+En wat betekent het gebruik van AI voor de
+onafhankelijkheid van de raad als bestuursorgaan?
+Door heldere afspraken te maken, wordt AI een hulpmiddel dat het raadswerk
+ondersteunt, zonder het debat of de oordeelsvorming van raadsleden over te nemen.
+6
+3.
+Juridisch kader en beleidstoepassingen
+3.1 Europese AI-act
+De Europese Unie heeft in augustus 2024 de AI-verordening vastgesteld1.
+Deze
+wetgeving is bedoeld om het gebruik van AI binnen Europa veiliger en transparanter te
+maken.
+Ze moet voorkomen dat AI-toepassingen leiden tot schade voor burgers, en
+tegelijkertijd ruimte bieden voor verantwoorde innovatie.
+De AI-act kent 4 soorten
+risicocategorieën:
+• Onaanvaardbaar risico (verboden AI): AI-systemen die fundamentele rechten
+schenden, zoals sociale scoring of manipulatie, zijn verboden (vanaf februari
+2025)
+• Hoog risico: systemen die bijvoorbeeld worden ingezet voor rechtspraak,
+toegang tot overheidsvoorzieningen of arbeidsselectie.
+Deze systemen mogen
+alleen gebruikt worden als aan strikte voorwaarden wordt voldaan (vanaf
+augustus 2026)
+• Beperkt risico: toepassingen waarvoor lichte transparantieverplichtingen gelden
+(augustus 2026)
+• Minimaal of geen risico: systemen zonder wettelijke beperkingen
+Voor de gemeenteraad en griffie geld dat de output die gebruikt wordt vanuit AI
+bepalend is voor het risiconiveau.
+Zo lang de besluiten genomen blijven worden door de
+raadsleden zelf is het gebruik van AI beperkt risico.
+Wanneer je door AI bepaalde
+besluiten laat nemen en dit leidend laat zijn dan val je onder de categorie, hoog risico.
+Dit risiconiveau is voor de gemeenteraad van Opmeer niet van toepassing, omdat we AI
+geen besluiten laten nemen maar enkel en alleen gebruiken ter ondersteuning van het
+raadswerk.
+De besluiten zullen altijd door het raadslid zelf, tijdens raadsvergaderingen,
+genomen worden.
+De Europese verordening legt, naast de categorisering van systemen, nadruk op AI-
+geletterdheid.
+Dit houdt in dat gebruikers voldoende inzicht moeten hebben in de
+werking van AI, de beperkingen ervan en de risico’s bij gebruik.
+Voor raadsleden
+betekent dit dat zij kritisch moeten blijven op de input die zij AI verschaffen en de output
+die AI genereert en begrijpen waar deze vandaan komt.
+3.2 Algemene Verordening Gegevensbescherming
+De Algemene Verordening Gegevensbescherming (AVG)2 is een Europese verordening en
+sinds 2018 van kracht en bevat regels voor het zorgvuldig en rechtmatig omgaan met
+persoonsgegevens.
+De UAVG is de Nederlandse uitwerking van de AVG op de artikelen
+waarbij de AVG ruimte laat aan de EU-lidstaten om hier zelf invulling aan te geven.
+Ook bij het gebruik van generatieve AI blijft de AVG volledig van toepassing.
+Voor
+raadsleden, commissieleden en griffiemedewerkers is dit extra relevant, omdat zij
+regelmatig werken met informatie over inwoners, collega’s, medewerkers van andere
+organisaties en soms zelfs gevoelige persoonsgegevens.
+Bij generatieve AI kunnen persoonsgegevens op twee momenten in het geding komen:
+1 https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689
+2 https://wetten.overheid.nl/BWBR0040940/2021-07-01
+7
+1.
+Trainingsfase:
+Veel AI‑modellen worden getraind met zeer grote hoeveelheden data.
+Deze data is vaak
+verzameld via webscraping, waarbij onbedoeld ook persoonsgegevens van burgers,
+politici of ambtenaren zijn meegenomen.
+Webscraping is het automatisch verzamelen en
+uitlezen van gegevens van websites met behulp van software of scripts.
+Als dit gebeurt
+zonder geldige grondslag (bijv. toestemming, overeenkomst of gerechtvaardigd belang),
+kan de trainingsdata zelf al in strijd zijn met de AVG (artikel 6).
+Hoewel raadsleden of griffie dit niet zelf veroorzaken, betekent dit dat zij kritisch moeten
+zijn op de AI‑tools die zij gebruiken.
+Niet elk model is AVG‑proof, en het gebruik van een
+niet‑AVG‑conforme tool kan alsnog gevolgen hebben voor de gemeente.
+2.
+Gebruiksfase:
+Wanneer je een prompt, vraag of document invoert in een AI‑systeem (bijvoorbeeld
+ChatGPT, M365 Copilot, Gemini of een andere chatbot), bestaat het risico dat je
+onbewust persoonsgegevens deelt, zoals:
+• gegevens over inwoners in een casus,
+• meningen of gedragingen van raadsleden of ambtenaren,
+• interne notities die persoonsgegevens bevatten,
+• informatie uit dossiers, klachten of meldingen.
+Veel AI‑systemen kunnen deze input opslaan of hergebruiken voor modelverbetering,
+tenzij dit expliciet anders is ingericht.
+Dat kan leiden tot:
+• een onbedoeld datalek,
+• schending van de geheimhoudingsplicht,
+• verspreiding van verkeerde of vervormde informatie,
+• verlies van controle over wie de gegevens kan zien of gebruiken.
+Dit maakt het gebruik van AI binnen raads- en griffiewerk een onderwerp waarin kennis,
+zorgvuldigheid en duidelijke werkafspraken essentieel zijn.
+Wat betekent dit specifiek voor raad en griffie?
+1.
+Voer geen persoonsgegevens in
+Raadsleden en griffiemedewerkers mogen geen herleidbare persoonsgegevens invoeren
+in publieke AI-systemen.
+Denk aan:
+• namen van inwoners,
+• adresgegevens,
+• informatie uit Wmo‑, Jeugd‑ of bezwaarprocedures,
+• interne personele kwesties,
+• meldingen, klachten of kenmerken die personen kunnen identificeren.
+Mocht er om wat voor reden dan ook wel persoonsgegevens ingevoerd zijn dan moet het
+raadslid zo snel mogelijk contact opnemen met de griffie.
+Ook bij twijfel kan overlegd
+worden met de griffie.
+2.
+Gebruik uitsluitend openbare informatie als input
+Door uitsluitend openbare informatie als input voor AI te gebruiken, loop je als gebruiker
+geen risico om een datalek te veroorzaken.
+Gebruik daarom geen informatie of
+documenten die vertrouwelijk zijn.
+Een goede veiligheidsmaatregel hierin is om alleen
+informatie en documenten te gebruiken die publiekelijk inzichtelijk zijn op het
+raadsinformatiesysteem.
+8
+3.
+Gebruik met het raadsaccount uitsluitend de organisatie-gecontroleerde AI (M365
+Copilot)
+• AI-tools die binnen de Microsoft‑omgeving draaien, zijn AVG‑vriendelijker omdat:
+o de data binnen de EU‑datacenters kan blijven,
+o de organisatie zelf toegang en beveiliging controleert.
+De raadsleden en griffiemedewerkers mogen met hun raadsaccount uitsluitend alleen
+gebruik maken van M365 Copilot voor raadswerk om zo de risico’s zo klein mogelijk te
+houden.
+Controleer bij gebruik altijd of je bent ingelogd op je account als raadslid.
+Uitgangspunt van deze richtlijn is het veilige en verantwoorde gebruik van AI-modellen,
+ongeacht het specifieke systeem.
+Daarom wordt onderzocht welke criteria bepalend zijn
+voor veilig gebruik, zodat in de toekomst - na evaluatie van de richtlijn - meerdere AI-
+modellen onder de richtlijn kunnen vallen.
+3.3 Handreiking Verantwoorde inzet van generatieve AI
+De handreiking Verantwoorde inzet van generatieve AI van het ministerie van
+Binnenlandse zaken3 biedt richtlijnen voor overheden om generatieve AI, zoals chatbots
+en contentgeneratoren, verantwoordelijk in te zetten.
+De Handreiking benadrukt de
+kansen en de risico’s van het gebruik van AI en biedt handvatten om de kansen te
+benutten en risico’s te beperken.
+Voor raad en griffie betekent dit onder meer:
+• Zorg dat menselijke controle altijd leidend blijft.
+AI mag geen
+beslissingsbevoegdheid krijgen binnen het politieke proces.
+• Gebruik geen persoonsgegevens, ook niet in prompts.
+• Maak transparant of en hoe AI is gebruikt, bijvoorbeeld in openbare documenten
+of raadsnotulen.
+Dit kan bijvoorbeeld met het toevoegen van een voetnoot of in
+de bronnenlijst.
+• Koppel AI-experimenten aan duidelijke spelregels: wie gebruikt het, waarvoor, en
+hoe wordt de kwaliteit geborgd?
+De handreiking dient onder andere als basis voor het ontwikkelen van lokale richtlijnen,
+zoals deze richtlijn, met aandacht voor privacy, transparantie en het behoud van
+politieke autonomie.
+3 https://open.overheid.nl/documenten/9c273b71-cebb-4e11-b06f-fa20f7b4b90e/file
+9
+4.
+Kansen en risico’s van AI
+4.1 Kansen
+De inzet van AI binnen het raadswerk is volop in ontwikkeling, maar biedt nu al
+veelbelovende mogelijkheden om raadsleden en de griffie te ondersteunen.
+AI kan
+werkzaamheden slimmer, sneller en toegankelijker maken, en vormt daarmee een
+waardevolle aanvulling op de democratische processen van informatievergaring,
+besluitvorming, controle en communicatie.
+AI biedt kansen op meerdere terreinen van het raadswerk: van het analyseren van
+informatie en het inzichtelijk maken van complexe onderwerpen tot het versterken van
+de controlerende taak en het verbeteren van de toegankelijkheid van documenten.
+Hieronder worden de belangrijkste mogelijkheden toegelicht.
+Informatie verkrijgen en interpreteren
+AI‑toepassingen, zoals M365 Copilot, kunnen raadsleden helpen bij het snel en praktisch
+verkrijgen van informatie.
+Denk aan het opvragen van definities, juridische termen,
+technische concepten of achtergronden bij beleidsinstrumenten.
+AI kan ook helpen bij het
+interpreteren van complexe vraagstukken en het vertalen van vakjargon naar
+begrijpelijke taal.
+Deze ondersteuning bespaart tijd en kan helpen bij het opstellen van raadsinstrumenten
+zoals moties, amendementen en schriftelijke vragen of bij het voorbereiden van het
+debat.
+Hierbij blijft het echter essentieel dat de politieke afweging en het oordeel van
+raadsleden altijd leidend zijn: AI ondersteunt, maar beslist niet.
+Daarnaast kan het ook
+voorkomen dat AI onjuiste informatie genereerd.
+Er moet altijd gecontroleerd worden
+waar de bronnen vandaan komen en of dat overeen komt met de vraag (prompt) die is
+gesteld.
+Ondersteuning bij het lezen en begrijpen van vergaderstukken
+Raadsvoorstellen, bijlagen en rapportages kunnen omvangrijk, technisch en complex zijn.
+AI kan raadsleden helpen door:
+• documenten samen te vatten en snel tot de kern te komen;
+• relevante passages te markeren;
+• alternatieve formuleringen te geven voor beter begrip;
+• verbanden te leggen tussen verschillende documenten of eerdere besluiten;
+• mogelijke inconsistenties, risico’s of ontbrekende informatie te signaleren;
+• technische vragen te beantwoorden over terminologie, procedures of wetgeving.
+Hierdoor kan de voorbereiding binnen fracties gerichter en efficiënter ingericht worden,
+en blijft er meer tijd over voor de inhoudelijke beoordeling en het politieke gesprek.
+10
+Vergelijking van beleid en versterking van regionale samenwerking
+AI maakt het mogelijk om documenten van verschillende gemeenten snel en
+systematisch te vergelijken.
+Zo kunnen raadsleden bijvoorbeeld:
+• beleidsstukken naast elkaar leggen;
+• verschillen in zienswijzen op gemeenschappelijke regelingen inzichtelijk maken;
+• de overwegingen van andere gemeenten analyseren;
+• patronen en samenhang in regionaal beleid herkennen.
+Dit bevordert niet alleen kennisuitwisseling, maar kan ook bijdragen aan een betere
+regionale samenwerking en een sterker fundament voor lokale besluitvorming.
+Toegankelijkheid en inclusie voor raadsleden
+AI kan het raadswerk toegankelijker maken, vooral voor raadsleden die baat hebben bij
+ondersteuning in informatieverwerking, taal of concentratie.
+AI‑toepassingen kunnen:
+• documenten samenvatten;
+• teksten laten voorlezen;
+• bijdragen aan helder en correct formuleren;
+• helpen bij het verbeteren van schrijfstijl en structuur;
+• jargon vertalen naar begrijpelijke taal.
+Hierdoor wordt het raadswerk inclusiever.
+Elk raadslid kan zich op een passende manier
+laten ondersteunen en optimaal bijdragen aan het politieke proces.
+Efficiëntie en ondersteuning voor de griffie
+Ook binnen de griffie kan AI het werk efficiënter en toegankelijker maken.
+AI kan helpen
+bij:
+• het schrijven van toegankelijke teksten voor nieuwsbrieven, sociale media of
+raadscommunicatie;
+• het samenvatten of herschrijven van vergaderstukken en rapporten;
+• het snel terugvinden van raadsstukken op basis van thema’s of trefwoorden;
+• het voorbereiden van toelichtingen of adviezen richting de raad.
+Hierdoor ontstaat ruimte voor de griffie om haar rol als adviseur van de raad verder te
+versterken en meer tijd te besteden aan procesbegeleiding, ondersteuning en
+kwalitatieve advisering.
+11
+4.2 Risico’s
+De inzet van AI biedt kansen, maar brengt ook mogelijke risico’s met zich mee die
+rechtstreeks raken aan de veiligheid van het democratisch proces en de behoeften van
+raadsleden aan betrouwbare, transparante en controleerbare informatie.
+Hieronder
+worden de belangrijkste risico’s benoemd en geduid vanuit dat perspectief.
+Daarnaast
+wordt er benoemd hoe je de risico’s verminderd.
+Verlies van autonomie en controle op juistheid
+AI kan de besluitvorming ondersteunen, maar mag het politieke oordeelsvermogen van
+raadsleden niet vervangen.
+Wanneer AI-systemen veelvuldig worden ingezet bij het
+schrijven van moties, het analyseren van beleid of het voorbereiden van debatten,
+bestaat het risico dat raadsleden te sterk vertrouwen op de door AI gegenereerde output.
+Om de autonomie van de raad te waarborgen, is het van belang dat raadsleden altijd zélf
+de inhoud blijven afwegen, eigen standpunten formuleren en afwegingen maken in het
+licht van hun politieke en maatschappelijke takenveld.
+Daarbij hoort ook een actieve
+controle op de juistheid, volledigheid en relevantie van de AI-output.
+AI genereert
+immers geen waarheid, maar een inschatting op basis van bestaande data, waarin
+fouten, aannames of eenzijdigheden kunnen zitten.
+Raadsleden moeten zich dus niet alleen bewust zijn van hun eigen rol, maar ook vaardig
+zijn in het toetsen en bevragen van AI-antwoorden.
+Dat vraagt om alertheid, kritisch
+denken en reflectie: kernwaarden van het politieke ambacht.
+Daarnaast vraagt het
+gebruik van AI om bewustzijn van technologische afhankelijkheid.
+Wanneer AI-
+ondersteuning de norm wordt, ontstaat het risico dat raadsleden minder vaardig worden
+in hun eigen analyse, of dat hun oordeel te veel wordt gestuurd door systemen die zelf
+geen moreel of ethisch kompas hebben.
+Menselijke beoordeling, politieke weging en het
+democratisch debat blijven daarom onmisbaar.
+Privacy schendingen en datalekken
+Zonder data zijn AI-modellen niet te gebruiken.
+Gebruikers voeren ook data in (prompts)
+en kunnen daar (onbewust) gevoelige gegevens invullen zoals namen, adressen en
+telefoonnummers.
+Dit kan ongemerkt leiden tot een datalek of reputatieschade, met
+gevolgen voor de privacy van inwoners en ambtenaren.
+Het is daarnaast niet altijd
+duidelijk hoe en op welke manier data wordt opgeslagen of gebruikt om modellen verder
+te trainen.
+Zeker bij internationale aanbieders is hier een groot risico.
+Voor raadsleden betekent dit dat zij alleen openbare stukken en geen persoonsgegevens
+mogen delen en altijd kritisch moeten afwegen welke informatie geschikt is voor AI-
+gebruik.
+Bij het gebruik van AI-systemen is de gebruiker verantwoordelijk voor de
+informatie die wordt opgevoerd in het AI-systeem en wat er met de verkregen output
+wordt gedaan.
+Bias en discriminatie
+AI-modellen worden getraind met data van het internet, waarin politieke voorkeuren,
+dominante normen of sociale vooroordelen vaak onbewust aanwezig zijn.
+Deze data is
+zelden objectief of representatief.
+12
+Hierdoor bestaat het risico dat uitkomsten systematisch een bepaald narratief of
+wereldbeeld ondersteunen, zonder dat de gebruiker dit direct doorziet.
+Het uitgangspunt
+garbage in is garbage out geldt hier letterlijk: subjectieve en bevooroordeelde input leidt
+tot output die bestaande ongelijkheden bevestigt.
+AI-output kan daardoor sturend zijn in
+toon, inhoud of richting.
+Dit vergroot het risico op discriminatie, bijvoorbeeld door het
+versterken van stereotypes of het uitsluiten van minderheidsperspectieven.
+Voor raadsleden is het risico reëel dat AI-gegenereerde teksten overtuigend klinken,
+maar subtiele vooroordelen bevatten die de politieke afweging beïnvloeden.
+Denk aan het
+gebruik van bepaalde frames, het weglaten van alternatieve perspectieven of het
+bevoordelen van de status quo.
+Zeker wanneer gebruikers weinig kennis hebben van de
+werking van AI, neemt de kans op onbewuste beïnvloeding toe.
+Wetenschappelijk
+onderzoek bevestigt namelijk dat AI de politieke besluitvorming kan sturen, vooral bij
+gebruikers zonder inhoudelijke tegenkennis.
+Daarom is het belangrijk dat raads- en
+commissieleden output actief en kritisch toetsen op neutraliteit en diversiteit, en bij
+twijfel aanvullende bronnen of alternatieve formuleringen raadplegen.
+Ethische dillema’s
+Ethisch gebruik van AI gaat verder dan alleen het normeren van modellen en het volgen
+van wetten regelgeving.
+Het gaat om fundamentele vragen over verantwoordelijkheid,
+vertrouwen en de rol van technologie in het democratisch proces.
+AI-ethiek is geen
+eigenschap van het systeem zelf, maar ontstaat in de manier waarop mensen ermee
+omgaan.
+AI-modellen hebben geen moreel kompas en kunnen geen onderscheid maken
+tussen wenselijk en onwenselijk gebruik.
+Het zijn gebruikers zoals raadsleden of
+griffiemedewerkers die bepalen hoe AI wordt ingezet, waarvoor, en met welk doel.
+Daarbij spelen principes als transparantie, gelijkheid en zorgvuldigheid een centrale rol.
+Voor de raad betekent dit dat het niet alleen gaat om wat AI kan, maar vooral om wat
+mag en past binnen een democratische context.
+Het maken van die afwegingen vraagt
+om gedeelde normen en duidelijke richtlijnen en spelregels.
+Alleen zo blijft AI een
+hulpmiddel in dienst van het publieke belang en niet andersom.
+Duurzaamheid en waterverbruik
+De inzet van AI heeft niet alleen maatschappelijke, maar ook ecologische gevolgen.
+Sinds
+de opkomst van AI wordt steeds meer duidelijk over de ecologische voetafdruk van AI-
+modellen.
+Grote AI-modellen verbruiken bij training en gebruik enorme hoeveelheden
+energie en water.
+Datacenters die AI-systemen aandrijven vragen bovendien continu
+koeling, vaak met drinkwater.
+Dit zorgt voor een forse ecologische voetafdruk, die vaak
+buiten beeld blijft bij gebruikers.
+Het model GPT-3 van OpenAI gebruikte bij een
+gemiddelde training in 2023 ongeveer 552 ton CO2.12.
+Dat is evenveel als de uitstoot
+van 120 benzineauto’s per jaar.
+Voor de raad betekent dit dat de inzet van AI ook vraagt om bewuste keuzes: wanneer is
+AI echt nodig, en welke toepassingen zijn verantwoord in het licht van duurzaamheid?
+Staat de inzet van AI in proportie tot het doel ervan?
+Verantwoord AI-gebruik houdt
+rekening met de milieubelasting en vraagt om terughoudendheid bij overbodige of zware
+toepassingen, zeker in publieke functies.
+Enkele tips worden later in de richtlijn gegeven.
+13
+5.
+Wat betekend AI voor de gemeenteraad
+en griffie?
+Om AI verantwoord te gebruiken, werken we vanuit leidende principes.
+Deze bieden een
+kader om te kunnen handelen en achteraf het handelen te kunnen verantwoorden.
+Daarnaast bieden de leidende principes een richting om keuzes te maken, bijvoorbeeld
+als het gaat om aanschaf of implementatie van AI-toepassingen.
+De richtlijn is opgesteld
+om de raad te helpen keuzes te maken over AI.
+Daarnaast geeft het de griffie een
+handelingsperspectief: met duidelijke kaders kunnen er betere en veiligere keuzes
+worden gemaakt.
+De onderstaande principes gelden als uitgangspunt voor het gebruik
+van AI.
+Handelen in lijn met de wetgeving
+De inzet van AI moet voldoen aan geldende wet- en regelgeving.
+Op dit moment vormen
+de nieuwe AI-act en de (U)AVG de belangrijkste kaders voor het gebruik van AI.
+Daarnaast zijn er diverse handreikingen en uitgaven van onder andere de VNG en het
+ministerie van Binnenlandse Zaken.
+Hoewel deze niet juridisch bindend zijn, lopen deze
+handreikingen vaak wel vooruit op toekomstige wetgeving en geven ze een goede
+richting.
+AI is een hulpmiddel, geen besluitvormer.
+Menselijke beoordeling blijft
+noodzakelijk, zeker bij besluitvorming of communicatie richting de raad of stad.
+Uitgangspunten voor raad en griffie:
+• We voeren geen (gevoelige) informatie in prompts in, in lijn met de AVG.
+• We delen geen geheime informatie via AI-modellen, zoals bedoeld in artikel 87,
+88 en 89 Gemeentewet en artikel 2:5 van de AWB.
+• We maken geen gebruik van verboden systemen en hoog-risico AI-toepassingen.
+• We zijn transparant over het AI-gebruik, naar elkaar en naar de gemeente.
+Uitgangspunten voor de griffie
+• We volgen nieuwe wet- en regelgeving op de voet en passen onze werkwijze aan
+om compliant te blijven.
+Bewustzijn van de milieu-impact van AI
+Zoals aangegeven is de milieu-impact van AI-modellen groot.
+Tegelijkertijd biedt AI
+waardevolle ondersteuning voor het raadswerk.
+Daarom kiezen we bewust voor
+toepassingen die deze voordelen benutten, zonder onnodige belasting van het milieu.
+Daarom hanteren we de volgende uitgangspunten:
+Uitgangspunten voor de raad en griffie:
+• We zijn ons bewust van de milieu impact van AI-toepassingen en handelen daar
+ook naar.
+• We vermijden onnodige opdrachten, zoals het genereren van afbeeldingen zonder
+inhoudelijke noodzaak.
+14
+Stimuleren van verantwoord en toegankelijk gebruik
+Bij de inzet van AI staan veiligheid, transparantie en toegankelijkheid voorop.
+We
+gebruiken AI op een manier die veilig, transparant en inclusief is en bijdraagt aan
+vertrouwen en past bij de publieke taak van de raad.
+Door gebruik te maken van veilige
+systemen en eerlijke toepassingen, waarborgen we dat we vertrouwen in en met AI
+opbouwen en een positieve impact realiseren op gebruikers ervan.
+Wanneer we
+informatie met AI genereren, zorgen we ervoor dat deze informatie voldoet aan
+toegankelijkheidseisen zoals begrijpelijk taalgebruik.
+Uitgangspunten voor de raad en griffie:
+• We passen de gedragscode voor raads- en commissieleden ook toe op het gebruik
+van AI.
+• We maken voor raadswerk uitsluitend gebruik van M365 Copilot.
+• AI mag geen extra drempel opleveren voor raadsleden of inwoners met minder
+digitale vaardigheden.
+• We zijn open en eerlijk over het gebruik van AI, met name bij door AI
+gegenereerde teksten en/of afbeeldingen.
+We delen geen AI gegeneerde
+afbeeldingen extern met inwoners.
+Een kritische houding aannemen
+AI biedt kansen, maar roept ook vragen op over betrouwbaarheid, bias en de invloed op
+besluitvorming.
+Daarom hanteren we een kritische en doordachte benadering.
+We
+beoordelen AI-systemen niet alleen op wat ze opleveren, maar ook naar de manier
+waarop ze werken.
+We kijken kritisch naar de impact, risico’s en ethische implicaties van
+AI-toepassingen, met een focus op veiligheid en eerlijkheid.
+Door kritisch te blijven op de
+werking en uitkomsten van AI-systemen, zorgen we ervoor dat we deze transparant,
+betrouwbaar en in het belang van de samenleving houden.
+We zijn ons ervan bewust dat AI-modellen geen neutrale systemen zijn.
+Ze kunnen
+sturen in toon, inhoud of richting, en daarmee bewust of onbewust invloed uitoefenen op
+de politieke afweging.
+Door actief te reflecteren op de werking en de uitkomsten van AI,
+en deze kritisch te toetsen op vooroordelen, aannames en vertekeningen, houden we grip
+op de technologie.
+Zo zorgen we ervoor dat AI een hulpmiddel blijft dat bijdraagt aan
+betrouwbare, uitlegbare en maatschappelijk verantwoorde besluitvorming en niet het
+politieke oordeel overneemt.
+Uitgangspunten voor de raad en griffie:
+• We nemen nooit iets één-op-één over van een AI-model, maar kijken eerst
+kritisch naar de output.
+• We doen, waar het kan, onderzoek naar mogelijke vooroordelen in AI-modellen.
+• We zijn ons bewust van de vooroordelen die AI-modellen hebben.
+• We vragen door wanneer antwoorden onduidelijk of twijfelachtig zijn.
+• Bij twijfel laten we AI-uitvoer verifiëren door de griffie of externe experts.
+We blijven leren over en van AI
+AI is volop in ontwikkeling en roept voortdurend nieuwe vragen op.
+Veel gemeenteraden
+verkennen de mogelijkheden, maar verantwoord gebruik vraagt ook om blijvende
+scholing en kennisdeling.
+Voor een goed en verantwoord gebruik is het belangrijk dat de
+raad op de hoogte is van de nieuwste ontwikkelingen binnen het AI-domein.
+15
+We investeren daarom actief in kennis, bewustwording en het uitwisselen van ervaringen
+binnen én buiten onze organisatie.
+We blijven aangehaakt bij nieuwe ambtelijke
+ontwikkelingen en kennisvergaring over AI.
+Uitgangspunten voor raad en griffie:
+• We volgen actief de ontwikkelingen in het AI-domein om ze beter te kunnen
+begrijpen en toepassen.
+• We leren van elkaar en van andere initiatieven binnen en buiten de gemeente.
+Uitgangspunten voor de griffie
+• We organiseren regelmatig trainingen voor raadsleden over AI-gebruik, risico’s,
+bias, privacy en ethiek.
+We schrijven goede prompts
+Effectief gebruik van AI begint met het stellen van de juiste vragen.
+Om een goed
+prompt te schrijven is het van belang dat we weten welke elementen een goed prompt
+maken.
+Een goede prompt is duidelijk, doelgericht en bevat voldoende context.
+Daarmee
+vergroot je de kans op bruikbare output en voorkom je dat je het model meerdere keren
+moet bijsturen.
+Dat scheelt tijd en energie, want efficiënte prompts verlagen het verbruik
+van rekenkracht, stroom en water.
+Daarom gaan we bewust en zorgvuldig om met hoe
+we prompts formuleren.
+Uitgangspunten voor raad en griffie:
+• We houden ons bij het schrijven van prompts aan de checklist verantwoorde
+prompts (bijlage 1).
+• We formuleren in één prompt zoveel mogelijk gerichte vragen.
+• We vermijden onnodige input, zoals bedankjes, complimenten of klachten.

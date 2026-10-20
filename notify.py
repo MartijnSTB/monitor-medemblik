@@ -17,7 +17,7 @@ Instellingen komen uit GitHub-secrets (doorgegeven als omgevingsvariabelen):
   MAIL_SMTP_PORT      optioneel, standaard 587
 Ontbreekt een instelling, dan wordt dat kanaal overgeslagen en staat dat op het dashboard.
 """
-import os, datetime, smtplib, html
+import os, datetime, smtplib, html, base64
 from email.message import EmailMessage
 from zoneinfo import ZoneInfo
 import requests
@@ -30,6 +30,14 @@ MAX_MAIL_PER_COLUMN = 40
 TZ = ZoneInfo('Europe/Amsterdam')
 MAANDEN = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december']
 
+def hdr(text):
+    """HTTP-headers mogen alleen latin-1 bevatten; ntfy snapt UTF-8 in RFC 2047-vorm (voor ‘…’, € enz.)."""
+    try:
+        text.encode('latin-1')
+        return text
+    except UnicodeEncodeError:
+        return '=?UTF-8?B?' + base64.b64encode(text.encode('utf-8')).decode() + '?='
+
 def nl_moment(dt):
     d = dt.astimezone(TZ)
     return f'{d.day} {MAANDEN[d.month - 1]} {d:%H:%M}'
@@ -39,18 +47,21 @@ COLUMNS = [
     ('Bekendmakingen', '#006dac'),
     ('Raad', '#1b4e8e'),
     ('College', '#f18700'),
-    ('Nieuws en Woo', '#5498cf'),
+    ('Nieuws en meer', '#5498cf'),
+    ('In de media', '#1d1d1b'),
 ]
 
 def column_of(item):
     s = item.get('source')
-    if s == 'Officiele bekendmakingen (KOOP)':
+    if s in ('Officiele bekendmakingen (KOOP)', 'Andere overheden'):
         return 'Bekendmakingen'
     if s in ('Raadsstukken', 'Raadsportaal'):
         return 'Raad'
     if s == 'Collegebesluiten':
         return 'College'
-    return 'Nieuws en Woo'
+    if s == 'In de media':
+        return 'In de media'
+    return 'Nieuws en meer'
 
 def _date(s):
     try:
@@ -71,9 +82,9 @@ def events_since(db, since):
     since_iso = since.isoformat(timespec='seconds')
     events = []
     for item in db['items'].values():
-        if item.get('kind') == 'vergadering':
-            continue
-        if (item.get('first_seen') or '') > since_iso and is_fresh(item, since):
+        # Vergaderingen zelf zijn geen 'nieuw' stuk; agendawijzigingen wel (hieronder bij changes).
+        if (item.get('first_seen') or '') > since_iso and is_fresh(item, since) and item.get('kind') != 'vergadering' \
+                and not item.get('baseline'):
             events.append({'kind': 'nieuw', 'item': item, 'at': item['first_seen'], 'text': ''})
         for k in item.get('kw_events') or []:
             if (k.get('at') or '') > since_iso:
@@ -82,27 +93,43 @@ def events_since(db, since):
                                'text': 'trefwoord: ' + ', '.join(k.get('words', []))})
         for c in item.get('changes') or []:
             if (c.get('at') or '') > since_iso:
-                kind = {'Beantwoord': 'beantwoord', 'Niet meer bereikbaar': 'verdwenen',
-                        'Bijlage toegevoegd': 'bijlage'}.get(c.get('type'), 'gewijzigd')
+                kind = {'Beantwoord': 'beantwoord', 'Niet meer bereikbaar': 'verdwenen', 'Bijlage toegevoegd': 'bijlage',
+                        'Agenda gewijzigd': 'agenda', 'Agenda gepubliceerd': 'agenda_online',
+                        'Termijn verlopen': 'termijn'}.get(c.get('type'), 'gewijzigd')
                 events.append({'kind': kind, 'item': item, 'at': c['at'], 'text': c.get('summary', ''),
                                'added': c.get('added') or [], 'removed': c.get('removed') or []})
     events.sort(key=lambda e: e['at'], reverse=True)
     return events
 
+# Bronnen waarvan een wijziging in de tekst nieuws kan zijn (raad en college). Een tekstwijziging op een
+# nieuwspagina of een nieuwe KOOP-versie gaat alleen mee in de ochtendmail.
+PUSH_WIJZIGING = ('Raadsstukken', 'Raadsportaal', 'Collegebesluiten')
+
 def is_important(ev):
-    """Wat een directe pushmelding waard is."""
-    if ev['kind'] != 'nieuw':
-        return True  # gewijzigd, beantwoord, verdwenen
+    """Wat een directe pushmelding waard is. De rest staat in de ochtendmail en op het dashboard."""
     item = ev['item']
+    kind = ev['kind']
+    if kind in ('beantwoord', 'verdwenen', 'bijlage', 'agenda', 'agenda_online', 'termijn'):
+        return True
+    if kind == 'gewijzigd':
+        return item.get('source') in PUSH_WIJZIGING and item.get('change_type') != 'Nieuwe versie bij KOOP'
     title = (item.get('title') or '').casefold()
     rapport = (item.get('rapport') or '').casefold()
-    if item.get('source') == 'Collegebesluiten':
+    if item.get('source') in ('Collegebesluiten', 'Tweede Kamer', 'Rechtspraak'):
         return True
-    if any(w in rapport for w in ('vragen', 'motie', 'amendement')):
+    if any(w in rapport for w in ('vragen', 'motie', 'amendement', 'informatiebrie', 'informatienota', 'collegebericht',
+                                  'rekenkamer')):
         return True
-    if item.get('source') == 'Raadsstukken' and 'raadsvoorstel' in title:
+    if item.get('source') == 'Raadsstukken' and any(w in title for w in ('raadsvoorstel', 'motie', 'amendement')):
+        return True
+    if item.get('source') == 'Andere overheden' and 'ministerie' in (item.get('instantie') or '').casefold():
         return True
     return False
+
+def is_night(now=None):
+    """Tussen 23:00 en 06:30 geen geluid (lage prioriteit), behalve bij trefwoorden."""
+    t = (now or datetime.datetime.now(TZ)).astimezone(TZ)
+    return t.hour >= 23 or (t.hour, t.minute) < (6, 30)
 
 def time_label(item, at=None):
     """'gepubliceerd 09:00' als de bron een tijd geeft, anders 'gevonden 16:30' (door de monitor).
@@ -121,7 +148,8 @@ def time_label(item, at=None):
     return ''
 
 LABEL = {'nieuw': 'Nieuw', 'gewijzigd': 'Gewijzigd', 'beantwoord': 'Beantwoord', 'verdwenen': 'Verdwenen',
-         'bijlage': 'Nieuwe bijlage', 'trefwoord': 'Trefwoord'}
+         'bijlage': 'Nieuwe bijlage', 'trefwoord': 'Trefwoord', 'agenda': 'Agenda gewijzigd',
+         'agenda_online': 'Agenda online', 'termijn': 'Termijn verlopen'}
 
 # ---------------------------------------------------------------------------
 # Directe pushmelding (ntfy)
@@ -142,7 +170,7 @@ def send_keyword_push(gemeenten, events_by_gid, topic):
         if len(kws) > MAX_PUSH_LINES:
             lines.append(f'- en nog {len(kws) - MAX_PUSH_LINES} op het dashboard')
         r = requests.post(f'https://ntfy.sh/{topic}', data='\n'.join(lines).encode('utf-8'), timeout=20, headers={
-            'Title': f'{gemeenten[gid]["naam"]}: {", ".join(words)[:80]}',
+            'Title': hdr(f'{gemeenten[gid]["naam"]}: {", ".join(words)[:80]}'),
             'Click': DASHBOARD_URL + '#' + gid,
             'Tags': 'mag',
             'Priority': 'high',
@@ -163,19 +191,29 @@ def send_push(gemeenten, events_by_gid, topic):
         naam = gemeenten[gid]['naam']
         lines = []
         for e in important[:MAX_PUSH_LINES]:
-            extra = f" ({e['text']})" if e['kind'] in ('beantwoord', 'gewijzigd', 'bijlage') and e['text'] else ''
+            extra = f" ({e['text']})" if e['kind'] in ('beantwoord', 'gewijzigd', 'bijlage', 'agenda', 'agenda_online', 'termijn') and e['text'] else ''
             tijd = time_label(e['item'], e['at'] if e['kind'] != 'nieuw' else None)
             lines.append(f"- **{LABEL[e['kind']]}** · {column_of(e['item'])}: {e['item']['title'][:120]}{extra} ({tijd})")
-            if e['kind'] == 'bijlage' and e.get('added'):
-                lines.append(f"  _{e['added'][0][:160]}_")
+            if e['kind'] in ('bijlage', 'agenda', 'agenda_online') and e.get('added'):
+                lines.append('  ' + ' · '.join(f"+ _{a[:110]}_" for a in e['added'][:3]))
+            if e['kind'] == 'agenda' and e.get('removed'):
+                lines.append('  ' + ' · '.join(f"− ~~{a[:110]}~~" for a in e['removed'][:3]))
         if len(important) > MAX_PUSH_LINES:
             lines.append(f'- en nog {len(important) - MAX_PUSH_LINES} op het dashboard')
-        urgent = any(e['kind'] in ('gewijzigd', 'beantwoord', 'verdwenen', 'bijlage') for e in important)
+        urgent = any(e['kind'] in ('gewijzigd', 'beantwoord', 'verdwenen', 'bijlage', 'agenda', 'termijn') for e in important)
+        # Eén melding: de titel zegt meteen wat het is, en tikken opent het stuk zelf.
+        if len(important) == 1:
+            e0 = important[0]
+            title = f'{naam} · {LABEL[e0["kind"]]}: {e0["item"]["title"][:90]}'
+            click = e0['item'].get('url') or (DASHBOARD_URL + '#' + gid)
+        else:
+            title = f'{naam}: {len(important)} meldingen'
+            click = DASHBOARD_URL + '#' + gid
         r = requests.post(f'https://ntfy.sh/{topic}', data='\n'.join(lines).encode('utf-8'), timeout=20, headers={
-            'Title': f'{naam}: {len(important)} melding{"en" if len(important) != 1 else ""}',
-            'Click': DASHBOARD_URL + '#' + gid,
+            'Title': hdr(title),
+            'Click': click,
             'Tags': 'bell',
-            'Priority': 'high' if urgent else 'default',
+            'Priority': 'low' if is_night() else ('high' if urgent else 'default'),
             'Markdown': 'yes',
         })
         r.raise_for_status()
@@ -213,7 +251,7 @@ def _mail_html(gemeenten, events_by_gid, since, now_local):
                              f'<a href="{e(it["url"])}" style="color:#006dac">{e(it["title"])}</a>{snips}</li>')
             parts.append('</ul>')
         if changed:
-            parts.append('<h3 style="color:#f18700;margin:12px 0 4px">Gewijzigd, nieuwe bijlagen, beantwoord of verdwenen</h3><ul style="padding-left:18px">')
+            parts.append('<h3 style="color:#f18700;margin:12px 0 4px">Gewijzigd, agenda\'s, termijnen, beantwoord of verdwenen</h3><ul style="padding-left:18px">')
             for x in changed:
                 it = x['item']
                 diff = ''.join(f'<div style="color:#165c35">+ {e(a)}</div>' for a in x.get('added', [])[:2]) + \
@@ -230,7 +268,7 @@ def _mail_html(gemeenten, events_by_gid, since, now_local):
             parts.append(f'<h3 style="color:{color};margin:14px 0 4px">{col} <span style="color:#5b6672;font-weight:normal">({len(rows)})</span></h3><ul style="padding-left:18px">')
             for x in rows[:MAX_MAIL_PER_COLUMN]:
                 it = x['item']
-                sub = ', '.join(v for v in (time_label(it), it.get('koop_type'), it.get('locatie'), it.get('rapport'), it.get('meeting_title')) if v)
+                sub = ', '.join(v for v in (time_label(it), it.get('media_bron'), it.get('koop_type'), it.get('locatie'), it.get('rapport'), it.get('meeting_title')) if v)
                 parts.append(f'<li style="margin:5px 0"><a href="{e(it["url"])}" style="color:#1d1d1b">{e(it["title"])}</a>'
                              + (f'<div style="color:#5b6672;font-size:13px">{e(sub)}</div>' if sub else '') + '</li>')
             if len(rows) > MAX_MAIL_PER_COLUMN:

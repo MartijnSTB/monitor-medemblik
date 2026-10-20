@@ -145,6 +145,9 @@ def today():
     # Alleen de dag: zo verandert 'last_seen' maar één keer per dag en blijft de Git-historie klein.
     return datetime.datetime.now(datetime.timezone.utc).date().isoformat()
 
+def TODAY_ISO():
+    return datetime.date.today().isoformat()
+
 def clean(s):
     return re.sub(r'\s+', ' ', s or '').strip()
 
@@ -675,6 +678,39 @@ def ibabs_parse_meeting(page_html, base):
             docs.append((title, href, punt))
     return docs
 
+def ibabs_agenda_points(page_html):
+    """Alle agendapunten van een vergaderpagina, ook punten zonder documenten: ['5.1 Belastingverordeningen ...']."""
+    page = BeautifulSoup(page_html, 'html.parser')
+    out = []
+    for div in page.select('div.agenda-item'):
+        pid = div.select_one('.panel-id')
+        lab = div.select_one('.panel-title-label')
+        punt = clean(((pid.get_text(strip=True) + ' ') if pid else '') + (lab.get_text(' ', strip=True) if lab else ''))
+        punt = re.sub(r'\s*-\s*\d{1,2}:\d{2}$', '', punt)
+        if punt and punt not in out:
+            out.append(punt)
+    return out
+
+def agenda_key(punt):
+    """Agendapunt zonder nummer, zodat hernummeren (5.1 -> 5.2) geen wijziging is."""
+    return re.sub(r'^\s*[0-9]+[a-z]?(?:\.[0-9]+[a-z]?)*\.?\s*', '', punt, flags=re.I).casefold()
+
+def check_agenda(mitem, m, points):
+    """Vergelijk de agenda met de vorige keer: gepubliceerd, punten erbij of eraf."""
+    vorige = m.get('agenda')
+    m['agenda'] = points
+    if vorige is None:
+        return  # eerste keer gezien: nulmeting
+    if not vorige and points:
+        record_change(mitem, 'Agenda gepubliceerd', f'agenda online met {len(points)} punten', added=points[:3])
+        return
+    oud, nieuw = {agenda_key(p): p for p in vorige}, {agenda_key(p): p for p in points}
+    erbij = [nieuw[k] for k in nieuw if k not in oud]
+    eraf = [oud[k] for k in oud if k not in nieuw]
+    if erbij or eraf:
+        delen = ([f'{len(erbij)} punt(en) erbij'] if erbij else []) + ([f'{len(eraf)} punt(en) eraf'] if eraf else [])
+        record_change(mitem, 'Agenda gewijzigd', ', '.join(delen), added=erbij, removed=eraf)
+
 def doc_id_from(url):
     q = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
     return (q.get('documentId') or [url.rstrip('/').rsplit('/', 1)[-1]])[0]
@@ -689,7 +725,12 @@ def collect_meetings(db, gid):
         lo = (datetime.date.today() - datetime.timedelta(days=MEETING_WINDOW_PAST)).isoformat()
         hi = (datetime.date.today() + datetime.timedelta(days=MEETING_WINDOW_AHEAD)).isoformat()
         window = [(mid, m) for mid, m in meetings.items() if m.get('gemeente') == gid and lo <= m['date'] <= hi]
-        window.sort(key=lambda p: p[1].get('checked', ''))
+        # Komende drie weken vaker controleren (agenda's en stukken verschijnen dan): die eerst,
+        # daarna wie het langst niet is bekeken.
+        soon = (datetime.date.today() + datetime.timedelta(days=21)).isoformat()
+        recent = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(minutes=25)).isoformat(timespec='seconds')
+        window.sort(key=lambda p: (not (TODAY_ISO() <= p[1]['date'] <= soon and p[1].get('checked', '') < recent),
+                                   p[1].get('checked', '')))
         added = fetched = 0
         for mid, m in window[:MEETINGS_PER_RUN]:
             url = base + '/Agenda/Index/' + mid
@@ -710,6 +751,7 @@ def collect_meetings(db, gid):
                          last_seen=today())
             docs = ibabs_parse_meeting(r.text, base)
             m['documents'] = len(docs)
+            check_agenda(mitem, m, ibabs_agenda_points(r.text))
             for title, href, punt in docs:
                 doc_id = doc_id_from(href)
                 key = make_key(DOCS_SOURCE + '|' + doc_id)
@@ -1281,10 +1323,261 @@ def geocode(db):
 # ---------------------------------------------------------------------------
 # Migraties: oudere gegevens bijwerken zonder iets te wissen
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# Raadsvragen die te laat zijn: beantwoordingstermijn uit het reglement van orde
+# Medemblik: art. 37 Reglement van orde 2023 (gmb-2023-200047), max. 30 dagen.
+# Opmeer: Reglement van orde 2026 (gmb-2026-226516), binnen dertig dagen.
+# Een gemeld uitstel (de vragensteller krijgt een nieuwe termijn) is niet te zien in het portaal.
+# ---------------------------------------------------------------------------
+VRAAG_TERMIJN = {'medemblik': 30, 'opmeer': 30}
+
+def check_vraag_termijnen(db):
+    state = db.setdefault('state', {})
+    baseline = not state.get('termijn_v1')  # eerste keer: alleen markeren, niet melden
+    vandaag = datetime.date.today()
+    groups = {}
+    for item in db['items'].values():
+        if 'vragen' in (item.get('rapport') or '').casefold() and item.get('gemeente') in VRAAG_TERMIJN:
+            groups.setdefault((item['gemeente'], norm(item.get('title') or '')[:80]), []).append(item)
+    teller = 0
+    for (gid, _), items in groups.items():
+        beantwoord = any(i.get('antwoord_datum') for i in items)
+        for item in items:
+            open_ = (item.get('excerpt') or '').endswith('nog niet beantwoord') and not beantwoord and not item.get('removed')
+            if not open_:
+                item.pop('termijn_verlopen', None)
+                continue
+            try:
+                ingediend = datetime.date.fromisoformat(item.get('doc_date') or '')
+            except ValueError:
+                continue
+            uiterlijk = ingediend + datetime.timedelta(days=VRAAG_TERMIJN[gid])
+            if vandaag > uiterlijk:
+                teller += 1
+                if not item.get('termijn_verlopen'):
+                    item['termijn_verlopen'] = uiterlijk.isoformat()
+                    if not baseline:
+                        record_change(item, 'Termijn verlopen',
+                                      f'na {VRAAG_TERMIJN[gid]} dagen nog geen antwoord (ingediend {ingediend:%d-%m-%Y}, '
+                                      f'termijn tot {uiterlijk:%d-%m-%Y}); mogelijk is uitstel gemeld')
+    state['termijn_v1'] = True
+    set_status(db, 'algemeen', 'Termijn raadsvragen', ok=True, count=teller,
+               note=f'{teller} raadsvragen staan langer open dan de termijn uit het reglement van orde '
+                    '(Medemblik en Opmeer: 30 dagen). Een uitstelbericht aan de vragensteller is in het portaal niet te zien.')
+
+# ---------------------------------------------------------------------------
+# Buiten de gemeente: andere overheden (KOOP), Tweede Kamer, rechtspraak. Eén keer per uur.
+# ---------------------------------------------------------------------------
+ELDERS_SOURCE = 'Andere overheden'
+TK_SOURCE = 'Tweede Kamer'
+RS_SOURCE = 'Rechtspraak'
+ELDERS_DAYS = 45
+# Namen die ook achternaam zijn of elders in Noord-Holland voorkomen (Zuid-Scharwoude, Oudendijk bij Strijen):
+# niet los zoeken bij de rechtspraak (daar staan advocatennamen in de tekst).
+RS_OVERSLAAN = {'scharwoude', 'oudendijk', 'berkhout', 'twisk', 'ursem'}
+
+def plaats_regex(naam):
+    return re.compile(r'(?<![\w-])' + re.escape(naam) + r'(?![\w-])', re.I)
+
+# Plaatsnamen die ook elders in het land voorkomen of een achternaam zijn.
+PLAATS_DUBBEL = {'oudendijk', 'scharwoude', 'twisk', 'berkhout', 'ursem'}
+LOKALE_INSTANTIES = ('Noord-Holland', 'Hoogheemraadschap Hollands Noorderkwartier')
+
+def plaats_in(text, dubbel_ok=True):
+    """Eerste gemeente waarvan een plaatsnaam in de tekst staat: (gid, plaats) of (None, None).
+    dubbel_ok=False: namen uit PLAATS_DUBBEL tellen niet mee."""
+    for gid, cfg in GEMEENTEN.items():
+        for p in [cfg['naam']] + cfg.get('plaatsen', []):
+            if not dubbel_ok and p.casefold() in PLAATS_DUBBEL:
+                continue
+            if plaats_regex(p).search(text or ''):
+                return gid, p
+    return None, None
+
+def elders_first(db, naam):
+    """Draait deze bron voor het eerst? Dan geen pushmeldingen voor wat er al stond."""
+    return naam not in db.get('state', {}).get('elders', {})
+
+def elders_due(db, naam, minutes=60):
+    st = db.setdefault('state', {}).setdefault('elders', {})
+    last = st.get(naam)
+    if last and (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(last)).total_seconds() < minutes * 60:
+        return False
+    st[naam] = utc()
+    return True
+
+def collect_andere_overheden(db):
+    """Bekendmakingen van provincie, waterschap, ministeries en buurgemeenten waarin een van onze
+    plaatsen in de titel of samenvatting staat. Kamerstukken komen via collect_tweede_kamer."""
+    eerste = elders_first(db, 'koop')
+    if not elders_due(db, 'koop'):
+        return
+    sinds = (datetime.date.today() - datetime.timedelta(days=ELDERS_DAYS)).isoformat()
+    added = total = 0
+    errors = []
+    eigen = {c['koop'] for c in GEMEENTEN.values()}
+    # Opruimen van eerder opgeslagen treffers die niet meer aan de regels voldoen.
+    for key in [k for k, v in db['items'].items() if v.get('source') == ELDERS_SOURCE and (
+            v.get('instantie') in eigen or (v.get('instantie') not in LOKALE_INSTANTIES and (
+                (v.get('plaats') or '').casefold() in PLAATS_DUBBEL
+                or re.search(re.escape(v.get('plaats') or '~') + r'\s+\d', v.get('title') or ''))))]:
+        db['items'].pop(key)
+    for gid, cfg in GEMEENTEN.items():
+        namen = [cfg['naam']] + cfg.get('plaatsen', [])
+        terms = ' OR '.join(f'"{n}"' for n in dict.fromkeys(namen))
+        q = (f'c.product-area=="officielepublicaties" AND ({terms}) AND dt.modified>={sinds} '
+             f'NOT dt.creator=="{cfg["koop"]}"')
+        try:
+            r = requests.get('https://repository.overheid.nl/sru', params={'operation': 'searchRetrieve', 'version': '2.0',
+                             'query': q, 'maximumRecords': '500'}, headers=HEADERS, timeout=90)
+            r.raise_for_status()
+            root = ET.fromstring(r.content)
+            for record in root.findall('.//{*}recordData'):
+                def values(name):
+                    return [clean(e.text) for e in record.iter() if e.tag.rsplit('}', 1)[-1] == name and e.text and clean(e.text)]
+                first = lambda name: (values(name) or [None])[0]
+                creator = first('creator') or ''
+                if 'Kamer der Staten-Generaal' in creator or creator in eigen:
+                    continue  # Kamerstukken via collect_tweede_kamer; eigen bekendmakingen staan al in KOOP
+                title = first('title') or ''
+                tekst = title + ' ' + (first('abstract') or '')
+                # Oudendijk, Twisk e.d. bestaan ook elders: alleen bij provincie en waterschap meetellen.
+                hit_gid, plaats = plaats_in(tekst, dubbel_ok=creator in LOKALE_INSTANTIES)
+                if not hit_gid:
+                    continue  # plaats alleen ergens diep in de tekst (bijv. een lijst van alle gemeenten)
+                if creator not in LOKALE_INSTANTIES and re.search(re.escape(plaats) + r'\s+\d', tekst):
+                    continue  # straatnaam elders, bijv. 'Koggenland 29, Purmerend'
+                m = next((re.search(r'[a-z]+(?:-[a-z]+)?-\d{4}-[\w-]+', x) for x in values('identifier')
+                          if re.search(r'^[a-z]+(?:-[a-z]+)?-\d{4}-[\w-]+$', x)), None)
+                if not m:
+                    continue
+                ident = m.group()
+                url = f'https://zoek.officielebekendmakingen.nl/{ident}.html'
+                key = make_key(ELDERS_SOURCE + '|' + ident)
+                item = db['items'].get(key)
+                if item is None:
+                    item = db['items'][key] = new_item(hit_gid, title, url, ELDERS_SOURCE, excerpt='', baseline=eerste or None)
+                    added += 1
+                datum = (first('available') or first('modified') or '')[:10] or None
+                types = [t for t in values('type') if '|' not in t]
+                item.update(gemeente=hit_gid, instantie=creator, plaats=plaats, doc_date=datum,
+                            doc_date_label='publicatiedatum', koop_type=(types[0] if types else None),
+                            excerpt=f'{creator}' + (f' · {types[0]}' if types else ''), last_seen=today())
+                total += 1
+        except Exception as exc:
+            errors.append(f'{cfg["naam"]}: {str(exc)[:80]}')
+    set_status(db, 'algemeen', ELDERS_SOURCE, ok=not errors, count=total, new=added,
+               error='; '.join(errors) or None,
+               note=f'Officiële bekendmakingen van provincie Noord-Holland, het waterschap (HHNK), ministeries en andere '
+                    f'gemeenten waarin een van de plaatsen in de titel of samenvatting staat (laatste {ELDERS_DAYS} dagen). '
+                    'Eén keer per uur.')
+
+def collect_tweede_kamer(db):
+    """Kamerstukken (o.a. schriftelijke vragen, moties, brieven) met een van onze plaatsen in titel of onderwerp,
+    via de open data van de Tweede Kamer (gegevensmagazijn)."""
+    eerste = elders_first(db, 'tk')
+    if not elders_due(db, 'tk'):
+        return
+    namen = list(dict.fromkeys(n for cfg in GEMEENTEN.values() for n in [cfg['naam']] + cfg.get('plaatsen', [])
+                               if n.casefold() not in ('scharwoude', 'oudendijk')))
+    sinds = (datetime.date.today() - datetime.timedelta(days=ELDERS_DAYS)).isoformat()
+    namen += ['West-Friesland', 'Westfriesland']
+    try:
+        docs, seen = [], set()
+        # In blokjes van 6 namen: een te lange zoekvraag weigert de API (HTTP 400).
+        for i in range(0, len(namen), 6):
+            cond = ' or '.join(f"contains(Onderwerp,'{n}') or contains(Titel,'{n}')" for n in namen[i:i + 6])
+            r = requests.get('https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Document', headers=HEADERS, timeout=60, params={
+                '$filter': f'({cond}) and Verwijderd eq false and Datum ge {sinds}', '$orderby': 'Datum desc', '$top': 100,
+                '$select': 'Id,Soort,Onderwerp,Titel,Datum,DocumentNummer'})
+            if not r.ok:
+                raise RuntimeError(f'HTTP {r.status_code}: {r.text[:150]}')
+            for d in r.json().get('value', []):
+                if d['Id'] not in seen:
+                    seen.add(d['Id'])
+                    docs.append(d)
+        added = 0
+        for d in docs:
+            onderwerp = clean(d.get('Onderwerp') or '')
+            titel = clean(d.get('Titel') or '')
+            hit_gid, plaats = plaats_in(onderwerp + ' ' + titel)
+            regio = not hit_gid
+            if regio:
+                hit_gid = next(iter(GEMEENTEN))  # West-Friesland in het algemeen: bij de eerste gemeente
+            key = make_key(TK_SOURCE + '|' + d['Id'])
+            item = db['items'].get(key)
+            if item is None:
+                item = db['items'][key] = new_item(hit_gid, onderwerp or titel, '', TK_SOURCE, excerpt='', baseline=eerste or None)
+                added += 1
+            item.update(title=onderwerp or titel, gemeente=hit_gid, plaats=plaats if not regio else None,
+                        url=f'https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Document({d["Id"]})/resource',
+                        tk_soort=d.get('Soort'), doc_date=(d.get('Datum') or '')[:10] or None, doc_date_label='datum',
+                        excerpt=(d.get('Soort') or 'Kamerstuk') + (f' · {titel}' if titel and titel != onderwerp else '')
+                                + f' · {d.get("DocumentNummer")}', last_seen=today())
+        set_status(db, 'algemeen', TK_SOURCE, ok=True, count=len(docs), new=added,
+                   note=f'Tweede Kamer (open data): documenten van de laatste {ELDERS_DAYS} dagen met een van de plaatsen of '
+                        '"West-Friesland" in titel of onderwerp. Alleen titel en onderwerp, niet de volledige tekst. Eén keer per uur.')
+    except Exception as exc:
+        set_status(db, 'algemeen', TK_SOURCE, ok=False, error=str(exc)[:250])
+
+def collect_rechtspraak(db):
+    """Nieuw gepubliceerde uitspraken waarin een van onze plaatsen voorkomt (zoekfunctie van uitspraken.rechtspraak.nl)."""
+    eerste = elders_first(db, 'rechtspraak')
+    if not elders_due(db, 'rechtspraak'):
+        return
+    grens = datetime.date.today() - datetime.timedelta(days=ELDERS_DAYS)
+    added = total = 0
+    errors = []
+    for gid, cfg in GEMEENTEN.items():
+        for plaats in dict.fromkeys([cfg['naam']] + cfg.get('plaatsen', [])):
+            if plaats.casefold() in RS_OVERSLAAN:
+                continue
+            try:
+                r = requests.post('https://uitspraken.rechtspraak.nl/api/zoek', headers=HEADERS, timeout=40, json={
+                    'StartRow': 0, 'PageSize': 20, 'ShouldReturnHighlights': False, 'ShouldCountFacets': False,
+                    'SortOrder': 'PublicatieDatumDesc', 'SearchTerms': [{'Term': f'"{plaats}"', 'Field': 'AlleVelden'}],
+                    'Contentsoorten': [], 'Rechtsgebieden': [], 'Instanties': [], 'DatumPublicatie': [], 'DatumUitspraak': [],
+                    'Advanced': {'PublicatieStatus': 'AlleenGepubliceerd'}, 'CorrelationId': 'monitor', 'Proceduresoorten': []})
+                r.raise_for_status()
+                for res in r.json().get('Results', []):
+                    pub = (res.get('PublicatiedatumDate') or '')[:10]
+                    if not pub or pub < grens.isoformat():
+                        continue
+                    ecli = res.get('TitelEmphasis') or ''
+                    if not ecli.startswith('ECLI:'):
+                        continue
+                    total += 1
+                    key = make_key(RS_SOURCE + '|' + ecli)
+                    frag = clean(res.get('Tekstfragment') or '')
+                    titel = re.split(r'(?<=[.!?])\s', frag, 1)[0][:200] if frag else ''
+                    if len(titel) < 45:
+                        titel = frag[:160] + ('…' if len(frag) > 160 else '') if len(frag) > len(titel) else titel
+                    titel = titel or clean(res.get('Titel') or ecli)
+                    item = db['items'].get(key)
+                    if item is None:
+                        item = db['items'][key] = new_item(gid, titel, res.get('DeeplinkUrl') or '', RS_SOURCE, excerpt='', baseline=eerste or None)
+                        added += 1
+                    uitspraak = res.get('Uitspraakdatum') or ''
+                    item.update(title=titel, instantie=clean(res.get('Titel') or ''), ecli=ecli, plaats=item.get('plaats') or plaats,
+                                rechtsgebied=', '.join(res.get('Rechtsgebieden') or []), doc_date=pub,
+                                doc_date_label='gepubliceerd', excerpt=f'{clean(res.get("Titel") or "")} · '
+                                f'{", ".join(res.get("Rechtsgebieden") or [])} · zoekterm {item.get("plaats") or plaats}'
+                                + (f' · {frag[:300]}' if frag else ''), last_seen=today())
+            except Exception as exc:
+                errors.append(f'{plaats}: {str(exc)[:60]}')
+    set_status(db, 'algemeen', RS_SOURCE, ok=not errors, count=total, new=added, error='; '.join(errors)[:250] or None,
+               note=f'Uitspraken op rechtspraak.nl (laatste {ELDERS_DAYS} dagen gepubliceerd) waarin de gemeente of een '
+                    'van de dorpen voorkomt. Namen die ook achternaam zijn (Berkhout, Twisk) of elders voorkomen worden '
+                    'niet los gezocht. Uitspraken zijn geanonimiseerd. Eén keer per uur.')
+
 def migrate(db):
     db.setdefault('items', {})
     db.setdefault('status', {})
     state = db.setdefault('state', {})
+    # Okt 2026: bronnen buiten de gemeente opnieuw laten ophalen na aanpassing van de zoekregels.
+    if state.get('elders_v') != 2:
+        state.pop('elders', None)
+        state['elders_v'] = 2
     archive = db.setdefault('archief', {})
     med = GEMEENTEN['medemblik']
     # Versie 3 sloeg kopjes als 'Samenvatting' op als collegebesluiten: naar het archief (niet gewist).
@@ -1400,6 +1693,12 @@ def main():
         collect_pages(db, gid)
         if cfg.get('plaatsen'):
             collect_media(db, gid, cfg['plaatsen'])
+    for fn in (collect_andere_overheden, collect_tweede_kamer, collect_rechtspraak):
+        try:
+            fn(db)
+        except Exception as exc:
+            print(fn.__name__, exc)
+    check_vraag_termijnen(db)
     koop_publication_times(db)
     fetch_grenzen()
     geocode(db)
