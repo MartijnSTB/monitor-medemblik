@@ -282,6 +282,7 @@
   .b{font-size:11.5px;font-weight:700;padding:0 7px;border-radius:999px;background:var(--ice);color:var(--link);line-height:1.65;white-space:nowrap}
   .b.new{background:var(--deep);color:#fff}
   .b.chg{background:var(--orange);color:#fff}
+  .agflag{display:block;font-style:normal;font-size:11px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
   .b.ans{background:var(--greenbg);color:var(--greenink)}
   .b.old{background:var(--line2);color:var(--muted)}
   .b.gone{background:var(--redbg);color:var(--red)}
@@ -456,6 +457,7 @@
         <summary class="chip" id="moresum">Meer ▾</summary>
         <div class="pop">
           <button data-k="beantwoord" aria-pressed="false">Beantwoorde raadsvragen</button>
+          <button data-k="telaat" aria-pressed="false">Raadsvragen over de termijn</button>
           <button data-k="verwijderd" aria-pressed="false">Verdwenen stukken</button>
           <button data-k="sinds" aria-pressed="false">Nieuw of gewijzigd sinds vorig bezoek</button>
           <button data-k="opgepakt" aria-pressed="false">Opgepakt (vinkje)</button>
@@ -563,14 +565,14 @@ const ic = (k, cls = 'i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidde
 // Vijf kolommen in de logokleuren
 // ---------------------------------------------------------------------------
 const COLS = [
-  {id:'bek',  title:'Bekendmakingen', icon:'bek', color:'#006dac', note:'Vergunningen, verordeningen en besluiten uit het Gemeenteblad (KOOP)',
-   test:x => x.source === 'Officiele bekendmakingen (KOOP)'},
+  {id:'bek',  title:'Bekendmakingen', icon:'bek', color:'#006dac', note:'Vergunningen, verordeningen en besluiten uit het Gemeenteblad (KOOP), plus provincie, waterschap en Rijk over jouw dorpen',
+   test:x => x.source === 'Officiele bekendmakingen (KOOP)' || x.source === 'Andere overheden'},
   {id:'raad', title:'Raad', icon:'raad', color:'#1b4e8e', note:'Raadsstukken, moties, raadsvragen en informatiebrieven',
    test:x => (x.source === 'Raadsstukken' || x.source === 'Raadsportaal') && x.kind !== 'vergadering'},
   {id:'col',  title:'College', icon:'college', color:'#f18700', note:'Besluiten en besluitenlijsten van burgemeester en wethouders',
    test:x => x.source === 'Collegebesluiten'},
-  {id:'nws',  title:'Nieuws en Woo', icon:'nieuws', color:'#5498cf', note:'Nieuwsberichten van de gemeente en openbaar gemaakte informatie',
-   test:x => ['Nieuws','Woo-verzoeken','Openbare informatie'].includes(x.source)},
+  {id:'nws',  title:'Nieuws en meer', icon:'nieuws', color:'#5498cf', note:'Nieuws van de gemeente, Woo, Tweede Kamer en rechtspraak',
+   test:x => ['Nieuws','Woo-verzoeken','Openbare informatie','Tweede Kamer','Rechtspraak'].includes(x.source)},
   {id:'med',  title:'In de media', icon:'media', color:'var(--media)', note:'Artikelen over de gemeente en haar dorpen, via Google Nieuws',
    test:x => x.source === 'In de media'},
 ];
@@ -636,6 +638,7 @@ function kinds(x){
   if (t.includes('nieuw') || chgSince(x)) t.push('sinds');
   if (x.last_change) t.push('gewijzigd');
   if (x.antwoord_datum) t.push('beantwoord');
+  if (x.termijn_verlopen && !x.antwoord_datum) t.push('telaat');
   if (x.removed) t.push('verwijderd');
   if (x.kw_hits) t.push('trefwoord');
   return (x._k = t);
@@ -674,14 +677,19 @@ function typeInfo(x){
   } else if (x.source === 'Collegebesluiten') {
     label = x.kind === 'besluitenlijst' ? 'Besluitenlijst' : x.kind === 'collegeagenda' ? 'Collegeagenda' : x.kind === 'collegebesluit' ? 'Collegebesluit' : 'College';
     icon = 'college'; important = x.kind === 'besluitenlijst';
-  } else if (x.source === 'In de media') { label = ''; icon = 'media'; }
+  } else if (x.source === 'Andere overheden') {
+    label = x.instantie || 'Andere overheid'; icon = /waterschap|hoogheemraad/i.test(label) ? 'regel' : 'bek'; tc = '#2b6a8f';
+    important = /ministerie|rijkswaterstaat/i.test(label); routine = !important;
+  } else if (x.source === 'Tweede Kamer') { label = x.tk_soort || 'Tweede Kamer'; icon = 'raad'; tc = '#7a3e9d'; important = true; }
+  else if (x.source === 'Rechtspraak') { label = 'Rechtspraak' + (x.rechtsgebied ? ' · ' + x.rechtsgebied : ''); icon = 'regel'; tc = '#8a2c2c'; important = true; }
+  else if (x.source === 'In de media') { label = ''; icon = 'media'; }
   else if (x.source === 'Nieuws') { label = 'Nieuws gemeente'; icon = 'nieuws'; }
   else { label = x.source === 'Woo-verzoeken' ? 'Woo-verzoek' : x.source; icon = 'doc'; }
   return (x._type = {label, icon, tc, routine, important});
 }
 // Uitgelicht: belangrijke soort, of er is iets gebeurd (beantwoord, trefwoord, gewijzigd sinds je bezoek).
 // Gekleurde kaart alleen als er écht iets is: beantwoord, trefwoord of gewijzigd sinds je bezoek.
-const isHi = x => !!x.antwoord_datum || !!x.kw_hits || chgSince(x);
+const isHi = x => !!x.antwoord_datum || !!x.kw_hits || chgSince(x) || (!!x.termijn_verlopen && !x.antwoord_datum);
 const isLo = x => typeInfo(x).routine && !isHi(x);
 // Belangrijk voor 'Dit moet je zien': belangrijke soort óf er is iets gebeurd.
 const isKey = x => typeInfo(x).important || isHi(x);
@@ -691,6 +699,7 @@ function badges(x){
   if (mark(x.id, 'k')) out.push('<span class="b done">Opgepakt</span>');
   if (k.includes('gewijzigd')) out.push('<span class="b chg">Gewijzigd</span>');
   if (k.includes('beantwoord')) out.push(`<span class="b ans">Beantwoord ${nl(x.antwoord_datum,{day:'numeric',month:'short'})}</span>`);
+  if (k.includes('telaat')) out.push(`<span class="b gone" title="Volgens het reglement van orde moest het antwoord er uiterlijk ${nl(x.termijn_verlopen)} zijn. Een uitstelbericht aan de vragensteller is niet te zien.">Termijn verlopen ${nl(x.termijn_verlopen,{day:'numeric',month:'short'})}</span>`);
   if (k.includes('verwijderd')) out.push('<span class="b gone">Niet meer online</span>');
   if (k.includes('historisch')) out.push('<span class="b old">Historisch</span>');
   (x.kw_hits || []).forEach(w => out.push(`<span class="b kw" title="Trefwoord uit trefwoorden.txt">${esc(w)}</span>`));
@@ -760,6 +769,9 @@ function bronNaam(x){
   if (x.source === 'Raadsstukken' || x.source === 'Raadsportaal')
     return (x.rapport && !/raadsportaal/i.test(x.rapport) ? x.rapport : 'Raadsinformatie') + ', ' + g;
   if (x.source === 'Nieuws') return 'Nieuwsbericht ' + g;
+  if (x.source === 'Andere overheden') return (x.koop_type ? cap(x.koop_type) + ', ' : '') + 'officiële bekendmaking ' + (x.instantie || '');
+  if (x.source === 'Tweede Kamer') return (x.tk_soort || 'Kamerstuk') + ', Tweede Kamer';
+  if (x.source === 'Rechtspraak') return (x.instantie || 'Rechtspraak') + (x.ecli ? ', ' + x.ecli : '');
   return x.source + ', ' + g;
 }
 function citation(x){
@@ -1048,6 +1060,13 @@ function meetParts(x){
   if (rest.toLowerCase().startsWith(soort.toLowerCase())) rest = rest.slice(soort.length).trim();
   return {soort, rest, tijd};
 }
+// Agenda gewijzigd of net online (laatste 3 dagen)? Klein label bij de vergadering, met de punten als tooltip.
+function agendaFlag(x){
+  const c = (x.changes || []).filter(c => /^Agenda/.test(c.type) && (Date.now() - new Date(c.at)) < 3 * 864e5).pop();
+  if (!c) return '';
+  const tip = [...(c.added || []).map(a => '+ ' + a), ...(c.removed || []).map(r => '− ' + r)].join('\n');
+  return `<em class="agflag" title="${esc(tip || c.summary)}">${c.type === 'Agenda gepubliceerd' ? 'agenda online' : 'agenda gewijzigd'}</em>`;
+}
 function renderAgenda(){
   const up = DATA.items.filter(x => x.kind === 'vergadering' && x.doc_date >= TODAY).sort((a,b) => a.doc_date.localeCompare(b.doc_date));
   const head = `<span class="agl">${ic('kal')}Agenda</span>`;
@@ -1059,7 +1078,7 @@ function renderAgenda(){
     const m = meetParts(x), d = dt(x.doc_date);
     return `<a class="ev" href="${esc(x.url)}" target="_blank" rel="noopener" title="${esc(x.title)}">
       <span class="d"><small>${d.toLocaleDateString('nl-NL',{weekday:'short'})}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('nl-NL',{month:'short'})}</small></span>
-      <span class="w"><strong>${esc(m.soort)}</strong><span>${m.tijd ? m.tijd + (m.rest ? ' · ' : '') : ''}${esc(m.rest)}</span></span></a>`;
+      <span class="w"><strong>${esc(m.soort)}</strong><span>${m.tijd ? m.tijd + (m.rest ? ' · ' : '') : ''}${esc(m.rest)}</span>${agendaFlag(x)}</span></a>`;
   }).join('')}</div>`;
 }
 
@@ -1144,7 +1163,7 @@ function renderToday(){
   const stats = [
     ['col:raad', 'raad en college', cnt(x => COLS[1].test(x) || COLS[2].test(x))],
     ['col:bek', 'bekendmakingen', cnt(isBek)],
-    ['col:nws', 'gemeentenieuws en Woo', cnt(COLS[3].test)],
+    ['col:nws', 'nieuws en meer', cnt(COLS[3].test)],
     ['col:med', 'in de media', cnt(media)],
     ['f:trefwoord', 'met een trefwoord', cnt(x => x.kw_hits)],
   ].filter(([, , n]) => n);
@@ -1199,7 +1218,7 @@ function renderToday(){
   const side = `<div>
     ${sec('Agenda', '', agenda.length ? `<div class="tl">${agenda.map(x => { const m = meetParts(x), d = dt(x.doc_date); return `<a href="${esc(x.url)}" target="_blank" rel="noopener" title="${esc(x.title)}">
         <span class="when2">${d.toLocaleDateString('nl-NL',{weekday:'short'})} ${d.getDate()}<small>${d.toLocaleDateString('nl-NL',{month:'short'})}${m.tijd ? ' ' + m.tijd : ''}</small></span>
-        <span><strong>${esc(m.soort)}</strong>${m.rest ? `<span class="s">${esc(m.rest)}</span>` : ''}</span></a>`; }).join('')}</div>`
+        <span><strong>${esc(m.soort)}</strong>${m.rest ? `<span class="s">${esc(m.rest)}</span>` : ''}${agendaFlag(x)}</span></a>`; }).join('')}</div>`
       : `<div class="tcard"><p class="calm">${DATA.gemeente === 'koggenland' ? 'De Koggenlandse raad wordt niet gevolgd.' : 'Geen vergaderingen gepland.'}</p></div>`)}
     ${sec('In de media', med.length || '', med.length ? `<div class="tcard">${med.slice(0, 5).map(x => todayItem(x)).join('')}${med.length > 5 ? moreBtn(`Nog ${med.length - 5} verhalen bekijken`, 'col:med') : ''}</div>`
       : `<div class="tcard"><p class="calm">Geen nieuwe artikelen sinds je vorige bezoek.</p></div>`)}

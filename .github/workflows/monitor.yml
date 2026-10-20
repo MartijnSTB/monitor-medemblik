@@ -10,6 +10,7 @@ on:
     - cron: '7,37 * * * *'
 permissions:
   contents: write
+  actions: read
 # Nooit twee runs tegelijk (externe wekker + GitHub-schema + handmatig): de volgende wacht netjes.
 concurrency:
   group: monitor
@@ -48,3 +49,18 @@ jobs:
             git pull --rebase -X theirs origin main || { git rebase --abort; sleep 5; }
           done
           echo "Opslaan lukte niet na 3 pogingen; de volgende run haalt dit in."
+      - name: Pushmelding bij een mislukte run
+        # Alleen de eerste mislukking melden; bij aanhoudende storing meldt de wachter (wachter.yml).
+        if: failure()
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -z "$NTFY_TOPIC" ] && exit 0
+          vorige=$(gh api "repos/${{ github.repository }}/actions/workflows/monitor.yml/runs?status=completed&per_page=1" --jq '.workflow_runs[0].conclusion' || echo onbekend)
+          if [ "$vorige" = "success" ]; then
+            curl -s -H "Title: Gemeentemonitor: run mislukt" -H "Tags: warning" \
+              -H "Click: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -d "Een run van de monitor is mislukt. De volgende run probeert het opnieuw. Blijft het misgaan, dan meldt de wachter dat na twee uur." \
+              "https://ntfy.sh/$NTFY_TOPIC"
+          fi

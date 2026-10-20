@@ -1,0 +1,31 @@
+name: Wachter
+# Controleert elk uur of de monitor nog draait. Is de laatste geslaagde run meer dan twee uur oud
+# (cron-job.org uit, GitHub-storing, steeds mislukte runs), dan komt er een pushmelding.
+# Eén melding na 2 uur en nog één na 12 uur, niet elk uur opnieuw.
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+permissions:
+  actions: read
+jobs:
+  wachter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Laatste geslaagde run controleren
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          last=$(gh api "repos/${{ github.repository }}/actions/workflows/monitor.yml/runs?status=success&per_page=1" --jq '.workflow_runs[0].updated_at')
+          age=$(( ( $(date +%s) - $(date -d "$last" +%s) ) / 60 ))
+          echo "Laatste geslaagde monitor-run: $last ($age minuten geleden)"
+          if [ -z "$NTFY_TOPIC" ]; then echo "Geen NTFY_TOPIC ingesteld"; exit 0; fi
+          if { [ $age -ge 120 ] && [ $age -lt 185 ]; } || { [ $age -ge 720 ] && [ $age -lt 785 ]; }; then
+            uur=$(( age / 60 ))
+            curl -s -H "Title: Gemeentemonitor ligt stil" -H "Tags: rotating_light" -H "Priority: high" \
+              -H "Click: ${{ github.server_url }}/${{ github.repository }}/actions" \
+              -d "De monitor heeft al ${uur} uur niet goed gedraaid. Controleer cron-job.org en de runs op GitHub. Tot die tijd mis je nieuwe stukken." \
+              "https://ntfy.sh/$NTFY_TOPIC"
+          fi
