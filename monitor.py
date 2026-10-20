@@ -1615,6 +1615,10 @@ def collect_woo(db):
     vanaf = (datetime.date.today() - datetime.timedelta(days=ELDERS_DAYS)).strftime('%d-%m-%Y')
     added = total = 0
     errors = []
+    # open.overheid.nl bevat ook regelgeving die al als bekendmaking (KOOP) binnenkomt: die niet dubbel.
+    koop_titels = {norm(v.get('title') or '') for v in db['items'].values() if v.get('source') == KOOP_SOURCE}
+    for key in [k for k, v in db['items'].items() if v.get('source') == WOO_SOURCE and norm(v.get('title') or '') in koop_titels]:
+        db['items'].pop(key)
     for gid, cfg in GEMEENTEN.items():
         eigen = 'gemeente ' + cfg['naam'].casefold()
         for naam in dict.fromkeys([cfg['naam']] + cfg.get('plaatsen', [])):
@@ -1634,7 +1638,7 @@ def collect_woo(db):
                         hit_gid, plaats = plaats_in(titel + ' ' + oms, dubbel_ok=False)
                         if not hit_gid:
                             continue
-                    if not titel or not d.get('id'):
+                    if not titel or not d.get('id') or norm(titel) in koop_titels:
                         continue
                     total += 1
                     key = make_key(WOO_SOURCE + '|' + d['id'])
