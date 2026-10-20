@@ -678,8 +678,9 @@ function typeInfo(x){
     label = x.kind === 'besluitenlijst' ? 'Besluitenlijst' : x.kind === 'collegeagenda' ? 'Collegeagenda' : x.kind === 'collegebesluit' ? 'Collegebesluit' : 'College';
     icon = 'college'; important = x.kind === 'besluitenlijst';
   } else if (x.source === 'Andere overheden') {
-    label = x.instantie || 'Andere overheid'; icon = /waterschap|hoogheemraad/i.test(label) ? 'regel' : 'bek'; tc = '#2b6a8f';
-    important = /ministerie|rijkswaterstaat/i.test(label); routine = !important;
+    const inst = x.instantie || '';
+    label = /hoogheemraad/i.test(inst) ? 'Waterschap HHNK' : inst === 'Noord-Holland' ? 'Provincie Noord-Holland' : (inst || 'Andere overheid');
+    icon = 'bek'; tc = '#2b6a8f'; important = /ministerie|rijkswaterstaat/i.test(inst);
   } else if (x.source === 'Tweede Kamer') { label = x.tk_soort || 'Tweede Kamer'; icon = 'raad'; tc = '#7a3e9d'; important = true; }
   else if (x.source === 'Rechtspraak') { label = 'Rechtspraak' + (x.rechtsgebied ? ' · ' + x.rechtsgebied : ''); icon = 'regel'; tc = '#8a2c2c'; important = true; }
   else if (x.source === 'In de media') { label = ''; icon = 'media'; }

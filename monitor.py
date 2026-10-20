@@ -1418,8 +1418,9 @@ def collect_andere_overheden(db):
     eigen = {c['koop'] for c in GEMEENTEN.values()}
     # Opruimen van eerder opgeslagen treffers die niet meer aan de regels voldoen.
     for key in [k for k, v in db['items'].items() if v.get('source') == ELDERS_SOURCE and (
-            v.get('instantie') in eigen or ((v.get('plaats') or '').casefold() in PLAATS_DUBBEL
-                                            and v.get('instantie') not in LOKALE_INSTANTIES))]:
+            v.get('instantie') in eigen or (v.get('instantie') not in LOKALE_INSTANTIES and (
+                (v.get('plaats') or '').casefold() in PLAATS_DUBBEL
+                or re.search(re.escape(v.get('plaats') or '~') + r'\s+\d', v.get('title') or ''))))]:
         db['items'].pop(key)
     for gid, cfg in GEMEENTEN.items():
         namen = [cfg['naam']] + cfg.get('plaatsen', [])
@@ -1444,6 +1445,8 @@ def collect_andere_overheden(db):
                 hit_gid, plaats = plaats_in(tekst, dubbel_ok=creator in LOKALE_INSTANTIES)
                 if not hit_gid:
                     continue  # plaats alleen ergens diep in de tekst (bijv. een lijst van alle gemeenten)
+                if creator not in LOKALE_INSTANTIES and re.search(re.escape(plaats) + r'\s+\d', tekst):
+                    continue  # straatnaam elders, bijv. 'Koggenland 29, Purmerend'
                 m = next((re.search(r'[a-z]+(?:-[a-z]+)?-\d{4}-[\w-]+', x) for x in values('identifier')
                           if re.search(r'^[a-z]+(?:-[a-z]+)?-\d{4}-[\w-]+$', x)), None)
                 if not m:
