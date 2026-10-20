@@ -1,3 +1,4 @@
+import sys; sys.path.insert(0, ".")
 import json, collections, monitor as m
 db = json.load(open('data/items.json'))
 for gid in ('medemblik', 'opmeer'):
