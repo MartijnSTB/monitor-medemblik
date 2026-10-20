@@ -1,27 +1,12 @@
-== 403 text/html https://api.politie.nl/v4/nieuws?query=Medemblik&maxnumberofitems=5
-<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1>   You don't have permission to access "http&#58;&#47;&#47;api&#46;politie&#46;nl&#47;v4&#47;nieuws&#63;" on this server.<P> Reference&#32;&#35;18&#46;aef50f17&#46;1792520860&#46;58bb66f2 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;aef50f17&#46;1792520860&#46;58bb66f2</P> </BODY> </HTML> 
-
-== 403 text/html https://api.politie.nl/v4/nieuws?lat=52.77&lon=5.1&radius=10&maxnumberofitems=5
-<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1>   You don't have permission to access "http&#58;&#47;&#47;api&#46;politie&#46;nl&#47;v4&#47;nieuws&#63;" on this server.<P> Reference&#32;&#35;18&#46;a8f50f17&#46;1792520860&#46;521d6e0f <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;a8f50f17&#46;1792520860&#46;521d6e0f</P> </BODY> </HTML> 
-
-== 403 text/html https://api.politie.nl/v4/nieuws/lokaal?lat=52.77&lon=5.1&radius=10&maxnumberofitems=5
-<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1>   You don't have permission to access "http&#58;&#47;&#47;api&#46;politie&#46;nl&#47;v4&#47;nieuws&#47;lokaal&#63;" on this server.<P> Reference&#32;&#35;18&#46;a8f50f17&#46;1792520860&#46;521d6f17 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;a8f50f17&#46;1792520860&#46;521d6f17</P> </BODY> </HTML> 
-
-== 403 text/html https://api.politie.nl/v4/vermist?query=Medemblik&maxnumberofitems=3
-<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1>   You don't have permission to access "http&#58;&#47;&#47;api&#46;politie&#46;nl&#47;v4&#47;vermist&#63;" on this server.<P> Reference&#32;&#35;18&#46;a8f50f17&#46;1792520860&#46;521d7059 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;a8f50f17&#46;1792520860&#46;521d7059</P> </BODY> </HTML> 
-
-== 200 application/json https://open.overheid.nl/overheid/openbaarmakingen/api/v0/zoek?q=Medemblik&size=3
-{"totaal":720553,"resultaten":[{"document":{"id":"2b9d6c07-d66e-42a3-a4a4-b3a090a0eddf","pid":"https://open.overheid.nl/documenten/2b9d6c07-d66e-42a3-a4a4-b3a090a0eddf","titel":"Beslisnota bij Nader rapport inzake het voorstel van rijkswet inzake afbakening zeegrens Caribisch gebied Saint Kitts en Nevis","omschrijving":"In een beslisnota staat achtergrondinformatie die bewindspersonen gebruiken bij de besluitvorming over een Kamerstuk.","openbaarmakingsdatum":"2026-10-20","publisher":"ministerie van Buitenlandse Zaken","aanbieder":"Aanleverloket","mutatiedatumtijd":"2026-10-20T16:47:47.27Z"},"bestandsgrootte":"0.55 MB","aantalPaginas":2,"bestandsType":"application/pdf"},{"document":{"id":"15321ced-25f8-4648-bf57-ac993ca130f1","pid":"https://open.overheid.nl/documenten/15321ced-25f8-4648-bf57-ac993ca130f1","titel":"Memorie van toelichting bij Nader rapport inzake het voorstel van rijkswet inzake afbakening zeegrens Caribisch gebied Saint Kitts en Nevis","openbaarmakingsdatum":"2026-10-20","publisher":"ministerie van Buitenlandse Zaken","aanbieder":"Aanleverloket","mutatiedatumtijd":"2026-10-20T16:47:46.397Z"},"bestandsgrootte":"0.31 MB","aantalPaginas":5,"bestandsType":"application/
-
-== 401 None https://open.overheid.nl/zoekresultaten?text=Medemblik
-
-
-== 401 None https://open.overheid.nl/api/zoek?text=Medemblik
-
-
-== 200 application/json https://repository.overheid.nl/sru?query=c.product-area%3D%3Dplooi+AND+Medemblik&maximumRecords=2
-{"searchRetrieveResponse":{"version":2.0,"numberOfRecords":0,"echoedSearchRetrieveRequest":{"query":"c.product-area==plooi AND Medemblik","startRecord":1,"maximumRecords":2,"recordXMLEscaping":"xml","recordSchema":"http:\/\/standaarden.overheid.nl\/sru\/"},"resultCountPrecision":"info:srw\/vocabulary\/resultCountPrecision\/1\/estimate"}}
-
-== 200 application/json https://repository.overheid.nl/sru?query=c.product-area%3D%3Doep+AND+Medemblik&maximumRecords=2
-{"searchRetrieveResponse":{"version":2.0,"numberOfRecords":0,"echoedSearchRetrieveRequest":{"query":"c.product-area==oep AND Medemblik","startRecord":1,"maximumRecords":2,"recordXMLEscaping":"xml","recordSchema":"http:\/\/standaarden.overheid.nl\/sru\/"},"resultCountPrecision":"info:srw\/vocabulary\/resultCountPrecision\/1\/estimate"}}
-
+{'zoektekst': 'Medemblik'} 200 2957 ['Gemeente Medemblik - Organisatiegegevens | gemeente Medemblik', 'Beantwoording Kamervragen over windmolens bij Medemblik | ministerie van Algemene Zaken', 'Beantwoording Kamervragen over koop moskee Medemblik | ministerie van Algemene Zaken']
+{'text': 'Medemblik'} 200 720553 ['Beslisnota bij Nader rapport inzake het voorstel van rijkswe | ministerie van Buitenlandse Zaken', 'Memorie van toelichting bij Nader rapport inzake het voorste | ministerie van Buitenlandse Zaken', 'Voorstel van rijkswet inzake afbakening zeegrens Caribisch g | ministerie van Buitenlandse Zaken']
+{'query': 'Medemblik'} 200 720554 ['Beslisnota bij Nader rapport inzake het voorstel van rijkswe | ministerie van Buitenlandse Zaken', 'Memorie van toelichting bij Nader rapport inzake het voorste | ministerie van Buitenlandse Zaken', 'Voorstel van rijkswet inzake afbakening zeegrens Caribisch g | ministerie van Buitenlandse Zaken']
+{'zoek': 'Medemblik'} 200 720554 ['Beslisnota bij Nader rapport inzake het voorstel van rijkswe | ministerie van Buitenlandse Zaken', 'Memorie van toelichting bij Nader rapport inzake het voorste | ministerie van Buitenlandse Zaken', 'Voorstel van rijkswet inzake afbakening zeegrens Caribisch g | ministerie van Buitenlandse Zaken']
+{'trefwoord': 'Medemblik'} 200 720554 ['Beslisnota bij Nader rapport inzake het voorstel van rijkswe | ministerie van Buitenlandse Zaken', 'Memorie van toelichting bij Nader rapport inzake het voorste | ministerie van Buitenlandse Zaken', 'Voorstel van rijkswet inzake afbakening zeegrens Caribisch g | ministerie van Buitenlandse Zaken']
+{'publisher': 'Medemblik'} 200 720554 ['Beslisnota bij Nader rapport inzake het voorstel van rijkswe | ministerie van Buitenlandse Zaken', 'Memorie van toelichting bij Nader rapport inzake het voorste | ministerie van Buitenlandse Zaken', 'Voorstel van rijkswet inzake afbakening zeegrens Caribisch g | ministerie van Buitenlandse Zaken']
+{'organisatie': 'Medemblik'} 200 0 []
+{'zoektekst': 'Medemblik', 'sort': 'datum'} 400 None []
+== https://open.overheid.nl/overheid/openbaarmakingen/api/v0/ 401 
+== https://open.overheid.nl/overheid/openbaarmakingen/api/v0/openapi.json 401 
+== https://open.overheid.nl/overheid/openbaarmakingen/api/v0/v3/api-docs 401 
+== https://open.overheid.nl/overheid/openbaarmakingen/api/v0/api-docs 401 
