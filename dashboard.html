@@ -227,6 +227,9 @@
 
   /* ===== Kolommen ===== */
   .board{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin:18px 0 28px;align-items:start}
+  /* Zes kolommen: op een gewoon scherm netjes 3 + 3, op een heel breed scherm alle zes naast elkaar. */
+  @media (min-width:1000px){.board{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media (min-width:1900px){.board{grid-template-columns:repeat(6,minmax(0,1fr))}}
   .col{background:var(--card);border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;max-height:calc(100vh - 86px);position:sticky;top:72px;overflow:hidden}
   .colhead{padding:12px 14px 10px;border-bottom:1px solid var(--line);position:relative}
   .colhead::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--c)}
@@ -282,6 +285,12 @@
   .b{font-size:11.5px;font-weight:700;padding:0 7px;border-radius:999px;background:var(--ice);color:var(--link);line-height:1.65;white-space:nowrap}
   .b.new{background:var(--deep);color:#fff}
   .b.chg{background:var(--orange);color:#fff}
+  .tline{display:flex;flex-direction:column;border-left:2px solid var(--line);margin-left:6px}
+  .tline a{position:relative;display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px;padding:7px 0 7px 14px;text-decoration:none;color:inherit;font-size:14px;line-height:1.35}
+  .tline a::before{content:'';position:absolute;left:-6px;top:12px;width:10px;height:10px;border-radius:50%;background:var(--c)}
+  .tline a:hover span:last-child{text-decoration:underline}
+  .tline small{display:block;color:var(--muted);font-size:11.5px;font-weight:600}
+  .tline .td{color:var(--muted);font-size:12.5px;padding-top:1px}
   .agflag{display:block;font-style:normal;font-size:11px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
   .b.ans{background:var(--greenbg);color:var(--greenink)}
   .b.old{background:var(--line2);color:var(--muted)}
@@ -458,6 +467,7 @@
         <div class="pop">
           <button data-k="beantwoord" aria-pressed="false">Beantwoorde raadsvragen</button>
           <button data-k="telaat" aria-pressed="false">Raadsvragen over de termijn</button>
+          <button data-k="toezegging" aria-pressed="false">Openstaande toezeggingen</button>
           <button data-k="verwijderd" aria-pressed="false">Verdwenen stukken</button>
           <button data-k="sinds" aria-pressed="false">Nieuw of gewijzigd sinds vorig bezoek</button>
           <button data-k="opgepakt" aria-pressed="false">Opgepakt (vinkje)</button>
@@ -565,18 +575,21 @@ const ic = (k, cls = 'i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidde
 // Vijf kolommen in de logokleuren
 // ---------------------------------------------------------------------------
 const COLS = [
-  {id:'bek',  title:'Bekendmakingen', icon:'bek', color:'#006dac', note:'Vergunningen, verordeningen en besluiten uit het Gemeenteblad (KOOP), plus provincie, waterschap en Rijk over jouw dorpen',
-   test:x => x.source === 'Officiele bekendmakingen (KOOP)' || x.source === 'Andere overheden'},
+  {id:'bek',  title:'Bekendmakingen', icon:'bek', color:'#006dac', note:'Vergunningen, verordeningen en besluiten uit het Gemeenteblad (KOOP)',
+   test:x => x.source === 'Officiele bekendmakingen (KOOP)'},
   {id:'raad', title:'Raad', icon:'raad', color:'#1b4e8e', note:'Raadsstukken, moties, raadsvragen en informatiebrieven',
    test:x => (x.source === 'Raadsstukken' || x.source === 'Raadsportaal') && x.kind !== 'vergadering'},
   {id:'col',  title:'College', icon:'college', color:'#f18700', note:'Besluiten en besluitenlijsten van burgemeester en wethouders',
    test:x => x.source === 'Collegebesluiten'},
-  {id:'nws',  title:'Nieuws en meer', icon:'nieuws', color:'#5498cf', note:'Nieuws van de gemeente, Woo, Tweede Kamer en rechtspraak',
-   test:x => ['Nieuws','Woo-verzoeken','Openbare informatie','Tweede Kamer','Rechtspraak'].includes(x.source)},
+  {id:'nws',  title:'Nieuws en Woo', icon:'nieuws', color:'#5498cf', note:'Nieuws van de gemeente en openbaar gemaakte informatie (Woo)',
+   test:x => ['Nieuws','Woo-verzoeken','Openbare informatie','Woo-publicaties'].includes(x.source)},
+  {id:'bui',  title:'Buiten de gemeente', icon:'regel', color:'#2b6a8f', note:'Provincie, waterschap en Rijk over jouw dorpen, Tweede Kamer en rechtspraak',
+   test:x => ['Andere overheden','Tweede Kamer','Rechtspraak'].includes(x.source)},
   {id:'med',  title:'In de media', icon:'media', color:'var(--media)', note:'Artikelen over de gemeente en haar dorpen, via Google Nieuws',
    test:x => x.source === 'In de media'},
 ];
-const colOf = x => COLS.find(c => c.test(x)) || COLS[3];
+const COL = id => COLS.find(c => c.id === id);
+const colOf = x => COLS.find(c => c.test(x)) || COL('nws');
 const STATUS_COLOR = s => s.includes('KOOP') ? '#006dac' : /Raad/.test(s) ? '#1b4e8e' : /College/.test(s) ? '#f18700' : /media/.test(s) ? '#3b4650' : /Document/.test(s) ? '#1d1d1b' : '#5498cf';
 const PAGE = 60;
 let DATA = null, filter = '', shown = {};
@@ -639,6 +652,7 @@ function kinds(x){
   if (x.last_change) t.push('gewijzigd');
   if (x.antwoord_datum) t.push('beantwoord');
   if (x.termijn_verlopen && !x.antwoord_datum) t.push('telaat');
+  if (/toezegging/i.test(x.rapport || '') && x.afgedaan === false) t.push('toezegging');
   if (x.removed) t.push('verwijderd');
   if (x.kw_hits) t.push('trefwoord');
   return (x._k = t);
@@ -681,6 +695,9 @@ function typeInfo(x){
     const inst = x.instantie || '';
     label = /hoogheemraad/i.test(inst) ? 'Waterschap HHNK' : inst === 'Noord-Holland' ? 'Provincie Noord-Holland' : (inst || 'Andere overheid');
     icon = 'bek'; tc = '#2b6a8f'; important = /ministerie|rijkswaterstaat/i.test(inst);
+  } else if (x.source === 'Woo-publicaties') {
+    label = /^gemeente /i.test(x.instantie || '') ? 'Woo-besluit' : 'Woo · ' + (x.instantie || 'overheid'); icon = 'doc'; tc = '#5498cf';
+    important = /^gemeente /i.test(x.instantie || '');
   } else if (x.source === 'Tweede Kamer') { label = x.tk_soort || 'Tweede Kamer'; icon = 'raad'; tc = '#7a3e9d'; important = true; }
   else if (x.source === 'Rechtspraak') { label = 'Rechtspraak' + (x.rechtsgebied ? ' · ' + x.rechtsgebied : ''); icon = 'regel'; tc = '#8a2c2c'; important = true; }
   else if (x.source === 'In de media') { label = ''; icon = 'media'; }
@@ -700,6 +717,13 @@ function badges(x){
   if (mark(x.id, 'k')) out.push('<span class="b done">Opgepakt</span>');
   if (k.includes('gewijzigd')) out.push('<span class="b chg">Gewijzigd</span>');
   if (k.includes('beantwoord')) out.push(`<span class="b ans">Beantwoord ${nl(x.antwoord_datum,{day:'numeric',month:'short'})}</span>`);
+  if (x.motie_status) out.push(`<span class="b ${/aangenomen/i.test(x.motie_status) ? 'ans' : /verworpen/i.test(x.motie_status) ? 'gone' : 'old'}">${esc(x.motie_status)}</span>`);
+  if (x.indieners) out.push(`<span class="b old" title="Indieners">${esc(x.indieners)}</span>`);
+  if (k.includes('toezegging')) {
+    const mnd = x.doc_date ? Math.floor(diff(x.doc_date, TODAY) / 30.4) : 0;
+    out.push(`<span class="b ${mnd >= 6 ? 'gone' : 'old'}" title="Toezegging is nog niet afgedaan. De overzichten geven geen streefdatum.">Open${mnd >= 1 ? ' sinds ' + mnd + ' mnd' : ''}</span>`);
+  }
+  if (/toezegging/i.test(x.rapport || '') && x.afgedaan === true) out.push('<span class="b ans">Afgedaan</span>');
   if (k.includes('telaat')) out.push(`<span class="b gone" title="Volgens het reglement van orde moest het antwoord er uiterlijk ${nl(x.termijn_verlopen)} zijn. Een uitstelbericht aan de vragensteller is niet te zien.">Termijn verlopen ${nl(x.termijn_verlopen,{day:'numeric',month:'short'})}</span>`);
   if (k.includes('verwijderd')) out.push('<span class="b gone">Niet meer online</span>');
   if (k.includes('historisch')) out.push('<span class="b old">Historisch</span>');
@@ -772,6 +796,7 @@ function bronNaam(x){
   if (x.source === 'Nieuws') return 'Nieuwsbericht ' + g;
   if (x.source === 'Andere overheden') return (x.koop_type ? cap(x.koop_type) + ', ' : '') + 'officiële bekendmaking ' + (x.instantie || '');
   if (x.source === 'Tweede Kamer') return (x.tk_soort || 'Kamerstuk') + ', Tweede Kamer';
+  if (x.source === 'Woo-publicaties') return 'Woo-publicatie, ' + (x.instantie || 'open.overheid.nl');
   if (x.source === 'Rechtspraak') return (x.instantie || 'Rechtspraak') + (x.ecli ? ', ' + x.ecli : '');
   return x.source + ', ' + g;
 }
@@ -1028,7 +1053,7 @@ const DAYS14 = Array.from({length: 14}, (_, i) => daysAgo(13 - i));
 const perDay = (rows, f = x => x._d) => DAYS14.map(d => rows.filter(x => f(x) === d).length);
 function renderOverview(){
   const base = DATA.items.filter(x => x.kind !== 'vergadering' && dorpMatch(x));
-  const bek = base.filter(COLS[0].test), rc = base.filter(x => COLS[1].test(x) || COLS[2].test(x)), med = base.filter(COLS[4].test);
+  const bek = base.filter(COL('bek').test), rc = base.filter(x => COL('raad').test(x) || COL('col').test(x)), med = base.filter(COL('med').test);
   const nieuw = base.filter(x => kinds(x).includes('nieuw')).length, chg = base.filter(chgSince).length;
   const week = daysAgo(6), month = daysAgo(29);
   const inWeek = x => x._d >= week && x._d <= TODAY;
@@ -1118,7 +1143,7 @@ function renderToday(){
   const base = DATA.items.filter(x => x.kind !== 'vergadering' && dorpMatch(x));
   const since = base.filter(x => kinds(x).includes('sinds'));
   const newN = since.filter(x => kinds(x).includes('nieuw')).length, chgN = since.filter(chgSince).length;
-  const media = COLS[4].test, isBek = COLS[0].test;
+  const media = COL('med').test, isBek = COL('bek').test;
   const hr = +new Date().toLocaleString('nl-NL', {hour: 'numeric', hour12: false, timeZone: 'Europe/Amsterdam'});
   const groet = hr < 6 ? 'Goedenacht' : hr < 12 ? 'Goedemorgen' : hr < 18 ? 'Goedemiddag' : 'Goedenavond';
   const when = new Date(VISIT).toLocaleString('nl-NL',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'});
@@ -1162,9 +1187,10 @@ function renderToday(){
     + (DORP.name ? ` Je kijkt alleen naar ${esc(DORP.name)}.` : '');
   const cnt = f => since.filter(f).length;
   const stats = [
-    ['col:raad', 'raad en college', cnt(x => COLS[1].test(x) || COLS[2].test(x))],
+    ['col:raad', 'raad en college', cnt(x => COL('raad').test(x) || COL('col').test(x))],
     ['col:bek', 'bekendmakingen', cnt(isBek)],
-    ['col:nws', 'nieuws en meer', cnt(COLS[3].test)],
+    ['col:nws', 'nieuws en Woo', cnt(COL('nws').test)],
+    ['col:bui', 'buiten de gemeente', cnt(COL('bui').test)],
     ['col:med', 'in de media', cnt(media)],
     ['f:trefwoord', 'met een trefwoord', cnt(x => x.kw_hits)],
   ].filter(([, , n]) => n);
@@ -1277,6 +1303,33 @@ function render(){
 // ---------------------------------------------------------------------------
 // Leesvenster
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// Dossier: stukken over hetzelfde onderwerp, op basis van gedeelde zeldzame woorden in de titel
+// (bijv. 'Koggenrandweg', 'detailhandelsvisie'). Woorden die in veel titels staan tellen nauwelijks.
+// ---------------------------------------------------------------------------
+const DSTOP = new Set('de het een en van voor over met aan bij naar door uit tot als dat die dit zijn wordt worden heeft hebben ook nog niet wel wat wie hoe waar kan zal om op in te er zo dan maar of ons onze uw jij hij zij wij raadsvragen raadsvraag vragen motie moties amendement raadsvoorstel informatienota besluit besluiten aanvraag aangevraagd verleend vergunning omgevingsvergunning gemeente college raad commissie agenda bijlage bijlagen brief nota voorstel stuk stukken reactie beantwoording antwoord vergadering gemeenteraad raadscommissie fractie overige ingekomen'.split(' '));
+let IDF = null;
+const titleToks = y => y._tok || (y._tok = [...new Set(norm(y.title || '').split(/[^a-z0-9]+/).filter(w => w.length >= 4 && !DSTOP.has(w) && !/^\d+$/.test(w)))]);
+function related(x){
+  if (!IDF) {
+    const df = new Map();
+    DATA.items.forEach(y => titleToks(y).forEach(w => df.set(w, (df.get(w) || 0) + 1)));
+    const n = DATA.items.length;
+    IDF = new Map([...df].map(([w, c]) => [w, Math.log(n / c)]));
+    IDF.n = n;
+  }
+  const mine = titleToks(x);
+  const uncommon = Math.log(IDF.n / 40), rare = Math.log(IDF.n / 15);  // in hooguit ~40 resp. ~15 titels
+  if (!mine.some(w => (IDF.get(w) || 0) > uncommon)) return [];
+  const own = norm(x.title || '');
+  return DATA.items.filter(y => y !== x && y.kind !== 'vergadering' && norm(y.title || '') !== own).map(y => {
+      const t = new Set(titleToks(y)); const shared = mine.filter(w => t.has(w));
+      const score = shared.reduce((a, w) => a + IDF.get(w), 0);
+      return {y, score, ok: shared.some(w => IDF.get(w) >= rare) || (shared.length >= 2 && shared.some(w => IDF.get(w) > uncommon))};
+    }).filter(r => r.ok && r.score > 0).sort((a, b) => b.score - a.score).slice(0, 8)
+    .map(r => r.y).sort((a, b) => (a._d || '').localeCompare(b._d || ''));
+}
+
 let PANEL_ID = '';
 async function openPanel(id){
   const x = DATA && DATA.items.find(y => y.id === id);
@@ -1296,6 +1349,11 @@ async function openPanel(id){
   const plek = x.locatie && !/^(lijn|punt|vlak|gebied)/i.test(x.locatie) ? x.locatie : (x.plaats || x._plaats);
   if (plek) facts.push(['Plaats', esc(plek)]);
   if (x.antwoord_datum) facts.push(['Beantwoord', nl(x.antwoord_datum)]);
+  if (x.motie_status) facts.push(['Uitkomst', esc(x.motie_status)]);
+  if (x.indieners) facts.push(['Indieners', esc(x.indieners)]);
+  if (x.instantie) facts.push(['Instantie', esc(x.instantie)]);
+  if (x.stand) facts.push(['Stand van zaken', esc(x.stand)]);
+  const rel = related(x);
   const s = mark(x.id, 's'), k = mark(x.id, 'k');
   const changes = (x.changes || []).slice().reverse();
   // KOOP zet bij stukken zonder samenvatting een technische regel als omschrijving; die tonen we niet.
@@ -1316,6 +1374,7 @@ async function openPanel(id){
       ${x._also && x._also.length ? `<div class="psec"><h3>Ook bij andere media</h3><div class="plist">${x._also.map(y => `<a href="${esc(y.url)}" target="_blank" rel="noopener">${ic('media')}<span><b>${esc(y.media_bron)}</b>: ${esc(y.title)}</span></a>`).join('')}</div></div>` : ''}
       <div class="psec"${x.tx || excerpt ? '' : ' hidden'}><h3 id="ptexth">${x.tx ? 'Uit de tekst' : 'Omschrijving'}</h3><div class="ptext" id="ptext">${x.tx ? 'Laden…' : esc(excerpt)}</div></div>
       ${x.bijlagen && x.bijlagen.length ? `<div class="psec"><h3>Bijlagen (${x.bijlagen.length})</h3><div class="plist">${x.bijlagen.map(b => `<a href="${esc(b.u)}" target="_blank" rel="noopener">${ic('clip')}<span>${esc(b.t)}</span></a>`).join('')}</div></div>` : ''}
+      ${rel.length ? `<div class="psec"><h3>Hetzelfde onderwerp (${rel.length})</h3><div class="tline">${rel.map(y => `<a href="#" data-open="${y.id}" style="--c:${colOf(y).color}"><span class="td">${y._d ? nl(y._d,{day:'numeric',month:'short',year:'2-digit'}) : ''}</span><span><small>${esc(colOf(y).title)}${typeInfo(y).label ? ' · ' + esc(typeInfo(y).label) : ''}</small>${esc(y.title)}</span></a>`).join('')}</div></div>` : ''}
       ${changes.length ? `<div class="psec"><h3>Wijzigingen (${changes.length})</h3>${changes.map(c => `<div class="pchg"><b>${esc(c.type)}</b> · ${nl(c.at,{day:'numeric',month:'short'})} ${hm(c.at)}<div>${esc(c.summary || '')}</div>${(c.added || []).map(l => `<div class="p">+ ${esc(l)}</div>`).join('')}${(c.removed || []).map(l => `<div class="r">− ${esc(l)}</div>`).join('')}</div>`).join('')}</div>` : ''}
       <p style="color:var(--muted);font-size:12.5px;margin-top:22px">Bronvermelding: ${esc(citation(x))}</p>
     </div>`;
@@ -1447,6 +1506,7 @@ async function load(g){
       cache[g] = d;
     }
     DATA = cache[g];
+    IDF = null;  // dossierwoorden per gemeente opnieuw tellen
   } catch (e) {
     $('summary').textContent = 'De gegevens konden niet worden geladen (' + e.message + '). Probeer de pagina opnieuw te laden.';
     $('title').textContent = 'Niet geladen';
@@ -1571,6 +1631,7 @@ $('colpop').addEventListener('change', e => {
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && PANEL_ID) closePanel(); });
 $('map').addEventListener('click', e => { const a = e.target.closest('[data-open]'); if (a) { e.preventDefault(); openPanel(a.dataset.open); } });
+$('panel').addEventListener('click', e => { const a = e.target.closest('[data-open]'); if (a) { e.preventDefault(); openPanel(a.dataset.open); } });
 $('dorp').addEventListener('change', e => setDorp(e.target.value));
 // Wisselen van gemeente: zoekterm, filter en weergave blijven staan; dorp en geopend stuk niet.
 $('tabs').addEventListener('click', e => {

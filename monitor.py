@@ -845,6 +845,37 @@ def report_date(row, date_col, report_name):
         return date, 'registratiedatum', None
     return date, 'vergaderdatum', raw  # tekst met vergadering en agendapunt
 
+def volg_uitkomst(item, row, rapport):
+    """Moties, amendementen en toezeggingen: status (aangenomen/verworpen), indieners, afgedaan en stand van zaken.
+    Een verandering ten opzichte van de vorige keer wordt een wijziging (en een melding)."""
+    r = rapport.casefold()
+    if not any(w in r for w in ('motie', 'amendement', 'toezegging')):
+        return
+    status = clean(row.get('status') or '')
+    if status:
+        oud = item.get('motie_status')
+        if oud and oud != status:
+            record_change(item, 'Uitkomst', f'{oud} → {status}')
+        item['motie_status'] = status
+    indieners = [clean(x) for x in re.split(r'\n', '\n'.join(str(row.get(k) or '') for k in
+                 ('hoofdindiener', 'medeindiener', 'raadsleden', 'Fracties', 'fractie'))) if clean(x)]
+    if indieners:
+        # 'Beerepoot, T. (Tom) (VVD)' -> 'VVD'; fracties blijven zoals ze zijn.
+        partijen = list(dict.fromkeys((re.findall(r'\(([^()]+)\)\s*$', x) or [x])[-1] for x in indieners))
+        item['indieners'] = ', '.join(partijen)[:120]
+    for veld in ('completed', 'afgedaan'):
+        if veld in row and row.get(veld) in ('Ja', 'Nee'):
+            nu = row[veld] == 'Ja'
+            if item.get('afgedaan') is False and nu:
+                record_change(item, 'Afgedaan', ('toezegging' if 'toezegging' in r else 'motie') + ' is afgedaan',
+                              added=[clean(row.get('standvanzaken') or '')[:220]] if row.get('standvanzaken') else ())
+            item['afgedaan'] = nu
+    stand = clean(row.get('standvanzaken') or '')
+    if stand:
+        if item.get('stand') and item['stand'] != stand[:400]:
+            record_change(item, 'Stand van zaken', 'stand van zaken bijgewerkt', added=[stand[:220]], removed=[item['stand'][:220]])
+        item['stand'] = stand[:400]
+
 def collect_ibabs_reports(db, gid):
     base = GEMEENTEN[gid]['ibabs']
     source_name = 'Raadsportaal-overzichten'
@@ -910,9 +941,13 @@ def collect_ibabs_reports(db, gid):
                                 record_change(item, 'Beantwoord', f'datum antwoord: {antwoord}')
                             if antwoord:
                                 item['antwoord_datum'] = antwoord
+                        volg_uitkomst(item, row, rep['name'])
                         item['report_seen'] = True
                         item['excerpt'] = rep['name'] + (f' · antwoord {item["antwoord_datum"]}' if item.get('antwoord_datum')
-                                                         else (' · nog niet beantwoord' if 'datumantwoord' in row else ''))
+                                                         else (' · nog niet beantwoord' if 'datumantwoord' in row else '')) \
+                            + (f' · {item["motie_status"]}' if item.get('motie_status') else '') \
+                            + (f' · {item["indieners"]}' if item.get('indieners') else '') \
+                            + ((' · afgedaan' if item['afgedaan'] else ' · nog open') if 'afgedaan' in item else '')
                     start += len(rows)
                     # Stoppen zodra een hele pagina buiten bereik valt (nieuwste staan bovenaan).
                     reached_old = bool(rows) and old_on_page == len(rows)
@@ -1371,6 +1406,7 @@ def check_vraag_termijnen(db):
 ELDERS_SOURCE = 'Andere overheden'
 TK_SOURCE = 'Tweede Kamer'
 RS_SOURCE = 'Rechtspraak'
+WOO_SOURCE = 'Woo-publicaties'
 ELDERS_DAYS = 45
 # Namen die ook achternaam zijn of elders in Noord-Holland voorkomen (Zuid-Scharwoude, Oudendijk bij Strijen):
 # niet los zoeken bij de rechtspraak (daar staan advocatennamen in de tekst).
@@ -1570,6 +1606,52 @@ def collect_rechtspraak(db):
                     'van de dorpen voorkomt. Namen die ook achternaam zijn (Berkhout, Twisk) of elders voorkomen worden '
                     'niet los gezocht. Uitspraken zijn geanonimiseerd. Eén keer per uur.')
 
+def collect_woo(db):
+    """Woo-publicaties op open.overheid.nl: wat de gemeenten zelf openbaar maken, en documenten van andere
+    overheden waarin een van de plaatsen in titel of omschrijving staat."""
+    eerste = elders_first(db, 'woo')
+    if not elders_due(db, 'woo'):
+        return
+    vanaf = (datetime.date.today() - datetime.timedelta(days=ELDERS_DAYS)).strftime('%d-%m-%Y')
+    added = total = 0
+    errors = []
+    for gid, cfg in GEMEENTEN.items():
+        eigen = 'gemeente ' + cfg['naam'].casefold()
+        for naam in dict.fromkeys([cfg['naam']] + cfg.get('plaatsen', [])):
+            if naam.casefold() in PLAATS_DUBBEL:
+                continue
+            try:
+                r = requests.get('https://open.overheid.nl/overheid/openbaarmakingen/api/v0/zoek', headers=HEADERS, timeout=40,
+                                 params={'zoektekst': naam, 'sort': 'publicatiedatum', 'publicatiedatumVan': vanaf})
+                r.raise_for_status()
+                for res in r.json().get('resultaten') or []:
+                    d = res.get('document') or {}
+                    titel, oms = clean(d.get('titel') or ''), clean(d.get('omschrijving') or '')
+                    publisher = clean(d.get('publisher') or '')
+                    if publisher.casefold() == eigen:
+                        hit_gid, plaats = gid, None
+                    else:
+                        hit_gid, plaats = plaats_in(titel + ' ' + oms, dubbel_ok=False)
+                        if not hit_gid:
+                            continue
+                    if not titel or not d.get('id'):
+                        continue
+                    total += 1
+                    key = make_key(WOO_SOURCE + '|' + d['id'])
+                    item = db['items'].get(key)
+                    if item is None:
+                        item = db['items'][key] = new_item(hit_gid, titel, d.get('pid') or f'https://open.overheid.nl/documenten/{d["id"]}',
+                                                           WOO_SOURCE, excerpt='', baseline=eerste or None)
+                        added += 1
+                    item.update(gemeente=hit_gid, instantie=publisher, plaats=plaats or item.get('plaats'),
+                                doc_date=(d.get('openbaarmakingsdatum') or '')[:10] or None, doc_date_label='openbaar gemaakt',
+                                excerpt=publisher + (f' · {oms[:300]}' if oms else ''), last_seen=today())
+            except Exception as exc:
+                errors.append(f'{naam}: {str(exc)[:60]}')
+    set_status(db, 'algemeen', WOO_SOURCE, ok=not errors, count=total, new=added, error='; '.join(errors)[:250] or None,
+               note=f'open.overheid.nl (Woo-publicaties, laatste {ELDERS_DAYS} dagen): alles wat de drie gemeenten openbaar maken, '
+                    'plus documenten van andere overheden met een van de plaatsen in titel of omschrijving. Eén keer per uur.')
+
 def migrate(db):
     db.setdefault('items', {})
     db.setdefault('status', {})
@@ -1693,7 +1775,7 @@ def main():
         collect_pages(db, gid)
         if cfg.get('plaatsen'):
             collect_media(db, gid, cfg['plaatsen'])
-    for fn in (collect_andere_overheden, collect_tweede_kamer, collect_rechtspraak):
+    for fn in (collect_andere_overheden, collect_tweede_kamer, collect_rechtspraak, collect_woo):
         try:
             fn(db)
         except Exception as exc:

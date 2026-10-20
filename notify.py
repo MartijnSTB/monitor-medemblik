@@ -47,21 +47,24 @@ COLUMNS = [
     ('Bekendmakingen', '#006dac'),
     ('Raad', '#1b4e8e'),
     ('College', '#f18700'),
-    ('Nieuws en meer', '#5498cf'),
+    ('Nieuws en Woo', '#5498cf'),
+    ('Buiten de gemeente', '#2b6a8f'),
     ('In de media', '#1d1d1b'),
 ]
 
 def column_of(item):
     s = item.get('source')
-    if s in ('Officiele bekendmakingen (KOOP)', 'Andere overheden'):
+    if s == 'Officiele bekendmakingen (KOOP)':
         return 'Bekendmakingen'
+    if s in ('Andere overheden', 'Tweede Kamer', 'Rechtspraak'):
+        return 'Buiten de gemeente'
     if s in ('Raadsstukken', 'Raadsportaal'):
         return 'Raad'
     if s == 'Collegebesluiten':
         return 'College'
     if s == 'In de media':
         return 'In de media'
-    return 'Nieuws en meer'
+    return 'Nieuws en Woo'
 
 def _date(s):
     try:
@@ -95,7 +98,8 @@ def events_since(db, since):
             if (c.get('at') or '') > since_iso:
                 kind = {'Beantwoord': 'beantwoord', 'Niet meer bereikbaar': 'verdwenen', 'Bijlage toegevoegd': 'bijlage',
                         'Agenda gewijzigd': 'agenda', 'Agenda gepubliceerd': 'agenda_online',
-                        'Termijn verlopen': 'termijn'}.get(c.get('type'), 'gewijzigd')
+                        'Termijn verlopen': 'termijn', 'Uitkomst': 'uitkomst', 'Afgedaan': 'afgedaan',
+                        'Stand van zaken': 'stand'}.get(c.get('type'), 'gewijzigd')
                 events.append({'kind': kind, 'item': item, 'at': c['at'], 'text': c.get('summary', ''),
                                'added': c.get('added') or [], 'removed': c.get('removed') or []})
     events.sort(key=lambda e: e['at'], reverse=True)
@@ -109,8 +113,10 @@ def is_important(ev):
     """Wat een directe pushmelding waard is. De rest staat in de ochtendmail en op het dashboard."""
     item = ev['item']
     kind = ev['kind']
-    if kind in ('beantwoord', 'verdwenen', 'bijlage', 'agenda', 'agenda_online', 'termijn'):
+    if kind in ('beantwoord', 'verdwenen', 'bijlage', 'agenda', 'agenda_online', 'termijn', 'uitkomst', 'afgedaan'):
         return True
+    if kind == 'stand':
+        return False  # stand van zaken van een motie of toezegging: in de ochtendmail
     if kind == 'gewijzigd':
         return item.get('source') in PUSH_WIJZIGING and item.get('change_type') != 'Nieuwe versie bij KOOP'
     title = (item.get('title') or '').casefold()
@@ -124,6 +130,8 @@ def is_important(ev):
         return True
     if item.get('source') == 'Andere overheden' and 'ministerie' in (item.get('instantie') or '').casefold():
         return True
+    if item.get('source') == 'Woo-publicaties' and (item.get('instantie') or '').casefold().startswith('gemeente '):
+        return True  # Woo-besluit van de gemeente zelf
     return False
 
 def is_night(now=None):
@@ -149,7 +157,8 @@ def time_label(item, at=None):
 
 LABEL = {'nieuw': 'Nieuw', 'gewijzigd': 'Gewijzigd', 'beantwoord': 'Beantwoord', 'verdwenen': 'Verdwenen',
          'bijlage': 'Nieuwe bijlage', 'trefwoord': 'Trefwoord', 'agenda': 'Agenda gewijzigd',
-         'agenda_online': 'Agenda online', 'termijn': 'Termijn verlopen'}
+         'agenda_online': 'Agenda online', 'termijn': 'Termijn verlopen', 'uitkomst': 'Uitkomst',
+         'afgedaan': 'Afgedaan', 'stand': 'Stand van zaken'}
 
 # ---------------------------------------------------------------------------
 # Directe pushmelding (ntfy)
@@ -191,7 +200,10 @@ def send_push(gemeenten, events_by_gid, topic):
         naam = gemeenten[gid]['naam']
         lines = []
         for e in important[:MAX_PUSH_LINES]:
-            extra = f" ({e['text']})" if e['kind'] in ('beantwoord', 'gewijzigd', 'bijlage', 'agenda', 'agenda_online', 'termijn') and e['text'] else ''
+            extra = f" ({e['text']})" if e['kind'] in ('beantwoord', 'gewijzigd', 'bijlage', 'agenda', 'agenda_online', 'termijn',
+                                                       'uitkomst', 'afgedaan') and e['text'] else ''
+            if e['kind'] == 'nieuw' and e['item'].get('motie_status'):
+                extra = f" (**{e['item']['motie_status']}**" + (f", {e['item']['indieners']}" if e['item'].get('indieners') else '') + ')'
             tijd = time_label(e['item'], e['at'] if e['kind'] != 'nieuw' else None)
             lines.append(f"- **{LABEL[e['kind']]}** · {column_of(e['item'])}: {e['item']['title'][:120]}{extra} ({tijd})")
             if e['kind'] in ('bijlage', 'agenda', 'agenda_online') and e.get('added'):
@@ -223,12 +235,65 @@ def send_push(gemeenten, events_by_gid, topic):
 # ---------------------------------------------------------------------------
 # Dagelijkse samenvatting (e-mail)
 # ---------------------------------------------------------------------------
-def _mail_html(gemeenten, events_by_gid, since, now_local):
+def story_ideas(db, gemeenten, events_by_gid, limit=10):
+    """'Misschien een verhaal': wat er sinds de vorige mail gebeurde en vaak nieuws is, met de reden erbij.
+    Plus raadsvragen die over de termijn zijn (ook als dat al eerder zo was)."""
+    ideas = []  # (gewicht, gid, reden, item)
+    for gid, events in events_by_gid.items():
+        for ev in events:
+            it, k = ev['item'], ev['kind']
+            rapport = (it.get('rapport') or '').casefold()
+            if k == 'trefwoord':
+                ideas.append((10, gid, 'Jouw trefwoord: ' + ', '.join(ev.get('words', [])), it))
+            elif k == 'uitkomst':
+                ideas.append((9, gid, 'Uitkomst veranderd: ' + ev['text'], it))
+            elif k == 'agenda':
+                ideas.append((8, gid, 'Agenda gewijzigd: ' + ev['text'], it))
+            elif k == 'beantwoord':
+                ideas.append((7, gid, 'Raadsvragen beantwoord', it))
+            elif k == 'termijn':
+                ideas.append((7, gid, 'Antwoord op raadsvragen is te laat', it))
+            elif k == 'afgedaan' and 'toezegging' in rapport:
+                ideas.append((6, gid, 'Toezegging van het college afgedaan', it))
+            elif k == 'nieuw' and it.get('source') in ('Tweede Kamer', 'Rechtspraak'):
+                ideas.append((8, gid, it['source'] + (': ' + it['tk_soort'] if it.get('tk_soort') else ''), it))
+            elif k == 'nieuw' and 'motie' in rapport and it.get('motie_status'):
+                ideas.append((6, gid, f"Motie {it['motie_status'].lower()}" + (f" ({it['indieners']})" if it.get('indieners') else ''), it))
+            elif k == 'nieuw' and 'vragen' in rapport:
+                ideas.append((5, gid, 'Nieuwe raadsvragen' + (f" ({it['indieners']})" if it.get('indieners') else ''), it))
+            elif k == 'nieuw' and it.get('source') == 'Woo-publicaties' and (it.get('instantie') or '').casefold().startswith('gemeente'):
+                ideas.append((5, gid, 'Woo-besluit van de gemeente', it))
+            elif k == 'verdwenen':
+                ideas.append((5, gid, 'Stuk is offline gehaald', it))
+    gezien = {id(i[3]) for i in ideas}
+    for it in db['items'].values():
+        if it.get('termijn_verlopen') and not it.get('antwoord_datum') and id(it) not in gezien and it.get('gemeente') in gemeenten:
+            ideas.append((4, it['gemeente'], f"Raadsvragen nog steeds niet beantwoord (termijn verliep {it['termijn_verlopen']})", it))
+    ideas.sort(key=lambda x: -x[0])
+    out, seen = [], set()
+    for w, gid, reden, it in ideas:
+        sleutel = (gid, (it.get('title') or '').casefold().strip())
+        if sleutel in seen:
+            continue
+        seen.add(sleutel)
+        out.append((gid, reden, it))
+        if len(out) >= limit:
+            break
+    return out
+
+def _mail_html(gemeenten, events_by_gid, since, now_local, ideas=()):
     e = html.escape
     parts = [f'''<div style="font-family:Arial,Helvetica,sans-serif;color:#1d1d1b;max-width:720px">
 <h1 style="font-family:Georgia,serif;color:#1b4e8e;margin:0 0 4px">Gemeentemonitor</h1>
 <p style="color:#5b6672;margin:0 0 18px">Nieuw en gewijzigd sinds {nl_moment(since)}
 · <a href="{DASHBOARD_URL}" style="color:#006dac">open het dashboard</a></p>''']
+    if ideas:
+        parts.append('<div style="background:#fff4e5;border-left:4px solid #f18700;padding:10px 14px;margin:0 0 18px">'
+                     '<h2 style="font-family:Georgia,serif;margin:0 0 6px;font-size:19px">Misschien een verhaal</h2><ol style="padding-left:20px;margin:0">')
+        for gid, reden, it in ideas:
+            parts.append(f'<li style="margin:6px 0"><b>{e(reden)}</b> · {e(gemeenten[gid]["naam"])}<br>'
+                         f'<a href="{e(it.get("url") or DASHBOARD_URL)}" style="color:#006dac">{e(it["title"])}</a></li>')
+        parts.append('</ol></div>')
     for gid, cfg in gemeenten.items():
         events = events_by_gid.get(gid, [])
         kws = [x for x in events if x['kind'] == 'trefwoord']
@@ -292,7 +357,7 @@ def _mail_text(gemeenten, events_by_gid):
     return '\n'.join(out)
 
 def send_digest(gemeenten, events_by_gid, since, now_local, user, password, to,
-                host='smtp.gmail.com', port=587):
+                host='smtp.gmail.com', port=587, ideas=()):
     n_new = sum(1 for ev in events_by_gid.values() for x in ev if x['kind'] == 'nieuw')
     n_chg = sum(1 for ev in events_by_gid.values() for x in ev if x['kind'] not in ('nieuw', 'trefwoord'))
     n_kw = sum(1 for ev in events_by_gid.values() for x in ev if x['kind'] == 'trefwoord')
@@ -301,8 +366,10 @@ def send_digest(gemeenten, events_by_gid, since, now_local, user, password, to,
         (f'{n_kw}× trefwoord, ' if n_kw else '') + f'{n_new} nieuw, {n_chg} gewijzigd'
     msg['From'] = f'Gemeentemonitor <{user}>'
     msg['To'] = to
-    msg.set_content(_mail_text(gemeenten, events_by_gid))
-    msg.add_alternative(_mail_html(gemeenten, events_by_gid, since, now_local), subtype='html')
+    msg.set_content(('Misschien een verhaal:\n' + '\n'.join(f'- {r} ({gemeenten[g]["naam"]}): {it["title"]}\n  {it.get("url", "")}'
+                                                            for g, r, it in ideas) + '\n' if ideas else '')
+                    + _mail_text(gemeenten, events_by_gid))
+    msg.add_alternative(_mail_html(gemeenten, events_by_gid, since, now_local, ideas), subtype='html')
     with smtplib.SMTP(host, port, timeout=30) as smtp:
         smtp.starttls()
         smtp.login(user, password)
@@ -362,7 +429,8 @@ def run(db, gemeenten, run_start, set_status):
             try:
                 n_new, n_chg = send_digest(gemeenten, by_gid, since, now_local, user, password, to,
                                            os.environ.get('MAIL_SMTP_HOST', '').strip() or 'smtp.gmail.com',
-                                           int(os.environ.get('MAIL_SMTP_PORT', '').strip() or 587))
+                                           int(os.environ.get('MAIL_SMTP_PORT', '').strip() or 587),
+                                           ideas=story_ideas(db, gemeenten, by_gid))
                 notes.append(f'Testmail verstuurd ({n_new} nieuw, {n_chg} gewijzigd in de afgelopen 24 uur).')
             except Exception as exc:
                 errors.append('Testmail: ' + str(exc)[:120])
@@ -375,7 +443,8 @@ def run(db, gemeenten, run_start, set_status):
             try:
                 n_new, n_chg = send_digest(gemeenten, by_gid, since, now_local, user, password, to,
                                            os.environ.get('MAIL_SMTP_HOST', '').strip() or 'smtp.gmail.com',
-                                           int(os.environ.get('MAIL_SMTP_PORT', '').strip() or 587))
+                                           int(os.environ.get('MAIL_SMTP_PORT', '').strip() or 587),
+                                           ideas=story_ideas(db, gemeenten, by_gid))
                 state.update(digest_date=today, digest_sent_at=now.isoformat(timespec='seconds'))
                 notes.append(f'Dagelijkse samenvatting verstuurd om {now_local:%H:%M} ({n_new} nieuw, {n_chg} gewijzigd).')
             except Exception as exc:
