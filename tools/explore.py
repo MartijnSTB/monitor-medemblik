@@ -1,18 +1,13 @@
-import requests, json, re
+import requests, json
 H = {'User-Agent': 'MedemblikPublicatieMonitor/0.1 (public information monitoring)', 'Accept': 'application/json'}
-def t(u, **kw):
+U = 'https://open.overheid.nl/overheid/openbaarmakingen/api/v0/zoek'
+for p in [{'zoektekst': 'Medemblik'}, {'text': 'Medemblik'}, {'query': 'Medemblik'}, {'zoek': 'Medemblik'}, {'trefwoord': 'Medemblik'},
+          {'publisher': 'Medemblik'}, {'organisatie': 'Medemblik'}, {'zoektekst': 'Medemblik', 'sort': 'datum'}]:
     try:
-        r = requests.get(u, headers=H, timeout=40, **kw)
-        print('==', r.status_code, r.headers.get('content-type'), r.url[:200]); print(r.text[:1200].replace('\n', ' ')); print()
-    except Exception as e: print('==', u, e)
-# politie
-t('https://api.politie.nl/v4/nieuws', params={'query': 'Medemblik', 'maxnumberofitems': 5})
-t('https://api.politie.nl/v4/nieuws', params={'lat': 52.77, 'lon': 5.10, 'radius': 10, 'maxnumberofitems': 5})
-t('https://api.politie.nl/v4/nieuws/lokaal', params={'lat': 52.77, 'lon': 5.10, 'radius': 10, 'maxnumberofitems': 5})
-t('https://api.politie.nl/v4/vermist', params={'query': 'Medemblik', 'maxnumberofitems': 3})
-# open overheid
-t('https://open.overheid.nl/overheid/openbaarmakingen/api/v0/zoek', params={'q': 'Medemblik', 'size': 3})
-t('https://open.overheid.nl/zoekresultaten', params={'text': 'Medemblik'})
-t('https://open.overheid.nl/api/zoek', params={'text': 'Medemblik'})
-t('https://repository.overheid.nl/sru', params={'query': 'c.product-area==plooi AND Medemblik', 'maximumRecords': 2})
-t('https://repository.overheid.nl/sru', params={'query': 'c.product-area==oep AND Medemblik', 'maximumRecords': 2})
+        r = requests.get(U, params={**p, 'size': 3}, headers=H, timeout=40)
+        j = r.json() if r.ok else {}
+        print(p, r.status_code, j.get('totaal'), [ (x['document'].get('titel') or '')[:60] + ' | ' + str(x['document'].get('publisher')) for x in j.get('resultaten', [])][:3])
+    except Exception as e: print(p, e)
+for u in ['https://open.overheid.nl/overheid/openbaarmakingen/api/v0/', 'https://open.overheid.nl/overheid/openbaarmakingen/api/v0/openapi.json',
+          'https://open.overheid.nl/overheid/openbaarmakingen/api/v0/v3/api-docs', 'https://open.overheid.nl/overheid/openbaarmakingen/api/v0/api-docs']:
+    r = requests.get(u, headers=H, timeout=40); print('==', u, r.status_code, r.text[:1500].replace('\n',' '))
