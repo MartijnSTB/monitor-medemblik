@@ -1,16 +1,4 @@
-{'sort': 'x'} 400 None 0 [] Er is een fout opgetreden. De opgegeven 'sort' x is ongeldig. Vul een correcte waarde en probeer opnieuw.
-{'publicatiedatumVan': 'x'} 400 None 0 [] Er is een fout opgetreden. De opgegeven PublicatiedatumVan (x) is ongeldig. Vul de PublicatiedatumVan in als dd-mm-jjjj en probeer opnieuw.
-{'sort': 'publicatiedatum'} 200 2957 20 ['2026-10-16', '2026-10-16', '2026-10-15', '2026-10-15', '2026-10-15', '2026-10-14'] 
-{'sort': 'datum'} 400 None 0 [] Er is een fout opgetreden. De opgegeven 'sort' datum is ongeldig. Vul een correcte waarde en probeer opnieuw.
-{'sort': 'DATUM_AFLOPEND'} 400 None 0 [] Er is een fout opgetreden. De opgegeven 'sort' DATUM_AFLOPEND is ongeldig. Vul een correcte waarde en probeer opnieuw.
-{'sort': 'nieuwste'} 400 None 0 [] Er is een fout opgetreden. De opgegeven 'sort' nieuwste is ongeldig. Vul een correcte waarde en probeer opnieuw.
-{'sort': 'openbaarmakingsdatum'} 400 None 0 [] Er is een fout opgetreden. De opgegeven 'sort' openbaarmakingsdatum is ongeldig. Vul een correcte waarde en probeer opnieuw.
-{'sort': 'desc'} 400 None 0 [] Er is een fout opgetreden. De opgegeven 'sort' desc is ongeldig. Vul een correcte waarde en probeer opnieuw.
-{'publicatiedatumVan': '01-09-2026'} 200 26 20 ['2026-10-15', '2026-09-07', '2026-09-02', '2026-10-15', '2026-10-16', '2026-10-16'] 
-{'publicatiedatumVan': '2026-09-01T00:00:00Z'} 400 None 0 [] Er is een fout opgetreden. De opgegeven PublicatiedatumVan (2026-09-01T00:00:00Z) is ongeldig. Vul de PublicatiedatumVan in als dd-mm-jjjj en probeer opnieuw.
-{'publicatiedatumVan': '20260901'} 400 None 0 [] Er is een fout opgetreden. De opgegeven PublicatiedatumVan (20260901) is ongeldig. Vul de PublicatiedatumVan in als dd-mm-jjjj en probeer opnieuw.
-{'aantal': 50} 200 2957 20 ['2023-02-02', '2015-02-26', '2012-09-23', '2023-03-07', '2024-03-03', '2026-02-04'] 
-{'rows': 50} 200 2957 20 ['2023-02-02', '2015-02-26', '2012-09-23', '2023-03-07', '2024-03-03', '2026-02-04'] 
-{'limit': 50} 200 2957 20 ['2015-02-26', '2012-09-23', '2023-02-02', '2023-03-07', '2024-03-03', '2025-05-08'] 
-{'pagina': 2} 200 2957 20 ['2015-02-26', '2012-09-23', '2023-02-02', '2023-03-07', '2024-03-03', '2025-05-08'] 
-{'offset': 20} 200 2957 20 ['2023-02-02', '2015-02-26', '2012-09-23', '2023-03-07', '2024-03-03', '2025-05-08'] 
+Traceback (most recent call last):
+  File "/home/runner/work/monitor-medemblik/monitor-medemblik/tools/explore.py", line 1, in <module>
+    import json, collections, monitor as m
+ModuleNotFoundError: No module named 'monitor'
