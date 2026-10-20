@@ -1,4 +1,37 @@
-Traceback (most recent call last):
-  File "/home/runner/work/monitor-medemblik/monitor-medemblik/tools/explore.py", line 1, in <module>
-    import json, collections, monitor as m
-ModuleNotFoundError: No module named 'monitor'
+== medemblik Moties en amendementen 402
+    registrationdate [('Gemeenteraad 19-02-2026 D.1. Moties Vreemd aan de orde van d', 8), ("Gemeenteraad 19-02-2026 C.1. Kadernota's 2027 gemeenschappel", 5), ('Gemeenteraad 24-09-2026 D.1. Moties Vreemd aan de orde van d', 3), ('Gemeenteraad 15-06-2026 C.1. Lokale detailhandelsvisie ', 3), ('Gemeenteraad 22-01-2026 D.1. Moties Vreemd aan de orde van d', 3), ('Gemeenteraad 24-09-2026 B.4. Ruimtelijk voorstel (GEHEIM)', 2)]
+    standvanzaken [('', 34), ('Er wordt gewerkt aan een informatienota.\n16-09: Informatieno', 1), ('Is behandeld in de commissie en staat ter besluitvorming op ', 1), ('Amendement heeft een motiedeel.', 1), ('7-5-2026. Aan de motie is door het Dagelijks Bestuur van het', 1), ('De motie is door de portefeuillehouder ingebracht tijdens he', 1)]
+    portefeuillehouder [('', 26), ('I. Mantel', 5), ('M. Hoogewerf', 3), ('G. Gringhuis', 2), ('B. de Wit', 2), ('H. Nederpelt', 1)]
+    completed [('Ja', 30), ('Nee', 10)]
+    datumafdoening [('None', 38), ('01-10-2026', 1), ('07-05-2026', 1)]
+    status [('Aangenomen', 18), ('Ingetrokken', 14), ('Verworpen', 6), ('Niet-ingediend', 2)]
+    type [('Motie Vreemd aan de Orde ', 16), ('Motie behorend bij agendapunt', 14), ('Amendement', 10)]
+    hoofdindiener [('Beerepoot, T. (Tom) (VVD)', 6), ('Bosch, E. van den (Els) (CDA)', 4), ('Paarlberg, R.A. (Roelandt) (GB)', 3), ('Meester, A. (Andre) (VVD)', 3), ('Berlijn, T. (Tjeu) (HvM)', 3), ('Kuipers, T.G.M. (Dirk) (Morgen!)', 2)]
+    medeindiener [('', 20), ('van Eekelen, L.A. (Linda) (HvM)', 2), ('Molenaar, E. (Eva) (FVD)', 2), ('Hoogewerf, M. (Mark) (HvM)', 2), ('Venema, D. (Dieter) (HvM)\nBeerepoot, T. (Tom) (VVD)\nMosch, P', 1), ('Paarlberg, R.A. (Roelandt) (GB)', 1)]
+    sample {"DT_RowId": "3132871b-2a4c-43e6-ba31-c9e823bb251b", "identity": "409", "registrationdate": "Gemeenteraad 24-09-2026 B.4. Ruimtelijk voorstel (GEHEIM)", "title": "AMENDEMENT 10 van 2026", "standvanzaken": "", "portefeuillehouder": "", "completed": "Ja", "datumafdoening": null, "status": "Aangenomen", "type": "Amendement", "hoofdindiener": "Beerepoot, T. (Tom) (VVD)", "medeindiener": ""}
+== medemblik Toezeggingen 332
+    registrationdate [('Gemeenteraad 19-02-2026 D.1. Moties Vreemd aan de orde van d', 2), ('Raadscommissie 11-09-2025 5.1. Nota Dierenwelzijn (pfh. G. G', 2), ('Raadscommissie 11-09-2025 4. Actieve informatie van het coll', 2), ('Gemeenteraad 07-07-2025 4.b.2c. Reactie college', 2), ('Raadscommissie 23-06-2025 3.1. Termijn 1: afronding beeldvor', 2), ('Gemeenteraad 02-07-2026 D.1. Moties Vreemd aan de orde van d', 1)]
+    completed [('Ja', 24), ('Nee', 16)]
+    omschrijving [('De heer Broeders zegt toe te zullen gaan kijken naar het fie', 2), ('I. Mantel zegt toe de zorgen zoals benoemd in motie 33 Risic', 1), ('B. de Wit zegt toe dat het college bij de raad zal terugkome', 1), ('G. Gringhuis zegt toe dat vóór de raadsvergadering waarin de', 1), ('J. Broeders zegt toe dat het zorgpunt over de actualisatie v', 1), ('J. Broeders zegt toe dat er een terugkoppeling zal worden ge', 1)]
+    portefeuillehouder [('M. Hoogewerf', 8), ('M. Pijl', 8), ('I. Mantel', 7), ('G. Gringhuis', 7), ('J. Broeders', 5), ('Y. Nijsingh', 3)]
+    standvanzaken [('', 5), ('28-9-2026\nIn tegenstelling tot eerdere verwachtingen vind he', 1), ('Afgedaan via commissievraag VVD\n\nBeantwoording:\nWat is er be', 1), ('Het nieuwe rapport is op dit moment nog niet gepubliceerd. H', 1), ('Er is contact met de lokale imkervereniging om te kijken waa', 1), ('Bij de voorjaarsnota is het gevraagde budget toegekend. De t', 1)]
+    sample {"DT_RowId": "07e315fb-983e-44c5-a7e0-09a099e5597c", "identity": "363", "registrationdate": "Gemeenteraad 02-07-2026 D.1. Moties Vreemd aan de orde van de dag", "title": "Vuilstortplaats Westwoud", "completed": "Nee", "omschrijving": "I. Mantel zegt toe de zorgen zoals benoemd in motie 33 Risico’s omgeving oude vuilstortplaats Westwoud minimaliseren, mee te nemen naar de eerstvolgende bestuursvergadering van het ABWF en de raad hierover te informeren. ", "portefeuillehouder": "I. Mantel", "standvanzaken": "28-9-2026\nIn tegenstelling tot eerdere verwachtingen vind het eerstvolgende AB, met hierin de benoeming van het nieuwe DB, pas in november plaats. Het inbrengen van de zorgen, is als inge
+== opmeer Amendementen 74
+    registrationdate [('Besluitvormende raadsvergadering 17-09-2026 9. Stedenbouwkun', 4), ('Besluitvormende raadsvergadering 20-03-2025 11. Rekenkameron', 3), ('Besluitvormende raadsvergadering 11-12-2025 8. Financiële ve', 2), ('Besluitvormende raadsvergadering 06-11-2025 9. Algemene plaa', 2), ('Besluitvormende raadsvergadering 12-12-2024 11. Algemene Pla', 2), ('Besluitvormende raadsvergadering 11-07-2024 17. Grondstoffen', 2)]
+    status [('Aangenomen', 27), ('Verworpen', 6), ('Ingetrokken', 6), ('Aangehouden', 1)]
+    portefeuillehouder [('Wethouder Ter Veen', 12), ('Wethouder Buis', 9), ('Burgemeester Van den Hengel', 7), ('Burgemeester Wiersema', 5), ('Wethouder Tesselaar', 4), ('', 3)]
+    Fracties [('KERN8', 4), ('PvdA / GroenLinks', 4), ('CDA\nVVD\nGemeentebelangen\nDSV\nPvdA / GroenLinks\nLokale Partij', 2), ('VVD\nLokale Partij Opmeer', 2), ('Lokale Partij Opmeer', 2), ('CDA', 2)]
+    sample {"DT_RowId": "405c69ff-391f-46cd-a69c-7dad4a6fd1f2", "registrationdate": "Besluitvormende raadsvergadering 17-09-2026 11. Oprichting stichting Knooppunt Coördinatie Rijk-Regio's (KCR2)", "title": "Wensen over Stichting KCR2", "status": "Aangenomen", "portefeuillehouder": "Burgemeester Wiersema", "Fracties": "KERN8"}
+== opmeer Moties 79
+    registrationdate [('Besluitvormende raadsvergadering 17-09-2026 9. Stedenbouwkun', 3), ('Besluitvormende raadsvergadering 02-07-2026 10. Moties vreem', 2), ('Besluitvormende raadsvergadering 01-04-2026 3. Beschouwingen', 2), ('Besluitvormende raadsvergadering 10-07-2025 9. Kadernota 202', 2), ('Besluitvormende raadsvergadering 20-03-2025 8. Gebiedsvisie ', 2), ('Besluitvormende raadsvergadering 17-09-2026 12. Motie vreemd', 1)]
+    portefeuillehouder [('Wethouder Buis', 15), ('Wethouder Ter Veen', 10), ('', 5), ('Wethouder Tesselaar', 5), ('Wethouder Hagens', 3), ('Burgemeester Wiersema', 2)]
+    status [('Aangenomen', 17), ('Ingetrokken', 10), ('Verworpen', 8), ('Aangehouden', 5)]
+    raadsleden [('Lokale Partij Opmeer', 6), ('KERN8', 4), ('PvdA / GroenLinks', 4), ('Gemeentebelangen', 2), ('KERN8\nGemeentebelangen', 2), ('VVD', 2)]
+    afgedaan [('Nee', 33), ('Ja', 7)]
+    sample {"DT_RowId": "43832666-b970-4217-8701-18cc435ed796", "registrationdate": "Besluitvormende raadsvergadering 17-09-2026 12. Motie vreemd VVD GB LPO KERN8 over stikstofbrief kabinet", "title": "Stikstofbrief kabinet", "portefeuillehouder": "Wethouder Buis", "status": "Aangenomen", "raadsleden": "VVD\nGemeentebelangen\nLokale Partij Opmeer\nKERN8", "afgedaan": "Nee"}
+== opmeer Toezeggingen 84
+    registrationdate [('Oordeelsvormende raadsvergadering 25-06-2026 5. Jaarrekening', 2), ('Oordeelsvormende raadsvergadering 04-06-2026 5. Visie en bel', 2), ('Besluitvormende raadsvergadering 10-07-2025 9. Kadernota 202', 2), ('Oordeelsvormende raadsvergadering 28-05-2025 7. Verkeerscirc', 2), ('Besluitvormende raadsvergadering 20-03-2025 8. Gebiedsvisie ', 2), ('Oordeelsvormende raadsvergadering 06-03-2025 7. Kredietaanvr', 2)]
+    portefeuillehouder [('Wethouder Buis', 14), ('Wethouder Ter Veen', 10), ('Burgemeester Wiersema', 7), ('Wethouder Tesselaar', 6), ('Wethouder Hagens', 3)]
+    fractie [('Gemeentebelangen', 8), ('CDA', 6), ('PvdA/GroenLinks', 6), ('VVD', 5), ('', 5), ('KERN8', 3)]
+    afgedaan [('Ja', 29), ('Nee', 11)]
+    sample {"DT_RowId": "fc8f7090-4d02-4add-9c9d-f0a2f8b667de", "registrationdate": "Besluitvormende raadsvergadering 02-07-2026 8. Voorjaarsnota 2026", "title": "Investeringen SSC De Som", "portefeuillehouder": "Burgemeester Wiersema", "fractie": "VVD", "afgedaan": "Nee"}
