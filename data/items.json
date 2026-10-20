@@ -1,5 +1,763 @@
 {
   "items": {
+    "7165d9c9010c8704578c57c68745655853311751e851fb47653358b7995d5ec2": {
+      "title": "Hoornseweg functie doorfietsroute geven",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/a0d4e769-cd79-4f25-96a5-b9f730eebc6b",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-15T11:11:15+00:00",
+      "updated": "2026-10-20T15:02:50+00:00",
+      "last_change": "2026-10-20T15:02:50+00:00",
+      "hash": "",
+      "revisions": 3,
+      "excerpt": "Ingekomen stukken",
+      "kind": "overzichtsitem",
+      "rapport": "Ingekomen stukken",
+      "last_seen": "2026-10-20",
+      "report_pass": "2026-10-20T00:01:20+00:00",
+      "doc_date": "2026-09-07",
+      "doc_date_label": "datum ingekomen",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "306d6a937c9995d0f53d3d2b0d1d1da2c7d66c902f20be1aa7334074aebae202",
+      "content_checked": "2026-10-20T15:02:50+00:00",
+      "kw_sig": "5ae1c58d6943|306d6a937c9995d0f53d3d2b0d1d1da2c7d66c902f20be1aa7334074aebae202|Hoornseweg functie doorfietsroute geven|Ingekomen stukken",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "Hoornseweg functie doorfietsroute geven (Geanonimiseerd)"
+      ],
+      "bijlagen": [
+        {
+          "t": "Hoornseweg functie doorfietsroute geven (Geanonimiseerd)",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7666f102-6580-47c0-8ccb-f2d8b728fb29"
+        }
+      ],
+      "changes": [
+        {
+          "at": "2026-10-19T14:32:56+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "1 zin(nen) toegevoegd of aangepast, 40 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: Response ended prematurely]"
+          ],
+          "removed": [
+            "(geanonimiseerd)",
+            "(geanonimiseerd)",
+            "(geanonimiseerd)Van"
+          ]
+        },
+        {
+          "at": "2026-10-20T15:02:50+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "40 zin(nen) toegevoegd of aangepast, 1 verwijderd of vervangen",
+          "added": [
+            "(geanonimiseerd)",
+            "(geanonimiseerd)",
+            "(geanonimiseerd)Van"
+          ],
+          "removed": [
+            "[Bijlage niet te lezen: Response ended prematurely]"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "9fdea528483fd9b287b0fc1496df33e9ef3323ad095aaf603512395b4199734c": {
+      "title": "Woningbouw Hoogwoud-Oost",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/570bc597-0a82-4a45-9af5-8c7b7500c304",
+      "source": "Raadsportaal",
+      "gemeente": "opmeer",
+      "first_seen": "2026-10-20T15:01:48+00:00",
+      "updated": "2026-10-20T15:01:48+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "excerpt": "Thema's",
+      "kind": "overzichtsitem",
+      "rapport": "Thema's",
+      "last_seen": "2026-10-20",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "bfb897611d259c7554ea11d007c3a4b6a554f1c6e0796a68d8ff66ad9b4a592a",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "17 februari 2022 Raadsvoorstel Grondverwerving Hoogwoud",
+        "17 februari 2022 Motie 7.1 DSV VERWORPEN",
+        "17 februari 2022 Motie 7.2 CDA PVDA INGETROKKEN",
+        "17 februari 2022 Motie 7.3 VVD INGETROKKEN",
+        "5 juli 2022 Raadsinformatiebrief over samenwerkingsovereenkomst grondverwerving en ontwikkeling Hoogwoud-Oost",
+        "16 juli 2022 Raadsinformatiebrief over wet voorkeursrecht gemeenten Hoogwoud-Oost",
+        "25 juli 2022 Raadsinformatiebrief over concept-raadsvoorstel vestigen voorkeursrecht Hoogwoud-Oost",
+        "29 september 2022 Raadsvoorstel wet voorkeursrecht gemeenten Hoogwoud-Oost",
+        "29 september 2022 Eigendomsgegevens tabel behorend bij raadsvoorstel (geanonimiseerd)",
+        "29 september 2022 Kadastrale kaart met aangewezen percelen en toebedachte bestemmingen",
+        "29 september 2022 Nota van Zienswijze",
+        "29 september 2022 Amendement GB DSV over wet voorkeursrecht gemeenten VERWORPEN",
+        "29 september 2022 Motie CDA VVD PVDA DSV LPO over wet voorkeursrecht gemeenten AANGENOMEN",
+        "16 februari 2023 Raadsvoorstel en besluit op bezwaren wvg Hoogwoud-Oost",
+        "16 mei 2024 Besluitenlijst besloten gedeelte raadsvergadering 16 mei 2024 - geheimhouding opgeheven per 11 juli 2024",
+        "16 mei 2024 Breedbeeld Koerswijziging HWO - presentatie raad 16 mei (geanonimiseerd)",
+        "18 december 2024 Raadsinformatiebrief over ondertekening intentieovereenkomst Hoogwoud-Oost",
+        "27 februari 2025 Presentatie beeldvormende bijeenkomst gebiedsvisie Hoogwoud-Oost",
+        "20 maart 2025 Raadsvoorstel gebiedsvisie Hoogwoud-Oost",
+        "20 maart 2025 RIB Addendum gebiedsvisie Hoogwoud-Oost",
+        "20 maart 2025 Gebiedsvisie Hoogwoud-Oost",
+        "20 maart 2025Notulen ARO 11 februari 2025",
+        "20 maart 2025 Verkeersanalyse Hoogwoud-Oost",
+        "20 maart 2025 Antwoorden Technische vragen oordeelsvormende raadsvergadering 6 maart",
+        "20 maart 2025 Amendement A8.1 GB LPO over gebiedsvisie Hoogwoud-Oost - Verworpen",
+        "20 maart 2025 Motie M8.1 LPO over gebiedsvisie Hoogwoud-Oost randweg - Ingetrokken",
+        "20 maart 2025 Motie M8.2 GB over gebiedsvisie Hoogwoud-Oost - Ingetrokken",
+        "28 mei 2025 Raadsinformatiebrief Haalbaarheidsonderzoek Gebiedsontsluitingsweg HWO",
+        "28 mei 2025 Bijlage 1 BO Gebiedsontsluitingsweg",
+        "12 juni 2025 Raadsvoorstel Opheffen voorkeursrecht Hoogwoud-Oost",
+        "9 juli 2025 RIB Correctie bijlage raadsbesluit 12 juni 2025 inzake opheffen voorkeursrecht Hoogwoud-Oost",
+        "9 juli 2025 Bijlage 1 Gecorrigeerde Kaart WVG Hoogwoud-Oost",
+        "15 juli 2025 Raadsinformatiebrief Vaststelling Anterieure overeenkomst inzake Hoogwoud-Oost Wonen 1",
+        "24 september 2025 Raadsinformatiebrief Vaststelling en bekendmaking Omgevingsprogramma Hoogwoud-Oost (1)",
+        "24 september 2025 Bijlage 1: Omgevingsprogramma Hoogwoud-Oost (1)",
+        "12 februari 2026 Raadsvoorstel Voorbereidingskrediet haalbaarheid gebiedsontsluitingsweg Hoogwoud Oost (2)",
+        "12 februari 2026 Bijlage 1 Gebiedsvisie Hoogwoud Oost (1)",
+        "2 maart 2026 Raadsinformatiebrief Voortgang ontwikkelingen Hoogwoud-Oost en uitnodiging inloopavond stedenbouwkundig kader HWO",
+        "27 augustus 2026 Presentatie Beeldvormende bijeenkomst Stedenbouwkundig kader Hoogwoud-Oost",
+        "2 september 2026 Raadsinformatiebrief Zienswijze ontwerp Omgevingsvisie Noord-Holland",
+        "2 september 2026 Bijlage 1 Zienswijze de gemeente Opmeer op ontwerp Omgevingsvisie Noord-Holland",
+        "2 september 2026 Bijlage 2 brief zienswijze ontwerp-omgevingsvisie (getekend)",
+        "2 september 2026 Bijlage 3 Zienswijze Regio NHN_ontwerp Omgevingsvisie Provincie Noord Holland",
+        "17 september 2026 Raadsvoorstel Vaststelling stedenbouwkundig kader Hoogwoud-Oost - geamendeerd",
+        "17 september 2026 Bijlage 1 Stedenbouwkundig kader Hoogwoud-Oost (geamendeerd)",
+        "17 september 2026 Bijlage 2 Beantwoording ingekomen reacties participatie stedenbouwkundig kader Hoogwoud-Oost (1)",
+        "17 september 2026 Amendement A8.3 VVD over wijziging Ontsluitingsstructuren Stedenbouwkundigkader Hoogwoud-Oost - AANGENOMEN",
+        "17 september 2026 Amendement A8.4 PRO GB over wijziging Stedenbouwkundigkader Hoogwoud-Oost - AANGENOMEN",
+        "17 september 2026 Motie M8.2 KERN8 GB over participatie verkeersonderzoek Hoogwoud-Oost - AANGENOMEN"
+      ],
+      "bijlagen": [
+        {
+          "t": "17 februari 2022 Raadsvoorstel Grondverwerving Hoogwoud",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/9e470051-07c3-40d4-821b-b919053f89c7"
+        },
+        {
+          "t": "17 februari 2022 Motie 7.1 DSV VERWORPEN",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/41ec7316-2674-41bc-90c5-3f933072531a"
+        },
+        {
+          "t": "17 februari 2022 Motie 7.2 CDA PVDA INGETROKKEN",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/92a59d1a-0ed6-4ae1-9281-0e8b52e118d1"
+        },
+        {
+          "t": "17 februari 2022 Motie 7.3 VVD INGETROKKEN",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/e7d3fa11-26a9-44a8-b751-17b7b3c6e27e"
+        },
+        {
+          "t": "5 juli 2022 Raadsinformatiebrief over samenwerkingsovereenkomst grondverwerving en ontwikkeling Hoogwoud-Oost",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/c5bcd0d7-6262-403a-9828-816c11684b8d"
+        },
+        {
+          "t": "16 juli 2022 Raadsinformatiebrief over wet voorkeursrecht gemeenten Hoogwoud-Oost",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/28793fb1-07af-4029-90e0-1e073f5150de"
+        },
+        {
+          "t": "25 juli 2022 Raadsinformatiebrief over concept-raadsvoorstel vestigen voorkeursrecht Hoogwoud-Oost",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/22226d9a-4931-40d9-b048-b465d84f1979"
+        },
+        {
+          "t": "29 september 2022 Raadsvoorstel wet voorkeursrecht gemeenten Hoogwoud-Oost",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/8de1e8ec-b8f1-4691-8ad4-31abdd7e21cc"
+        }
+      ],
+      "content_checked": "2026-10-20T15:02:17+00:00",
+      "kw_sig": "5ae1c58d6943|bfb897611d259c7554ea11d007c3a4b6a554f1c6e0796a68d8ff66ad9b4a592a|Woningbouw Hoogwoud-Oost|Thema's"
+    },
+    "5ebfc4212d8ae69d75d659b452eb40fb83cc855b7ab974d34b6dcd95b6ac9741": {
+      "title": "Bijna 10 kilometer file op A7 tussen Wijdewormer en Avenhorn na ongeval",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQaHpGU0tSdTB4SUlzSl9BNGV0X2VGWTEyM2diNHMyNlUweTFUdmh6YWk4LV9nZUNha2NoTV84LW9EMm1yNkN4Xy01THBseXZmZXhmRERVcWFFSnJMcmQ5TGY1VWdsMzBTVUprcmNCSWQ5YzRhRm9CZG02VEViVGY3dFEwWmdrUjVvakRJSHNJZkgxalNvM0pBWnJFeXJIZTJuOGlLUUpZdXlEOUZoTUJvWU9kYzVaVU5aSVQ0UW0wdWtFTkQzRXJuQU84Rm5JQkt3U3pYTnEwcXFwcFE?oc=5",
+      "source": "In de media",
+      "gemeente": "koggenland",
+      "first_seen": "2026-10-20T15:01:28+00:00",
+      "updated": "2026-10-20T15:01:28+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "media",
+      "media_bron": "Noordhollands Dagblad",
+      "media_match": "kop",
+      "last_seen": "2026-10-20",
+      "doc_date": "2026-10-20",
+      "doc_date_label": "publicatiedatum",
+      "published_at": "2026-10-20T16:36+02:00",
+      "published_at_source": "Google Nieuws",
+      "kw_sig": "5ae1c58d6943||Bijna 10 kilometer file op A7 tussen Wijdewormer en Avenhorn na ongeval|"
+    },
+    "b9123998f5050bda0dbeeff5d6fcecc5f135880027684446f0bf9b425de9a60a": {
+      "title": "Oproeping raadscommissie 9 november 2026",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=547870fb-0576-4d97-9d8e-e86f9c16445c",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": null
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/547870fb-0576-4d97-9d8e-e86f9c16445c",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": null,
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · vergaderdocumenten",
+      "missing_count": 0,
+      "text_hash": "c190ebfb2bae57a090dde8a42c9e7cc261c96451ef4b501657c8232b1252cd55",
+      "content_checked": "2026-10-20T15:01:52+00:00",
+      "kw_sig": "5ae1c58d6943|c190ebfb2bae57a090dde8a42c9e7cc261c96451ef4b501657c8232b1252cd55|Oproeping raadscommissie 9 november 2026|Raadscommissie maandag 9 november 2026 · vergaderdocumenten"
+    },
+    "fed6704fa5b8587bb3f1395ed8d594c140bd563c104b087fa12f5d5e1fcace0b": {
+      "title": "Agenda raadscommissie 9 november 2026",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=03d322ca-fbe7-4bd0-b49f-2df1a8394bdb&agendaItemId=c9131349-a3bd-4fff-8d2b-8fadefac90eb",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "2 Vaststelling agenda"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/03d322ca-fbe7-4bd0-b49f-2df1a8394bdb",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "2 Vaststelling agenda",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 2 Vaststelling agenda",
+      "missing_count": 0,
+      "text_hash": "4a28d95fcf44b209009a6fb139e6e950317c4397cef89a360b15fbc8e21ba08e",
+      "content_checked": "2026-10-20T15:01:52+00:00",
+      "kw_sig": "5ae1c58d6943|4a28d95fcf44b209009a6fb139e6e950317c4397cef89a360b15fbc8e21ba08e|Agenda raadscommissie 9 november 2026|Raadscommissie maandag 9 november 2026 · agendapunt 2 Vaststelling agenda"
+    },
+    "0ae3d2fde3a4734adf91d1d5de8601d56918421e90ec2d809e9327ae3c4cdaac": {
+      "title": "00 DOC-26-1205998 - Raadsvoorstel Belastingverordeningen en verordening Kwijtschelding 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=a25f0103-3db2-420e-862d-5418f99f94ee&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/a25f0103-3db2-420e-862d-5418f99f94ee",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "20136b9b8597d3d49865c764b7ea8229fcbc988ae4e0e63a583440618ee0eaa8",
+      "content_checked": "2026-10-20T15:01:53+00:00",
+      "kw_sig": "5ae1c58d6943|20136b9b8597d3d49865c764b7ea8229fcbc988ae4e0e63a583440618ee0eaa8|00 DOC-26-1205998 - Raadsvoorstel Belastingverordeningen en verordening Kwijtschelding 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "3a9bbb3884f7f56c878c164aba9ae9bd202ebb729aa9e0cc6e4b4de2de880317": {
+      "title": "01 Verordening onroerende zaakbelastingen 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=ace44599-7737-4b34-aecd-5955fc1aec6f&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/ace44599-7737-4b34-aecd-5955fc1aec6f",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "5a1b70e6e54764ae49485ef66be7a5fa45865aa8addb9b148839a6a49513b165",
+      "content_checked": "2026-10-20T15:01:54+00:00",
+      "kw_sig": "5ae1c58d6943|5a1b70e6e54764ae49485ef66be7a5fa45865aa8addb9b148839a6a49513b165|01 Verordening onroerende zaakbelastingen 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "4dc84fc5506b47b23b47623197bd38692d2bcea245c7646c72657663a330c4fd": {
+      "title": "02 Verordening verblijfsbelasting 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=324222ce-fe86-4848-91fe-c1f870dfcc4b&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/324222ce-fe86-4848-91fe-c1f870dfcc4b",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "ff800e3684ac5495ed7c691e5a60c1c7572956de142bafb756c20af4d0ac1018",
+      "content_checked": "2026-10-20T15:01:54+00:00",
+      "kw_sig": "5ae1c58d6943|ff800e3684ac5495ed7c691e5a60c1c7572956de142bafb756c20af4d0ac1018|02 Verordening verblijfsbelasting 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "467360caa9e53c6053f0eeb85efce19a1de73521b98a9b960aee534d37b80910": {
+      "title": "03 Verordening forensenbelasting 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=487cfc8d-5ca7-4d21-95bf-ccb5a7abe5c3&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/487cfc8d-5ca7-4d21-95bf-ccb5a7abe5c3",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "da786b37e0a72e9c5e6bdd3415152066256d4e34947b81e46d4195a993973e8d",
+      "content_checked": "2026-10-20T15:01:55+00:00",
+      "kw_sig": "5ae1c58d6943|da786b37e0a72e9c5e6bdd3415152066256d4e34947b81e46d4195a993973e8d|03 Verordening forensenbelasting 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "e8a2169dd1c603a68f79b2418b092f675a7498726a9ea98e2da32591ac200235": {
+      "title": "04 Verordening waterverblijfsbelasting 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=2e48f32a-37f4-4eac-9e9b-060c38637cc8&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/2e48f32a-37f4-4eac-9e9b-060c38637cc8",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "22e559672f2480e634a89443b44daa49fb3a88b92c4044604756f2aaea7e577d",
+      "content_checked": "2026-10-20T15:01:57+00:00",
+      "kw_sig": "5ae1c58d6943|22e559672f2480e634a89443b44daa49fb3a88b92c4044604756f2aaea7e577d|04 Verordening waterverblijfsbelasting 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "2ea12882cb70f9e024f624ef5a4ec7d55b898dcae699daccea596598b31d8801": {
+      "title": "05 Verordening afvalstoffenheffing 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=36d51ce3-ac30-4d28-93a3-a34b9e08e603&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/36d51ce3-ac30-4d28-93a3-a34b9e08e603",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "06336466998f2ab3805e41a1cc72fad23e6df615ab437656646e43a98917e00a",
+      "content_checked": "2026-10-20T15:01:58+00:00",
+      "kw_sig": "5ae1c58d6943|06336466998f2ab3805e41a1cc72fad23e6df615ab437656646e43a98917e00a|05 Verordening afvalstoffenheffing 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "19e05b6518e03c7f39f2de37a0ae3824384258481698f13f383a1d3304a9536f": {
+      "title": "06 Verordening rioolheffing 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=24ab3850-cd7e-49ab-a78d-d94f3ff7de0e&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/24ab3850-cd7e-49ab-a78d-d94f3ff7de0e",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "eded066f684eebd5e9ff071ae95c67ef83726c57dfb3a3f9504cdb20d3ce8cef",
+      "content_checked": "2026-10-20T15:01:58+00:00",
+      "kw_sig": "5ae1c58d6943|eded066f684eebd5e9ff071ae95c67ef83726c57dfb3a3f9504cdb20d3ce8cef|06 Verordening rioolheffing 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "beb9a86b54088264e49236121058d37b6999cc1ee423a86ad607ec5ec18e8334": {
+      "title": "07 Verordening grafrechten 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=7a6cec63-a20f-4291-9f8a-6844a3f1f90c&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7a6cec63-a20f-4291-9f8a-6844a3f1f90c",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "399bd83e1f62ec81e58f54ddebab80e33944175e244a25b899547a690b03b7d5",
+      "content_checked": "2026-10-20T15:01:59+00:00",
+      "kw_sig": "5ae1c58d6943|399bd83e1f62ec81e58f54ddebab80e33944175e244a25b899547a690b03b7d5|07 Verordening grafrechten 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "93e91fd2cee81c0e97a33893faa317786dc510be49cce494773058fc2d57c2e5": {
+      "title": "08 Tarieventabel behorende bij de verordening grafrechten 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=d10aace5-8f97-4152-b309-64e014b1ce91&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/d10aace5-8f97-4152-b309-64e014b1ce91",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "29c08b5cae2b367c833172b8c3b03d92229f8519caeadf104a5428a717a57987",
+      "content_checked": "2026-10-20T15:02:00+00:00",
+      "kw_sig": "5ae1c58d6943|29c08b5cae2b367c833172b8c3b03d92229f8519caeadf104a5428a717a57987|08 Tarieventabel behorende bij de verordening grafrechten 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "802bb0be5f5268279a1557f3029bcb921198021298cadecb35a66b09da1a9903": {
+      "title": "09 Tarieventabel Grafrechten 2027 WAS-WORDT",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=3cbe5896-3afe-45bf-ab45-019d23cb39ee&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/3cbe5896-3afe-45bf-ab45-019d23cb39ee",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "3d32f2c2b6458a4eea333ff44aebc0f9230217ac77d67e7fede14bef7ceae065",
+      "content_checked": "2026-10-20T15:02:01+00:00",
+      "kw_sig": "5ae1c58d6943|3d32f2c2b6458a4eea333ff44aebc0f9230217ac77d67e7fede14bef7ceae065|09 Tarieventabel Grafrechten 2027 WAS-WORDT|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "05638e406cc67168c3f4abf84ba62a16f721ea3d03a7245d5a12e0b1961aa0a7": {
+      "title": "10 Legesverordening 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=11ee7296-4a3a-438a-8102-1e70844d005f&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/11ee7296-4a3a-438a-8102-1e70844d005f",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "e8d6261209009e869e6d518eb0f9776123ba1a15286ba833b92c6714845176ae",
+      "content_checked": "2026-10-20T15:02:02+00:00",
+      "kw_sig": "5ae1c58d6943|e8d6261209009e869e6d518eb0f9776123ba1a15286ba833b92c6714845176ae|10 Legesverordening 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "4ae6eafe70e8ed9c39fb4a890050610dde84d5a8b7a66e1840dc88ba7f49956a": {
+      "title": "11 Tarieventabel Leges 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=198c84f6-d36c-41a4-a69f-36434c859744&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/198c84f6-d36c-41a4-a69f-36434c859744",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "850e81c8a9e1af5a4adff654e1dc2b66290585b87ac076a3ea8700fd2eddfb68",
+      "content_checked": "2026-10-20T15:02:03+00:00",
+      "kw_sig": "5ae1c58d6943|850e81c8a9e1af5a4adff654e1dc2b66290585b87ac076a3ea8700fd2eddfb68|11 Tarieventabel Leges 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "c5248fedd7315da3efbf1131c7d7c12df5557df1e71c516d3d98350736711582": {
+      "title": "12 Tarieventabel Leges 2027 Was-Wordt_1",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=8e639c5b-b91b-407c-8a98-96ff1bb4a3e6&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/8e639c5b-b91b-407c-8a98-96ff1bb4a3e6",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "9b2d2a2ed80117b32321f4869913df1f383318a5d86cefaff7af7db41c27e9d3",
+      "content_checked": "2026-10-20T15:02:05+00:00",
+      "kw_sig": "5ae1c58d6943|9b2d2a2ed80117b32321f4869913df1f383318a5d86cefaff7af7db41c27e9d3|12 Tarieventabel Leges 2027 Was-Wordt_1|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "15052add6a15826f76cda2dd96e032504090ef59f4850069e2e6425e4f240df0": {
+      "title": "13 Verordening marktgelden 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=c860cff2-81a5-4f7b-b45c-3853eb4ea6d3&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/c860cff2-81a5-4f7b-b45c-3853eb4ea6d3",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "531aceb073cc7b194912775ab2eadcfcfcb09d8252df2e245c9e6b2b7065a7c6",
+      "content_checked": "2026-10-20T15:02:05+00:00",
+      "kw_sig": "5ae1c58d6943|531aceb073cc7b194912775ab2eadcfcfcb09d8252df2e245c9e6b2b7065a7c6|13 Verordening marktgelden 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "2f20e90dd78c63c0386f90e5e7ba1794b1288199274ae573754e841ceee47a5c": {
+      "title": "14 Verordening kwijtschelding 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=67f03e23-7323-4140-b5f6-0f3dce8084dd&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/67f03e23-7323-4140-b5f6-0f3dce8084dd",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "d7558595717cf26f66f739fd6c6104a13412d72a97981bddfd5aafee0dc97491",
+      "content_checked": "2026-10-20T15:02:06+00:00",
+      "kw_sig": "5ae1c58d6943|d7558595717cf26f66f739fd6c6104a13412d72a97981bddfd5aafee0dc97491|14 Verordening kwijtschelding 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "520959662e85c2bda20ff2943608d45692242319cdde37dbfc1b49ab788f637e": {
+      "title": "15 Belastingparagraaf 2027",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=5d592b6f-413b-4600-a159-d3faab41c6e9&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/5d592b6f-413b-4600-a159-d3faab41c6e9",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "9cece8d8ac8c014435dd8c9bab12ee35a956a05d636336c4e9c20236d10459fd",
+      "content_checked": "2026-10-20T15:02:07+00:00",
+      "kw_sig": "5ae1c58d6943|9cece8d8ac8c014435dd8c9bab12ee35a956a05d636336c4e9c20236d10459fd|15 Belastingparagraaf 2027|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
+    "7f0efd48869437c7d62e1da5b9d9b604288383c3616508154fe8d55fccf4c89f": {
+      "title": "16 Overzicht tarieven overige belastingen en heffingen 2027 versus 2026_1",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/52fc513f-8776-427e-b9d9-426652329851?documentId=d70ef385-1655-461e-b769-49b647e5424b&agendaItemId=d40f760b-0e53-47e3-8cec-2bf5eb5a92fa",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-20T15:01:02+00:00",
+      "updated": "2026-10-20T15:01:02+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-09",
+          "meeting": "Raadscommissie maandag 9 november 2026",
+          "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/d70ef385-1655-461e-b769-49b647e5424b",
+      "doc_date": "2026-11-09",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie maandag 9 november 2026",
+      "agendapunt": "5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "last_seen": "2026-10-20",
+      "excerpt": "Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "672dc47e63575bee71ab429b966a93ad62873b7dc0209565e912fc9f64090816",
+      "content_checked": "2026-10-20T15:02:08+00:00",
+      "kw_sig": "5ae1c58d6943|672dc47e63575bee71ab429b966a93ad62873b7dc0209565e912fc9f64090816|16 Overzicht tarieven overige belastingen en heffingen 2027 versus 2026_1|Raadscommissie maandag 9 november 2026 · agendapunt 5.1 Belastingverordeningen en verordening kwijtschelding 2027 (pfh. B. de Wit)"
+    },
     "b0e342daee32cdb98762f45dc972e28facc2f8fbaaef8ba62d0643a4d59e0128": {
       "title": "Woningbouw Hoogwoud-Oost",
       "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/75daf848-4d02-4f6b-a185-8702119bd6a6",
@@ -2121,55 +2879,6 @@
       "published_at": "2026-10-19T19:50+02:00",
       "published_at_source": "Google Nieuws",
       "kw_sig": "5ae1c58d6943||Inwoner Hoogwoud (40) gaf volgens OM minderjarige softdrugs na seksueel misbruik. Zijn huis zou trekpleister voor tieners zijn geweest|"
-    },
-    "7165d9c9010c8704578c57c68745655853311751e851fb47653358b7995d5ec2": {
-      "title": "Hoornseweg functie doorfietsroute geven",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/a0d4e769-cd79-4f25-96a5-b9f730eebc6b",
-      "source": "Raadsportaal",
-      "gemeente": "medemblik",
-      "first_seen": "2026-10-15T11:11:15+00:00",
-      "updated": "2026-10-19T14:32:56+00:00",
-      "last_change": "2026-10-19T14:32:56+00:00",
-      "hash": "",
-      "revisions": 2,
-      "excerpt": "Ingekomen stukken",
-      "kind": "overzichtsitem",
-      "rapport": "Ingekomen stukken",
-      "last_seen": "2026-10-20",
-      "report_pass": "2026-10-20T00:01:20+00:00",
-      "doc_date": "2026-09-07",
-      "doc_date_label": "datum ingekomen",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "95c1ff0a806a53cc19792720ebae990bfada39ed4750c0c16dca11dface05c11",
-      "content_checked": "2026-10-19T14:32:56+00:00",
-      "kw_sig": "5ae1c58d6943|95c1ff0a806a53cc19792720ebae990bfada39ed4750c0c16dca11dface05c11|Hoornseweg functie doorfietsroute geven|Ingekomen stukken",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "Hoornseweg functie doorfietsroute geven (Geanonimiseerd)"
-      ],
-      "bijlagen": [
-        {
-          "t": "Hoornseweg functie doorfietsroute geven (Geanonimiseerd)",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7666f102-6580-47c0-8ccb-f2d8b728fb29"
-        }
-      ],
-      "changes": [
-        {
-          "at": "2026-10-19T14:32:56+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "1 zin(nen) toegevoegd of aangepast, 40 verwijderd of vervangen",
-          "added": [
-            "[Bijlage niet te lezen: Response ended prematurely]"
-          ],
-          "removed": [
-            "(geanonimiseerd)",
-            "(geanonimiseerd)",
-            "(geanonimiseerd)Van"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
     },
     "59d696e79a604ca78c54a071cb831fb25a091b613ec64f7affef10a7397ad64b": {
       "title": "Christmas in the Woods: sprookjesachtige kerstshow in Hoogwoud",
@@ -69699,7 +70408,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "8881be3c4720a9fbefbcc30c1eb7314266d098c687cb6dd74b61e88ed4746577",
-      "content_checked": "2026-10-19T14:05:01+00:00",
+      "content_checked": "2026-10-20T15:02:19+00:00",
       "kw_sig": "5ae1c58d6943|8881be3c4720a9fbefbcc30c1eb7314266d098c687cb6dd74b61e88ed4746577|Notulen dorpsraad Aartswoud 23 augustus 2026|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69738,7 +70447,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "9abb14759d82775f9f848e6e3c06ec3cfc382dbf30f70f3d10058888d11b0540",
-      "content_checked": "2026-10-19T14:05:03+00:00",
+      "content_checked": "2026-10-20T15:02:21+00:00",
       "kw_sig": "5ae1c58d6943|9abb14759d82775f9f848e6e3c06ec3cfc382dbf30f70f3d10058888d11b0540|Nieuwsbrief Regio Westfriesland|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69771,7 +70480,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "3660ecddb122740abcb29079b710cb63c1109bd9464604634890109365d24794",
-      "content_checked": "2026-10-19T14:32:03+00:00",
+      "content_checked": "2026-10-20T15:02:23+00:00",
       "kw_sig": "5ae1c58d6943|3660ecddb122740abcb29079b710cb63c1109bd9464604634890109365d24794|Concrete visie en oplossingen voor de hervorming van het jeugd- en gezinszorgstelsel|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69804,7 +70513,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "30f5361d246be185219b4c79983704d198420d7b9dadb5ede78fc7576a240962",
-      "content_checked": "2026-10-19T14:32:11+00:00",
+      "content_checked": "2026-10-20T15:02:28+00:00",
       "kw_sig": "5ae1c58d6943|30f5361d246be185219b4c79983704d198420d7b9dadb5ede78fc7576a240962|Email voor Gemeenteraden/Provincie|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69837,7 +70546,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "7fae96d4c2c7072866070e5eb957c4a9590e32b4bada09f81ce94c8e07e7452c",
-      "content_checked": "2026-10-19T14:32:14+00:00",
+      "content_checked": "2026-10-20T15:02:29+00:00",
       "kw_sig": "5ae1c58d6943|7fae96d4c2c7072866070e5eb957c4a9590e32b4bada09f81ce94c8e07e7452c|Raadsnieuwsbrief Energieregio NH|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69870,7 +70579,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "565591eec8cadd3f7e955db1c40425a3fadce34d2df8d25407f9e7632186708a",
-      "content_checked": "2026-10-19T14:32:16+00:00",
+      "content_checked": "2026-10-20T15:02:32+00:00",
       "kw_sig": "5ae1c58d6943|565591eec8cadd3f7e955db1c40425a3fadce34d2df8d25407f9e7632186708a|Schriftelijke inspraak over Stedenbouwkundigkader Hoogwoud-Oost|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69903,7 +70612,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "331c66318f9eaf725c8e4169dc4463b762e70f5aaca1cc2494885f272e72183f",
-      "content_checked": "2026-10-19T14:32:19+00:00",
+      "content_checked": "2026-10-20T15:02:35+00:00",
       "kw_sig": "5ae1c58d6943|331c66318f9eaf725c8e4169dc4463b762e70f5aaca1cc2494885f272e72183f|Brief van inwoner over Stedenbouwkundigkader Hoogwoud-Oost|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69936,7 +70645,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "debe002644c7fc48b3fc07b0b4879129a55bc1aefe1c32fc98d9120f11f545c0",
-      "content_checked": "2026-10-19T14:32:28+00:00",
+      "content_checked": "2026-10-20T15:02:43+00:00",
       "kw_sig": "5ae1c58d6943|debe002644c7fc48b3fc07b0b4879129a55bc1aefe1c32fc98d9120f11f545c0|Nieuwsbrief Circulair Westfriesland|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -69969,7 +70678,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "eb41e701737046a3758b49b1fcdf91a4e8ef19025e56ba3d129619ce4f866762",
-      "content_checked": "2026-10-19T14:32:34+00:00",
+      "content_checked": "2026-10-20T15:02:48+00:00",
       "kw_sig": "5ae1c58d6943|eb41e701737046a3758b49b1fcdf91a4e8ef19025e56ba3d129619ce4f866762|Brief met vragen over Recreatiepark Westfriesland|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -70002,7 +70711,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "c2683ce60b03b87e6e678b8b34c243d22ef8c0948f6b34cae45f99b565a954ae",
-      "content_checked": "2026-10-19T14:33:04+00:00",
+      "content_checked": "2026-10-20T15:02:56+00:00",
       "kw_sig": "5ae1c58d6943|c2683ce60b03b87e6e678b8b34c243d22ef8c0948f6b34cae45f99b565a954ae|Uitnodiging ALV 30 september 2026|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -70035,7 +70744,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "c3f9e1138f4969cf9c38aa0f2515952e24d2714c9f1cb1073c8e9549088d0e98",
-      "content_checked": "2026-10-19T14:33:10+00:00",
+      "content_checked": "2026-10-20T15:03:00+00:00",
       "kw_sig": "5ae1c58d6943|c3f9e1138f4969cf9c38aa0f2515952e24d2714c9f1cb1073c8e9549088d0e98|Webinar voor raadsleden over de warmtetransitie in de gebouwde omgeving|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -70068,7 +70777,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "3a9d3797a27a479aaf1009da89e444ee2d1e1c642bb73232f4dfa268502193dd",
-      "content_checked": "2026-10-19T14:33:12+00:00",
+      "content_checked": "2026-10-20T15:03:02+00:00",
       "kw_sig": "5ae1c58d6943|3a9d3797a27a479aaf1009da89e444ee2d1e1c642bb73232f4dfa268502193dd|Brief Gemeenteraad|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -70101,7 +70810,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "31c5c525f60c84cc3c56dd6f125b2fcb19cd92fcc55b7dd74fe15097b479b75c",
-      "content_checked": "2026-10-19T14:33:15+00:00",
+      "content_checked": "2026-10-20T15:03:04+00:00",
       "kw_sig": "5ae1c58d6943|31c5c525f60c84cc3c56dd6f125b2fcb19cd92fcc55b7dd74fe15097b479b75c|Agenda en stukken AB van 9 september 2026 online|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -70134,7 +70843,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "a04cfe0df03d8b48bf0adf7a3196ff74b1157eec0fe6ea12c437541282059890",
-      "content_checked": "2026-10-19T14:33:17+00:00",
+      "content_checked": "2026-10-20T15:03:06+00:00",
       "kw_sig": "5ae1c58d6943|a04cfe0df03d8b48bf0adf7a3196ff74b1157eec0fe6ea12c437541282059890|Herinnering: Uitnodiging webinar 1 op de 5 inwoners hebben moeite met basisvaardigheden|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -70167,7 +70876,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "ac2ef69aede857a7fd98670abb57869e92cc964efdf21ac2de62728800ff7ac4",
-      "content_checked": "2026-10-19T14:33:20+00:00",
+      "content_checked": "2026-10-20T15:03:07+00:00",
       "kw_sig": "5ae1c58d6943|ac2ef69aede857a7fd98670abb57869e92cc964efdf21ac2de62728800ff7ac4|Motie vreemd: Een aanval op 1 is een aanval op allen|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -70200,7 +70909,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "0336c9bbb939354ce98bda1fcffba0f5839cab3d77346b41cb310bad0a505619",
-      "content_checked": "2026-10-19T14:33:21+00:00",
+      "content_checked": "2026-10-20T15:03:09+00:00",
       "kw_sig": "5ae1c58d6943|0336c9bbb939354ce98bda1fcffba0f5839cab3d77346b41cb310bad0a505619|Nieuwsbrief Tranche 2 krijgt vorm|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -71225,7 +71934,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "5895a888c69b16725fa19f76d58b9d713e7b3d338cfc7e8aa685f59bd28aa928",
-      "content_checked": "2026-10-19T14:32:30+00:00",
+      "content_checked": "2026-10-20T15:02:45+00:00",
       "kw_sig": "5ae1c58d6943|5895a888c69b16725fa19f76d58b9d713e7b3d338cfc7e8aa685f59bd28aa928|Besluitenlijst collegevergadering 8 september 2026|Besluitenlijsten college",
       "text_v": 2,
       "bijlagen_titels": [
@@ -71258,7 +71967,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "4e2f47cc4c3a685b01f2ad83138751dd7bf16a3e97ef0f0d48eaa6d0b358e87f",
-      "content_checked": "2026-10-19T14:33:25+00:00",
+      "content_checked": "2026-10-20T15:03:13+00:00",
       "kw_sig": "5ae1c58d6943|4e2f47cc4c3a685b01f2ad83138751dd7bf16a3e97ef0f0d48eaa6d0b358e87f|Besluitenlijst collegevergadering 1 september 2026|Besluitenlijsten college",
       "text_v": 2,
       "bijlagen_titels": [
@@ -87287,7 +87996,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "e61d3fe9d4373fb02dc160fc18f50fd2b47a0b02ed3358395f6132b31712f305",
-      "content_checked": "2026-10-19T14:32:09+00:00",
+      "content_checked": "2026-10-20T15:02:26+00:00",
       "kw_sig": "5ae1c58d6943|e61d3fe9d4373fb02dc160fc18f50fd2b47a0b02ed3358395f6132b31712f305|Raadsvragen CDA Onderzoek voetpad de Wijzend Nibbixwoud|Raadsvragen · nog niet beantwoord",
       "text_v": 2,
       "bijlagen_titels": [
@@ -87322,7 +88031,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "9e4113eb1a82240eff9f1af513e0a9ed24390432a9530d49b1759376c6e6125d",
-      "content_checked": "2026-10-19T14:32:26+00:00",
+      "content_checked": "2026-10-20T15:02:42+00:00",
       "kw_sig": "5ae1c58d6943|9e4113eb1a82240eff9f1af513e0a9ed24390432a9530d49b1759376c6e6125d|Raadsvragen CDA Vergroten van sociale veiligheid buitendijks parkeerterrein Medemblik|Raadsvragen · antwoord 2026-10-07",
       "text_v": 2,
       "bijlagen_titels": [
@@ -87362,7 +88071,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "8760b0e55f8816c68604607e7716f0d3514d6d64e617e967082fb7966914c1f9",
-      "content_checked": "2026-10-19T14:33:00+00:00",
+      "content_checked": "2026-10-20T15:02:52+00:00",
       "kw_sig": "5ae1c58d6943|8760b0e55f8816c68604607e7716f0d3514d6d64e617e967082fb7966914c1f9|Raadsvragen HvM Overlast in en rond fietstunnel tussen Medemblik en Hoorn|Raadsvragen · antwoord 2026-09-28",
       "text_v": 2,
       "bijlagen_titels": [
@@ -87402,7 +88111,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "e605e11101e86704f0c7ab2e8a2f68120f45a6dc9b852a495eca55c85393c28f",
-      "content_checked": "2026-10-19T14:33:34+00:00",
+      "content_checked": "2026-10-20T15:03:15+00:00",
       "kw_sig": "5ae1c58d6943|e605e11101e86704f0c7ab2e8a2f68120f45a6dc9b852a495eca55c85393c28f|Raadsvragen CDA Nieuwe ontwerp Waterschapsverordening 2027 HHNK, lozingsverbod|Raadsvragen · antwoord 2026-10-06",
       "text_v": 2,
       "bijlagen_titels": [
@@ -96555,7 +97264,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "8439b85938f3ba77f1a9a1bfe8da083748f8c81be2100becbc4b2ab82124f9d9",
-      "content_checked": "2026-10-19T14:32:05+00:00",
+      "content_checked": "2026-10-20T15:02:25+00:00",
       "kw_sig": "5ae1c58d6943|8439b85938f3ba77f1a9a1bfe8da083748f8c81be2100becbc4b2ab82124f9d9|Beantwoording schrijven Woningbouw contingenten Zwaagdijk Oost|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -96588,7 +97297,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "c9344a4f152a6fb9f9e819213026fe25770e6bd3bf478d8493b5d11efa037798",
-      "content_checked": "2026-10-19T14:32:22+00:00",
+      "content_checked": "2026-10-20T15:02:37+00:00",
       "kw_sig": "5ae1c58d6943|c9344a4f152a6fb9f9e819213026fe25770e6bd3bf478d8493b5d11efa037798|Oproep tot handhaving en optreden tegen ongegronde beschuldigingen, haat en bedreigingen op sociale media|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -96621,7 +97330,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "623fb1c08ba5fb9718481f614b6ac3c6ea3eeffc7ba84ba20232189907707c97",
-      "content_checked": "2026-10-19T14:32:24+00:00",
+      "content_checked": "2026-10-20T15:02:39+00:00",
       "kw_sig": "5ae1c58d6943|623fb1c08ba5fb9718481f614b6ac3c6ea3eeffc7ba84ba20232189907707c97|E-mail over waterleidingen in natuurgebieden aanleggen|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -96654,7 +97363,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "fba4cd9a69f46a4423c9bc6b6212a0cac80226d659a8dc3a4ad5522be12ff522",
-      "content_checked": "2026-10-19T14:33:02+00:00",
+      "content_checked": "2026-10-20T15:02:54+00:00",
       "kw_sig": "5ae1c58d6943|fba4cd9a69f46a4423c9bc6b6212a0cac80226d659a8dc3a4ad5522be12ff522|Project geluidsanering|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -96687,7 +97396,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "7a6d3dd1c98043e09319a3785f88b73753683cc77604eab3fcbab17809f33b96",
-      "content_checked": "2026-10-19T14:33:23+00:00",
+      "content_checked": "2026-10-20T15:03:10+00:00",
       "kw_sig": "5ae1c58d6943|7a6d3dd1c98043e09319a3785f88b73753683cc77604eab3fcbab17809f33b96|Gebiedsvisie Wognum-Nibbixwoud m.b.t. de Hoornseweg te Wognum|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -96720,7 +97429,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "5663a602852bb98cd42d070323813b202dd2856aaa1cb286f3e148284d765e9d",
-      "content_checked": "2026-10-19T14:33:38+00:00",
+      "content_checked": "2026-10-20T15:03:18+00:00",
       "kw_sig": "5ae1c58d6943|5663a602852bb98cd42d070323813b202dd2856aaa1cb286f3e148284d765e9d|Toezicht en cameratoezicht en geschikte veilige oplossing bij het tunneltje aan het Rijsdampad te Wognum na herhaalde mishandeling van jongeren op fatbikes|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -99934,7 +100643,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "dd3bec15fd825d87d630d738db4c26e4cf3efddd8c964a6c8ed9bd9e82c21ca4",
-      "content_checked": "2026-10-19T14:33:08+00:00",
+      "content_checked": "2026-10-20T15:02:59+00:00",
       "kw_sig": "5ae1c58d6943|dd3bec15fd825d87d630d738db4c26e4cf3efddd8c964a6c8ed9bd9e82c21ca4|Beleidsregels aanvraag prioriteit transportcapaciteit voor onderwijs- en woningbouwprojecten Medemblik 2026|Informatienota's",
       "text_v": 2,
       "bijlagen_titels": [
@@ -136294,46 +137003,46 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-10-20T14:31:10+00:00",
+        "checked": "2026-10-20T15:01:19+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-20T14:31:11+00:00",
+        "checked": "2026-10-20T15:01:19+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-10-20T14:31:12+00:00",
+        "checked": "2026-10-20T15:01:20+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-10-20T14:31:12+00:00",
+        "checked": "2026-10-20T15:01:20+00:00",
         "ok": true,
         "count": 29,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-20T14:30:46+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "ok": true,
         "count": 174,
         "new": 0,
         "note": "Laatste 30 dagen: 174 van 174 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-20T14:31:00+00:00",
+        "checked": "2026-10-20T15:01:09+00:00",
         "ok": true,
         "count": 10,
-        "new": 1,
+        "new": 19,
         "error": null,
-        "note": "10 van 20 vergaderingen in venster bijgewerkt; 182 documenten bekend. Dekking: vergaderingen van 2026-08-21 t/m 2026-12-04 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
+        "note": "10 van 20 vergaderingen in venster bijgewerkt; 201 documenten bekend. Dekking: vergaderingen van 2026-08-21 t/m 2026-12-04 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-20T14:31:09+00:00",
+        "checked": "2026-10-20T15:01:17+00:00",
         "ok": true,
         "count": 301,
         "new": 0,
@@ -136341,50 +137050,50 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2125, Ingekomen stukken 3155, Jaarplannen en jaarverslagen 1, Moties en amendementen 402, Raadsvragen 1409, Rekenkamer 54, Toezeggingen 332). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "In de media": {
-        "checked": "2026-10-20T14:31:16+00:00",
+        "checked": "2026-10-20T15:01:24+00:00",
         "ok": true,
-        "count": 26,
+        "count": 27,
         "new": 0,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Medemblik, Abbekerk, Andijk, Benningbroek, Hauwert, Lambertschaag, Midwoud, Nibbixwoud, Oostwoud, Opperdoes, Sijbekarspel, Twisk, Wervershoof, Wognum, Zwaagdijk-Oost, Zwaagdijk-West. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-10-20T14:33:23+00:00",
+        "checked": "2026-10-20T15:03:18+00:00",
         "ok": true,
         "count": 50,
         "errors": 0,
-        "note": "50 documenten gecontroleerd (1 pdf), 1625 gevolgd (alle gemeenten), 35 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
+        "note": "50 documenten gecontroleerd (19 pdf), 1645 gevolgd (alle gemeenten), 52 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
       },
       "Meldingen": {
-        "checked": "2026-10-20T14:33:23+00:00",
+        "checked": "2026-10-20T15:03:19+00:00",
         "ok": true,
-        "note": "Pushmeldingen actief (ntfy); deze run 0 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-20).",
+        "note": "Pushmeldingen actief (ntfy); deze run 1 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-20).",
         "error": null
       },
       "Trefwoorden": {
-        "checked": "2026-10-20T14:33:23+00:00",
+        "checked": "2026-10-20T15:03:18+00:00",
         "ok": true,
-        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 2 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
+        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 22 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
       }
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-20T14:31:18+00:00",
+        "checked": "2026-10-20T15:01:26+00:00",
         "ok": true,
         "count": 75,
         "new": 0,
         "note": "Laatste 30 dagen: 75 van 75 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-10-20T14:31:19+00:00",
+        "checked": "2026-10-20T15:01:27+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-20T14:31:20+00:00",
+        "checked": "2026-10-20T15:01:27+00:00",
         "ok": true,
         "count": 166,
         "new": 0,
@@ -136392,29 +137101,29 @@
         "error": null
       },
       "Woo-verzoeken": {
-        "checked": "2026-10-20T14:31:20+00:00",
+        "checked": "2026-10-20T15:01:28+00:00",
         "ok": true,
         "count": 15,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
       },
       "In de media": {
-        "checked": "2026-10-20T14:31:23+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "ok": true,
-        "count": 19,
-        "new": 0,
+        "count": 18,
+        "new": 1,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Koggenland, Avenhorn, Berkhout, De Goorn, Hensbroek, Obdam, Oudendijk, Scharwoude, Spierdijk, Ursem, Zuidermeer. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "ok": true,
         "count": 38,
         "new": 0,
         "note": "Laatste 30 dagen: 38 van 38 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-20T14:31:34+00:00",
+        "checked": "2026-10-20T15:01:42+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -136422,7 +137131,7 @@
         "note": "10 van 11 vergaderingen in venster bijgewerkt; 75 documenten bekend. Dekking: vergaderingen van 2026-08-21 t/m 2026-12-04 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-20T14:31:40+00:00",
+        "checked": "2026-10-20T15:01:49+00:00",
         "ok": true,
         "count": 399,
         "new": 1,
@@ -136430,14 +137139,14 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 74, Belangrijke documenten 13, Besluitenlijsten college 310, Ingekomen stukken 1149, Moties 79, Politieke vragen 73, Raadsinformatiebrieven 587, Thema's 25, Toezeggingen 84, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-10-20T14:31:41+00:00",
+        "checked": "2026-10-20T15:01:50+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "In de media": {
-        "checked": "2026-10-20T14:31:42+00:00",
+        "checked": "2026-10-20T15:01:51+00:00",
         "ok": true,
         "count": 7,
         "new": 0,
@@ -213351,7 +214060,7 @@
         "gemeente": "medemblik"
       },
       "8eadc9f7-a7ae-44ad-a78e-3596c9796e5d": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-12",
         "label": "donderdag 12 november 2026",
@@ -213359,7 +214068,7 @@
         "gemeente": "medemblik"
       },
       "d4b32282-6d07-4f2e-9463-89fb9b55e9c3": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Gemeenteraad",
         "date": "2026-09-24",
         "label": "donderdag 24 september 2026",
@@ -213430,7 +214139,7 @@
         "gemeente": "medemblik"
       },
       "bedc4215-5f41-43f8-809b-e789157c64fd": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-12-03",
         "label": "donderdag 3 december 2026",
@@ -213438,15 +214147,15 @@
         "documents": 0
       },
       "52fc513f-8776-427e-b9d9-426652329851": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-11-09",
         "label": "maandag 9 november 2026",
-        "documents": 2,
+        "documents": 19,
         "gemeente": "medemblik"
       },
       "dc765e1a-20fd-4c7a-97bb-0645c9bbf6f3": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-29",
         "label": "donderdag 29 oktober 2026",
@@ -213454,7 +214163,7 @@
         "gemeente": "medemblik"
       },
       "a66cbb1d-4930-42a1-9e01-300240cb0a8e": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-01",
         "label": "donderdag 1 oktober 2026",
@@ -213462,7 +214171,7 @@
         "gemeente": "medemblik"
       },
       "f4180896-f72d-4718-a1e3-0789d2667761": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-09-10",
         "label": "donderdag 10 september 2026",
@@ -213540,7 +214249,7 @@
         "gemeente": "medemblik"
       },
       "48e926c5-1642-494c-b07f-28b1148fd5db": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Presidium",
         "date": "2026-11-16",
         "label": "maandag 16 november 2026",
@@ -213548,7 +214257,7 @@
         "gemeente": "medemblik"
       },
       "a5344260-dca4-4884-8b61-4c52d5a7b54f": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Presidium",
         "date": "2026-10-05",
         "label": "maandag 5 oktober 2026",
@@ -213556,7 +214265,7 @@
         "gemeente": "medemblik"
       },
       "2435dfa3-24f4-4274-aea4-0f940dcc3cd3": {
-        "checked": "2026-10-20T14:00:56+00:00",
+        "checked": "2026-10-20T15:00:56+00:00",
         "type": "Presidium",
         "date": "2026-09-14",
         "label": "maandag 14 september 2026",
@@ -213741,7 +214450,7 @@
         "label": "donderdag 10 december 2026"
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -213749,7 +214458,7 @@
         "documents": 0
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -213813,7 +214522,7 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
@@ -213821,7 +214530,7 @@
         "documents": 0
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -213829,7 +214538,7 @@
         "documents": 13
       },
       "7d82ecee-3b65-4d47-ae9b-904b5e4c1562": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-09-10",
@@ -213858,7 +214567,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -213866,7 +214575,7 @@
         "documents": 0
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -213874,7 +214583,7 @@
         "documents": 10
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -213882,7 +214591,7 @@
         "documents": 3
       },
       "eb2e5b85-1e4b-4de2-824f-c07024b8157b": {
-        "checked": "2026-10-20T14:31:24+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-08-27",
@@ -213911,7 +214620,7 @@
         "label": "donderdag 22 januari 2026"
       },
       "c62483ed-4da6-4fee-846f-29b58d90cf6c": {
-        "checked": "2026-10-20T14:01:37+00:00",
+        "checked": "2026-10-20T15:01:31+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-10-06",
