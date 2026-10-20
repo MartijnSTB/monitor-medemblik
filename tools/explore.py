@@ -1,22 +1,20 @@
 import requests, re
 H = {'User-Agent': 'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
-for gem in ['Medemblik', 'Opmeer', 'Koggenland']:
-    q = f'dcterms.creator="{gem}" and dcterms.title="Reglement van orde" and dcterms.title="raad"'
-    try:
-        r = requests.get('https://zoekservice.overheid.nl/sru/Search', params={'x-connection': 'cvdr', 'query': q, 'maximumRecords': 10}, headers=H, timeout=40)
-        print('==', gem, r.status_code, re.findall(r'numberOfRecords>(\d+)', r.text))
-        recs = re.findall(r'<dcterms:identifier>(CVDR[^<]+)</dcterms:identifier>.*?<dcterms:title>([^<]+)</dcterms:title>', r.text, re.S)
-        for ident, title in recs: print('  ', ident, title)
-        ups = re.findall(r'<publicatieurl_xml>([^<]+)</publicatieurl_xml>', r.text) or re.findall(r'https://repository\.officiele-overheidspublicaties\.nl/cvdr/[^<"]+\.xml', r.text)
-        print('   urls', ups[:5])
-        # take entries whose title is reglement van orde voor de vergaderingen van de raad; fetch latest
-        for u in ups[:4]:
-            t = requests.get(u, headers=H, timeout=40).text
-            title = (re.findall(r'<citeertitel[^>]*>([^<]+)', t) or re.findall(r'<titel[^>]*>([^<]+)', t) or [''])[0]
-            txt = re.sub(r'<[^>]+>', ' ', t); txt = re.sub(r'\s+', ' ', txt)
-            print('   --', u, title[:100])
-            for m in re.finditer(r'[Ss]chriftelijke vragen', txt):
-                seg = txt[m.start():m.start()+1200]
-                if re.search(r'binnen|dagen|weken', seg):
-                    print('      ', seg[:1200]); break
-    except Exception as e: print(gem, e)
+for gem in ['Medemblik', 'Opmeer']:
+    for q in [f'c.product-area==cvdr AND dt.creator=="{gem}" AND dt.title="Reglement van orde"',
+              f'c.product-area==cvdr AND dt.creator=="{gem}" AND Reglement']:
+        r = requests.get('https://repository.overheid.nl/sru', params={'query': q, 'maximumRecords': 20}, headers=H, timeout=40)
+        print('==', q, r.status_code, re.findall(r'numberOfRecords>(\d+)', r.text), r.text[:300] if r.status_code != 200 else '')
+        titles = re.findall(r'<dcterms:title>([^<]+)</dcterms:title>', r.text)
+        urls = re.findall(r'<gzd:itemUrl manifestation="xml">([^<]+)</gzd:itemUrl>', r.text)
+        for t, u in zip(titles, urls): print('  ', t[:110], u)
+        for t, u in zip(titles, urls):
+            if re.search(r'reglement van orde.*raad', t, re.I):
+                x = requests.get(u, headers=H, timeout=40).text
+                txt = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', x))
+                for m in re.finditer(r'[Ss]chriftelijke vragen', txt):
+                    seg = txt[m.start():m.start()+1500]
+                    if re.search(r'binnen \w+ (dagen|weken)', seg):
+                        print('     >>', t[:80], '::', seg[:1500]); break
+                break
+        if titles: break
