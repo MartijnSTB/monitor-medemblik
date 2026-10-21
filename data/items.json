@@ -1,5 +1,458 @@
 {
   "items": {
+    "55d1ce01e4daa3baf5f17393c755249a52663b132cb19174626a673a42d584ef": {
+      "title": "Nieuwe participatiehandreiking voor ruimtelijke plannen",
+      "url": "https://www.medemblik.nl/nieuws/nieuwe-participatiehandreiking-voor-ruimtelijke-plannen",
+      "source": "Nieuws",
+      "first_seen": "2026-10-15T08:50:25+00:00",
+      "updated": "2026-10-21T20:46:51+00:00",
+      "hash": "4a01b9dafec59a7336796ab1262c08ab3ec5bf1c2b1fac972e67132be702f579",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "6bf5f6bf3a19ff4c0614039cced09f8b5a5087f235c2e5ce87d69f21b0cc142e",
+      "content_checked": "2026-10-21T20:46:51+00:00",
+      "last_change": "2026-10-21T20:46:51+00:00",
+      "last_seen": "2026-10-21",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07",
+      "gemeente": "medemblik",
+      "published_at": "2026-10-07T08:39+02:00",
+      "published_at_source": "RSS-feed",
+      "missing_count": 0,
+      "text_hash": "69e06ae1e89ce1f64462dcd6458647816f4399e555490de374927ebb96cffe2f",
+      "kw_sig": "5ae1c58d6943|69e06ae1e89ce1f64462dcd6458647816f4399e555490de374927ebb96cffe2f|Nieuwe participatiehandreiking voor ruimtelijke plannen|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:57+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 33 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Nieuwe participatiehandreiking voor ruimtelijke plannen",
+            "Publicatiedatum:"
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:51+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "33 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Nieuwe participatiehandreiking voor ruimtelijke plannen",
+            "Publicatiedatum:"
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "487194f48bde8e86a9a6a6cd69f7bd6f86423b7e88b13067dad2572d4efd827e": {
+      "title": "Woo-verzoek Met een Woo-verzoek vraagt u om informatie over een bepaald onderwerp voor iedereen openbaar te maken.",
+      "url": "https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie/woo-verzoek",
+      "source": "Openbare informatie",
+      "first_seen": "2026-10-15T08:50:26+00:00",
+      "updated": "2026-10-21T20:46:50+00:00",
+      "hash": "0aeea6c100384c60f9fb6518cd9635233b8d2175d5aef78305daae3be0928f62",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "f84cfee297ffc96834b1af6d45d41b37d0ff4bee83df50d86ab2759fd82e3ec4",
+      "content_checked": "2026-10-21T20:46:50+00:00",
+      "last_change": "2026-10-21T20:46:50+00:00",
+      "last_seen": "2026-10-21",
+      "gemeente": "medemblik",
+      "missing_count": 0,
+      "text_hash": "a808d56ebcfd118220af98487474276c847d75c8ee9cc8b6d98057829dd20dc4",
+      "kw_sig": "5ae1c58d6943|a808d56ebcfd118220af98487474276c847d75c8ee9cc8b6d98057829dd20dc4|Woo-verzoek Met een Woo-verzoek vraagt u om informatie over een bepaald onderwerp voor iedereen openbaar te maken.|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:56+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 47 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Woo-verzoek",
+            "Met een Woo-verzoek vraagt u om informatie over een bepaald onderwerp voor iedereen openbaar te maken."
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:50+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "47 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Woo-verzoek",
+            "Met een Woo-verzoek vraagt u om informatie over een bepaald onderwerp voor iedereen openbaar te maken."
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "202e51e532d33ba507a20f4bd6474b07b9645b9a49dce4ed960d0364db0197a6": {
+      "title": "Gemeente Medemblik actualiseert handreiking voor spuitzonering",
+      "url": "https://www.medemblik.nl/nieuws/gemeente-medemblik-actualiseert-handreiking-voor-spuitzonering-1",
+      "source": "Nieuws",
+      "first_seen": "2026-10-15T08:50:25+00:00",
+      "updated": "2026-10-21T20:46:49+00:00",
+      "hash": "033b9fad3f0788081a728dce4a7215f2bda67e290ab7c3628c5863e0a419545c",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "20182b6fdd5995bcbb10c773725586cd45528903fcd5487ce847185bd441c6b1",
+      "content_checked": "2026-10-21T20:46:49+00:00",
+      "last_change": "2026-10-21T20:46:49+00:00",
+      "last_seen": "2026-10-21",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07",
+      "gemeente": "medemblik",
+      "published_at": "2026-10-07T09:08+02:00",
+      "published_at_source": "RSS-feed",
+      "missing_count": 0,
+      "text_hash": "18a61e0a6cf8c10596dd609631a4d042de8365aaa6330f3397281029d8c6a003",
+      "kw_sig": "5ae1c58d6943|18a61e0a6cf8c10596dd609631a4d042de8365aaa6330f3397281029d8c6a003|Gemeente Medemblik actualiseert handreiking voor spuitzonering|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:55+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 35 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Gemeente Medemblik actualiseert handreiking voor spuitzonering",
+            "Publicatiedatum:"
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:49+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "35 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Gemeente Medemblik actualiseert handreiking voor spuitzonering",
+            "Publicatiedatum:"
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "60b04a2f7286d8190cfcc20a281760289718306b057568aa07581ae542e67ab1": {
+      "title": "Proef: Wonen in bijgebouwen",
+      "url": "https://www.medemblik.nl/nieuws/proef-wonen-in-bijgebouwen",
+      "source": "Nieuws",
+      "first_seen": "2026-10-15T08:50:25+00:00",
+      "updated": "2026-10-21T20:46:49+00:00",
+      "hash": "c33e154bc5f8073f08712a99257c85515a1d28a7ba9a977ca8792ff55538818c",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "a169a920561a267eb4aa50e5bf0b348328625ac2abf53c5f8016991f054cc211",
+      "content_checked": "2026-10-21T20:46:49+00:00",
+      "last_change": "2026-10-21T20:46:49+00:00",
+      "last_seen": "2026-10-21",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07",
+      "gemeente": "medemblik",
+      "published_at": "2026-10-07T08:54+02:00",
+      "published_at_source": "RSS-feed",
+      "missing_count": 0,
+      "text_hash": "cadd9a2c81232c438674fe11de3dd4018b683bd34c1d21083d0c5a1ee36201ed",
+      "kw_sig": "5ae1c58d6943|cadd9a2c81232c438674fe11de3dd4018b683bd34c1d21083d0c5a1ee36201ed|Proef: Wonen in bijgebouwen|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:55+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 29 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Proef: Wonen in bijgebouwen",
+            "Publicatiedatum:"
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:49+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "32 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Proef: Wonen in bijgebouwen",
+            "Publicatiedatum:"
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "fa91d2f1a18eca8a2baae4d74919fadd1490944fce7b5fd172b10777cb008a08": {
+      "title": "Eerste woningen Slotlaan opgeleverd",
+      "url": "https://www.medemblik.nl/nieuws/eerste-woningen-slotlaan-opgeleverd",
+      "source": "Nieuws",
+      "first_seen": "2026-10-15T08:50:25+00:00",
+      "updated": "2026-10-21T20:46:46+00:00",
+      "hash": "c549e6aeaf47e940a2da2a23b3d14d6d7977c0a67fd89ccfce0dcc9cd680bb73",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "8162f5702e9dee5aec0f6fbf7ea64d50c134e5e3bd657eb136561a86e038e492",
+      "content_checked": "2026-10-21T20:46:46+00:00",
+      "last_change": "2026-10-21T20:46:46+00:00",
+      "last_seen": "2026-10-21",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07",
+      "gemeente": "medemblik",
+      "published_at": "2026-10-07T09:19+02:00",
+      "published_at_source": "RSS-feed",
+      "missing_count": 0,
+      "text_hash": "49585be733be5bea1169f57c0dee631d715b884a0c141390f68fea6801942e89",
+      "kw_sig": "5ae1c58d6943|49585be733be5bea1169f57c0dee631d715b884a0c141390f68fea6801942e89|Eerste woningen Slotlaan opgeleverd|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:53+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 20 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Eerste woningen Slotlaan opgeleverd",
+            "Publicatiedatum:"
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:46+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "20 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Eerste woningen Slotlaan opgeleverd",
+            "Publicatiedatum:"
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "039836a7c1f4b6cfca3ad602f86e546b293732673b45d2cb667a518e5f7db6d3": {
+      "title": "Herontwikkeling Oosterhaven Medemblik officieel van start",
+      "url": "https://www.medemblik.nl/nieuws/herontwikkeling-oosterhaven-medemblik-officieel-van-start",
+      "source": "Nieuws",
+      "first_seen": "2026-10-15T08:50:25+00:00",
+      "updated": "2026-10-21T20:46:45+00:00",
+      "hash": "e32d21fca2a2dc18a0411a90776beb058046e2055930b4c64cc58117cafbdc63",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "444fcf3a4bf66541e792d7a376c077cd57e0f289ef99685ca625d902fc83adeb",
+      "content_checked": "2026-10-21T20:46:45+00:00",
+      "last_change": "2026-10-21T20:46:45+00:00",
+      "last_seen": "2026-10-21",
+      "doc_date": "2026-10-07",
+      "doc_date_label": "publicatiedatum",
+      "publication_date": "2026-10-07",
+      "gemeente": "medemblik",
+      "published_at": "2026-10-07T09:26+02:00",
+      "published_at_source": "RSS-feed",
+      "missing_count": 0,
+      "text_hash": "2acb01c3e1793e8e7d2ff444cbbd60194d7a28676202a2b2ef7b38631fc5a6ed",
+      "kw_sig": "5ae1c58d6943|2acb01c3e1793e8e7d2ff444cbbd60194d7a28676202a2b2ef7b38631fc5a6ed|Herontwikkeling Oosterhaven Medemblik officieel van start|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:52+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 16 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Herontwikkeling Oosterhaven Medemblik officieel van start",
+            "Publicatiedatum:"
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:45+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "16 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Herontwikkeling Oosterhaven Medemblik officieel van start",
+            "Publicatiedatum:"
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "5bda7bff34423ec89083a376bcf4913caa9a8bcd2c4804010c0f1739f8bb6685": {
+      "title": "Informatieverzoek Met een informatieverzoek krijgt alleen u de informatie. Het gaat dan om algemene informatie.",
+      "url": "https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie/informatieverzoek",
+      "source": "Openbare informatie",
+      "first_seen": "2026-10-15T08:50:26+00:00",
+      "updated": "2026-10-21T20:46:44+00:00",
+      "hash": "2ac68b5c4a1dee8466fa3e7c18690c6bd6bef98d374f444d3c6e417551752e18",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "04390c20c559bad3781bf35f7056df14b971f839bfae31430a7829b329228eee",
+      "content_checked": "2026-10-21T20:46:44+00:00",
+      "last_change": "2026-10-21T20:46:44+00:00",
+      "last_seen": "2026-10-21",
+      "gemeente": "medemblik",
+      "missing_count": 0,
+      "text_hash": "7fcde6cd98a0ad2dff1a96d5247fed217bce17d821af5cb55d99ac56c4672f3c",
+      "kw_sig": "5ae1c58d6943|7fcde6cd98a0ad2dff1a96d5247fed217bce17d821af5cb55d99ac56c4672f3c|Informatieverzoek Met een informatieverzoek krijgt alleen u de informatie. Het gaat dan om algemene informatie.|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:51+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 21 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Informatieverzoek",
+            "Met een informatieverzoek vraagt u informatie op die alleen voor u van belang is."
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:44+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "21 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Informatieverzoek",
+            "Met een informatieverzoek vraagt u informatie op die alleen voor u van belang is."
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "94eb68560e04997e2934633aa4ce080555e921f9ed7cf98526f4c52bbccaa682": {
+      "title": "Openbaar gemaakte informatie",
+      "url": "https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie/openbaar-gemaakte-informatie",
+      "source": "Openbare informatie",
+      "first_seen": "2026-10-15T08:50:26+00:00",
+      "updated": "2026-10-21T20:46:43+00:00",
+      "hash": "c7d97f0aa2c592ec854544105ec019d6329127270ef99ff06035c9dae32ed694",
+      "revisions": 3,
+      "excerpt": "",
+      "content_hash": "97b567bd3a0f2b8bc15465a452072830889977fb96432e99e5ecfec5179da66d",
+      "content_checked": "2026-10-21T20:46:43+00:00",
+      "last_change": "2026-10-21T20:46:43+00:00",
+      "last_seen": "2026-10-21",
+      "gemeente": "medemblik",
+      "missing_count": 0,
+      "text_hash": "d419635c88a475c2b4d326ec89d591528eeb2b2ae8a86019639612a608129a18",
+      "kw_sig": "5ae1c58d6943|d419635c88a475c2b4d326ec89d591528eeb2b2ae8a86019639612a608129a18|Openbaar gemaakte informatie|",
+      "changes": [
+        {
+          "at": "2026-10-21T14:31:51+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "18 zin(nen) toegevoegd of aangepast, 36 verwijderd of vervangen",
+          "added": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ],
+          "removed": [
+            "Lees voor",
+            "Openbaar gemaakte informatie",
+            "Gemeente Medemblik maakt veel informatie ook actief openbaar."
+          ]
+        },
+        {
+          "at": "2026-10-21T20:46:43+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "36 zin(nen) toegevoegd of aangepast, 18 verwijderd of vervangen",
+          "added": [
+            "Lees voor",
+            "Openbaar gemaakte informatie",
+            "Gemeente Medemblik maakt veel informatie ook actief openbaar."
+          ],
+          "removed": [
+            "Deze website is tijdelijk offline",
+            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
+            "Wij doen dit om uw gegevens en onze systemen te beschermen."
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "93da2a858b6177e206ec041e10ba9a909f86e404df511db883a92a3fe49138e5": {
+      "title": "Verrassende 80s Hits Liveshow in Midwoud",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPT0FFaWM0SGZPTE04cHQwZ0pjY0k1UFRBMkQyWk5GWXZoZ1RzdmMwNGxRS0ZuYzV0RUlWVU5URFR0QWFuTkxaVjV2VU0tNmlEbDdILTdxaUVvaXpUZ01xckZjUEx1TTVvdjljYUdFSnBzdFN1eHA0RWNfdS10WjBabi1USkxLWmktMFRTNXg4TXZMdDBOX044?oc=5",
+      "source": "In de media",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-21T20:46:03+00:00",
+      "updated": "2026-10-21T20:46:03+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "media",
+      "media_bron": "Streekomroep West-Friesland",
+      "media_match": "kop",
+      "last_seen": "2026-10-21",
+      "doc_date": "2026-10-21",
+      "doc_date_label": "publicatiedatum",
+      "published_at": "2026-10-21T22:05+02:00",
+      "published_at_source": "Google Nieuws",
+      "kw_sig": "5ae1c58d6943||Verrassende 80s Hits Liveshow in Midwoud|"
+    },
     "9ddbae519f97c2d16b68b63897cf993b85aa62767d232e912328878174d12bc8": {
       "title": "Medemblik blijft lokale evenementen steunen met subsidie BRUIS",
       "url": "https://www.medemblik.nl/nieuws/medemblik-blijft-lokale-evenementen-steunen-met-subsidie-bruis",
@@ -2054,7 +2507,7 @@
       "last_seen": "2026-10-15",
       "missing_count": 0,
       "text_hash": "716ea61c5098914eb04d29c21730186cd67045c75754039e589c37ed8fcc7f56",
-      "content_checked": "2026-10-21T14:32:13+00:00",
+      "content_checked": "2026-10-21T20:47:11+00:00",
       "kw_sig": "5ae1c58d6943|716ea61c5098914eb04d29c21730186cd67045c75754039e589c37ed8fcc7f56|Dinsdag 13 oktober bezocht de ‘Denk vooruit bus’ een bezoek aan Opmeer|Inwoners en ondernemers waren van harte welkom op het Burgemeester W.S.P.P. de Leeuwplein in Spanbroek. Zij konden met hun vragen terecht over hoe we ons goed kunnen voorbereiden op een noodsituatie.",
       "changes": [
         {
@@ -2092,7 +2545,7 @@
       "last_seen": "2026-10-21",
       "missing_count": 0,
       "text_hash": "716ea61c5098914eb04d29c21730186cd67045c75754039e589c37ed8fcc7f56",
-      "content_checked": "2026-10-21T14:32:12+00:00",
+      "content_checked": "2026-10-21T20:47:10+00:00",
       "published_at": "2026-10-15T14:28+02:00",
       "published_at_source": "RSS-feed",
       "changes": [
@@ -2129,319 +2582,6 @@
       ],
       "change_type": "Tekst gewijzigd",
       "kw_sig": "5ae1c58d6943|716ea61c5098914eb04d29c21730186cd67045c75754039e589c37ed8fcc7f56|Vraag en antwoord over de handhavingskwestie pioenrozen|Op 20 maart 2026 heeft de gemeente Opmeer een verzoek om handhaving ontvangen van de ‘Groene Arabesk’. Het college: ‘Wij zien de grote onzekerheid waar de agrarische ondernemers mee te maken hebben als gevolg van de handhavingskwestie. Wij willen een handelingsperspectief geven aan de ondernemers, voor de korte en lange termijn - voor de verschillende individuele situaties waarin ondernemers zich "
-    },
-    "55d1ce01e4daa3baf5f17393c755249a52663b132cb19174626a673a42d584ef": {
-      "title": "Nieuwe participatiehandreiking voor ruimtelijke plannen",
-      "url": "https://www.medemblik.nl/nieuws/nieuwe-participatiehandreiking-voor-ruimtelijke-plannen",
-      "source": "Nieuws",
-      "first_seen": "2026-10-15T08:50:25+00:00",
-      "updated": "2026-10-21T14:31:57+00:00",
-      "hash": "4a01b9dafec59a7336796ab1262c08ab3ec5bf1c2b1fac972e67132be702f579",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "6bf5f6bf3a19ff4c0614039cced09f8b5a5087f235c2e5ce87d69f21b0cc142e",
-      "content_checked": "2026-10-21T14:31:57+00:00",
-      "last_change": "2026-10-21T14:31:57+00:00",
-      "last_seen": "2026-10-21",
-      "doc_date": "2026-10-07",
-      "doc_date_label": "publicatiedatum",
-      "publication_date": "2026-10-07",
-      "gemeente": "medemblik",
-      "published_at": "2026-10-07T08:39+02:00",
-      "published_at_source": "RSS-feed",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Nieuwe participatiehandreiking voor ruimtelijke plannen|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:57+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 33 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Nieuwe participatiehandreiking voor ruimtelijke plannen",
-            "Publicatiedatum:"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "487194f48bde8e86a9a6a6cd69f7bd6f86423b7e88b13067dad2572d4efd827e": {
-      "title": "Woo-verzoek Met een Woo-verzoek vraagt u om informatie over een bepaald onderwerp voor iedereen openbaar te maken.",
-      "url": "https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie/woo-verzoek",
-      "source": "Openbare informatie",
-      "first_seen": "2026-10-15T08:50:26+00:00",
-      "updated": "2026-10-21T14:31:56+00:00",
-      "hash": "0aeea6c100384c60f9fb6518cd9635233b8d2175d5aef78305daae3be0928f62",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "f84cfee297ffc96834b1af6d45d41b37d0ff4bee83df50d86ab2759fd82e3ec4",
-      "content_checked": "2026-10-21T14:31:56+00:00",
-      "last_change": "2026-10-21T14:31:56+00:00",
-      "last_seen": "2026-10-21",
-      "gemeente": "medemblik",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Woo-verzoek Met een Woo-verzoek vraagt u om informatie over een bepaald onderwerp voor iedereen openbaar te maken.|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:56+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 47 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Woo-verzoek",
-            "Met een Woo-verzoek vraagt u om informatie over een bepaald onderwerp voor iedereen openbaar te maken."
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "202e51e532d33ba507a20f4bd6474b07b9645b9a49dce4ed960d0364db0197a6": {
-      "title": "Gemeente Medemblik actualiseert handreiking voor spuitzonering",
-      "url": "https://www.medemblik.nl/nieuws/gemeente-medemblik-actualiseert-handreiking-voor-spuitzonering-1",
-      "source": "Nieuws",
-      "first_seen": "2026-10-15T08:50:25+00:00",
-      "updated": "2026-10-21T14:31:55+00:00",
-      "hash": "033b9fad3f0788081a728dce4a7215f2bda67e290ab7c3628c5863e0a419545c",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "20182b6fdd5995bcbb10c773725586cd45528903fcd5487ce847185bd441c6b1",
-      "content_checked": "2026-10-21T14:31:55+00:00",
-      "last_change": "2026-10-21T14:31:55+00:00",
-      "last_seen": "2026-10-21",
-      "doc_date": "2026-10-07",
-      "doc_date_label": "publicatiedatum",
-      "publication_date": "2026-10-07",
-      "gemeente": "medemblik",
-      "published_at": "2026-10-07T09:08+02:00",
-      "published_at_source": "RSS-feed",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Gemeente Medemblik actualiseert handreiking voor spuitzonering|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:55+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 35 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Gemeente Medemblik actualiseert handreiking voor spuitzonering",
-            "Publicatiedatum:"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "60b04a2f7286d8190cfcc20a281760289718306b057568aa07581ae542e67ab1": {
-      "title": "Proef: Wonen in bijgebouwen",
-      "url": "https://www.medemblik.nl/nieuws/proef-wonen-in-bijgebouwen",
-      "source": "Nieuws",
-      "first_seen": "2026-10-15T08:50:25+00:00",
-      "updated": "2026-10-21T14:31:55+00:00",
-      "hash": "c33e154bc5f8073f08712a99257c85515a1d28a7ba9a977ca8792ff55538818c",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "a169a920561a267eb4aa50e5bf0b348328625ac2abf53c5f8016991f054cc211",
-      "content_checked": "2026-10-21T14:31:55+00:00",
-      "last_change": "2026-10-21T14:31:55+00:00",
-      "last_seen": "2026-10-21",
-      "doc_date": "2026-10-07",
-      "doc_date_label": "publicatiedatum",
-      "publication_date": "2026-10-07",
-      "gemeente": "medemblik",
-      "published_at": "2026-10-07T08:54+02:00",
-      "published_at_source": "RSS-feed",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Proef: Wonen in bijgebouwen|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:55+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 29 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Proef: Wonen in bijgebouwen",
-            "Publicatiedatum:"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "fa91d2f1a18eca8a2baae4d74919fadd1490944fce7b5fd172b10777cb008a08": {
-      "title": "Eerste woningen Slotlaan opgeleverd",
-      "url": "https://www.medemblik.nl/nieuws/eerste-woningen-slotlaan-opgeleverd",
-      "source": "Nieuws",
-      "first_seen": "2026-10-15T08:50:25+00:00",
-      "updated": "2026-10-21T14:31:53+00:00",
-      "hash": "c549e6aeaf47e940a2da2a23b3d14d6d7977c0a67fd89ccfce0dcc9cd680bb73",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "8162f5702e9dee5aec0f6fbf7ea64d50c134e5e3bd657eb136561a86e038e492",
-      "content_checked": "2026-10-21T14:31:53+00:00",
-      "last_change": "2026-10-21T14:31:53+00:00",
-      "last_seen": "2026-10-21",
-      "doc_date": "2026-10-07",
-      "doc_date_label": "publicatiedatum",
-      "publication_date": "2026-10-07",
-      "gemeente": "medemblik",
-      "published_at": "2026-10-07T09:19+02:00",
-      "published_at_source": "RSS-feed",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Eerste woningen Slotlaan opgeleverd|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:53+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 20 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Eerste woningen Slotlaan opgeleverd",
-            "Publicatiedatum:"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "039836a7c1f4b6cfca3ad602f86e546b293732673b45d2cb667a518e5f7db6d3": {
-      "title": "Herontwikkeling Oosterhaven Medemblik officieel van start",
-      "url": "https://www.medemblik.nl/nieuws/herontwikkeling-oosterhaven-medemblik-officieel-van-start",
-      "source": "Nieuws",
-      "first_seen": "2026-10-15T08:50:25+00:00",
-      "updated": "2026-10-21T14:31:52+00:00",
-      "hash": "e32d21fca2a2dc18a0411a90776beb058046e2055930b4c64cc58117cafbdc63",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "444fcf3a4bf66541e792d7a376c077cd57e0f289ef99685ca625d902fc83adeb",
-      "content_checked": "2026-10-21T14:31:52+00:00",
-      "last_change": "2026-10-21T14:31:52+00:00",
-      "last_seen": "2026-10-21",
-      "doc_date": "2026-10-07",
-      "doc_date_label": "publicatiedatum",
-      "publication_date": "2026-10-07",
-      "gemeente": "medemblik",
-      "published_at": "2026-10-07T09:26+02:00",
-      "published_at_source": "RSS-feed",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Herontwikkeling Oosterhaven Medemblik officieel van start|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:52+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 16 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Herontwikkeling Oosterhaven Medemblik officieel van start",
-            "Publicatiedatum:"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "94eb68560e04997e2934633aa4ce080555e921f9ed7cf98526f4c52bbccaa682": {
-      "title": "Openbaar gemaakte informatie",
-      "url": "https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie/openbaar-gemaakte-informatie",
-      "source": "Openbare informatie",
-      "first_seen": "2026-10-15T08:50:26+00:00",
-      "updated": "2026-10-21T14:31:51+00:00",
-      "hash": "c7d97f0aa2c592ec854544105ec019d6329127270ef99ff06035c9dae32ed694",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "97b567bd3a0f2b8bc15465a452072830889977fb96432e99e5ecfec5179da66d",
-      "content_checked": "2026-10-21T14:31:51+00:00",
-      "last_change": "2026-10-21T14:31:51+00:00",
-      "last_seen": "2026-10-21",
-      "gemeente": "medemblik",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Openbaar gemaakte informatie|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:51+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 36 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Openbaar gemaakte informatie",
-            "Gemeente Medemblik maakt veel informatie ook actief openbaar."
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
-    "5bda7bff34423ec89083a376bcf4913caa9a8bcd2c4804010c0f1739f8bb6685": {
-      "title": "Informatieverzoek Met een informatieverzoek krijgt alleen u de informatie. Het gaat dan om algemene informatie.",
-      "url": "https://www.medemblik.nl/raad-bestuur-en-organisatie/klacht-bezwaar-en-informatieverzoek/openbare-informatie/informatieverzoek",
-      "source": "Openbare informatie",
-      "first_seen": "2026-10-15T08:50:26+00:00",
-      "updated": "2026-10-21T14:31:51+00:00",
-      "hash": "2ac68b5c4a1dee8466fa3e7c18690c6bd6bef98d374f444d3c6e417551752e18",
-      "revisions": 2,
-      "excerpt": "",
-      "content_hash": "04390c20c559bad3781bf35f7056df14b971f839bfae31430a7829b329228eee",
-      "content_checked": "2026-10-21T14:31:51+00:00",
-      "last_change": "2026-10-21T14:31:51+00:00",
-      "last_seen": "2026-10-21",
-      "gemeente": "medemblik",
-      "missing_count": 0,
-      "text_hash": "ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e",
-      "kw_sig": "5ae1c58d6943|ee878f016e000a4850e04a365da3aeb1fd2e8391d3e899e9b9596e6a2b3c4b4e|Informatieverzoek Met een informatieverzoek krijgt alleen u de informatie. Het gaat dan om algemene informatie.|",
-      "changes": [
-        {
-          "at": "2026-10-21T14:31:51+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "18 zin(nen) toegevoegd of aangepast, 21 verwijderd of vervangen",
-          "added": [
-            "Deze website is tijdelijk offline",
-            "Uit voorzorg hebben wij deze website tijdelijk offline gehaald.",
-            "Wij doen dit om uw gegevens en onze systemen te beschermen."
-          ],
-          "removed": [
-            "Lees voor",
-            "Informatieverzoek",
-            "Met een informatieverzoek vraagt u informatie op die alleen voor u van belang is."
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
     },
     "858f4d022664c043a746113d52604e891f5678f224caaa61faf35ae53ded1018": {
       "title": "Jaarverslag 2018 en Jaarplan 2019",
@@ -8879,7 +9019,7 @@
           "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/39e7a318-ccf2-4fac-91ec-bba709a896ab"
         }
       ],
-      "content_checked": "2026-10-21T14:32:14+00:00",
+      "content_checked": "2026-10-21T20:47:12+00:00",
       "kw_sig": "5ae1c58d6943|d6b6b6c39b0776df07e2606a8a6cf1bd5b46c3c9f09711cb5544b5d784f1d85e|Vervolg themabijeenkomst Ontwikkelingen afvalstoffenheffing|Informatienota's",
       "report_pass": "2026-10-21T00:31:02+00:00"
     },
@@ -124286,7 +124426,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/d055a561-7469-461c-8c01-987406bc9f68",
       "missing_count": 0,
       "text_hash": "ec9d585369901a7a6af24f103d550db0599c8d1ebc706924eccd56f51ff435d0",
-      "content_checked": "2026-10-21T14:31:53+00:00",
+      "content_checked": "2026-10-21T20:46:46+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|ec9d585369901a7a6af24f103d550db0599c8d1ebc706924eccd56f51ff435d0|Uitnodiging fracties informatiebijeenkomst Begroting2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten"
     },
@@ -124316,7 +124456,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/cd022b4c-0006-49cd-af4a-6ef6b94b8bd8",
       "missing_count": 0,
       "text_hash": "f7c3ad4bb7496def064d39b76583aab8d1ce752ae52943bb925fff67002a5deb",
-      "content_checked": "2026-10-21T14:31:54+00:00",
+      "content_checked": "2026-10-21T20:46:48+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|f7c3ad4bb7496def064d39b76583aab8d1ce752ae52943bb925fff67002a5deb|DOC-26-1250646 - Raadsvoorstel begroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten"
     },
@@ -124346,7 +124486,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/9d4cb642-df81-4d2b-8a57-94e3abc53f0f",
       "missing_count": 0,
       "text_hash": "ccdd54ee6b41392e7f1e92418e0485b81c26e174be1d4b73a54759fd70bf1d90",
-      "content_checked": "2026-10-21T14:32:00+00:00",
+      "content_checked": "2026-10-21T20:46:55+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|ccdd54ee6b41392e7f1e92418e0485b81c26e174be1d4b73a54759fd70bf1d90|Programmabegroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "kw_hits": [
@@ -124382,7 +124522,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/70486283-f76c-4af1-bfb8-de7e944a6dde",
       "missing_count": 0,
       "text_hash": "17af8d4d9866cf1b11c7eefc0e9ea37a37ba78780852790b37d597d356414735",
-      "content_checked": "2026-10-21T14:32:01+00:00",
+      "content_checked": "2026-10-21T20:46:56+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|17af8d4d9866cf1b11c7eefc0e9ea37a37ba78780852790b37d597d356414735|Commissievragen HvM Programmabegroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/70486283-f76c-4af1-bfb"
@@ -124413,7 +124553,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/e531fbac-3da9-4c9b-8707-de5bbb715781",
       "missing_count": 0,
       "text_hash": "e43982f9f2eab25b4a65a1d3b6a5545a26523d83766b2c71f190911c561e5fe9",
-      "content_checked": "2026-10-21T14:32:03+00:00",
+      "content_checked": "2026-10-21T20:47:00+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|e43982f9f2eab25b4a65a1d3b6a5545a26523d83766b2c71f190911c561e5fe9|Commissievragen Morgen! Programmabegroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/e531fbac-3da9-4c9b-870"
@@ -124444,7 +124584,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/dd75231b-ef10-4f08-8d64-5affe94a0005",
       "missing_count": 0,
       "text_hash": "f0ee3cf9b7bc55349b45c07660bc809e01c17c32b9290926ddff600aa833a18b",
-      "content_checked": "2026-10-21T14:32:08+00:00",
+      "content_checked": "2026-10-21T20:47:05+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|f0ee3cf9b7bc55349b45c07660bc809e01c17c32b9290926ddff600aa833a18b|Commissievragen CDA Programmabegroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/dd75231b-ef10-4f08-8d6"
@@ -128546,7 +128686,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/977d7b0e-8e74-4135-bd2c-6593f975db7d",
       "text_hash": "e8dd605f35f41a3c768d953af60b134dc0ae8fd9102c9221b851d7232c3bcc31",
-      "content_checked": "2026-10-21T14:32:01+00:00",
+      "content_checked": "2026-10-21T20:46:56+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|e8dd605f35f41a3c768d953af60b134dc0ae8fd9102c9221b851d7232c3bcc31|01 Concept-besluitenlijst Gemeenteraad 24 september 2026|Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
     },
@@ -128576,7 +128716,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/60fa88d9-2b8e-4fc5-9eda-531febd00da5",
       "text_hash": "d559b4be80e27a917efaa98c04c0e628c788f88335f9ff5bb6bc674f2027282c",
-      "content_checked": "2026-10-21T14:32:02+00:00",
+      "content_checked": "2026-10-21T20:46:58+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|d559b4be80e27a917efaa98c04c0e628c788f88335f9ff5bb6bc674f2027282c|01a Bijlage moties en amendementen raad 24 september 2026 (002)|Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
     },
@@ -129887,7 +130027,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "c643533b08af631c5ab84a8922e19db768705aec405bae60fae2e92803569bbe",
-      "content_checked": "2026-10-21T14:32:03+00:00",
+      "content_checked": "2026-10-21T20:46:59+00:00",
       "kw_sig": "5ae1c58d6943|c643533b08af631c5ab84a8922e19db768705aec405bae60fae2e92803569bbe|00 DOC-26-1223390 - Raadsvoorstel Normenkader 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "8fbfaa5c22836928b55de9e8b2c5720e3edba55851dc45eed36f64f317b2f2a3": {
@@ -129922,7 +130062,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "c0d18a468e4900496086e10b629f591688e79513b1d88f96850b133f948b8256",
-      "content_checked": "2026-10-21T14:32:04+00:00",
+      "content_checked": "2026-10-21T20:47:01+00:00",
       "kw_sig": "5ae1c58d6943|c0d18a468e4900496086e10b629f591688e79513b1d88f96850b133f948b8256|01 Normenkader en was wordt lijst 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "5736b7779d7487cdb2d65628577677cb74ec29a6e3d3d32db71312a3d8c367d0": {
@@ -129952,7 +130092,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "8f36fd3a96115ce4c5a905db277e0b0a4ce9d528472853630abeb37477a7af8b",
-      "content_checked": "2026-10-21T14:32:04+00:00",
+      "content_checked": "2026-10-21T20:47:02+00:00",
       "kw_sig": "5ae1c58d6943|8f36fd3a96115ce4c5a905db277e0b0a4ce9d528472853630abeb37477a7af8b|Oproeping raadscommissie 29 oktober 2026|Raadscommissie donderdag 29 oktober 2026 · vergaderdocumenten"
     },
     "fa635cca78cdf085ec4335e5d251de014022aebdc952d6553b83eed528f91356": {
@@ -129982,7 +130122,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "f9c0a6703dfcf8ebd6d57e95d989edfa983304ef86292b4d8d55b984bcf60306",
-      "content_checked": "2026-10-21T14:32:05+00:00",
+      "content_checked": "2026-10-21T20:47:03+00:00",
       "kw_sig": "5ae1c58d6943|f9c0a6703dfcf8ebd6d57e95d989edfa983304ef86292b4d8d55b984bcf60306|Agenda raadscommissie 29 oktober 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 2 Vaststelling agenda"
     },
     "b1e62ad97f54841d2b253710e19e52652192ea7697c878886546336d3e36ff53": {
@@ -130012,7 +130152,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "fc9bd6f2e2454d924300284934b45a7309816dbd88c0f5502a9ab71d6afec19e",
-      "content_checked": "2026-10-21T14:32:06+00:00",
+      "content_checked": "2026-10-21T20:47:03+00:00",
       "kw_sig": "5ae1c58d6943|fc9bd6f2e2454d924300284934b45a7309816dbd88c0f5502a9ab71d6afec19e|01 Concept-notulen raadscommissie 1 oktober 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 4 Vaststellen notulen raadscommissie 1 oktober 2026"
     },
     "bf9a58e8aebe706958116f32b6d4f708fc92bd13f9f7ea7cce9bde83bedeef27": {
@@ -130042,7 +130182,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "ffd77d815a9b7e67432367fe0b6af6fe6270c5b257ffcfe12c277f6ef5be932b",
-      "content_checked": "2026-10-21T14:32:07+00:00",
+      "content_checked": "2026-10-21T20:47:04+00:00",
       "kw_sig": "5ae1c58d6943|ffd77d815a9b7e67432367fe0b6af6fe6270c5b257ffcfe12c277f6ef5be932b|Commissievragen FVD UIT raadscie. 1-10 agendapunt 7 Actieve informatie van het college|Raadscommissie donderdag 29 oktober 2026 · agendapunt 7 Actieve informatie van het college",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/967b5d4d-20d6-4e2a-869"
     },
@@ -130073,7 +130213,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "77a87a587c071ebc9ef41ebcf6ec213af5be371e2aadca76c1f328ef652ac18c",
-      "content_checked": "2026-10-21T14:32:07+00:00",
+      "content_checked": "2026-10-21T20:47:04+00:00",
       "kw_sig": "5ae1c58d6943|77a87a587c071ebc9ef41ebcf6ec213af5be371e2aadca76c1f328ef652ac18c|Commissievragen HvM UIT raadscie. 1-10 agendapunt 7 Actieve informatie van het college|Raadscommissie donderdag 29 oktober 2026 · agendapunt 7 Actieve informatie van het college",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/c2ff67a0-94b5-4d10-a2a"
     },
@@ -130104,7 +130244,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "f7c3ad4bb7496def064d39b76583aab8d1ce752ae52943bb925fff67002a5deb",
-      "content_checked": "2026-10-21T14:32:08+00:00",
+      "content_checked": "2026-10-21T20:47:05+00:00",
       "kw_sig": "5ae1c58d6943|f7c3ad4bb7496def064d39b76583aab8d1ce752ae52943bb925fff67002a5deb|00 DOC-26-1250646 - Raadsvoorstel begroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
     },
     "72a7c060bc741c32cd69c6eb9acd9a29cf439730791f930082bd142666c2666e": {
@@ -130134,7 +130274,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "ccdd54ee6b41392e7f1e92418e0485b81c26e174be1d4b73a54759fd70bf1d90",
-      "content_checked": "2026-10-21T14:32:11+00:00",
+      "content_checked": "2026-10-21T20:47:09+00:00",
       "kw_sig": "5ae1c58d6943|ccdd54ee6b41392e7f1e92418e0485b81c26e174be1d4b73a54759fd70bf1d90|01 Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "kw_hits": [
         "Bloesemgaerde"
@@ -130170,7 +130310,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "17af8d4d9866cf1b11c7eefc0e9ea37a37ba78780852790b37d597d356414735",
-      "content_checked": "2026-10-21T14:32:12+00:00",
+      "content_checked": "2026-10-21T20:47:09+00:00",
       "kw_sig": "5ae1c58d6943|17af8d4d9866cf1b11c7eefc0e9ea37a37ba78780852790b37d597d356414735|02 Commissievragen HvM Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/448878b8-0910-4ae8-804"
     },
@@ -130201,7 +130341,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "e43982f9f2eab25b4a65a1d3b6a5545a26523d83766b2c71f190911c561e5fe9",
-      "content_checked": "2026-10-21T14:32:12+00:00",
+      "content_checked": "2026-10-21T20:47:09+00:00",
       "kw_sig": "5ae1c58d6943|e43982f9f2eab25b4a65a1d3b6a5545a26523d83766b2c71f190911c561e5fe9|04 Commissievragen Morgen! Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/ec82cdd3-9dc4-48bb-bb3"
     },
@@ -130232,7 +130372,7 @@
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "f0ee3cf9b7bc55349b45c07660bc809e01c17c32b9290926ddff600aa833a18b",
-      "content_checked": "2026-10-21T14:32:12+00:00",
+      "content_checked": "2026-10-21T20:47:10+00:00",
       "kw_sig": "5ae1c58d6943|f0ee3cf9b7bc55349b45c07660bc809e01c17c32b9290926ddff600aa833a18b|Commissievragen CDA Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "content_error": "401 Client Error: Unauthorized for url: https://medemblik.bestuurlijkeinformatie.nl/Document/View/7c7a063d-8792-4370-b3f"
     },
@@ -142202,38 +142342,38 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-10-21T20:31:07+00:00",
+        "checked": "2026-10-21T20:46:00+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-21T20:31:07+00:00",
+        "checked": "2026-10-21T20:46:01+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-10-21T20:31:08+00:00",
+        "checked": "2026-10-21T20:46:01+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-10-21T20:31:08+00:00",
+        "checked": "2026-10-21T20:46:02+00:00",
         "ok": true,
         "count": 29,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-21T20:30:45+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "ok": true,
         "count": 177,
         "new": 0,
         "note": "Laatste 30 dagen: 177 van 177 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-21T20:30:57+00:00",
+        "checked": "2026-10-21T20:45:48+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -142241,7 +142381,7 @@
         "note": "10 van 20 vergaderingen in venster bijgewerkt; 210 documenten bekend. Dekking: vergaderingen van 2026-08-22 t/m 2026-12-05 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-21T20:31:05+00:00",
+        "checked": "2026-10-21T20:45:58+00:00",
         "ok": true,
         "count": 301,
         "new": 0,
@@ -142249,31 +142389,31 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2125, Ingekomen stukken 3158, Jaarplannen en jaarverslagen 1, Moties en amendementen 402, Raadsvragen 1409, Rekenkamer 54, Toezeggingen 332). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "In de media": {
-        "checked": "2026-10-21T20:31:12+00:00",
+        "checked": "2026-10-21T20:46:07+00:00",
         "ok": true,
-        "count": 34,
-        "new": 0,
+        "count": 35,
+        "new": 1,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Medemblik, Abbekerk, Andijk, Benningbroek, Hauwert, Lambertschaag, Midwoud, Nibbixwoud, Oostwoud, Opperdoes, Sijbekarspel, Twisk, Wervershoof, Wognum, Zwaagdijk-Oost, Zwaagdijk-West. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-10-21T20:32:20+00:00",
-        "ok": true,
-        "count": 19,
-        "errors": 0,
-        "note": "19 documenten gecontroleerd (1 pdf), 1652 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
+        "checked": "2026-10-21T20:47:12+00:00",
+        "ok": false,
+        "count": 23,
+        "errors": 8,
+        "note": "23 documenten gecontroleerd (12 pdf), 1652 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
       },
       "Meldingen": {
-        "checked": "2026-10-21T20:32:20+00:00",
+        "checked": "2026-10-21T20:47:12+00:00",
         "ok": true,
         "note": "Pushmeldingen actief (ntfy); deze run 0 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-21).",
         "error": null
       },
       "Trefwoorden": {
-        "checked": "2026-10-21T20:32:20+00:00",
+        "checked": "2026-10-21T20:47:12+00:00",
         "ok": true,
-        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 2 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
+        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 9 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
       },
       "Andere overheden": {
         "checked": "2026-10-21T20:16:30+00:00",
@@ -142299,7 +142439,7 @@
         "note": "Uitspraken op rechtspraak.nl (laatste 45 dagen gepubliceerd) waarin de gemeente of een van de dorpen voorkomt. Namen die ook achternaam zijn (Berkhout, Twisk) of elders voorkomen worden niet los gezocht. Uitspraken zijn geanonimiseerd. Eén keer per uur."
       },
       "Termijn raadsvragen": {
-        "checked": "2026-10-21T20:31:41+00:00",
+        "checked": "2026-10-21T20:46:43+00:00",
         "ok": true,
         "count": 3,
         "note": "3 raadsvragen staan langer open dan de termijn uit het reglement van orde (Medemblik en Opmeer: 30 dagen). Een uitstelbericht aan de vragensteller is in het portaal niet te zien."
@@ -142315,19 +142455,19 @@
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-21T20:31:13+00:00",
+        "checked": "2026-10-21T20:46:09+00:00",
         "ok": true,
         "count": 80,
         "new": 0,
         "note": "Laatste 30 dagen: 80 van 80 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-10-21T20:31:14+00:00",
+        "checked": "2026-10-21T20:46:09+00:00",
         "ok": false,
         "error": "mismatched tag: line 6, column 2"
       },
       "Collegebesluiten": {
-        "checked": "2026-10-21T20:31:15+00:00",
+        "checked": "2026-10-21T20:46:10+00:00",
         "ok": false,
         "count": 0,
         "new": 0,
@@ -142335,13 +142475,13 @@
         "error": "Geen pdf-links gevonden; paginastructuur gewijzigd?"
       },
       "Woo-verzoeken": {
-        "checked": "2026-10-21T20:31:15+00:00",
+        "checked": "2026-10-21T20:46:10+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
       },
       "In de media": {
-        "checked": "2026-10-21T20:31:18+00:00",
+        "checked": "2026-10-21T20:46:13+00:00",
         "ok": true,
         "count": 47,
         "new": 0,
@@ -142350,14 +142490,14 @@
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "ok": true,
         "count": 44,
         "new": 0,
         "note": "Laatste 30 dagen: 44 van 44 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-21T20:31:32+00:00",
+        "checked": "2026-10-21T20:46:33+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -142365,7 +142505,7 @@
         "note": "10 van 11 vergaderingen in venster bijgewerkt; 75 documenten bekend. Dekking: vergaderingen van 2026-08-22 t/m 2026-12-05 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-21T20:31:39+00:00",
+        "checked": "2026-10-21T20:46:41+00:00",
         "ok": true,
         "count": 399,
         "new": 0,
@@ -142373,12 +142513,12 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 74, Belangrijke documenten 13, Besluitenlijsten college 310, Ingekomen stukken 1149, Moties 79, Politieke vragen 73, Raadsinformatiebrieven 587, Thema's 25, Toezeggingen 84, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-10-21T20:31:40+00:00",
+        "checked": "2026-10-21T20:46:41+00:00",
         "ok": false,
         "error": "mismatched tag: line 6, column 2"
       },
       "In de media": {
-        "checked": "2026-10-21T20:31:41+00:00",
+        "checked": "2026-10-21T20:46:43+00:00",
         "ok": true,
         "count": 13,
         "new": 0,
@@ -220323,7 +220463,7 @@
         "agenda": []
       },
       "52fc513f-8776-427e-b9d9-426652329851": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Raadscommissie",
         "date": "2026-11-09",
         "label": "maandag 9 november 2026",
@@ -220342,7 +220482,7 @@
         ]
       },
       "dc765e1a-20fd-4c7a-97bb-0645c9bbf6f3": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-29",
         "label": "donderdag 29 oktober 2026",
@@ -220657,7 +220797,7 @@
         "gemeente": "medemblik"
       },
       "b2e8194e-6b1b-4240-a0e4-49ee3e2082af": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-11-19",
         "label": "donderdag 19 november 2026 Informatiebijeenkomst Omgevingsvisie",
@@ -220666,7 +220806,7 @@
         "agenda": []
       },
       "7146dc5f-5af1-4a60-8167-a7eb2021eac4": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-11-02",
         "label": "maandag 2 november 2026 Informatiebijeenkomst College uitvoeringsprogramma (CUP) 2026-2030",
@@ -220680,7 +220820,7 @@
         ]
       },
       "d9d72e72-eece-4b27-98bd-be12fc19985f": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-10-22",
         "label": "donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming",
@@ -220694,7 +220834,7 @@
         ]
       },
       "df4cd9b8-d584-460e-af53-cb8e05cea854": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-09-17",
         "label": "donderdag 17 september 2026",
@@ -220709,7 +220849,7 @@
         ]
       },
       "3173ad29-0405-448e-be38-402e5785380e": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-09-15",
         "label": "dinsdag 15 september 2026 Informatiebijeenkomst (training) Relevant gesprek methodiek",
@@ -220732,7 +220872,7 @@
         "gemeente": "medemblik"
       },
       "0ee03b28-01dc-436b-9b5a-a77f83d3d9d1": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-10-26",
         "label": "maandag 26 oktober 2026",
@@ -220747,7 +220887,7 @@
         ]
       },
       "1748f967-2b06-4aa4-9c8c-de75df138b17": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-11-19",
         "label": "donderdag 19 november 2026",
@@ -220756,7 +220896,7 @@
         "agenda": []
       },
       "afa94415-13a6-4772-82c4-d57bb33d1b7e": {
-        "checked": "2026-10-21T20:15:35+00:00",
+        "checked": "2026-10-21T20:45:36+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-09-14",
         "label": "maandag 14 september 2026",
@@ -220786,7 +220926,7 @@
         "label": "donderdag 10 december 2026"
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -220805,7 +220945,7 @@
         ]
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -220885,7 +221025,7 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
@@ -220894,7 +221034,7 @@
         "agenda": []
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -220912,7 +221052,7 @@
         ]
       },
       "7d82ecee-3b65-4d47-ae9b-904b5e4c1562": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-09-10",
@@ -220953,7 +221093,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -220962,7 +221102,7 @@
         "agenda": []
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -220976,7 +221116,7 @@
         ]
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -220985,7 +221125,7 @@
         "agenda": []
       },
       "eb2e5b85-1e4b-4de2-824f-c07024b8157b": {
-        "checked": "2026-10-21T20:31:19+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-08-27",
@@ -221043,7 +221183,7 @@
         ]
       },
       "a542f283-1759-4a8d-a74a-9c1e23318e90": {
-        "checked": "2026-10-21T20:16:06+00:00",
+        "checked": "2026-10-21T20:46:14+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-09-01",
