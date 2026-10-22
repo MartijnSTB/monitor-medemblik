@@ -1,5 +1,79 @@
 {
   "items": {
+    "07bb3988e4a5c55ead52a49980b16b49f7445fe4f16df635fe6004d145f46e5c": {
+      "title": "Informatienota voortgang Renovatie gemeentehuis",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/749a0d67-029e-4535-b97b-3132fdf9f671",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-15T11:11:12+00:00",
+      "updated": "2026-10-22T00:36:47+00:00",
+      "last_change": "2026-10-22T00:36:47+00:00",
+      "hash": "",
+      "revisions": 2,
+      "excerpt": "Informatienota's",
+      "kind": "overzichtsitem",
+      "rapport": "Informatienota's",
+      "last_seen": "2026-10-22",
+      "doc_date": "2026-10-08",
+      "doc_date_label": "registratiedatum",
+      "report_pass": "2026-10-22T00:01:19+00:00",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "d9ac188be6f9fd3bffd1bc750346f6426f46ac8be5c00b1da838d09f7514ba20",
+      "content_checked": "2026-10-22T00:36:47+00:00",
+      "kw_sig": "5ae1c58d6943|d9ac188be6f9fd3bffd1bc750346f6426f46ac8be5c00b1da838d09f7514ba20|Informatienota voortgang Renovatie gemeentehuis|Informatienota's",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "Periodiek Informatienota raad varianten TH",
+        "PPT Stand van Zaken programma Renovatie",
+        "OTH_MED_informatieavond gemraad def",
+        "Presentatie varianten en kosten Tijdelijke Huisvesting",
+        "Kostenopbouw variant 3 en variant 5",
+        "Financiele onderbouwing variant 3 TH"
+      ],
+      "bijlagen": [
+        {
+          "t": "Periodiek Informatienota raad varianten TH",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/30b89ac5-f1c5-4a3a-a531-63bc7078a39f"
+        },
+        {
+          "t": "PPT Stand van Zaken programma Renovatie",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/54c08a60-e292-448f-a2d5-38305b0a2409"
+        },
+        {
+          "t": "OTH_MED_informatieavond gemraad def",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/f8346ba0-d319-419c-b0d7-2381b83c2606"
+        },
+        {
+          "t": "Presentatie varianten en kosten Tijdelijke Huisvesting",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/a8a48d19-3bcc-4962-845d-06ebabf98ee3"
+        },
+        {
+          "t": "Kostenopbouw variant 3 en variant 5",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7cf69a99-2e0d-4304-8af4-54a4cce6570a"
+        },
+        {
+          "t": "Financiele onderbouwing variant 3 TH",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7e51a1eb-8252-452b-8df9-a6eb4c080ca1"
+        }
+      ],
+      "changes": [
+        {
+          "at": "2026-10-22T00:36:47+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "1 zin(nen) toegevoegd of aangepast, 92 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: ('Connection broken: IncompleteRead(8452 bytes read, 1788 mo]"
+          ],
+          "removed": [
+            "Stand van Zaken Programma Renovatie",
+            "Renovatie gemeentehuis",
+            "17 september 2026"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
     "1776d589033e435807adea22f547aa6df8db79027b42b704a525b8eb8d695a75": {
       "title": "Verdachte moord op Hajar slaat boel kort en klein in Spierdijk: \"Een horrorfilm\"",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNWFraG5Ob1RKUVlFaTNjMEhaR2NKdUVHZTRYby1kWnZTM3hxSWxBRnNxODVrdG9TU0VSeTFzbGMwUWVZUnJTOFJ6M1k1d2UyUkFBTUw2VE5uUzJueHdldFpQOUxQOGIxb2E1dnVmS1JISlJzTVppQlFyd0pYdmNoT2hfSGxvUlljdXhhNWptTF9RRFBBTG9BcDE1UlI0dUZqNTZ1bDJBdklJblRkZzRtMUxpaExWc1lZdmVN?oc=5",
@@ -3866,7 +3940,7 @@
       "excerpt": "Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "missing_count": 0,
       "text_hash": "8a9c058b673fefb65adf59a361872fad2c15541e0986169e369add559d8c2057",
-      "content_checked": "2026-10-21T18:33:07+00:00",
+      "content_checked": "2026-10-22T00:36:49+00:00",
       "kw_sig": "5ae1c58d6943|8a9c058b673fefb65adf59a361872fad2c15541e0986169e369add559d8c2057|Beantwoording commissievragen Morgen! Programmabegroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten"
     },
     "394177ff6524d3a4b68873c65fc85a9cb90995a30586c95ace8b74e10e0e366d": {
@@ -3896,7 +3970,7 @@
       "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "missing_count": 0,
       "text_hash": "8a9c058b673fefb65adf59a361872fad2c15541e0986169e369add559d8c2057",
-      "content_checked": "2026-10-21T18:33:06+00:00",
+      "content_checked": "2026-10-22T00:36:48+00:00",
       "kw_sig": "5ae1c58d6943|8a9c058b673fefb65adf59a361872fad2c15541e0986169e369add559d8c2057|03 Beantwoording commissievragen Morgen! Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
     },
     "3fe8321e10219c7cf94c9f19ca42be8410f4f7ae1f242a2acbeb79e0ac57b134": {
@@ -4806,7 +4880,7 @@
       "rechtsgebied": "Bestuursrecht",
       "doc_date": "2026-10-21",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Bij besluiten van 11 oktober 2022 is het college van burgemeester en wethouders van Medemblik bij [appellanten] overgegaan tot invordering van een verbeurde dwangsom van €10.000,00.|Raad van State, 21-10-2026, 202404300/1/R1 · Bestuursrecht · zoekterm Medemblik · Bij besluiten van 11 oktober 2022 is het college van burgemeester en wethouders van Medemblik bij [appellanten] overgegaan tot invordering van een verbeurde dwangsom van €10.000,00. [appellanten] zijn mede-eigenaren van de woning op het perceel [locatie] in Opperdoes. Op basis van controles door toe"
     },
     "4adaea5b9dc816d280773e9c9ae324245b4185943f6ab51dbbecc99aab80c030": {
@@ -4866,7 +4940,7 @@
       "doc_date": "2026-10-21",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Maatwerkbesluit voor het plaatsen van een dam met duiker in een secundaire waterloop ter hoogte van Poelweg 12 in Medemblik|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "b5a8f5f36efcc6626c7498afd1be10cd24d74ac1b651c87436010a3be7fec1b4": {
@@ -5024,7 +5098,7 @@
       "doc_date": "2026-10-21",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het vervangen van een beschoeiing en vlonder in beschermingszone A van de regionale waterkering bij Veldhuis 15 in Oostwoud|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "7320d7cea42705cac189280c93b1beffca55b3cb8a6a1c6af925c3fba4b8593a": {
@@ -5930,7 +6004,7 @@
       "rechtsgebied": "Civiel recht; Verbintenissenrecht",
       "doc_date": "2026-10-01",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||beoordeling van schending van zorgplicht door opdrachtnemer en van de Beklamelnorm|Rechtbank Gelderland, 16-09-2026, C/05/461062 · Civiel recht; Verbintenissenrecht · zoekterm Spanbroek · beoordeling van schending van zorgplicht door opdrachtnemer en van de Beklamelnorm"
     },
     "d3f1b6b22a9060e044552cdef674ec41bba4070d5c79df487ac2dbe7f644e7c9": {
@@ -5951,7 +6025,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-19",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Vernietiging vonnis wegens (iets) andere bewezenverklaring.|Gerechtshof Amsterdam, 16-10-2026, 23-001988-24 · Strafrecht · zoekterm Opmeer · Vernietiging vonnis wegens (iets) andere bewezenverklaring. Veroordeling voor belaging. Feit wordt in verminderde mate aan de verdachte toegerekend. Geheel voorwaardelijke taakstraf van 40 uur + vrijheidsbeperkende maatregel 38v Sr (contactverbod) voor de duur van 3 jaar. Door politierechter bevolen"
     },
     "b0abcc0f1ef0635e5b4f1420b046ddb26ccab6fcf91aeb190e5ea32c7d930bde": {
@@ -5972,7 +6046,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-13",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Conclusie AG. Veroordeling wegens 1. doodslag (art. 287 Sr) en 2. poging wederrechtelijke vrijheidsberoving, terwijl het feit de dood ten gevolge heeft (art. 28…|Parket bij de Hoge Raad, 06-10-2026, 25/02445 · Strafrecht · zoekterm De Goorn · Conclusie AG. Veroordeling wegens 1. doodslag (art. 287 Sr) en 2. poging wederrechtelijke vrijheidsberoving, terwijl het feit de dood ten gevolge heeft (art. 282 lid 1 en lid 3 Sr). Falende middelen over het ontbreken van een beslissing van het hof op een verzoek getuigen te horen (M1), dat de onder"
     },
     "d42dcc85089185bd616ae57737e60ea8dbcd00103afdeda1adc184e90a729a20": {
@@ -5993,7 +6067,7 @@
       "rechtsgebied": "Civiel recht; Verbintenissenrecht",
       "doc_date": "2026-09-16",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||kort geding: Besluit houdende tijdelijke economische beperkingen voor het tegengaan van het in stand houden van de onrechtmatige nederzettingen in de door Israël bezette gebieden’ wordt niet buiten to|Rechtbank Den Haag, 16-09-2026, C/09/711225 / KG ZA 26-911 · Civiel recht; Verbintenissenrecht · zoekterm Hensbroek · kort geding: Besluit houdende tijdelijke economische beperkingen voor het tegengaan van het in stand houden van de onrechtmatige nederzettingen in de door Israël bezette gebieden’ wordt niet buiten toepassing verklaard. Geen strijd met Europees recht of op andere wijze onrechtmatig. Categorie: verbi"
     },
     "1c0e0d4b59b21c38dfc8682f09b311c7d4d2695c9d616dcaa9080659f782c7ad": {
@@ -6014,7 +6088,7 @@
       "rechtsgebied": "Bestuursrecht; Omgevingsrecht",
       "doc_date": "2026-09-28",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||VOORLOPIGE VOORZIENING. SPOEDEISEND BELANG. Hetgeen verzoeker ter onderbouwing van het spoedeisend belang heeft aangevoerd, te weten dat hij schade leidt omdat …|Rechtbank Noord-Holland, 22-09-2026, HAA 26/3775 · Bestuursrecht; Omgevingsrecht · zoekterm Koggenland · VOORLOPIGE VOORZIENING. SPOEDEISEND BELANG. Hetgeen verzoeker ter onderbouwing van het spoedeisend belang heeft aangevoerd, te weten dat hij schade leidt omdat als gevolg van de besluitvorming een snelle verkoop van het perceel dreigt te mislukken, het perceel ernstige waardevermindering oploopt waa"
     },
     "34591597ded7fc6b9799fb469fd533a632cf1fe3c00790b412f408ff47d0e981": {
@@ -6035,7 +6109,7 @@
       "rechtsgebied": "Bestuursrecht; Omgevingsrecht",
       "doc_date": "2026-09-15",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Vovo afgewezen. Geen spoedeisend belang bij het treffen van enige voorziening in afwachting van de beslissing op bezwaar. Vergunninghouder heeft verklaard dat n…|Rechtbank Noord-Holland, 10-09-2026, HAA 26/4026 · Bestuursrecht; Omgevingsrecht · zoekterm Koggenland · Vovo afgewezen. Geen spoedeisend belang bij het treffen van enige voorziening in afwachting van de beslissing op bezwaar. Vergunninghouder heeft verklaard dat nog niet is begonnen met de bouw van de woning en dat met de bouw van de woning gewacht wordt op de besluitvorming omtrent het bezwaarschrift"
     },
     "85a4933422760bd880c7a70d99bd901c826cea83ac55f66ca5d2f28244cdfcbb": {
@@ -6056,7 +6130,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-09-09",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Dodelijk verkeersongeval in 2022: auto raakt – na chicane – in slip en botst tegen boom, bijrijdster komt om het leven.|Gerechtshof Amsterdam, 08-09-2026, 23-001501-24 · Strafrecht · zoekterm Koggenland · Dodelijk verkeersongeval in 2022: auto raakt – na chicane – in slip en botst tegen boom, bijrijdster komt om het leven. Aan de hand van beeldonderzoek en verklaringen van verbalisanten stelt het hof vast dat de verdachte met (veel te) hoge snelheid op een chicane is afgereden. De verdachte is direct"
     },
     "3597e89d843234f4c4774838de2a38c71eff0f9a71f14ea186dbaba41e5b9893": {
@@ -6077,7 +6151,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-02",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||MK Jeugdstraf. De rechtbank veroordeelt de verdachte voor diefstal met geweld in vereniging tot jeugddetentie en een deels voorwaardelijke werkstraf. De rechtba…|Rechtbank Noord-Holland, 08-09-2026, 15/105011-26 · Strafrecht · zoekterm Wognum · MK Jeugdstraf. De rechtbank veroordeelt de verdachte voor diefstal met geweld in vereniging tot jeugddetentie en een deels voorwaardelijke werkstraf. De rechtbank beslist tot het niet opleggen van de schadevergoedingsmaatregel ten behoeve van het slachtoffer. De rechtbank doet ook uitspraak in de za"
     },
     "8440955c49eb5198c5b99a572704dd6f8f0cd45f87577593d63babc56b6355fd": {
@@ -6098,7 +6172,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-09-25",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Conclusie A-G. Verkrachting en poging tot doodslag op echtgenote. M1 dat hof niet heeft gerespondeerd op standpunt dat het voor verdachte onmogelijk was om woni…|Parket bij de Hoge Raad, 22-09-2026, 25/00634 · Strafrecht · zoekterm Wognum · Conclusie A-G. Verkrachting en poging tot doodslag op echtgenote. M1 dat hof niet heeft gerespondeerd op standpunt dat het voor verdachte onmogelijk was om woning te verlaten, mist feitelijke grondslag. M2 dat hof ten onrechte reiskosten van medereiziger in aanmerking heeft genomen bij toewijzen van"
     },
     "2dacaa7172ef10c9ce4406c920ee8f8774a00f8be38f86449af737c7f767102d": {
@@ -6119,7 +6193,7 @@
       "rechtsgebied": "Civiel recht; Intellectueel-eigendomsrecht",
       "doc_date": "2026-10-12",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Ex parte verbod.|Rechtbank Den Haag, 15-09-2026, 712608 · Civiel recht; Intellectueel-eigendomsrecht · zoekterm Zwaagdijk-Oost · Ex parte verbod."
     },
     "fa9ec7be38ff952462f805fa908e044dbf9125368d6e38e8e6fdb6175125e8be": {
@@ -6140,7 +6214,7 @@
       "rechtsgebied": "Civiel recht",
       "doc_date": "2026-09-29",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Toewijzing verzoek handlichting.|Rechtbank Noord-Holland, 22-09-2026, K/4101/12332236 · Civiel recht · zoekterm Wervershoof · Toewijzing verzoek handlichting."
     },
     "dc24c59a634bc102b8a56c8eb6d82c94de3bce82073d058480b2a1951e4e70ae": {
@@ -6161,7 +6235,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-14",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Medeplegen van vier diefstallen met geweld, waarvan drie feiten gepaard gingen met wederrechtelijke vrijheidsberoving, gepleegd in het kader van zogenoemd ‘pedohunting’.|Rechtbank Noord-Holland, 12-10-2026, 15/004565-25 · Strafrecht · zoekterm Medemblik · Medeplegen van vier diefstallen met geweld, waarvan drie feiten gepaard gingen met wederrechtelijke vrijheidsberoving, gepleegd in het kader van zogenoemd ‘pedohunting’. Overschrijding redelijke termijn. Oplegging van een jeugddetentie van 200 dagen, met aftrek van het voorarrest, waarvan 180 dagen "
     },
     "68b2d0e641de4f6b80408973f334898a2aca5be55f2086b794bd4c16be91207a": {
@@ -6182,7 +6256,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-14",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Medeplegen van drie diefstallen met geweld, waarvan twee feiten gepaard gingen met wederrechtelijke vrijheidsberoving, gepleegd in het kader van zogenoemd ‘pedohunting’.|Rechtbank Noord-Holland, 12-10-2026, 15/005539-25 · Strafrecht · zoekterm Medemblik · Medeplegen van drie diefstallen met geweld, waarvan twee feiten gepaard gingen met wederrechtelijke vrijheidsberoving, gepleegd in het kader van zogenoemd ‘pedohunting’. Overschrijding redelijke termijn. Oplegging van een jeugddetentie van 168 dagen, met aftrek van het voorarrest, waarvan 150 dagen "
     },
     "4d5caeb8919fca4f8eb2db7f20a4d15de9b766cdc020d18bb03d85cbf5b028b3": {
@@ -6203,7 +6277,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-14",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Vrijspraak afdreiging (feit 7). Veroordeling voor het medeplegen van vier diefstallen met geweld, waarvan drie feiten gepaard gingen met wederrechtelijke vrijhe…|Rechtbank Noord-Holland, 12-10-2026, 15/043414-25 · Strafrecht · zoekterm Medemblik · Vrijspraak afdreiging (feit 7). Veroordeling voor het medeplegen van vier diefstallen met geweld, waarvan drie feiten gepaard gingen met wederrechtelijke vrijheidsberoving, gepleegd in het kader van zogenoemd ‘pedohunting’. Geen toepassing ASR. Oplegging van een gevangenisstraf van 12 maanden, met a"
     },
     "9ae95ccce7e17dbb6a5adc1ec0ebb9756757bf43001be42d9800fa401c7ba289": {
@@ -6224,7 +6298,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-14",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Medeplegen van drie diefstallen met geweld, gepaard met wederrechtelijke vrijheidsberoving, en eenmaal medeplichtigheid aan diefstal met geweld.|Rechtbank Noord-Holland, 12-10-2026, 15/392834-24 · Strafrecht · zoekterm Medemblik · Medeplegen van drie diefstallen met geweld, gepaard met wederrechtelijke vrijheidsberoving, en eenmaal medeplichtigheid aan diefstal met geweld. Feiten gepleegd in het kader van zogenoemd ‘pedohunting’. Verdachte was ten tijde van 1 feit minderjarig. Berechting volgens het sanctiestelsel voor volwas"
     },
     "4ed99570679a73f32902e74c9a6b9b998af49efcb673bb29ac9b04f6bed67c69": {
@@ -6245,7 +6319,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-10-12",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Veroordeling voor de eendaadse samenloop van overtreding van artikel 6 WVW 1994 met dodelijke afloop en overtreding van artikel 5 WVW 1994.|Rechtbank Noord-Holland, 12-10-2026, 15/228807-25 · Strafrecht · zoekterm Medemblik · Veroordeling voor de eendaadse samenloop van overtreding van artikel 6 WVW 1994 met dodelijke afloop en overtreding van artikel 5 WVW 1994. Oplegging van een taakstraf van 120 uren en een ontzegging van de rijbevoegdheid van 12 maanden met aftrek voor het misdrijf (6 WVW) en toepassing van artikel 9"
     },
     "1824bc348db58a999d30b1992d46ce23d6a3842a17abeae1847c7b04593739f8": {
@@ -6266,7 +6340,7 @@
       "rechtsgebied": "Bestuursrecht",
       "doc_date": "2026-09-30",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Bij besluit van 21 november 2023 heeft het college van burgemeester en wethouders van Medemblik een volgens het college door [appellant] verbeurde dwangsom van € 15.000,00 ingevorderd.|Raad van State, 30-09-2026, 202505725/1/R1 · Bestuursrecht · zoekterm Medemblik · Bij besluit van 21 november 2023 heeft het college van burgemeester en wethouders van Medemblik een volgens het college door [appellant] verbeurde dwangsom van € 15.000,00 ingevorderd. Het college heeft bij besluit van 11 augustus 2022, verzonden op diezelfde datum, gelast het huisvesten van arbeids"
     },
     "7098026e208b4183ee6e182bd2cbfa02e4bc3a74ada4c523765a675e68f6dd7c": {
@@ -6287,7 +6361,7 @@
       "rechtsgebied": "Bestuursrecht; Omgevingsrecht",
       "doc_date": "2026-09-30",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||OMGEVINGSWET. OMGEVINGSPLAN. LAST ONDER DWANGSOM. De rechtbank komt in deze uitspraak tot het oordeel dat het college handhavend mocht optreden tegen de dam met…|Rechtbank Noord-Holland, 20-08-2026, HAA 25/3115 · Bestuursrecht; Omgevingsrecht · zoekterm Medemblik · OMGEVINGSWET. OMGEVINGSPLAN. LAST ONDER DWANGSOM. De rechtbank komt in deze uitspraak tot het oordeel dat het college handhavend mocht optreden tegen de dam met duiker en beschoeiing. Eiser krijgt dus geen gelijk en het beroep is dus ongegrond."
     },
     "e5df6467b32989b32ea07417f3363f3ea879c0140428ba68b67597c63dbda8ae": {
@@ -6308,7 +6382,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-09-23",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Veroordeling voor het (meermaals) plegen van ontuchtige handeling, begaan tegen zijn kind.|Rechtbank Noord-Holland, 27-08-2026, 15/223257-25 · Strafrecht · zoekterm Medemblik · Veroordeling voor het (meermaals) plegen van ontuchtige handeling, begaan tegen zijn kind. De rechtbank acht de verdachte strafbaar, maar zal het feit in verminderde mate aan hem toerekenen. Alles afwegende acht de rechtbank een gevangenisstraf voor de duur van 365 dagen waarvan 361 dagen voorwaarde"
     },
     "bcf75ab24d52224c197b4d6648d39f54692e2515f1191a3d7d05bbfdedd83ac8": {
@@ -6329,7 +6403,7 @@
       "rechtsgebied": "Strafrecht",
       "doc_date": "2026-09-16",
       "doc_date_label": "gepubliceerd",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Bewezenverklaring van belaging (stalking) ex-partner, bedreiging, bezit van harddrugs, opzetheling en diefstal met braak.|Rechtbank Noord-Holland, 03-09-2026, 15/155017-26, 15/306254-25 (gev. ttz), 15/124764-24 (tul) en 23/001582-22 (tul) · Strafrecht · zoekterm Medemblik · Bewezenverklaring van belaging (stalking) ex-partner, bedreiging, bezit van harddrugs, opzetheling en diefstal met braak. Maatregelen ex artikel 38v Sv. Dadelijke uitvoerbaarheid. Oplegging van een gedeeltelijk voorwaardelijke gevangenisstraf met bijzondere voorwaarden en een taakstraf. Schadevergoe"
     },
     "9d6cb90200b413b7cb59367c2e2535eee12af8e44b76be447bfc6fd3c8c2b287": {
@@ -6349,7 +6423,7 @@
       "doc_date": "2026-10-08",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het dempen van een waterloop, het graven van een waterpartij en het verplaatsen van een peilscheidingsdam nabij Wester Boekelweg 18 in Hoogwoud|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "ef277e010359a9400901a5366ffe05ade59dd4645da4fd746d1b3159cc1750c0": {
@@ -6369,7 +6443,7 @@
       "doc_date": "2026-10-12",
       "doc_date_label": "publicatiedatum",
       "koop_type": "andere vergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het verwijderen en leggen van kabels in de waterkering nabij Langereis 2 in Hoogwoud|Hoogheemraadschap Hollands Noorderkwartier · andere vergunning"
     },
     "837abef0189b274f7bbde5c80f084318b07868162b8054942ec5dfa6749b3d0e": {
@@ -6389,7 +6463,7 @@
       "doc_date": "2026-09-08",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het plaatsen van dammen met duikers, verbreden van waterlopen en aanleggen van natuurvriendelijke oevers bij Zandwerven 39 in Spanbroek|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "9ce352b67281b50ac33e713b05761c365c9724edb4e35f5e351bf7dc0180eb72": {
@@ -6409,7 +6483,7 @@
       "doc_date": "2026-10-02",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het dempen en graven van waterlopen en het verwijderen van een dam met duiker ter hoogte van Kaag 8 in Spanbroek|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "1ea0fe4156f76f3666556dade6ef0e2b601a15a71477198512e82e493ae1d255": {
@@ -6429,7 +6503,7 @@
       "doc_date": "2026-10-12",
       "doc_date_label": "publicatiedatum",
       "koop_type": "andere vergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het versmallen van een secundaire waterloop door het aanbrengen van een beschoeiing voor de bestaande beschoeiing nabij Wezenweid 43 in Spierdijk|Hoogheemraadschap Hollands Noorderkwartier · andere vergunning"
     },
     "dd1a497be58ab2343deb3cd807dfb9a21fc6419a5c4bbb3fd96f061e3f8dcfe9": {
@@ -6449,7 +6523,7 @@
       "doc_date": "2026-09-28",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het aanbrengen van verhard oppervlak en ter compensatie het verbreden van een bestaand oppervlaktewaterlichaam bij Het Ouwe Hof 100 in Hensbroek|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "fd0187317350a5c1431b64f84d4548a2f5393d472bec5592ada0cc611443b955": {
@@ -6469,7 +6543,7 @@
       "doc_date": "2026-10-19",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het plaatsen van een carport en een damwand in beschermingszone A van een waterkering bij Oudelandsdijkje 11a in Hensbroek|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "a181d754d0fdc2daab6702f3cc4fabfddc8959c43fc25fe99e9f4badf96de367": {
@@ -6489,7 +6563,7 @@
       "doc_date": "2026-10-15",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het verplaatsen van een dam met duiker in een secundaire waterloop ter hoogte van Het Gors in Ursem|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "fabd3c5b561b619d2dcbf0ca022d23b949a45daf307a8af7a9b1142c334f0158": {
@@ -6509,7 +6583,7 @@
       "doc_date": "2026-09-25",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het onttrekken van grondwater bij de splitsing Achterweg/Oudendijk in Heemskerk voor aanleg brandput|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "48abf623f88ce4067b373e77de0d08a141d10fc384cdcb8a22685fa0ae7cab1e": {
@@ -6529,7 +6603,7 @@
       "doc_date": "2026-09-30",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het plaatsen van een trafostation in beschermingszone A van een regionale waterkering bij Dorpsweg 90 A in Oudendijk|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "5b3bc9ddfd136249102c93aa908ea7771fa73e4586f1efc700d7c531a52fa9b0": {
@@ -6549,7 +6623,7 @@
       "doc_date": "2026-10-13",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het leggen van een waterleiding binnen de zonering van de regionale waterkering ter hoogte van Beetskoogkade 3 in Oudendijk|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "ee02a69b1f53942f79c36939f2dac9705b5ad4698066f26b4d618b8e87a9ed53": {
@@ -6569,7 +6643,7 @@
       "doc_date": "2026-10-09",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het aanbrengen van verharding, het dempen, graven en verbreden van waterlopen en de aanleg van 2 dammen in bedrijventerrein Vredemaker Noord De Goorn|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "4b18699c91aefb059f196a0bd9a029c81c6ece5288c121a4ed419dcaeb224bc0": {
@@ -6589,7 +6663,7 @@
       "doc_date": "2026-10-16",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Maatwerkbesluit voor het aanbrengen van een dam met duiker in een tertiaire waterloop bij perceel KGL02AE455 en secundaire waterloop bij Grosthuizen 89 A in Avenhorn|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "19bc625d91d00a76503de3c3d4a009689f554d3998ffb9c033cc8be98d522b3c": {
@@ -6609,7 +6683,7 @@
       "doc_date": "2026-09-08",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Maatwerkbesluit voor het plaatsen van een dam met duiker in een secundaire waterloop bij Grootweg 13 in Berkhout|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "40d86b025e91e23439f8c22b89b7a0ebf06295c4ac644e883bb5352bdcecab70": {
@@ -6629,7 +6703,7 @@
       "doc_date": "2026-09-23",
       "doc_date_label": "publicatiedatum",
       "koop_type": "andere vergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het leggen van kabels parallel aan de waterloop en regionale waterkering van IJsselmeerdijk 17 in Scharwoude tot en met Schardam 34 in Schardam|Hoogheemraadschap Hollands Noorderkwartier · andere vergunning"
     },
     "3c5b8bf54d0d4aa1a0328cba15d0a094b27f240f6ce7fc9ec1428647517c12a4": {
@@ -6649,7 +6723,7 @@
       "doc_date": "2026-09-29",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het vervangen van 10 bruggen in de gemeente Koggenland|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "c9f570dcab7535ceaa293362e1cb32e693b0e453ed5292fd877f6cb7297a6198": {
@@ -6669,7 +6743,7 @@
       "doc_date": "2026-09-18",
       "doc_date_label": "publicatiedatum",
       "koop_type": "omgevingsvergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Toestemming voor het uitvoeren van graafwerkzaamheden voor het herstellen van een telecommunicatieleiding ten behoeve van een storing in de gemeente Koggenland in de provinciale weg N194 vanaf 4.969 t/m 4.969, verzonden 15 september 2026, zaaknummer ONH00351|Noord-Holland · omgevingsvergunning"
     },
     "e9983c3f2e46fff87cc1ec43ecc84e285c8543ddaf02c5e9c52f4ba866fad717": {
@@ -6689,7 +6763,7 @@
       "doc_date": "2026-09-21",
       "doc_date_label": "publicatiedatum",
       "koop_type": "omgevingsvergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Aanvraag vergunning voor het uitvoeren van graafwerkzaamheden voor het herstellen van een elektraleiding ten behoeve van een storing in de gemeente Koggenland op de provinciale weg N194 vanaf km 5.341 t/m km 5.476, ingekomen 16 september 2026, kenmerk ONH00392|Noord-Holland · omgevingsvergunning"
     },
     "c2d84ffed0506c91978a61fc5cbce1f2549505417c26bf03c97661ca4fd0dbfb": {
@@ -6709,7 +6783,7 @@
       "doc_date": "2026-09-22",
       "doc_date_label": "publicatiedatum",
       "koop_type": "omgevingsvergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Toestemming voor het uitvoeren van graafwerkzaamheden voor het herstellen van een elektraleiding ten behoeve van een storing in de gemeente Koggenland in de provinciale weg N194 vanaf 5.341 t/m 5.476, verzonden 17 september 2026, zaaknummer ONH00392|Noord-Holland · omgevingsvergunning"
     },
     "87276178f16c53807ababe65e65c87ab6a67d74b4f3512211a467ac507def90c": {
@@ -6729,7 +6803,7 @@
       "doc_date": "2026-09-09",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Maatwerkbesluit voor het aanleggen van een tijdelijke dam met duiker, tot 31 maart 2027, voor Project Helix Andijk ter hoogte van Beldersweg 5 in Andijk|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "27058976110d5a3eb5ca54eec9c7da989e14dfb18de7cab1907ee2074a243e16": {
@@ -6749,7 +6823,7 @@
       "doc_date": "2026-09-18",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het vervangen van een beschoeiing en plaatsen van een steiger binnen beschermingszone A van de regionale waterkering bij Noordeinde 7 in Lambertschaag|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "13a1c7dae234d95780499c3fa520de49c892975c79ddfff26ee20abeaa3fc5a5": {
@@ -6769,7 +6843,7 @@
       "doc_date": "2026-10-20",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het aanbrengen van verhard oppervlak en het plaatsen van een dam met duiker bij Zwaagdijk 428 in Zwaagdijk-West|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "302aeff915b58656c0a04424480b92d259f116f4e8c0f96e62e5ff8f398a0149": {
@@ -6789,7 +6863,7 @@
       "doc_date": "2026-10-05",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het dempen van een secundair waterloop en ter compensatie het verbreden van een waterloop bij Westerstraat 65 in Sijbekarspel|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "c7c8b61be902757b3ba3b8abb9423fc540f843def86b18aed9ba4741b2013d9f": {
@@ -6809,7 +6883,7 @@
       "doc_date": "2026-09-28",
       "doc_date_label": "publicatiedatum",
       "koop_type": "omgevingsvergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Aanvraag ingetrokken omgevingsvergunning Theo Koomenlaan 5 te Wervershoof (flora - en fauna-activiteit)|Noord-Holland · omgevingsvergunning"
     },
     "a441e1fc2af512728d141e21de80293f1179d64d5de55061a589bf99886a0bdb": {
@@ -6829,7 +6903,7 @@
       "doc_date": "2026-09-23",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het weghalen van een brug en het plaatsen van een toegangsdam met duiker bij Zwaagdijk 67 in Zwaagdijk-Oost|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "6883c6ce018145a8d7f2874649add29a06d09a31e99c31dd97fd9741d3eab1f0": {
@@ -6849,7 +6923,7 @@
       "doc_date": "2026-09-21",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het leggen van een nieuwe beschoeiing tegen de bestaande beschoeiing langs een secundaire waterloop nabij Boltje 10, in Opperdoes|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "9ea505a14dba85e8fe31d9117ca420d631cc44238cb555aba91b8d4604f2c77e": {
@@ -6869,7 +6943,7 @@
       "doc_date": "2026-09-10",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het dempen van een waterloop en ter compensatie hiervan verwijderen van een dam met duiker nabij Zwaagdijk 213 in Zwaagdijk-Oost|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "ab6108b6eb5d79ed9f61d8ead144f814091a9875095b3d2630cd52b63bcee5a7": {
@@ -6909,7 +6983,7 @@
       "doc_date": "2026-10-08",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het leggen van kabels op het trace evenwijdig aan- en kruisend van de waterkering o.m. langs Koggenrandweg en Bennemeersweg in Twisk|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "f30b22a5e8de67fff4dd7cd7cd328ce9a01ee71fb7eec5a3939f75f7c3788ded": {
@@ -6929,7 +7003,7 @@
       "doc_date": "2026-09-10",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning eigen dienst voor het uitvoeren van diverse werkzaamheden t.b.v. de aanleg van een oefenterrein voor crisisbeheersing aan de Ketellap in Wervershoof|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "1b70cc696ee466af2d46d42d9ea577086074d44045dbe0fbefe09cdd2ceeb927": {
@@ -6949,7 +7023,7 @@
       "doc_date": "2026-09-14",
       "doc_date_label": "publicatiedatum",
       "koop_type": "andere vergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het leggen van kabels in de primaire waterkering nabij Dijkweg 168 in Andijk|Hoogheemraadschap Hollands Noorderkwartier · andere vergunning"
     },
     "ce91c4df4fb1b1ffd0f1eb0b009fb75df192a984bc1b87a08df38c9fcb0efa0d": {
@@ -6969,7 +7043,7 @@
       "doc_date": "2026-09-10",
       "doc_date_label": "publicatiedatum",
       "koop_type": "andere vergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor het vervangen van een beschoeiing voor project Helix in beschermingszone A van overige waterkering op perceel ADK00K3359 nabij Dijkweg 257 in Andijk|Hoogheemraadschap Hollands Noorderkwartier · andere vergunning"
     },
     "31c159d31664e65d0c3efdff2ff27aba12efab94a88862b598df20a697f07b1f": {
@@ -6989,7 +7063,7 @@
       "doc_date": "2026-10-06",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Verleende vergunning voor de aanleg van een kabel in de beschermingszone van de waterkering ten behoeve van het vervangen van de toegangspoorten bij Dijkweg 1 in Andijk|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "8ed96f9008ab738db24074de444094d24dc32ea31a7108c60c6278d0d2fdaacf": {
@@ -7009,7 +7083,7 @@
       "doc_date": "2026-10-14",
       "doc_date_label": "publicatiedatum",
       "koop_type": "omgevingsvergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Ontvangst aanvraag omgevingsvergunning Veillingweg tot aan Oosterdijk te Andijk (kappen van houtopstanden)|Noord-Holland · omgevingsvergunning"
     },
     "ec2074172f737fac0f4af557dd4a72c64a450c1823e53a94f802f1df0c4f9626": {
@@ -7029,7 +7103,7 @@
       "doc_date": "2026-09-07",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het leggen van kabels in de primaire waterkering nabij Dijkweg 168 in Andijk|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "505992acaad286b89908b739dc1c0c1429b1ce39dc070b0868c0cd8420ca5008": {
@@ -7049,7 +7123,7 @@
       "doc_date": "2026-10-13",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het plaatsen en weghalen van een dam en het aanbrengen van verhard oppervlak bij Vleetweg 12 in Andijk|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "19ef0e144371b3ac3604edc3db339dacc77f5beb478b80054c92bb841ff28b69": {
@@ -7069,7 +7143,7 @@
       "doc_date": "2026-09-16",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het plaatsen van een brug nabij Patrijspoort 18 in Medemblik|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "12d5221e8294dda7118a089267405eabcc063e1f680f9f7f6d2d4afada10b60b": {
@@ -7089,7 +7163,7 @@
       "doc_date": "2026-09-18",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het plaatsen van een dam met duiker in een secundaire waterloop ter hoogte van Poelweg 12 in Medemblik|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "cf6461383153fa18f8475a8e734a931ae7bd4c51e9f8da39dd165ce3c25470c1": {
@@ -7109,7 +7183,7 @@
       "doc_date": "2026-09-28",
       "doc_date_label": "publicatiedatum",
       "koop_type": "vergunning voor activiteiten op of in oppervlaktewater",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Kennisgeving aanvraag vergunning voor het plaatsen van twee fiets- en voetgangersbruggen over een primair oppervlaktewater ter plaatsen van een overige waterkering nabij Patrijspoort en Boegbeeld in Medemblik|Hoogheemraadschap Hollands Noorderkwartier · vergunning voor activiteiten op of in oppervlaktewater"
     },
     "cc28f7a919830709d729b1b6fa815b4fb8755796de86e6fccbd7e106113054f0": {
@@ -7129,7 +7203,7 @@
       "doc_date": "2026-10-14",
       "doc_date_label": "publicatiedatum",
       "koop_type": "omgevingsvergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Aanvraag vergunning voor het leggen van een waterleiding en het maken van een boring hiervoor in de gemeente Medemblik op de provinciale weg N239 vanaf km 22.754 t/m km 22.754, ingekomen 8 oktober 2026, kenmerk ONH00433|Noord-Holland · omgevingsvergunning"
     },
     "9abdf4aee8e16774bb1275f353910be449b4c1118c5c75bde412968e59ccdc95": {
@@ -7149,7 +7223,7 @@
       "doc_date": "2026-09-14",
       "doc_date_label": "publicatiedatum",
       "koop_type": "omgevingsvergunning",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "kw_sig": "5ae1c58d6943||Toestemming voor het hebben van een waterleiding, gelegd door het maken van een gestuurde boring hiervoor, in de gemeente Medemblik in de provinciale weg N240 vanaf 22.653 t/m 22.653, verzonden 9 september 2026, zaaknummer ONH00154|Noord-Holland · omgevingsvergunning"
     },
     "578485cc5239d97287b4d691a4c6a7fae951bab558df7a3f156c5724eaed63d3": {
@@ -105257,64 +105331,6 @@
         }
       ]
     },
-    "07bb3988e4a5c55ead52a49980b16b49f7445fe4f16df635fe6004d145f46e5c": {
-      "title": "Informatienota voortgang Renovatie gemeentehuis",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/749a0d67-029e-4535-b97b-3132fdf9f671",
-      "source": "Raadsportaal",
-      "gemeente": "medemblik",
-      "first_seen": "2026-10-15T11:11:12+00:00",
-      "updated": "2026-10-15T11:11:12+00:00",
-      "last_change": null,
-      "hash": "",
-      "revisions": 1,
-      "excerpt": "Informatienota's",
-      "kind": "overzichtsitem",
-      "rapport": "Informatienota's",
-      "last_seen": "2026-10-22",
-      "doc_date": "2026-10-08",
-      "doc_date_label": "registratiedatum",
-      "report_pass": "2026-10-22T00:01:19+00:00",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "3b5944ed4629cba98c0b8e2aa35407117e96566c2bfa406107298f99e99b602a",
-      "content_checked": "2026-10-21T18:32:37+00:00",
-      "kw_sig": "5ae1c58d6943|3b5944ed4629cba98c0b8e2aa35407117e96566c2bfa406107298f99e99b602a|Informatienota voortgang Renovatie gemeentehuis|Informatienota's",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "Periodiek Informatienota raad varianten TH",
-        "PPT Stand van Zaken programma Renovatie",
-        "OTH_MED_informatieavond gemraad def",
-        "Presentatie varianten en kosten Tijdelijke Huisvesting",
-        "Kostenopbouw variant 3 en variant 5",
-        "Financiele onderbouwing variant 3 TH"
-      ],
-      "bijlagen": [
-        {
-          "t": "Periodiek Informatienota raad varianten TH",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/30b89ac5-f1c5-4a3a-a531-63bc7078a39f"
-        },
-        {
-          "t": "PPT Stand van Zaken programma Renovatie",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/54c08a60-e292-448f-a2d5-38305b0a2409"
-        },
-        {
-          "t": "OTH_MED_informatieavond gemraad def",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/f8346ba0-d319-419c-b0d7-2381b83c2606"
-        },
-        {
-          "t": "Presentatie varianten en kosten Tijdelijke Huisvesting",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/a8a48d19-3bcc-4962-845d-06ebabf98ee3"
-        },
-        {
-          "t": "Kostenopbouw variant 3 en variant 5",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7cf69a99-2e0d-4304-8af4-54a4cce6570a"
-        },
-        {
-          "t": "Financiele onderbouwing variant 3 TH",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7e51a1eb-8252-452b-8df9-a6eb4c080ca1"
-        }
-      ]
-    },
     "96044fcfe6880ec426f17b8dc40598d320536cf12342be105a59b966735a99f2": {
       "title": "Uitvoeringsplan gladheidbestrijding 2026 - 2028",
       "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/a6a3c3d8-2dfa-454c-a251-cdc5f413b9f5",
@@ -141949,38 +141965,38 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-10-22T00:31:04+00:00",
+        "checked": "2026-10-22T00:35:17+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-22T00:31:04+00:00",
+        "checked": "2026-10-22T00:35:18+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-10-22T00:31:05+00:00",
+        "checked": "2026-10-22T00:35:18+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-10-22T00:31:05+00:00",
+        "checked": "2026-10-22T00:35:18+00:00",
         "ok": true,
         "count": 29,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-22T00:30:45+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "ok": true,
         "count": 171,
         "new": 0,
         "note": "Laatste 30 dagen: 171 van 171 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-22T00:30:56+00:00",
+        "checked": "2026-10-22T00:35:08+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -141988,7 +142004,7 @@
         "note": "10 van 20 vergaderingen in venster bijgewerkt; 210 documenten bekend. Dekking: vergaderingen van 2026-08-23 t/m 2026-12-06 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-22T00:31:02+00:00",
+        "checked": "2026-10-22T00:35:15+00:00",
         "ok": true,
         "count": 301,
         "new": 0,
@@ -141996,34 +142012,34 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2125, Ingekomen stukken 3158, Jaarplannen en jaarverslagen 1, Moties en amendementen 402, Raadsvragen 1409, Rekenkamer 54, Toezeggingen 332). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "In de media": {
-        "checked": "2026-10-22T00:31:09+00:00",
+        "checked": "2026-10-22T00:35:22+00:00",
         "ok": true,
-        "count": 38,
+        "count": 37,
         "new": 0,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Medemblik, Abbekerk, Andijk, Benningbroek, Hauwert, Lambertschaag, Midwoud, Nibbixwoud, Oostwoud, Opperdoes, Sijbekarspel, Twisk, Wervershoof, Wognum, Zwaagdijk-Oost, Zwaagdijk-West. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-10-22T00:31:36+00:00",
+        "checked": "2026-10-22T00:36:49+00:00",
         "ok": true,
-        "count": 0,
+        "count": 3,
         "errors": 0,
-        "note": "0 documenten gecontroleerd (0 pdf), 1646 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
+        "note": "3 documenten gecontroleerd (2 pdf), 1646 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
       },
       "Meldingen": {
-        "checked": "2026-10-22T00:31:36+00:00",
+        "checked": "2026-10-22T00:36:49+00:00",
         "ok": true,
-        "note": "Pushmeldingen actief (ntfy); deze run 0 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-21).",
+        "note": "Pushmeldingen actief (ntfy); deze run 1 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-21).",
         "error": null
       },
       "Trefwoorden": {
-        "checked": "2026-10-22T00:31:36+00:00",
+        "checked": "2026-10-22T00:36:49+00:00",
         "ok": true,
-        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 0 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
+        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 1 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
       },
       "Andere overheden": {
-        "checked": "2026-10-21T23:31:48+00:00",
+        "checked": "2026-10-22T00:35:57+00:00",
         "ok": true,
         "count": 42,
         "new": 0,
@@ -142031,14 +142047,14 @@
         "note": "Officiële bekendmakingen van provincie Noord-Holland, het waterschap (HHNK), ministeries en andere gemeenten waarin een van de plaatsen in de titel of samenvatting staat (laatste 45 dagen). Eén keer per uur."
       },
       "Tweede Kamer": {
-        "checked": "2026-10-21T23:32:04+00:00",
+        "checked": "2026-10-22T00:36:02+00:00",
         "ok": true,
         "count": 0,
         "new": 0,
         "note": "Tweede Kamer (open data): documenten van de laatste 45 dagen met een van de plaatsen of \"West-Friesland\" in titel of onderwerp. Alleen titel en onderwerp, niet de volledige tekst. Eén keer per uur."
       },
       "Rechtspraak": {
-        "checked": "2026-10-21T23:32:19+00:00",
+        "checked": "2026-10-22T00:36:18+00:00",
         "ok": true,
         "count": 29,
         "new": 0,
@@ -142046,13 +142062,13 @@
         "note": "Uitspraken op rechtspraak.nl (laatste 45 dagen gepubliceerd) waarin de gemeente of een van de dorpen voorkomt. Namen die ook achternaam zijn (Berkhout, Twisk) of elders voorkomen worden niet los gezocht. Uitspraken zijn geanonimiseerd. Eén keer per uur."
       },
       "Termijn raadsvragen": {
-        "checked": "2026-10-22T00:31:36+00:00",
+        "checked": "2026-10-22T00:36:37+00:00",
         "ok": true,
         "count": 3,
         "note": "3 raadsvragen staan langer open dan de termijn uit het reglement van orde (Medemblik en Opmeer: 30 dagen). Een uitstelbericht aan de vragensteller is in het portaal niet te zien."
       },
       "Woo-publicaties": {
-        "checked": "2026-10-21T23:32:34+00:00",
+        "checked": "2026-10-22T00:36:37+00:00",
         "ok": true,
         "count": 0,
         "new": 0,
@@ -142062,19 +142078,19 @@
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-22T00:31:10+00:00",
+        "checked": "2026-10-22T00:35:24+00:00",
         "ok": true,
         "count": 72,
         "new": 0,
         "note": "Laatste 30 dagen: 72 van 72 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-10-22T00:31:11+00:00",
+        "checked": "2026-10-22T00:35:24+00:00",
         "ok": false,
         "error": "mismatched tag: line 6, column 2"
       },
       "Collegebesluiten": {
-        "checked": "2026-10-22T00:31:11+00:00",
+        "checked": "2026-10-22T00:35:25+00:00",
         "ok": false,
         "count": 0,
         "new": 0,
@@ -142082,13 +142098,13 @@
         "error": "Geen pdf-links gevonden; paginastructuur gewijzigd?"
       },
       "Woo-verzoeken": {
-        "checked": "2026-10-22T00:31:11+00:00",
+        "checked": "2026-10-22T00:35:25+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
       },
       "In de media": {
-        "checked": "2026-10-22T00:31:14+00:00",
+        "checked": "2026-10-22T00:35:28+00:00",
         "ok": true,
         "count": 47,
         "new": 0,
@@ -142097,14 +142113,14 @@
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "ok": true,
         "count": 44,
         "new": 0,
         "note": "Laatste 30 dagen: 44 van 44 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-22T00:31:27+00:00",
+        "checked": "2026-10-22T00:35:45+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -142112,7 +142128,7 @@
         "note": "10 van 11 vergaderingen in venster bijgewerkt; 75 documenten bekend. Dekking: vergaderingen van 2026-08-23 t/m 2026-12-06 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-22T00:31:34+00:00",
+        "checked": "2026-10-22T00:35:52+00:00",
         "ok": true,
         "count": 399,
         "new": 0,
@@ -142120,12 +142136,12 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 74, Belangrijke documenten 13, Besluitenlijsten college 310, Ingekomen stukken 1149, Moties 79, Politieke vragen 73, Raadsinformatiebrieven 587, Thema's 25, Toezeggingen 84, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-10-22T00:31:35+00:00",
+        "checked": "2026-10-22T00:35:52+00:00",
         "ok": false,
         "error": "mismatched tag: line 6, column 2"
       },
       "In de media": {
-        "checked": "2026-10-22T00:31:36+00:00",
+        "checked": "2026-10-22T00:35:53+00:00",
         "ok": true,
         "count": 14,
         "new": 0,
@@ -220450,7 +220466,7 @@
         "gemeente": "medemblik"
       },
       "7a2ae701-743b-4c66-bc69-1ea646ee2483": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-26",
         "label": "donderdag 26 november 2026",
@@ -220459,7 +220475,7 @@
         "agenda": []
       },
       "8eadc9f7-a7ae-44ad-a78e-3596c9796e5d": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-12",
         "label": "donderdag 12 november 2026",
@@ -220480,7 +220496,7 @@
         ]
       },
       "d4b32282-6d07-4f2e-9463-89fb9b55e9c3": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Gemeenteraad",
         "date": "2026-09-24",
         "label": "donderdag 24 september 2026",
@@ -220571,7 +220587,7 @@
         "gemeente": "medemblik"
       },
       "bedc4215-5f41-43f8-809b-e789157c64fd": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-12-03",
         "label": "donderdag 3 december 2026",
@@ -220624,7 +220640,7 @@
         ]
       },
       "a66cbb1d-4930-42a1-9e01-300240cb0a8e": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-01",
         "label": "donderdag 1 oktober 2026",
@@ -220648,7 +220664,7 @@
         ]
       },
       "f4180896-f72d-4718-a1e3-0789d2667761": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-09-10",
         "label": "donderdag 10 september 2026",
@@ -220746,7 +220762,7 @@
         "gemeente": "medemblik"
       },
       "48e926c5-1642-494c-b07f-28b1148fd5db": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Presidium",
         "date": "2026-11-16",
         "label": "maandag 16 november 2026",
@@ -220755,7 +220771,7 @@
         "agenda": []
       },
       "a5344260-dca4-4884-8b61-4c52d5a7b54f": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Presidium",
         "date": "2026-10-05",
         "label": "maandag 5 oktober 2026",
@@ -220786,7 +220802,7 @@
         ]
       },
       "2435dfa3-24f4-4274-aea4-0f940dcc3cd3": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Presidium",
         "date": "2026-09-14",
         "label": "maandag 14 september 2026",
@@ -220870,7 +220886,7 @@
         "gemeente": "medemblik"
       },
       "3e6659e5-394d-4eb0-83d2-57091ce3e731": {
-        "checked": "2026-10-22T00:15:34+00:00",
+        "checked": "2026-10-22T00:34:56+00:00",
         "type": "Auditcommissie",
         "date": "2026-09-30",
         "label": "woensdag 30 september 2026",
@@ -221043,7 +221059,7 @@
         "label": "donderdag 10 december 2026"
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -221062,7 +221078,7 @@
         ]
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -221142,7 +221158,7 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
@@ -221151,7 +221167,7 @@
         "agenda": []
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -221169,7 +221185,7 @@
         ]
       },
       "7d82ecee-3b65-4d47-ae9b-904b5e4c1562": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-09-10",
@@ -221210,7 +221226,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -221219,7 +221235,7 @@
         "agenda": []
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -221233,7 +221249,7 @@
         ]
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -221242,7 +221258,7 @@
         "agenda": []
       },
       "eb2e5b85-1e4b-4de2-824f-c07024b8157b": {
-        "checked": "2026-10-22T00:31:15+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-08-27",
@@ -221279,7 +221295,7 @@
         "label": "donderdag 22 januari 2026"
       },
       "c62483ed-4da6-4fee-846f-29b58d90cf6c": {
-        "checked": "2026-10-22T00:16:10+00:00",
+        "checked": "2026-10-22T00:35:30+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-10-06",
@@ -221818,10 +221834,10 @@
     "termijn_v1": true,
     "elders_v": 2,
     "elders": {
-      "koop": "2026-10-21T23:31:45+00:00",
-      "tk": "2026-10-21T23:31:48+00:00",
-      "rechtspraak": "2026-10-21T23:32:04+00:00",
-      "woo": "2026-10-21T23:32:19+00:00"
+      "koop": "2026-10-22T00:35:53+00:00",
+      "tk": "2026-10-22T00:35:57+00:00",
+      "rechtspraak": "2026-10-22T00:36:02+00:00",
+      "woo": "2026-10-22T00:36:18+00:00"
     }
   }
 }
