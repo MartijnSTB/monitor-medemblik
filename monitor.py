@@ -630,7 +630,11 @@ def ibabs_list_meetings(db, gid):
     state = db.setdefault('state', {})
     meetings = state.setdefault('meetings', {})
     listed = state.setdefault('meetings_listed', {})
-    if listed.get(gid) == today():
+    # Elk half uur de vergaderlijst opnieuw ophalen (was: één keer per dag). Een vergadering die het college
+    # of de griffie later op de dag plaatst, komt zo binnen een half uur binnen in plaats van de dag erna.
+    vorige = listed.get(gid) or ''
+    if len(vorige) > 10 and (datetime.datetime.now(datetime.timezone.utc)
+                             - datetime.datetime.fromisoformat(vorige)).total_seconds() < 25 * 60:
         return []
     years = {datetime.date.today().year}
     if datetime.date.today().month <= 2:
@@ -652,7 +656,7 @@ def ibabs_list_meetings(db, gid):
                     m.update(gemeente=gid, type=type_name, date=date, label=label)
             except Exception as exc:
                 errors.append(f'{type_name} {year}: {str(exc)[:60]}')
-    listed[gid] = today()
+    listed[gid] = utc()
     return errors
 
 def ibabs_parse_meeting(page_html, base):
