@@ -1,12 +1,107 @@
 {
   "items": {
+    "6071fc7973283004f873d56a7dd827cadd2f408c0d38f1d46dd1316827e6bd99": {
+      "title": "Uitvoering cao-afspraak werkgeversbijdrage 2026: Cao SW en Cao Aan de slag",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/f9d3dd29-6c5f-490a-b97f-1ed3d4d31db1",
+      "source": "Raadsportaal",
+      "gemeente": "opmeer",
+      "first_seen": "2026-10-30T08:17:14+00:00",
+      "updated": "2026-10-30T14:48:37+00:00",
+      "last_change": "2026-10-30T14:48:37+00:00",
+      "hash": "",
+      "revisions": 2,
+      "excerpt": "Ingekomen stukken",
+      "kind": "overzichtsitem",
+      "rapport": "Ingekomen stukken",
+      "last_seen": "2026-10-30",
+      "doc_date": "2026-10-30",
+      "doc_date_label": "datum ingekomen",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "796925ef0bec53cf14c6d68db3bf841846a3ceec27689faadb58333636e9c1e7",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "Lbr_ 26_043 - Uitvoering Akkoord Aanvullende vormen van huisvesting"
+      ],
+      "bijlagen": [
+        {
+          "t": "Lbr_ 26_043 - Uitvoering Akkoord Aanvullende vormen van huisvesting",
+          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/c91fff82-7991-4494-aaf2-16391b69cda5"
+        }
+      ],
+      "content_checked": "2026-10-30T14:48:37+00:00",
+      "kw_sig": "5ae1c58d6943|796925ef0bec53cf14c6d68db3bf841846a3ceec27689faadb58333636e9c1e7|Uitvoering cao-afspraak werkgeversbijdrage 2026: Cao SW en Cao Aan de slag|Ingekomen stukken",
+      "changes": [
+        {
+          "at": "2026-10-30T14:48:37+00:00",
+          "type": "Bijlage toegevoegd",
+          "summary": "nieuwe bijlage: Lbr_ 26_043 - Uitvoering Akkoord Aanvullende vormen van huisvesting; 14 zin(nen) toegevoegd of aangepast, 23 verwijderd of vervangen",
+          "added": [
+            "Sent: Thu, 29 Oct 2026 17:00:51 +0100",
+            "26/043 - Uitvoering Akkoord Aanvullende vormen van huisvesting",
+            "Lees online | Gegevens wijzigen"
+          ],
+          "removed": []
+        }
+      ],
+      "change_type": "Bijlage toegevoegd"
+    },
+    "6c2e3e75fafc02b569e695d91e542a02a6b58eb0a768eda2fe8735c2149a55b4": {
+      "title": "Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/098739c7-829c-4a9d-9e08-8e29b3757cc5",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-27T14:01:26+00:00",
+      "updated": "2026-10-30T14:48:17+00:00",
+      "last_change": "2026-10-30T14:48:17+00:00",
+      "hash": "",
+      "revisions": 2,
+      "excerpt": "Raadsvragen · antwoord 2026-10-27",
+      "kind": "overzichtsitem",
+      "rapport": "Raadsvragen",
+      "last_seen": "2026-10-30",
+      "doc_date": "2026-09-11",
+      "doc_date_label": "datum vraag",
+      "portefeuillehouder": "I. Mantel",
+      "antwoord_datum": "2026-10-27",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "b2a5510c01e972b9e11e91553e5ea0f6ad1c24d2133424d2bcddfe8a47fc12f1",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud"
+      ],
+      "bijlagen": [
+        {
+          "t": "Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/1c0c0b3c-1f22-4390-a64a-fa2267cf4e50"
+        }
+      ],
+      "content_checked": "2026-10-30T14:48:17+00:00",
+      "kw_sig": "5ae1c58d6943|b2a5510c01e972b9e11e91553e5ea0f6ad1c24d2133424d2bcddfe8a47fc12f1|Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud|Raadsvragen · antwoord 2026-10-27",
+      "report_pass": "2026-10-30T00:15:55+00:00",
+      "changes": [
+        {
+          "at": "2026-10-30T14:48:17+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "0 zin(nen) toegevoegd of aangepast, 144 verwijderd of vervangen",
+          "added": [],
+          "removed": [
+            "Agendapunt",
+            "Beantwoording raadsvragen HvM Verkeersveiligheid De Wijzend Nibbixwoud",
+            "[Bijlage: Beantwoording raadsvragen HvM Verkeersveiligheid De Wijzend Nibbixwoud]"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
     "d8183f481098357f554063dc7235eccb5fdddd975a5a9dc7a2601d3e25a43653": {
       "title": "Bekijk duurzame woningen in Opmeer of stel je eigen huis open",
       "url": "https://www.opmeer.nl/bekijk-duurzame-woningen-in-opmeer-of-stel-je-eigen-huis-open",
       "source": "Nieuws",
       "gemeente": "opmeer",
-      "first_seen": "2026-10-30T14:31:44+00:00",
-      "updated": "2026-10-30T14:31:44+00:00",
+      "first_seen": "2026-10-30T14:46:58+00:00",
+      "updated": "2026-10-30T14:46:58+00:00",
       "last_change": null,
       "hash": "",
       "revisions": 1,
@@ -19,8 +114,60 @@
       "excerpt": "Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
       "missing_count": 0,
       "text_hash": "310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca",
-      "content_checked": "2026-10-30T14:31:46+00:00",
+      "content_checked": "2026-10-30T14:47:01+00:00",
       "kw_sig": "5ae1c58d6943|310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca|Bekijk duurzame woningen in Opmeer of stel je eigen huis open|Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen."
+    },
+    "daf4f361c0b15bf6ae70e25325c958d60f0b8da17bcd9eee683cda4e2b921d3c": {
+      "title": "Koning Willem-Alexander arriveert in Ursem",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPU1UzVFBqWHN4V01BMEJZbXhLRUZQUzNVX0lQNlNJZDQ4Q2VTeDZOb0ZmZzMyMWN0dlZQQVB5YlFfSDNEcG9aQThVQUpQWnkxRUVMN1RHM20zSkZIMV9BVnRmaU1BQnpUY0FzQUNXb3NNbFRSZV9uaWZDNzBJSFEwcmM0M3F6ZkdLYmtNUXFhUVdDLTA0OVN5QVFFWG5rUXNoeHo3YVV3dW1iUmg0NW9aT3Z2VFI?oc=5",
+      "source": "In de media",
+      "gemeente": "koggenland",
+      "first_seen": "2026-10-30T14:46:30+00:00",
+      "updated": "2026-10-30T14:46:30+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "media",
+      "media_bron": "Noordhollands Dagblad",
+      "media_match": "kop",
+      "last_seen": "2026-10-30",
+      "doc_date": "2026-10-30",
+      "doc_date_label": "publicatiedatum",
+      "published_at": "2026-10-30T15:44+01:00",
+      "published_at_source": "Google Nieuws",
+      "kw_sig": "5ae1c58d6943||Koning Willem-Alexander arriveert in Ursem|"
+    },
+    "ef33c091209d1d5b48b6c0cb32c2d3faad84000f8b99deabb5575e6eb09dda88": {
+      "title": "Raadsvragen GemeenteBelangen Rook door Stook",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/00c1ca94-1a3c-40e9-a5c8-941f0465db90",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-30T14:46:16+00:00",
+      "updated": "2026-10-30T14:46:16+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "excerpt": "Raadsvragen · nog niet beantwoord",
+      "kind": "overzichtsitem",
+      "rapport": "Raadsvragen",
+      "last_seen": "2026-10-30",
+      "doc_date": "2026-10-30",
+      "doc_date_label": "datum vraag",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "08f03d8040b35277e96cbf56f925ebd7b441d2363e0ccbb548a79426f174c2d3",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "Raadsvragen GemeenteBelangen Rook door Stook"
+      ],
+      "bijlagen": [
+        {
+          "t": "Raadsvragen GemeenteBelangen Rook door Stook",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/36949250-391b-4efb-97e2-0cbddb952d73"
+        }
+      ],
+      "content_checked": "2026-10-30T14:47:00+00:00",
+      "kw_sig": "5ae1c58d6943|08f03d8040b35277e96cbf56f925ebd7b441d2363e0ccbb548a79426f174c2d3|Raadsvragen GemeenteBelangen Rook door Stook|Raadsvragen · nog niet beantwoord"
     },
     "c6f4421dfd2435cded70c0291061d47bee32b8d98cffd9b86900626366bcd6cc": {
       "title": "Bouwbedrijf Sikkens gaat op in Botman Bouw en verlaat Enkhuizen. ’Toekomst personeel veiliggesteld’",
@@ -1478,40 +1625,8 @@
           "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/e1cd3561-fabe-4b32-b586-973cc5a03383"
         }
       ],
-      "content_checked": "2026-10-30T08:17:21+00:00",
+      "content_checked": "2026-10-30T14:48:35+00:00",
       "kw_sig": "5ae1c58d6943|17886ade70b6952d5c84708b3da4db5f44c018789241d5b9b314d313308b374c|Nieuwsbrief Muziek Opmeer, november 2026|Ingekomen stukken"
-    },
-    "6071fc7973283004f873d56a7dd827cadd2f408c0d38f1d46dd1316827e6bd99": {
-      "title": "Uitvoering cao-afspraak werkgeversbijdrage 2026: Cao SW en Cao Aan de slag",
-      "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/f9d3dd29-6c5f-490a-b97f-1ed3d4d31db1",
-      "source": "Raadsportaal",
-      "gemeente": "opmeer",
-      "first_seen": "2026-10-30T08:17:14+00:00",
-      "updated": "2026-10-30T08:17:14+00:00",
-      "last_change": null,
-      "hash": "",
-      "revisions": 1,
-      "excerpt": "Ingekomen stukken",
-      "kind": "overzichtsitem",
-      "rapport": "Ingekomen stukken",
-      "last_seen": "2026-10-30",
-      "doc_date": "2026-10-30",
-      "doc_date_label": "datum ingekomen",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "49085b6fe837713494d4254e949f560d3ba702660633b6f87bd5c2c79a1f7ba0",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "Lbr_ 26_042 - Uitvoering cao-afspraak werkgeversbijdrage 2026_ Cao SW en Cao Aan de slag"
-      ],
-      "bijlagen": [
-        {
-          "t": "Lbr_ 26_042 - Uitvoering cao-afspraak werkgeversbijdrage 2026_ Cao SW en Cao Aan de slag",
-          "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/6b512ce3-ffbd-48f7-83e2-bb67a2d7053e"
-        }
-      ],
-      "content_checked": "2026-10-30T08:17:22+00:00",
-      "kw_sig": "5ae1c58d6943|49085b6fe837713494d4254e949f560d3ba702660633b6f87bd5c2c79a1f7ba0|Uitvoering cao-afspraak werkgeversbijdrage 2026: Cao SW en Cao Aan de slag|Ingekomen stukken"
     },
     "0e35fb931b22f09fb11a296e2105462f1cf8fdc1266e1a6e7ea4e207a5374c63": {
       "title": "Auto flink beschadigd na botsing met trekker in dichte mist bij Andijk",
@@ -2980,7 +3095,7 @@
           "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/5cb8168f-6477-41ce-aa22-d98608d8aad5"
         }
       ],
-      "content_checked": "2026-10-30T07:32:29+00:00",
+      "content_checked": "2026-10-30T14:48:29+00:00",
       "kw_sig": "5ae1c58d6943|470377b0a9036970034e347a0a34924c6f4d0ba9465bcc25b216d3d674f53f9a|Verkeersveiligheid Lambertschaag en Abbekerk – opvolging eerdere beantwoording|Raadsvragen · nog niet beantwoord",
       "report_pass": "2026-10-30T00:15:55+00:00"
     },
@@ -6073,7 +6188,7 @@
       "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "missing_count": 0,
       "text_hash": "4b5d1fd802176e29bf0413389615a35a66275dcf74077d2bc39d07d9fd2354ab",
-      "content_checked": "2026-10-30T08:17:23+00:00",
+      "content_checked": "2026-10-30T14:48:38+00:00",
       "kw_sig": "5ae1c58d6943|4b5d1fd802176e29bf0413389615a35a66275dcf74077d2bc39d07d9fd2354ab|06 beantwoording commissievragen Gemeentebelangen raadscie. 29-10 agendapunt 8.1 Programmabegroting|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
     },
     "fcecf1a280a0f351749924cfe543ecf820eb56a5e816e76ffb12a9a7da718410": {
@@ -7974,7 +8089,7 @@
       "published_at_source": "RSS-feed",
       "missing_count": 0,
       "text_hash": "63a7bf42df7a1256a9747be6558ec37200d3f89d064cbe3347237b260542bfdf",
-      "content_checked": "2026-10-30T07:46:47+00:00",
+      "content_checked": "2026-10-30T14:48:32+00:00",
       "kw_sig": "5ae1c58d6943|63a7bf42df7a1256a9747be6558ec37200d3f89d064cbe3347237b260542bfdf|Een terugblik op Clean Up Day|",
       "changes": [
         {
@@ -8930,49 +9045,9 @@
           "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/02f88e43-c21f-4be3-a11d-a7f41c72c327"
         }
       ],
-      "content_checked": "2026-10-29T14:17:08+00:00",
+      "content_checked": "2026-10-30T14:48:15+00:00",
       "kw_sig": "5ae1c58d6943|2c5504c3d520c85e88833d44c40f797b64c082e6a494144583e2c8ec3aa6cd65|Stikstofbrief kabinet|Moties · Aangenomen · VVD, Gemeentebelangen, Lokale Partij Opmeer, KERN8 · nog open",
       "report_pass": "2026-10-30T00:16:49+00:00"
-    },
-    "6c2e3e75fafc02b569e695d91e542a02a6b58eb0a768eda2fe8735c2149a55b4": {
-      "title": "Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/098739c7-829c-4a9d-9e08-8e29b3757cc5",
-      "source": "Raadsportaal",
-      "gemeente": "medemblik",
-      "first_seen": "2026-10-27T14:01:26+00:00",
-      "updated": "2026-10-27T14:01:26+00:00",
-      "last_change": null,
-      "hash": "",
-      "revisions": 1,
-      "excerpt": "Raadsvragen · antwoord 2026-10-27",
-      "kind": "overzichtsitem",
-      "rapport": "Raadsvragen",
-      "last_seen": "2026-10-30",
-      "doc_date": "2026-09-11",
-      "doc_date_label": "datum vraag",
-      "portefeuillehouder": "I. Mantel",
-      "antwoord_datum": "2026-10-27",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "1ff4b30dd399c1f5635e220408cf03a90e8f5308ddba1b6dc8d4bb95b47c3610",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud",
-        "Beantwoording raadsvragen HvM Verkeersveiligheid De Wijzend Nibbixwoud"
-      ],
-      "bijlagen": [
-        {
-          "t": "Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/1c0c0b3c-1f22-4390-a64a-fa2267cf4e50"
-        },
-        {
-          "t": "Beantwoording raadsvragen HvM Verkeersveiligheid De Wijzend Nibbixwoud",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/69cbbf68-6356-4409-95f1-ed7f65844e47"
-        }
-      ],
-      "content_checked": "2026-10-29T14:17:10+00:00",
-      "kw_sig": "5ae1c58d6943|1ff4b30dd399c1f5635e220408cf03a90e8f5308ddba1b6dc8d4bb95b47c3610|Raadsvragen Hart voor Medemblik Verkeersveiligheid De Wijzend Nibbixwoud|Raadsvragen · antwoord 2026-10-27",
-      "report_pass": "2026-10-30T00:15:55+00:00"
     },
     "5c1b37665bdc8efecd49cf48a031dace46c4bb4ab268be5dae5e9ee5ae62d496": {
       "title": "Schriftelijk antwoord over kredietaanvraag verkeersmaatregelen Middelweg-Herenweg",
@@ -9068,7 +9143,7 @@
           "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/08a0b594-e0a8-4257-9941-c5330c1c252f"
         }
       ],
-      "content_checked": "2026-10-29T14:16:52+00:00",
+      "content_checked": "2026-10-30T14:48:04+00:00",
       "kw_sig": "5ae1c58d6943|a463993ea05a36850ee53f3b8b278bc3a3da449809ee40fb0bceb3a8f714ce03|Participatie verkeersonderzoek Hoogwoud-Oost|Moties · Aangenomen · KERN8, Gemeentebelangen · nog open",
       "report_pass": "2026-10-30T00:16:49+00:00"
     },
@@ -9106,7 +9181,7 @@
           "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/bed68480-abf3-4854-ae7e-a6b185155594"
         }
       ],
-      "content_checked": "2026-10-29T14:16:59+00:00",
+      "content_checked": "2026-10-30T14:48:05+00:00",
       "kw_sig": "5ae1c58d6943|9bdab3aa0ad927fd27fe6cb8dbb553e102b914701345ad92a221af27d527726f|Onderzoek naar ruimte pioenrozenteelt|Moties · Aangenomen · CDA, Gemeentebelangen, KERN8, Lokale Partij Opmeer, PRO, VVD · nog open",
       "report_pass": "2026-10-30T00:16:49+00:00"
     },
@@ -9298,7 +9373,7 @@
           "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/dd77b5b6-bdc6-41b3-9cf4-b06b1582a9ad"
         }
       ],
-      "content_checked": "2026-10-29T13:48:06+00:00",
+      "content_checked": "2026-10-30T14:47:58+00:00",
       "kw_sig": "5ae1c58d6943|efa9585670a75806c4ab1bf87a2da8b28832f1ac70213ce9796195f51ac98ca0|Raadsvragen Hart voor Medemblik Controle gebruikte AED’s|Raadsvragen · antwoord 2026-10-27",
       "report_pass": "2026-10-30T00:15:55+00:00"
     },
@@ -9338,7 +9413,7 @@
           "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/f8560619-ebfe-43c8-9ba5-2dbc8e3b2969"
         }
       ],
-      "content_checked": "2026-10-29T14:16:50+00:00",
+      "content_checked": "2026-10-30T14:48:02+00:00",
       "kw_sig": "5ae1c58d6943|8fb497bb6893938080d19078e99407f789e91e23228f8be80b148956910576f0|Raadsvragen MORGEN! Gemeentepolis|Raadsvragen · antwoord 2026-10-27",
       "report_pass": "2026-10-30T00:15:55+00:00"
     },
@@ -9914,7 +9989,7 @@
       "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 5 Toezeggingen-, motie- en categorie 3 brievenlijst",
       "missing_count": 0,
       "text_hash": "20408a32a8b8e333ccefd0cd0867250271e6a2e4ef64d81cd4dbb294381a7a1a",
-      "content_checked": "2026-10-30T07:46:45+00:00",
+      "content_checked": "2026-10-30T14:48:30+00:00",
       "kw_sig": "5ae1c58d6943|20408a32a8b8e333ccefd0cd0867250271e6a2e4ef64d81cd4dbb294381a7a1a|Af te voeren Moties, Toezeggingen en Cat. 3 brieven|Raadscommissie donderdag 29 oktober 2026 · agendapunt 5 Toezeggingen-, motie- en categorie 3 brievenlijst"
     },
     "33ab858dfdc167ed3fc0bb4fa501da17ca8ba29780fa4a4ef0918f43776c6314": {
@@ -22794,7 +22869,7 @@
       "excerpt": "Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "missing_count": 0,
       "text_hash": "c7eefed80580184453641a3b536304a21f243c910f4655c2dbacba17a618f419",
-      "content_checked": "2026-10-30T07:46:44+00:00",
+      "content_checked": "2026-10-30T14:48:30+00:00",
       "kw_sig": "5ae1c58d6943|c7eefed80580184453641a3b536304a21f243c910f4655c2dbacba17a618f419|Beantwoording commissievragen CDA Programmabegroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten"
     },
     "7e0f1e8ccfaccd4e5d3a182364ad36828b93210785db156326175d34a52971dd": {
@@ -22824,7 +22899,7 @@
       "excerpt": "Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "missing_count": 0,
       "text_hash": "ae09929d858f3f13d5a0c126bb5f005614cb250ef40001e354ed431adc5fda83",
-      "content_checked": "2026-10-30T07:46:46+00:00",
+      "content_checked": "2026-10-30T14:48:31+00:00",
       "kw_sig": "5ae1c58d6943|ae09929d858f3f13d5a0c126bb5f005614cb250ef40001e354ed431adc5fda83|Beantwoording commissievragen VVD Programmabegroting 2027|Informatiebijeenkomst donderdag 22 oktober 2026 Informatiebijeenkomst Programmabegroting 2027 en financiële meerjarenraming · vergaderdocumenten",
       "kw_hits": [
         "Bloesemgaerde"
@@ -26790,7 +26865,7 @@
       "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 7 Actieve informatie van het college",
       "missing_count": 0,
       "text_hash": "193c63b6f98e8af4109b8059a1d5fbb284cf0b065cf95860a3911bb26dd3ed9a",
-      "content_checked": "2026-10-29T14:17:17+00:00",
+      "content_checked": "2026-10-30T14:48:24+00:00",
       "kw_sig": "5ae1c58d6943|193c63b6f98e8af4109b8059a1d5fbb284cf0b065cf95860a3911bb26dd3ed9a|Beantwoording Commissievragen FVD UIT raadscie. 1-10 agendapunt 7|Raadscommissie donderdag 1 oktober 2026 · agendapunt 7 Actieve informatie van het college"
     },
     "50b62b47bd757d7f2e0395e9cc7b24f6400938605f2a48d89267fa069e74ebab": {
@@ -77946,7 +78021,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "188c6492f3b1bdb7691f95c5dbc2e42a778df6b7c3a01256c88a1e2f188fe405",
-      "content_checked": "2026-10-23T14:46:55+00:00",
+      "content_checked": "2026-10-30T14:47:39+00:00",
       "kw_sig": "5ae1c58d6943|188c6492f3b1bdb7691f95c5dbc2e42a778df6b7c3a01256c88a1e2f188fe405|Politieke vragen KERN 8 over handhaving illegale huisvesting arbeidsmigranten Waterkant 54 (Spanbroek)|Politieke vragen · antwoord 2026-07-28",
       "text_v": 2,
       "bijlagen_titels": [
@@ -89490,7 +89565,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "6c10739ce13f5b5593368f074ad13494b712ff1a02474df65aca679b68e133a4",
-      "content_checked": "2026-10-23T14:18:34+00:00",
+      "content_checked": "2026-10-30T14:47:02+00:00",
       "kw_sig": "5ae1c58d6943|6c10739ce13f5b5593368f074ad13494b712ff1a02474df65aca679b68e133a4|Laatste kans! Bijeenkomst VNHG 5 juni|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -89523,7 +89598,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "8aab749f47b4578c024115a076028edb90bfdf3a1b7f351910b906e050adefac",
-      "content_checked": "2026-10-23T14:31:49+00:00",
+      "content_checked": "2026-10-30T14:47:11+00:00",
       "kw_sig": "5ae1c58d6943|8aab749f47b4578c024115a076028edb90bfdf3a1b7f351910b906e050adefac|Blijft er ruimte voor toekomst in Noord-Holland boven Amsterdam?|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -89556,7 +89631,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "d19d340e010e13953cf656ca5be258bc07a5a2424f2cbe868c7ced79b334f149",
-      "content_checked": "2026-10-23T14:46:39+00:00",
+      "content_checked": "2026-10-30T14:47:13+00:00",
       "kw_sig": "5ae1c58d6943|d19d340e010e13953cf656ca5be258bc07a5a2424f2cbe868c7ced79b334f149|Uitnodiging voor gemeenteraadsleden: Grip krijgen op de energietransitie in uw gemeente|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -89589,7 +89664,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "e3a34518e5001bdd1e2b5049c1b420d9db62c51c070bb767b70f293a3e795d1f",
-      "content_checked": "2026-10-23T14:46:41+00:00",
+      "content_checked": "2026-10-30T14:47:15+00:00",
       "kw_sig": "5ae1c58d6943|e3a34518e5001bdd1e2b5049c1b420d9db62c51c070bb767b70f293a3e795d1f|Platform31 Nieuwsbrief 28 mei 2026|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -89622,7 +89697,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "d8ed49f599998fec29bac46a433d844cc8c09d730e756d9a5e17084588bc293c",
-      "content_checked": "2026-10-23T14:46:42+00:00",
+      "content_checked": "2026-10-30T14:47:18+00:00",
       "kw_sig": "5ae1c58d6943|d8ed49f599998fec29bac46a433d844cc8c09d730e756d9a5e17084588bc293c|Actuele ontwikkelingen asiel en migratie|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -89655,7 +89730,7 @@
       "doc_date_label": "datum ingekomen",
       "missing_count": 0,
       "text_hash": "9c5db6f560de232ab88595395996730de1171954c2e1f6f5db747759f853cc4f",
-      "content_checked": "2026-10-23T14:46:44+00:00",
+      "content_checked": "2026-10-30T14:47:20+00:00",
       "kw_sig": "5ae1c58d6943|9c5db6f560de232ab88595395996730de1171954c2e1f6f5db747759f853cc4f|VNG Raadsledennieuwsbrief nr.5|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -113951,7 +114026,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "d22d86bbb9656397b5772c60a191aaef9f7a84987187d91abe16f4c7febb01cf",
-      "content_checked": "2026-10-23T14:46:46+00:00",
+      "content_checked": "2026-10-30T14:47:23+00:00",
       "kw_sig": "5ae1c58d6943|d22d86bbb9656397b5772c60a191aaef9f7a84987187d91abe16f4c7febb01cf|Beantwoording Petitie Bewoners Andijk i.z. ontwikkeling Asonia 1|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -113984,7 +114059,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "5aea91ab702361f1a325f70d827ff0e4f5b3625e1d52f3c7bade65c3b06f33d7",
-      "content_checked": "2026-10-23T14:46:59+00:00",
+      "content_checked": "2026-10-30T14:47:44+00:00",
       "kw_sig": "5ae1c58d6943|5aea91ab702361f1a325f70d827ff0e4f5b3625e1d52f3c7bade65c3b06f33d7|Oproep voor het behoud van de Nederlandse kastelen, historische buitenplaatsen en landgoederen (KBL) en hun omringd landschap|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -120739,7 +120814,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "aeb04e7113a76624ac85d1d56e4d1e7e18f95a81e2c30c183ce8e001daa5df39",
-      "content_checked": "2026-10-23T14:46:48+00:00",
+      "content_checked": "2026-10-30T14:47:25+00:00",
       "kw_sig": "5ae1c58d6943|aeb04e7113a76624ac85d1d56e4d1e7e18f95a81e2c30c183ce8e001daa5df39|Beantwoording schrijven Bouwplannen Ooms Twisk|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -120772,7 +120847,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "13903edf769a5e47be107485d386d32256135912a3f8d8a7fcfe701bd52f64d6",
-      "content_checked": "2026-10-23T14:46:50+00:00",
+      "content_checked": "2026-10-30T14:47:27+00:00",
       "kw_sig": "5ae1c58d6943|13903edf769a5e47be107485d386d32256135912a3f8d8a7fcfe701bd52f64d6|Beantwoording schrijven zienswijze t.a.v. bouwplannen ten zuiden van Dorpsweg 108/112|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -120805,7 +120880,7 @@
       "report_seen": true,
       "missing_count": 0,
       "text_hash": "d4ab56c6838998a132bc9732dbd9a2fca2b0dd337f574159650393fbe1901a50",
-      "content_checked": "2026-10-23T14:46:52+00:00",
+      "content_checked": "2026-10-30T14:47:28+00:00",
       "kw_sig": "5ae1c58d6943|d4ab56c6838998a132bc9732dbd9a2fca2b0dd337f574159650393fbe1901a50|Beantwoording schrijven Visie voor Twisk|Ingekomen stukken",
       "text_v": 2,
       "bijlagen_titels": [
@@ -144258,7 +144333,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/5a5f2e0d-324b-4636-ba26-542c1a5c0c2d",
       "text_hash": "19e42f320cfec19361f1d5ed3f58b4fae31b171ed102226faf39b21f1ee29581",
-      "content_checked": "2026-10-29T13:38:44+00:00",
+      "content_checked": "2026-10-30T14:47:45+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|19e42f320cfec19361f1d5ed3f58b4fae31b171ed102226faf39b21f1ee29581|Mutatievoorstellen Lijst ingekomen stukken raad 24 september 2026|Gemeenteraad donderdag 24 september 2026 · agendapunt A.5 Ingekomen stukken en mededelingen"
     },
@@ -144288,7 +144363,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/ba95a3fe-6550-4bfd-8895-7f74c962a748",
       "text_hash": "4b12bcac1db2fb22e7dd97c35980195f57565c01a0f338b19c8fc9cf7d6bd835",
-      "content_checked": "2026-10-29T13:38:44+00:00",
+      "content_checked": "2026-10-30T14:47:46+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|4b12bcac1db2fb22e7dd97c35980195f57565c01a0f338b19c8fc9cf7d6bd835|Concept-besluitenlijst raad 2 juli 2026|Gemeenteraad donderdag 24 september 2026 · agendapunt A.6 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 2 juli 2026"
     },
@@ -144318,7 +144393,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/6e3429dd-9e3f-449a-a01c-4d4db8cbe910",
       "text_hash": "8c283e2a7e44332323627599421410215592db02bfbbde1ecd4489eb0a44609b",
-      "content_checked": "2026-10-29T13:38:45+00:00",
+      "content_checked": "2026-10-30T14:47:46+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|8c283e2a7e44332323627599421410215592db02bfbbde1ecd4489eb0a44609b|Moties en amendementen 2 juli 2026|Gemeenteraad donderdag 24 september 2026 · agendapunt A.6 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 2 juli 2026"
     },
@@ -144348,7 +144423,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/f8f763d8-0c61-4d1e-9e97-7f12f8d732bb",
       "text_hash": "0d675b3dfbb828c429c6659cc2a55b986af04dff323152ff4ea16a318cc1e345",
-      "content_checked": "2026-10-29T13:38:47+00:00",
+      "content_checked": "2026-10-30T14:47:48+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|0d675b3dfbb828c429c6659cc2a55b986af04dff323152ff4ea16a318cc1e345|Vastgesteld raadsbesluit KCR2|Gemeenteraad donderdag 24 september 2026 · agendapunt B.1 Deelname KCR2 (pfh. M. Pijl)"
     },
@@ -144383,7 +144458,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/0d404209-8669-41e9-af01-748bdc84be76",
       "text_hash": "4e5538cd850d7c0ecf2c16e803a8ccba4b5d9d1ab61efc106e27b4e5dab3e58c",
-      "content_checked": "2026-10-29T13:38:48+00:00",
+      "content_checked": "2026-10-30T14:47:50+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|4e5538cd850d7c0ecf2c16e803a8ccba4b5d9d1ab61efc106e27b4e5dab3e58c|00 DOC-26-1234143 - Raadsvoorstel Deelname KCR2|Raadscommissie donderdag 10 september 2026 · agendapunt 8.1 Deelname KCR2 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
@@ -144418,7 +144493,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/70ce1b93-11cd-45cd-b792-7db63596700c",
       "text_hash": "bf5d5fe27d4204184764f7b850740f39fabf644a2838cf0b8d70c902dcde9071",
-      "content_checked": "2026-10-29T13:38:49+00:00",
+      "content_checked": "2026-10-30T14:47:51+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|bf5d5fe27d4204184764f7b850740f39fabf644a2838cf0b8d70c902dcde9071|01 260703 Brief aan gemeenteraden KCR2_VRNHN|Raadscommissie donderdag 10 september 2026 · agendapunt 8.1 Deelname KCR2 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
@@ -144453,7 +144528,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/0754d99f-0b9d-4d87-9368-d87633e7c766",
       "text_hash": "738b6e459655ba3592bba26bf01e0abeb7198059d9eb460946779d3f311b49cd",
-      "content_checked": "2026-10-29T13:38:50+00:00",
+      "content_checked": "2026-10-30T14:47:52+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|738b6e459655ba3592bba26bf01e0abeb7198059d9eb460946779d3f311b49cd|02 Ontwerpbesluit oprichting stichting KCR2_VRNHN|Raadscommissie donderdag 10 september 2026 · agendapunt 8.1 Deelname KCR2 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
@@ -144488,7 +144563,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/3d447247-2bca-42d3-a668-6b0d113835af",
       "text_hash": "ef92144498ec316c124c2e2de0c6febbc004235523dcf5b1095f6f4560134dfc",
-      "content_checked": "2026-10-29T13:38:51+00:00",
+      "content_checked": "2026-10-30T14:47:52+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|ef92144498ec316c124c2e2de0c6febbc004235523dcf5b1095f6f4560134dfc|03 Begrippenlijst en QA KCR2|Raadscommissie donderdag 10 september 2026 · agendapunt 8.1 Deelname KCR2 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
@@ -144523,7 +144598,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/1257dc55-679b-4b8f-a2b2-f89db2147cd9",
       "file_hash": "groot|attachment; filename=\"KRC2-animatie kleiner.mp4\"; filename*=UTF-8''KRC2-animatie%20kleiner.mp4|05d2127a08accb6635253090f1c620355b0bdb203680a3234c042602193b31bd",
-      "content_checked": "2026-10-29T13:38:57+00:00",
+      "content_checked": "2026-10-30T14:47:56+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943||04 KRC2-Animatie|Raadscommissie donderdag 10 september 2026 · agendapunt 8.1 Deelname KCR2 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
@@ -144558,7 +144633,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/4b358dd8-443c-418b-889d-0d43455a6bb7",
       "file_hash": "groot|attachment; filename=Stichting-KCR2-Animatie-2_v3.mp4; filename*=UTF-8''Stichting-KCR2-Animatie-2_v3.mp4|0de2e0879706ad3373b46a54162dbc1a0fbdd2f94f25ddc67e10ed46943dbc5d",
-      "content_checked": "2026-10-29T14:17:04+00:00",
+      "content_checked": "2026-10-30T14:48:10+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943||05 KCR2-Animatie 2|Raadscommissie donderdag 10 september 2026 · agendapunt 8.1 Deelname KCR2 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
@@ -144588,7 +144663,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7f5184bd-4d62-4623-8cab-76947e587911",
       "text_hash": "76881559dcad042649b18b6a9cc0db4d408e539fb0f3592ca151cd5791aeec81",
-      "content_checked": "2026-10-29T14:17:01+00:00",
+      "content_checked": "2026-10-30T14:48:06+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|76881559dcad042649b18b6a9cc0db4d408e539fb0f3592ca151cd5791aeec81|Vastgesteld raadsbesluit Aanwijzen AB-leden gemeenschappelijke regelingen|Gemeenteraad donderdag 24 september 2026 · agendapunt B.2 Aanwijzen AB-leden gemeenschappelijke regelingen (pfh. M. Pijl)"
     },
@@ -144623,7 +144698,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/d9438de4-d96b-4ed8-adef-1ec91ad34a73",
       "text_hash": "3aa470e96456f74db7da03789e402736d9287554c8f137bf50ed0499bd2c170b",
-      "content_checked": "2026-10-29T14:17:10+00:00",
+      "content_checked": "2026-10-30T14:48:18+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|3aa470e96456f74db7da03789e402736d9287554c8f137bf50ed0499bd2c170b|DOC-26-1175855 - Raadsvoorstel Aanwijzen AB-leden gemeenschappelijke regelingen|Raadscommissie donderdag 10 september 2026 · agendapunt 9.1 Aanwijzen AB-leden gemeenschappelijke regelingen (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
@@ -144653,7 +144728,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/cd0adbea-a4c5-482d-9d57-61aef4055b00",
       "text_hash": "44fc80cf69466f2d59a672c9314182317651ec9e6807e1efdfc62a2c19e577b9",
-      "content_checked": "2026-10-29T14:17:06+00:00",
+      "content_checked": "2026-10-30T14:48:12+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|44fc80cf69466f2d59a672c9314182317651ec9e6807e1efdfc62a2c19e577b9|Vastgesteld raadsbesluit benoeming lid Raad van Toezicht Stichting Allure|Gemeenteraad donderdag 24 september 2026 · agendapunt B.3 Benoeming lid raad van toezicht stichting Allure (pfh. G. Gringhuis)"
     },
@@ -144688,7 +144763,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/397dee48-c2a6-4b25-81c8-b926fa7d795a",
       "text_hash": "12a7da70da1c13f83c9618fe8e3a282276abaad5d480e3682d9db1a4f7c485fe",
-      "content_checked": "2026-10-29T14:17:12+00:00",
+      "content_checked": "2026-10-30T14:48:19+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|12a7da70da1c13f83c9618fe8e3a282276abaad5d480e3682d9db1a4f7c485fe|00 DOC-26-1213795 - Raadsvoorstel benoeming lid Raad van Toezicht Stichting Allure|Raadscommissie donderdag 10 september 2026 · agendapunt 10.1 Benoeming lid raad van toezicht stichting Allure (pfh. G. Gringhuis) · ook in 1 andere vergadering(en)"
     },
@@ -144723,7 +144798,7 @@
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7fdd27e1-db13-4b34-b5bf-0ead81b20301",
       "file_hash": "b11c644b4557ada69c600ab9078549e927e842c2da952df8b07d91054cc3bc2e",
-      "content_checked": "2026-10-29T14:17:12+00:00",
+      "content_checked": "2026-10-30T14:48:20+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943||01 Brief benoeming lid Raad van Toezicht Stichting Allure|Raadscommissie donderdag 10 september 2026 · agendapunt 10.1 Benoeming lid raad van toezicht stichting Allure (pfh. G. Gringhuis) · ook in 1 andere vergadering(en)"
     },
@@ -144753,7 +144828,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/f736a426-83ae-40cc-9ad8-31003cc0b39c",
       "missing_count": 0,
       "text_hash": "2040df61f1c9508840b269e34908e93634879d8267ebb2d0a629686366cff085",
-      "content_checked": "2026-10-29T14:17:14+00:00",
+      "content_checked": "2026-10-30T14:48:22+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|2040df61f1c9508840b269e34908e93634879d8267ebb2d0a629686366cff085|Getekend raadsbesluit Ruimtelijk voorstel (geheim)|Gemeenteraad donderdag 24 september 2026 · agendapunt B.4 Ruimtelijk voorstel (GEHEIM)"
     },
@@ -144783,7 +144858,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/e5ec2757-ff00-4648-af80-58867ecb22fc",
       "missing_count": 0,
       "text_hash": "61969f4e29e2f6041b51e86579479005c0ac4df5d7c4859511a5aa18b5a52749",
-      "content_checked": "2026-10-29T14:17:15+00:00",
+      "content_checked": "2026-10-30T14:48:22+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|61969f4e29e2f6041b51e86579479005c0ac4df5d7c4859511a5aa18b5a52749|Amendement 9 van 2026 GB Openbaar maken|Gemeenteraad donderdag 24 september 2026 · agendapunt B.4 Ruimtelijk voorstel (GEHEIM)"
     },
@@ -144813,7 +144888,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/c9c95a9d-ef2d-4c02-8c19-65773dc2d28d",
       "missing_count": 0,
       "text_hash": "e4f3f14e4acde44901723692c6d7def9fd82b83c23f54b0f581e2a796398820d",
-      "content_checked": "2026-10-29T14:17:16+00:00",
+      "content_checked": "2026-10-30T14:48:24+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|e4f3f14e4acde44901723692c6d7def9fd82b83c23f54b0f581e2a796398820d|Amendement 10 van 2026 Voorbereidingsbesluit niet vaststellen|Gemeenteraad donderdag 24 september 2026 · agendapunt B.4 Ruimtelijk voorstel (GEHEIM)"
     },
@@ -144843,7 +144918,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/25ed2de5-38d9-42e6-978c-2247ab85b714",
       "missing_count": 0,
       "file_hash": "ccf3ecb979215543c12f3eae47aab2970154dd31c2e435878342de6e6e3c6ae5",
-      "content_checked": "2026-10-29T14:17:18+00:00",
+      "content_checked": "2026-10-30T14:48:26+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943||Vastgesteld raadsbesluit intrekken voorkeursrecht op percelen nabij de Tuinstraat in Hauwert|Gemeenteraad donderdag 24 september 2026 · agendapunt C.1 Intrekken voorkeursrecht op percelen nabij Tuinstraat in Hauwert (pfh. M. Hoogewerf)"
     },
@@ -144878,7 +144953,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/1ec8dbd2-e2ac-454e-bd3f-d81f045fc5d8",
       "missing_count": 0,
       "text_hash": "99fe60b6a1b600848608539e43c057696d88e7c3db539cc1db9b5b7514b6f91f",
-      "content_checked": "2026-10-29T14:17:19+00:00",
+      "content_checked": "2026-10-30T14:48:27+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943|99fe60b6a1b600848608539e43c057696d88e7c3db539cc1db9b5b7514b6f91f|00 DOC-26-1209671 - Raadsvoorstel intrekken voorkeursrecht op percelen nabij Tuinstraat in Hauwert|Raadscommissie donderdag 10 september 2026 · agendapunt 11.1 Intrekken voorkeursrecht op percelen nabij Tuinstraat in Hauwert (pfh. M. Hoogewerf) · ook in 1 andere vergadering(en)"
     },
@@ -144913,7 +144988,7 @@
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/b4aafaca-4dd3-4341-93f4-30826fcc8fbc",
       "missing_count": 0,
       "file_hash": "ac9e6e00aa0cf6deb0f969fb247add3f414da763cffe4c6460704299fdd23d35",
-      "content_checked": "2026-10-29T14:17:19+00:00",
+      "content_checked": "2026-10-30T14:48:28+00:00",
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943||01 Bijlage 1 - Kadastrale tekening|Raadscommissie donderdag 10 september 2026 · agendapunt 11.1 Intrekken voorkeursrecht op percelen nabij Tuinstraat in Hauwert (pfh. M. Hoogewerf) · ook in 1 andere vergadering(en)"
     },
@@ -157506,38 +157581,38 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-10-30T14:31:07+00:00",
+        "checked": "2026-10-30T14:46:19+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-30T14:31:08+00:00",
+        "checked": "2026-10-30T14:46:20+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-10-30T14:31:08+00:00",
+        "checked": "2026-10-30T14:46:21+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-10-30T14:31:08+00:00",
+        "checked": "2026-10-30T14:46:21+00:00",
         "ok": true,
         "count": 30,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-30T14:30:48+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "ok": true,
         "count": 194,
         "new": 0,
         "note": "Laatste 30 dagen: 194 van 194 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-30T14:31:00+00:00",
+        "checked": "2026-10-30T14:46:05+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -157545,39 +157620,39 @@
         "note": "10 van 22 vergaderingen in venster bijgewerkt; 238 documenten bekend. Dekking: vergaderingen van 2026-08-31 t/m 2026-12-14 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-30T14:31:06+00:00",
+        "checked": "2026-10-30T14:46:18+00:00",
         "ok": true,
         "count": 301,
-        "new": 0,
+        "new": 1,
         "error": null,
-        "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2129, Ingekomen stukken 3164, Jaarplannen en jaarverslagen 1, Moties en amendementen 403, Raadsvragen 1412, Rekenkamer 54, Toezeggingen 332). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
+        "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2129, Ingekomen stukken 3164, Jaarplannen en jaarverslagen 1, Moties en amendementen 403, Raadsvragen 1413, Rekenkamer 54, Toezeggingen 332). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "In de media": {
-        "checked": "2026-10-30T14:31:12+00:00",
+        "checked": "2026-10-30T14:46:25+00:00",
         "ok": true,
-        "count": 50,
-        "new": 1,
+        "count": 46,
+        "new": 0,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Medemblik, Abbekerk, Andijk, Benningbroek, Hauwert, Lambertschaag, Midwoud, Nibbixwoud, Oostwoud, Opperdoes, Sijbekarspel, Twisk, Wervershoof, Wognum, Zwaagdijk-Oost, Zwaagdijk-West. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-10-30T14:33:49+00:00",
-        "ok": false,
-        "count": 49,
-        "errors": 1,
-        "note": "49 documenten gecontroleerd (0 pdf), 1751 gevolgd (alle gemeenten), 38 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
+        "checked": "2026-10-30T14:48:38+00:00",
+        "ok": true,
+        "count": 50,
+        "errors": 0,
+        "note": "50 documenten gecontroleerd (24 pdf), 1752 gevolgd (alle gemeenten), 1 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer. 3 pdf zonder tekst deze run."
       },
       "Meldingen": {
-        "checked": "2026-10-30T14:33:49+00:00",
+        "checked": "2026-10-30T14:48:38+00:00",
         "ok": true,
-        "note": "Pushmeldingen actief (ntfy); deze run 0 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-30).",
+        "note": "Pushmeldingen actief (ntfy); deze run 2 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-10-30).",
         "error": null
       },
       "Trefwoorden": {
-        "checked": "2026-10-30T14:33:49+00:00",
+        "checked": "2026-10-30T14:48:38+00:00",
         "ok": true,
-        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 2 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
+        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 5 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
       },
       "Andere overheden": {
         "checked": "2026-10-30T14:16:56+00:00",
@@ -157603,7 +157678,7 @@
         "note": "Uitspraken op rechtspraak.nl (laatste 45 dagen gepubliceerd) waarin de gemeente of een van de dorpen voorkomt. Namen die ook achternaam zijn (Berkhout, Twisk) of elders voorkomen worden niet los gezocht. Uitspraken zijn geanonimiseerd. Eén keer per uur."
       },
       "Termijn raadsvragen": {
-        "checked": "2026-10-30T14:31:45+00:00",
+        "checked": "2026-10-30T14:46:59+00:00",
         "ok": true,
         "count": 2,
         "note": "2 raadsvragen staan langer open dan de termijn uit het reglement van orde (Medemblik en Opmeer: 30 dagen). Een uitstelbericht aan de vragensteller is in het portaal niet te zien."
@@ -157619,21 +157694,21 @@
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-30T14:31:13+00:00",
+        "checked": "2026-10-30T14:46:26+00:00",
         "ok": true,
         "count": 75,
         "new": 0,
         "note": "Laatste 30 dagen: 75 van 75 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-10-30T14:31:13+00:00",
+        "checked": "2026-10-30T14:46:27+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "Collegebesluiten": {
-        "checked": "2026-10-30T14:31:14+00:00",
+        "checked": "2026-10-30T14:46:28+00:00",
         "ok": true,
         "count": 175,
         "new": 0,
@@ -157641,29 +157716,29 @@
         "error": null
       },
       "Woo-verzoeken": {
-        "checked": "2026-10-30T14:31:14+00:00",
+        "checked": "2026-10-30T14:46:28+00:00",
         "ok": true,
         "count": 15,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
       },
       "In de media": {
-        "checked": "2026-10-30T14:31:17+00:00",
+        "checked": "2026-10-30T14:46:31+00:00",
         "ok": true,
-        "count": 41,
-        "new": 0,
+        "count": 39,
+        "new": 1,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Koggenland, Avenhorn, Berkhout, De Goorn, Hensbroek, Obdam, Oudendijk, Scharwoude, Spierdijk, Ursem, Zuidermeer. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "ok": true,
         "count": 45,
         "new": 0,
         "note": "Laatste 30 dagen: 45 van 45 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-10-30T14:31:34+00:00",
+        "checked": "2026-10-30T14:46:50+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -157671,7 +157746,7 @@
         "note": "10 van 11 vergaderingen in venster bijgewerkt; 82 documenten bekend. Dekking: vergaderingen van 2026-08-31 t/m 2026-12-14 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-10-30T14:31:43+00:00",
+        "checked": "2026-10-30T14:46:57+00:00",
         "ok": true,
         "count": 399,
         "new": 0,
@@ -157679,16 +157754,16 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 74, Belangrijke documenten 13, Besluitenlijsten college 315, Ingekomen stukken 1163, Moties 79, Politieke vragen 73, Raadsinformatiebrieven 589, Thema's 25, Toezeggingen 93, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-10-30T14:31:44+00:00",
+        "checked": "2026-10-30T14:46:58+00:00",
         "ok": true,
         "count": 25,
         "new": 1,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "In de media": {
-        "checked": "2026-10-30T14:31:45+00:00",
+        "checked": "2026-10-30T14:46:59+00:00",
         "ok": true,
-        "count": 12,
+        "count": 14,
         "new": 0,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Opmeer, Aartswoud, De Weere, Hoogwoud, Spanbroek. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       }
@@ -235449,8 +235524,8 @@
       "url": "https://www.opmeer.nl/bekijk-duurzame-woningen-in-opmeer-of-stel-je-eigen-huis-open",
       "source": "Nieuws",
       "gemeente": "opmeer",
-      "first_seen": "2026-10-30T14:16:52+00:00",
-      "updated": "2026-10-30T14:16:52+00:00",
+      "first_seen": "2026-10-30T14:31:44+00:00",
+      "updated": "2026-10-30T14:31:44+00:00",
       "last_change": null,
       "hash": "",
       "revisions": 1,
@@ -235463,9 +235538,9 @@
       "excerpt": "Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
       "missing_count": 0,
       "text_hash": "310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca",
-      "content_checked": "2026-10-30T14:17:37+00:00",
+      "content_checked": "2026-10-30T14:31:46+00:00",
       "kw_sig": "5ae1c58d6943|310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca|Bekijk duurzame woningen in Opmeer of stel je eigen huis open|Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
-      "archived": "2026-10-30T14:30:46+00:00",
+      "archived": "2026-10-30T14:45:41+00:00",
       "archived_reason": "Menuknop, geen publicatie"
     },
     "ef7a8a42160527e0141651f817b22b6071a798fb5b3f6e05a82db9a4c5fbfd8a": {
@@ -239962,7 +240037,7 @@
         "agenda": []
       },
       "8eadc9f7-a7ae-44ad-a78e-3596c9796e5d": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-12",
         "label": "donderdag 12 november 2026",
@@ -240074,7 +240149,7 @@
         "gemeente": "medemblik"
       },
       "bedc4215-5f41-43f8-809b-e789157c64fd": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Raadscommissie",
         "date": "2026-12-03",
         "label": "donderdag 3 december 2026",
@@ -240086,7 +240161,7 @@
         ]
       },
       "52fc513f-8776-427e-b9d9-426652329851": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Raadscommissie",
         "date": "2026-11-09",
         "label": "maandag 9 november 2026",
@@ -240105,7 +240180,7 @@
         ]
       },
       "dc765e1a-20fd-4c7a-97bb-0645c9bbf6f3": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-29",
         "label": "donderdag 29 oktober 2026",
@@ -240254,7 +240329,7 @@
         "agenda": []
       },
       "48e926c5-1642-494c-b07f-28b1148fd5db": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Presidium",
         "date": "2026-11-16",
         "label": "maandag 16 november 2026",
@@ -240371,7 +240446,7 @@
         "gemeente": "medemblik"
       },
       "1dc4ba0e-a89b-467e-b615-34fd5495c2a1": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Auditcommissie",
         "date": "2026-12-09",
         "label": "woensdag 9 december 2026",
@@ -240380,7 +240455,7 @@
         "agenda": []
       },
       "3e6659e5-394d-4eb0-83d2-57091ce3e731": {
-        "checked": "2026-10-30T14:00:55+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Auditcommissie",
         "date": "2026-09-30",
         "label": "woensdag 30 september 2026",
@@ -240424,7 +240499,7 @@
         "gemeente": "medemblik"
       },
       "b2e8194e-6b1b-4240-a0e4-49ee3e2082af": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-11-19",
         "label": "donderdag 19 november 2026 Informatiebijeenkomst Omgevingsvisie",
@@ -240476,7 +240551,7 @@
         ]
       },
       "3173ad29-0405-448e-be38-402e5785380e": {
-        "checked": "2026-10-30T14:00:55+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-09-15",
         "label": "dinsdag 15 september 2026 Informatiebijeenkomst (training) Relevant gesprek methodiek",
@@ -240514,7 +240589,7 @@
         ]
       },
       "1748f967-2b06-4aa4-9c8c-de75df138b17": {
-        "checked": "2026-10-30T14:15:39+00:00",
+        "checked": "2026-10-30T14:45:43+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-11-19",
         "label": "donderdag 19 november 2026",
@@ -240546,7 +240621,7 @@
         "gemeente": "medemblik"
       },
       "9e498f8b-07fb-4377-b5e8-9ffbcc166e5b": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-12-10",
@@ -240565,7 +240640,7 @@
         ]
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -240586,7 +240661,7 @@
         ]
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -240666,7 +240741,7 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
@@ -240675,7 +240750,7 @@
         "agenda": []
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -240696,7 +240771,7 @@
         ]
       },
       "7d82ecee-3b65-4d47-ae9b-904b5e4c1562": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-09-10",
@@ -240737,7 +240812,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -240746,7 +240821,7 @@
         "agenda": []
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -240760,7 +240835,7 @@
         ]
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-10-30T14:31:18+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -240827,7 +240902,7 @@
         ]
       },
       "a542f283-1759-4a8d-a74a-9c1e23318e90": {
-        "checked": "2026-10-30T14:16:21+00:00",
+        "checked": "2026-10-30T14:46:32+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-09-01",
@@ -240837,8 +240912,8 @@
       }
     },
     "meetings_listed": {
-      "medemblik": "2026-10-30T14:15:46+00:00",
-      "opmeer": "2026-10-30T14:16:26+00:00"
+      "medemblik": "2026-10-30T14:45:49+00:00",
+      "opmeer": "2026-10-30T14:46:36+00:00"
     },
     "koop": {
       "medemblik": {
