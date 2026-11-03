@@ -1,15 +1,2 @@
-100148034 200 37 ['dinsdag 20 oktober 2026', 'dinsdag 6 oktober 2026', 'maandag 28 september 2026', 'dinsdag 22 september 2026', 'dinsdag 15 september 2026']
-100050619 200 42 ['dinsdag 20 oktober 2026', 'woensdag 7 oktober 2026', 'dinsdag 6 oktober 2026', 'maandag 28 september 2026', 'dinsdag 22 september 2026']
-report 200 
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overzichten Alkmaar - iBabs Publieksportaal</title>
-    <link rel="SHORTCUT ICON" href="/favicon.svg?v=20210707" />
-<link rel="icon" type="image/png" sizes="16x16" href="/Images/icons/ibabs/favicon-16x16.png?x46223">
-<link rel="icon" type="image/png" sizes="32x32" href="/Images/icons/ibabs/favicon-32x32.png?x46223">
-<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?x46223">
-<link rel="apple-touch-icon" href="/favicon.svg?
-details 200 <table id="overzichten-data" class="table table-condensed table-striped table-hover responsive table-datatable table-clickable" data-auto-width="false" data-info="true" data-paging="true" data-page-length="50" data-length-change="false" data-responsive="false" data-state-save="true" data-state-duration="-1" data-server-side="true" data-ajax='{"url":"/Reports/GetReportData/a1132f05-4b54-4451-920d-195043a20824","type":"POST"}' data-columns='[{"data":"registrationdate","name":"registrationdate","searchable":false},{"data":"title","name":"title","searchable":false}]' data-column-render='[{"targets":0,"render":"renderStringColumn"},{"targets":1,"render":"renderStringColumn"}]' data-order='[]' data-item-url="/Reports/Item/_id_" data-item-modal="false" > <thead> <tr> <th data-order-sequence='["asc","desc"]'> Datum </th> <th data-order-sequence='["asc","desc"]'> Omschrijving </th> </tr> </thead> <tbody> <tr> <td colspan="2"><img src="/Images/throbber.gif" alt="Loading..." /></td> </tr> </tbody> </table> </div> </div> </div> 
+https://martijn-media.nl/monitor/koggenland.php?pad=/ 403 None Geen toegang.
+https://www.martijn-media.nl/monitor/koggenland.php?pad=/ 403 None Geen toegang.
