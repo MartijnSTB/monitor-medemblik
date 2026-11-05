@@ -986,7 +986,7 @@ function columnHTML(col, rows, extra = ''){
     html += rest.map(x => item(x, col)).join('');
     if (lo.length >= 4) html += bundleHTML(col, d, lo);
   }
-  if (!rows.length) html = `<p class="empty" style="padding:14px 16px">${col.id === 'raad' && DATA.gemeente === 'koggenland' ? 'De raadsinformatie van Koggenland is beveiligd en wordt niet gevolgd (zie Bronnen onderaan).' : 'Niets gevonden met deze filters.'}</p>`;
+  if (!rows.length) html = `<p class="empty" style="padding:14px 16px">Niets gevonden met deze filters.</p>`;
   const more = rows.length > n ? `<button class="more" data-col="${col.id}">Toon ${Math.min(PAGE, rows.length-n)} oudere</button>` : '';
   const fresh = rows.filter(x => kinds(x).includes('nieuw') || (x._also || []).some(y => kinds(y).includes('nieuw'))).length;
   return `<section class="col${col.id === MOBCOL ? ' on' : ''}" style="--c:${col.color}" aria-labelledby="h-${col.id}">
@@ -1097,7 +1097,7 @@ function renderAgenda(){
   const up = DATA.items.filter(x => x.kind === 'vergadering' && x.doc_date >= TODAY).sort((a,b) => a.doc_date.localeCompare(b.doc_date));
   const head = `<span class="agl">${ic('kal')}Agenda</span>`;
   if (!up.length) {
-    $('agenda').innerHTML = head + `<span class="empty">${DATA.gemeente === 'koggenland' ? 'De vergaderingen van de Koggenlandse raad worden niet gevolgd (zie Bronnen onderaan).' : 'Geen vergaderingen gepland in de komende weken.'}</span>`;
+    $('agenda').innerHTML = head + `<span class="empty">Geen vergaderingen gepland in de komende weken.</span>`;
     return;
   }
   $('agenda').innerHTML = head + `<div class="evs">${up.slice(0, 14).map(x => {
@@ -1246,7 +1246,7 @@ function renderToday(){
     ${sec('Agenda', '', agenda.length ? `<div class="tl">${agenda.map(x => { const m = meetParts(x), d = dt(x.doc_date); return `<a href="${esc(x.url)}" target="_blank" rel="noopener" title="${esc(x.title)}">
         <span class="when2">${d.toLocaleDateString('nl-NL',{weekday:'short'})} ${d.getDate()}<small>${d.toLocaleDateString('nl-NL',{month:'short'})}${m.tijd ? ' ' + m.tijd : ''}</small></span>
         <span><strong>${esc(m.soort)}</strong>${m.rest ? `<span class="s">${esc(m.rest)}</span>` : ''}${agendaFlag(x)}</span></a>`; }).join('')}</div>`
-      : `<div class="tcard"><p class="calm">${DATA.gemeente === 'koggenland' ? 'De Koggenlandse raad wordt niet gevolgd.' : 'Geen vergaderingen gepland.'}</p></div>`)}
+      : `<div class="tcard"><p class="calm">Geen vergaderingen gepland.</p></div>`)}
     ${sec('In de media', med.length || '', med.length ? `<div class="tcard">${med.slice(0, 5).map(x => todayItem(x)).join('')}${med.length > 5 ? moreBtn(`Nog ${med.length - 5} verhalen bekijken`, 'col:med') : ''}</div>`
       : `<div class="tcard"><p class="calm">Geen nieuwe artikelen sinds je vorige bezoek.</p></div>`)}
   </div>`;

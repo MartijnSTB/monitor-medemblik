@@ -29,6 +29,7 @@ jobs:
         env:
           # Meldingen (zie notify.py). Stel deze in onder Settings > Secrets and variables > Actions.
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          KOGGENLAND_PROXY_KEY: ${{ secrets.KOGGENLAND_PROXY_KEY }}
           MAIL_USER: ${{ secrets.MAIL_USER }}
           MAIL_APP_PASSWORD: ${{ secrets.MAIL_APP_PASSWORD }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
