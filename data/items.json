@@ -1,12 +1,221 @@
 {
   "items": {
+    "c0a6e7c69e2be49c7447235ade8b3f2d522ae3424ec983e1628c8e735314b015": {
+      "title": "Reactie op plannen Zonnepark Cromme Leeck",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/2d00606d-ad19-47cd-aea0-d423149d705a",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-27T13:01:22+00:00",
+      "updated": "2026-11-05T13:02:57+00:00",
+      "last_change": "2026-11-05T13:02:57+00:00",
+      "hash": "",
+      "revisions": 6,
+      "excerpt": "Ingekomen stukken",
+      "kind": "overzichtsitem",
+      "rapport": "Ingekomen stukken",
+      "last_seen": "2026-11-05",
+      "doc_date": "2026-10-26",
+      "doc_date_label": "datum ingekomen",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "67919653b39fe39f74e5b95cd3dc005600f2f1d27621cf0ff087618e94e47a0b",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "Reactie Dorpsraad Zwaagdijk-Oost op plannen Zonnepark Cromme Leeck (Geanonimiseerd)",
+        "Advocaat-Topwind-Wervershoof (Geanonimiseerd)",
+        "Uitspraak hoger beroep topwind 2010 (Geanonimiseerd)"
+      ],
+      "bijlagen": [
+        {
+          "t": "Reactie Dorpsraad Zwaagdijk-Oost op plannen Zonnepark Cromme Leeck (Geanonimiseerd)",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/23c8a6fa-19e4-42d9-b51e-cc94bd42f528"
+        },
+        {
+          "t": "Advocaat-Topwind-Wervershoof (Geanonimiseerd)",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/046ae58a-4de4-4a15-a3c8-f43ed357c1e1"
+        },
+        {
+          "t": "Uitspraak hoger beroep topwind 2010 (Geanonimiseerd)",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/8b3a6ddf-87f1-4743-8cfd-b12ebd08f3da"
+        }
+      ],
+      "content_checked": "2026-11-05T13:02:57+00:00",
+      "kw_sig": "5ae1c58d6943|67919653b39fe39f74e5b95cd3dc005600f2f1d27621cf0ff087618e94e47a0b|Reactie op plannen Zonnepark Cromme Leeck|Ingekomen stukken",
+      "report_pass": "2026-11-05T00:01:11+00:00",
+      "changes": [
+        {
+          "at": "2026-10-28T13:34:53+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "1 zin(nen) toegevoegd of aangepast, 189 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: 500 Server Error: Internal Server Error for url: https://med]"
+          ],
+          "removed": [
+            "VAN BENTHEM & KEULEN",
+            "advocaten",
+            "ER"
+          ]
+        },
+        {
+          "at": "2026-10-28T19:47:36+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "189 zin(nen) toegevoegd of aangepast, 1 verwijderd of vervangen",
+          "added": [
+            "VAN BENTHEM & KEULEN",
+            "advocaten",
+            "ER"
+          ],
+          "removed": [
+            "[Bijlage niet te lezen: 500 Server Error: Internal Server Error for url: https://med]"
+          ]
+        },
+        {
+          "at": "2026-11-02T10:52:29+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "1 zin(nen) toegevoegd of aangepast, 279 verwijderd of vervangen",
+          "added": [
+            "[Bijlage niet te lezen: 429 Client Error: Too Many Requests for url: https://medembl]"
+          ],
+          "removed": [
+            "LJN: BJ8507, Gerechtshof Amsterdam , 106.007.474/01",
+            "Datum 16-06-2009",
+            "uitspraak:"
+          ]
+        },
+        {
+          "at": "2026-11-02T17:04:54+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "279 zin(nen) toegevoegd of aangepast, 1 verwijderd of vervangen",
+          "added": [
+            "LJN: BJ8507, Gerechtshof Amsterdam , 106.007.474/01",
+            "Datum 16-06-2009",
+            "uitspraak:"
+          ],
+          "removed": [
+            "[Bijlage niet te lezen: 429 Client Error: Too Many Requests for url: https://medembl]"
+          ]
+        },
+        {
+          "at": "2026-11-05T13:02:57+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "2 zin(nen) toegevoegd of aangepast, 2 verwijderd of vervangen",
+          "added": [
+            "(A.5.",
+            "22:30"
+          ],
+          "removed": [
+            "(A.4.",
+            "22:00"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "81ab708380926da974650344fd882d632abab80b07c192601ffbd54a17164f4d": {
+      "title": "De werkelijke invloed van CO2 op de aardse opwarming",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/d052e79e-f90b-432a-a7ce-74885b3bba6f",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-27T13:01:22+00:00",
+      "updated": "2026-11-05T13:02:51+00:00",
+      "last_change": "2026-11-05T13:02:51+00:00",
+      "hash": "",
+      "revisions": 2,
+      "excerpt": "Ingekomen stukken",
+      "kind": "overzichtsitem",
+      "rapport": "Ingekomen stukken",
+      "last_seen": "2026-11-05",
+      "doc_date": "2026-10-27",
+      "doc_date_label": "datum ingekomen",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "df58c0678c0ad3d8c31be51a8990fad98d251e1a863d119fdb49f9a46e2c42cc",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "De werkelijke invloed van CO2 (Geanonimiseerd)"
+      ],
+      "bijlagen": [
+        {
+          "t": "De werkelijke invloed van CO2 (Geanonimiseerd)",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/18227559-89d5-4d5a-af75-f9182bce8909"
+        }
+      ],
+      "content_checked": "2026-11-05T13:02:51+00:00",
+      "kw_sig": "5ae1c58d6943|df58c0678c0ad3d8c31be51a8990fad98d251e1a863d119fdb49f9a46e2c42cc|De werkelijke invloed van CO2 op de aardse opwarming|Ingekomen stukken",
+      "report_pass": "2026-11-05T00:01:11+00:00",
+      "changes": [
+        {
+          "at": "2026-11-05T13:02:51+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "2 zin(nen) toegevoegd of aangepast, 2 verwijderd of vervangen",
+          "added": [
+            "(A.5.",
+            "22:30"
+          ],
+          "removed": [
+            "(A.4.",
+            "22:00"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
+    "733867c34e780bb58bad6518f656a700cb2af6426e987a8050ea0b453d7efa04": {
+      "title": "Motie vreemd standpuntbepaling cao-inzet functiewaardering griffie",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/54fc0d2b-3105-4e13-9e5d-bf8ed60a2649",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-30T09:01:13+00:00",
+      "updated": "2026-11-05T13:02:47+00:00",
+      "last_change": "2026-11-05T13:02:47+00:00",
+      "hash": "",
+      "revisions": 2,
+      "excerpt": "Ingekomen stukken",
+      "kind": "overzichtsitem",
+      "rapport": "Ingekomen stukken",
+      "last_seen": "2026-11-05",
+      "doc_date": "2026-10-28",
+      "doc_date_label": "datum ingekomen",
+      "report_seen": true,
+      "missing_count": 0,
+      "text_hash": "65deb93477f257fbafcc1e471feee106ef3bbea03ddf1225b67109eef83a57b2",
+      "text_v": 2,
+      "bijlagen_titels": [
+        "2026-10-27 Motie vreemd aan de orde van de dag - Standpuntbepaling cao-inzet functiewaardering griffie (Geanonimiseerd)"
+      ],
+      "bijlagen": [
+        {
+          "t": "2026-10-27 Motie vreemd aan de orde van de dag - Standpuntbepaling cao-inzet functiewaardering griffie (Geanonimiseerd)",
+          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/e0dfb166-480d-4a2c-8811-54a4165e0854"
+        }
+      ],
+      "content_checked": "2026-11-05T13:02:47+00:00",
+      "kw_sig": "5ae1c58d6943|65deb93477f257fbafcc1e471feee106ef3bbea03ddf1225b67109eef83a57b2|Motie vreemd standpuntbepaling cao-inzet functiewaardering griffie|Ingekomen stukken",
+      "report_pass": "2026-11-05T00:01:11+00:00",
+      "changes": [
+        {
+          "at": "2026-11-05T13:02:47+00:00",
+          "type": "Tekst gewijzigd",
+          "summary": "2 zin(nen) toegevoegd of aangepast, 2 verwijderd of vervangen",
+          "added": [
+            "(A.5.",
+            "22:30"
+          ],
+          "removed": [
+            "(A.4.",
+            "22:00"
+          ]
+        }
+      ],
+      "change_type": "Tekst gewijzigd"
+    },
     "d8183f481098357f554063dc7235eccb5fdddd975a5a9dc7a2601d3e25a43653": {
       "title": "Bekijk duurzame woningen in Opmeer of stel je eigen huis open",
       "url": "https://www.opmeer.nl/bekijk-duurzame-woningen-in-opmeer-of-stel-je-eigen-huis-open",
       "source": "Nieuws",
       "gemeente": "opmeer",
-      "first_seen": "2026-11-05T12:46:53+00:00",
-      "updated": "2026-11-05T12:46:53+00:00",
+      "first_seen": "2026-11-05T13:02:29+00:00",
+      "updated": "2026-11-05T13:02:29+00:00",
       "last_change": null,
       "hash": "",
       "revisions": 1,
@@ -19,8 +228,306 @@
       "excerpt": "Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
       "missing_count": 0,
       "text_hash": "310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca",
-      "content_checked": "2026-11-05T12:46:56+00:00",
+      "content_checked": "2026-11-05T13:02:39+00:00",
       "kw_sig": "5ae1c58d6943|310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca|Bekijk duurzame woningen in Opmeer of stel je eigen huis open|Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen."
+    },
+    "e238e8c450aad5aadda3f1583b34203253a19fb72ff4333aae0e562109be660f": {
+      "title": "05.f Inspreekkbijdrage inspreker dhr. Van der Lee KSO 2 nov 2026",
+      "url": "https://raad.koggenland.nl/Documenten/05-f-Inspreekkbijdrage-inspreker-dhr-Van-der-Lee-KSO-2-nov-2026.pdf",
+      "source": "Raadsstukken",
+      "gemeente": "koggenland",
+      "first_seen": "2026-11-05T13:01:52+00:00",
+      "updated": "2026-11-05T13:01:52+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-16",
+          "meeting": "Gemeenteraad 16 november 2026 20:00",
+          "agendapunt": "3.05.05 Overige ingekomen stukken"
+        }
+      ],
+      "file_url": "https://raad.koggenland.nl/Documenten/05-f-Inspreekkbijdrage-inspreker-dhr-Van-der-Lee-KSO-2-nov-2026.pdf",
+      "rapport": null,
+      "doc_date": "2026-11-16",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Gemeenteraad 16 november 2026 20:00",
+      "agendapunt": "3.05.05 Overige ingekomen stukken",
+      "last_seen": "2026-11-05",
+      "excerpt": "Gemeenteraad 16 november 2026 20:00 · agendapunt 3.05.05 Overige ingekomen stukken",
+      "missing_count": 0,
+      "text_hash": "ce2e0119ff7c7560f136e7295745beecebcc073983a51ee38b2e4c2313628bc8",
+      "content_checked": "2026-11-05T13:02:36+00:00",
+      "kw_sig": "5ae1c58d6943|ce2e0119ff7c7560f136e7295745beecebcc073983a51ee38b2e4c2313628bc8|05.f Inspreekkbijdrage inspreker dhr. Van der Lee KSO 2 nov 2026|Gemeenteraad 16 november 2026 20:00 · agendapunt 3.05.05 Overige ingekomen stukken"
+    },
+    "b6b66dfa7106276690559ecfacec69f00c1c5e9259309f17989177ffb76188e8": {
+      "title": "Raadscommissie donderdag 3 december 2026",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Index/bedc4215-5f41-43f8-809b-e789157c64fd",
+      "source": "Raadsportaal",
+      "gemeente": "medemblik",
+      "first_seen": "2026-10-19T00:01:03+00:00",
+      "updated": "2026-11-05T13:01:18+00:00",
+      "last_change": "2026-11-05T13:01:18+00:00",
+      "hash": "",
+      "revisions": 4,
+      "excerpt": "",
+      "kind": "vergadering",
+      "doc_date": "2026-12-03",
+      "doc_date_label": "vergaderdatum",
+      "last_seen": "2026-11-05",
+      "kw_sig": "5ae1c58d6943||Raadscommissie donderdag 3 december 2026|",
+      "changes": [
+        {
+          "at": "2026-10-27T15:45:44+00:00",
+          "type": "Agenda gepubliceerd",
+          "summary": "agenda online met 2 punten",
+          "added": [
+            "Benoeming lid Raad van Toezicht van Stichting Openbaar Onderwijs Present (pfh. G. Gringhuis)",
+            "Marktverordening gemeente Medemblik 2026 (pfh. M. Pijl)"
+          ],
+          "removed": []
+        },
+        {
+          "at": "2026-11-05T11:01:04+00:00",
+          "type": "Agenda gewijzigd",
+          "summary": "12 punt(en) erbij",
+          "added": [
+            "Wijzigen en intrekken notities verbonden partijen (pfh. M. Pijl)",
+            "1 Opening",
+            "2 Vaststelling agenda"
+          ],
+          "removed": []
+        },
+        {
+          "at": "2026-11-05T13:01:18+00:00",
+          "type": "Agenda gewijzigd",
+          "summary": "1 punt(en) erbij",
+          "added": [
+            "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)"
+          ],
+          "removed": []
+        }
+      ],
+      "change_type": "Agenda gewijzigd"
+    },
+    "884cfc53080e9bfc0b71a8d302de378c426aae02308fbaf9b7733e38c2abb393": {
+      "title": "00 DOC-26-1256837 - Raadsvoorstel wensen en bedenkingen Ontwikkelperspectief",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/bedc4215-5f41-43f8-809b-e789157c64fd?documentId=2bbb9488-0304-4b3f-a2a4-07bc59dd9143&agendaItemId=f0993f30-1324-4d40-a220-319db3c74e6e",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-11-05T13:01:18+00:00",
+      "updated": "2026-11-05T13:01:18+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-12-03",
+          "meeting": "Raadscommissie donderdag 3 december 2026",
+          "agendapunt": "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/2bbb9488-0304-4b3f-a2a4-07bc59dd9143",
+      "doc_date": "2026-12-03",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie donderdag 3 december 2026",
+      "agendapunt": "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)",
+      "last_seen": "2026-11-05",
+      "excerpt": "Raadscommissie donderdag 3 december 2026 · agendapunt Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "ea959cdd9ab495c313d1a80a8e278d7ba6bf44a7263a2cee8285d7db244b0b12",
+      "content_checked": "2026-11-05T13:02:32+00:00",
+      "kw_sig": "5ae1c58d6943|ea959cdd9ab495c313d1a80a8e278d7ba6bf44a7263a2cee8285d7db244b0b12|00 DOC-26-1256837 - Raadsvoorstel wensen en bedenkingen Ontwikkelperspectief|Raadscommissie donderdag 3 december 2026 · agendapunt Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)"
+    },
+    "53661f9d8b93d3fc5d6c288c5da16a15456386f697c2829a670122e96fd1e586": {
+      "title": "01 Concept Ontwikkelperspectief 07-09-2026",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/bedc4215-5f41-43f8-809b-e789157c64fd?documentId=e48be33f-e9a1-46a6-b5cd-8aad1d5b8ab5&agendaItemId=f0993f30-1324-4d40-a220-319db3c74e6e",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-11-05T13:01:18+00:00",
+      "updated": "2026-11-05T13:01:18+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-12-03",
+          "meeting": "Raadscommissie donderdag 3 december 2026",
+          "agendapunt": "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/e48be33f-e9a1-46a6-b5cd-8aad1d5b8ab5",
+      "doc_date": "2026-12-03",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie donderdag 3 december 2026",
+      "agendapunt": "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)",
+      "last_seen": "2026-11-05",
+      "excerpt": "Raadscommissie donderdag 3 december 2026 · agendapunt Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)",
+      "missing_count": 0,
+      "file_hash": "groot|attachment; filename=\"Concept Ontwikkelperspectief 07-09-2026.pdf\"; filename*=UTF-8''Concept%20Ontwikkelperspectief%2007-09-2026.pdf|8996f87b912d3239be944b4ef3c016e1e4030f18b57453478bc53eed3db1af3d",
+      "content_checked": "2026-11-05T13:02:35+00:00",
+      "kw_sig": "5ae1c58d6943||01 Concept Ontwikkelperspectief 07-09-2026|Raadscommissie donderdag 3 december 2026 · agendapunt Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)"
+    },
+    "ace3a626c5e86e99c543d337fa815041178b2d3ce204739d2e166d12d8119cd8": {
+      "title": "02 Reactie op concept Ontwikkelperspectief",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/bedc4215-5f41-43f8-809b-e789157c64fd?documentId=17bbd2d1-dd2d-4e59-a6f4-484cc23151ba&agendaItemId=f0993f30-1324-4d40-a220-319db3c74e6e",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-11-05T13:01:18+00:00",
+      "updated": "2026-11-05T13:01:18+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-12-03",
+          "meeting": "Raadscommissie donderdag 3 december 2026",
+          "agendapunt": "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/17bbd2d1-dd2d-4e59-a6f4-484cc23151ba",
+      "doc_date": "2026-12-03",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Raadscommissie donderdag 3 december 2026",
+      "agendapunt": "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)",
+      "last_seen": "2026-11-05",
+      "excerpt": "Raadscommissie donderdag 3 december 2026 · agendapunt Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)",
+      "missing_count": 0,
+      "text_hash": "5295bc5f2d75745d32a6df555ce3585377e91aa2c2ed638adfd8ddffe0b8e767",
+      "content_checked": "2026-11-05T13:02:35+00:00",
+      "kw_sig": "5ae1c58d6943|5295bc5f2d75745d32a6df555ce3585377e91aa2c2ed638adfd8ddffe0b8e767|02 Reactie op concept Ontwikkelperspectief|Raadscommissie donderdag 3 december 2026 · agendapunt Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)"
+    },
+    "528e73dfbb26492a4aead4eef981f6c7041de40757b877dd2c82b09d558a55ee": {
+      "title": "Gemeenteraad (Raadzaal (MBG06)) donderdag 12 november 2026 19:30 - 22:00",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Index/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d",
+      "source": "Raadsportaal",
+      "first_seen": "2026-10-15T08:50:28+00:00",
+      "updated": "2026-11-05T13:00:59+00:00",
+      "hash": "a91bfd10c0bcabdd351645152befc79e73e4cfd4a28da9f0ad9fdbf53c2890c9",
+      "revisions": 2,
+      "excerpt": "",
+      "content_hash": "fe80a9635fbe6725eaf513d44b51d89e4496121d23943e0e0d3192332d354e7b",
+      "content_checked": "2026-10-15T09:41:37+00:00",
+      "last_change": "2026-11-05T13:00:59+00:00",
+      "doc_date": "2026-11-12",
+      "doc_date_label": "vergaderdatum",
+      "last_seen": "2026-11-05",
+      "kind": "vergadering",
+      "gemeente": "medemblik",
+      "kw_sig": "5ae1c58d6943||Gemeenteraad (Raadzaal (MBG06)) donderdag 12 november 2026 19:30 - 22:00|",
+      "changes": [
+        {
+          "at": "2026-11-05T13:00:59+00:00",
+          "type": "Agenda gewijzigd",
+          "summary": "12 punt(en) erbij, 4 punt(en) eraf",
+          "added": [
+            "A.2 Toelating en installatie raadslid",
+            "A.3 Loting volgorde stemming",
+            "A.4 Vaststelling agenda"
+          ],
+          "removed": [
+            "A.2 Loting volgorde stemming",
+            "A.3 Vaststelling agenda",
+            "A.4 Ingekomen stukken en mededelingen"
+          ]
+        }
+      ],
+      "change_type": "Agenda gewijzigd"
+    },
+    "64904cd9f1a589fcde5fb1f840791ba68e586bd1d92905b4f15ba101a6682cc7": {
+      "title": "Oproeping raadsvergadering 12 november 2026",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d?documentId=9a185462-e1b3-4143-8728-9dffdeb42174",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-11-05T13:00:59+00:00",
+      "updated": "2026-11-05T13:00:59+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": null
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/9a185462-e1b3-4143-8728-9dffdeb42174",
+      "doc_date": "2026-11-12",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Gemeenteraad donderdag 12 november 2026",
+      "agendapunt": null,
+      "last_seen": "2026-11-05",
+      "excerpt": "Gemeenteraad donderdag 12 november 2026 · vergaderdocumenten",
+      "missing_count": 0,
+      "text_hash": "8f6178a063e9e489c92553ab78a0fa451f015553a8447ae8470b3dda37758db6",
+      "content_checked": "2026-11-05T13:02:37+00:00",
+      "kw_sig": "5ae1c58d6943|8f6178a063e9e489c92553ab78a0fa451f015553a8447ae8470b3dda37758db6|Oproeping raadsvergadering 12 november 2026|Gemeenteraad donderdag 12 november 2026 · vergaderdocumenten"
+    },
+    "b8670eb3cf0f7ae6ba3c9fb0d0fcf7ff131870072dd9b13e710b1aa8cadc4048": {
+      "title": "DOC-26-1252694 - Raadsvoorstel Toelating raadslid",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d?documentId=06863656-6993-42de-ae4d-2f922299d96a&agendaItemId=a943d6fc-a879-4977-bba6-3ec1946695ad",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-11-05T13:00:59+00:00",
+      "updated": "2026-11-05T13:00:59+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "A.2 Toelating en installatie raadslid"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/06863656-6993-42de-ae4d-2f922299d96a",
+      "doc_date": "2026-11-12",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Gemeenteraad donderdag 12 november 2026",
+      "agendapunt": "A.2 Toelating en installatie raadslid",
+      "last_seen": "2026-11-05",
+      "excerpt": "Gemeenteraad donderdag 12 november 2026 · agendapunt A.2 Toelating en installatie raadslid",
+      "missing_count": 0,
+      "text_hash": "73fe90448b9f8bb5dfa012a778425534fa2bb8e2504fa66376933a6c33bbd33e",
+      "content_checked": "2026-11-05T13:02:38+00:00",
+      "kw_sig": "5ae1c58d6943|73fe90448b9f8bb5dfa012a778425534fa2bb8e2504fa66376933a6c33bbd33e|DOC-26-1252694 - Raadsvoorstel Toelating raadslid|Gemeenteraad donderdag 12 november 2026 · agendapunt A.2 Toelating en installatie raadslid"
+    },
+    "91750805a0fa0e0d5e2011d1a28958a2a40ee6f16d52967a5ef4ef0dc6957387": {
+      "title": "Agenda raad 12 november 2026",
+      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Document/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d?documentId=1d663924-53bb-4e9e-bf87-2f46cfafb8fe&agendaItemId=562bae68-de56-41f7-a44c-b70ec6d903a3",
+      "source": "Raadsstukken",
+      "gemeente": "medemblik",
+      "first_seen": "2026-11-05T13:00:59+00:00",
+      "updated": "2026-11-05T13:00:59+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "A.4 Vaststelling agenda"
+        }
+      ],
+      "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/1d663924-53bb-4e9e-bf87-2f46cfafb8fe",
+      "doc_date": "2026-11-12",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Gemeenteraad donderdag 12 november 2026",
+      "agendapunt": "A.4 Vaststelling agenda",
+      "last_seen": "2026-11-05",
+      "excerpt": "Gemeenteraad donderdag 12 november 2026 · agendapunt A.4 Vaststelling agenda",
+      "missing_count": 0,
+      "text_hash": "fd2b582ed2c3c129d76501110850b1a580f5b25c9e1b7c7f49f3966a0a6717f2",
+      "content_checked": "2026-11-05T13:02:38+00:00",
+      "kw_sig": "5ae1c58d6943|fd2b582ed2c3c129d76501110850b1a580f5b25c9e1b7c7f49f3966a0a6717f2|Agenda raad 12 november 2026|Gemeenteraad donderdag 12 november 2026 · agendapunt A.4 Vaststelling agenda"
     },
     "6608e60e89528716b1ec05b4b81a62eac71eb273bad267a2a6e710df6f791ba6": {
       "title": "Motie CDA Verkeersveiligheid boven cameratoezicht",
@@ -827,47 +1334,6 @@
       "text_hash": "d9e2815c84c34551e3328bc121723bd8a5b1b1f6cd4214c1c99c81af33013cf4",
       "content_checked": "2026-11-05T11:02:21+00:00",
       "kw_sig": "5ae1c58d6943|d9e2815c84c34551e3328bc121723bd8a5b1b1f6cd4214c1c99c81af33013cf4|20261105 Motie vreemd VVD PRO GB LPO over Iedereen verdient een thuis en perspectief|Besluitvormende raadsvergadering donderdag 5 november 2026 · agendapunt 13 Motie vreemd over Iedereen verdient een thuis en perspectief"
-    },
-    "b6b66dfa7106276690559ecfacec69f00c1c5e9259309f17989177ffb76188e8": {
-      "title": "Raadscommissie donderdag 3 december 2026",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Index/bedc4215-5f41-43f8-809b-e789157c64fd",
-      "source": "Raadsportaal",
-      "gemeente": "medemblik",
-      "first_seen": "2026-10-19T00:01:03+00:00",
-      "updated": "2026-11-05T11:01:04+00:00",
-      "last_change": "2026-11-05T11:01:04+00:00",
-      "hash": "",
-      "revisions": 3,
-      "excerpt": "",
-      "kind": "vergadering",
-      "doc_date": "2026-12-03",
-      "doc_date_label": "vergaderdatum",
-      "last_seen": "2026-11-05",
-      "kw_sig": "5ae1c58d6943||Raadscommissie donderdag 3 december 2026|",
-      "changes": [
-        {
-          "at": "2026-10-27T15:45:44+00:00",
-          "type": "Agenda gepubliceerd",
-          "summary": "agenda online met 2 punten",
-          "added": [
-            "Benoeming lid Raad van Toezicht van Stichting Openbaar Onderwijs Present (pfh. G. Gringhuis)",
-            "Marktverordening gemeente Medemblik 2026 (pfh. M. Pijl)"
-          ],
-          "removed": []
-        },
-        {
-          "at": "2026-11-05T11:01:04+00:00",
-          "type": "Agenda gewijzigd",
-          "summary": "12 punt(en) erbij",
-          "added": [
-            "Wijzigen en intrekken notities verbonden partijen (pfh. M. Pijl)",
-            "1 Opening",
-            "2 Vaststelling agenda"
-          ],
-          "removed": []
-        }
-      ],
-      "change_type": "Agenda gewijzigd"
     },
     "267b304480b78ab3644217cea660c1e8e047e910521cac42456ac09e485dcca6": {
       "title": "00 DOC-26-1250947 - Raadsvoorstel Wijzigen en intrekken notities over verbonden partijengemeenschappelijke regelingen",
@@ -14062,104 +14528,6 @@
         "asielopvang"
       ]
     },
-    "c0a6e7c69e2be49c7447235ade8b3f2d522ae3424ec983e1628c8e735314b015": {
-      "title": "Reactie op plannen Zonnepark Cromme Leeck",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/2d00606d-ad19-47cd-aea0-d423149d705a",
-      "source": "Raadsportaal",
-      "gemeente": "medemblik",
-      "first_seen": "2026-10-27T13:01:22+00:00",
-      "updated": "2026-11-02T17:04:54+00:00",
-      "last_change": "2026-11-02T17:04:54+00:00",
-      "hash": "",
-      "revisions": 5,
-      "excerpt": "Ingekomen stukken",
-      "kind": "overzichtsitem",
-      "rapport": "Ingekomen stukken",
-      "last_seen": "2026-11-05",
-      "doc_date": "2026-10-26",
-      "doc_date_label": "datum ingekomen",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "18055cbfb4967b7b71f01ea0834663a56d8cfb39cc10855e7a9e97ea4ccd89e7",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "Reactie Dorpsraad Zwaagdijk-Oost op plannen Zonnepark Cromme Leeck (Geanonimiseerd)",
-        "Advocaat-Topwind-Wervershoof (Geanonimiseerd)",
-        "Uitspraak hoger beroep topwind 2010 (Geanonimiseerd)"
-      ],
-      "bijlagen": [
-        {
-          "t": "Reactie Dorpsraad Zwaagdijk-Oost op plannen Zonnepark Cromme Leeck (Geanonimiseerd)",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/23c8a6fa-19e4-42d9-b51e-cc94bd42f528"
-        },
-        {
-          "t": "Advocaat-Topwind-Wervershoof (Geanonimiseerd)",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/046ae58a-4de4-4a15-a3c8-f43ed357c1e1"
-        },
-        {
-          "t": "Uitspraak hoger beroep topwind 2010 (Geanonimiseerd)",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/8b3a6ddf-87f1-4743-8cfd-b12ebd08f3da"
-        }
-      ],
-      "content_checked": "2026-11-05T07:02:31+00:00",
-      "kw_sig": "5ae1c58d6943|18055cbfb4967b7b71f01ea0834663a56d8cfb39cc10855e7a9e97ea4ccd89e7|Reactie op plannen Zonnepark Cromme Leeck|Ingekomen stukken",
-      "report_pass": "2026-11-05T00:01:11+00:00",
-      "changes": [
-        {
-          "at": "2026-10-28T13:34:53+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "1 zin(nen) toegevoegd of aangepast, 189 verwijderd of vervangen",
-          "added": [
-            "[Bijlage niet te lezen: 500 Server Error: Internal Server Error for url: https://med]"
-          ],
-          "removed": [
-            "VAN BENTHEM & KEULEN",
-            "advocaten",
-            "ER"
-          ]
-        },
-        {
-          "at": "2026-10-28T19:47:36+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "189 zin(nen) toegevoegd of aangepast, 1 verwijderd of vervangen",
-          "added": [
-            "VAN BENTHEM & KEULEN",
-            "advocaten",
-            "ER"
-          ],
-          "removed": [
-            "[Bijlage niet te lezen: 500 Server Error: Internal Server Error for url: https://med]"
-          ]
-        },
-        {
-          "at": "2026-11-02T10:52:29+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "1 zin(nen) toegevoegd of aangepast, 279 verwijderd of vervangen",
-          "added": [
-            "[Bijlage niet te lezen: 429 Client Error: Too Many Requests for url: https://medembl]"
-          ],
-          "removed": [
-            "LJN: BJ8507, Gerechtshof Amsterdam , 106.007.474/01",
-            "Datum 16-06-2009",
-            "uitspraak:"
-          ]
-        },
-        {
-          "at": "2026-11-02T17:04:54+00:00",
-          "type": "Tekst gewijzigd",
-          "summary": "279 zin(nen) toegevoegd of aangepast, 1 verwijderd of vervangen",
-          "added": [
-            "LJN: BJ8507, Gerechtshof Amsterdam , 106.007.474/01",
-            "Datum 16-06-2009",
-            "uitspraak:"
-          ],
-          "removed": [
-            "[Bijlage niet te lezen: 429 Client Error: Too Many Requests for url: https://medembl]"
-          ]
-        }
-      ],
-      "change_type": "Tekst gewijzigd"
-    },
     "4743344a29d0eed54ef0a95dab2797a62f7e3c148e370404f9fbda05f2961111": {
       "title": "Coalitieakkoord",
       "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/b258086f-5e7e-43c6-83b0-892133593ff5",
@@ -14187,7 +14555,7 @@
           "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/3773e1bc-a8b7-4fe7-8dff-969aca832632"
         }
       ],
-      "content_checked": "2026-11-05T07:02:15+00:00",
+      "content_checked": "2026-11-05T13:02:40+00:00",
       "kw_sig": "5ae1c58d6943|79d3b87e119a81d9a3511c8e154746afc9c254d4937ddfb72ba5f0a4cbbf82a5|Coalitieakkoord|Thema's",
       "report_pass": "2026-11-05T00:02:19+00:00"
     },
@@ -14562,6 +14930,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/7e02aab5-c0ef-4efa-8e53-cce709241d1a",
@@ -14570,11 +14943,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "c4f8cbca88559d7d828180ad696ad2c04109447c7e2cbc6845a5e8136d46ab7a",
       "content_checked": "2026-11-05T09:49:05+00:00",
-      "kw_sig": "5ae1c58d6943|c4f8cbca88559d7d828180ad696ad2c04109447c7e2cbc6845a5e8136d46ab7a|08 Commissievragen D66 UIT raadscie. 29-10 agendapunt 8.1 Programmabegroting 2027-2030|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+      "kw_sig": "5ae1c58d6943|c4f8cbca88559d7d828180ad696ad2c04109447c7e2cbc6845a5e8136d46ab7a|08 Commissievragen D66 UIT raadscie. 29-10 agendapunt 8.1 Programmabegroting 2027-2030|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "ca09af2163eb591be76326682de95c7242c796db09c7c9ab517c9fbe36a86671": {
       "title": "09 Commissievragen Hart voor Medemblik UIT raadscie. 29-10 agendapunt 8.1 Programmabegroting 2027-2030",
@@ -14592,6 +14965,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/16bbb965-b293-478e-abbd-08246c1bc72e",
@@ -14600,11 +14978,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "026d31a0baf62971fb1449b3dfb24dc62a1790b5af155870f023ba7c40d61be0",
       "content_checked": "2026-11-05T09:49:06+00:00",
-      "kw_sig": "5ae1c58d6943|026d31a0baf62971fb1449b3dfb24dc62a1790b5af155870f023ba7c40d61be0|09 Commissievragen Hart voor Medemblik UIT raadscie. 29-10 agendapunt 8.1 Programmabegroting 2027-2030|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+      "kw_sig": "5ae1c58d6943|026d31a0baf62971fb1449b3dfb24dc62a1790b5af155870f023ba7c40d61be0|09 Commissievragen Hart voor Medemblik UIT raadscie. 29-10 agendapunt 8.1 Programmabegroting 2027-2030|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "83c93761fa8b6105c3eb3d66d7f77c079911068432f97ca50cc1d1f0fd8eedd8": {
       "title": "Verdachte van ombrengen Hajar blijft vastzitten",
@@ -21329,39 +21707,6 @@
       "published_at_source": "officielebekendmakingen.nl",
       "kw_sig": "5ae1c58d6943||Ontvangen aanvraag omgevingsvergunning, Hand-eg 6, 1648GD De Goorn|Betreft: Aanvraag op locatie Hand-eg 6, 1648GD De Goorn"
     },
-    "733867c34e780bb58bad6518f656a700cb2af6426e987a8050ea0b453d7efa04": {
-      "title": "Motie vreemd standpuntbepaling cao-inzet functiewaardering griffie",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/54fc0d2b-3105-4e13-9e5d-bf8ed60a2649",
-      "source": "Raadsportaal",
-      "gemeente": "medemblik",
-      "first_seen": "2026-10-30T09:01:13+00:00",
-      "updated": "2026-10-30T09:01:13+00:00",
-      "last_change": null,
-      "hash": "",
-      "revisions": 1,
-      "excerpt": "Ingekomen stukken",
-      "kind": "overzichtsitem",
-      "rapport": "Ingekomen stukken",
-      "last_seen": "2026-11-05",
-      "doc_date": "2026-10-28",
-      "doc_date_label": "datum ingekomen",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "14f0113c0e6960c60caf7e382b605a5762049c57693c22f9fe4e684fae54036d",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "2026-10-27 Motie vreemd aan de orde van de dag - Standpuntbepaling cao-inzet functiewaardering griffie (Geanonimiseerd)"
-      ],
-      "bijlagen": [
-        {
-          "t": "2026-10-27 Motie vreemd aan de orde van de dag - Standpuntbepaling cao-inzet functiewaardering griffie (Geanonimiseerd)",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/e0dfb166-480d-4a2c-8811-54a4165e0854"
-        }
-      ],
-      "content_checked": "2026-11-05T07:02:22+00:00",
-      "kw_sig": "5ae1c58d6943|14f0113c0e6960c60caf7e382b605a5762049c57693c22f9fe4e684fae54036d|Motie vreemd standpuntbepaling cao-inzet functiewaardering griffie|Ingekomen stukken",
-      "report_pass": "2026-11-05T00:01:11+00:00"
-    },
     "87be50a527d0e32f62e2f1ba4aec26af3d6fcc7f862a21367c6afde57c34ad64": {
       "title": "Reactie op verkeersadvies kruispunt Zeedijk - Kagerdijk en aanvullende reactie (19/10)",
       "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/819a184f-6d90-495b-b1f9-19a0c10cdc77",
@@ -21437,7 +21782,7 @@
       "excerpt": "Informatiebijeenkomst maandag 2 november 2026 Informatiebijeenkomst College uitvoeringsprogramma (CUP) 2026-2030 · vergaderdocumenten",
       "missing_count": 0,
       "text_hash": "1ae671ecc0f12999cd832a0241bc0e2f45df6c3c99245d9611ee3065599b9973",
-      "content_checked": "2026-11-05T07:02:17+00:00",
+      "content_checked": "2026-11-05T13:02:42+00:00",
       "kw_sig": "5ae1c58d6943|1ae671ecc0f12999cd832a0241bc0e2f45df6c3c99245d9611ee3065599b9973|Presentatie informatiebijeenkomst CUP 2 november 2026 (1)|Informatiebijeenkomst maandag 2 november 2026 Informatiebijeenkomst College uitvoeringsprogramma (CUP) 2026-2030 · vergaderdocumenten"
     },
     "0fb05f0fd8f03e699d595f43f6342e7bc232bb6e263ee3025c8790a66fb4a248": {
@@ -21801,7 +22146,7 @@
           "u": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/525e9f70-14d8-433f-9693-eb76361c816a"
         }
       ],
-      "content_checked": "2026-11-05T07:02:18+00:00",
+      "content_checked": "2026-11-05T13:02:44+00:00",
       "kw_sig": "5ae1c58d6943|ebe9dfb68aa3d1ebb3af04d6c83427b6ac27b0906b458bfd72a22b0bd48c468c|Aankondiging Webinar Burgerberaden|Ingekomen stukken",
       "report_pass": "2026-11-05T00:02:19+00:00"
     },
@@ -23349,6 +23694,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/ef72c6a3-ef86-4f4e-8604-001e890863a9",
@@ -23357,11 +23707,11 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "42d9d594a993cf6d153aed97f4375a30278127444e471dde3160b98ebe4c61f2",
       "content_checked": "2026-11-05T12:17:14+00:00",
-      "kw_sig": "5ae1c58d6943|42d9d594a993cf6d153aed97f4375a30278127444e471dde3160b98ebe4c61f2|00 DOC-26-1214873 - Raadsvoorstel Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+      "kw_sig": "5ae1c58d6943|42d9d594a993cf6d153aed97f4375a30278127444e471dde3160b98ebe4c61f2|00 DOC-26-1214873 - Raadsvoorstel Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "716d91e4a84f45bc23ebe8efccc5106a212a3f56f425a2b307185a5737dc1282": {
       "title": "00 DOC-26-1244474 - Raadsvoorstel Verantwoording Fractieondersteuning 2025 en 2026 Q1",
@@ -23379,6 +23729,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/0a33309b-8289-4f6f-860b-ae614e31f287",
@@ -23387,11 +23742,11 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "f8725fe1ac7573185115fdf2ecd50dcbb9a4c49e10e9171d08f76f7e661a1b6a",
       "content_checked": "2026-11-05T12:17:16+00:00",
-      "kw_sig": "5ae1c58d6943|f8725fe1ac7573185115fdf2ecd50dcbb9a4c49e10e9171d08f76f7e661a1b6a|00 DOC-26-1244474 - Raadsvoorstel Verantwoording Fractieondersteuning 2025 en 2026 Q1|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
+      "kw_sig": "5ae1c58d6943|f8725fe1ac7573185115fdf2ecd50dcbb9a4c49e10e9171d08f76f7e661a1b6a|00 DOC-26-1244474 - Raadsvoorstel Verantwoording Fractieondersteuning 2025 en 2026 Q1|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "7ccc7b406309d3801d20178504fe21c8f2fb5aac1da79e91ae82a93b807d5b40": {
       "title": "DOC-26-1229569 - Raadsvoorstel Aanwijzing functionaris gegevensbescherming",
@@ -23409,6 +23764,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.4 Aanwijzing functionaris gegevensbescherming"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.4 Aanwijzing functionaris gegevensbescherming"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/794f4c37-8641-4b7d-ae88-fe70e4f542ee",
@@ -23417,11 +23777,11 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.4 Aanwijzing functionaris gegevensbescherming",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.4 Aanwijzing functionaris gegevensbescherming",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.4 Aanwijzing functionaris gegevensbescherming · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "a1ef0518223a998632d8427b8e4045853834ff51de31fc3f92bda1f2ad746a5a",
       "content_checked": "2026-11-05T12:17:17+00:00",
-      "kw_sig": "5ae1c58d6943|a1ef0518223a998632d8427b8e4045853834ff51de31fc3f92bda1f2ad746a5a|DOC-26-1229569 - Raadsvoorstel Aanwijzing functionaris gegevensbescherming|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.4 Aanwijzing functionaris gegevensbescherming"
+      "kw_sig": "5ae1c58d6943|a1ef0518223a998632d8427b8e4045853834ff51de31fc3f92bda1f2ad746a5a|DOC-26-1229569 - Raadsvoorstel Aanwijzing functionaris gegevensbescherming|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.4 Aanwijzing functionaris gegevensbescherming · ook in 1 andere vergadering(en)"
     },
     "029a3c06d2657a13ab98413a4242ad2d195a7acfeaa6ea639f337095da4844de": {
       "title": "Koning Willem-Alexander bezoekt vrijdag Ursem: dit gaat hij daar zien",
@@ -23479,6 +23839,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "9.1 Normenkader 2026 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.5 Normenkader 2026 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/adf8eae3-be1d-4a52-8413-86785c8db2e2",
@@ -23487,11 +23852,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "9.1 Normenkader 2026 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "2f68cdb1c2d68da5c502f840168ac6dbd86bbc0e558bcab4db32cb986b4646a3",
       "content_checked": "2026-11-05T11:17:44+00:00",
-      "kw_sig": "5ae1c58d6943|2f68cdb1c2d68da5c502f840168ac6dbd86bbc0e558bcab4db32cb986b4646a3|00 DOC-26-1223390 - Raadsvoorstel Normenkader 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit)"
+      "kw_sig": "5ae1c58d6943|2f68cdb1c2d68da5c502f840168ac6dbd86bbc0e558bcab4db32cb986b4646a3|00 DOC-26-1223390 - Raadsvoorstel Normenkader 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "f2e15995c815fe693d281f34a81d8cd1dc43868c415a223f72828711b5c3ebe8": {
       "title": "HVC inZicht nieuwsbrief",
@@ -25378,6 +25743,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/d2e151d0-1922-45b4-8183-94e49625254b",
@@ -25386,11 +25756,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "e92334464922d34a1dc67e88fc65c5d26364bb575e2c58b6d9d4a6b8f033f000",
       "content_checked": "2026-11-05T10:02:19+00:00",
-      "kw_sig": "5ae1c58d6943|e92334464922d34a1dc67e88fc65c5d26364bb575e2c58b6d9d4a6b8f033f000|07 Beantwoording commissievragen D66 raadscie. 29-10 agendapunt 8.1 Programmabegroting|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "kw_sig": "5ae1c58d6943|e92334464922d34a1dc67e88fc65c5d26364bb575e2c58b6d9d4a6b8f033f000|07 Beantwoording commissievragen D66 raadscie. 29-10 agendapunt 8.1 Programmabegroting|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "kw_hits": [
         "Bloesemgaerde"
       ],
@@ -25465,6 +25835,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/c3b673af-1550-4fda-ae5f-ac363ea7d10a",
@@ -25473,11 +25848,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "4b5d1fd802176e29bf0413389615a35a66275dcf74077d2bc39d07d9fd2354ab",
       "content_checked": "2026-11-05T12:33:03+00:00",
-      "kw_sig": "5ae1c58d6943|4b5d1fd802176e29bf0413389615a35a66275dcf74077d2bc39d07d9fd2354ab|06 beantwoording commissievragen Gemeentebelangen raadscie. 29-10 agendapunt 8.1 Programmabegroting|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+      "kw_sig": "5ae1c58d6943|4b5d1fd802176e29bf0413389615a35a66275dcf74077d2bc39d07d9fd2354ab|06 beantwoording commissievragen Gemeentebelangen raadscie. 29-10 agendapunt 8.1 Programmabegroting|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "fcecf1a280a0f351749924cfe543ecf820eb56a5e816e76ffb12a9a7da718410": {
       "title": "Mishandeling en bedreiging in Berkhout",
@@ -28404,39 +28779,6 @@
       "published_at_source": "Google Nieuws",
       "kw_sig": "5ae1c58d6943||Woning illegaal en 70.000 euro schade na brand: \"Aan alle kanten de dupe\"|"
     },
-    "81ab708380926da974650344fd882d632abab80b07c192601ffbd54a17164f4d": {
-      "title": "De werkelijke invloed van CO2 op de aardse opwarming",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Reports/Item/d052e79e-f90b-432a-a7ce-74885b3bba6f",
-      "source": "Raadsportaal",
-      "gemeente": "medemblik",
-      "first_seen": "2026-10-27T13:01:22+00:00",
-      "updated": "2026-10-27T13:01:22+00:00",
-      "last_change": null,
-      "hash": "",
-      "revisions": 1,
-      "excerpt": "Ingekomen stukken",
-      "kind": "overzichtsitem",
-      "rapport": "Ingekomen stukken",
-      "last_seen": "2026-11-05",
-      "doc_date": "2026-10-27",
-      "doc_date_label": "datum ingekomen",
-      "report_seen": true,
-      "missing_count": 0,
-      "text_hash": "d52d755aa0c440dc28e89d147e99fe70735b65bb4f5f61197230dead4acf4f85",
-      "text_v": 2,
-      "bijlagen_titels": [
-        "De werkelijke invloed van CO2 (Geanonimiseerd)"
-      ],
-      "bijlagen": [
-        {
-          "t": "De werkelijke invloed van CO2 (Geanonimiseerd)",
-          "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/18227559-89d5-4d5a-af75-f9182bce8909"
-        }
-      ],
-      "content_checked": "2026-11-05T07:02:26+00:00",
-      "kw_sig": "5ae1c58d6943|d52d755aa0c440dc28e89d147e99fe70735b65bb4f5f61197230dead4acf4f85|De werkelijke invloed van CO2 op de aardse opwarming|Ingekomen stukken",
-      "report_pass": "2026-11-05T00:01:11+00:00"
-    },
     "00cfff5d9a61a159505bee0379a32e9986fd9888a00d8583f9b704fd9d494558": {
       "title": "Stand van zaken openstaande kredieten",
       "url": "https://opmeer.bestuurlijkeinformatie.nl/Reports/Item/891cd4ad-63f8-4d58-9987-9c157502e164",
@@ -28576,7 +28918,7 @@
       "excerpt": "Tijdens een inloopbijeenkomst op dinsdag 10 november in Hensbroek kunnen inwoners vragen stellen over de plannen en de procedure. Tot en met 3 december kunnen belangstellenden een zienswijze indienen.",
       "missing_count": 0,
       "text_hash": "230dd09efefdaa3dd051beef31cfd9d9699e4b35fcc1446d309e3500cab3a489",
-      "content_checked": "2026-11-05T07:02:23+00:00",
+      "content_checked": "2026-11-05T13:02:47+00:00",
       "kw_sig": "5ae1c58d6943|230dd09efefdaa3dd051beef31cfd9d9699e4b35fcc1446d309e3500cab3a489|Informatieavond over nieuwe hoogspanningsverbinding in Noord-Holland Noord|Tijdens een inloopbijeenkomst op dinsdag 10 november in Hensbroek kunnen inwoners vragen stellen over de plannen en de procedure. Tot en met 3 december kunnen belangstellenden een zienswijze indienen."
     },
     "76cd4f3766ae43e27a5d762cc829a49f060847e43b94c87de54f9c32577864ad": {
@@ -40836,6 +41178,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/6cd37cd4-8315-4946-b34d-045f9a2e434a",
@@ -40844,11 +41191,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "8a9c058b673fefb65adf59a361872fad2c15541e0986169e369add559d8c2057",
-      "content_checked": "2026-11-05T07:02:18+00:00",
-      "kw_sig": "5ae1c58d6943|8a9c058b673fefb65adf59a361872fad2c15541e0986169e369add559d8c2057|03 Beantwoording commissievragen Morgen! Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+      "content_checked": "2026-11-05T13:02:45+00:00",
+      "kw_sig": "5ae1c58d6943|8a9c058b673fefb65adf59a361872fad2c15541e0986169e369add559d8c2057|03 Beantwoording commissievragen Morgen! Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "38d90c265572e79975d30d0b86d0914b09ca788762177f810fe9b1e842fa6fee": {
       "title": "Politieke vragen KERN8 over ontwerp-waterschapsverordening 2027",
@@ -41128,6 +41475,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/93c61be3-6c58-4495-9f30-d2ca23ddf6c6",
@@ -41136,11 +41488,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "7a04b0b75f26ad93a8694de8b3139714861df172146a414a1502b8beff85dff6",
       "content_checked": "2026-11-05T11:47:37+00:00",
-      "kw_sig": "5ae1c58d6943|7a04b0b75f26ad93a8694de8b3139714861df172146a414a1502b8beff85dff6|02 Beantwoording commissievragen Hart voor Medemblik Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+      "kw_sig": "5ae1c58d6943|7a04b0b75f26ad93a8694de8b3139714861df172146a414a1502b8beff85dff6|02 Beantwoording commissievragen Hart voor Medemblik Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "f62d82d8549c5af9ad4ee4d2ed8350aeb4749d1746e9fe26cd2f2121740a0c18": {
       "title": "04 Beantwoording commissievragen CDA Programmabegroting 2027",
@@ -41158,6 +41510,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/1367ef9b-0b8b-4851-b228-00031ca4102f",
@@ -41166,11 +41523,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "c7eefed80580184453641a3b536304a21f243c910f4655c2dbacba17a618f419",
       "content_checked": "2026-11-05T11:47:41+00:00",
-      "kw_sig": "5ae1c58d6943|c7eefed80580184453641a3b536304a21f243c910f4655c2dbacba17a618f419|04 Beantwoording commissievragen CDA Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+      "kw_sig": "5ae1c58d6943|c7eefed80580184453641a3b536304a21f243c910f4655c2dbacba17a618f419|04 Beantwoording commissievragen CDA Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "7235835368072a87d562de0d6bc90d180d025b0985338ee0ac95f66f7f7a1b20": {
       "title": "05 Beantwoording commissievragen VVD Programmabegroting 2027",
@@ -41188,6 +41545,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/e8b2edaf-a322-4a08-ad29-a057789f8d85",
@@ -41196,11 +41558,11 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "text_hash": "ae09929d858f3f13d5a0c126bb5f005614cb250ef40001e354ed431adc5fda83",
       "content_checked": "2026-11-05T12:02:01+00:00",
-      "kw_sig": "5ae1c58d6943|ae09929d858f3f13d5a0c126bb5f005614cb250ef40001e354ed431adc5fda83|05 Beantwoording commissievragen VVD Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "kw_sig": "5ae1c58d6943|ae09929d858f3f13d5a0c126bb5f005614cb250ef40001e354ed431adc5fda83|05 Beantwoording commissievragen VVD Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "kw_hits": [
         "Bloesemgaerde"
       ],
@@ -45100,7 +45462,7 @@
       "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "missing_count": 0,
       "text_hash": "563d47f0aaa2e3764dbb31b89151388b8118d0613df04ec4e7a104d8e9aee5f7",
-      "content_checked": "2026-11-05T07:02:19+00:00",
+      "content_checked": "2026-11-05T13:02:45+00:00",
       "kw_sig": "5ae1c58d6943|563d47f0aaa2e3764dbb31b89151388b8118d0613df04ec4e7a104d8e9aee5f7|06 Commissievragen VVD Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "kw_hits": [
         "Bloesemgaerde"
@@ -48209,7 +48571,7 @@
       "excerpt": "Informatiebijeenkomst maandag 2 november 2026 Informatiebijeenkomst College uitvoeringsprogramma (CUP) 2026-2030 · vergaderdocumenten",
       "missing_count": 0,
       "text_hash": "0d0dea6a33f3ea93aac093cda9c329b201743b24cbb954f0fa897927850cd939",
-      "content_checked": "2026-11-05T07:02:20+00:00",
+      "content_checked": "2026-11-05T13:02:46+00:00",
       "kw_sig": "5ae1c58d6943|0d0dea6a33f3ea93aac093cda9c329b201743b24cbb954f0fa897927850cd939|Uitnodiging informatiebijeenkomst CUP 2 november 2026|Informatiebijeenkomst maandag 2 november 2026 Informatiebijeenkomst College uitvoeringsprogramma (CUP) 2026-2030 · vergaderdocumenten"
     },
     "1db3987ac5c2a438a19e9dfdd6673db275d6fe12a4562eddeaa7e66cf0a96de0": {
@@ -159186,6 +159548,11 @@
           "date": "2026-11-12",
           "meeting": "Gemeenteraad donderdag 12 november 2026",
           "agendapunt": "A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "A.6 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
         }
       ],
       "doc_date": "2026-11-12",
@@ -159193,13 +159560,13 @@
       "meeting_title": "Gemeenteraad donderdag 12 november 2026",
       "agendapunt": "A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026",
       "last_seen": "2026-11-05",
-      "excerpt": "Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026",
+      "excerpt": "Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026 · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/977d7b0e-8e74-4135-bd2c-6593f975db7d",
       "text_hash": "e8dd605f35f41a3c768d953af60b134dc0ae8fd9102c9221b851d7232c3bcc31",
       "content_checked": "2026-11-05T10:47:20+00:00",
       "gemeente": "medemblik",
-      "kw_sig": "5ae1c58d6943|e8dd605f35f41a3c768d953af60b134dc0ae8fd9102c9221b851d7232c3bcc31|01 Concept-besluitenlijst Gemeenteraad 24 september 2026|Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
+      "kw_sig": "5ae1c58d6943|e8dd605f35f41a3c768d953af60b134dc0ae8fd9102c9221b851d7232c3bcc31|01 Concept-besluitenlijst Gemeenteraad 24 september 2026|Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026 · ook in 1 andere vergadering(en)"
     },
     "81012ff71edbdb171bb27b340cb979062a29834ea665e5df55e469ad5674e276": {
       "title": "01a Bijlage moties en amendementen raad 24 september 2026 (002)",
@@ -159216,6 +159583,11 @@
           "date": "2026-11-12",
           "meeting": "Gemeenteraad donderdag 12 november 2026",
           "agendapunt": "A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "A.6 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
         }
       ],
       "doc_date": "2026-11-12",
@@ -159223,13 +159595,13 @@
       "meeting_title": "Gemeenteraad donderdag 12 november 2026",
       "agendapunt": "A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026",
       "last_seen": "2026-11-05",
-      "excerpt": "Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026",
+      "excerpt": "Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026 · ook in 1 andere vergadering(en)",
       "missing_count": 0,
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/60fa88d9-2b8e-4fc5-9eda-531febd00da5",
       "text_hash": "d559b4be80e27a917efaa98c04c0e628c788f88335f9ff5bb6bc674f2027282c",
       "content_checked": "2026-11-05T11:02:36+00:00",
       "gemeente": "medemblik",
-      "kw_sig": "5ae1c58d6943|d559b4be80e27a917efaa98c04c0e628c788f88335f9ff5bb6bc674f2027282c|01a Bijlage moties en amendementen raad 24 september 2026 (002)|Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026"
+      "kw_sig": "5ae1c58d6943|d559b4be80e27a917efaa98c04c0e628c788f88335f9ff5bb6bc674f2027282c|01a Bijlage moties en amendementen raad 24 september 2026 (002)|Gemeenteraad donderdag 12 november 2026 · agendapunt A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026 · ook in 1 andere vergadering(en)"
     },
     "030c9d1aee4a929ebc31a29370d9269351f68d82b12c51fe9fb14cdb8abc954c": {
       "title": "01 Concept-besluitenlijst Gemeenteraad 24 september 2026",
@@ -160562,6 +160934,11 @@
           "date": "2026-11-09",
           "meeting": "Raadscommissie maandag 9 november 2026",
           "agendapunt": "Normenkader 2026 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.5 Normenkader 2026 (pfh. B. de Wit)"
         }
       ],
       "doc_date": "2026-10-29",
@@ -160569,13 +160946,13 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "9.1 Normenkader 2026 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 2 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/fa0dc106-1f42-40c8-82dd-5a4651991c2e",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "c0d18a468e4900496086e10b629f591688e79513b1d88f96850b133f948b8256",
       "content_checked": "2026-11-05T11:02:37+00:00",
-      "kw_sig": "5ae1c58d6943|c0d18a468e4900496086e10b629f591688e79513b1d88f96850b133f948b8256|01 Normenkader en was wordt lijst 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
+      "kw_sig": "5ae1c58d6943|c0d18a468e4900496086e10b629f591688e79513b1d88f96850b133f948b8256|01 Normenkader en was wordt lijst 2026|Raadscommissie donderdag 29 oktober 2026 · agendapunt 9.1 Normenkader 2026 (pfh. B. de Wit) · ook in 2 andere vergadering(en)"
     },
     "5736b7779d7487cdb2d65628577677cb74ec29a6e3d3d32db71312a3d8c367d0": {
       "title": "Oproeping raadscommissie 29 oktober 2026",
@@ -160744,6 +161121,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "doc_date": "2026-10-29",
@@ -160751,13 +161133,13 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/4ee266ab-b400-4e10-81aa-01d3392e4c97",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "f7c3ad4bb7496def064d39b76583aab8d1ce752ae52943bb925fff67002a5deb",
       "content_checked": "2026-11-05T11:02:42+00:00",
-      "kw_sig": "5ae1c58d6943|f7c3ad4bb7496def064d39b76583aab8d1ce752ae52943bb925fff67002a5deb|00 DOC-26-1250646 - Raadsvoorstel begroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+      "kw_sig": "5ae1c58d6943|f7c3ad4bb7496def064d39b76583aab8d1ce752ae52943bb925fff67002a5deb|00 DOC-26-1250646 - Raadsvoorstel begroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)"
     },
     "72a7c060bc741c32cd69c6eb9acd9a29cf439730791f930082bd142666c2666e": {
       "title": "01 Programmabegroting 2027",
@@ -160774,6 +161156,11 @@
           "date": "2026-10-29",
           "meeting": "Raadscommissie donderdag 29 oktober 2026",
           "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)"
         }
       ],
       "doc_date": "2026-10-29",
@@ -160781,13 +161168,13 @@
       "meeting_title": "Raadscommissie donderdag 29 oktober 2026",
       "agendapunt": "8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "excerpt": "Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/3515d06d-17f9-401a-b115-823538b7ac65",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "ccdd54ee6b41392e7f1e92418e0485b81c26e174be1d4b73a54759fd70bf1d90",
       "content_checked": "2026-11-05T11:02:46+00:00",
-      "kw_sig": "5ae1c58d6943|ccdd54ee6b41392e7f1e92418e0485b81c26e174be1d4b73a54759fd70bf1d90|01 Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
+      "kw_sig": "5ae1c58d6943|ccdd54ee6b41392e7f1e92418e0485b81c26e174be1d4b73a54759fd70bf1d90|01 Programmabegroting 2027|Raadscommissie donderdag 29 oktober 2026 · agendapunt 8.1 Programmabegroting 2027-2030 (pfh. B. de Wit) · ook in 1 andere vergadering(en)",
       "kw_hits": [
         "Bloesemgaerde"
       ],
@@ -161476,6 +161863,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
         }
       ],
       "doc_date": "2026-10-01",
@@ -161483,13 +161875,13 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/62ff706d-aa8d-4706-8104-502f9927fee9",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "a88a46966ca3ba8db6b0f0b4e9aeff7926b1b015d0fc547dc70352bff9428966",
       "content_checked": "2026-11-04T18:54:47+00:00",
-      "kw_sig": "5ae1c58d6943|a88a46966ca3ba8db6b0f0b4e9aeff7926b1b015d0fc547dc70352bff9428966|01 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+      "kw_sig": "5ae1c58d6943|a88a46966ca3ba8db6b0f0b4e9aeff7926b1b015d0fc547dc70352bff9428966|01 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "3e4a96a6582df84895ca7741f6e28b3a97df6f43d1c411a9f4010a2de78d7a2d": {
       "title": "02 Was Wordt lijst Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik",
@@ -161506,6 +161898,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
         }
       ],
       "doc_date": "2026-10-01",
@@ -161513,13 +161910,13 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/9c59fcc3-69d4-4926-9091-011335d83b71",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "63afbf3cb1d2ff3ac8fd5b04cc84d0da510cf7cca3caef93715f44b0e3c29425",
       "content_checked": "2026-11-04T18:54:47+00:00",
-      "kw_sig": "5ae1c58d6943|63afbf3cb1d2ff3ac8fd5b04cc84d0da510cf7cca3caef93715f44b0e3c29425|02 Was Wordt lijst Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+      "kw_sig": "5ae1c58d6943|63afbf3cb1d2ff3ac8fd5b04cc84d0da510cf7cca3caef93715f44b0e3c29425|02 Was Wordt lijst Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "ed1122481e6993a7650ab7bcd584646af780d194afdcdb5f8efc33f7e2d5d82d": {
       "title": "03 Beantwoording Commissievragen MORGEN! raadscie. 1-10 agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026",
@@ -161536,6 +161933,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
         }
       ],
       "doc_date": "2026-10-01",
@@ -161543,13 +161945,13 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/b43c2f45-8997-4236-a69c-2b0cf471f24f",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "5a4810a90a656ea77dc9e56394c03783a30ebbc4692e95940f88cec2fb29d255",
       "content_checked": "2026-11-04T18:54:48+00:00",
-      "kw_sig": "5ae1c58d6943|5a4810a90a656ea77dc9e56394c03783a30ebbc4692e95940f88cec2fb29d255|03 Beantwoording Commissievragen MORGEN! raadscie. 1-10 agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)"
+      "kw_sig": "5ae1c58d6943|5a4810a90a656ea77dc9e56394c03783a30ebbc4692e95940f88cec2fb29d255|03 Beantwoording Commissievragen MORGEN! raadscie. 1-10 agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "bea2bb1a469ee91b2b584bb9f31ef1d2fbce8f0a77a8ac1d886d6630bc328990": {
       "title": "00 DOC-26-1228490 - Raadsvoorstel Intrekken Verordening elektronisch berichtenverkeer gemeente Medemblik 2015",
@@ -161566,6 +161968,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl)"
         }
       ],
       "doc_date": "2026-10-01",
@@ -161573,13 +161980,13 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/cf560641-7511-4298-a651-8ccc5be832af",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "1d91269d555218d5613103624af27540af2e3e0013d0ee6780c21304580b24a2",
       "content_checked": "2026-11-04T18:54:48+00:00",
-      "kw_sig": "5ae1c58d6943|1d91269d555218d5613103624af27540af2e3e0013d0ee6780c21304580b24a2|00 DOC-26-1228490 - Raadsvoorstel Intrekken Verordening elektronisch berichtenverkeer gemeente Medemblik 2015|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl)"
+      "kw_sig": "5ae1c58d6943|1d91269d555218d5613103624af27540af2e3e0013d0ee6780c21304580b24a2|00 DOC-26-1228490 - Raadsvoorstel Intrekken Verordening elektronisch berichtenverkeer gemeente Medemblik 2015|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "2cdac6da8298daf5bf8af1472c3b6f56c7d223143bbbc4e185a81b552246c2e0": {
       "title": "00 DOC-26-1244474 - Raadsvoorstel Verantwoording Fractieondersteuning 2025 en 2026 Q1",
@@ -161627,6 +162034,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
         }
       ],
       "doc_date": "2026-10-01",
@@ -161634,13 +162046,13 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/fd20a263-b9e4-45c8-9dae-9dad14c08999",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "9486e1e246f106a3cdc1dcbfcfcd8518e24706776c029145ecfa35066878ea41",
       "content_checked": "2026-11-04T18:54:50+00:00",
-      "kw_sig": "5ae1c58d6943|9486e1e246f106a3cdc1dcbfcfcd8518e24706776c029145ecfa35066878ea41|01 Bijlage Verantwoording Fractieondersteuning gemeente Medemblik 2025 en 2026 Q1|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
+      "kw_sig": "5ae1c58d6943|9486e1e246f106a3cdc1dcbfcfcd8518e24706776c029145ecfa35066878ea41|01 Bijlage Verantwoording Fractieondersteuning gemeente Medemblik 2025 en 2026 Q1|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "89e146ec8eec511e08a4d41f58b7030c27ba596d869d6220d5ae3fb76f597511": {
       "title": "02 Brief advies werkgroep fractievergoedingen",
@@ -161657,6 +162069,11 @@
           "date": "2026-10-01",
           "meeting": "Raadscommissie donderdag 1 oktober 2026",
           "agendapunt": "8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
+        },
+        {
+          "date": "2026-11-12",
+          "meeting": "Gemeenteraad donderdag 12 november 2026",
+          "agendapunt": "B.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
         }
       ],
       "doc_date": "2026-10-01",
@@ -161664,13 +162081,13 @@
       "meeting_title": "Raadscommissie donderdag 1 oktober 2026",
       "agendapunt": "8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)",
       "last_seen": "2026-11-05",
-      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)",
+      "excerpt": "Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl) · ook in 1 andere vergadering(en)",
       "file_url": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/2bf35e7f-67b1-4b85-b8cd-c6d7480be940",
       "gemeente": "medemblik",
       "missing_count": 0,
       "text_hash": "e48c1cf5c31fc40e99c10e8eaeec9f8e901d165c1c42ebe313e357bcd7da9f62",
       "content_checked": "2026-11-04T18:54:51+00:00",
-      "kw_sig": "5ae1c58d6943|e48c1cf5c31fc40e99c10e8eaeec9f8e901d165c1c42ebe313e357bcd7da9f62|02 Brief advies werkgroep fractievergoedingen|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)"
+      "kw_sig": "5ae1c58d6943|e48c1cf5c31fc40e99c10e8eaeec9f8e901d165c1c42ebe313e357bcd7da9f62|02 Brief advies werkgroep fractievergoedingen|Raadscommissie donderdag 1 oktober 2026 · agendapunt 8.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl) · ook in 1 andere vergadering(en)"
     },
     "3e8e0d6d152163437e74fcda7d3dbc47c2eb429c112f58dc9033aa05901331f6": {
       "title": "DOC-26-1229569 - Raadsvoorstel Aanwijzing functionaris gegevensbescherming",
@@ -172544,25 +172961,6 @@
       "gemeente": "medemblik",
       "kw_sig": "5ae1c58d6943||Informatiebijeenkomst (Raadzaal (MBG06)) Informatiebijeenkomst College uitvoeringsprogramma (CUP) 2026-2030 maandag 2 november 2026 19:30 - 00:00|"
     },
-    "528e73dfbb26492a4aead4eef981f6c7041de40757b877dd2c82b09d558a55ee": {
-      "title": "Gemeenteraad (Raadzaal (MBG06)) donderdag 12 november 2026 19:30 - 22:00",
-      "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Index/8eadc9f7-a7ae-44ad-a78e-3596c9796e5d",
-      "source": "Raadsportaal",
-      "first_seen": "2026-10-15T08:50:28+00:00",
-      "updated": "2026-10-15T08:50:28+00:00",
-      "hash": "a91bfd10c0bcabdd351645152befc79e73e4cfd4a28da9f0ad9fdbf53c2890c9",
-      "revisions": 1,
-      "excerpt": "",
-      "content_hash": "fe80a9635fbe6725eaf513d44b51d89e4496121d23943e0e0d3192332d354e7b",
-      "content_checked": "2026-10-15T09:41:37+00:00",
-      "last_change": null,
-      "doc_date": "2026-11-12",
-      "doc_date_label": "vergaderdatum",
-      "last_seen": "2026-11-05",
-      "kind": "vergadering",
-      "gemeente": "medemblik",
-      "kw_sig": "5ae1c58d6943||Gemeenteraad (Raadzaal (MBG06)) donderdag 12 november 2026 19:30 - 22:00|"
-    },
     "833b115583114c507ef7795172d3a1dca34bb261e8795b77a63c2cf56660c11e": {
       "title": "Presidium (MBG01 (achter kantine)) maandag 16 november 2026 19:00 - 20:30",
       "url": "https://medemblik.bestuurlijkeinformatie.nl/Agenda/Index/48e926c5-1642-494c-b07f-28b1148fd5db",
@@ -172726,54 +173124,54 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-11-05T12:46:08+00:00",
+        "checked": "2026-11-05T13:01:36+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-11-05T12:46:09+00:00",
+        "checked": "2026-11-05T13:01:37+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-11-05T12:46:09+00:00",
+        "checked": "2026-11-05T13:01:37+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-11-05T12:46:10+00:00",
+        "checked": "2026-11-05T13:01:38+00:00",
         "ok": true,
         "count": 26,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-11-05T12:45:34+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "ok": true,
         "count": 205,
         "new": 0,
         "note": "Laatste 30 dagen: 205 van 205 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-11-05T12:45:52+00:00",
-        "ok": false,
-        "count": 9,
-        "new": 0,
-        "error": "Informatiebijeenkomst 2026-09-15: 403 Client Error: Forbidden for url: https://medemblik.bestu",
-        "note": "9 van 24 vergaderingen in venster bijgewerkt; 268 documenten bekend. Dekking: vergaderingen van 2026-09-06 t/m 2026-12-20 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
+        "checked": "2026-11-05T13:01:18+00:00",
+        "ok": true,
+        "count": 10,
+        "new": 6,
+        "error": null,
+        "note": "10 van 24 vergaderingen in venster bijgewerkt; 274 documenten bekend. Dekking: vergaderingen van 2026-09-06 t/m 2026-12-20 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-11-05T12:46:07+00:00",
+        "checked": "2026-11-05T13:01:35+00:00",
         "ok": true,
         "count": 301,
-        "new": 2,
+        "new": 0,
         "error": null,
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2130, Ingekomen stukken 3170, Jaarplannen en jaarverslagen 1, Moties en amendementen 406, Raadsvragen 1414, Rekenkamer 54, Toezeggingen 335). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "In de media": {
-        "checked": "2026-11-05T12:46:14+00:00",
+        "checked": "2026-11-05T13:01:42+00:00",
         "ok": true,
         "count": 41,
         "new": 0,
@@ -172782,25 +173180,25 @@
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-11-05T12:47:19+00:00",
-        "ok": true,
-        "count": 5,
-        "errors": 0,
-        "note": "5 documenten gecontroleerd (0 pdf), 2017 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
+        "checked": "2026-11-05T13:02:57+00:00",
+        "ok": false,
+        "count": 17,
+        "errors": 1,
+        "note": "17 documenten gecontroleerd (9 pdf), 2024 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
       },
       "Meldingen": {
-        "checked": "2026-11-05T12:47:19+00:00",
+        "checked": "2026-11-05T13:02:57+00:00",
         "ok": true,
         "note": "Pushmeldingen actief (ntfy); deze run 1 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-11-05).",
         "error": null
       },
       "Trefwoorden": {
-        "checked": "2026-11-05T12:47:19+00:00",
+        "checked": "2026-11-05T13:02:57+00:00",
         "ok": true,
-        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 3 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
+        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 34 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
       },
       "Termijn raadsvragen": {
-        "checked": "2026-11-05T12:46:55+00:00",
+        "checked": "2026-11-05T13:02:31+00:00",
         "ok": true,
         "count": 6,
         "note": "6 raadsvragen staan langer open dan de termijn uit het reglement van orde (Medemblik en Opmeer: 30 dagen). Een uitstelbericht aan de vragensteller is in het portaal niet te zien."
@@ -172816,21 +173214,21 @@
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-11-05T12:46:15+00:00",
+        "checked": "2026-11-05T13:01:43+00:00",
         "ok": true,
         "count": 73,
         "new": 0,
         "note": "Laatste 30 dagen: 73 van 73 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-11-05T12:46:16+00:00",
+        "checked": "2026-11-05T13:01:53+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "Collegebesluiten": {
-        "checked": "2026-11-05T12:46:16+00:00",
+        "checked": "2026-11-05T13:01:53+00:00",
         "ok": true,
         "count": 177,
         "new": 0,
@@ -172838,37 +173236,37 @@
         "error": null
       },
       "Woo-verzoeken": {
-        "checked": "2026-11-05T12:46:17+00:00",
+        "checked": "2026-11-05T13:01:54+00:00",
         "ok": true,
         "count": 15,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
       },
       "In de media": {
-        "checked": "2026-11-05T12:46:19+00:00",
+        "checked": "2026-11-05T13:01:56+00:00",
         "ok": true,
         "count": 32,
         "new": 0,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Koggenland, Avenhorn, Berkhout, De Goorn, Hensbroek, Obdam, Oudendijk, Scharwoude, Spierdijk, Ursem, Zuidermeer. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       },
       "Raadsstukken": {
-        "checked": "2026-11-05T12:46:15+00:00",
+        "checked": "2026-11-05T13:01:52+00:00",
         "ok": true,
-        "count": 0,
-        "new": 0,
+        "count": 4,
+        "new": 1,
         "error": null,
-        "note": "raad.koggenland.nl (GO. vergaderen), via martijn-media.nl: het IP-adres daarvan is door de griffie uitgezonderd van de botcontrole. 0 vergaderpagina's bijgewerkt, 9 vergaderingen tussen 2026-09-06 en 2026-12-20, 182 documenten bekend. Komende drie weken elk half uur, de rest elke 6 uur."
+        "note": "raad.koggenland.nl (GO. vergaderen), via martijn-media.nl: het IP-adres daarvan is door de griffie uitgezonderd van de botcontrole. 4 vergaderpagina's bijgewerkt, 9 vergaderingen tussen 2026-09-06 en 2026-12-20, 183 documenten bekend. Komende drie weken elk half uur, de rest elke 6 uur."
       }
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "ok": true,
         "count": 43,
         "new": 0,
         "note": "Laatste 30 dagen: 43 van 43 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-11-05T12:46:44+00:00",
+        "checked": "2026-11-05T13:02:22+00:00",
         "ok": true,
         "count": 10,
         "new": 0,
@@ -172876,7 +173274,7 @@
         "note": "10 van 10 vergaderingen in venster bijgewerkt; 96 documenten bekend. Dekking: vergaderingen van 2026-09-06 t/m 2026-12-20 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-11-05T12:46:52+00:00",
+        "checked": "2026-11-05T13:02:29+00:00",
         "ok": true,
         "count": 399,
         "new": 0,
@@ -172884,14 +173282,14 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 74, Belangrijke documenten 13, Besluitenlijsten college 315, Ingekomen stukken 1174, Moties 79, Politieke vragen 73, Raadsinformatiebrieven 590, Thema's 25, Toezeggingen 93, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-11-05T12:46:53+00:00",
+        "checked": "2026-11-05T13:02:29+00:00",
         "ok": true,
         "count": 25,
         "new": 1,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "In de media": {
-        "checked": "2026-11-05T12:46:55+00:00",
+        "checked": "2026-11-05T13:02:31+00:00",
         "ok": true,
         "count": 8,
         "new": 0,
@@ -250654,8 +251052,8 @@
       "url": "https://www.opmeer.nl/bekijk-duurzame-woningen-in-opmeer-of-stel-je-eigen-huis-open",
       "source": "Nieuws",
       "gemeente": "opmeer",
-      "first_seen": "2026-11-05T12:32:03+00:00",
-      "updated": "2026-11-05T12:32:03+00:00",
+      "first_seen": "2026-11-05T12:46:53+00:00",
+      "updated": "2026-11-05T12:46:53+00:00",
       "last_change": null,
       "hash": "",
       "revisions": 1,
@@ -250668,9 +251066,9 @@
       "excerpt": "Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
       "missing_count": 0,
       "text_hash": "310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca",
-      "content_checked": "2026-11-05T12:32:04+00:00",
+      "content_checked": "2026-11-05T12:46:56+00:00",
       "kw_sig": "5ae1c58d6943|310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca|Bekijk duurzame woningen in Opmeer of stel je eigen huis open|Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
-      "archived": "2026-11-05T12:45:32+00:00",
+      "archived": "2026-11-05T13:00:54+00:00",
       "archived_reason": "Menuknop, geen publicatie"
     },
     "ef7a8a42160527e0141651f817b22b6071a798fb5b3f6e05a82db9a4c5fbfd8a": {
@@ -257204,28 +257602,36 @@
         ]
       },
       "8eadc9f7-a7ae-44ad-a78e-3596c9796e5d": {
-        "checked": "2026-11-05T12:30:43+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Gemeenteraad",
         "date": "2026-11-12",
         "label": "donderdag 12 november 2026",
-        "documents": 2,
+        "documents": 26,
         "gemeente": "medemblik",
         "agenda": [
           "A ALGEMEEN",
           "A.1 Opening/moment stilte",
-          "A.2 Loting volgorde stemming",
-          "A.3 Vaststelling agenda",
-          "A.4 Ingekomen stukken en mededelingen",
-          "A.5 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026",
+          "A.2 Toelating en installatie raadslid",
+          "A.3 Loting volgorde stemming",
+          "A.4 Vaststelling agenda",
+          "A.5 Ingekomen stukken en mededelingen",
+          "A.6 Vaststellen van de besluitenlijst van de openbare vergadering van de raad d.d. 24 september 2026",
           "B HAMERSTUKKEN",
+          "B.1 Verordening onderzoek doelmatigheid en doeltreffendheid 213a Gemeentewet Medemblik 2026 (pfh. M. Pijl)",
+          "B.2 Intrekken Verordening elektronisch berichtenverkeer (pfh. M. Pijl)",
+          "B.3 Verantwoording fractieondersteuning 2025 en Q1 2026 (M. Pijl)",
+          "B.4 Aanwijzing functionaris gegevensbescherming",
+          "B.5 Normenkader 2026 (pfh. B. de Wit)",
+          "B.6 Regels voor bedrijventerreinen (GEHEIM)",
           "C BESPREEKSTUKKEN",
+          "C.1 Programmabegroting 2027-2030 (pfh. B. de Wit)",
           "D ALGEMEEN",
           "D.1 Moties Vreemd aan de orde van de dag",
           "D.2 Sluiting"
         ]
       },
       "d4b32282-6d07-4f2e-9463-89fb9b55e9c3": {
-        "checked": "2026-11-05T12:30:43+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Gemeenteraad",
         "date": "2026-09-24",
         "label": "donderdag 24 september 2026",
@@ -257316,15 +257722,16 @@
         "gemeente": "medemblik"
       },
       "bedc4215-5f41-43f8-809b-e789157c64fd": {
-        "checked": "2026-11-05T12:30:43+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-12-03",
         "label": "donderdag 3 december 2026",
         "gemeente": "medemblik",
-        "documents": 18,
+        "documents": 21,
         "agenda": [
           "Benoeming lid Raad van Toezicht van Stichting Openbaar Onderwijs Present (pfh. G. Gringhuis)",
           "Marktverordening gemeente Medemblik 2026 (pfh. M. Pijl)",
+          "Wensen en bedenkingen Ontwikkelperspectief (pfh. B. de Wit)",
           "Wijzigen en intrekken notities verbonden partijen (pfh. M. Pijl)",
           "1 Opening",
           "2 Vaststelling agenda",
@@ -257340,7 +257747,7 @@
         ]
       },
       "52fc513f-8776-427e-b9d9-426652329851": {
-        "checked": "2026-11-05T12:30:43+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Raadscommissie",
         "date": "2026-11-09",
         "label": "maandag 9 november 2026",
@@ -257508,7 +257915,7 @@
         "agenda": []
       },
       "48e926c5-1642-494c-b07f-28b1148fd5db": {
-        "checked": "2026-11-05T12:30:43+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Presidium",
         "date": "2026-11-16",
         "label": "maandag 16 november 2026",
@@ -257517,7 +257924,7 @@
         "agenda": []
       },
       "a5344260-dca4-4884-8b61-4c52d5a7b54f": {
-        "checked": "2026-11-05T12:15:33+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Presidium",
         "date": "2026-10-05",
         "label": "maandag 5 oktober 2026",
@@ -257625,7 +258032,7 @@
         "gemeente": "medemblik"
       },
       "1dc4ba0e-a89b-467e-b615-34fd5495c2a1": {
-        "checked": "2026-11-05T12:15:33+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Auditcommissie",
         "date": "2026-12-09",
         "label": "woensdag 9 december 2026",
@@ -257678,7 +258085,7 @@
         "gemeente": "medemblik"
       },
       "b2e8194e-6b1b-4240-a0e4-49ee3e2082af": {
-        "checked": "2026-11-05T12:30:43+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-11-19",
         "label": "donderdag 19 november 2026 Informatiebijeenkomst Omgevingsvisie",
@@ -257715,7 +258122,7 @@
         ]
       },
       "df4cd9b8-d584-460e-af53-cb8e05cea854": {
-        "checked": "2026-11-05T12:15:33+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-09-17",
         "label": "donderdag 17 september 2026",
@@ -257753,7 +258160,7 @@
         "gemeente": "medemblik"
       },
       "0ee03b28-01dc-436b-9b5a-a77f83d3d9d1": {
-        "checked": "2026-11-05T12:15:33+00:00",
+        "checked": "2026-11-05T13:00:56+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-10-26",
         "label": "maandag 26 oktober 2026",
@@ -257800,7 +258207,7 @@
         "gemeente": "medemblik"
       },
       "9e498f8b-07fb-4377-b5e8-9ffbcc166e5b": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-12-10",
@@ -257819,7 +258226,7 @@
         ]
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -257844,7 +258251,7 @@
         ]
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -257924,7 +258331,7 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
@@ -257933,7 +258340,7 @@
         "agenda": []
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -257954,7 +258361,7 @@
         ]
       },
       "7d82ecee-3b65-4d47-ae9b-904b5e4c1562": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-09-10",
@@ -257995,7 +258402,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -258004,7 +258411,7 @@
         "agenda": []
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -258018,7 +258425,7 @@
         ]
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -258064,7 +258471,7 @@
         "label": "donderdag 22 januari 2026"
       },
       "c62483ed-4da6-4fee-846f-29b58d90cf6c": {
-        "checked": "2026-11-05T12:46:20+00:00",
+        "checked": "2026-11-05T13:01:57+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-10-06",
@@ -258643,7 +259050,7 @@
         "tijd": "20:00"
       },
       "/Vergaderingen/Gemeenteraad/2026/26-november/19:30": {
-        "checked": "2026-11-05T12:31:23+00:00",
+        "checked": "2026-11-05T13:01:48+00:00",
         "gemeente": "koggenland",
         "type": "Gemeenteraad",
         "date": "2026-11-26",
@@ -258684,7 +259091,7 @@
         "tijd": "20:00"
       },
       "/Vergaderingen/Gemeenteraad/2026/09-november/19:30": {
-        "checked": "2026-11-05T12:31:26+00:00",
+        "checked": "2026-11-05T13:01:50+00:00",
         "gemeente": "koggenland",
         "type": "Gemeenteraad",
         "date": "2026-11-09",
@@ -258726,7 +259133,7 @@
         ]
       },
       "/Vergaderingen/Gemeenteraad/2026/26-november/20:00": {
-        "checked": "2026-11-05T12:31:27+00:00",
+        "checked": "2026-11-05T13:01:51+00:00",
         "gemeente": "koggenland",
         "type": "Gemeenteraad",
         "date": "2026-11-26",
@@ -258807,7 +259214,7 @@
         ]
       },
       "/Vergaderingen/Gemeenteraad/2026/16-november/20:00": {
-        "checked": "2026-11-05T12:31:29+00:00",
+        "checked": "2026-11-05T13:01:52+00:00",
         "gemeente": "koggenland",
         "type": "Gemeenteraad",
         "date": "2026-11-16",
@@ -258889,7 +259296,7 @@
       }
     },
     "go_listed": {
-      "koggenland": "2026-11-05T12:31:22+00:00"
+      "koggenland": "2026-11-05T13:01:48+00:00"
     }
   }
 }
