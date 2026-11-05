@@ -16,6 +16,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: python tools/explore.py > tools/verkenning.txt 2>&1 || true
+        env:
+          KOGGENLAND_PROXY_KEY: ${{ secrets.KOGGENLAND_PROXY_KEY }}
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
