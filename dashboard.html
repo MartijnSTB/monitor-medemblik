@@ -227,9 +227,9 @@
 
   /* ===== Kolommen ===== */
   .board{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin:18px 0 28px;align-items:start}
-  /* Zes kolommen: op een gewoon scherm netjes 3 + 3, op een heel breed scherm alle zes naast elkaar. */
+  /* Vijf kolommen: op een gewoon scherm 3 + 2, op een heel breed scherm alle vijf naast elkaar. */
   @media (min-width:1000px){.board{grid-template-columns:repeat(3,minmax(0,1fr))}}
-  @media (min-width:1900px){.board{grid-template-columns:repeat(6,minmax(0,1fr))}}
+  @media (min-width:1900px){.board{grid-template-columns:repeat(5,minmax(0,1fr))}}
   .col{background:var(--card);border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;max-height:calc(100vh - 86px);position:sticky;top:72px;overflow:hidden}
   .colhead{padding:12px 14px 10px;border-bottom:1px solid var(--line);position:relative}
   .colhead::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--c)}
@@ -583,8 +583,6 @@ const COLS = [
    test:x => x.source === 'Collegebesluiten'},
   {id:'nws',  title:'Nieuws en Woo', icon:'nieuws', color:'#5498cf', note:'Nieuws van de gemeente en openbaar gemaakte informatie (Woo)',
    test:x => ['Nieuws','Woo-verzoeken','Openbare informatie','Woo-publicaties'].includes(x.source)},
-  {id:'bui',  title:'Buiten de gemeente', icon:'regel', color:'#2b6a8f', note:'Provincie, waterschap en Rijk over jouw dorpen, Tweede Kamer en rechtspraak',
-   test:x => ['Andere overheden','Tweede Kamer','Rechtspraak'].includes(x.source)},
   {id:'med',  title:'In de media', icon:'media', color:'var(--media)', note:'Artikelen over de gemeente en haar dorpen, via Google Nieuws',
    test:x => x.source === 'In de media'},
 ];
@@ -914,41 +912,8 @@ async function fillSnippets(){
 }
 
 // ---------------------------------------------------------------------------
-// In de media: hetzelfde verhaal bij meerdere media samenvoegen. Twee koppen horen bij elkaar
-// als ze binnen 2 dagen verschenen en minstens 2 bijzondere woorden delen, of 1 bijzonder woord
-// plus dezelfde plaats ('Kleingouw' + 'Andijk'). Bovenaan staat wie het eerst had.
+// In de media: elk artikel los (niet meer samengevoegd per verhaal).
 // ---------------------------------------------------------------------------
-const STOP = new Set(('gemeente gemeenten inwoners nieuwe eerste tweede derde extra grote kleine alles waarom wordt worden kunnen '
-  + 'moeten blijft blijven krijgt krijgen tijdens tussen vanaf onder dorpen jaren weken dagen maanden hebben heeft zijn deze '
-  + 'bijna steeds wanneer hoeveel komen komt gaat gaan staat staan maken maakt nemen neemt willen zegt zeggen terug verder '
-  + 'ondanks alleen echt helemaal nooit weer jouw onze jullie zich iedereen mensen waarin welke omdat waardoor later vandaag '
-  + 'gisteren morgen avond ochtend middag zaterdag zondag maandag dinsdag woensdag donderdag vrijdag oktober november december').split(' '));
-const sigWords = t => new Set((norm(t).match(/[a-z0-9]+/g) || []).filter(w => (w.length >= 5 || /^\d{3,}$/.test(w)) && !STOP.has(w)));
-function clusterMedia(rows){
-  const places = new Set((DATA.dorpen || []).concat(DATA.naam).flatMap(p => norm(p).split(/[\s-]+/)));
-  const sw = rows.map(x => sigWords(x.title));
-  const parent = rows.map((_, i) => i);
-  const find = i => parent[i] === i ? i : (parent[i] = find(parent[i]));
-  for (let i = 0; i < rows.length; i++) for (let j = i + 1; j < rows.length; j++) {
-    if (Math.abs(rows[i]._t - rows[j]._t) > 2 * 864e5) continue;
-    let gewoon = 0, plaats = 0;
-    for (const w of sw[i]) if (sw[j].has(w)) places.has(w) ? plaats++ : gewoon++;
-    if (gewoon >= 2 || (gewoon >= 1 && plaats >= 1)) parent[find(j)] = find(i);
-  }
-  const groups = new Map();
-  rows.forEach((x, i) => { const r = find(i); if (!groups.has(r)) groups.set(r, []); groups.get(r).push(x); });
-  const out = [];
-  for (const g of groups.values()) {
-    const first = g.reduce((a, b) => (a._t <= b._t ? a : b));
-    // Per medium maar één keer (Google noemt hetzelfde artikel soms twee keer).
-    const bronnen = new Set([first.media_bron]);
-    first._also = g.filter(y => y !== first).sort((a, b) => a._t - b._t)
-      .filter(y => !bronnen.has(y.media_bron) && bronnen.add(y.media_bron));
-    first._pos = Math.min(...g.map(y => rows.indexOf(y)));
-    out.push(first);
-  }
-  return out.sort((a, b) => a._pos - b._pos);
-}
 let MEDTEKST = store.get('gm-medtekst') === '1';
 
 // ---------------------------------------------------------------------------
@@ -973,7 +938,7 @@ function bundleHTML(col, day, rows){
 }
 function columnHTML(col, rows, extra = ''){
   const n = shown[col.id] || PAGE;
-  const bundling = col.id === 'bek' && !filter && !$('q').value.trim() && !DORP.name;
+  const bundling = false;  // routinestukken niet meer bundelen: elk stuk los
   let html = '';
   const visible = rows.slice(0, n);
   for (let i = 0; i < visible.length;) {
@@ -1172,8 +1137,7 @@ function renderToday(){
   const soortTxt = Object.entries(perSoort).sort((a, b) => b[1] - a[1]).map(([s, n]) => plural(n, s, {vergunning:'vergunningen', melding:'meldingen', verkeersbesluit:'verkeersbesluiten', evenement:'evenementen', kap:'kapvergunningen'}[s])).join(', ');
   // 4. Media: samengevoegd, nieuwste verhalen
   let med = since.filter(x => media(x) && (MEDTEKST || x.media_match !== 'tekst'));
-  med.forEach(x => { x._also = null; });
-  med = clusterMedia(med.sort(byTime));
+  med = med.sort(byTime);
   // 5. Agenda
   const agenda = DATA.items.filter(x => x.kind === 'vergadering' && x.doc_date >= TODAY).sort((a,b) => a.doc_date.localeCompare(b.doc_date)).slice(0, 5);
 
@@ -1190,7 +1154,6 @@ function renderToday(){
     ['col:raad', 'raad en college', cnt(x => COL('raad').test(x) || COL('col').test(x))],
     ['col:bek', 'bekendmakingen', cnt(isBek)],
     ['col:nws', 'nieuws en Woo', cnt(COL('nws').test)],
-    ['col:bui', 'buiten de gemeente', cnt(COL('bui').test)],
     ['col:med', 'in de media', cnt(media)],
     ['f:trefwoord', 'met een trefwoord', cnt(x => x.kw_hits)],
   ].filter(([, , n]) => n);
@@ -1285,8 +1248,6 @@ function render(){
     if (c.id === 'med') {
       const tekst = rows.filter(x => x.media_match === 'tekst').length;
       if (!MEDTEKST) rows = rows.filter(x => x.media_match !== 'tekst');
-      rows.forEach(x => { x._also = null; });
-      rows = clusterMedia(rows);
       if (tekst) extra = `<label class="tgl"><input type="checkbox" id="medtekst"${MEDTEKST ? ' checked' : ''}> Ook artikelen met de plaats alleen in de tekst (${tekst})</label>`;
     }
     return [c, rows, extra];
@@ -1303,33 +1264,6 @@ function render(){
 // ---------------------------------------------------------------------------
 // Leesvenster
 // ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// Dossier: stukken over hetzelfde onderwerp, op basis van gedeelde zeldzame woorden in de titel
-// (bijv. 'Koggenrandweg', 'detailhandelsvisie'). Woorden die in veel titels staan tellen nauwelijks.
-// ---------------------------------------------------------------------------
-const DSTOP = new Set('de het een en van voor over met aan bij naar door uit tot als dat die dit zijn wordt worden heeft hebben ook nog niet wel wat wie hoe waar kan zal om op in te er zo dan maar of ons onze uw jij hij zij wij raadsvragen raadsvraag vragen motie moties amendement raadsvoorstel informatienota besluit besluiten aanvraag aangevraagd verleend vergunning omgevingsvergunning gemeente college raad commissie agenda bijlage bijlagen brief nota voorstel stuk stukken reactie beantwoording antwoord vergadering gemeenteraad raadscommissie fractie overige ingekomen'.split(' '));
-let IDF = null;
-const titleToks = y => y._tok || (y._tok = [...new Set(norm(y.title || '').split(/[^a-z0-9]+/).filter(w => w.length >= 4 && !DSTOP.has(w) && !/^\d+$/.test(w)))]);
-function related(x){
-  if (!IDF) {
-    const df = new Map();
-    DATA.items.forEach(y => titleToks(y).forEach(w => df.set(w, (df.get(w) || 0) + 1)));
-    const n = DATA.items.length;
-    IDF = new Map([...df].map(([w, c]) => [w, Math.log(n / c)]));
-    IDF.n = n;
-  }
-  const mine = titleToks(x);
-  const uncommon = Math.log(IDF.n / 40), rare = Math.log(IDF.n / 15);  // in hooguit ~40 resp. ~15 titels
-  if (!mine.some(w => (IDF.get(w) || 0) > uncommon)) return [];
-  const own = norm(x.title || '');
-  return DATA.items.filter(y => y !== x && y.kind !== 'vergadering' && norm(y.title || '') !== own).map(y => {
-      const t = new Set(titleToks(y)); const shared = mine.filter(w => t.has(w));
-      const score = shared.reduce((a, w) => a + IDF.get(w), 0);
-      return {y, score, ok: shared.some(w => IDF.get(w) >= rare) || (shared.length >= 2 && shared.some(w => IDF.get(w) > uncommon))};
-    }).filter(r => r.ok && r.score > 0).sort((a, b) => b.score - a.score).slice(0, 8)
-    .map(r => r.y).sort((a, b) => (a._d || '').localeCompare(b._d || ''));
-}
-
 let PANEL_ID = '';
 async function openPanel(id){
   const x = DATA && DATA.items.find(y => y.id === id);
@@ -1353,7 +1287,6 @@ async function openPanel(id){
   if (x.indieners) facts.push(['Indieners', esc(x.indieners)]);
   if (x.instantie) facts.push(['Instantie', esc(x.instantie)]);
   if (x.stand) facts.push(['Stand van zaken', esc(x.stand)]);
-  const rel = related(x);
   const s = mark(x.id, 's'), k = mark(x.id, 'k');
   const changes = (x.changes || []).slice().reverse();
   // KOOP zet bij stukken zonder samenvatting een technische regel als omschrijving; die tonen we niet.
@@ -1371,10 +1304,8 @@ async function openPanel(id){
         <button class="btn" data-pa="c">${ic('kopie')}Bron kopiëren</button>
       </div>
       <dl class="facts">${facts.map(([a, b]) => `<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl>
-      ${x._also && x._also.length ? `<div class="psec"><h3>Ook bij andere media</h3><div class="plist">${x._also.map(y => `<a href="${esc(y.url)}" target="_blank" rel="noopener">${ic('media')}<span><b>${esc(y.media_bron)}</b>: ${esc(y.title)}</span></a>`).join('')}</div></div>` : ''}
       <div class="psec"${x.tx || excerpt ? '' : ' hidden'}><h3 id="ptexth">${x.tx ? 'Uit de tekst' : 'Omschrijving'}</h3><div class="ptext" id="ptext">${x.tx ? 'Laden…' : esc(excerpt)}</div></div>
       ${x.bijlagen && x.bijlagen.length ? `<div class="psec"><h3>Bijlagen (${x.bijlagen.length})</h3><div class="plist">${x.bijlagen.map(b => `<a href="${esc(b.u)}" target="_blank" rel="noopener">${ic('clip')}<span>${esc(b.t)}</span></a>`).join('')}</div></div>` : ''}
-      ${rel.length ? `<div class="psec"><h3>Hetzelfde onderwerp (${rel.length})</h3><div class="tline">${rel.map(y => `<a href="#" data-open="${y.id}" style="--c:${colOf(y).color}"><span class="td">${y._d ? nl(y._d,{day:'numeric',month:'short',year:'2-digit'}) : ''}</span><span><small>${esc(colOf(y).title)}${typeInfo(y).label ? ' · ' + esc(typeInfo(y).label) : ''}</small>${esc(y.title)}</span></a>`).join('')}</div></div>` : ''}
       ${changes.length ? `<div class="psec"><h3>Wijzigingen (${changes.length})</h3>${changes.map(c => `<div class="pchg"><b>${esc(c.type)}</b> · ${nl(c.at,{day:'numeric',month:'short'})} ${hm(c.at)}<div>${esc(c.summary || '')}</div>${(c.added || []).map(l => `<div class="p">+ ${esc(l)}</div>`).join('')}${(c.removed || []).map(l => `<div class="r">− ${esc(l)}</div>`).join('')}</div>`).join('')}</div>` : ''}
       <p style="color:var(--muted);font-size:12.5px;margin-top:22px">Bronvermelding: ${esc(citation(x))}</p>
     </div>`;
@@ -1506,7 +1437,6 @@ async function load(g){
       cache[g] = d;
     }
     DATA = cache[g];
-    IDF = null;  // dossierwoorden per gemeente opnieuw tellen
   } catch (e) {
     $('summary').textContent = 'De gegevens konden niet worden geladen (' + e.message + '). Probeer de pagina opnieuw te laden.';
     $('title').textContent = 'Niet geladen';

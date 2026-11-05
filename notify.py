@@ -48,7 +48,6 @@ COLUMNS = [
     ('Raad', '#1b4e8e'),
     ('College', '#f18700'),
     ('Nieuws en Woo', '#5498cf'),
-    ('Buiten de gemeente', '#2b6a8f'),
     ('In de media', '#1d1d1b'),
 ]
 
@@ -56,8 +55,6 @@ def column_of(item):
     s = item.get('source')
     if s == 'Officiele bekendmakingen (KOOP)':
         return 'Bekendmakingen'
-    if s in ('Andere overheden', 'Tweede Kamer', 'Rechtspraak'):
-        return 'Buiten de gemeente'
     if s in ('Raadsstukken', 'Raadsportaal'):
         return 'Raad'
     if s == 'Collegebesluiten':

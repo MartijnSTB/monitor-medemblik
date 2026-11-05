@@ -1830,6 +1830,11 @@ def migrate(db):
     db.setdefault('items', {})
     db.setdefault('status', {})
     state = db.setdefault('state', {})
+    # Nov 2026: bronnen buiten de gemeente uitgezet; hun stukken en status opruimen.
+    for key in [k for k, v in db['items'].items() if v.get('source') in ('Andere overheden', 'Tweede Kamer', 'Rechtspraak')]:
+        db['items'].pop(key)
+    for naam in ('Andere overheden', 'Tweede Kamer', 'Rechtspraak'):
+        db['status'].get('algemeen', {}).pop(naam, None)
     # Okt 2026: bronnen buiten de gemeente opnieuw laten ophalen na aanpassing van de zoekregels.
     if state.get('elders_v') != 2:
         state.pop('elders', None)
@@ -1951,7 +1956,8 @@ def main():
         collect_pages(db, gid)
         if cfg.get('plaatsen'):
             collect_media(db, gid, cfg['plaatsen'])
-    for fn in (collect_andere_overheden, collect_tweede_kamer, collect_rechtspraak, collect_woo):
+    # Bronnen buiten de gemeente (provincie, waterschap, Rijk, Tweede Kamer, rechtspraak) staan uit (nov 2026).
+    for fn in (collect_woo,):
         try:
             fn(db)
         except Exception as exc:
