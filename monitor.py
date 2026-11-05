@@ -9,7 +9,7 @@ Per gemeente staat in GEMEENTEN welke bronnen er zijn. Elke run:
 
 Uitgangspunt: de monitor zegt eerlijk wat hij wel en niet volgt (zie 'note' per bron).
 """
-import json, hashlib, re, datetime, urllib.parse, html as htmllib, email.utils, time
+import json, hashlib, re, datetime, urllib.parse, html as htmllib, email.utils, time, os
 from pathlib import Path
 import requests
 import xml.etree.ElementTree as ET
@@ -23,6 +23,22 @@ DB = ROOT / 'data' / 'items.json'
 DOCS = ROOT / 'docs'
 TEXT_DIR = ROOT / 'data' / 'text'   # vorige tekstversie per document, nodig om te kunnen vergelijken
 HEADERS = {'User-Agent': 'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
+
+# raad.koggenland.nl laat alleen het IP-adres van martijn-media.nl door (afgesproken met de griffie, nov 2026).
+# De monitor haalt die pagina's daarom op via het doorgeefluik op die site, met een geheime code.
+KOGGENLAND_RAAD = 'https://raad.koggenland.nl'
+KOGGENLAND_PROXY = 'https://martijn-media.nl/monitor/koggenland.php'
+
+def http_get(url, headers=None, **kw):
+    """requests.get, maar pagina's van raad.koggenland.nl gaan via het doorgeefluik."""
+    key = os.environ.get('KOGGENLAND_PROXY_KEY', '').strip()
+    if url.startswith(KOGGENLAND_RAAD):
+        if not key:
+            raise RuntimeError('geheim KOGGENLAND_PROXY_KEY ontbreekt')
+        u = urllib.parse.urlsplit(url)
+        pad = urllib.parse.quote(u.path, safe='/:-._~%') + ('?' + u.query if u.query else '')
+        return requests.get(KOGGENLAND_PROXY, params={'pad': pad}, headers={**(headers or HEADERS), 'X-Monitor-Key': key}, **kw)
+    return requests.get(url, headers=headers or HEADERS, **kw)
 
 # ---------------------------------------------------------------------------
 # Configuratie per gemeente (bronnen gecontroleerd op 15 okt 2026)
@@ -64,7 +80,9 @@ GEMEENTEN = {
         'pages': {
             'Woo-verzoeken': 'https://www.koggenland.nl/overzicht-woo-verzoeken',
         },
-        'domains': ('https://www.koggenland.nl/', 'https://cuatro.sim-cdn.nl/koggenland/'),
+        'domains': ('https://www.koggenland.nl/', 'https://cuatro.sim-cdn.nl/koggenland/', 'https://raad.koggenland.nl/'),
+        # Raadsinformatie: GO. vergaderen op raad.koggenland.nl, via het doorgeefluik op martijn-media.nl.
+        'go': 'https://raad.koggenland.nl',
         'news_rss': 'https://www.koggenland.nl/rss/content-list?type%5B%5D=news&sort_by=published_at&sort_order=DESC',
         'college_pdf_page': 'https://www.koggenland.nl/bestuursstukken-vergaderingen-college-bw',
         'plaatsen': ['Koggenland', 'Avenhorn', 'Berkhout', 'De Goorn', 'Hensbroek', 'Obdam', 'Oudendijk',
@@ -73,12 +91,7 @@ GEMEENTEN = {
             'Woo-verzoeken': 'Alleen de links op de overzichtspagina Woo-verzoeken.',
         },
         # Bronnen die bewust NIET gevolgd worden, met de reden. Staat zo op het dashboard.
-        'not_followed': {
-            'Raadsinformatie': 'raad.koggenland.nl (vergaderingen, raadsstukken, raadsvragen) zit achter een '
-                               'beveiligingscontrole tegen geautomatiseerde bezoekers. De monitor omzeilt die niet; '
-                               'raadsstukken van Koggenland worden dus niet gevolgd. Raadsbesluiten die in het '
-                               'Gemeenteblad verschijnen, komen wel binnen via KOOP.',
-        },
+        'not_followed': {},
     },
     'opmeer': {
         'naam': 'Opmeer',
@@ -622,6 +635,157 @@ def collect_pages(db, gid):
             set_status(db, gid, source, ok=False, error=str(exc)[:180])
 
 # ---------------------------------------------------------------------------
+# GO. vergaderen (GemeenteOplossingen): raadsinformatie van Koggenland (raad.koggenland.nl)
+# Opbouw gecontroleerd 5 nov 2026: /Vergaderingen/<orgaan>/<jaar> geeft de vergaderingen,
+# een vergaderpagina heeft div.agenda-row (span.nr + h4) met div.document-row[data-document-id].
+# ---------------------------------------------------------------------------
+GO_OVERSLAAN = ('archief', 'vervallen', 'stembureau')
+GO_PER_RUN = 6            # vergaderpagina's per run (die zijn groot, en gaan via het doorgeefluik)
+GO_MOTIE = re.compile(r'\b(aangenomen|verworpen|ingetrokken|aangehouden)\b', re.I)
+
+def go_url_date(href):
+    """'/Vergaderingen/Gemeenteraad/2026/09-november/19:30' -> ('2026-11-09', '19:30')"""
+    m = re.search(r'/(20\d\d)/(\d{1,2})-([a-z]+)(?:/(\d{1,2}:\d{2}))?', href)
+    if not m:
+        return None, None
+    return parse_nl_date(f'{m.group(2)} {m.group(3)} {m.group(1)}'), m.group(4)
+
+def go_list_meetings(db, gid, base):
+    """Elk half uur: alle vergaderorganen en hun vergaderingen van dit jaar (en vorig jaar in jan/feb)."""
+    state = db.setdefault('state', {})
+    meetings = state.setdefault('go_meetings', {})
+    listed = state.setdefault('go_listed', {})
+    vorige = listed.get(gid) or ''
+    if vorige and (datetime.datetime.now(datetime.timezone.utc)
+                   - datetime.datetime.fromisoformat(vorige)).total_seconds() < 25 * 60:
+        return meetings
+    r = http_get(base + '/Vergaderingen', timeout=60)
+    r.raise_for_status()
+    organen = sorted({h for h in re.findall(r'href="(/Vergaderingen/[^/"#?]+/)"', r.text)
+                      if not any(w in h.casefold() for w in GO_OVERSLAAN)})
+    pagina_links = set(re.findall(r'href="(/Vergaderingen/[^"#?]+/20\d\d/[^"#?]+)"', r.text))
+    jaren = {datetime.date.today().year} | ({datetime.date.today().year - 1} if datetime.date.today().month <= 2 else set())
+    for orgaan in organen:
+        for jaar in jaren:
+            try:
+                p = http_get(f'{base}{orgaan}{jaar}', timeout=60)
+                if p.ok:
+                    pagina_links |= set(re.findall(r'href="(' + re.escape(orgaan) + r'20\d\d/[^"#?]+)"', p.text))
+            except Exception:
+                pass
+    for href in pagina_links:
+        href = href.rstrip('/')
+        if href.count('/') > 5:   # dieper = een agendapunt, geen vergadering
+            continue
+        datum, tijd = go_url_date(href)
+        if not datum:
+            continue
+        orgaan = href.split('/')[2].replace('-', ' ')
+        m = meetings.setdefault(href, {'checked': ''})
+        m.update(gemeente=gid, type=orgaan, date=datum, tijd=tijd)
+    listed[gid] = utc()
+    return meetings
+
+def go_parse_meeting(page_html):
+    """Geeft (agendapunten, documenten). Document: (doc_id, titel, url, soort, agendapunt)."""
+    page = BeautifulSoup(page_html, 'html.parser')
+    punten, docs, seen = [], [], set()
+    for row in page.select('div.agenda-row'):
+        nr = row.select_one('.agenda-row-head .nr')
+        kop = row.select_one('.agenda-row-head h4')
+        if kop:
+            for nv in kop.select('.nonvisual'):
+                nv.extract()
+        punt = clean(((nr.get_text(strip=True) + ' ') if nr else '') + (kop.get_text(' ', strip=True) if kop else ''))
+        if punt and punt not in punten:
+            punten.append(punt)
+        for d in row.select('div.document-row[data-document-id]'):
+            did = d['data-document-id']
+            a = d.select_one('a[href]')
+            if did in seen or not a:
+                continue
+            seen.add(did)
+            titel = clean((d.select_one('.row-title') or a).get_text(' ', strip=True))
+            titel = re.sub(r'\.(pdf|docx?|xlsx?|pptx?)$', '', titel, flags=re.I)
+            soort = clean((d.select_one('.document-type-name') or BeautifulSoup('', 'html.parser')).get_text(' ', strip=True))
+            docs.append((did, titel, urllib.parse.urljoin(KOGGENLAND_RAAD, a['href']), soort, punt))
+    return punten, docs
+
+def collect_go(db, gid):
+    cfg = GEMEENTEN[gid]
+    base = cfg['go']
+    try:
+        meetings = go_list_meetings(db, gid, base)
+        vandaag = datetime.date.today()
+        lo = (vandaag - datetime.timedelta(days=MEETING_WINDOW_PAST)).isoformat()
+        hi = (vandaag + datetime.timedelta(days=MEETING_WINDOW_AHEAD)).isoformat()
+        soon = (vandaag + datetime.timedelta(days=21)).isoformat()
+        nu = datetime.datetime.now(datetime.timezone.utc)
+        def wacht(m):
+            # Komende drie weken: elk half uur. Rest van het venster: elke 6 uur.
+            minuten = 25 if vandaag.isoformat() <= m['date'] <= soon else 360
+            return (nu - datetime.timedelta(minutes=minuten)).isoformat(timespec='seconds')
+        window = [(h, m) for h, m in meetings.items() if m.get('gemeente') == gid and lo <= m['date'] <= hi
+                  and m.get('checked', '') < wacht(m)]
+        window.sort(key=lambda p: (p[1].get('checked', '') != '', not (vandaag.isoformat() <= p[1]['date'] <= soon), p[1].get('checked', '')))
+        added = fetched = 0
+        errors = []
+        for href, m in window[:GO_PER_RUN]:
+            url = KOGGENLAND_RAAD + href
+            try:
+                r = http_get(url, timeout=90)
+                r.raise_for_status()
+            except Exception as exc:
+                errors.append(f'{m["type"]} {m["date"]}: {str(exc)[:60]}')
+                m['checked'] = utc()
+                continue
+            fetched += 1
+            m['checked'] = utc()
+            label = f'{m["type"]} {datetime.date.fromisoformat(m["date"]).day} {MAANDEN_LIJST[datetime.date.fromisoformat(m["date"]).month - 1]} {m["date"][:4]}' \
+                    + (f' {m["tijd"]}' if m.get('tijd') else '')
+            mkey = make_key('Raadsportaal|' + url)
+            mitem = db['items'].setdefault(mkey, new_item(gid, label, url, 'Raadsportaal', excerpt=''))
+            mitem.update(title=label, gemeente=gid, kind='vergadering', doc_date=m['date'], doc_date_label='vergaderdatum',
+                         last_seen=today())
+            punten, docs = go_parse_meeting(r.text)
+            m['documents'] = len(docs)
+            check_agenda(mitem, m, punten)
+            for did, titel, durl, soort, punt in docs:
+                key = make_key(DOCS_SOURCE + '|go-' + gid + '-' + did)
+                item = db['items'].get(key)
+                if item is None:
+                    item = db['items'][key] = new_item(gid, titel, durl, DOCS_SOURCE, kind='raadsdocument')
+                    added += 1
+                seen_in = item.setdefault('meetings', [])
+                entry = {'date': m['date'], 'meeting': label, 'agendapunt': punt}
+                if entry not in seen_in:
+                    seen_in.append(entry)
+                    seen_in.sort(key=lambda e: e['date'])
+                eerste = seen_in[0]
+                status = GO_MOTIE.search(titel)
+                if status and re.search(r'motie|amendement', titel + ' ' + soort, re.I):
+                    nieuw = status.group(1).capitalize()
+                    if item.get('motie_status') and item['motie_status'] != nieuw:
+                        record_change(item, 'Uitkomst', f'{item["motie_status"]} → {nieuw}')
+                    item['motie_status'] = nieuw
+                item.update(title=titel, url=durl, file_url=durl, gemeente=gid, rapport=soort or None,
+                            doc_date=eerste['date'], doc_date_label='vergaderdatum', meeting_title=eerste['meeting'],
+                            agendapunt=eerste['agendapunt'], last_seen=today(),
+                            excerpt=eerste['meeting'] + (f' · agendapunt {eerste["agendapunt"]}' if eerste['agendapunt'] else '')
+                            + (f' · {soort}' if soort else '')
+                            + (f' · ook in {len(seen_in) - 1} andere vergadering(en)' if len(seen_in) > 1 else ''))
+        in_venster = sum(1 for m in meetings.values() if m.get('gemeente') == gid and lo <= m['date'] <= hi)
+        total_docs = sum(1 for v in db['items'].values() if v.get('kind') == 'raadsdocument' and v.get('gemeente') == gid)
+        set_status(db, gid, DOCS_SOURCE, ok=not errors, count=fetched, new=added, error='; '.join(errors)[:250] or None,
+                   note=f'raad.koggenland.nl (GO. vergaderen), via martijn-media.nl: het IP-adres daarvan is door de griffie '
+                        f'uitgezonderd van de botcontrole. {fetched} vergaderpagina\'s bijgewerkt, {in_venster} vergaderingen '
+                        f'tussen {lo} en {hi}, {total_docs} documenten bekend. Komende drie weken elk half uur, de rest elke 6 uur.')
+    except Exception as exc:
+        set_status(db, gid, DOCS_SOURCE, ok=False, error=str(exc)[:250])
+
+MAANDEN_LIJST = list(MAANDEN)
+
+# ---------------------------------------------------------------------------
 # Raadsportaal (iBabs): vergaderingen en hun documenten
 # ---------------------------------------------------------------------------
 def ibabs_list_meetings(db, gid):
@@ -630,7 +794,11 @@ def ibabs_list_meetings(db, gid):
     state = db.setdefault('state', {})
     meetings = state.setdefault('meetings', {})
     listed = state.setdefault('meetings_listed', {})
-    if listed.get(gid) == today():
+    # Elk half uur de vergaderlijst opnieuw ophalen (was: één keer per dag). Een vergadering die het college
+    # of de griffie later op de dag plaatst, komt zo binnen een half uur binnen in plaats van de dag erna.
+    vorige = listed.get(gid) or ''
+    if len(vorige) > 10 and (datetime.datetime.now(datetime.timezone.utc)
+                             - datetime.datetime.fromisoformat(vorige)).total_seconds() < 25 * 60:
         return []
     years = {datetime.date.today().year}
     if datetime.date.today().month <= 2:
@@ -652,7 +820,7 @@ def ibabs_list_meetings(db, gid):
                     m.update(gemeente=gid, type=type_name, date=date, label=label)
             except Exception as exc:
                 errors.append(f'{type_name} {year}: {str(exc)[:60]}')
-    listed[gid] = today()
+    listed[gid] = utc()
     return errors
 
 def ibabs_parse_meeting(page_html, base):
@@ -845,6 +1013,37 @@ def report_date(row, date_col, report_name):
         return date, 'registratiedatum', None
     return date, 'vergaderdatum', raw  # tekst met vergadering en agendapunt
 
+def volg_uitkomst(item, row, rapport):
+    """Moties, amendementen en toezeggingen: status (aangenomen/verworpen), indieners, afgedaan en stand van zaken.
+    Een verandering ten opzichte van de vorige keer wordt een wijziging (en een melding)."""
+    r = rapport.casefold()
+    if not any(w in r for w in ('motie', 'amendement', 'toezegging')):
+        return
+    status = clean(row.get('status') or '')
+    if status:
+        oud = item.get('motie_status')
+        if oud and oud != status:
+            record_change(item, 'Uitkomst', f'{oud} → {status}')
+        item['motie_status'] = status
+    indieners = [clean(x) for x in re.split(r'\n', '\n'.join(str(row.get(k) or '') for k in
+                 ('hoofdindiener', 'medeindiener', 'raadsleden', 'Fracties', 'fractie'))) if clean(x)]
+    if indieners:
+        # 'Beerepoot, T. (Tom) (VVD)' -> 'VVD'; fracties blijven zoals ze zijn.
+        partijen = list(dict.fromkeys((re.findall(r'\(([^()]+)\)\s*$', x) or [x])[-1] for x in indieners))
+        item['indieners'] = ', '.join(partijen)[:120]
+    for veld in ('completed', 'afgedaan'):
+        if veld in row and row.get(veld) in ('Ja', 'Nee'):
+            nu = row[veld] == 'Ja'
+            if item.get('afgedaan') is False and nu:
+                record_change(item, 'Afgedaan', ('toezegging' if 'toezegging' in r else 'motie') + ' is afgedaan',
+                              added=[clean(row.get('standvanzaken') or '')[:220]] if row.get('standvanzaken') else ())
+            item['afgedaan'] = nu
+    stand = clean(row.get('standvanzaken') or '')
+    if stand:
+        if item.get('stand') and item['stand'] != stand[:400]:
+            record_change(item, 'Stand van zaken', 'stand van zaken bijgewerkt', added=[stand[:220]], removed=[item['stand'][:220]])
+        item['stand'] = stand[:400]
+
 def collect_ibabs_reports(db, gid):
     base = GEMEENTEN[gid]['ibabs']
     source_name = 'Raadsportaal-overzichten'
@@ -910,9 +1109,13 @@ def collect_ibabs_reports(db, gid):
                                 record_change(item, 'Beantwoord', f'datum antwoord: {antwoord}')
                             if antwoord:
                                 item['antwoord_datum'] = antwoord
+                        volg_uitkomst(item, row, rep['name'])
                         item['report_seen'] = True
                         item['excerpt'] = rep['name'] + (f' · antwoord {item["antwoord_datum"]}' if item.get('antwoord_datum')
-                                                         else (' · nog niet beantwoord' if 'datumantwoord' in row else ''))
+                                                         else (' · nog niet beantwoord' if 'datumantwoord' in row else '')) \
+                            + (f' · {item["motie_status"]}' if item.get('motie_status') else '') \
+                            + (f' · {item["indieners"]}' if item.get('indieners') else '') \
+                            + ((' · afgedaan' if item['afgedaan'] else ' · nog open') if 'afgedaan' in item else '')
                     start += len(rows)
                     # Stoppen zodra een hele pagina buiten bereik valt (nieuwste staan bovenaan).
                     reached_old = bool(rows) and old_on_page == len(rows)
@@ -1060,7 +1263,7 @@ def attachment_lines(attachments):
         lines.append(f'[Bijlage: {title}]')
         body = []
         try:
-            r = requests.get(url, headers=HEADERS, timeout=40)
+            r = http_get(url, headers=HEADERS, timeout=40)
             r.raise_for_status()
             if len(r.content) <= MAX_DOC_BYTES and r.content[:4] == b'%PDF':
                 body = to_lines(pdf_text(r.content))
@@ -1089,7 +1292,7 @@ def check_documents(db):
         if (datetime.datetime.now(datetime.timezone.utc) - started).total_seconds() > DOC_TIME_BUDGET:
             break  # tijd op; de rest komt de volgende run
         try:
-            head = requests.get(item.get('file_url') or item['url'], headers=HEADERS, timeout=30, stream=True)
+            head = http_get(item.get('file_url') or item['url'], headers=HEADERS, timeout=30, stream=True)
             if head.status_code in (404, 410):
                 head.close()
                 item['missing_count'] = item.get('missing_count', 0) + 1
@@ -1371,6 +1574,7 @@ def check_vraag_termijnen(db):
 ELDERS_SOURCE = 'Andere overheden'
 TK_SOURCE = 'Tweede Kamer'
 RS_SOURCE = 'Rechtspraak'
+WOO_SOURCE = 'Woo-publicaties'
 ELDERS_DAYS = 45
 # Namen die ook achternaam zijn of elders in Noord-Holland voorkomen (Zuid-Scharwoude, Oudendijk bij Strijen):
 # niet los zoeken bij de rechtspraak (daar staan advocatennamen in de tekst).
@@ -1570,6 +1774,56 @@ def collect_rechtspraak(db):
                     'van de dorpen voorkomt. Namen die ook achternaam zijn (Berkhout, Twisk) of elders voorkomen worden '
                     'niet los gezocht. Uitspraken zijn geanonimiseerd. Eén keer per uur.')
 
+def collect_woo(db):
+    """Woo-publicaties op open.overheid.nl: wat de gemeenten zelf openbaar maken, en documenten van andere
+    overheden waarin een van de plaatsen in titel of omschrijving staat."""
+    eerste = elders_first(db, 'woo')
+    if not elders_due(db, 'woo'):
+        return
+    vanaf = (datetime.date.today() - datetime.timedelta(days=ELDERS_DAYS)).strftime('%d-%m-%Y')
+    added = total = 0
+    errors = []
+    # open.overheid.nl bevat ook regelgeving die al als bekendmaking (KOOP) binnenkomt: die niet dubbel.
+    koop_titels = {norm(v.get('title') or '') for v in db['items'].values() if v.get('source') == KOOP_SOURCE}
+    for key in [k for k, v in db['items'].items() if v.get('source') == WOO_SOURCE and norm(v.get('title') or '') in koop_titels]:
+        db['items'].pop(key)
+    for gid, cfg in GEMEENTEN.items():
+        eigen = 'gemeente ' + cfg['naam'].casefold()
+        for naam in dict.fromkeys([cfg['naam']] + cfg.get('plaatsen', [])):
+            if naam.casefold() in PLAATS_DUBBEL:
+                continue
+            try:
+                r = requests.get('https://open.overheid.nl/overheid/openbaarmakingen/api/v0/zoek', headers=HEADERS, timeout=40,
+                                 params={'zoektekst': naam, 'sort': 'publicatiedatum', 'publicatiedatumVan': vanaf})
+                r.raise_for_status()
+                for res in r.json().get('resultaten') or []:
+                    d = res.get('document') or {}
+                    titel, oms = clean(d.get('titel') or ''), clean(d.get('omschrijving') or '')
+                    publisher = clean(d.get('publisher') or '')
+                    if publisher.casefold() == eigen:
+                        hit_gid, plaats = gid, None
+                    else:
+                        hit_gid, plaats = plaats_in(titel + ' ' + oms, dubbel_ok=False)
+                        if not hit_gid:
+                            continue
+                    if not titel or not d.get('id') or norm(titel) in koop_titels:
+                        continue
+                    total += 1
+                    key = make_key(WOO_SOURCE + '|' + d['id'])
+                    item = db['items'].get(key)
+                    if item is None:
+                        item = db['items'][key] = new_item(hit_gid, titel, d.get('pid') or f'https://open.overheid.nl/documenten/{d["id"]}',
+                                                           WOO_SOURCE, excerpt='', baseline=eerste or None)
+                        added += 1
+                    item.update(gemeente=hit_gid, instantie=publisher, plaats=plaats or item.get('plaats'),
+                                doc_date=(d.get('openbaarmakingsdatum') or '')[:10] or None, doc_date_label='openbaar gemaakt',
+                                excerpt=publisher + (f' · {oms[:300]}' if oms else ''), last_seen=today())
+            except Exception as exc:
+                errors.append(f'{naam}: {str(exc)[:60]}')
+    set_status(db, 'algemeen', WOO_SOURCE, ok=not errors, count=total, new=added, error='; '.join(errors)[:250] or None,
+               note=f'open.overheid.nl (Woo-publicaties, laatste {ELDERS_DAYS} dagen): alles wat de drie gemeenten openbaar maken, '
+                    'plus documenten van andere overheden met een van de plaatsen in titel of omschrijving. Eén keer per uur.')
+
 def migrate(db):
     db.setdefault('items', {})
     db.setdefault('status', {})
@@ -1686,6 +1940,8 @@ def main():
         if cfg['ibabs']:
             collect_meetings(db, gid)
             collect_ibabs_reports(db, gid)
+        if cfg.get('go'):
+            collect_go(db, gid)
         if cfg['news_rss']:
             collect_news_rss(db, gid, cfg['news_rss'])
         if cfg['college_pdf_page']:
@@ -1693,7 +1949,7 @@ def main():
         collect_pages(db, gid)
         if cfg.get('plaatsen'):
             collect_media(db, gid, cfg['plaatsen'])
-    for fn in (collect_andere_overheden, collect_tweede_kamer, collect_rechtspraak):
+    for fn in (collect_andere_overheden, collect_tweede_kamer, collect_rechtspraak, collect_woo):
         try:
             fn(db)
         except Exception as exc:

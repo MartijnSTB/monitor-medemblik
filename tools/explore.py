@@ -1,19 +1,18 @@
-import os, re, requests
-K = os.environ.get('KOGGENLAND_PROXY_KEY', '')
-P = 'https://martijn-media.nl/monitor/koggenland.php'
-def get(pad): return requests.get(P, params={'pad': pad}, headers={'X-Monitor-Key': K}, timeout=60)
-sq = lambda t: re.sub(r'\s+', ' ', t)
-t = get('/Vergaderingen/Gemeenteraad/2026/09-november/19:30').text
-i = t.find('/Documenten/01-01-Memo')
-print('== rond eerste document:\n', sq(t[i-3500:i+900]))
-j = t.find('/Documenten/04-02a')
-print('\n== rond 04-02a:\n', sq(t[j-1200:j+500]))
-for pad in ['/Vergaderingen/Gemeenteraad/2026', '/documenten/Moties-en-amendementen', '/documenten/Memo-s-en-afdoeningen-van-college']:
-    r = get(pad); t = r.text
-    print('\n==', pad, r.status_code, len(t))
-    k = max(t.find('<main'), t.find('id="content"'))
-    links = re.findall(r'<a[^>]+href="([^"#]+)"[^>]*>(.*?)</a>', t, re.S)
-    rel = [(h, sq(re.sub(r'<[^>]+>', ' ', x)).strip()[:90]) for h, x in links if re.search(r'Vergaderingen/.+/20\d\d/|Documenten/|documenten/', h)]
-    for h, x in rel[:25]: print('   ', h[:110], '|', x)
-    m = t.find('<table'); 
-    if m > 0: print('  table:', sq(t[m:m+1500]))
+import sys, json; sys.path.insert(0, '.')
+import monitor as m
+db = {'items': {}, 'status': {}, 'state': {}}
+ms = m.go_list_meetings(db, 'koggenland', 'https://raad.koggenland.nl')
+print('vergaderingen:', len(ms))
+for h, v in sorted(ms.items(), key=lambda p: p[1]['date'])[-12:]: print('  ', v['date'], v.get('tijd'), v['type'], h)
+r = m.http_get('https://raad.koggenland.nl/Vergaderingen/Gemeenteraad/2026/09-november/19:30', timeout=90)
+punten, docs = m.go_parse_meeting(r.text)
+print('agendapunten', len(punten), punten[:8])
+print('documenten', len(docs))
+for d in docs[:8]: print('  ', d)
+moties = [d for d in docs if 'otie' in d[1] or 'mendement' in d[1]]
+print('moties', moties[:5])
+m.collect_go(db, 'koggenland')
+print(db['status'])
+print(len(db['items']), [ (v['title'][:50], v.get('motie_status')) for v in db['items'].values() if v.get('motie_status')][:6])
+# test document via proxy (stream)
+x = m.http_get(docs[0][2], timeout=60, stream=True); print('doc', x.status_code, x.headers.get('content-type'), x.raw.read(8))
