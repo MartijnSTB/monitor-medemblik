@@ -13,9 +13,12 @@ permissions:
   pages: write
   id-token: write
 
+# Niet afbreken als er een nieuwere run komt: een afgebroken publicatie blijft bij GitHub 'bezig' staan
+# en dan mislukt de volgende ('due to in progress deployment'). Nu wacht de nieuwe netjes op de vorige;
+# GitHub houdt maar één wachtende over, dus er stapelt niets op.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
