@@ -5,8 +5,8 @@
       "url": "https://www.opmeer.nl/bekijk-duurzame-woningen-in-opmeer-of-stel-je-eigen-huis-open",
       "source": "Nieuws",
       "gemeente": "opmeer",
-      "first_seen": "2026-11-10T13:16:51+00:00",
-      "updated": "2026-11-10T13:16:51+00:00",
+      "first_seen": "2026-11-10T13:31:45+00:00",
+      "updated": "2026-11-10T13:31:45+00:00",
       "last_change": null,
       "hash": "",
       "revisions": 1,
@@ -19,8 +19,1089 @@
       "excerpt": "Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
       "missing_count": 0,
       "text_hash": "310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca",
-      "content_checked": "2026-11-10T13:17:34+00:00",
+      "content_checked": "2026-11-10T13:32:34+00:00",
       "kw_sig": "5ae1c58d6943|310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca|Bekijk duurzame woningen in Opmeer of stel je eigen huis open|Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen."
+    },
+    "f7027209772f84ee719235de8f96be2d76dfd83179815bd3d2a6af5a659601f8": {
+      "title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Index/56ef18cd-49e9-4512-858b-8762d2fe88c5",
+      "source": "Raadsportaal",
+      "gemeente": "opmeer",
+      "first_seen": "2026-10-15T11:12:27+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": "2026-11-10T13:31:31+00:00",
+      "hash": "",
+      "revisions": 2,
+      "excerpt": "",
+      "kind": "vergadering",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "last_seen": "2026-11-10",
+      "kw_sig": "5ae1c58d6943||Oordeelsvormende raadsvergadering donderdag 26 november 2026|",
+      "changes": [
+        {
+          "at": "2026-11-10T13:31:31+00:00",
+          "type": "Agenda gepubliceerd",
+          "summary": "agenda online met 17 punten",
+          "added": [
+            "1 Opening en mededelingen",
+            "2 Spreekrecht burgers: uiterlijk 24 uur voor aanvang vergadering melden bij de griffier",
+            "3 Vragenkwartier"
+          ],
+          "removed": []
+        }
+      ],
+      "change_type": "Agenda gepubliceerd"
+    },
+    "1e6984910cd1d7052ab88733661fd685d1d5ca99ea2f605e3364b9c068325ec9": {
+      "title": "Agenda oordeelsvormende raadsvergadering 26 november 2026 - raad",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=bf7ba49e-3ad3-44f6-9381-2d5eb6c5aea4&agendaItemId=70a23dbc-bdba-415a-a06f-57714ae91663",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "4 Vaststelling van de agenda"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/bf7ba49e-3ad3-44f6-9381-2d5eb6c5aea4",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "4 Vaststelling van de agenda",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 4 Vaststelling van de agenda",
+      "missing_count": 0,
+      "text_hash": "74896c0b53361b13d0957f220fac4ca881d958ddaae7c8391da7a98e6685dadb",
+      "content_checked": "2026-11-10T13:31:47+00:00",
+      "kw_sig": "5ae1c58d6943|74896c0b53361b13d0957f220fac4ca881d958ddaae7c8391da7a98e6685dadb|Agenda oordeelsvormende raadsvergadering 26 november 2026 - raad|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 4 Vaststelling van de agenda"
+    },
+    "b38219b401b543d97e3e652be32d199c119931cd7c853e5f4d4124eccb18d3ed": {
+      "title": "Raadsvoorstel najaarsnota 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=351c16e0-210b-4f84-84ca-d5611240bea2&agendaItemId=0fecb2a0-c0c0-48b5-a3d0-c47178a7d96b",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "5 Najaarsnota 2026"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/351c16e0-210b-4f84-84ca-d5611240bea2",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "5 Najaarsnota 2026",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 5 Najaarsnota 2026",
+      "missing_count": 0,
+      "text_hash": "b33a1ffc6ccb4b6bb8cee32158764ef53132c74520e3ef80f59431af5fffedc1",
+      "content_checked": "2026-11-10T13:31:47+00:00",
+      "kw_sig": "5ae1c58d6943|b33a1ffc6ccb4b6bb8cee32158764ef53132c74520e3ef80f59431af5fffedc1|Raadsvoorstel najaarsnota 2026|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 5 Najaarsnota 2026"
+    },
+    "fdff565725cdf1499119907d3e77b3e609df9091512e961fa17cf94a1973f27d": {
+      "title": "Raadsvoorstel Vaststelling ruimtelijk ontwikkelkader Schoollocatie Hoogwoud",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=d1e24de5-6287-41c3-86e8-7c032ac705cc&agendaItemId=57cdde74-8865-4403-9754-ad1f4844f071",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/d1e24de5-6287-41c3-86e8-7c032ac705cc",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud",
+      "missing_count": 0,
+      "text_hash": "158ea9855e1c8c0d7e48cbfecbc9475c501cb269498de7c5c3034f718b2829a6",
+      "content_checked": "2026-11-10T13:31:48+00:00",
+      "kw_sig": "5ae1c58d6943|158ea9855e1c8c0d7e48cbfecbc9475c501cb269498de7c5c3034f718b2829a6|Raadsvoorstel Vaststelling ruimtelijk ontwikkelkader Schoollocatie Hoogwoud|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud"
+    },
+    "bd0c59ff8532d80b9631e6b56162e7cdb1acbef3a9490faeca9822fdcd34d5ba": {
+      "title": "Bijlage 2 - Beantwoording ingekomen reacties Schoollocatie Hoogwoud",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=d1573532-556f-497a-8032-98a0954451c2&agendaItemId=57cdde74-8865-4403-9754-ad1f4844f071",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/d1573532-556f-497a-8032-98a0954451c2",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud",
+      "missing_count": 0,
+      "text_hash": "1e627d31c291f9541f901663f7de1f445eb5574e202214eca93d6a3a3c9c085d",
+      "content_checked": "2026-11-10T13:31:49+00:00",
+      "kw_sig": "5ae1c58d6943|1e627d31c291f9541f901663f7de1f445eb5574e202214eca93d6a3a3c9c085d|Bijlage 2 - Beantwoording ingekomen reacties Schoollocatie Hoogwoud|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud"
+    },
+    "65c7677513b2fc9e0b37870d91cdd341f76f4bee3c2b70b242cfa88f6445200b": {
+      "title": "Bijlage 1 - Ruimtelijk ontwikkelkader Schoollocatie Hoogwoud",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=037f6491-14c6-4851-a941-cc0cdc53b7f4&agendaItemId=57cdde74-8865-4403-9754-ad1f4844f071",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/037f6491-14c6-4851-a941-cc0cdc53b7f4",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud",
+      "missing_count": 0,
+      "text_hash": "b203e95bc680aea761b675cd59d5c07d23cbe3b14f5894099efa3c5ba4411d80",
+      "content_checked": "2026-11-10T13:31:56+00:00",
+      "kw_sig": "5ae1c58d6943|b203e95bc680aea761b675cd59d5c07d23cbe3b14f5894099efa3c5ba4411d80|Bijlage 1 - Ruimtelijk ontwikkelkader Schoollocatie Hoogwoud|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud"
+    },
+    "95ed40f4911755951cb6b00b4bfa15aa054ef37274b2f1307832fa17e2e0c1d8": {
+      "title": "Raadsvoorstel voorbereidingskredieten huisvestingsprogramma 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=93d150ab-ff91-4621-9652-13645fc876f3&agendaItemId=f1420769-3b4f-4964-8402-71ac664a4202",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/93d150ab-ff91-4621-9652-13645fc876f3",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027",
+      "missing_count": 0,
+      "text_hash": "8d405725716c92b6cfb1795be474a8d3d69ab737babd416f3cea5502ddabf41a",
+      "content_checked": "2026-11-10T13:31:56+00:00",
+      "kw_sig": "5ae1c58d6943|8d405725716c92b6cfb1795be474a8d3d69ab737babd416f3cea5502ddabf41a|Raadsvoorstel voorbereidingskredieten huisvestingsprogramma 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027"
+    },
+    "0163231dd2dc16133fd6eba0d0da05e91a651b05265b46d03a4c86ce9df060cb": {
+      "title": "Bijlage 1 Huisvestingsprogramma onderwijs 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=6f98787a-489a-47fc-b8cc-3c3cac0597c8&agendaItemId=f1420769-3b4f-4964-8402-71ac664a4202",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/6f98787a-489a-47fc-b8cc-3c3cac0597c8",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027",
+      "missing_count": 0,
+      "text_hash": "ea3d26bf6a943dfe5aed01535f643ad711968eaef3005fc5259b7bdd41dc7fc1",
+      "content_checked": "2026-11-10T13:31:57+00:00",
+      "kw_sig": "5ae1c58d6943|ea3d26bf6a943dfe5aed01535f643ad711968eaef3005fc5259b7bdd41dc7fc1|Bijlage 1 Huisvestingsprogramma onderwijs 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027"
+    },
+    "3cb8d23c73bc56f2585f2f47e387012313c1694166f51c22d9d4b96641786ec7": {
+      "title": "Raadsvoorstel aanvullend krediet kindcentrum Opmeer-Spanbroek",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=0878f297-5559-418c-b324-46e7a9b4020b&agendaItemId=2ed8135d-8903-4555-a7a3-4cc1c441a48e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "8 Aanvullend krediet Kindcentrum Opmeer-Spanbroek"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/0878f297-5559-418c-b324-46e7a9b4020b",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "8 Aanvullend krediet Kindcentrum Opmeer-Spanbroek",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 8 Aanvullend krediet Kindcentrum Opmeer-Spanbroek",
+      "missing_count": 0,
+      "text_hash": "93b4628d30d3a0fdbfb6e0e062eb463b418a45fd972c65166f9f5b8ac0362e0d",
+      "content_checked": "2026-11-10T13:31:58+00:00",
+      "kw_sig": "5ae1c58d6943|93b4628d30d3a0fdbfb6e0e062eb463b418a45fd972c65166f9f5b8ac0362e0d|Raadsvoorstel aanvullend krediet kindcentrum Opmeer-Spanbroek|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 8 Aanvullend krediet Kindcentrum Opmeer-Spanbroek"
+    },
+    "fb8170065456df2e66e8d7cd55c4ecd7b1b803ca6ca5827f89ca25bfc816e1e3": {
+      "title": "Voorbereidingskrediet scenario’s huisvesting gemeentehuis en De Spil",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=6854c02b-e59a-44d6-a9d8-25cf44808ca9&agendaItemId=9e733cb4-5286-4d1e-b113-0511f1ed33a1",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/6854c02b-e59a-44d6-a9d8-25cf44808ca9",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis",
+      "missing_count": 0,
+      "text_hash": "ccb8289c4bf1ce48719d8dba51d940cec57f0600a5b13b281dd3a7915a518c19",
+      "content_checked": "2026-11-10T13:31:59+00:00",
+      "kw_sig": "5ae1c58d6943|ccb8289c4bf1ce48719d8dba51d940cec57f0600a5b13b281dd3a7915a518c19|Voorbereidingskrediet scenario’s huisvesting gemeentehuis en De Spil|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis"
+    },
+    "266633b7dee164482d99ea1d0db2091efa889fa2821128f1167d099820dd4e55": {
+      "title": "Bijlage 1 - RIB Verbouwing en herinrichting gemeentehuis",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=92626c34-a630-4281-ba96-54841f8e3eb1&agendaItemId=9e733cb4-5286-4d1e-b113-0511f1ed33a1",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/92626c34-a630-4281-ba96-54841f8e3eb1",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis",
+      "missing_count": 0,
+      "content_checked": "2026-11-10T13:32:00+00:00",
+      "content_error": "cryptography>=3.1 is required for AES algorithm",
+      "kw_sig": "5ae1c58d6943||Bijlage 1 - RIB Verbouwing en herinrichting gemeentehuis|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis"
+    },
+    "a7622478d9adde77fe12a74cbadc0f2f030b585448662380b1805190f848c95f": {
+      "title": "Bijlage 2 - Opdracht, rol en werkwijze werkgroep nieuwe raadzaal",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=aa964b79-1930-445d-aab8-c7cee1bc7916&agendaItemId=9e733cb4-5286-4d1e-b113-0511f1ed33a1",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/aa964b79-1930-445d-aab8-c7cee1bc7916",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis",
+      "missing_count": 0,
+      "text_hash": "113ee877ea5fad87457c198f27d20ed2ad8b9288ca08a05319a1ad38f7cfd36a",
+      "content_checked": "2026-11-10T13:32:01+00:00",
+      "kw_sig": "5ae1c58d6943|113ee877ea5fad87457c198f27d20ed2ad8b9288ca08a05319a1ad38f7cfd36a|Bijlage 2 - Opdracht, rol en werkwijze werkgroep nieuwe raadzaal|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis"
+    },
+    "f39111ae7ea55bb25afd38f5cdb2b6f6184a367213521d975382570e0787d563": {
+      "title": "Raadsvoorstel wensen en bedenkingen concept-Ontwikkelperspectief NHN",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=15fc5c4c-e28c-44dc-bb44-2b950795de45&agendaItemId=1ceca5e5-8d33-424b-84fa-82a51aa2ab99",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/15fc5c4c-e28c-44dc-bb44-2b950795de45",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord",
+      "missing_count": 0,
+      "text_hash": "6404496bc2cb39b718d353cad760c6fdffcf4a498149860e2aa10f0407c822d3",
+      "content_checked": "2026-11-10T13:32:02+00:00",
+      "kw_sig": "5ae1c58d6943|6404496bc2cb39b718d353cad760c6fdffcf4a498149860e2aa10f0407c822d3|Raadsvoorstel wensen en bedenkingen concept-Ontwikkelperspectief NHN|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord"
+    },
+    "ee0e728a362c8c10c416291da358d2cff3a881f72f2c960410e126a92996df55": {
+      "title": "Bijlage 1: B&W-brief concept-Ontwikkelperspectief Noord-Holland Noord",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=c6bdfa61-289f-437a-862c-079518bb3c59&agendaItemId=1ceca5e5-8d33-424b-84fa-82a51aa2ab99",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/c6bdfa61-289f-437a-862c-079518bb3c59",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord",
+      "missing_count": 0,
+      "text_hash": "67c7dd2f05535b6d3312ecb6daf7b5894de42ace74ad7f4620a95f0e7f7732b4",
+      "content_checked": "2026-11-10T13:32:11+00:00",
+      "kw_sig": "5ae1c58d6943|67c7dd2f05535b6d3312ecb6daf7b5894de42ace74ad7f4620a95f0e7f7732b4|Bijlage 1: B&W-brief concept-Ontwikkelperspectief Noord-Holland Noord|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord"
+    },
+    "81c059a9bcbc549aab47cef50b502253be6c570f7d87fb1e1cd4a18bbf09d305": {
+      "title": "Bijlage 2: Concept-Ontwikkelperspectief NHN",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=9bc99239-723e-4da2-93f9-f85bf0221dad&agendaItemId=1ceca5e5-8d33-424b-84fa-82a51aa2ab99",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/9bc99239-723e-4da2-93f9-f85bf0221dad",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord",
+      "missing_count": 0,
+      "file_hash": "groot|attachment; filename=\"Concept-Ontwikkelperspectief NHN .pdf\"; filename*=UTF-8''Concept-Ontwikkelperspectief%20NHN%20.pdf|9b604e03074604f631477162b3b276740f9043b97857f7d6bf2d142bc4cf7e17",
+      "content_checked": "2026-11-10T13:32:13+00:00",
+      "kw_sig": "5ae1c58d6943||Bijlage 2: Concept-Ontwikkelperspectief NHN|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord"
+    },
+    "8e182c8f38e8c8d4356a76eb5bcb8d82f307a6c9d94623ad94e99d4b6ebfbf99": {
+      "title": "Vaststellen normenkader 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=606f6845-1ff2-428a-9dfb-459c28e5c8a0&agendaItemId=8c27b36c-e92a-43d1-b283-c9113f33f035",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "12 Vaststellen normenkader 2026"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/606f6845-1ff2-428a-9dfb-459c28e5c8a0",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "12 Vaststellen normenkader 2026",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 12 Vaststellen normenkader 2026",
+      "missing_count": 0,
+      "text_hash": "1efbda351dbc6e27784282c9707342ac114e6400e0125f256b7b290ad88c79eb",
+      "content_checked": "2026-11-10T13:32:14+00:00",
+      "kw_sig": "5ae1c58d6943|1efbda351dbc6e27784282c9707342ac114e6400e0125f256b7b290ad88c79eb|Vaststellen normenkader 2026|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 12 Vaststellen normenkader 2026"
+    },
+    "32004e28aed93ff6c745b6a2d86a2cf4435fd4f06d490430ca49880724ce621d": {
+      "title": "Normenkader 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=da903bf3-c054-4a37-bbbb-66a5ff9e53d5&agendaItemId=8c27b36c-e92a-43d1-b283-c9113f33f035",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "12 Vaststellen normenkader 2026"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/da903bf3-c054-4a37-bbbb-66a5ff9e53d5",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "12 Vaststellen normenkader 2026",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 12 Vaststellen normenkader 2026",
+      "missing_count": 0,
+      "text_hash": "1e65ab26e8cd716609f9dd56256b375358b7732d9336f4ace1b80347ab964ac7",
+      "content_checked": "2026-11-10T13:32:15+00:00",
+      "kw_sig": "5ae1c58d6943|1e65ab26e8cd716609f9dd56256b375358b7732d9336f4ace1b80347ab964ac7|Normenkader 2026|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 12 Vaststellen normenkader 2026"
+    },
+    "1cf29a25f759f5c489cf26c71700acc2ccbe8c8fb628806d5f45c99bda438227": {
+      "title": "Bijlage was-wordt bij normenkader 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=5ca0e651-8929-4329-ae3b-ddde808b970f&agendaItemId=8c27b36c-e92a-43d1-b283-c9113f33f035",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "12 Vaststellen normenkader 2026"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/5ca0e651-8929-4329-ae3b-ddde808b970f",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "12 Vaststellen normenkader 2026",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 12 Vaststellen normenkader 2026",
+      "missing_count": 0,
+      "text_hash": "1311fc30188de9ccf3f681d66e6f71d180e6c1f95ad9574ab17809d889f6fbb4",
+      "content_checked": "2026-11-10T13:32:16+00:00",
+      "kw_sig": "5ae1c58d6943|1311fc30188de9ccf3f681d66e6f71d180e6c1f95ad9574ab17809d889f6fbb4|Bijlage was-wordt bij normenkader 2026|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 12 Vaststellen normenkader 2026"
+    },
+    "68fa1fe18c9acf869f47338eea9f28c508fab0f43e0bc3c428f270a2b43519e6": {
+      "title": "Raadsvoorstel vaststellen verordeningen 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=9069775c-0114-47b4-9237-4f81f152dd0f&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/9069775c-0114-47b4-9237-4f81f152dd0f",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "601283a7a79f04a676ef0b044cb1f14e8c020a225de9444eb4d0b15c948c451f",
+      "content_checked": "2026-11-10T13:32:17+00:00",
+      "kw_sig": "5ae1c58d6943|601283a7a79f04a676ef0b044cb1f14e8c020a225de9444eb4d0b15c948c451f|Raadsvoorstel vaststellen verordeningen 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "f355abece5047655a47d089ab96cf1e6310ace839aa218342677838eab9bd563": {
+      "title": "Bijlage a. Verordening forensenbelasting 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=8177528f-fd87-45cb-a2ee-f290b5699ea1&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/8177528f-fd87-45cb-a2ee-f290b5699ea1",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "a879149810c954be38f0f356be0e9a3c873c94c70fae13b3f1a139ac8f9e4325",
+      "content_checked": "2026-11-10T13:32:18+00:00",
+      "kw_sig": "5ae1c58d6943|a879149810c954be38f0f356be0e9a3c873c94c70fae13b3f1a139ac8f9e4325|Bijlage a. Verordening forensenbelasting 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "98ef498c57442abdc2c532c7c52f4cd34e1a5d9817cdf1772ba8ede497229fa4": {
+      "title": "Bijlage b. Verordening op de heffing en invordering van toeristenbelasting 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=105ce964-4f3f-42f6-b220-f2712ac79187&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/105ce964-4f3f-42f6-b220-f2712ac79187",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "54dcb4002c76f0272f88049d10d7b8b774f98cf46308a197be1be3f04191f8bd",
+      "content_checked": "2026-11-10T13:32:18+00:00",
+      "kw_sig": "5ae1c58d6943|54dcb4002c76f0272f88049d10d7b8b774f98cf46308a197be1be3f04191f8bd|Bijlage b. Verordening op de heffing en invordering van toeristenbelasting 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "d76ba5687144e816c6bc9d33c30750ae4d615a49a5f351d2484bf7186c0ba5dd": {
+      "title": "Bijlage c. Verordening Afvalstoffenheffing 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=ead1b72d-0100-40df-839d-22859fe9f900&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/ead1b72d-0100-40df-839d-22859fe9f900",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "e4db2de278b6d259c92775d561de7792a3fa2951978666f8191ce18837ac6237",
+      "content_checked": "2026-11-10T13:32:19+00:00",
+      "kw_sig": "5ae1c58d6943|e4db2de278b6d259c92775d561de7792a3fa2951978666f8191ce18837ac6237|Bijlage c. Verordening Afvalstoffenheffing 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "a021401e7461ea170ea651dc0e01e6cd7fd25cd81c6e9ee92910d5d46c797bd8": {
+      "title": "Bijlage d. Verordening OZB roerende woon- en bedrijfsruimten 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=97bafbc8-cebb-4d72-80bf-eab8d58dd8b6&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/97bafbc8-cebb-4d72-80bf-eab8d58dd8b6",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "5f978889a4c9f8921708f1877c1f8e56c7df76bf4833ea1d0a0dfa1c6278f218",
+      "content_checked": "2026-11-10T13:32:20+00:00",
+      "kw_sig": "5ae1c58d6943|5f978889a4c9f8921708f1877c1f8e56c7df76bf4833ea1d0a0dfa1c6278f218|Bijlage d. Verordening OZB roerende woon- en bedrijfsruimten 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "4c685cead29cdec32548b67cb7051cd629f281d4623a841aefa798a81aa88fca": {
+      "title": "Bijlage e. Verordening onroerende zaakbelastingen Opmeer 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=3337bdad-dc6e-4080-83e0-60ab36b3b236&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/3337bdad-dc6e-4080-83e0-60ab36b3b236",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "e218ce6a35126cd819c6943e7f9f97f47ffb9dc69439637dda21de6509b115c5",
+      "content_checked": "2026-11-10T13:32:21+00:00",
+      "kw_sig": "5ae1c58d6943|e218ce6a35126cd819c6943e7f9f97f47ffb9dc69439637dda21de6509b115c5|Bijlage e. Verordening onroerende zaakbelastingen Opmeer 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "151f767d2174b270d7d7c6667ba3883a27123f2fbd733c7da19030045bab1254": {
+      "title": "Bijlage f. Verordening Lijkbezorgingsrechten 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=4b8f8c5d-0731-4ef6-8a72-e9eaaeecc1af&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/4b8f8c5d-0731-4ef6-8a72-e9eaaeecc1af",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "13ae7212463a5233d6c882632dcd01f1d2d57ea1c8375dcdc599ebaa4e7a9712",
+      "content_checked": "2026-11-10T13:32:21+00:00",
+      "kw_sig": "5ae1c58d6943|13ae7212463a5233d6c882632dcd01f1d2d57ea1c8375dcdc599ebaa4e7a9712|Bijlage f. Verordening Lijkbezorgingsrechten 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "aa33539c84a4a35982380b0e2296f240578d42bfe28a2dfc407b1bf4076b13ac": {
+      "title": "Bijlage g. Verordening Riool- en Waterzorg heffing Opmeer 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=1c0e56b7-ac34-420e-ab23-969e10c00b46&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/1c0e56b7-ac34-420e-ab23-969e10c00b46",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "df93ea3b39238a05fec28df4be23740f7a113f8476b27fed99d5d7163526aadb",
+      "content_checked": "2026-11-10T13:32:22+00:00",
+      "kw_sig": "5ae1c58d6943|df93ea3b39238a05fec28df4be23740f7a113f8476b27fed99d5d7163526aadb|Bijlage g. Verordening Riool- en Waterzorg heffing Opmeer 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "ef5e878e216a84283921fbde1ed90b3901c665e96f7b926ca381d32c1b0010ba": {
+      "title": "Bijlage h. Verordening op de heffing en de invordering van leges 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=141a9574-c3c4-419c-9c7e-ee886def8ae2&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/141a9574-c3c4-419c-9c7e-ee886def8ae2",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "5af82d6653eac19e818f2b9543319c76297fbfb7fb55b44cd509196a7a58051d",
+      "content_checked": "2026-11-10T13:32:23+00:00",
+      "kw_sig": "5ae1c58d6943|5af82d6653eac19e818f2b9543319c76297fbfb7fb55b44cd509196a7a58051d|Bijlage h. Verordening op de heffing en de invordering van leges 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "5533be144a54c4404f67b68f990aec018b0b46a1fe56c50e22a610c1f2256268": {
+      "title": "Legestabel 2027",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=4eb67339-a287-4032-8541-1fb075bf1e75&agendaItemId=b864ef6a-bb38-4130-99da-c0a66703612e",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "13 Vaststellen verordeningen 2027"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/4eb67339-a287-4032-8541-1fb075bf1e75",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "13 Vaststellen verordeningen 2027",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027",
+      "missing_count": 0,
+      "text_hash": "faae12d70893e4d3bd5098b20d3c7935f1178b4f3f684d62e4c3e4e92f3d8c0e",
+      "content_checked": "2026-11-10T13:32:24+00:00",
+      "kw_sig": "5ae1c58d6943|faae12d70893e4d3bd5098b20d3c7935f1178b4f3f684d62e4c3e4e92f3d8c0e|Legestabel 2027|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 13 Vaststellen verordeningen 2027"
+    },
+    "bbcf2952cdfad04d8be2c2ad2332e04e0919e71a18d0e954150317fae3ad38ff": {
+      "title": "Raadsvoorstel Actualisatie Bodemkwaliteitskaart en Handreiking bodembeheer",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=61f2af32-91e9-4773-bf66-d3947a9bc78d&agendaItemId=53d8fcb2-e280-412b-bfa4-de39766b1ce0",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/61f2af32-91e9-4773-bf66-d3947a9bc78d",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer",
+      "missing_count": 0,
+      "text_hash": "1940c1ecb7ae8e277a459a709f75039f2518926c9b694fd9572d1aad36543e1f",
+      "content_checked": "2026-11-10T13:32:25+00:00",
+      "kw_sig": "5ae1c58d6943|1940c1ecb7ae8e277a459a709f75039f2518926c9b694fd9572d1aad36543e1f|Raadsvoorstel Actualisatie Bodemkwaliteitskaart en Handreiking bodembeheer|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer"
+    },
+    "d7845185e080de274c977a4c6e20768782f3154d58add9ad441ba98062988904": {
+      "title": "Bijlage 2: Handreiking bodembeheer regio Noord-Holland",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=0c80eda6-df5f-4d7d-87d1-391be22035ba&agendaItemId=53d8fcb2-e280-412b-bfa4-de39766b1ce0",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/0c80eda6-df5f-4d7d-87d1-391be22035ba",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer",
+      "missing_count": 0,
+      "file_hash": "groot|attachment; filename=\"B2 Handreiking bodembeheer regio Noord-Holland.pdf\"; filename*=UTF-8''B2%20Handreiking%20bodembeheer%20regio%20Noord-Holland.pdf|c5984c6a2f0a901b1272fa65b79f0017e4e7597a0c80f19b73e00330457fed88",
+      "content_checked": "2026-11-10T13:32:29+00:00",
+      "kw_sig": "5ae1c58d6943||Bijlage 2: Handreiking bodembeheer regio Noord-Holland|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer"
+    },
+    "ce58e6d3a185e3dca1d5afaa9099f2185fb557e11ccd87c811881bd9e90a8c31": {
+      "title": "Raadsvoorstel rekenkamer Westfriesland-West Opmeer",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=2d1a7155-dc6d-4ae4-9e1d-5109b58fb5d2&agendaItemId=25171212-2901-4529-91e1-b9a784b2d56c",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/2d1a7155-dc6d-4ae4-9e1d-5109b58fb5d2",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West",
+      "missing_count": 0,
+      "text_hash": "2fbbfd6f598435bd32cc10eb106a7b1023a3b55c25f3e6175460c7df6556afa9",
+      "content_checked": "2026-11-10T13:32:29+00:00",
+      "kw_sig": "5ae1c58d6943|2fbbfd6f598435bd32cc10eb106a7b1023a3b55c25f3e6175460c7df6556afa9|Raadsvoorstel rekenkamer Westfriesland-West Opmeer|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West"
+    },
+    "9e5c44832d0616ee1b20849a36902cb30fb467c613649b5a0d3c42dda09a0810": {
+      "title": "Samenwerkingsovereenkomst Rekenkamer Westfriesland-West",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=b2c79a57-9013-42d7-9d82-aea59dbc7c88&agendaItemId=25171212-2901-4529-91e1-b9a784b2d56c",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/b2c79a57-9013-42d7-9d82-aea59dbc7c88",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West",
+      "missing_count": 0,
+      "text_hash": "f5f6fe4c1c303047ff7f0b25a9af7cae52fb29ac539d2c438470293ddf9b0fdc",
+      "content_checked": "2026-11-10T13:32:30+00:00",
+      "kw_sig": "5ae1c58d6943|f5f6fe4c1c303047ff7f0b25a9af7cae52fb29ac539d2c438470293ddf9b0fdc|Samenwerkingsovereenkomst Rekenkamer Westfriesland-West|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West"
+    },
+    "173624931a53e2af27e8a0567903090546416843d6aa2f0e543c97bb7c1e93c0": {
+      "title": "Verordening rekenkamer Westfriesland-West gemeente Opmeer 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=a369a720-cf95-4edd-bde2-e42814907de9&agendaItemId=25171212-2901-4529-91e1-b9a784b2d56c",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/a369a720-cf95-4edd-bde2-e42814907de9",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West",
+      "missing_count": 0,
+      "text_hash": "641a9f6882fecc1559f29725aad4d4ddb2565a9241136f1ae16f2c11a5045889",
+      "content_checked": "2026-11-10T13:32:30+00:00",
+      "kw_sig": "5ae1c58d6943|641a9f6882fecc1559f29725aad4d4ddb2565a9241136f1ae16f2c11a5045889|Verordening rekenkamer Westfriesland-West gemeente Opmeer 2026|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West"
+    },
+    "30d04926107691b89ef56aaeec2382207d64f696ad62a859fdd29b3bfa437b7c": {
+      "title": "Raadsvoorstel verordening rechtspositie raadsleden gemeenteraad Opmeer 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=280737df-286c-4dfa-8676-9bc8279a526f&agendaItemId=1449ace5-272e-4632-afb9-40dbfa508da6",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "16 Verordening rechtspositie raadsleden"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/280737df-286c-4dfa-8676-9bc8279a526f",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "16 Verordening rechtspositie raadsleden",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 16 Verordening rechtspositie raadsleden",
+      "missing_count": 0,
+      "text_hash": "e7d8f8a7b0b118c07d0daae569a5f80ddacf62390cf53ebcf6fea7b5712ff55f",
+      "content_checked": "2026-11-10T13:32:32+00:00",
+      "kw_sig": "5ae1c58d6943|e7d8f8a7b0b118c07d0daae569a5f80ddacf62390cf53ebcf6fea7b5712ff55f|Raadsvoorstel verordening rechtspositie raadsleden gemeenteraad Opmeer 2026|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 16 Verordening rechtspositie raadsleden"
+    },
+    "d9c7b40213307bfa11abcae6841600b58a7bee7c9f71819965f7dc33e319113b": {
+      "title": "Bijlage 1 Verordening rechtspositie raadsleden gemeenteraad Opmeer 2026",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=19ecde61-4c66-4059-803f-51b2a956d7bd&agendaItemId=1449ace5-272e-4632-afb9-40dbfa508da6",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "16 Verordening rechtspositie raadsleden"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/19ecde61-4c66-4059-803f-51b2a956d7bd",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "16 Verordening rechtspositie raadsleden",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 16 Verordening rechtspositie raadsleden",
+      "missing_count": 0,
+      "text_hash": "8151db9dc87ed0ff49d879f140dcb7674ec2e4ef373a719bef09371e38fe3d05",
+      "content_checked": "2026-11-10T13:32:33+00:00",
+      "kw_sig": "5ae1c58d6943|8151db9dc87ed0ff49d879f140dcb7674ec2e4ef373a719bef09371e38fe3d05|Bijlage 1 Verordening rechtspositie raadsleden gemeenteraad Opmeer 2026|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 16 Verordening rechtspositie raadsleden"
+    },
+    "847fad84c99c9a45e29b88aa38f5f3dcafb8ba07fe3e18406a5e14216a0a4c52": {
+      "title": "Bijlage 2 Was-wordt-lijst",
+      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/56ef18cd-49e9-4512-858b-8762d2fe88c5?documentId=fddd32a3-ee1a-4861-a762-2be6a96edd4c&agendaItemId=1449ace5-272e-4632-afb9-40dbfa508da6",
+      "source": "Raadsstukken",
+      "gemeente": "opmeer",
+      "first_seen": "2026-11-10T13:31:31+00:00",
+      "updated": "2026-11-10T13:31:31+00:00",
+      "last_change": null,
+      "hash": "",
+      "revisions": 1,
+      "kind": "raadsdocument",
+      "meetings": [
+        {
+          "date": "2026-11-26",
+          "meeting": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+          "agendapunt": "16 Verordening rechtspositie raadsleden"
+        }
+      ],
+      "file_url": "https://opmeer.bestuurlijkeinformatie.nl/Document/View/fddd32a3-ee1a-4861-a762-2be6a96edd4c",
+      "doc_date": "2026-11-26",
+      "doc_date_label": "vergaderdatum",
+      "meeting_title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
+      "agendapunt": "16 Verordening rechtspositie raadsleden",
+      "last_seen": "2026-11-10",
+      "excerpt": "Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 16 Verordening rechtspositie raadsleden",
+      "missing_count": 0,
+      "text_hash": "9e216b33d5edb478a8b15f0f56c1fe10586667823765fdc60b31fd3a6066e004",
+      "content_checked": "2026-11-10T13:32:33+00:00",
+      "kw_sig": "5ae1c58d6943|9e216b33d5edb478a8b15f0f56c1fe10586667823765fdc60b31fd3a6066e004|Bijlage 2 Was-wordt-lijst|Oordeelsvormende raadsvergadering donderdag 26 november 2026 · agendapunt 16 Verordening rechtspositie raadsleden"
     },
     "58ab1c9e905c4e86e0d91b706ed980c667535d2ed1cd21d90d57bd0073202bda": {
       "title": "Beeldvormende bijeenkomst donderdag 19 november 2026",
@@ -938,7 +2019,7 @@
       "last_seen": "2026-11-10",
       "doc_date": "2026-11-10",
       "doc_date_label": "publicatiedatum",
-      "published_at": "2026-11-10T00:43+01:00",
+      "published_at": "2026-11-10T08:11+01:00",
       "published_at_source": "Google Nieuws",
       "kw_sig": "5ae1c58d6943||Ongelukken en mist zorgen voor problemen op de weg: files op A7 en A9|"
     },
@@ -41267,7 +42348,7 @@
           "u": "https://medemblik.bestuurlijkeinformatie.nl/Document/View/1ebaaeba-8f38-4c5d-a9eb-c4391dd6385f"
         }
       ],
-      "content_checked": "2026-11-09T13:17:55+00:00",
+      "content_checked": "2026-11-10T13:32:43+00:00",
       "kw_sig": "5ae1c58d6943|d34cce8a2e78303fe72d430955b45192a9bc797958ede104121357358c825d67|Raadsvragen VVD De Bloesem en 2e sporthal Wognum|Raadsvragen · antwoord 2026-10-23",
       "report_pass": "2026-11-10T01:46:49+00:00"
     },
@@ -120425,23 +121506,6 @@
       "content_checked": "2026-11-09T18:36:46+00:00",
       "kw_sig": "5ae1c58d6943|1370375de56ffce8db2ceff89871aa3a6016ae7a3d2643a0b494bf01e9307053|Bijlage 3: wijzigingen AVOI|Oordeelsvormende raadsvergadering donderdag 22 oktober 2026 · agendapunt 7 Algemene verordening ondergrondse infrastructuren (AVOI) · ook in 3 andere vergadering(en)"
     },
-    "f7027209772f84ee719235de8f96be2d76dfd83179815bd3d2a6af5a659601f8": {
-      "title": "Oordeelsvormende raadsvergadering donderdag 26 november 2026",
-      "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Index/56ef18cd-49e9-4512-858b-8762d2fe88c5",
-      "source": "Raadsportaal",
-      "gemeente": "opmeer",
-      "first_seen": "2026-10-15T11:12:27+00:00",
-      "updated": "2026-10-15T11:12:27+00:00",
-      "last_change": null,
-      "hash": "",
-      "revisions": 1,
-      "excerpt": "",
-      "kind": "vergadering",
-      "doc_date": "2026-11-26",
-      "doc_date_label": "vergaderdatum",
-      "last_seen": "2026-11-10",
-      "kw_sig": "5ae1c58d6943||Oordeelsvormende raadsvergadering donderdag 26 november 2026|"
-    },
     "e70e0563ef3ec4a5ca3b9387d5d2b6b09d1060f9a69396ca40ebd3a08418d3a9": {
       "title": "Agendabundel",
       "url": "https://opmeer.bestuurlijkeinformatie.nl/Agenda/Document/4b7a5077-4b22-4a0c-8c4a-713900f40f21?documentId=0a7bbf1a-7ad8-437c-9735-2a053ebc10f8",
@@ -179039,46 +180103,46 @@
   "status": {
     "medemblik": {
       "Nieuws": {
-        "checked": "2026-11-10T13:16:04+00:00",
+        "checked": "2026-11-10T13:31:10+00:00",
         "ok": true,
         "count": 12,
         "note": "Alleen de eerste nieuwspagina (de 12 nieuwste berichten)."
       },
       "Collegebesluiten": {
-        "checked": "2026-11-10T13:16:04+00:00",
+        "checked": "2026-11-10T13:31:10+00:00",
         "ok": true,
         "count": 0,
         "note": "Alleen de besluiten op de huidige pagina; het archief met oudere besluiten niet."
       },
       "Openbare informatie": {
-        "checked": "2026-11-10T13:16:05+00:00",
+        "checked": "2026-11-10T13:31:11+00:00",
         "ok": true,
         "count": 4,
         "note": "Alleen de links op deze pagina."
       },
       "Raadsportaal": {
-        "checked": "2026-11-10T13:16:06+00:00",
+        "checked": "2026-11-10T13:31:11+00:00",
         "ok": true,
         "count": 27,
         "note": "Startpagina van het raadsportaal (vergaderingen en de nieuwste overzichtsitems)."
       },
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-11-10T13:15:37+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "ok": true,
         "count": 195,
         "new": 0,
         "note": "Laatste 30 dagen: 195 van 195 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-11-10T13:15:55+00:00",
-        "ok": false,
-        "count": 8,
+        "checked": "2026-11-10T13:31:00+00:00",
+        "ok": true,
+        "count": 10,
         "new": 0,
-        "error": "Gemeenteraad 2026-11-26: 403 Client Error: Forbidden for url: https://medemblik.bestu; Informatiebijeenkomst 2026-09-15: 403 Client Error: Forbidden for url: https://medemblik.bestu",
-        "note": "8 van 24 vergaderingen in venster bijgewerkt; 281 documenten bekend. Dekking: vergaderingen van 2026-09-11 t/m 2026-12-25 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
+        "error": null,
+        "note": "10 van 24 vergaderingen in venster bijgewerkt; 281 documenten bekend. Dekking: vergaderingen van 2026-09-11 t/m 2026-12-25 (Gemeenteraad, Raadscommissie, Presidium, Auditcommissie, Informatiebijeenkomst, Themabijeenkomst). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-11-10T13:16:02+00:00",
+        "checked": "2026-11-10T13:31:08+00:00",
         "ok": true,
         "count": 301,
         "new": 0,
@@ -179086,7 +180150,7 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Informatienota's 2133, Ingekomen stukken 3171, Jaarplannen en jaarverslagen 1, Moties en amendementen 409, Raadsvragen 1415, Rekenkamer 54, Toezeggingen 335). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "In de media": {
-        "checked": "2026-11-10T13:16:09+00:00",
+        "checked": "2026-11-10T13:31:15+00:00",
         "ok": true,
         "count": 23,
         "new": 0,
@@ -179095,25 +180159,25 @@
     },
     "algemeen": {
       "Documentcontrole": {
-        "checked": "2026-11-10T13:17:42+00:00",
-        "ok": true,
-        "count": 22,
-        "errors": 0,
-        "note": "22 documenten gecontroleerd (18 pdf), 2087 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
+        "checked": "2026-11-10T13:32:43+00:00",
+        "ok": false,
+        "count": 36,
+        "errors": 1,
+        "note": "36 documenten gecontroleerd (33 pdf), 2122 gevolgd (alle gemeenten), 0 wachten nog. Controle: stukken tot 14 dagen oud elke 6 uur, tot 60 dagen dagelijks, tot 180 dagen wekelijks, ouder maandelijks. Wijzigingen worden per zin getoond; de eerste controle is een nulmeting. Pdf’s zonder leesbare tekst (scans) en grote bestanden: alleen te zien dát ze veranderden. Bij raadsvragen en informatienota’s worden ook de bijlagen gelezen (bijv. de antwoordbrief). KOOP-bekendmakingen via hun versienummer."
       },
       "Meldingen": {
-        "checked": "2026-11-10T13:17:42+00:00",
+        "checked": "2026-11-10T13:32:43+00:00",
         "ok": true,
         "note": "Pushmeldingen actief (ntfy); deze run 1 bericht(en). Dagelijkse samenvatting actief, elke dag vanaf 07:00 (laatste: 2026-11-10).",
         "error": null
       },
       "Trefwoorden": {
-        "checked": "2026-11-10T13:17:42+00:00",
+        "checked": "2026-11-10T13:32:43+00:00",
         "ok": true,
-        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 14 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
+        "note": "3 trefwoord(en) in trefwoorden.txt: 380 kV, asielopvang, Bloesemgaerde. Deze run 36 stukken doorzocht, 0 nieuwe treffer(s). Gezocht wordt in titel, omschrijving en de volledige tekst van pdf’s, pagina’s en bijlagen."
       },
       "Termijn raadsvragen": {
-        "checked": "2026-11-10T13:16:52+00:00",
+        "checked": "2026-11-10T13:31:46+00:00",
         "ok": true,
         "count": 3,
         "note": "3 raadsvragen staan langer open dan de termijn uit het reglement van orde (Medemblik en Opmeer: 30 dagen). Een uitstelbericht aan de vragensteller is in het portaal niet te zien."
@@ -179129,21 +180193,21 @@
     },
     "koggenland": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-11-10T13:16:11+00:00",
+        "checked": "2026-11-10T13:31:18+00:00",
         "ok": true,
         "count": 60,
         "new": 0,
         "note": "Laatste 30 dagen: 60 van 60 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Nieuws": {
-        "checked": "2026-11-10T13:16:21+00:00",
+        "checked": "2026-11-10T13:31:19+00:00",
         "ok": true,
         "count": 25,
         "new": 0,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "Collegebesluiten": {
-        "checked": "2026-11-10T13:16:22+00:00",
+        "checked": "2026-11-10T13:31:20+00:00",
         "ok": true,
         "count": 177,
         "new": 0,
@@ -179151,45 +180215,45 @@
         "error": null
       },
       "Woo-verzoeken": {
-        "checked": "2026-11-10T13:16:23+00:00",
+        "checked": "2026-11-10T13:31:20+00:00",
         "ok": true,
         "count": 15,
         "note": "Alleen de links op de overzichtspagina Woo-verzoeken."
       },
       "In de media": {
-        "checked": "2026-11-10T13:16:25+00:00",
+        "checked": "2026-11-10T13:31:23+00:00",
         "ok": true,
         "count": 11,
         "new": 0,
         "note": "Google Nieuws, artikelen van de laatste 3 dagen over Koggenland, Avenhorn, Berkhout, De Goorn, Hensbroek, Obdam, Oudendijk, Scharwoude, Spierdijk, Ursem, Zuidermeer. Telt mee als de plaats in de kop staat, of als een regionaal medium hem in de tekst noemt."
       },
       "Raadsstukken": {
-        "checked": "2026-11-10T13:16:21+00:00",
+        "checked": "2026-11-10T13:31:18+00:00",
         "ok": true,
-        "count": 4,
+        "count": 0,
         "new": 0,
         "error": null,
-        "note": "raad.koggenland.nl (GO. vergaderen), via martijn-media.nl: het IP-adres daarvan is door de griffie uitgezonderd van de botcontrole. 4 vergaderpagina's bijgewerkt, 11 vergaderingen tussen 2026-09-11 en 2026-12-25, 200 documenten bekend. Komende drie weken elk half uur, de rest elke 6 uur."
+        "note": "raad.koggenland.nl (GO. vergaderen), via martijn-media.nl: het IP-adres daarvan is door de griffie uitgezonderd van de botcontrole. 0 vergaderpagina's bijgewerkt, 11 vergaderingen tussen 2026-09-11 en 2026-12-25, 200 documenten bekend. Komende drie weken elk half uur, de rest elke 6 uur."
       }
     },
     "opmeer": {
       "Officiele bekendmakingen (KOOP)": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "ok": true,
         "count": 39,
         "new": 0,
         "note": "Laatste 30 dagen: 39 van 39 opgehaald. Dekking: Volledig vanaf 2026-01-01. Ouder dan 2026-01-01 wordt niet opgehaald."
       },
       "Raadsstukken": {
-        "checked": "2026-11-10T13:16:44+00:00",
+        "checked": "2026-11-10T13:31:37+00:00",
         "ok": true,
         "count": 9,
-        "new": 12,
+        "new": 35,
         "error": null,
-        "note": "9 van 9 vergaderingen in venster bijgewerkt; 114 documenten bekend. Dekking: vergaderingen van 2026-09-11 t/m 2026-12-25 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
+        "note": "9 van 9 vergaderingen in venster bijgewerkt; 149 documenten bekend. Dekking: vergaderingen van 2026-09-11 t/m 2026-12-25 (Besluitvormende raadsvergadering, Oordeelsvormende raadsvergadering, Beeldvormende bijeenkomst, Auditcommissie). Oudere vergaderingen niet."
       },
       "Raadsportaal-overzichten": {
-        "checked": "2026-11-10T13:16:50+00:00",
+        "checked": "2026-11-10T13:31:44+00:00",
         "ok": true,
         "count": 349,
         "new": 0,
@@ -179197,14 +180261,14 @@
         "note": "Overzichten van het raadsportaal (totaal in het portaal: Amendementen 76, Belangrijke documenten 13, Besluitenlijsten college 316, Ingekomen stukken 1178, Moties 88, Raadsinformatiebrieven 590, Thema's 25, Toezeggingen 95, Verslagen auditcommissie 2023-2025 11). Elke run de 50 nieuwste per overzicht; één keer per dag alles vanaf 2026-01-01. Beantwoorde raadsvragen worden als wijziging gemeld. Bijlagen zelf worden (nog) niet inhoudelijk gevolgd."
       },
       "Nieuws": {
-        "checked": "2026-11-10T13:16:51+00:00",
+        "checked": "2026-11-10T13:31:45+00:00",
         "ok": true,
         "count": 25,
         "new": 1,
         "note": "RSS-feed van de gemeentesite: de 25 nieuwste berichten. Oudere berichten niet."
       },
       "In de media": {
-        "checked": "2026-11-10T13:16:52+00:00",
+        "checked": "2026-11-10T13:31:46+00:00",
         "ok": true,
         "count": 4,
         "new": 0,
@@ -256967,8 +258031,8 @@
       "url": "https://www.opmeer.nl/bekijk-duurzame-woningen-in-opmeer-of-stel-je-eigen-huis-open",
       "source": "Nieuws",
       "gemeente": "opmeer",
-      "first_seen": "2026-11-10T13:02:08+00:00",
-      "updated": "2026-11-10T13:02:08+00:00",
+      "first_seen": "2026-11-10T13:16:51+00:00",
+      "updated": "2026-11-10T13:16:51+00:00",
       "last_change": null,
       "hash": "",
       "revisions": 1,
@@ -256981,9 +258045,9 @@
       "excerpt": "Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
       "missing_count": 0,
       "text_hash": "310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca",
-      "content_checked": "2026-11-10T13:02:10+00:00",
+      "content_checked": "2026-11-10T13:17:34+00:00",
       "kw_sig": "5ae1c58d6943|310e29c89f63d97252d3cb00863b3b9201f7ffcadd85b192e433801fdca5aaca|Bekijk duurzame woningen in Opmeer of stel je eigen huis open|Wil je jouw huis energiezuiniger maken en ben je benieuwd naar de mogelijkheden? Of heb je zelf al maatregelen genomen en wil je jouw ervaringen delen? Op zaterdag 31 oktober en zaterdag 7 november vinden de open dagen van de Nationale Duurzame Huizen Route plaats. Ook inwoners van Opmeer en omgeving kunnen meedoen.",
-      "archived": "2026-11-10T13:15:35+00:00",
+      "archived": "2026-11-10T13:30:41+00:00",
       "archived_reason": "Menuknop, geen publicatie"
     },
     "ef7a8a42160527e0141651f817b22b6071a798fb5b3f6e05a82db9a4c5fbfd8a": {
@@ -265074,7 +266138,7 @@
   "state": {
     "meetings": {
       "860d833d-742e-4b8d-b819-1b300455d480": {
-        "checked": "2026-11-10T13:00:53+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Gemeenteraad",
         "date": "2026-12-17",
         "label": "donderdag 17 december 2026",
@@ -265133,7 +266197,7 @@
         ]
       },
       "d4b32282-6d07-4f2e-9463-89fb9b55e9c3": {
-        "checked": "2026-11-10T13:00:53+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Gemeenteraad",
         "date": "2026-09-24",
         "label": "donderdag 24 september 2026",
@@ -265224,7 +266288,7 @@
         "gemeente": "medemblik"
       },
       "bedc4215-5f41-43f8-809b-e789157c64fd": {
-        "checked": "2026-11-10T13:00:53+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Raadscommissie",
         "date": "2026-12-03",
         "label": "donderdag 3 december 2026",
@@ -265293,7 +266357,7 @@
         ]
       },
       "a66cbb1d-4930-42a1-9e01-300240cb0a8e": {
-        "checked": "2026-11-10T13:00:53+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Raadscommissie",
         "date": "2026-10-01",
         "label": "donderdag 1 oktober 2026",
@@ -265408,7 +266472,7 @@
         "gemeente": "medemblik"
       },
       "ffb84298-f0ef-4890-ba06-bf40c3c65e6b": {
-        "checked": "2026-11-10T12:45:35+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Presidium",
         "date": "2026-12-07",
         "label": "maandag 7 december 2026",
@@ -265417,7 +266481,7 @@
         "agenda": []
       },
       "48e926c5-1642-494c-b07f-28b1148fd5db": {
-        "checked": "2026-11-10T13:00:53+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Presidium",
         "date": "2026-11-16",
         "label": "maandag 16 november 2026",
@@ -265426,7 +266490,7 @@
         "agenda": []
       },
       "a5344260-dca4-4884-8b61-4c52d5a7b54f": {
-        "checked": "2026-11-10T12:45:35+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Presidium",
         "date": "2026-10-05",
         "label": "maandag 5 oktober 2026",
@@ -265587,7 +266651,7 @@
         "gemeente": "medemblik"
       },
       "b2e8194e-6b1b-4240-a0e4-49ee3e2082af": {
-        "checked": "2026-11-10T13:00:53+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-11-19",
         "label": "donderdag 19 november 2026 Informatiebijeenkomst Omgevingsvisie",
@@ -265624,7 +266688,7 @@
         ]
       },
       "df4cd9b8-d584-460e-af53-cb8e05cea854": {
-        "checked": "2026-11-10T12:45:35+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Informatiebijeenkomst",
         "date": "2026-09-17",
         "label": "donderdag 17 september 2026",
@@ -265693,7 +266757,7 @@
         ]
       },
       "afa94415-13a6-4772-82c4-d57bb33d1b7e": {
-        "checked": "2026-11-10T12:45:35+00:00",
+        "checked": "2026-11-10T13:30:42+00:00",
         "type": "Themabijeenkomst",
         "date": "2026-09-14",
         "label": "maandag 14 september 2026",
@@ -265716,7 +266780,7 @@
         "gemeente": "medemblik"
       },
       "9e498f8b-07fb-4377-b5e8-9ffbcc166e5b": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-12-10",
@@ -265735,7 +266799,7 @@
         ]
       },
       "9db3d2d0-d809-425c-a0dc-b2b8e08c4ac2": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-11-05",
@@ -265760,7 +266824,7 @@
         ]
       },
       "4b7a5077-4b22-4a0c-8c4a-713900f40f21": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Besluitvormende raadsvergadering",
         "date": "2026-09-17",
@@ -265840,16 +266904,34 @@
         "label": "donderdag 12 februari 2026"
       },
       "56ef18cd-49e9-4512-858b-8762d2fe88c5": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-11-26",
         "label": "donderdag 26 november 2026",
-        "documents": 0,
-        "agenda": []
+        "documents": 35,
+        "agenda": [
+          "1 Opening en mededelingen",
+          "2 Spreekrecht burgers: uiterlijk 24 uur voor aanvang vergadering melden bij de griffier",
+          "3 Vragenkwartier",
+          "4 Vaststelling van de agenda",
+          "5 Najaarsnota 2026",
+          "6 Ruimtelijk uitgangspunten voor woningbouw vrijgekomen schoollocatie Hoogwoud",
+          "7 Voorbereidingskredieten Huisvestingsprogramma onderwijs 2027",
+          "8 Aanvullend krediet Kindcentrum Opmeer-Spanbroek",
+          "9 Voorbereidingskrediet verbouwing en herinrichting gemeentehuis",
+          "10 Aanvullend krediet verduurzaming gemeentehuis",
+          "11 Wensen en bedenkingen Ontwikkelperspectief Noord-Holland Noord",
+          "12 Vaststellen normenkader 2026",
+          "13 Vaststellen verordeningen 2027",
+          "14 Actualisatie Bodemfunctieklassekaart, Bodemkwaliteitskaart en Handreiking bodembeheer",
+          "15 Samenwerkingsovereenkomst, verordening en benoemen leden rekenkamer Westfriesland-West",
+          "16 Verordening rechtspositie raadsleden",
+          "17 Sluiting"
+        ]
       },
       "c16dc8fa-97c1-4f3a-a428-0f8ce219a1a7": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Oordeelsvormende raadsvergadering",
         "date": "2026-10-22",
@@ -265911,7 +266993,7 @@
         "label": "donderdag 29 januari 2026"
       },
       "9efff6d9-1f0a-488c-a27c-b1f54410f4bd": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-11-19",
@@ -265926,7 +267008,7 @@
         ]
       },
       "3887b37a-acde-404f-978e-f2a085b2810b": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-08",
@@ -265940,7 +267022,7 @@
         ]
       },
       "353dd21a-4688-48f6-b6b3-8352dc985d9a": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Beeldvormende bijeenkomst",
         "date": "2026-10-01",
@@ -265986,7 +267068,7 @@
         "label": "donderdag 22 januari 2026"
       },
       "c62483ed-4da6-4fee-846f-29b58d90cf6c": {
-        "checked": "2026-11-10T13:16:26+00:00",
+        "checked": "2026-11-10T13:31:24+00:00",
         "gemeente": "opmeer",
         "type": "Auditcommissie",
         "date": "2026-10-06",
