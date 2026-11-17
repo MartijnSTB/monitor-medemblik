@@ -1,70 +1,21 @@
-
-######## Stede Broec
-== https://repository.overheid.nl/sru 200 application/xml 6002 -> https://repository.overheid.nl/sru?query=c.product-area%3D%3Dofficiele | 
-  KOOP sinds 1 okt: ['39']
-== https://stedebroec.bestuurlijkeinformatie.nl/ 404 text/plain 15 -> https://stedebroec.bestuurlijkeinformatie.nl/ | 
-== https://stedebroec.raadsinformatie.nl/ 403 text/html; charset=UTF-8 5668 -> https://stedebroec.raadsinformatie.nl/ | Attention Required! | Cloudflare
-== https://stedebroec.notubiz.nl/ 403 text/html; charset=UTF-8 5660 -> https://stedebroec.notubiz.nl/ | Attention Required! | Cloudflare
-== https://raad.stedebroec.nl/ ERR HTTPSConnectionPool(host='raad.stedebroec.nl', port=443): Max retries exceeded w
-== https://gemeenteraad.stedebroec.nl/ 200 ANUBIS text/html; charset=utf-8 6711 -> https://gemeenteraad.stedebroec.nl/ | 
-== https://stedebroec.ibabs.eu/ ERR HTTPSConnectionPool(host='stedebroec.ibabs.eu', port=443): Max retries exceeded 
-== https://www.stedebroec.nl/ 200 text/html; charset=UTF-8 94500 -> https://www.stedebroec.nl/ | Home - Gemeente Stede Broec
-   raadlinks: []
-   feeds: ['<link rel="alternate" type="application/rss+xml" title="Stede Broec &raquo; Feed" href="https://www.stedebroec.nl/feed/">']
-== https://www.stedebroec.nl/nieuws 404 text/html; charset=UTF-8 76610 -> https://www.stedebroec.nl/nieuws | Pagina niet gevonden - Stede Broec
-== https://www.stedebroec.nl/rss 200 application/rss+xml; charset=U 1045 -> https://www.stedebroec.nl/feed/ | Stede Broec
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:wfw="http://wellformedweb.org/CommentAPI/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndi
-== https://www.stedebroec.nl/nieuws/rss 200 application/rss+xml; charset=U 680 -> https://www.stedebroec.nl/nieuws/feed/ | Reacties op:
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 	 	> <channel> 	<title> 	Reacties op: 	</
-== https://www.stedebroec.nl/nieuws/feed 200 application/rss+xml; charset=U 680 -> https://www.stedebroec.nl/nieuws/feed/ | Reacties op:
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 	 	> <channel> 	<title> 	Reacties op: 	</
-== https://www.stedebroec.nl/actueel/nieuws 200 text/html; charset=UTF-8 76610 -> https://www.stedebroec.nl/actueel/nieuws/ | Pagina niet gevonden - Stede Broec
-== https://api.pdok.nl/bzk/locatieserver/search/v3_1/free 200 application/json;charset=utf-8 255 -> https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=gemeentenaam% | 
-  woonplaatsen: ['Bovenkarspel', 'Grootebroek', 'Lutjebroek']
-
-######## Enkhuizen
-== https://repository.overheid.nl/sru 200 application/xml 5803 -> https://repository.overheid.nl/sru?query=c.product-area%3D%3Dofficiele | 
-  KOOP sinds 1 okt: ['138']
-== https://enkhuizen.bestuurlijkeinformatie.nl/ 404 text/plain 15 -> https://enkhuizen.bestuurlijkeinformatie.nl/ | 
-== https://enkhuizen.raadsinformatie.nl/ 403 text/html; charset=UTF-8 5668 -> https://enkhuizen.raadsinformatie.nl/ | Attention Required! | Cloudflare
-== https://enkhuizen.notubiz.nl/ 403 text/html; charset=UTF-8 5660 -> https://enkhuizen.notubiz.nl/ | Attention Required! | Cloudflare
-== https://raad.enkhuizen.nl/ ERR HTTPSConnectionPool(host='raad.enkhuizen.nl', port=443): Max retries exceeded wi
-== https://gemeenteraad.enkhuizen.nl/ 200 text/html; charset=UTF-8 142350 -> https://gemeenteraad.enkhuizen.nl/ | Gemeente Enkhuizen | Home
-== https://enkhuizen.ibabs.eu/ ERR HTTPSConnectionPool(host='enkhuizen.ibabs.eu', port=443): Max retries exceeded w
-== https://www.enkhuizen.nl/ 200 text/html; charset=UTF-8 95013 -> https://www.enkhuizen.nl/ | Gemeente Enkhuizen
-   raadlinks: []
-   feeds: ['<link rel="alternate" type="application/rss+xml" title="Enkhuizen &raquo; Feed" href="https://www.enkhuizen.nl/feed/">']
-== https://www.enkhuizen.nl/nieuws 404 text/html; charset=UTF-8 75691 -> https://www.enkhuizen.nl/nieuws | Pagina niet gevonden - Enkhuizen
-== https://www.enkhuizen.nl/rss 200 application/rss+xml; charset=U 1044 -> https://www.enkhuizen.nl/feed/ | Enkhuizen
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:wfw="http://wellformedweb.org/CommentAPI/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndi
-== https://www.enkhuizen.nl/nieuws/rss 200 application/rss+xml; charset=U 679 -> https://www.enkhuizen.nl/nieuws/feed/ | Reacties op:
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 	 	> <channel> 	<title> 	Reacties op: 	</
-== https://www.enkhuizen.nl/nieuws/feed 200 application/rss+xml; charset=U 679 -> https://www.enkhuizen.nl/nieuws/feed/ | Reacties op:
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 	 	> <channel> 	<title> 	Reacties op: 	</
-== https://www.enkhuizen.nl/actueel/nieuws 200 text/html; charset=UTF-8 75691 -> https://www.enkhuizen.nl/actueel/nieuws/ | Pagina niet gevonden - Enkhuizen
-== https://api.pdok.nl/bzk/locatieserver/search/v3_1/free 200 application/json;charset=utf-8 162 -> https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=gemeentenaam% | 
-  woonplaatsen: ['Enkhuizen']
-
-######## Drechterland
-== https://repository.overheid.nl/sru 200 application/xml 5517 -> https://repository.overheid.nl/sru?query=c.product-area%3D%3Dofficiele | 
-  KOOP sinds 1 okt: ['88']
-== https://drechterland.bestuurlijkeinformatie.nl/ 404 text/plain 15 -> https://drechterland.bestuurlijkeinformatie.nl/ | 
-== https://drechterland.raadsinformatie.nl/ 403 text/html; charset=UTF-8 5668 -> https://drechterland.raadsinformatie.nl/ | Attention Required! | Cloudflare
-== https://drechterland.notubiz.nl/ 403 text/html; charset=UTF-8 5660 -> https://drechterland.notubiz.nl/ | Attention Required! | Cloudflare
-== https://raad.drechterland.nl/ ERR HTTPSConnectionPool(host='raad.drechterland.nl', port=443): Max retries exceeded
-== https://gemeenteraad.drechterland.nl/ 200 text/html; charset=UTF-8 161015 -> https://gemeenteraad.drechterland.nl/ | Drechterland | Home
-== https://drechterland.ibabs.eu/ ERR HTTPSConnectionPool(host='drechterland.ibabs.eu', port=443): Max retries exceede
-== https://www.drechterland.nl/ 200 text/html; charset=UTF-8 96086 -> https://www.drechterland.nl/ | Home - Gemeente Drechterland
-   raadlinks: []
-   feeds: ['<link rel="alternate" type="application/rss+xml" title="Drechterland &raquo; Feed" href="https://www.drechterland.nl/feed/">']
-== https://www.drechterland.nl/nieuws 200 text/html; charset=UTF-8 114012 -> https://www.drechterland.nl/projecten/mfa-schellinkhout/nieuwsbrief-mf | Nieuwsbrief MFA Schellinkhout &#8211; Drechterland
-== https://www.drechterland.nl/rss 200 application/rss+xml; charset=U 1065 -> https://www.drechterland.nl/feed/ | Drechterland
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:wfw="http://wellformedweb.org/CommentAPI/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndi
-== https://www.drechterland.nl/nieuws/rss 200 application/rss+xml; charset=U 682 -> https://www.drechterland.nl/nieuws/feed/ | Reacties op:
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 	 	> <channel> 	<title> 	Reacties op: 	</
-== https://www.drechterland.nl/nieuws/feed 200 application/rss+xml; charset=U 682 -> https://www.drechterland.nl/nieuws/feed/ | Reacties op:
-   XML: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" 	xmlns:content="http://purl.org/rss/1.0/modules/content/" 	xmlns:dc="http://purl.org/dc/elements/1.1/" 	xmlns:atom="http://www.w3.org/2005/Atom" 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 	 	> <channel> 	<title> 	Reacties op: 	</
-== https://www.drechterland.nl/actueel/nieuws 200 text/html; charset=UTF-8 76555 -> https://www.drechterland.nl/actueel/nieuws/ | Pagina niet gevonden - Drechterland
-== https://api.pdok.nl/bzk/locatieserver/search/v3_1/free 200 application/json;charset=utf-8 465 -> https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=gemeentenaam% | 
-  woonplaatsen: ['Hem', 'Hoogkarspel', 'Oosterblokker', 'Oosterleek', 'Schellinkhout', 'Venhuizen', 'Westwoud', 'Wijdenes']
-== https://api.openraadsinformatie.nl/v1/elastic/_cat/indices?format=json ERR HTTPSConnectionPool(host='api.openraadsinformatie.nl', port=443): Max retries ex
+## enkhuizen 200 GO ['<meta name="generator" content="GO. cms enterprise"/>']
+  links: ['/Vergaderingen/Commissie-Sociaal-Domein-Financien-Bedrijfsvoering-SFB/2026/1-december/20:00', '/Vergaderingen/Presidium/2026/17-november/20:00', '/Vergaderingen/Raadsvergadering/2026/10-november/16:00', '/Vergaderingen/Raadsvergadering/2026/24-november/20:00', '/Vergaderingen/Raadsvergadering/2026/27-oktober/20:00']
+  andere: ['/Over-deze-site/Contact', '/Over-deze-site/Proclaimer', '/Raad', '/Raad/a.-aalders', '/Raad/a.-mazloumian', '/Raad/b.-sikkema', '/Raad/e.h.p.-siersema', '/Raad/g.-nauta', '/Raad/j.c.-sandstra', '/Raad/j.m.-mendes-moreira', '/Raad/k.j.-schuurman', '/Raad/m.-veen', '/Raad/m.a.-keesman', '/Raad/m.r.-faber-premselaar', '/Raad/p.-overwijn', '/Raad/r.-zeegerman', '/Raad/s.-voogt', '/Raad/w.j.f.-van-dam', '/Vergaderingen/Presidium/2026/17-november/20:00', '/Vergaderingen/Raadsvergadering/2026/10-november/16:00', '/Vergaderingen/Raadsvergadering/2026/24-november/20:00', '/Vergaderingen/Raadsvergadering/2026/27-oktober/20:00', '/dossiers/', '/kalender/', '/over-deze-site/toegankelijkheid', '/overzichten/', '/overzichten/amendement/', '/overzichten/motie/', '/overzichten/raadsbrief/', '/overzichten/toezeggingen/', '/raad/', '/rss//', '/rss/kalender/', '/twitter-rss/feed.xml', '/vergaderingen/', '/zoeken', '/zoeken/']
+## drechterland 200 GO ['<meta name="generator" content="GO. cms enterprise"/>']
+  links: ['/Vergaderingen/Overige-evenementen/2027/5-januari/20:00', '/Vergaderingen/Raadsvergadering/2026/14-december/20:00', '/Vergaderingen/Raadsvergadering/2026/2-november/16:30', '/Vergaderingen/Raadsvergadering/2026/23-november/20:00', '/Vergaderingen/Raadsvergadering/2026/26-oktober/20:00', '/Vergaderingen/Rondetafelgesprekken/2026/30-november/20:00', '/Vergaderingen/Rondetafelgesprekken/2026/9-november/20:00', '/Vergaderingen/Rondetafelgesprekken/2027/11-januari/20:00', '/Vergaderingen/Themabijeenkomst/2026/29-oktober/20:00', '/Vergaderingen/Themabijeenkomst/2026/3-december/20:00']
+  andere: ['/Contact', '/Over-deze-site/Proclaimer', '/Vergaderingen/Overige-evenementen/2027/5-januari/20:00', '/Vergaderingen/Raadsvergadering/2026/14-december/20:00', '/Vergaderingen/Raadsvergadering/2026/2-november/16:30', '/Vergaderingen/Raadsvergadering/2026/23-november/20:00', '/Vergaderingen/Raadsvergadering/2026/26-oktober/20:00', '/Vergaderingen/Rondetafelgesprekken/2026/30-november/20:00', '/Vergaderingen/Rondetafelgesprekken/2026/9-november/20:00', '/Vergaderingen/Rondetafelgesprekken/2027/11-januari/20:00', '/Vergaderingen/Themabijeenkomst/2026/29-oktober/20:00', '/Vergaderingen/Themabijeenkomst/2026/3-december/20:00', '/contact/', '/documenten/amendementen/', '/documenten/moties/', '/documenten/raadsbrieven/', '/meedoen/', '/meedoen/burgerinitiatief/', '/meedoen/inspreken/', '/meedoen/participatie/', '/meedoen/petities/', '/meedoen/uitnodiging/', '/raad', '/raad/', '/raad/d.w.-zwagerman', '/raad/f.-ter-hofstede', '/raad/gast-2', '/raad/gast-4', '/raad/gast-5', '/raad/h.-weeda', '/raad/h.g.j.-sijm', '/raad/j.-groenewoud', '/raad/j.g.m.-klein-swormink', '/raad/m.-kooijman-heuvelman', '/raad/martine-van-drooge', '/raad/r.a.t.-oud', '/raad/r.c.a.-laan', '/raad/t.d.-rietbergen', '/raad/t.n.-wijnker', '/rss//']
+## stedebroec nieuws-links: ['https://www.stedebroec.nl/actueel/veel-belangstelling-voor-slim-omgaan-met-eigen-opgewekte-energie-2', 'https://www.stedebroec.nl/actueel/voorkom-een-woninginbraak-maak-het-inbrekers-niet-te-makkelijk', 'https://www.stedebroec.nl/actueel/wereldwijde-storing-microsoft']
+    https://www.stedebroec.nl/feed/?post_type=nieuws 200 application/rss+xml; char 1062 https://www.stedebroec.nl/feed/?post_type=nieuws | <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom
+    https://www.stedebroec.nl/nieuwsberichten/ 404 text/html; charset=UTF-8 76610 https://www.stedebroec.nl/nieuwsberichten/ | 
+    https://www.stedebroec.nl/actueel/ 200 text/html; charset=UTF-8 162342 https://www.stedebroec.nl/actueel/ | 
+    https://www.stedebroec.nl/wp-json/wp/v2/types 200 application/json; charset 6704 https://www.stedebroec.nl/wp-json/wp/v2/types | {"page":{"description":"","hierarchical":true,"has_archive":false,"name":"Pagina's","slug":"page","icon":"dashicons-admin-page","taxonomies":[],"rest_base":"pages","rest_namespace":"wp\/v2","template":[],"template_lock":false,"_links":{"collection":[
+## enkhuizen nieuws-links: ['https://www.enkhuizen.nl/actueel/veel-belangstelling-voor-slim-omgaan-met-eigen-opgewekte-energie', 'https://www.enkhuizen.nl/actueel/voorkom-een-woninginbraak-maak-het-inbrekers-niet-te-makkelijk', 'https://www.enkhuizen.nl/actueel/wereldwijde-storing-microsoft']
+    https://www.enkhuizen.nl/feed/?post_type=nieuws 200 application/rss+xml; char 1061 https://www.enkhuizen.nl/feed/?post_type=nieuws | <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom
+    https://www.enkhuizen.nl/nieuwsberichten/ 404 text/html; charset=UTF-8 75691 https://www.enkhuizen.nl/nieuwsberichten/ | 
+    https://www.enkhuizen.nl/actueel/ 200 text/html; charset=UTF-8 167195 https://www.enkhuizen.nl/actueel/ | 
+    https://www.enkhuizen.nl/wp-json/wp/v2/types 200 application/json; charset 6668 https://www.enkhuizen.nl/wp-json/wp/v2/types | {"page":{"description":"","hierarchical":true,"has_archive":false,"name":"Pagina's","slug":"page","icon":"dashicons-admin-page","taxonomies":[],"rest_base":"pages","rest_namespace":"wp\/v2","template":[],"template_lock":false,"_links":{"collection":[
+## drechterland nieuws-links: ['https://www.drechterland.nl/actueel/kruising-binnenwijzend-en-wijtemalaan-in-westwoud-vernieuwd', 'https://www.drechterland.nl/actueel/leerlingen-blij-met-vernieuwde-schoolzone-bij-mr-spigtschool', 'https://www.drechterland.nl/actueel/plantestafette-de-schop-in-de-grond-voor-een-groener-hem']
+    https://www.drechterland.nl/feed/?post_type=nieuws 200 application/rss+xml; char 1082 https://www.drechterland.nl/feed/?post_type=nieuws | <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom
+    https://www.drechterland.nl/nieuwsberichten/ 404 text/html; charset=UTF-8 76555 https://www.drechterland.nl/nieuwsberichten/ | 
+    https://www.drechterland.nl/actueel/ 200 text/html; charset=UTF-8 168227 https://www.drechterland.nl/actueel/ | 
+    https://www.drechterland.nl/wp-json/wp/v2/types 200 application/json; charset 6746 https://www.drechterland.nl/wp-json/wp/v2/types | {"page":{"description":"","hierarchical":true,"has_archive":false,"name":"Pagina's","slug":"page","icon":"dashicons-admin-page","taxonomies":[],"rest_base":"pages","rest_namespace":"wp\/v2","template":[],"template_lock":false,"_links":{"collection":[
