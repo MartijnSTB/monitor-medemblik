@@ -1,12 +1,9 @@
-import requests, re, json
+import requests, re
 H = {'User-Agent': 'MedemblikPublicatieMonitor/0.1 (public information monitoring)'}
-for slug in ('stedebroec', 'enkhuizen', 'drechterland'):
-    j = requests.get(f'https://www.{slug}.nl/wp-json/wp/v2/types', headers=H, timeout=30).json()
-    print('##', slug, [(k, v.get('rest_base')) for k, v in j.items()])
-    base = next((v['rest_base'] for k, v in j.items() if 'actueel' in k or 'nieuws' in k or v.get('rest_base') in ('actueel', 'nieuws')), None)
-    if base:
-        r = requests.get(f'https://www.{slug}.nl/wp-json/wp/v2/{base}', params={'per_page': 5, '_fields': 'id,date,modified,link,title,excerpt'}, headers=H, timeout=30)
-        print('  ', base, r.status_code, r.headers.get('X-WP-Total'))
-        for p in r.json()[:5]: print('    ', p.get('date'), p['title']['rendered'][:70], p['link'])
-        r = requests.get(f'https://www.{slug}.nl/feed/', params={'post_type': base}, headers=H, timeout=30)
-        print('   feed', r.status_code, r.text.count('<item>'))
+t = requests.get('https://www.drechterland.nl/actueel/', headers=H, timeout=30).text
+links = re.findall(r'href="(https://www\.drechterland\.nl/actueel/[^"#?]+)"', t)
+print(len(links), links[:12])
+i = t.find(links[0]) if links else -1
+print(re.sub(r'\s+', ' ', t[i-1500:i+1200]))
+print('time tags:', re.findall(r'<time[^>]*>[^<]*</time>', t)[:5])
+print('pagination:', re.findall(r'href="([^"]*actueel/page/\d+[^"]*)"', t)[:3])
