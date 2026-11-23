@@ -27,7 +27,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url }}
 
     steps:
       - name: Haal nieuwste bestanden op
@@ -51,6 +51,18 @@ jobs:
         with:
           path: docs
 
+      # GitHub ziet het geüploade pakket soms net te laat ('No artifacts named github-pages were found').
+      # Dan niet meteen mislukken, maar na 30 seconden nog één keer proberen.
       - name: Publiceer website
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Even wachten (alleen als publiceren mislukte)
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+
+      - name: Publiceer website (tweede poging)
+        id: deployment2
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
