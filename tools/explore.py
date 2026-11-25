@@ -1,9 +1,9 @@
 import requests, re
 H = {'User-Agent': 'HoornPublicatieMonitor/0.1 (public information monitoring)'}
 B = 'https://hoorn.bestuurlijkeinformatie.nl'
-for pad in ['/Calendar', '/Agenda', '/']:
-    t = requests.get(B + pad, headers=H, timeout=30).text
-    print('==', pad, len(t))
-    print('  agendatype mentions:', [re.sub(r'\s+', ' ', t[m.start()-80:m.start()+120]) for m in re.finditer(r'agendatype', t, re.I)][:4])
-    print('  options:', re.findall(r'<option[^>]*value="([^"]+)"[^>]*>\s*([^<]{2,60})', t)[:20])
-    print('  agenda links:', re.findall(r'href="(/Agenda/Index/[^"]+)"', t)[:5])
+t = requests.get(B + '/Calendar', headers=H, timeout=30).text
+cats = re.findall(r'href="/Calendar/OpenCategory/(-?\d+)"\s*>([^<]+)<', t); print('cats:', cats)
+for tid, naam in cats:
+    x = requests.get(B + '/Agenda/RetrieveAgendasForYear', params={'agendatypeId': tid, 'year': 2026}, headers=H, timeout=30)
+    labels = [re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', l)).strip() for l in re.findall(r'/Agenda/Index/[^"]*"[^>]*>(.*?)</a>', x.text, re.S)]
+    print(tid, naam.strip(), x.status_code, len(labels), labels[:2])
