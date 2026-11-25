@@ -1,12 +1,3 @@
-== /Calendar 46341
-  agendatype mentions: [' <li class="list-group-item"> <span class="agendatype"> <a href="/Calendar/OpenCategory/0" >Algemene Raadscommissie - Raadzaal<', ' <li class="list-group-item"> <span class="agendatype"> <a href="/Calendar/OpenCategory/1" >Gemeenteraad</a> ', '6ad-d577-4e3e-b217-e13d1661d1cc" class="calendar-item d-flex" tabindex="0" data-agendatype-id="1"> <div class="calendar-item-label"> Gemeenteraad ', 'cd4-d721-45cf-94fd-802676a5140e" class="calendar-item d-flex" tabindex="0" data-agendatype-id="1"> <div class="calendar-item-label"> Gemeenteraad ']
-  options: [('0', 'januari'), ('1', 'februari'), ('2', 'maart'), ('3', 'april'), ('4', 'mei'), ('5', 'juni'), ('6', 'juli'), ('7', 'augustus'), ('8', 'september'), ('9', 'oktober'), ('10', 'november'), ('11', 'december'), ('2027', '2027'), ('2026', '2026'), ('2025', '2025'), ('2024', '2024'), ('2023', '2023'), ('2022', '2022'), ('2021', '2021'), ('2020', '2020')]
-  agenda links: ['/Agenda/Index/137056ad-d577-4e3e-b217-e13d1661d1cc', '/Agenda/Index/86612cd4-d721-45cf-94fd-802676a5140e', '/Agenda/Index/bc294305-3458-43e7-a923-0ce82d1ac2f3', '/Agenda/Index/328e123e-04d8-4250-bcff-88ef3eb95e20', '/Agenda/Index/4230f3bf-89f2-4f83-a5e6-74397b590baa']
-== /Agenda 34980
-  agendatype mentions: []
-  options: []
-  agenda links: []
-== / 774394
-  agendatype mentions: ['3bf-89f2-4f83-a5e6-74397b590baa" class="calendar-item d-flex" tabindex="0" data-agendatype-id="0"> <div class="calendar-item-label"> Algemene Raadsc', '23e-04d8-4250-bcff-88ef3eb95e20" class="calendar-item d-flex" tabindex="0" data-agendatype-id="-1"> <div class="calendar-item-label"> Raadscaf&#xE9;', '305-3458-43e7-a923-0ce82d1ac2f3" class="calendar-item d-flex" tabindex="0" data-agendatype-id="0"> <div class="calendar-item-label"> Algemene Raadsc', 'cd4-d721-45cf-94fd-802676a5140e" class="calendar-item d-flex" tabindex="0" data-agendatype-id="1"> <div class="calendar-item-label"> Gemeenteraad ']
-  options: []
-  agenda links: ['/Agenda/Index/4230f3bf-89f2-4f83-a5e6-74397b590baa', '/Agenda/Index/328e123e-04d8-4250-bcff-88ef3eb95e20', '/Agenda/Index/bc294305-3458-43e7-a923-0ce82d1ac2f3', '/Agenda/Index/86612cd4-d721-45cf-94fd-802676a5140e', '/Agenda/Index/137056ad-d577-4e3e-b217-e13d1661d1cc']
+cats: [('0', 'Algemene Raadscommissie - Raadzaal'), ('1', 'Gemeenteraad')]
+0 Algemene Raadscommissie - Raadzaal 200 12 ['dinsdag 1 december 2026', 'dinsdag 24 november 2026']
+1 Gemeenteraad 200 13 ['donderdag 10 december 2026', 'dinsdag 8 december 2026']
